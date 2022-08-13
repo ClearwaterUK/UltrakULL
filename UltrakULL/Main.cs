@@ -50,6 +50,7 @@ using UltrakULL.json;
  * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages
  * - Discord RPC: Style meter in CG
  * - Part of the first page on the intro has changed (from green to blue). Check the new text
+ * - Size/color tag isn't working on the prime testament
  * 
  * OTHER NOTES:
  * Whiplash is getting a hard damage nerf in Act 2 update. 4-4 Whiplash message will be updated accordingly.
@@ -388,7 +389,7 @@ namespace UltrakULL
                     patchDeathScreen(ref coreGame);
                     patchLevelStats(ref coreGame);
                     Options options = new Options(ref coreGame,this.jsonParser) ;
-                    PrimeSanctum primeSanctumClass = new PrimeSanctum(ref coreGame);
+                    PrimeSanctum primeSanctumClass = new PrimeSanctum(ref coreGame,this.jsonParser);
                 }
             }
             else if (currentLevel.name.Contains("-S"))

@@ -23,6 +23,7 @@ namespace UltrakULL.json
         public Misc misc;
         public LevelTips levelTips;
         public ShopStrings shop;
+        public Prime primeSanctum;
         
     }
 
@@ -572,6 +573,20 @@ namespace UltrakULL.json
         public string act2_greedFourth_whiplash3;
 
         public string act2_greedSecret_holdToJump;
+
+    }
+
+    public class Prime
+    {
+        public string primeSanctum_first_secretText1;
+        public string primeSanctum_first_secretText2;
+        public string primeSanctum_first_secretText3;
+        public string primeSanctum_first_secretText4;
+        public string primeSanctum_first_secretText5;
+        public string primeSanctum_first_secretText6;
+        public string primeSanctum_first_secretText7;
+        public string primeSanctum_first_secretText8;
+        public string primeSanctum_first_secretText9;
 
     }
 

@@ -12,7 +12,6 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-
     public static class CommonFunctions
     {
         public static void patchResultsScreen(string name, string challenge, JsonParser language)

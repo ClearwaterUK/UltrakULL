@@ -8,6 +8,8 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UltrakULL.CommonFunctions;
+using UltrakULL.json;
 
 
 namespace UltrakULL
@@ -16,81 +18,32 @@ namespace UltrakULL
     class PrimeSanctum
     {
         public GameObject baseLevelObject;
+        public Text secretText = null;
 
-
-        public GameObject getGameObjectChild(GameObject parentObject, string childToFind)
+        public void patchSecretText(PrimeSanctumStrings strings, JsonParser language)
         {
-            GameObject childToReturn = parentObject.transform.Find(childToFind).gameObject;
-            return childToReturn;
-        }
+            GameObject baseObj = null;
 
-        public Text getTextfromGameObject(GameObject objectToUse)
-        {
-            return objectToUse.GetComponent<Text>();
-        }
-
-
-        public void patchResultsScreen(ref GameObject coreGame)
-        {
-            PrimeSanctumStrings PrimeSanctumChallengeStrings = new PrimeSanctumStrings();
-
-            Console.WriteLine("In patchResultsScreen, trying to patch level name on results screen...");
-
-            coreGame = GameObject.Find("Player");
-
-            GameObject resultsPanel = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(coreGame, "Main Camera"), "HUD Camera"), "HUD"), "FinishCanvas"), "Panel");
-
-            Console.WriteLine("resultsPanel name: " + resultsPanel.name);
-
-            //Level title
-            GameObject resultsTitle = getGameObjectChild(resultsPanel, "Title");
-            Text resultsTitleLevelName = getTextfromGameObject(getGameObjectChild(resultsTitle, "Text"));
-            resultsTitleLevelName.text = PrimeSanctumChallengeStrings.getLevelName();
-
-            //Disable the levelFinderComponent, so the level name doesn't get reverted when the results panel appears.
-            Console.WriteLine("Disabling levelNameFinder component...");
-            LevelNameFinder finder = resultsTitleLevelName.GetComponent<LevelNameFinder>();
-
-            if (finder != null)
+            //I hate having to do it like this...
+            List<GameObject> a = new List<GameObject>();
+            SceneManager.GetActiveScene().GetRootGameObjects(a);
+            Console.WriteLine(a.Count);
+            foreach (GameObject child in a)
             {
-                Console.WriteLine(finder.name);
-                finder.enabled = false;
+                if (child.name == "3 - Fuckatorium")
+                {
+                    baseObj = child;
+                }
             }
 
-            //Time
-            //For some bizzare reason, the timer is labelled as "ff". Hakita were you cutting corners? :D
-            GameObject timeTitle = getGameObjectChild(resultsPanel, "ff");
-            Text timeTitleText = getTextfromGameObject(getGameObjectChild(timeTitle, "Text"));
-            timeTitleText.text = "TEMPS:";
-
-            //Kills
-            GameObject killsTitle = getGameObjectChild(resultsPanel, "Kills - Info");
-            Text killsTitleText = getTextfromGameObject(getGameObjectChild(killsTitle, "Text"));
-            killsTitleText.text = "TUES:";
-
-            //Style
-            GameObject styleTitle = getGameObjectChild(resultsPanel, "Style - Info");
-            Text styleTitleText = getTextfromGameObject(getGameObjectChild(styleTitle, "Text"));
-            styleTitleText.text = "STYLE:";
-
-            //Secrets
-            GameObject secretsTitle = getGameObjectChild(resultsPanel, "Secrets -  Title");
-            Text secretsTitleText = getTextfromGameObject(getGameObjectChild(secretsTitle, "Text"));
-            secretsTitleText.text = "SECRÈTS";
-
-            //Challenge title
-            GameObject challengeTitle = getGameObjectChild(resultsPanel, "Challenge - Title");
-            Text challengeTitleText = getTextfromGameObject(getGameObjectChild(challengeTitle, "Text"));
-            challengeTitleText.text = "DÉFI";
-
-
+            Text secretText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(baseObj, "3 Stuff"),"End"),"FinalRoom Prime"),"Testament Shop"),"Canvas"),"Border"),"TipBox"),"Panel"),"Scroll View"),"Viewport"),"Content"),"Text (1)"));
+            Console.WriteLine(secretText.text);
+            secretText.fontSize = 18;
+            secretText.text = strings.getSecretText();
+           
         }
 
-
-
-
-
-        public PrimeSanctum(ref GameObject level)
+        public PrimeSanctum(ref GameObject level,JsonParser language)
         {
             var primeLogger = BepInEx.Logging.Logger.CreateLogSource("PrimeSanctumsPatcher");
             primeLogger.LogInfo("Now entering prime sanctum class.");
@@ -103,7 +56,13 @@ namespace UltrakULL
                 primeLogger.LogInfo("In P-1");
 
                 primeLogger.LogInfo("Patching results screen...");
-                this.patchResultsScreen(ref level);
+                PrimeSanctumStrings PrimeSanctumChallengeStrings = new PrimeSanctumStrings(language);
+                //this.patchResultsScreen(ref level);
+                string levelname = PrimeSanctumChallengeStrings.getLevelName();
+                patchResultsScreen(levelname, "", language);
+
+                primeLogger.LogInfo("Patching secret text...");
+                this.patchSecretText(PrimeSanctumChallengeStrings, language);
             }
 
         }
