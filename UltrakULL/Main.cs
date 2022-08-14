@@ -410,7 +410,7 @@ namespace UltrakULL
                     patchCheats(ref coreGame);
                     patchLevelStats(ref coreGame);
                     Options options = new Options(ref coreGame, this.jsonParser);
-                    SecretLevels secretLevels = new SecretLevels(ref coreGame);
+                    SecretLevels secretLevels = new SecretLevels(ref coreGame,this.jsonParser);
                 }
             }
             else if (currentLevel.name == "uk_construct")

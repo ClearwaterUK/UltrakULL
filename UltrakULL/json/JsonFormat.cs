@@ -24,6 +24,7 @@ namespace UltrakULL.json
         public LevelTips levelTips;
         public ShopStrings shop;
         public Prime primeSanctum;
+        public Secret secretLevels;
         
     }
 
@@ -588,6 +589,31 @@ namespace UltrakULL.json
         public string primeSanctum_first_secretText8;
         public string primeSanctum_first_secretText9;
 
+    }
+
+    public class Secret
+    {
+        public string secretLevels_prelude_somethingWicked;
+        public string secretLevels_prelude_testament1;
+        public string secretLevels_prelude_testament2;
+        public string secretLevels_prelude_testament3;
+        public string secretLevels_prelude_testament4;
+
+        public string secretLevels_first_testament1;
+        public string secretLevels_first_testament2;
+        public string secretLevels_first_testament3;
+        public string secretLevels_first_testament4;
+
+        public string secretLevels_fourth_testament1;
+        public string secretLevels_fourth_testament2;
+        public string secretLevels_fourth_testament3;
+        public string secretLevels_fourth_testament4;
+        public string secretLevels_fourth_testament5;
+        public string secretLevels_fourth_testament6;
+        public string secretLevels_fourth_testament7;
+
+        public string secretLevels_complete1;
+        public string secretLevels_complete2;
     }
 
     public class Misc

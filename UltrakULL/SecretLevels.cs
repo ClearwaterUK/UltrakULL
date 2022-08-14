@@ -8,6 +8,8 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UltrakULL.CommonFunctions;
+using UltrakULL.json;
 
 namespace UltrakULL
 {
@@ -15,8 +17,7 @@ namespace UltrakULL
     {
         string currentLevel;
 
-
-        public void patchTestament(ref GameObject testamentRoom)
+        public void patchTestament(ref GameObject testamentRoom, JsonParser language)
         {
             Text testamentPanelText = null;
 
@@ -40,17 +41,13 @@ namespace UltrakULL
 
             }
 
-
-
             switch (this.currentLevel)
                 {
                 case "Level 0-S":
                     {
                         testamentPanelText.text =
-                            "L'Humanité à échoué.\n\n" +
-                            "Le libre arbitre est un défaut.\n\n" +
-                            "Que le mal de leurs propres paroles les consomment.\n\n" +
-                            "Alors, je recommencerais à nouveau, avec ma parole faisant la loi.";
+                            language.currentLanguage.secretLevels.secretLevels_prelude_testament1 + "\n\n" + language.currentLanguage.secretLevels.secretLevels_prelude_testament2 + "\n\n" + language.currentLanguage.secretLevels.secretLevels_prelude_testament3 + "\n\n" +
+                            language.currentLanguage.secretLevels.secretLevels_prelude_testament4;
 
                         break;
                     }
@@ -58,10 +55,8 @@ namespace UltrakULL
                     {
                         testamentPanelText.text =
 
-                            "ÉCHEC APRÈS ÉCHEC APRÈS ÉCHEC APRÈS ÉCHEC APRÈS ÉCHEC\n\n" +
-                            "LES RÉSULTATS REFUSENT DE S'ÉTABLIR\n\n" +
-                            "ENCORE ET ENCORE ET ENCORE ET ENCORE ET ENCORE ET ENCORE\n\n" +
-                            "MA FOI COMMENCE A SE FAIBLIR";
+                            language.currentLanguage.secretLevels.secretLevels_first_testament1 + "\n\n" + language.currentLanguage.secretLevels.secretLevels_first_testament2 + "\n\n" + language.currentLanguage.secretLevels.secretLevels_first_testament3 + "\n\n" +
+                            language.currentLanguage.secretLevels.secretLevels_first_testament4;
 
                         break;
                     }
@@ -71,15 +66,15 @@ namespace UltrakULL
                     {
                         testamentPanelText.text =
 
-                            "DES CYCLES DE CRÉATION DÉNOMBRABLES DE GASPILLÉ\n" +
-                            "DES FORMULES DÉNOMBRABLES POUR UN ESPRIT SANS CHOIX LIBRE GASPILLÉ\n\n" +
+                            language.currentLanguage.secretLevels.secretLevels_fourth_testament1 + "\n" +
+                            language.currentLanguage.secretLevels.secretLevels_fourth_testament2 + "\n\n" +
 
-                           "CONDAMNÉ SOIT L'HOMME D'AVOIR ÉCHOUÉ DE SUIVRE MA RÈGNE, MA PAROLE, MA LOI\n" +
-                           "CONDAMNÉ À UNE ÉTERNITÉ DE TORTURE ET SOUFFRANCE\n" +
-                           "LES HURLEMENTS ET GRINCEMENTS DES DENTS\n\n" +
+                            language.currentLanguage.secretLevels.secretLevels_fourth_testament3 + "\n" +
+                            language.currentLanguage.secretLevels.secretLevels_fourth_testament4 + "\n" +
+                            language.currentLanguage.secretLevels.secretLevels_fourth_testament5 + "\n\n" +
 
-                            "J'AI CRÉÉE L'ENFER...\n" +
-                            "...Et je ne peux plus le détruire.";
+                            language.currentLanguage.secretLevels.secretLevels_fourth_testament6 + "\n" +
+                            language.currentLanguage.secretLevels.secretLevels_fourth_testament7;
 
                         break;
                     }
@@ -92,7 +87,7 @@ namespace UltrakULL
 
         // SecretFirstRoom/Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text
         // Note - it uses a seperate panel that has the same name as the normal result panel.
-        public SecretLevels(ref GameObject coreGame)
+        public SecretLevels(ref GameObject coreGame, JsonParser language)
         {
             Console.WriteLine("In secretLevels");
             coreGame = GameObject.Find("Player");
@@ -101,8 +96,8 @@ namespace UltrakULL
 
             switch (this.currentLevel)
             {
-                case "Level 0-S": { Console.WriteLine("Setting 0-S room object"); testamentRoom = GameObject.Find("FinalRoom 2"); patchTestament(ref testamentRoom); break; }
-                case "Level 1-S": { Console.WriteLine("Setting 1-s room object"); testamentRoom = GameObject.Find("5 - Finale"); patchTestament(ref testamentRoom); break; }
+                case "Level 0-S": { Console.WriteLine("Setting 0-S room object"); testamentRoom = GameObject.Find("FinalRoom 2"); patchTestament(ref testamentRoom, language); break; }
+                case "Level 1-S": { Console.WriteLine("Setting 1-s room object"); testamentRoom = GameObject.Find("5 - Finale"); patchTestament(ref testamentRoom, language); break; }
                 case "Level 2-S": { Console.WriteLine("2-S visual novel"); Act1VN.patchPrompts(ref coreGame); break; }
                 case "Level 4-S": {
                         //I have absolutely no idea why I have to do it like this but I have to, for some reason the required GameObject can't be found by searching.
@@ -117,7 +112,7 @@ namespace UltrakULL
                                 testamentRoom = a;
                             }
                         }
-                        patchTestament(ref testamentRoom);
+                        patchTestament(ref testamentRoom, language);
                         break;
                     }
 
@@ -135,38 +130,27 @@ namespace UltrakULL
             GameObject secretLevelResultsPanel = FinishCanvasChildren[1];
 
             Text secretLevelResultsName = getTextfromGameObject(getGameObjectChild(getGameObjectChild(secretLevelResultsPanel, "Title"), "Text"));
-            secretLevelResultsName.text = getSecretLevelName();
+            secretLevelResultsName.text = getSecretLevelName(language);
 
             Text secretLevelResultsInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(secretLevelResultsPanel, "Time - Info"), "Text"));
-            secretLevelResultsInfo.text = "MISSION";
+            secretLevelResultsInfo.text = language.currentLanguage.secretLevels.secretLevels_complete1;
 
             Text secretLevelComplete = getTextfromGameObject(getGameObjectChild(getGameObjectChild(secretLevelResultsPanel, "Time - Rank"), "Text"));
-            secretLevelComplete.text = "ACCOMPLIE";
+            secretLevelComplete.text = language.currentLanguage.secretLevels.secretLevels_complete2;
 
             Console.WriteLine("secretLevels finished");
         }
 
-        public string getSecretLevelName()
+        public string getSecretLevelName(JsonParser language)
         {
             switch(this.currentLevel)
             {
-                case ("Level 0-S"): { return "0-S: QUELQUE MAUDIT"; }
-                case ("Level 1-S"): { return "1-S: LE SANS-ESPRIT"; }
-                case ("Level 2-S"): { return "2-S: CHANSON D'ARMOR IMPARFAIT"; }
-                case ("Level 4-S"): { return "4-S: LE CHOC DU BRANDICOOT"; }
+                case ("Level 0-S"): { return "0-S:" + language.currentLanguage.levelNames.levelName_preludeSecret; }
+                case ("Level 1-S"): { return "1-S:" + language.currentLanguage.levelNames.levelName_limboSecret; }
+                case ("Level 2-S"): { return "2-S:" + language.currentLanguage.levelNames.levelName_lustSecret; }
+                case ("Level 4-S"): { return "4-S:" + language.currentLanguage.levelNames.levelName_greedSecret; ; }
                 default: { return "UNKNOWN"; }
             }
-        }
-
-        public GameObject getGameObjectChild(GameObject parentObject, string childToFind)
-        {
-            GameObject childToReturn = parentObject.transform.Find(childToFind).gameObject;
-            return childToReturn;
-        }
-
-        public Text getTextfromGameObject(GameObject objectToUse)
-        {
-            return objectToUse.GetComponent<Text>();
         }
 
     }

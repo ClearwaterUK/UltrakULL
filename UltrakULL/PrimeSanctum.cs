@@ -40,14 +40,13 @@ namespace UltrakULL
             Console.WriteLine(secretText.text);
             secretText.fontSize = 18;
             secretText.text = strings.getSecretText();
-           
         }
 
         public PrimeSanctum(ref GameObject level,JsonParser language)
         {
             var primeLogger = BepInEx.Logging.Logger.CreateLogSource("PrimeSanctumsPatcher");
             primeLogger.LogInfo("Now entering prime sanctum class.");
-
+            
             this.baseLevelObject = level;
             string currentLevel = SceneManager.GetActiveScene().name;
 
@@ -64,9 +63,6 @@ namespace UltrakULL
                 primeLogger.LogInfo("Patching secret text...");
                 this.patchSecretText(PrimeSanctumChallengeStrings, language);
             }
-
         }
-
-
     }
 }

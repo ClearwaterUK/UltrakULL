@@ -14,7 +14,6 @@ namespace UltrakULL
 {
     class PrimeSanctumStrings
     {
-
         private string p1SecretText;
         //private string p2SecretText;
         //private string p3SecretText;
@@ -31,13 +30,13 @@ namespace UltrakULL
             }
         }
 
-        public string getLevelName()
+        public string getLevelName(JsonParser language)
         {
             string currentLevel = SceneManager.GetActiveScene().name;
 
             switch (currentLevel)
             {
-                case "Level P-1": { return "P-1 - L'ÂME SURVIVANTE"; }
+                case "Level P-1": { return "P-1 - " + language.currentLanguage.levelNames.levelName_primeFirst; }
 
                 default: { return "Unknown level name"; }
             }
@@ -55,10 +54,6 @@ namespace UltrakULL
                 + language.currentLanguage.primeSanctum.primeSanctum_first_secretText7 + "\n\n"
                 + language.currentLanguage.primeSanctum.primeSanctum_first_secretText8 + "\n\n"
                 + language.currentLanguage.primeSanctum.primeSanctum_first_secretText9;
-
         }
-
-
-
     }
 }

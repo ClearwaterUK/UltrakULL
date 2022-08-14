@@ -96,7 +96,5 @@ namespace UltrakULL
             }
             return Children;
         }
-
-
     }
 }
