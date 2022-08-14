@@ -88,7 +88,7 @@ namespace UltrakULL
 
             if(fullMessage.Contains("opens"))
             {
-                return ("Une porte a été ouverte.");
+                return (language.currentLanguage.act2.act2_greed_secretDoor);
             }
 
             switch (currentLevel)
