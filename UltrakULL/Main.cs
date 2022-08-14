@@ -371,7 +371,15 @@ namespace UltrakULL
                 {
                     Logger.LogInfo("Hooked into front end, patching...");
                     patchFrontEnd(frontEnd);
-                }
+
+
+                    GameObject ultrakullLogo = GameObject.Instantiate(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Title"),"Text"), frontEnd.transform);
+                        ultrakullLogo.transform.localPosition = new Vector3(1100, -470, 0);
+                        Text ultrakullLogoText = getTextfromGameObject(ultrakullLogo);
+                        ultrakullLogoText.text = "ultrakULL loaded.\nLocale: " + this.jsonParser.currentLanguage.metadata.langName;
+                        ultrakullLogoText.alignment = TextAnchor.UpperLeft;
+                        ultrakullLogoText.fontSize = 16;
+                    }
             }
             else if (currentLevel.name.Contains("P-"))
             {

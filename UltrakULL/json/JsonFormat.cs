@@ -575,6 +575,8 @@ namespace UltrakULL.json
 
         public string act2_greedSecret_holdToJump;
 
+        public string act2_greed_secretDoor;
+
     }
 
     public class Prime

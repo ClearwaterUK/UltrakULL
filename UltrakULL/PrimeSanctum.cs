@@ -57,7 +57,7 @@ namespace UltrakULL
                 primeLogger.LogInfo("Patching results screen...");
                 PrimeSanctumStrings PrimeSanctumChallengeStrings = new PrimeSanctumStrings(language);
                 //this.patchResultsScreen(ref level);
-                string levelname = PrimeSanctumChallengeStrings.getLevelName();
+                string levelname = PrimeSanctumChallengeStrings.getLevelName(language);
                 patchResultsScreen(levelname, "", language);
 
                 primeLogger.LogInfo("Patching secret text...");
