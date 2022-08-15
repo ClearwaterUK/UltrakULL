@@ -70,6 +70,14 @@ namespace UltrakULL.json
         public string act1_intermission_third3;
         public string act1_intermission_third4;
         public string act1_intermission_third5;
+
+        public string act1_intermission_tobecontinued;
+        public string act1_intermission_tobecontinuedshadow;
+        public string act1_intermission_endof;
+        public string act1_intermission_insertAct2;
+        public string act1_intermission_insert;
+        public string act1_intermission_returnToMenu;
+
     }
 
     public class Body

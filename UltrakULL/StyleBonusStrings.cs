@@ -48,8 +48,10 @@ namespace UltrakULL
                     case "BIG FISTKILL": { return "GROS POIGNARDAGE"; }
                     case "BIG KILL": { return "GRAND TUE"; }
                     case "BIPOLAR": { return "BIPOLAIRE"; }
+                    case "CATAPAULTED": { return "BOULE DE CANON"; }
                     case "CANNONBALLED": { return "BOULE DE CANON"; }
                     case "CHARGEBACK": { return "FACTURATION"; }
+                    case "COMPRESSED": { return "COMPRIMÉ"; }
                     case "CONDUCTOR": { return "CONDUCTEUR"; }
                     case "CRITICAL PUNCH": { return "POIGNARD CRITIQUE"; }
                     case "CRUSHED": { return "ÉCRASÉ"; }
@@ -60,6 +62,7 @@ namespace UltrakULL
                     case "FALL": { return "TOMBÉ"; }
                     case "FINISHED OFF": { return "ACHEVÉ"; }
                     case "FIREWORKS": { return "FEU D'ARTIFICES"; };
+                    case "FISTFUL OF DOLLAR": { return "POIGNÉE DE DOLLARS"; }
                     case "FISTIKILL": { return "POIGNARDAGE"; }
                     case "FRIED": { return "GRILLÉ"; }
                     case "FRIENDLY FIRE": { return "TIR AMICALE"; }

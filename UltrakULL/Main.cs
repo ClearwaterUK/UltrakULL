@@ -491,7 +491,7 @@ namespace UltrakULL
                     else if (SceneManager.GetActiveScene().name.Contains("Intermission1"))
                     {
                         Logger.LogInfo("Currently on Act 1 intermission.");
-                        Intermission intermission = new Intermission(ref coreGame);
+                        Intermission intermission = new Intermission(ref coreGame,this.jsonParser);
                     }
 
                     //Act 2
