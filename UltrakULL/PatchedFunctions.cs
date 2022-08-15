@@ -1210,7 +1210,7 @@ namespace UltrakULL
             ___origPitch = ___aud.pitch;
 
 
-            IntermissionStrings intStrings = new IntermissionStrings();
+            IntermissionStrings intStrings = new IntermissionStrings(language);
             ___fullString = intStrings.getIntermissionString(___fullString);
 
             __instance.StartCoroutine(TextAppearMain(__instance, ___fullString, ___sb, ___txt, ___tempString, ___skipToInput, ___waitingForInput, ___preText, ___aud, ___origPitch));

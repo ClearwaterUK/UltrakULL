@@ -25,6 +25,7 @@ namespace UltrakULL.json
         public ShopStrings shop;
         public Prime primeSanctum;
         public Secret secretLevels;
+        public IntermissionStrings intermission;
         
     }
 
@@ -34,6 +35,41 @@ namespace UltrakULL.json
         public string langName;
         public string langAuthor;
         public string langVersion;
+    }
+
+    public class IntermissionStrings
+    {
+        public string act1_intermission_first1;
+        public string act1_intermission_first2;
+        public string act1_intermission_first3;
+        public string act1_intermission_first4;
+        public string act1_intermission_first5;
+        public string act1_intermission_first6;
+        public string act1_intermission_first7;
+        public string act1_intermission_first8;
+        public string act1_intermission_first9;
+        public string act1_intermission_first10;
+        public string act1_intermission_first11;
+        public string act1_intermission_first12;
+
+        public string act1_intermission_second1;
+        public string act1_intermission_second2;
+        public string act1_intermission_second3;
+        public string act1_intermission_second4;
+        public string act1_intermission_second5;
+        public string act1_intermission_second6;
+        public string act1_intermission_second7;
+        public string act1_intermission_second8;
+        public string act1_intermission_second9;
+        public string act1_intermission_second10;
+        public string act1_intermission_second11;
+        public string act1_intermission_second12;
+
+        public string act1_intermission_third1;
+        public string act1_intermission_third2;
+        public string act1_intermission_third3;
+        public string act1_intermission_third4;
+        public string act1_intermission_third5;
     }
 
     public class Body

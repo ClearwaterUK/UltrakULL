@@ -8,34 +8,19 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UltrakULL.json;
 
 
 namespace UltrakULL
 {
     class IntermissionStrings
     {
-
-
         //In the intermission, the ▼ symbol in strings is used to denote pauses.
         //The } symbol fades in the background panel used.
 
-        public string act1IntermissionFirst =
-            "La honte. ▼L'humiliation.▼}Inconvenant et malvenu aux pieds du Conseil. ▼Leurs yeux s'emflamment avec de la haine, ciblant les blessures de corps et d'âme de Gabriel, s'étendant pour que tous puissent voir. ▼\n\n" +
-            "\"Celui-ci a-t-il abondonné le chemin de notre Créateur?\" ▼\"Il n'est pas digne de son Lumière Sacré.\" ▼\"La Lumière du Père est imbattable.\" ▼\"Celui-ci le juge approprié de le gaspiller.\"▼\n\n" +
-            "Leurs mots resonnent dans les os de Gabriel, le traversant comme du électricité dans du fil, un sifflement qui renderait les inférieurs sourd et aveugle. ▼La Lumière Sacré une tempête inarrêtable du fureur divin. ▼Insurmontable pour les simples Objets. ▼Il savait ceci. ▼▼";
-
-        public string act1IntermissionSecond =
-
-            "\"Conseil Sacré, ma devotion à notre Créateur est absolue. ▼Je ne me suis jamais s'égaré du volonté du Père, mais une machine-\"▼\n\n"
-            + "\"Osez-vous impliquer que la force du Père peut être choqué par des simples Objets?\"▼\n"
-            + "\"Impossible.\" ▼\"Hérésie.\" ▼\"Indicible.\" ▼\"Hérésie.\" ▼\"Hérésie.\"▼\n"
-            + "\"Silence.\"▼\n"
-            + "\"Votre échec ne sera pas toléré. ▼La Lumière du Père sera rompu de vote corps comme punition. ▼Vous avez 24 heures avant que le dernier de ses embres s'éteignent.\"▼\n"
-            + "\"Et vous parmi eux.\" ▼\"Faits preuve de votre loyauté.\" ▼\"Corrigez vos erreurs.\"▼▼";
-
-        public string act1IntermissionThird =
-            "Pendant que la Lumière s'arrachait de son esprit, les hurlements de Gabriel ont été réduits au silence dans les évangiles des louanges à Dieu. ▼Une angoisse bouillante auquel même les feus d'Enfer ne puissent y comparer. ▼À travers le tourment, une nouvelle haine brûlante a été forgé.▼\n\n"
-            + "Si les machines cherchent du sang, il le donnera librement; ▼avec une tel fureur que même le métal saignera.▼▼";
+        public string act1IntermissionFirst;
+        public string act1IntermissionSecond;
+        public string act1IntermissionThird;
 
         public string getIntermissionString(string inputString)
         {
@@ -66,11 +51,30 @@ namespace UltrakULL
             return "Unknown intermission string";
         }
 
+        public IntermissionStrings(JsonParser language)
+        {
+            this.act1IntermissionFirst =
+                language.currentLanguage.intermission.act1_intermission_first1 + " ▼" + language.currentLanguage.intermission.act1_intermission_first2 + " ▼}"
+                + language.currentLanguage.intermission.act1_intermission_first3 + " ▼" + language.currentLanguage.intermission.act1_intermission_first4 + " ▼\n\n"
+                + language.currentLanguage.intermission.act1_intermission_first5 + " ▼" + language.currentLanguage.intermission.act1_intermission_first6 + " ▼"
+                + language.currentLanguage.intermission.act1_intermission_first7 + " ▼" + language.currentLanguage.intermission.act1_intermission_first8 + " ▼\n\n"
+                + language.currentLanguage.intermission.act1_intermission_first9 + " ▼" + language.currentLanguage.intermission.act1_intermission_first10 + " ▼"
+                + language.currentLanguage.intermission.act1_intermission_first11 + " ▼" + language.currentLanguage.intermission.act1_intermission_first12 + " ▼";
 
+            this.act1IntermissionSecond =
+                language.currentLanguage.intermission.act1_intermission_second1 + " ▼" + language.currentLanguage.intermission.act1_intermission_second2 + " ▼\n\n"
+                + language.currentLanguage.intermission.act1_intermission_second3 + " ▼\n\n"
+                + language.currentLanguage.intermission.act1_intermission_second4 + " ▼" + language.currentLanguage.intermission.act1_intermission_second5 + " ▼"
+                + language.currentLanguage.intermission.act1_intermission_second6 + " ▼" + language.currentLanguage.intermission.act1_intermission_second5 + " ▼"
+                + language.currentLanguage.intermission.act1_intermission_second5 + " ▼" + language.currentLanguage.intermission.act1_intermission_second7 + " ▼\n"
+                + language.currentLanguage.intermission.act1_intermission_second8 + " ▼" + language.currentLanguage.intermission.act1_intermission_second9 + " ▼\n\n"
+                + language.currentLanguage.intermission.act1_intermission_second10 + " ▼" + language.currentLanguage.intermission.act1_intermission_second11 + " ▼"
+                + " ▼" + language.currentLanguage.intermission.act1_intermission_second12 + " ▼";
 
-        public IntermissionStrings()
-        { 
-
+            this.act1IntermissionThird =
+                language.currentLanguage.intermission.act1_intermission_third1 + " ▼" + language.currentLanguage.intermission.act1_intermission_third2 + " ▼"
+                + language.currentLanguage.intermission.act1_intermission_third3 + " ▼\n\n"
+                + language.currentLanguage.intermission.act1_intermission_third4 + " ▼" + language.currentLanguage.intermission.act1_intermission_third5 + " ▼";
         }
         
 
