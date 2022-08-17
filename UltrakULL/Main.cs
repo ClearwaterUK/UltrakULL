@@ -21,7 +21,7 @@ using UltrakULL.json;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater
  *	Date started: 21st April 2021
- *	Last updated: 31st July 2022
+ *	Last updated: 18th August 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
@@ -37,6 +37,7 @@ using UltrakULL.json;
  *  - Sandbox stuff (time of day shop, spawn/cheat menu categories)
  *  - Terminals before bosses in levels (could copy the shop that's in the start of each level)
  *  - Settings -> graphics -> custom palettes
+ *  - 1-4, 2-2, 4-2, 4-3 books
  * 
  *  BUGS AND QUIRKS TO FIX:
  *  
@@ -55,6 +56,19 @@ using UltrakULL.json;
  * OTHER NOTES:
  * Whiplash is getting a hard damage nerf in Act 2 update. 4-4 Whiplash message will be updated accordingly.
  * Change of style meter mechanic.
+ * 
+ * ACT 2 UPDATE DAMAGE REPORT
+ * 
+ * - IL Compile error on AddPoints
+ * - DivideMoney function in VariationInfo was moved to new class called MoneyText. Need to replace in UpdateMoney of PatchedFunctions
+ * - AddPoints function in StyleHUD has been overhauled. Need to swap with the new one
+ * - DisplaySubtitle params have changed, possibly other stuff too.
+ * - Main menu seems to be fine. Just need to add new level names and challenges
+ * - Options: General->Restart warning, Graphics->Custom Color Palette
+ * - Difficulty descriptions have had minor changes, as well as new indicator
+ * - Shop->PatchWeapons is broke, very likely due to shop changes
+ * - Death screen is now broke on all levels
+ * - patchMainMenu throws errors on returning to main menu (but loading in first time works fine...)
  * 
  * */
 
@@ -241,10 +255,10 @@ namespace UltrakULL
             harmony.Patch(originalUpdateMoney, new HarmonyMethod(patchedUpdateMoney));
             Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching AddPoints for the style meter...");
+            //Logger.LogInfo("Patching AddPoints for the style meter...");
             MethodInfo originalAddPoints = AccessTools.Method(typeof(StyleHUD), "AddPoints");
             MethodInfo patchedAddPoints = AccessTools.Method(typeof(PatchedFunctions), "AddPoints_MyPatch");
-            harmony.Patch(originalAddPoints, new HarmonyMethod(patchedAddPoints));
+           //harmony.Patch(originalAddPoints, new HarmonyMethod(patchedAddPoints));
             Logger.LogInfo("Done");
 
             Logger.LogInfo("Patching Start in TextAppear intermission strings...");
@@ -253,11 +267,11 @@ namespace UltrakULL
             harmony.Patch(originalIntermissionStart, new HarmonyMethod(patchedIntermissionStart));
             Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching DisplaySubtitle for subtitles...");
+            //Logger.LogInfo("Patching DisplaySubtitle for subtitles...");
             MethodInfo originalDisplaySubtitle = AccessTools.Method(typeof(SubtitleController), "DisplaySubtitle", new Type[] { typeof(string) });
             MethodInfo patchedDisplaySubtitle = AccessTools.Method(typeof(PatchedFunctions), "DisplaySubtitle_MyPatch");
-            harmony.Patch(originalDisplaySubtitle, new HarmonyMethod(patchedDisplaySubtitle));
-            Logger.LogInfo("Done");
+            //harmony.Patch(originalDisplaySubtitle, new HarmonyMethod(patchedDisplaySubtitle));
+            //Logger.LogInfo("Done");
 
             Logger.LogInfo("Patching EnemyInfoPage for enemy bios...");
             MethodInfo originalUpdateInfo = AccessTools.Method(typeof(EnemyInfoPage), "UpdateInfo");
@@ -334,6 +348,13 @@ namespace UltrakULL
             MethodInfo patchedToggle = AccessTools.Method(typeof(PatchedFunctions), "Toggle_MyPatch");
             harmony.Patch(originalToggle, new HarmonyMethod(patchedToggle));
             Logger.LogInfo("Done");
+
+            Logger.LogInfo("Patching ScanBook for books...");
+            MethodInfo originalScanBook = typeof(ScanningStuff).GetMethod("ScanBook", new Type[]{typeof(string), typeof(bool), typeof(int)});
+            MethodInfo patchedScanBook = AccessTools.Method(typeof(PatchedFunctions), "ScanBook_MyPatch");
+            harmony.Patch(originalScanBook, new HarmonyMethod(patchedScanBook));
+            Logger.LogInfo("Done");
+
         }
 
         //Most of the hook logic and checks go in this function.
@@ -362,7 +383,21 @@ namespace UltrakULL
             else if (currentLevel.name == "Main Menu")
             {
                 Logger.LogInfo("Hooking into main menu text...");
-                GameObject frontEnd = GameObject.Find("Canvas");
+                GameObject frontEnd = null;
+
+                //I hate having to do it like this...
+                List<GameObject> a = new List<GameObject>();
+                SceneManager.GetActiveScene().GetRootGameObjects(a);
+                Console.WriteLine(a.Count);
+                foreach (GameObject child in a)
+                {
+                    if (child.name == "Canvas")
+                    {
+                            frontEnd = child;
+                    }
+                }
+
+
                 if (frontEnd == null)
                 {
                     Logger.LogError("Failed to hook.");

@@ -27,21 +27,27 @@ namespace UltrakULL
         {
             try
             {
+
                 GameObject titleObject = getGameObjectChild(mainMenu, "Main Menu (1)");
+                Console.WriteLine("got");
 
                 //Early access/seasonal tag
+                Console.WriteLine("EA Text");
                 Text earlyAccessText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Title"), "Text"));
                 earlyAccessText.text = "--" + jsonParser.currentLanguage.frontend.mainmenu_earlyAccess + "--";
 
                 //Play button
+                Console.WriteLine("Play");
                 Text playButtonText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Continue"), "Text"));
                 playButtonText.text = jsonParser.currentLanguage.frontend.mainmenu_play;
 
                 //Options button
+                Console.WriteLine("Options");
                 Text optionsButtontext = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Options"), "Text"));
                 optionsButtontext.text = jsonParser.currentLanguage.frontend.mainmenu_options;
 
                 //Quit button
+                Console.WriteLine("Quit");
                 Text quitButtontext = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Quit"), "Text"));
                 quitButtontext.text = jsonParser.currentLanguage.frontend.mainmenu_quit;
             }

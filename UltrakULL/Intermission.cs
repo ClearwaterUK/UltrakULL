@@ -13,7 +13,7 @@ namespace UltrakULL
         {
             level = GameObject.Find("Canvas");
             GameObject intermissionObject = getGameObjectChild(getGameObjectChild(level, "PowerUpVignette"), "Panel");
-
+            
             Console.WriteLine("IntermissionObject:" + intermissionObject.name);
 
             //Two I need to patch: Foreground and background shadow.

@@ -39,6 +39,27 @@ namespace UltrakULL
         public static StatsManager cachedStatsManager;
         public static bool cachedStatsReady;
 
+
+        //@Override
+        //Overrides ScanBook from the ScanningStuff class. Used to translate books found in some levels.
+        public static bool ScanBook_MyPatch(string text, bool noScan, int instanceId, ScanningStuff __instance, Text ___readingText, int ___currentBookId, GameObject ___scanningPanel, GameObject ___readingPanel, bool ___scanning)
+        {
+            __instance.oldWeaponState = !MonoSingleton<GunControl>.Instance.noWeapons;
+            MonoSingleton<GunControl>.Instance.NoWeapon();
+            Console.WriteLine("Getting text from book ID: " + instanceId);
+            Console.WriteLine(text);
+
+
+            ___readingText.text = Books.getBookText(language);
+            ___currentBookId = instanceId;
+            ___scanningPanel.SetActive(false);
+            ___readingPanel.SetActive(true);
+            ___scanning = false;
+            return false;
+
+        }
+
+
         //@Override
         //Overrides Check from the vanilla game. Used for persistant difficulty strings across all scenes.
         public static bool Check_MyPatch(DifficultyTitle __instance, Text ___txt)
@@ -1096,12 +1117,12 @@ namespace UltrakULL
         public static bool UpdateMoney_MyPatch(VariationInfo __instance, int ___money, Text ___buttonText, Image ___equipImage, int ___equipStatus)
         {
             ___money = GameProgressSaver.GetMoney();
-            __instance.moneyText.text = __instance.DivideMoney(___money) + "<color=orange>P</color>";
+            //__instance.moneyText.text = __instance.DivideMoney(___money) + "<color=orange>P</color>";
             if (!__instance.alreadyOwned)
             {
                 if (__instance.cost > ___money)
                 {
-                    __instance.costText.text = "<color=red>" + __instance.DivideMoney(___money) + "<color=orange>P</color>";
+                    //__instance.costText.text = "<color=red>" + __instance.DivideMoney(___money) + "<color=orange>P</color>";
                     if (___buttonText.text == null)
                     {
                         ___buttonText = __instance.buyButton.GetComponentInChildren<Text>();
@@ -1113,7 +1134,7 @@ namespace UltrakULL
                 }
                 else
                 {
-                    __instance.costText.text = "<color=white>" + __instance.DivideMoney(__instance.cost) + "</color><color=orange>P</color>";
+                    //__instance.costText.text = "<color=white>" + __instance.DivideMoney(__instance.cost) + "</color><color=orange>P</color>";
                     if (___buttonText == null)
                     {
                         ___buttonText = __instance.buyButton.GetComponentInChildren<Text>();
@@ -1178,11 +1199,11 @@ namespace UltrakULL
             float num = (float)points;
             if (points > 0)
             {
-                if (__instance.freshWeapon)
+                /*if (__instance.freshWeapon)
                 {
                     num *= 1.25f;
                 }
-                __instance.currentMeter += num;
+                __instance.currentMeter += num;*/
                 ___sman.stylePoints += Mathf.RoundToInt(num);
                 ___rankScale = 0.2f;
             }

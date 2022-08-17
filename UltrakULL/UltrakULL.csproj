@@ -89,6 +89,7 @@
     <Compile Include="Act1VN.cs" />
     <Compile Include="Act2.cs" />
     <Compile Include="Act2Strings.cs" />
+    <Compile Include="Books.cs" />
     <Compile Include="BossStrings.cs" />
     <Compile Include="Cheats.cs" />
     <Compile Include="CommonFunctions.cs" />

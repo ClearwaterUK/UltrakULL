@@ -26,6 +26,7 @@ namespace UltrakULL.json
         public Prime primeSanctum;
         public Secret secretLevels;
         public IntermissionStrings intermission;
+        public Book books;
         
     }
 
@@ -64,7 +65,7 @@ namespace UltrakULL.json
         public string act1_intermission_second10;
         public string act1_intermission_second11;
         public string act1_intermission_second12;
-
+        
         public string act1_intermission_third1;
         public string act1_intermission_third2;
         public string act1_intermission_third3;
@@ -134,6 +135,30 @@ namespace UltrakULL.json
         public string layer_wrath;
         public string layer_heresy;
         public string layer_prime;
+
+    }
+
+    public class Book
+    { 
+        public string book_limboFourth;
+
+        public string book_lustSecond1;
+        public string book_lustSecond2;
+        public string book_lustSecond3;
+        public string book_lustSecond4;
+        public string book_lustSecond5;
+
+
+        public string book_greedSecond1;
+        public string book_greedSecond2;
+        public string book_greedSecond3;
+        public string book_greedSecond4;
+        public string book_greedSecond5;
+
+
+
+        public string book_greedThird;
+
 
     }
 

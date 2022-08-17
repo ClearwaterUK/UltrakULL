@@ -371,9 +371,7 @@ namespace UltrakULL
         {
 
             this.patchShopFrontEnd(ref level,language);
-            this.patchWeapons(ref level);
-            
-
+            //this.patchWeapons(ref level);
 
         }
 

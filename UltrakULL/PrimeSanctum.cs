@@ -14,7 +14,6 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-
     class PrimeSanctum
     {
         public GameObject baseLevelObject;
