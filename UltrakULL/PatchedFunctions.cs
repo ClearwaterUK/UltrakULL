@@ -1381,8 +1381,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the DisplaySubtitle method from the SubtitleController class. This is used to swap out subtitle strings.
-
-        public static bool DisplaySubtitle_MyPatch(string caption, SubtitleController __instance, Subtitle ___subtitleLine, Subtitle ___previousSubtitle, Transform ___container)
+        /*public static bool DisplaySubtitle_MyPatch(string caption, SubtitleController __instance, Subtitle ___subtitleLine, Subtitle ___previousSubtitle, Transform ___container)
         {
             SubtitleStrings subtitleStrings = new SubtitleStrings();
             Console.WriteLine("In DisplaySubtitle with caption: \n " + caption);
@@ -1405,7 +1404,37 @@ namespace UltrakULL
             ___previousSubtitle = subtitle;
 
             return false;
+        }*/
+
+
+        public static bool DisplaySubtitle_MyPatch(SubtitleController __instance, Subtitle ___subtitleLine, Transform ___container, Subtitle ___previousSubtitle, string caption, AudioSource audioSource = null)
+        {
+            SubtitleStrings subtitleStrings = new SubtitleStrings();
+            if (!__instance.subtitlesEnabled)
+            {
+                return false;
+            }
+            Subtitle subtitle = UnityEngine.Object.Instantiate<Subtitle>(___subtitleLine, ___container, true);
+            subtitle.GetComponentInChildren<Text>().text = subtitleStrings.getSubtitle(caption);
+            if (audioSource != null)
+            {
+                subtitle.distanceCheckObject = audioSource;
+            }
+            subtitle.gameObject.SetActive(true);
+            if (!___previousSubtitle)
+            {
+                subtitle.ContinueChain();
+            }
+            else
+            {
+                ___previousSubtitle.nextInChain = subtitle;
+            }
+            ___previousSubtitle = subtitle;
+
+            return false;
         }
+
+
         //@Override
         //Overrides the UpdateInfo method from the EnemyInfoPage class. This is to allow swapping out of monster bios in the shop.
         public static bool UpdateInfo_MyPatch(EnemyInfoPage __instance, Transform ___enemyList, SpawnableObjectsDatabase ___objects, Image ___buttonTemplateBackground, Image ___buttonTemplateForeground, Sprite ___lockedSprite, SpawnableObject ___currentSpawnable, GameObject ___buttonTemplate, Text ___enemyPageTitle, Text ___enemyPageContent, Transform ___enemyPreviewWrapper)

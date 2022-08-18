@@ -59,10 +59,7 @@ using UltrakULL.json;
  * 
  * ACT 2 UPDATE DAMAGE REPORT
  * 
- * - IL Compile error on StyleHud->AddPoints
  * - DivideMoney function in VariationInfo was moved to new class called MoneyText. Need to replace in UpdateMoney of PatchedFunctions
- * - AddPoints function in StyleHUD has been overhauled. Need to swap with the new one
- * - DisplaySubtitle params have changed, possibly other stuff too.
  * - Main menu seems to be fine. Just need to add new level names and challenges
  * - Options: General->Restart warning, Graphics->Custom Color Palette
  * - Difficulty descriptions have had minor changes, as well as new indicator
@@ -278,11 +275,11 @@ namespace UltrakULL
             harmony.Patch(originalIntermissionStart, new HarmonyMethod(patchedIntermissionStart));
             Logger.LogInfo("Done");
 
-            //Logger.LogInfo("Patching DisplaySubtitle for subtitles...");
-            MethodInfo originalDisplaySubtitle = AccessTools.Method(typeof(SubtitleController), "DisplaySubtitle", new Type[] { typeof(string) });
+            Logger.LogInfo("Patching DisplaySubtitle for subtitles...");
+            MethodInfo originalDisplaySubtitle = AccessTools.Method(typeof(SubtitleController), "DisplaySubtitle", new Type[] { typeof(string), typeof(AudioSource) });
             MethodInfo patchedDisplaySubtitle = AccessTools.Method(typeof(PatchedFunctions), "DisplaySubtitle_MyPatch");
-            //harmony.Patch(originalDisplaySubtitle, new HarmonyMethod(patchedDisplaySubtitle));
-            //Logger.LogInfo("Done");
+            harmony.Patch(originalDisplaySubtitle, new HarmonyMethod(patchedDisplaySubtitle));
+            Logger.LogInfo("Done");
 
             Logger.LogInfo("Patching EnemyInfoPage for enemy bios...");
             MethodInfo originalUpdateInfo = AccessTools.Method(typeof(EnemyInfoPage), "UpdateInfo");
