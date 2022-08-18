@@ -22,74 +22,80 @@ namespace UltrakULL
             return ("");
         }
 
+        public string getStyleBonusDictionary(string inputBonus)
+        {
+            string regexinput = Regex.Replace(inputBonus, @"<[^>]*>", "");
+            
+            switch(inputBonus)
+            {
+                case "ultrakill.airslam": { return "<color=cyan>ÉCRASEMENT DANS L'AIR</color>"; }
+                case "ultrakill.airshot": { return "DANS L'AIR"; }
+                case "ultrakill.attripator": { return "<color=cyan>ATTRACTEUR</color>"; }
+                case "ultrakill.arsenal": { return "<color=cyan>ARSENAL</color>"; }
+                case "ultrakill.bigheadshot": { return "GROS TUE EN PLEIN TÊTE"; }
+                case "ultrakill.bigkill": { return "GRAND TUE"; }
+                case "ultrakill.bigfistkill": { return "GRAND POIGNARD"; }
+                case "ultrakill.bipolar": { return "BIPOLAIRE"; }
+                case "ultrakill.cannonballed": { return "BOULE DE CANON"; }
+                case "ultrakill.catapaulted": { return "<color=cyan>CATAPAULTÉ</color>"; }
+                case "ultrakill.chargeback": { return "FACTURATION"; }
+                case "ultrakill.compressed": { return "COMPRIMÉ"; }
+                case "ultrakill.criticalpunch": { return "POIGNARD CRITIQUE"; }
+                case "ultrakill.disrespect": { return "MÉPRISAGE"; }
+                case "ultrakill.doublekill": { return "<color=orange>DOUBLE</color>"; }
+                case "ultrakill.downtosize": { return "<color=cyan>GROS RENVOI</color>"; }
+                case "ultrakill.enraged": { return "<color=red>ENRAGÉ</color>"; }
+                case "ultrakill.exploded": { return "EXPLOSÉ"; }
+                case "ultrakill.finishedoff": { return "<color=cyan>ACHÉVÉ</color>"; }
+                case "ultrakill.fireworks": { return "<color=cyan>FEU D'ARTIFICES</color>"; }
+                case "ultrakill.fistfullofdollar": { return "<color=cyan>POIGNÉE DE DOLLARS</color>"; }
+                case "ultrakill.fried": { return "GRILLÉ"; }
+                case "ultrakill.friendlyfire": { return "TIR AMICAL"; }
+                case "ultrakill.groundslam": { return "ÉCRASEMENT"; }
+                case "ultrakill.halfoff": { return "<color=cyan>EN MOITIÉ</color>"; }
+                case "ultrakill.headshot": { return "EN PLEIN TÊTE"; }
+                case "ultrakill.headshotcombo": { return "<color=cyan>EN PLEIN TÊTE</color>"; }
+                case "ultrakill.homerun": { return "COUP DE CIRCUIT"; }
+                case "ultrakill.instakill": { return "<color=lime>TUE INSTATANÉ</color>"; }
+                case "ultrakill.interruption": { return "<color=lime>INTERROMPU</color>"; }
+                case "ultrakill.kill": { return "TUÉ"; }
+                case "ultrakill.limbshot": { return "EN MEMBRE"; }
+                case "ultrakill.mauriced": { return "MAURICE"; }
+                case "ultrakill.multikill": { return "<color=orange>MULTI</color>"; }
+                case "ultrakill.nailbombed": { return "CLOUÉ"; }
+                case "ultrakill.nailbombedalive": { return "<color=grey>CLOUÉ</color>"; }
+                case "ultrakill.parry": { return "<color=lime>RENVOI</color>"; }
+                case "ultrakill.projectileboost": { return "<color=lime>BOOST PROJECTILE</color>"; }
+                case "ultrakill.quickdraw": { return "<color=cyan>AGILITÉ</color>"; }
+                case "ultrakill.ricoshot": { return "<color=cyan>RICOCHET</color>"; }
+                case "ultrakill.secret": { return "<color=cyan>SÉCRET</color>"; }
+                case "ultrakill.splattered": { return "ÉCLABOUSSÉ"; }
+                case "ultrakill.triplekill": { return "<color=orange>TRIPLE</color>"; }
+
+                default: return "";
+
+            }
+        }
+
         public string getStyleBonus(bool isColor, string inputBonus)
         {
 
             string regexinput = Regex.Replace(inputBonus, @"<[^>]*>", "");
 
-
-            if (regexinput.Contains("MULTIKILL"))
-            { string multiKills = regexinput.Substring(10); Console.WriteLine(multiKills); return "MULTI" + multiKills; }
-
-            else if (regexinput.Contains("HEADSHOT COMBO"))
-            { string multiKills = regexinput.Substring(15); Console.WriteLine(multiKills); return "EN PLEINE TÊTE " + multiKills; }
-
-            else
-            { 
-
             //Try and keep this alphabetical as it gets bigger over time.
                 switch (regexinput)
                 {
-					case "AIRSHOT": { return "DANS L'AIR"; }
-                    case "AIR SLAM": { return "ÉCRASEMENT DANS L'AIR"; }
-                    case "ATTRAPTOR": { return "ATTRACTEUR"; }
-					case "ARSENAL": { return "ARSENAL"; }
-					case "BIG HEADSHOT": { return "GRAND TUE EN PLEINE TÊTE"; }
-                    case "BIG FISTKILL": { return "GROS POIGNARDAGE"; }
-                    case "BIG KILL": { return "GRAND TUE"; }
-                    case "BIPOLAR": { return "BIPOLAIRE"; }
-                    case "CATAPAULTED": { return "BOULE DE CANON"; }
-                    case "CANNONBALLED": { return "BOULE DE CANON"; }
-                    case "CHARGEBACK": { return "FACTURATION"; }
-                    case "COMPRESSED": { return "COMPRIMÉ"; }
                     case "CONDUCTOR": { return "CONDUCTEUR"; }
-                    case "CRITICAL PUNCH": { return "POIGNARD CRITIQUE"; }
                     case "CRUSHED": { return "ÉCRASÉ"; }
-                    case "DISRESPECT": { return "MÉPRISAGE"; }
-                    case "DOUBLE KILL": { return "DOUBLE"; }
-                    case "ENRAGED": { return "ENRAGÉ"; }
-                    case "EXPLODED": { return "EXPLOSÉ"; }
                     case "FALL": { return "TOMBÉ"; }
-                    case "FINISHED OFF": { return "ACHEVÉ"; }
-                    case "FIREWORKS": { return "FEU D'ARTIFICES"; };
-                    case "FISTFUL OF DOLLAR": { return "POIGNÉE DE DOLLARS"; }
-                    case "FISTIKILL": { return "POIGNARDAGE"; }
                     case "FRIED": { return "GRILLÉ"; }
-                    case "FRIENDLY FIRE": { return "TIR AMICALE"; }
-                    case "GROUND SLAM": { return "ÉCRASEMENT"; }
-                    case "HALF OFF": { return "EN MOITIÉ"; }
-                    case "HEADSHOT": { return "EN PLEINE TÊTE"; }
-                    case "HOMERUN": { return "COUP DE CIRCUIT"; }
-                    case "INSTAKILL": { return "TUE INSTATANÉ"; }
-                    case "INTERRUPTION": { return "INTERRUPTION"; }
-                    case "KILL": { return "TUÉ"; }
-                    case "LIMB HIT": { return "EN MEMBRE"; }
-                    case "MAURICED": { return "MAURICED"; } //What do I even put here lmao
                     case "MINCED": { return "EMINCÉ"; }
-                    case "NAILBOMBED": { return "CLOUÉ"; }
                     case "OUT OF BOUNDS": { return "HORS LIMITES"; }
-                    case "OVERKILL": { return "SURPUISSANCE"; }
-                    case "PARRY": { return "RENVOI"; }
-                    case "PROJECTILE BOOST": { return "BOOST PROJECTILE"; }
-                    case "QUICKDRAW": { return "AGILITÉ"; }
                     case "RICOSHOT": { return "RICOCHET"; }
                     case "SHREDDED": { return "RÂPÉ"; }
-                    case "SPLATTERED": { return "ÉCLABOUSSÉ"; }
-                    case "TRIPLE KILL": { return "TRIPLE"; }
                     case "ZAPPED": { return "ZAPPÉ"; }
                     default: { Console.WriteLine("Missing style translation: " + regexinput); return regexinput; }
-                }
-            }
+             }
         }
 
         public static string getTranslatedRankString(string inputString)
@@ -128,6 +134,18 @@ namespace UltrakULL
                 return(styleBonus);
             }
             
+        }
+        
+        public static string getWeaponFreshness(StyleFreshnessState weaponState)
+        {
+            switch(weaponState)
+            {
+                case StyleFreshnessState.Fresh: { return "FRAIS - 1.50X"; }
+                case StyleFreshnessState.Used: { return "NEUF - 1.00X"; }
+                case StyleFreshnessState.Stale: { return "ANCIEN - 0.50X"; }
+                case StyleFreshnessState.Dull: { return "NUL - 0.00X"; }
+                default: { return "Unknown state"; }
+            }
         }
 
         public StyleBonusStrings()

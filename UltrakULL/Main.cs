@@ -59,7 +59,7 @@ using UltrakULL.json;
  * 
  * ACT 2 UPDATE DAMAGE REPORT
  * 
- * - IL Compile error on AddPoints
+ * - IL Compile error on StyleHud->AddPoints
  * - DivideMoney function in VariationInfo was moved to new class called MoneyText. Need to replace in UpdateMoney of PatchedFunctions
  * - AddPoints function in StyleHUD has been overhauled. Need to swap with the new one
  * - DisplaySubtitle params have changed, possibly other stuff too.
@@ -67,8 +67,7 @@ using UltrakULL.json;
  * - Options: General->Restart warning, Graphics->Custom Color Palette
  * - Difficulty descriptions have had minor changes, as well as new indicator
  * - Shop->PatchWeapons is broke, very likely due to shop changes
- * - Death screen is now broke on all levels
- * - patchMainMenu throws errors on returning to main menu (but loading in first time works fine...)
+ * - Death screen is now broke on all levels - likely due to root object. Shall make a new common function for it, might also fix 1-4.
  * 
  * */
 
@@ -255,10 +254,22 @@ namespace UltrakULL
             harmony.Patch(originalUpdateMoney, new HarmonyMethod(patchedUpdateMoney));
             Logger.LogInfo("Done");
 
-            //Logger.LogInfo("Patching AddPoints for the style meter...");
-            MethodInfo originalAddPoints = AccessTools.Method(typeof(StyleHUD), "AddPoints");
+            Logger.LogInfo("Patching AddPoints for the style meter... (1/3)");
+            MethodInfo originalAddPoints = AccessTools.Method(typeof(StyleHUD), "AddPoints", new Type[] { typeof(int), typeof(string), typeof(GameObject), typeof(EnemyIdentifier), typeof(int), typeof(string), typeof(string) });
             MethodInfo patchedAddPoints = AccessTools.Method(typeof(PatchedFunctions), "AddPoints_MyPatch");
-           //harmony.Patch(originalAddPoints, new HarmonyMethod(patchedAddPoints));
+            harmony.Patch(originalAddPoints, new HarmonyMethod(patchedAddPoints));
+            Logger.LogInfo("Done");
+
+            Logger.LogInfo("Patching GetLocalizedName for the style meter... (2/3)");
+            MethodInfo originalGetLocalizedName = AccessTools.Method(typeof(StyleHUD), "GetLocalizedName", new Type[] { typeof(string)});
+            MethodInfo patchedGetLocalizedName = AccessTools.Method(typeof(PatchedFunctions), "GetLocalizedName_MyPatch");
+            harmony.Patch(originalGetLocalizedName, new HarmonyMethod(patchedGetLocalizedName));
+            Logger.LogInfo("Done");
+
+            Logger.LogInfo("Patching UpdateFreshnessSlider for the freshness meter... (2/3)");
+            MethodInfo originalUpdateFreshnessSlider = AccessTools.Method(typeof(StyleHUD), "UpdateFreshnessSlider");
+            MethodInfo patchedUpdateFreshnessSlider = AccessTools.Method(typeof(PatchedFunctions), "UpdateFreshnessSlider_MyPatch");
+            harmony.Patch(originalUpdateFreshnessSlider, new HarmonyMethod(patchedUpdateFreshnessSlider));
             Logger.LogInfo("Done");
 
             Logger.LogInfo("Patching Start in TextAppear intermission strings...");

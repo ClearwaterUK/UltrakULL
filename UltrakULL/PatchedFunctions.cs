@@ -1194,16 +1194,16 @@ namespace UltrakULL
 
         //@Override
         //Overrides the AddPoints method from the StyleHUD class. This is needed to intercept and translate any strings coming into the style meter in-game.
-        public static bool AddPoints_MyPatch(int points, string pointName, StyleHUD __instance, StatsManager ___sman, float ___rankScale, List<string> ___styleNames)
+        /*public static bool AddPoints_MyPatch(int points, string pointName, StyleHUD __instance, StatsManager ___sman, float ___rankScale, List<string> ___styleNames)
         {
             float num = (float)points;
             if (points > 0)
             {
-                /*if (__instance.freshWeapon)
+                if (__instance.freshWeapon)
                 {
                     num *= 1.25f;
                 }
-                __instance.currentMeter += num;*/
+                __instance.currentMeter += num;
                 ___sman.stylePoints += Mathf.RoundToInt(num);
                 ___rankScale = 0.2f;
             }
@@ -1213,6 +1213,34 @@ namespace UltrakULL
                 string translatedBonus = bonusStrings.getTranslatedStyleBonus(pointName);
                 ___styleNames.Add(translatedBonus);
             }
+            return false;
+        }*/
+        
+        //@Override
+        //Overrides the AddPoints method from the StyleHUD class. This is needed to intercept and translate any strings coming into the style meter in-game.
+        public static bool AddPoints_MyPatch(StyleHUD __instance, GunControl ___gc, StatsManager ___sman, Dictionary<StyleFreshnessState, StyleFreshnessData> ___freshnessStateDict, float ___currentMeter, float ___rankScale, Queue<string> ___hudItemsQueue, int points, string pointID, GameObject sourceWeapon = null, EnemyIdentifier eid = null, int count = -1, string prefix = "", string postfix = "")
+        {
+            return true;
+        }
+
+        public static bool GetLocalizedName_MyPatch(string id, StyleHUD __instance, Dictionary<string,string> ___idNameDict, ref string __result)
+        {
+            StyleBonusStrings bonusStrings = new StyleBonusStrings();
+            
+            if (___idNameDict.ContainsKey(id))
+            {
+                __result = bonusStrings.getStyleBonusDictionary(id);
+                return false;
+            }
+            __result = bonusStrings.getTranslatedStyleBonus(id);
+            return false;
+        }
+
+        public static bool UpdateFreshnessSlider_MyPatch(StyleHUD __instance, GunControl ___gc)
+        {
+            StyleFreshnessState freshnessState = __instance.GetFreshnessState(___gc.currentWeapon);
+            __instance.freshnessSliderText.text = StyleBonusStrings.getWeaponFreshness(freshnessState);
+
             return false;
         }
 
