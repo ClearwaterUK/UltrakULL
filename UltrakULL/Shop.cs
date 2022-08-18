@@ -16,7 +16,6 @@ namespace UltrakULL
 {
     class Shop
     {
-
         public void patchShopFrontEnd(ref GameObject coreGame, JsonParser language)
         {
             Console.WriteLine("Starting patchShop");
@@ -181,6 +180,10 @@ namespace UltrakULL
             weaponRailcannonText.text = "CANON-ÈLECTRIQUE";
             weaponRailcannonText.fontSize = 16;
 
+            Text rocketLauncherText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "RocketLauncherButton"), "Text"));
+            rocketLauncherText.text = "LANCE-ROQUETTES";
+            rocketLauncherText.fontSize = 16;
+
             Text weaponArmText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "ArmButton"), "Text"));
             weaponArmText.text = "BRAS";
 
@@ -188,13 +191,14 @@ namespace UltrakULL
 
             //Revolver window and descriptions
             GameObject revolverWindow = getGameObjectChild(shopWeaponsObject, "RevolverWindow");
+            Console.WriteLine("revolverWindow: " + revolverWindow);
 
             //Piercer
-            GameObject piercer = getGameObjectChild(revolverWindow, "Variation Panel 1");
+            GameObject piercer = getGameObjectChild(revolverWindow, "Variation Panel (Blue)");
             Text piercerName = getTextfromGameObject(getGameObjectChild(piercer, "Text"));
             piercerName.text = "PERCEUSE";
 
-            GameObject piercerWindow = getGameObjectChild(revolverWindow, "Variation 1 Info");
+            GameObject piercerWindow = getGameObjectChild(revolverWindow, "Variation Info (Blue)");
             Text piercerWindowName = getTextfromGameObject(getGameObjectChild(piercerWindow, "Name"));
             piercerWindowName.text = piercerName.text;
 
@@ -204,12 +208,12 @@ namespace UltrakULL
 
             //Marksman
 
-            GameObject marksman = getGameObjectChild(revolverWindow, "Variation Panel 2 (New)");
+            GameObject marksman = getGameObjectChild(revolverWindow, "Variation Panel (Green)");
             Text marksmanName = getTextfromGameObject(getGameObjectChild(marksman, "Text"));
             marksmanName.text = "TIREUR D'ÉLITE";
             marksmanName.fontSize = 14;
 
-            GameObject marksmanWindow = getGameObjectChild(revolverWindow, "Variation 2 Info (New)");
+            GameObject marksmanWindow = getGameObjectChild(revolverWindow, "Variation Info (Green)");
             Text marksmanWindowName = getTextfromGameObject(getGameObjectChild(marksmanWindow, "Name"));
             marksmanWindowName.text = marksmanName.text;
 
@@ -222,11 +226,11 @@ namespace UltrakULL
             //Shotgun window and descriptions
             GameObject shotgunWindow = getGameObjectChild(shopWeaponsObject, "ShotgunWindow");
 
-            GameObject coreEject = getGameObjectChild(shotgunWindow, "Variation Panel 1 (New)");
+            GameObject coreEject = getGameObjectChild(shotgunWindow, "Variation Panel (Blue)");
             Text coreEjectName = getTextfromGameObject(getGameObjectChild(coreEject, "Text"));
             coreEjectName.text = "ÉJECTION";
 
-            GameObject coreEjectWindow = getGameObjectChild(shotgunWindow, "Variation 1 Info (New)");
+            GameObject coreEjectWindow = getGameObjectChild(shotgunWindow, "Variation Info (Blue)");
             Text coreEjectWindowName = getTextfromGameObject(getGameObjectChild(coreEjectWindow, "Name"));
             coreEjectWindowName.text = coreEjectName.text;
 
@@ -234,12 +238,12 @@ namespace UltrakULL
             coreEjectWindowDescription.text = "Appuyer sur le tir alternatif pour surchauffer et <color=orange>lancer</color> les <color=orange>noyeaux</color> du fusil.\n\n" + "<color=orange>Maintenir</color> pour augmenter la <color=orange>distance</color>.\n\n"
                 + "<color=orange>Explosion sur impact.</color>";
 
-            GameObject pumpCharge = getGameObjectChild(shotgunWindow, "Variation Panel 2 (New)");
+            GameObject pumpCharge = getGameObjectChild(shotgunWindow, "Variation Panel (Green)");
             Text pumpChargeName = getTextfromGameObject(getGameObjectChild(pumpCharge, "Text"));
             pumpChargeName.text = "SURCHARGEMENT";
             pumpChargeName.fontSize = 16;
 
-            GameObject pumpChargeWindow = getGameObjectChild(shotgunWindow, "Variation 2 Info (New)");
+            GameObject pumpChargeWindow = getGameObjectChild(shotgunWindow, "Variation Info (Green)");
             Text pumpChargeWindowName = getTextfromGameObject(getGameObjectChild(pumpChargeWindow, "Name"));
             pumpChargeWindowName.text = pumpChargeName.text;
 
@@ -251,11 +255,11 @@ namespace UltrakULL
             //Nailgun window and descriptions
             GameObject nailgunWindow = getGameObjectChild(shopWeaponsObject, "NailgunWindow");
 
-            GameObject attractor = getGameObjectChild(nailgunWindow, "Variation Panel 1 (New)");
+            GameObject attractor = getGameObjectChild(nailgunWindow, "Variation Panel (Blue)");
             Text attractorName = getTextfromGameObject(getGameObjectChild(attractor, "Text"));
             attractorName.text = "AIMANT";
 
-            GameObject attractorWindow = getGameObjectChild(nailgunWindow, "Variation 1 Info (New)");
+            GameObject attractorWindow = getGameObjectChild(nailgunWindow, "Variation Info (Blue)");
             Text attractorWindowName = getTextfromGameObject(getGameObjectChild(attractorWindow, "Name"));
             attractorWindowName.text = attractorName.text;
 
@@ -265,12 +269,12 @@ namespace UltrakULL
             attractorWindowDescription.fontSize = 16;
 
 
-            GameObject overheat = getGameObjectChild(nailgunWindow, "Variation Panel 2 (New)");
+            GameObject overheat = getGameObjectChild(nailgunWindow, "Variation Panel (Green)");
             Text overheatName = getTextfromGameObject(getGameObjectChild(overheat, "Text"));
             overheatName.text = "SURCHAUFFEMENT";
             overheatName.fontSize = 16;
 
-            GameObject overheatWindow = getGameObjectChild(nailgunWindow, "Variation 2 Info (New)");
+            GameObject overheatWindow = getGameObjectChild(nailgunWindow, "Variation Info (Green)");
             Text overheatWindowName = getTextfromGameObject(getGameObjectChild(overheatWindow, "Name"));
             overheatWindowName.text = overheatName.text;
 
@@ -282,11 +286,11 @@ namespace UltrakULL
             //Railcannon window and descriptions
             GameObject railcannonWindow = getGameObjectChild(shopWeaponsObject, "RailcannonWindow");
 
-            GameObject electric = getGameObjectChild(railcannonWindow, "Variation Panel 1 (New)");
+            GameObject electric = getGameObjectChild(railcannonWindow, "Variation Panel (Blue)");
             Text electricName = getTextfromGameObject(getGameObjectChild(electric, "Text"));
             electricName.text = "ÉLECTRIQUE";
 
-            GameObject electricWindow = getGameObjectChild(railcannonWindow, "Variation 1 Info (New)");
+            GameObject electricWindow = getGameObjectChild(railcannonWindow, "Variation Info (Blue)");
             Text electricWindowName = getTextfromGameObject(getGameObjectChild(electricWindow, "Name"));
             electricWindowName.text = electricName.text;
 
@@ -297,11 +301,11 @@ namespace UltrakULL
             electricWindowDescription.fontSize = 16;
 
 
-            GameObject screwdriver = getGameObjectChild(railcannonWindow, "Variation Panel 2 (New)");
+            GameObject screwdriver = getGameObjectChild(railcannonWindow, "Variation Panel (Green)");
             Text screwdriverName = getTextfromGameObject(getGameObjectChild(screwdriver, "Text"));
             screwdriverName.text = "TOURNEVIS";
 
-            GameObject screwdriverWindow = getGameObjectChild(railcannonWindow, "Variation 2 Info (New)");
+            GameObject screwdriverWindow = getGameObjectChild(railcannonWindow, "Variation Info (Green)");
             Text screwdriverWindowName = getTextfromGameObject(getGameObjectChild(screwdriverWindow, "Name"));
             screwdriverWindowName.text = screwdriverName.text;
 
@@ -310,11 +314,11 @@ namespace UltrakULL
                 "La perceuse fait saigner les ennemies avec <color=orange>une distance de soignage augmenté</color>.";
             screwdriverWindowDescription.fontSize = 16;
 
-            GameObject malicious = getGameObjectChild(railcannonWindow, "Variation Panel 3 (New)");
+            GameObject malicious = getGameObjectChild(railcannonWindow, "Variation Panel (Red)");
             Text maliciousName = getTextfromGameObject(getGameObjectChild(malicious, "Text"));
             maliciousName.text = "MALICIEUX";
 
-            GameObject maliciousWindow = getGameObjectChild(railcannonWindow, "Variation 3 Info (New)");
+            GameObject maliciousWindow = getGameObjectChild(railcannonWindow, "Variation Info (Red)");
             Text maliciousWindowName = getTextfromGameObject(getGameObjectChild(maliciousWindow, "Name"));
             maliciousWindowName.text = maliciousName.text;
 
@@ -371,7 +375,7 @@ namespace UltrakULL
         {
 
             this.patchShopFrontEnd(ref level,language);
-            //this.patchWeapons(ref level);
+            this.patchWeapons(ref level);
 
         }
 
