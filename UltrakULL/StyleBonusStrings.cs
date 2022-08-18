@@ -140,10 +140,10 @@ namespace UltrakULL
         {
             switch(weaponState)
             {
-                case StyleFreshnessState.Fresh: { return "FRAIS - 1.50X"; }
-                case StyleFreshnessState.Used: { return "NEUF - 1.00X"; }
-                case StyleFreshnessState.Stale: { return "ANCIEN - 0.50X"; }
-                case StyleFreshnessState.Dull: { return "NUL - 0.00X"; }
+                case StyleFreshnessState.Fresh: { return "FRAIS: 1.50X"; }
+                case StyleFreshnessState.Used: { return "NEUF: 1.00X"; }
+                case StyleFreshnessState.Stale: { return "ANCIEN: 0.50X"; }
+                case StyleFreshnessState.Dull: { return "NUL: 0.00X"; }
                 default: { return "Unknown state"; }
             }
         }
