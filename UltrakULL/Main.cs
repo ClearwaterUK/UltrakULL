@@ -63,7 +63,7 @@ using UltrakULL.json;
  * - Main menu seems to be fine. Just need to add new level names and challenges
  * - Options: General->Restart warning, Graphics->Custom Color Palette
  * - Difficulty descriptions have had minor changes, as well as new indicator
- * - Shop->PatchWeapons is broke, very likely due to shop changes
+ * - Shop needs new stuff added - weapon lore, colors, new enemies, etc
  * - Death screen is now broke on all levels - likely due to root object. Shall make a new common function for it, might also fix 1-4.
  * 
  * */

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<DevTrackerData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SolutionTotalEditTime="PT1H52M8.0478577S" SolutionTotalViewTime="PT2H49M21.2911223S" SolutionTotalDebugTime="PT0S">
+<DevTrackerData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SolutionTotalEditTime="PT2H44M8.8649305S" SolutionTotalViewTime="PT3H34M43.7981942S" SolutionTotalDebugTime="PT0S">
   <FileVersion>
     <Major>1</Major>
     <Minor>0</Minor>
@@ -14,109 +14,58 @@
   </ProjectsCreatedDateList>
   <SessionTimeList />
   <LastSessionTimeList>
-    <DevTrackerDataItem ViewActiveTime="PT2.23295S" EditActiveTime="PT0S">
-      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
-      <EditedCount>0</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>c:\users\danny\desktop\codingwork\projects\ultrakull\ultrakull\UltrakULL\Books.cs</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
-      <CreatedDate>2022-08-17T16:50:11.309293+02:00</CreatedDate>
-      <ViewedBy>Danny</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT56.6412359S" EditActiveTime="PT36.5661548S">
-      <ModifiedDate>2022-08-17T16:50:22.4012424+02:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT5M38.7431213S" EditActiveTime="PT1M6.4366717S">
+      <ModifiedDate>2022-08-18T20:57:11.9591918+02:00</ModifiedDate>
       <ModifiedBy>Danny</ModifiedBy>
       <EditedCount>1</EditedCount>
       <ViewedCount>1</ViewedCount>
-      <Item>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\CommonFunctions.cs</Item>
+      <Item>c:\users\danny\desktop\codingwork\projects\ultrakull\ultrakull\UltrakULL\Main.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
-      <CreatedDate>2022-08-17T16:47:53.4363094+02:00</CreatedDate>
+      <CreatedDate>2022-08-18T14:15:09.7616631+02:00</CreatedDate>
       <ViewedBy>Danny</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT13.4242119S" EditActiveTime="PT0S">
-      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
-      <EditedCount>0</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>c:\users\danny\desktop\codingwork\projects\ultrakull\ultrakull\UltrakULL\Intermission.cs</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
-      <CreatedDate>2022-08-17T16:50:24.3698026+02:00</CreatedDate>
-      <ViewedBy>Danny</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT3.0947877S" EditActiveTime="PT0S">
-      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
-      <EditedCount>0</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>c:\users\danny\desktop\codingwork\projects\ultrakull\ultrakull\UltrakULL\json\JsonFormat.cs</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
-      <CreatedDate>2022-08-17T16:50:08.2125098+02:00</CreatedDate>
-      <ViewedBy>Danny</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT9M29.1754569S" EditActiveTime="PT2M25.5474546S">
-      <ModifiedDate>2022-08-17T19:53:03.6154035+02:00</ModifiedDate>
-      <ModifiedBy>Danny</ModifiedBy>
-      <EditedCount>1</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\Main.cs</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
-      <CreatedDate>2022-08-17T16:35:59.3784005+02:00</CreatedDate>
-      <ViewedBy>Danny</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT1M22.942268S" EditActiveTime="PT5.8391755S">
-      <ModifiedDate>2022-08-17T16:45:48.6873862+02:00</ModifiedDate>
-      <ModifiedBy>Danny</ModifiedBy>
-      <EditedCount>1</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>c:\users\danny\desktop\codingwork\projects\ultrakull\ultrakull\UltrakULL\MainMenu.cs</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
-      <CreatedDate>2022-08-17T16:41:40.1574011+02:00</CreatedDate>
-      <ViewedBy>Danny</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT15M56.067015S" EditActiveTime="PT11M56.4953134S">
-      <ModifiedDate>2022-08-17T20:16:27.429466+02:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT5M0.5426253S" EditActiveTime="PT3M5.9037816S">
+      <ModifiedDate>2022-08-18T19:20:01.4245126+02:00</ModifiedDate>
       <ModifiedBy>Danny</ModifiedBy>
       <EditedCount>1</EditedCount>
       <ViewedCount>1</ViewedCount>
       <Item>c:\users\danny\desktop\codingwork\projects\ultrakull\ultrakull\UltrakULL\PatchedFunctions.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
-      <CreatedDate>2022-08-17T16:50:42.2471815+02:00</CreatedDate>
+      <CreatedDate>2022-08-18T13:02:43.1185693+02:00</CreatedDate>
       <ViewedBy>Danny</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT1.8033769S" EditActiveTime="PT0S">
-      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
-      <EditedCount>0</EditedCount>
+    <DevTrackerDataItem ViewActiveTime="PT29M24.6936905S" EditActiveTime="PT15M48.8489877S">
+      <ModifiedDate>2022-08-18T23:09:26.9881498+02:00</ModifiedDate>
+      <ModifiedBy>Danny</ModifiedBy>
+      <EditedCount>1</EditedCount>
       <ViewedCount>1</ViewedCount>
-      <Item>c:\users\danny\desktop\codingwork\projects\ultrakull\ultrakull\UltrakULL\PrimeSanctum.cs</Item>
+      <Item>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\Shop.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
-      <CreatedDate>2022-08-17T16:50:44.5185832+02:00</CreatedDate>
+      <CreatedDate>2022-08-18T19:28:39.6471314+02:00</CreatedDate>
       <ViewedBy>Danny</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT0.8435826S" EditActiveTime="PT0S">
-      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
-      <EditedCount>0</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>c:\users\danny\desktop\codingwork\projects\ultrakull\ultrakull\UltrakULL\Shop.cs</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
-      <CreatedDate>2022-08-17T16:50:46.3229586+02:00</CreatedDate>
-      <ViewedBy>Danny</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT2M21.1542S" EditActiveTime="PT5M8.3039342S">
-      <ModifiedDate>2022-08-17T21:05:49.4170625+02:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT5M8.289102S" EditActiveTime="PT31M59.6186642S">
+      <ModifiedDate>2022-08-18T20:47:22.571493+02:00</ModifiedDate>
       <ModifiedBy>Danny</ModifiedBy>
       <EditedCount>1</EditedCount>
       <ViewedCount>1</ViewedCount>
       <Item>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\StyleBonusStrings.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
-      <CreatedDate>2022-08-17T20:16:34.8248734+02:00</CreatedDate>
+      <CreatedDate>2022-08-18T11:23:56.8706243+02:00</CreatedDate>
+      <ViewedBy>Danny</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT10.2674472S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\SubtitleStrings.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
+      <CreatedDate>2022-08-18T19:02:48.0195168+02:00</CreatedDate>
       <ViewedBy>Danny</ViewedBy>
     </DevTrackerDataItem>
   </LastSessionTimeList>
@@ -277,11 +226,11 @@
       <CreatedDate>2022-08-13T14:26:23.4870651+02:00</CreatedDate>
       <ViewedBy>Danny</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT34M50.6436263S" EditActiveTime="PT26M13.6755164S">
-      <ModifiedDate>2022-08-17T19:53:03.6154035+02:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT40M29.3867476S" EditActiveTime="PT27M20.1121881S">
+      <ModifiedDate>2022-08-18T20:57:11.9591918+02:00</ModifiedDate>
       <ModifiedBy>Danny</ModifiedBy>
-      <EditedCount>8</EditedCount>
-      <ViewedCount>11</ViewedCount>
+      <EditedCount>9</EditedCount>
+      <ViewedCount>12</ViewedCount>
       <Item>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\Main.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
@@ -299,11 +248,11 @@
       <CreatedDate>2022-08-16T23:03:53.3719868+02:00</CreatedDate>
       <ViewedBy>Danny</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT24M29.3403837S" EditActiveTime="PT20M13.0713718S">
-      <ModifiedDate>2022-08-17T20:16:27.429466+02:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT29M29.883009S" EditActiveTime="PT23M18.9751534S">
+      <ModifiedDate>2022-08-18T19:20:01.4245126+02:00</ModifiedDate>
       <ModifiedBy>Danny</ModifiedBy>
-      <EditedCount>5</EditedCount>
-      <ViewedCount>7</ViewedCount>
+      <EditedCount>6</EditedCount>
+      <ViewedCount>8</ViewedCount>
       <Item>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\PatchedFunctions.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
@@ -353,26 +302,36 @@
       <CreatedDate>2022-08-13T10:58:10.2316189+02:00</CreatedDate>
       <ViewedBy>Danny</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT28.6398643S" EditActiveTime="PT5.0372336S">
-      <ModifiedDate>2022-08-16T22:56:59.5329771+02:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT29M53.3116153S" EditActiveTime="PT15M53.8862213S">
+      <ModifiedDate>2022-08-18T23:09:26.9881498+02:00</ModifiedDate>
       <ModifiedBy>Danny</ModifiedBy>
-      <EditedCount>1</EditedCount>
-      <ViewedCount>2</ViewedCount>
+      <EditedCount>2</EditedCount>
+      <ViewedCount>3</ViewedCount>
       <Item>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\Shop.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
       <CreatedDate>2022-08-16T22:49:37.4597798+02:00</CreatedDate>
       <ViewedBy>Danny</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT3M49.1277596S" EditActiveTime="PT6M22.4744238S">
-      <ModifiedDate>2022-08-17T21:05:49.4170625+02:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT8M57.4168616S" EditActiveTime="PT38M22.093088S">
+      <ModifiedDate>2022-08-18T20:47:22.571493+02:00</ModifiedDate>
       <ModifiedBy>Danny</ModifiedBy>
-      <EditedCount>2</EditedCount>
-      <ViewedCount>2</ViewedCount>
+      <EditedCount>3</EditedCount>
+      <ViewedCount>3</ViewedCount>
       <Item>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\StyleBonusStrings.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
       <CreatedDate>2022-08-15T13:54:40.7470709+02:00</CreatedDate>
+      <ViewedBy>Danny</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT10.2674472S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\SubtitleStrings.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
+      <CreatedDate>2022-08-18T19:02:48.0195168+02:00</CreatedDate>
       <ViewedBy>Danny</ViewedBy>
     </DevTrackerDataItem>
     <DevTrackerDataItem ViewActiveTime="PT3M27.4990773S" EditActiveTime="PT28.4641062S">
@@ -398,6 +357,60 @@
     </DevTrackerDataItem>
   </TotalTimeList>
   <HistoryTimeList>
+    <DevTrackerDataItem ViewActiveTime="PT29M24.6767339S" EditActiveTime="PT15M48.8489877S">
+      <ModifiedDate>2022-08-18T23:09:26.9881498+02:00</ModifiedDate>
+      <ModifiedBy>Danny</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\Shop.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
+      <CreatedDate>2022-08-18T19:28:39.6471314+02:00</CreatedDate>
+      <ViewedBy>Danny</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT10.2674472S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\SubtitleStrings.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
+      <CreatedDate>2022-08-18T19:02:48.0195168+02:00</CreatedDate>
+      <ViewedBy>Danny</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT5M38.7431213S" EditActiveTime="PT1M6.4366717S">
+      <ModifiedDate>2022-08-18T20:57:11.9591918+02:00</ModifiedDate>
+      <ModifiedBy>Danny</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>c:\users\danny\desktop\codingwork\projects\ultrakull\ultrakull\UltrakULL\Main.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
+      <CreatedDate>2022-08-18T14:15:09.7616631+02:00</CreatedDate>
+      <ViewedBy>Danny</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT5M0.5426253S" EditActiveTime="PT3M5.9037816S">
+      <ModifiedDate>2022-08-18T19:20:01.4245126+02:00</ModifiedDate>
+      <ModifiedBy>Danny</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>c:\users\danny\desktop\codingwork\projects\ultrakull\ultrakull\UltrakULL\PatchedFunctions.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
+      <CreatedDate>2022-08-18T13:02:43.1185693+02:00</CreatedDate>
+      <ViewedBy>Danny</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT5M8.289102S" EditActiveTime="PT31M59.6186642S">
+      <ModifiedDate>2022-08-18T20:47:22.571493+02:00</ModifiedDate>
+      <ModifiedBy>Danny</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\StyleBonusStrings.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Danny\Desktop\CodingWork\Projects\UltrakULL\UltrakULL\UltrakULL\UltrakULL.csproj</ProjectName>
+      <CreatedDate>2022-08-18T11:23:56.8706243+02:00</CreatedDate>
+      <ViewedBy>Danny</ViewedBy>
+    </DevTrackerDataItem>
     <DevTrackerDataItem ViewActiveTime="PT2M21.1542S" EditActiveTime="PT5M8.3039342S">
       <ModifiedDate>2022-08-17T21:05:49.4170625+02:00</ModifiedDate>
       <ModifiedBy>Danny</ModifiedBy>

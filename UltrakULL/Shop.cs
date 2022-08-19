@@ -187,8 +187,6 @@ namespace UltrakULL
             Text weaponArmText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "ArmButton"), "Text"));
             weaponArmText.text = "BRAS";
 
-            //There are SO MANY inconsistencies with the following object names in the original game code. Hakita pls fix so both our lives are made easier thx
-
             //Revolver window and descriptions
             GameObject revolverWindow = getGameObjectChild(shopWeaponsObject, "RevolverWindow");
             Console.WriteLine("revolverWindow: " + revolverWindow);
@@ -223,6 +221,25 @@ namespace UltrakULL
             + "Les pièces peuvent être enchaînées.";
             marksmanWindowDescription.fontSize = 14;
 
+            //Revolver info & color tabs
+            GameObject revolverExtra = getGameObjectChild(revolverWindow, "Info and Color Panel");
+            GameObject revolverExtraInfo = getGameObjectChild(revolverExtra, "InfoButton");
+            GameObject revolverExtraColor = getGameObjectChild(revolverExtra, "ColorButton");
+
+            Text revolverExtraInfoText = getTextfromGameObject(getGameObjectChild(revolverExtraInfo, "Text"));
+            revolverExtraInfoText.text = "INF";
+
+            Text revolverExtraInfoColors = getTextfromGameObject(getGameObjectChild(revolverExtraColor, "Text"));
+            revolverExtraInfoColors.text = "COULEURS";
+
+            //Revolver lore
+            GameObject revolverLore = getGameObjectChild(revolverWindow, "Info Screen");
+            Text revolverLoreName = getTextfromGameObject(getGameObjectChild(revolverLore, "Name"));
+            revolverLoreName.text = "REVOLVER";
+
+            Text revolverLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverLore,"Scroll View"),"Viewport"),"Text"));
+            revolverLoreInfo.text = "lore";
+
             //Shotgun window and descriptions
             GameObject shotgunWindow = getGameObjectChild(shopWeaponsObject, "ShotgunWindow");
 
@@ -251,6 +268,25 @@ namespace UltrakULL
             pumpChargeWindowDescription.text = "Appuyer sur le tir alternatif pour <color=orange>pomper</color> votre fusil, augmentant la <color=orange>puissance</color> et <color=orange>diminuant</color> la précision de votre <color=orange>prochain tir</color>.\n\n"
                 + "Trop de pompes résultera dans une <color=orange>explosion</color> lorsque l'arme est tirée.";
             pumpChargeWindowDescription.fontSize = 14;
+
+            //Shotgun info & color tabs
+            GameObject shotgunExtra = getGameObjectChild(shotgunWindow, "Info and Color Panel");
+            GameObject shotgunExtraInfo = getGameObjectChild(shotgunExtra, "InfoButton");
+            GameObject shotgunExtraColor = getGameObjectChild(shotgunExtra, "ColorButton");
+
+            Text shotgunExtraInfoText = getTextfromGameObject(getGameObjectChild(shotgunExtraInfo, "Text"));
+            shotgunExtraInfoText.text = "INF";
+
+            Text shotgunExtraInfoColors = getTextfromGameObject(getGameObjectChild(shotgunExtraColor, "Text"));
+            shotgunExtraInfoColors.text = "COULEURS";
+
+            //Shotgun lore
+            GameObject shotgunLore = getGameObjectChild(shotgunWindow, "Info Screen");
+            Text shotgunLoreName = getTextfromGameObject(getGameObjectChild(shotgunLore, "Name"));
+            shotgunLoreName.text = "FUSIL Á POMPE";
+
+            Text shotgunLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shotgunLore, "Scroll View"), "Viewport"), "Text"));
+            shotgunLoreInfo.text = "lore";
 
             //Nailgun window and descriptions
             GameObject nailgunWindow = getGameObjectChild(shopWeaponsObject, "NailgunWindow");
@@ -282,6 +318,27 @@ namespace UltrakULL
             overheatWindowDescription.text = "Appuyer sur le tir alternatif <color=orange>pendant le tir</color> pour une coup vite de dêgàts en utilisant un <color=orange>dissipateur thermique</color>.\n\n"
                 + "Les dissipateurs se rechargent lorsque vous ne tirez pas.";
             overheatWindowDescription.fontSize = 14;
+
+            //Nailgun info & color tabs
+            GameObject nailgunExtra = getGameObjectChild(nailgunWindow, "Info and Color Panel");
+            GameObject nailgunExtraInfo = getGameObjectChild(nailgunExtra, "InfoButton");
+            GameObject nailgunExtraColor = getGameObjectChild(nailgunExtra, "ColorButton");
+
+            Text nailgunExtraInfoText = getTextfromGameObject(getGameObjectChild(nailgunExtraInfo, "Text"));
+            nailgunExtraInfoText.text = "INF";
+
+            Text nailgunExtraInfoColors = getTextfromGameObject(getGameObjectChild(nailgunExtraColor, "Text"));
+            nailgunExtraInfoColors.text = "COULEURS";
+
+            //Nailgun lore
+            GameObject nailgunLore = getGameObjectChild(nailgunWindow, "Info Screen");
+            Text nailgunLoreName = getTextfromGameObject(getGameObjectChild(nailgunLore, "Name"));
+            nailgunLoreName.text = "CLOUEUR";
+
+            Text nailgunLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunLore, "Scroll View"), "Viewport"), "Text"));
+            nailgunLoreInfo.text = "lore";
+
+
 
             //Railcannon window and descriptions
             GameObject railcannonWindow = getGameObjectChild(shopWeaponsObject, "RailcannonWindow");
@@ -326,6 +383,58 @@ namespace UltrakULL
             maliciousWindowDescription.text = "Tirez un laser instatané qui entraîne une <color=orange>explosion large</color> sur l'impact, un peu comme un certain tête familiaire.\n\n"
                 + "Efface des groupes d'enemmies faibles avec facilité.";
             maliciousWindowDescription.fontSize = 16;
+
+            //Railcannon info & color tabs
+            GameObject railcannonExtra = getGameObjectChild(railcannonWindow, "Info and Color Panel");
+            GameObject railcannonExtraInfo = getGameObjectChild(railcannonExtra, "InfoButton");
+            GameObject railcannonExtraColor = getGameObjectChild(railcannonExtra, "ColorButton");
+
+            Text railcannonExtraInfoText = getTextfromGameObject(getGameObjectChild(railcannonExtraInfo, "Text"));
+            railcannonExtraInfoText.text = "INF";
+
+            Text railcannonExtraInfoColors = getTextfromGameObject(getGameObjectChild(railcannonExtraColor, "Text"));
+            railcannonExtraInfoColors.text = "COULEURS";
+
+            //Railcannon lore
+            GameObject railcannonLore = getGameObjectChild(railcannonWindow, "Info Screen");
+            Text railcannonLoreName = getTextfromGameObject(getGameObjectChild(railcannonLore, "Name"));
+            railcannonLoreName.text = "CANON-ÉLECTRIQUE";
+
+            Text railcannonLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(railcannonLore, "Scroll View"), "Viewport"), "Text"));
+            railcannonLoreInfo.text = "lore";
+
+
+            //Rocket launcher window & descriptions
+            GameObject rocketlauncherWindow = getGameObjectChild(shopWeaponsObject, "RocketLauncherWindow");
+
+            GameObject freezeframe = getGameObjectChild(rocketlauncherWindow, "Variation Panel (Blue)");
+            Text freezeframeName = getTextfromGameObject(getGameObjectChild(freezeframe, "Text"));
+            freezeframeName.text = "ARRÊT-IMAGE";
+
+            GameObject freezeframeInfo = getGameObjectChild(rocketlauncherWindow, "Variation Info (Blue)");
+            Text freezeframeDescription = getTextfromGameObject(getGameObjectChild(freezeframeInfo, "Description"));
+            freezeframeDescription.text = "Appuyer sur le tir alternative pour <color=orange>gèler</color> les roquettes.\n\n"
+                + "Les roquettes gèlees ont une distance d'explosion augmenté, et <color=orange>resteront gèlees</color> entre les changement d'armes.";
+            freezeframeDescription.fontSize = 16;
+
+            //Rocket launcher info & color tabs
+            GameObject rocketlauncherExtra = getGameObjectChild(rocketlauncherWindow, "Info and Color Panel");
+            GameObject rocketlauncherExtraInfo = getGameObjectChild(rocketlauncherExtra, "InfoButton");
+            GameObject rocketlauncherExtraColor = getGameObjectChild(rocketlauncherExtra, "ColorButton");
+
+            Text rocketlauncherExtraInfoText = getTextfromGameObject(getGameObjectChild(rocketlauncherExtraInfo, "Text"));
+            rocketlauncherExtraInfoText.text = "INF";
+
+            Text rocketlauncherExtraInfoColors = getTextfromGameObject(getGameObjectChild(rocketlauncherExtraColor, "Text"));
+            rocketlauncherExtraInfoColors.text = "COULEURS";
+
+            //Rocket launcher lore
+            GameObject rocketlauncherLore = getGameObjectChild(rocketlauncherWindow, "Info Screen");
+            Text rocketlauncherLoreName = getTextfromGameObject(getGameObjectChild(rocketlauncherLore, "Name"));
+            rocketlauncherLoreName.text = "LANCE-ROQUETTES";
+
+            Text rocketlauncherLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(rocketlauncherLore, "Scroll View"), "Viewport"), "Text"));
+            rocketlauncherLoreInfo.text = "lore";
 
             //Arm window and descriptions
             GameObject armWindow = getGameObjectChild(shopWeaponsObject, "ArmWindow");
