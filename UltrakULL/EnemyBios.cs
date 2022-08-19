@@ -19,16 +19,21 @@ namespace UltrakULL
                 case "THE CORPSE OF KING MINOS": { return "LE CADAVRE DU ROI MINOS"; }
                 case "STALKER": { return "TRAQUEUR"; }
                 case "INSURRECTIONIST": { return "INSURRECTIONISTE SISYPHEANE"; }
+                case "FERRYMAN": { return "NOCHER"; }
                 case "SWORDSMACHINE": { return "MACHINE À ÉPÉE"; }
                 case "DRONE": { return "DRONE"; }
                 case "STREETCLEANER": { return "NETTOYEUR"; }
                 case "V2 (2nd)": { return "V2 (2nde)"; }
                 case "V2": { return "V2"; }
+                case "SENTRY": { return "MITRAILLEUSE"; }
                 case "MINDFLAYER": { return "ILLITHID"; }
                 case "MALICIOUS FACE": { return "TÊTE MALICIEUX"; }
+                case "IDOL": { return "IDOLE"; }
+                case "LEVIATHAN": { return "LÉVIATHAN"; }
                 case "CERBERUS": { return "CERBÈRE"; }
                 case "HIDEOUS MASS": { return "MASSE HIDEUSE"; }
-                case "GABRIEL": { return "GABRIEL"; }
+                case "GABRIEL, JUDGE OF HELL": { return "GABRIEL, JUGE D'ENFER"; }
+                case "GABRIEL, APOSTATE OF HATE": { return "GABRIEL, APOSTAT DE HAINE"; }
                 case "VIRTUE": { return "VERTU"; }
                 case "SOMETHING WICKED": { return "QUELQUE MAUDIT"; }
                 case "FLESH PRISON": { return "PRISON DE CHAIR"; }
