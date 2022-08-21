@@ -64,7 +64,6 @@ using UltrakULL.json;
  * - Options: General->Restart warning, Graphics->Custom Color Palette
  * - Difficulty descriptions have had minor changes, as well as new indicator
  * - Shop needs new stuff added - weapon lore, colors, new enemies, etc
- * - Death screen is now broke on all levels - likely due to root object. Shall make a new common function for it, might also fix 1-4.
  * 
  * */
 
@@ -156,10 +155,38 @@ namespace UltrakULL
 
         public void patchDeathScreen(ref GameObject coreGame)
         {
-            GameObject deathScreen = null;
+
+            GameObject can = null;
+            Console.WriteLine("coreGame: " + coreGame.name);
+
+
+            List<GameObject> canvas = new List<GameObject>();
+            SceneManager.GetActiveScene().GetRootGameObjects(canvas);
+
+            foreach (GameObject a in canvas)
+            {
+                if (a.gameObject.name == "Canvas")
+                {
+                    can = a.gameObject;
+                    break;
+                }
+
+            }
+
+
+            for (int i = 0; i < can.transform.childCount; i++)
+            {
+                GameObject child = can.transform.GetChild(i).gameObject;
+                Console.WriteLine(child.name);
+            }
+
+
             try
             {
-                deathScreen = getGameObjectChild(getGameObjectChild(GameObject.Find("Canvas"), "BlackScreen"), "YouDiedText");
+                Console.WriteLine("In try block");
+
+
+                GameObject deathScreen = getGameObjectChild(getGameObjectChild(can, "BlackScreen"), "YouDiedText");
                 //Need to disable the TextOverride component.
                 Component[] test = deathScreen.GetComponents(typeof(Component));
                 Behaviour bhvr = (Behaviour)test[3];
@@ -168,9 +195,10 @@ namespace UltrakULL
                 Text youDiedText = getTextfromGameObject(deathScreen);
                 youDiedText.text = "[VOUS ÊTES MORT]\n\n\n\n\n[R] POUR RECOMMENCER";
             }
-            catch
+            catch (Exception e)
             {
                 Logger.LogError("Failed to patch death screen");
+                Console.WriteLine(e.ToString());
             }
             
         }
@@ -478,6 +506,7 @@ namespace UltrakULL
                     patchPauseMenu(ref coreGame);
                     patchCheats(ref coreGame);
                     patchShop(ref coreGame);
+                    patchDeathScreen(ref coreGame);
                     Options options = new Options(ref coreGame, this.jsonParser);
                     //SandboxEnemy sandbox = new SandboxEnemy(ref coreGame);
                 }
