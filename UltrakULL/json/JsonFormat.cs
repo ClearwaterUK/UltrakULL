@@ -231,6 +231,9 @@ namespace UltrakULL.json
         public string levelName_wrathFourth;
         public string levelName_wrathSecret;
 
+        public string levelName_heresyFirst;
+        public string levelName_heresySecond;
+
         public string levelName_primeFirst;
         public string levelName_primeSecond;
         public string levelName_primeThird;
@@ -290,12 +293,17 @@ namespace UltrakULL.json
         public string enemyname_drone;
         public string enemyname_streetCleaner;
 
+        public string enemyname_sentry;
+        public string enemyname_idol;
+        public string enemyname_leviathan;
+
         public string enemyname_v2;
         public string enemyname_mindFlayer;
         public string enemyname_malFace;
         public string enemyname_cerberus;
         public string enemyname_hideousMass;
         public string enemyname_gabriel;
+        public string enemyname_gabrielSecond;
         public string enemyname_virtue;
         public string enemyname_somethingWicked;
         public string enemyname_fleshPrison;
@@ -598,6 +606,14 @@ namespace UltrakULL.json
         public string challenges_greedSecond;
         public string challenges_greedThird;
         public string challenges_greedFourth;
+
+        public string challenges_wrathFirst;
+        public string challenges_wrathSecond;
+        public string challenges_wrathThird;
+        public string challenges_wrathFourth;
+
+        public string challenges_heresyFirst;
+        public string challenges_heresySecond;
     }
 
     public class a1

@@ -16,6 +16,7 @@ using System.Linq;
 using UltrakULL.json;
 
 
+
 /*
  * 
  *	UltrakULL (Ultrakill Language Library)
@@ -52,6 +53,7 @@ using UltrakULL.json;
  * - Discord RPC: Style meter in CG
  * - Part of the first page on the intro has changed (from green to blue). Check the new text
  * - Size/color tag isn't working on the prime testament
+ * - Could be possible to swap out rank textures in HUD for translation. Shall look into later
  * 
  * OTHER NOTES:
  * Whiplash is getting a hard damage nerf in Act 2 update. 4-4 Whiplash message will be updated accordingly.

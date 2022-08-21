@@ -108,6 +108,18 @@ namespace UltrakULL
 					return "4-4: " + language.currentLanguage.levelNames.levelName_greedFourth;
 				case 20:
 					return "5-1: " + language.currentLanguage.levelNames.levelName_wrathFirst;
+				case 21:
+					return "5-1: " + language.currentLanguage.levelNames.levelName_wrathFirst;
+				case 22:
+					return "5-2: " + language.currentLanguage.levelNames.levelName_wrathSecond;
+				case 23:
+					return "5-3: " + language.currentLanguage.levelNames.levelName_wrathThird;
+				case 24:
+					return "5-4: " + language.currentLanguage.levelNames.levelName_wrathFourth;
+				case 25:
+					return "6-1: " + language.currentLanguage.levelNames.levelName_heresyFirst;
+				case 26:
+					return "6-2: " + language.currentLanguage.levelNames.levelName_heresySecond;
 				default:
 					switch (missionNum)
 					{
