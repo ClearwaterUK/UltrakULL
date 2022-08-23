@@ -10,6 +10,7 @@ namespace UltrakULL
         // § - Indent
         // + - Lime green text
         // * - Red text
+        // ± - Blue text
         // _ - Close color
         // ½ - Half second pause
         // @ - Begins to fade out intro music
@@ -119,15 +120,15 @@ namespace UltrakULL
         public TutorialStrings(JsonParser language)
         {
 
-            /*this.introFirstPage =
+            this.introFirstPage =
                 language.currentLanguage.tutorial.tutorial_introStartup1 + "#" + language.currentLanguage.tutorial.tutorial_introStartup2 + " \n\n"
                 + language.currentLanguage.tutorial.tutorial_introVersion1 + "# \n"
                 + "+" + language.currentLanguage.tutorial.tutorial_introVersion2 + "_½ \n\n"
                 + language.currentLanguage.tutorial.tutorial_introCalibration1 + "# \n"
                 + "+" + language.currentLanguage.tutorial.tutorial_introCalibration2 + "_ \n\n"
-                 + language.currentLanguage.tutorial.tutorial_introReminder + "½ \n \n"
+                 + "(±" + language.currentLanguage.tutorial.tutorial_introReminder + "_)½ \n \n"
                  + language.currentLanguage.tutorial.tutorial_introLoadStatus + "# \n\n"
-                 + "~";*/
+                 + "~";
 
             this.introSecondPage =
             language.currentLanguage.tutorial.tutorial_introID1 + ":§§ " + language.currentLanguage.tutorial.tutorial_introID2 + "½½ \n"

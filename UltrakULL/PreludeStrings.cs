@@ -24,9 +24,13 @@ namespace UltrakULL
             {
                 return (language.currentLanguage.prelude.prelude_first_parry);
             }
+            if (fullMessage.Contains("HARD DAMAGE"))
+            {
+                return (language.currentLanguage.prelude.prelude_first_hardDamage1 + "\n"
+                + language.currentLanguage.prelude.prelude_first_hardDamage2);
+            }
             if (fullMessage.Contains("GROUND SLAM"))
             {
-                //return ("Un <color=orange>LANCEMENT AU SOL</color> ('<color=orange>" + input + "</color>') inflige des dégâts lors d'un coup direct.");
                 return (language.currentLanguage.prelude.prelude_first_groundSlam1 + "'<color=orange>" + input + "</color>'" + language.currentLanguage.prelude.prelude_first_groundSlam2);
             }
             Console.WriteLine("Unimplemented 0-1 string \n Text: " + fullMessage);

@@ -61,10 +61,9 @@ using UltrakULL.json;
  * 
  * ACT 2 UPDATE DAMAGE REPORT
  * 
- * - DivideMoney function in VariationInfo was moved to new class called MoneyText. Need to replace in UpdateMoney of PatchedFunctions
  * - Main menu seems to be fine. Just need to add new level names and challenges
  * - Options: General->Restart warning, Graphics->Custom Color Palette
- * - Difficulty descriptions have had minor changes, as well as new indicator
+ * - Difficulty descriptions has new indicator at bottom
  * - Shop needs new stuff added - weapon lore, colors, new enemies, etc
  * 
  * */

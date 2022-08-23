@@ -63,9 +63,14 @@ namespace UltrakULL
             {
                 return language.currentLanguage.act2.act2_greedFourth_whiplash2 + " <color=orange>" + input + "</color> " + language.currentLanguage.act2.act2_greedFourth_whiplash3;
             }
-            if (fullMessage.Contains("heavy"))
+            if (fullMessage.Contains("HEAVY"))
             {
                 return language.currentLanguage.act2.act2_greedFourth_whiplash3;
+            }
+            if (fullMessage.Contains("HARD DAMAGE"))
+            {
+                return language.currentLanguage.act2.act2_greedFourth_whiplashHardDamage1 + "\n"
+                    + language.currentLanguage.act2.act2_greedFourth_whiplashHardDamage2;
             }
             return "Unknown 4-4 string";
         }

@@ -566,6 +566,9 @@ namespace UltrakULL.json
         public string prelude_first_revolverPierce1;
         public string prelude_first_revolverPierce2;
         public string prelude_first_parry;
+        public string prelude_first_hardDamage1;
+        public string prelude_first_hardDamage2;
+
         public string prelude_first_groundSlam1;
         public string prelude_first_groundSlam2;
 
@@ -657,6 +660,9 @@ namespace UltrakULL.json
         public string act2_greedFourth_whiplash1;
         public string act2_greedFourth_whiplash2;
         public string act2_greedFourth_whiplash3;
+
+        public string act2_greedFourth_whiplashHardDamage1;
+        public string act2_greedFourth_whiplashHardDamage2;
 
         public string act2_greedSecret_holdToJump;
 
