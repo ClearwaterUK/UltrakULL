@@ -1114,16 +1114,37 @@ namespace UltrakULL
         //@Override
         //Overrides the UpdateMoney method from the VariationInfo class. This is needed to patch the "ALREADY OWNED" string, and will save having to change every single
         //seperate button containing this string in the shop.
-        public static bool UpdateMoney_MyPatch(VariationInfo __instance, int ___money, Text ___buttonText, Image ___equipImage, int ___equipStatus)
+        public static bool UpdateMoney_MyPatch(VariationInfo __instance, int ___money, Text ___buttonText, Image ___equipImage, int ___equipStatus, bool ___alreadyOwned)
         {
             ___money = GameProgressSaver.GetMoney();
-            //__instance.moneyText.text = __instance.DivideMoney(___money) + "<color=orange>P</color>";
-            if (!__instance.alreadyOwned)
+            __instance.moneyText.text = MoneyText.DivideMoney(___money) + "<color=orange>P</color>";
+            if (!___alreadyOwned && __instance.cost < 0 && GameProgressSaver.CheckGear(__instance.weaponName) > 0)
             {
-                if (__instance.cost > ___money)
+                ___alreadyOwned = true;
+            }
+            if (!___alreadyOwned)
+            {
+                if (__instance.cost < 0)
                 {
-                    //__instance.costText.text = "<color=red>" + __instance.DivideMoney(___money) + "<color=orange>P</color>";
-                    if (___buttonText.text == null)
+                    __instance.costText.text = "<color=red>NON DISPONIBLE</color>";
+                    if (___buttonText == null)
+                    {
+                        ___buttonText = __instance.buyButton.GetComponentInChildren<Text>();
+                    }
+                    ___buttonText.text = __instance.costText.text;
+                    __instance.buyButton.failure = true;
+                    __instance.buyButton.GetComponent<Button>().interactable = false;
+                    __instance.buyButton.GetComponent<Image>().color = Color.red;
+                    ShopButton shopButton;
+                    if (__instance.TryGetComponent<ShopButton>(out shopButton))
+                    {
+                        shopButton.failure = true;
+                    }
+                }
+                else if (__instance.cost > ___money)
+                {
+                    __instance.costText.text = "<color=red>" + MoneyText.DivideMoney(__instance.cost) + "P</color>";
+                    if (___buttonText == null)
                     {
                         ___buttonText = __instance.buyButton.GetComponentInChildren<Text>();
                     }
@@ -1134,7 +1155,7 @@ namespace UltrakULL
                 }
                 else
                 {
-                    //__instance.costText.text = "<color=white>" + __instance.DivideMoney(__instance.cost) + "</color><color=orange>P</color>";
+                    __instance.costText.text = "<color=white>" + MoneyText.DivideMoney(__instance.cost) + "</color><color=orange>P</color>";
                     if (___buttonText == null)
                     {
                         ___buttonText = __instance.buyButton.GetComponentInChildren<Text>();
@@ -1144,7 +1165,7 @@ namespace UltrakULL
                     __instance.buyButton.GetComponent<Button>().interactable = true;
                     __instance.buyButton.GetComponent<Image>().color = Color.white;
                 }
-                __instance.equipButton.gameObject.SetActive(true);
+                __instance.equipButton.gameObject.SetActive(false);
                 return false;
             }
             __instance.costText.text = "DÉJÀ ACHETÉ";
@@ -1162,7 +1183,7 @@ namespace UltrakULL
             {
                 ___equipImage = __instance.equipButton.transform.GetChild(0).GetComponent<Image>();
             }
-            int @int = PlayerPrefs.GetInt(__instance.weaponName, 0);
+            int @int = MonoSingleton<PrefsManager>.Instance.GetInt("weapon." + __instance.weaponName, 1);
             if (@int == 2 && GameProgressSaver.CheckGear(__instance.weaponName.Substring(0, __instance.weaponName.Length - 1) + "alt") > 0)
             {
                 ___equipStatus = 2;
@@ -1187,34 +1208,14 @@ namespace UltrakULL
                 }
             }
             ___equipImage.sprite = __instance.equipSprites[___equipStatus];
-
-
+            ShopButton shopButton2;
+            if (__instance.cost < 0 && __instance.TryGetComponent<ShopButton>(out shopButton2))
+            {
+                shopButton2.failure = false;
+            }
             return false;
         }
 
-        //@Override
-        //Overrides the AddPoints method from the StyleHUD class. This is needed to intercept and translate any strings coming into the style meter in-game.
-        /*public static bool AddPoints_MyPatch(int points, string pointName, StyleHUD __instance, StatsManager ___sman, float ___rankScale, List<string> ___styleNames)
-        {
-            float num = (float)points;
-            if (points > 0)
-            {
-                if (__instance.freshWeapon)
-                {
-                    num *= 1.25f;
-                }
-                __instance.currentMeter += num;
-                ___sman.stylePoints += Mathf.RoundToInt(num);
-                ___rankScale = 0.2f;
-            }
-            if (pointName != "")
-            {
-                StyleBonusStrings bonusStrings = new StyleBonusStrings();
-                string translatedBonus = bonusStrings.getTranslatedStyleBonus(pointName);
-                ___styleNames.Add(translatedBonus);
-            }
-            return false;
-        }*/
         
         //@Override
         //Overrides the AddPoints method from the StyleHUD class. This is needed to intercept and translate any strings coming into the style meter in-game.
