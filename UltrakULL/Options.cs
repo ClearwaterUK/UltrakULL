@@ -99,6 +99,9 @@ namespace UltrakULL
                 Text screenshakeText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Screenshake"), "Text"));
                 screenshakeText.text = language.currentLanguage.options.general_screenShake;
 
+                Text restartWarningText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Restart Warning"), "Text"));
+                restartWarningText.text = language.currentLanguage.options.general_restartWarning;
+
                 Text cameraTiltText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Camera Tilt"), "Text"));
                 cameraTiltText.text = language.currentLanguage.options.general_cameraTilt;
 
@@ -279,6 +282,12 @@ namespace UltrakULL
                 vertexWarpingDropdownListText[3].text = language.currentLanguage.options.graphics_vertexWarpingStrong;
                 vertexWarpingDropdownListText[4].text = language.currentLanguage.options.graphics_vertexWarpingVeryStrong;
                 vertexWarpingDropdownListText[5].text = language.currentLanguage.options.graphics_vertexWarpingAbsurd;
+
+                Text customColorPalette = getTextfromGameObject(getGameObjectChild(getGameObjectChild(graphicsContent, "Custom Color Palette"), "Text"));
+                customColorPalette.text = language.currentLanguage.options.graphics_customColorPalette;
+
+                Text customColorPaletteSelect = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(graphicsContent, "Custom Color Palette"), "Select"),"Text"));
+                customColorPaletteSelect.text = language.currentLanguage.options.graphics_customColorPaletteSelect;
 
 
                 Text colorCompressionText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(graphicsContent, "Color Compression"), "Text"));

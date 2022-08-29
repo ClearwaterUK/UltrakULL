@@ -29,7 +29,6 @@ namespace UltrakULL
             {
 
                 GameObject titleObject = getGameObjectChild(mainMenu, "Main Menu (1)");
-                Console.WriteLine("got");
 
                 //Early access/seasonal tag
                 Console.WriteLine("EA Text");
@@ -63,7 +62,7 @@ namespace UltrakULL
         {
             try
             {
-                GameObject difficultyObject = getGameObjectChild(frontEnd, "Difficulty Select");
+                GameObject difficultyObject = getGameObjectChild(frontEnd, "Difficulty Select (1)");
 
                 //Difficulty header text (note: this can't fit much without reducing the default font size.)
                 Text difficultyText = getTextfromGameObject(difficultyObject.transform.Find("Title").gameObject);
@@ -107,6 +106,11 @@ namespace UltrakULL
                 brutalText.text = jsonParser.currentLanguage.frontend.difficulty_brutal;
 
                 //No need for UMD header yet as it's not in-game
+
+                //Tooltip
+                GameObject assistTip = getGameObjectChild(difficultyObject, "Assist Tip");
+                Text assistTipText = getTextfromGameObject(assistTip);
+                assistTipText.text = "[ LA DIFFICULTÉ PEUT ÊTRE AJUSTÉ DANS LES OPTIONS D'ASSISTANCES ]";
             }
             catch (Exception e)
             {
@@ -121,7 +125,7 @@ namespace UltrakULL
         {
             try
             {
-                GameObject difficultyObject = getGameObjectChild(frontEnd, "Difficulty Select");
+                GameObject difficultyObject = getGameObjectChild(frontEnd, "Difficulty Select (1)");
 
                 //Harmless title
                 GameObject harmlessObject = getGameObjectChild(difficultyObject, "Harmless Info");
@@ -178,6 +182,9 @@ namespace UltrakULL
                     + jsonParser.currentLanguage.frontend.difficulty_violentDescription2
                     + "\n\n"
                     + "<color=red>" + jsonParser.currentLanguage.frontend.difficulty_violentDescription3 + "</color>";
+
+                Text underConstructionText = getTextfromGameObject(getGameObjectChild(difficultyObject, "Under Construction"));
+                underConstructionText.text = "SOUS CONSTRUCTION";
 
 
                 //Brutal and UMD stuff isn't in-game yet so the below is commmented out until the devs add them.

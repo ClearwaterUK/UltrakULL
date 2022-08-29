@@ -22,7 +22,7 @@ using UltrakULL.json;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater
  *	Date started: 21st April 2021
- *	Last updated: 18th August 2022
+ *	Last updated: 23rd August 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
@@ -37,8 +37,8 @@ using UltrakULL.json;
  *  - Cheat teleport menu
  *  - Sandbox stuff (time of day shop, spawn/cheat menu categories)
  *  - Terminals before bosses in levels (could copy the shop that's in the start of each level)
- *  - Settings -> graphics -> custom palettes
  *  - 1-4, 2-2, 4-2, 4-3 books
+ *  - All of the Act 2 stuff - subtitles, intermission, etc
  * 
  *  BUGS AND QUIRKS TO FIX:
  *  
@@ -46,25 +46,20 @@ using UltrakULL.json;
  *  
  * - Reexamine the intro text. See if I can get input working again...
  * - Note - 2-S uses intermission style strings. Is there a way I can patch the text without having to patch the IntermissionController class?
- * - Add in missing style meter bonuses as they appear.
  * - Some of the enemy bios as the INSURRECTIONIST and VIRTUE were updated, will need to retranslate and update on this end.
  * - 2-S: See if I can rename Mirage's names.
  * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages
  * - Discord RPC: Style meter in CG
- * - Part of the first page on the intro has changed (from green to blue). Check the new text
  * - Size/color tag isn't working on the prime testament
  * - Could be possible to swap out rank textures in HUD for translation. Shall look into later
  * 
- * OTHER NOTES:
- * Whiplash is getting a hard damage nerf in Act 2 update. 4-4 Whiplash message will be updated accordingly.
- * Change of style meter mechanic.
  * 
  * ACT 2 UPDATE DAMAGE REPORT
  * 
  * - Main menu seems to be fine. Just need to add new level names and challenges
- * - Options: General->Restart warning, Graphics->Custom Color Palette
- * - Difficulty descriptions has new indicator at bottom
  * - Shop needs new stuff added - weapon lore, colors, new enemies, etc
+ * - 2 new major assists: Disable Whiplash Hard Damage, Disable Weapon Freshness
+ * - Act 2 Hellmap is broken
  * 
  * */
 

@@ -335,6 +335,7 @@ namespace UltrakULL.json
         public string general_rememberWeapon;
         public string general_screenShake;
         public string general_cameraTilt;
+        public string general_restartWarning;
         public string general_discordRpc;
         public string general_seasonalEvent;
 
@@ -393,6 +394,10 @@ namespace UltrakULL.json
         public string graphics_vertexWarpingStrong;
         public string graphics_vertexWarpingVeryStrong;
         public string graphics_vertexWarpingAbsurd;
+
+        public string graphics_customColorPalette;
+        public string graphics_customColorPaletteSelect;
+
         public string graphics_colorCompression;
         public string graphics_colorCompressionNone;
         public string graphics_colorCompressionLight;
