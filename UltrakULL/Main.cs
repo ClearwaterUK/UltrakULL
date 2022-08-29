@@ -22,30 +22,32 @@ using UltrakULL.json;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater
  *	Date started: 21st April 2021
- *	Last updated: 23rd August 2022
+ *	Last updated: 29th August 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
  * 
  * 
- * 
  *  MAIN TODO LIST
- *  - Organise and refactor stuff, move functions to other files to declutter Main (Simplify getGameObjectChild and getTextFromgameObject in each file, take it from CommonFunctions) (Factorise the act classes with an interface?)
- *  - Fill the JSON template and class
+
+ *  - Fill the JSON template and class as progress happens
  *  - Error and exception handling
  *  - Discord RPC (Persistant timestamp and general corrections)
- *  - Cheat teleport menu
- *  - Sandbox stuff (time of day shop, spawn/cheat menu categories)
- *  - Terminals before bosses in levels (could copy the shop that's in the start of each level)
  *  - 1-4, 2-2, 4-2, 4-3 books
  *  - All of the Act 2 stuff - subtitles, intermission, etc
  * 
+ * - Less important stuff for future updates:
+ *  - Cheat teleport menu
+ *  - Sandbox stuff (time of day shop, spawn/cheat menu categories)
+ *  - Terminals before bosses in levels (could copy the shop that's in the start of each level)
+ *  - Organise and refactor stuff, move functions to other files to declutter Main (Simplify getGameObjectChild and getTextFromgameObject in each file, take itfrom CommonFunctions) (Factorise the act classes with an interface?)
+ *  
  *  BUGS AND QUIRKS TO FIX:
  *  
  * -  MEMORY LEAK THAT OCCURS OVER TIME IF YOU HOP IN AND OUT OF LEVELS. SHALL NEED TO MONITOR.
  *  
- * - Reexamine the intro text. See if I can get input working again...
- * - Note - 2-S uses intermission style strings. Is there a way I can patch the text without having to patch the IntermissionController class?
+ * - Reexamine the intro text. See if I can get input working again, as well as shorten the 3 dots time based on the Act 2 update original code
+ * - 2-S uses intermission style strings. Is there a way I can patch the text without having to patch the IntermissionController class?
  * - Some of the enemy bios as the INSURRECTIONIST and VIRTUE were updated, will need to retranslate and update on this end.
  * - 2-S: See if I can rename Mirage's names.
  * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages
@@ -132,6 +134,46 @@ namespace UltrakULL
                 //Quit
                 Text quitText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(pauseMenu, "Quit Mission"), "Text"));
                 quitText.text = this.jsonParser.currentLanguage.pauseMenu.pause_quit;
+
+
+                //Quit+Restart windows
+                GameObject pauseDialogs = getGameObjectChild(pauseObject, "PauseMenuDialogs");
+
+                //Quit
+
+                GameObject quitDialog = getGameObjectChild(getGameObjectChild(pauseDialogs, "Quit Confirm"),"Panel");
+                Text quitDialogText = getTextfromGameObject(getGameObjectChild(quitDialog, "Text"));
+                quitDialogText.text = "Êtes-vous sûr de vouloir <color=orange>QUITTER</color> ce mission?";
+
+                Text quitDialogTooltip = getTextfromGameObject(getGameObjectChild(quitDialog, "Text (1)"));
+                quitDialogTooltip.text = "Ce fenêtre peut être désactivé dans les options";
+
+                Text quitDialogYes = getTextfromGameObject(getGameObjectChild(getGameObjectChild(quitDialog, "Confirm"),"Text"));
+                quitDialogYes.text = "QUITTER";
+
+                Text quitDialogNo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(quitDialog, "Cancel"), "Text"));
+                quitDialogNo.text = "ANNULER";
+
+                //Restart
+                GameObject restartDialog = getGameObjectChild(getGameObjectChild(pauseDialogs, "Restart Confirm"), "Panel");
+
+                Text restartDialogText = getTextfromGameObject(getGameObjectChild(restartDialog, "Text"));
+                restartDialogText.text = "Êtes-vous sûr de vouloir <color=orange>RÉDEMARRER</color> ce mission?";
+
+                Text restartDialogTooltip = getTextfromGameObject(getGameObjectChild(restartDialog, "Text (1)"));
+                restartDialogTooltip.text = "Ce fenêtre peut être désactivé dans les options";
+
+                Text restartDialogYes = getTextfromGameObject(getGameObjectChild(getGameObjectChild(restartDialog, "Confirm"), "Text"));
+                restartDialogYes.text = "RÉDEMARRER";
+
+                Text restartDialogNo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(restartDialog, "Cancel"), "Text"));
+                restartDialogNo.text = "ANNULER";
+
+
+
+
+
+
             }
             catch(Exception e)
             {
