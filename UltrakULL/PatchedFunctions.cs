@@ -1657,7 +1657,7 @@ namespace UltrakULL
             }
 
             int diffInt = MonoSingleton<PrefsManager>.Instance.GetInt("difficulty", 0);
-            string diffString = language.currentLanguage.frontend.difficulty_title;
+            string diffString = language.currentLanguage.frontend.difficulty_title + ": ";
             switch (diffInt)
             {
                 case 0: { diffString += language.currentLanguage.frontend.difficulty_harmless; break; }

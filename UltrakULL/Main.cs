@@ -52,14 +52,13 @@ using UltrakULL.json;
  * - Discord RPC: Style meter in CG
  * - Size/color tag isn't working on the prime testament
  * - Could be possible to swap out rank textures in HUD for translation. Shall look into later
+ * - Put all the stuff that gets inactive GameObjects into a common function for code cleanup
  * 
  * 
  * ACT 2 UPDATE DAMAGE REPORT
  * 
- * - Main menu seems to be fine. Just need to add new level names and challenges
  * - Shop needs new stuff added - weapon lore, colors, new enemies, etc
  * - 2 new major assists: Disable Whiplash Hard Damage, Disable Weapon Freshness
- * - Act 2 Hellmap is broken
  * 
  * */
 

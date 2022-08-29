@@ -51,6 +51,11 @@ namespace UltrakULL
             if (inputName.Contains("IN THE WAKE OF POSEIDON")) { return (language.currentLanguage.levelNames.levelName_wrathFirst); }
             if (inputName.Contains("WAVES OF THE STARLESS SEA")) { return (language.currentLanguage.levelNames.levelName_wrathSecond); }
             if (inputName.Contains("SHIP OF FOOLS")) { return (language.currentLanguage.levelNames.levelName_wrathThird); }
+            if (inputName.Contains("LEVIATHAN")) { return (language.currentLanguage.levelNames.levelName_wrathFourth); }
+
+            //Heresy titles
+            if (inputName.Contains("CRY FOR THE WEEPER")) { return (language.currentLanguage.levelNames.levelName_heresyFirst); }
+            if (inputName.Contains("AESTHETICS OF HATE")) { return (language.currentLanguage.levelNames.levelName_heresySecond); }
 
             //Prime titles
             if (inputName.Contains("SOUL SURVIVOR")) { return (language.currentLanguage.levelNames.levelName_primeFirst); }
@@ -87,6 +92,10 @@ namespace UltrakULL
             {
                 titleToReturn.Append(language.currentLanguage.misc.hellmap_wrath);
             }
+            else if (inputTitle.Contains("HERESY"))
+            {
+                titleToReturn.Append(language.currentLanguage.misc.hellmap_heresy);
+            }
             else if (inputTitle.Contains("PRIME"))
             {
                 titleToReturn.Append(language.currentLanguage.misc.hellmap_prime);
@@ -104,6 +113,15 @@ namespace UltrakULL
             else if (inputTitle.Contains("ACT I CLIMAX"))
             {
                 titleToReturn.Append("ACTE I CLIMAXE");
+            }
+            if (inputTitle.Contains("ACT II CRESCENDO"))
+            {
+                //Placeholder string seems to revert to vanilla string. Guessing placeholder is too long.
+                titleToReturn.Append("ACTE II CRESCENDO");
+            }
+            else if (inputTitle.Contains("ACT II CLIMAX"))
+            {
+                titleToReturn.Append("ACTE II CLIMAXE");
             }
 
             else if (inputTitle.Contains("FIRST"))

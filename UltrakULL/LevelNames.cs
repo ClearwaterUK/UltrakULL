@@ -52,6 +52,15 @@ namespace UltrakULL
 			if (missionName.Contains("4-4")) { return language.currentLanguage.levelNames.levelName_greedFourth; }
 			if (missionName.Contains("4-S")) { return language.currentLanguage.levelNames.levelName_greedSecret; }
 
+			if (missionName.Contains("5-1")) { return language.currentLanguage.levelNames.levelName_wrathFirst; }
+			if (missionName.Contains("5-2")) { return language.currentLanguage.levelNames.levelName_wrathSecond; }
+			if (missionName.Contains("5-3")) { return language.currentLanguage.levelNames.levelName_wrathThird; }
+			if (missionName.Contains("5-4")) { return language.currentLanguage.levelNames.levelName_wrathFourth; }
+			if (missionName.Contains("5-S")) { return language.currentLanguage.levelNames.levelName_wrathSecret; }
+
+			if (missionName.Contains("6-1")) { return language.currentLanguage.levelNames.levelName_heresyFirst; }
+			if (missionName.Contains("6-2")) { return language.currentLanguage.levelNames.levelName_heresySecond; }
+
 			if (missionName.Contains("P-1")) { return language.currentLanguage.levelNames.levelName_primeFirst; }
 
 			return ("Unknown level - " + missionName);

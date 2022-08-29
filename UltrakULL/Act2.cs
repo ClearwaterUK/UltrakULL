@@ -23,9 +23,21 @@ namespace UltrakULL
             a2Logger.LogInfo("Now entering Act 2 class.");
 
             a2Logger.LogInfo("Patching Act 2 hellmap");
-            GameObject baseObject = GameObject.Find("Canvas");
 
-            GameObject hellMapObject = getGameObjectChild(baseObject, "Hellmap");
+
+            List<GameObject> a = new List<GameObject>();
+            SceneManager.GetActiveScene().GetRootGameObjects(a);
+            Console.WriteLine(a.Count);
+            GameObject canvas = null;
+            foreach (GameObject child in a)
+            {
+                if (child.name == "Canvas")
+                {
+                    canvas = child;
+                }
+            }
+
+            GameObject hellMapObject = getGameObjectChild(canvas, "Hellmap");
             Text hellmapGreed = getTextfromGameObject(getGameObjectChild(hellMapObject, "Text"));
             hellmapGreed.text = language.currentLanguage.misc.hellmap_greed;
 
