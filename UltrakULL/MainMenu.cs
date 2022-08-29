@@ -398,12 +398,30 @@ namespace UltrakULL
             Text wrathTitle = getTextfromGameObject(getGameObjectChild(wrathObject, "Text"));
             wrathTitle.text = language.currentLanguage.frontend.layer_wrath;
 
+            Text wrathFirstChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(wrathObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
+            wrathFirstChallenge.text = act2Challenges.getLevelChallenge("Level 5-1", language);
+
+            Text wrathSecondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(wrathObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
+            wrathSecondChallenge.text = act2Challenges.getLevelChallenge("Level 5-2", language);
+
+            Text wrathThirdChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(wrathObject, "1-3 Panel"), "Stats"), "Challenge"), "Panel (4)"), "Text"));
+            wrathThirdChallenge.text = act2Challenges.getLevelChallenge("Level 5-3", language);
+
+            Text wrathFourthChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(wrathObject, "1-4 Panel"), "Stats"), "Challenge"), "Panel (6)"), "Text"));
+            wrathFourthChallenge.text = act2Challenges.getLevelChallenge("Level 5-4", language);
+
             Text wraithSecretMissionText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(wrathObject, "Secret Mission"), "Text"));
             wraithSecretMissionText.text = language.currentLanguage.frontend.chapter_secretMission;
 
             //Layer 6 - Heresy
             Text heresyTitle = getTextfromGameObject(getGameObjectChild(heresyObject, "Text"));
             heresyTitle.text = language.currentLanguage.frontend.layer_heresy;
+
+            Text heresyFirstChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(heresyObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
+            heresyFirstChallenge.text = act2Challenges.getLevelChallenge("Level 6-1", language);
+
+            Text heresySecondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(heresyObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
+            heresySecondChallenge.text = act2Challenges.getLevelChallenge("Level 6-2", language);
 
         }
 
