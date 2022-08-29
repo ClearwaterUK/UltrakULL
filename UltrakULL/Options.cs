@@ -546,8 +546,14 @@ namespace UltrakULL
                 Text assistsInfiniteStaminaText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(assistsMajor, "Infinite Stamina"), "Text (1)"));
                 assistsInfiniteStaminaText.text = language.currentLanguage.options.assists_infiniteEnergy;
 
+                Text assistsDisableWhiplashHardDamageText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(assistsMajor, "Disable Whiplash Hard Damage"), "Text (1)"));
+                assistsDisableWhiplashHardDamageText.text = language.currentLanguage.options.assists_disableWhiplashHardDamage;
+
                 Text assistsDisableHardDamageText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(assistsMajor, "Disable Hard Damage"), "Text (1)"));
                 assistsDisableHardDamageText.text = language.currentLanguage.options.assists_disableHardDamage;
+
+                Text assistsDisableWeaponFreshnessText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(assistsMajor, "Disable Weapon Freshness"), "Text (1)"));
+                assistsDisableWeaponFreshnessText.text = language.currentLanguage.options.assists_disableWeaponFreshness;
 
                 Text assistsDisablePopupText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(assistsMajor, "Disable Popup"), "Text (1)"));
                 assistsDisablePopupText.text = language.currentLanguage.options.assists_disablePopupHints;
@@ -653,6 +659,15 @@ namespace UltrakULL
 
                 Text colorsEnemiesSisyphusText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(colorsEnemiesObject, "Sisyphus"), "Text"));
                 colorsEnemiesSisyphusText.text = language.currentLanguage.enemyNames.enemyname_insurrectionist;
+
+                Text colorsEnemiesSentryText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(colorsEnemiesObject, "Sentry"), "Text"));
+                colorsEnemiesSentryText.text = language.currentLanguage.enemyNames.enemyname_sentry;
+
+                Text colorsEnemiesIdolText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(colorsEnemiesObject, "Idol"), "Text"));
+                colorsEnemiesIdolText.text = language.currentLanguage.enemyNames.enemyname_idol;
+
+                Text colorsEnemiesFerrymanText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(colorsEnemiesObject, "Ferryman"), "Text"));
+                colorsEnemiesFerrymanText.text = language.currentLanguage.enemyNames.enemyname_ferryman;
 
                 //Save options
 

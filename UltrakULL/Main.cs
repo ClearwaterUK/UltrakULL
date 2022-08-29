@@ -58,7 +58,6 @@ using UltrakULL.json;
  * ACT 2 UPDATE DAMAGE REPORT
  * 
  * - Shop needs new stuff added - weapon lore, colors, new enemies, etc
- * - 2 new major assists: Disable Whiplash Hard Damage, Disable Weapon Freshness
  * 
  * */
 

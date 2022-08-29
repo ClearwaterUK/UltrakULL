@@ -295,7 +295,9 @@ namespace UltrakULL.json
 
         public string enemyname_sentry;
         public string enemyname_idol;
+        public string enemyname_ferryman;
         public string enemyname_leviathan;
+
 
         public string enemyname_v2;
         public string enemyname_mindFlayer;
@@ -488,7 +490,9 @@ namespace UltrakULL.json
         public string assists_bossRestartRequired;
         public string assists_bossOverrideNone;
         public string assists_infiniteEnergy;
+        public string assists_disableWhiplashHardDamage;
         public string assists_disableHardDamage;
+        public string assists_disableWeaponFreshness;
         public string assists_disablePopupHints;
 
         public string colors_title;
