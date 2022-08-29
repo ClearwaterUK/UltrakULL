@@ -37,11 +37,20 @@ namespace UltrakULL
                 case ("SISYPHEAN INSURRECTIONIST"): { return ("INSURRECTIONNALISTE SISYPHEANE"); }
                 case ("MYSTERIOUS DRUID KNIGHT (& OWL)"): { return ("CHEVALIER-DRUIDE MYSTERIEUX (& HIBOU)"); }
 
+                //Wrath
+                case ("FERRYMAN"): { return ("NOCHER"); }
+                case ("LEVIATHAN"): { return ("LÉVIATHAN"); }
+
+                //Heresy
+                case ("INSURRECTIONIST \"ANGRY\""): { return ("INSURRECTIONNALISTE \"FÂCHÉ\""); }
+                case ("INSURRECTIONIST \"RUDE\""): { return ("INSURRECTIONNALISTE \"MALPOLI\""); }
+                case ("GABRIEL, THE APOSTATE OF HATE"): { return ("GABRIEL, L'APOSTAT DE LA HAINE"); }
+
                 //Prime Sanctums
                 case ("FLESH PRISON"): { return ("PRISON DE CHAIR"); }
                 case ("MINOS PRIME"): { return ("MINOS PRIME"); }
 
-                default: {return ("UNKNOWN BOSS NAME"); }
+                default: { Console.WriteLine(originalBossName); return ("UNKNOWN BOSS NAME"); }
 
 
             }

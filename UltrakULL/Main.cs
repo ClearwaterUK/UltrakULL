@@ -178,9 +178,6 @@ namespace UltrakULL
 
             try
             {
-                Console.WriteLine("In try block");
-
-
                 GameObject deathScreen = getGameObjectChild(getGameObjectChild(can, "BlackScreen"), "YouDiedText");
                 //Need to disable the TextOverride component.
                 Component[] test = deathScreen.GetComponents(typeof(Component));
@@ -195,7 +192,6 @@ namespace UltrakULL
                 Logger.LogError("Failed to patch death screen");
                 Console.WriteLine(e.ToString());
             }
-            
         }
         
         public void initJsonParser()
@@ -413,7 +409,7 @@ namespace UltrakULL
             //Main menu hook
             else if (currentLevel.name == "Main Menu")
             {
-                Logger.LogInfo("Hooking into main menu text...");
+                Logger.LogInfo("Hooking into main menu...");
                 GameObject frontEnd = null;
 
                 //I hate having to do it like this...
@@ -428,7 +424,6 @@ namespace UltrakULL
                     }
                 }
 
-
                 if (frontEnd == null)
                 {
                     Logger.LogError("Failed to hook.");
@@ -437,7 +432,6 @@ namespace UltrakULL
                 {
                     Logger.LogInfo("Hooked into front end, patching...");
                     patchFrontEnd(frontEnd);
-
 
                     GameObject ultrakullLogo = GameObject.Instantiate(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Title"),"Text"), frontEnd.transform);
                         ultrakullLogo.transform.localPosition = new Vector3(1100, -470, 0);

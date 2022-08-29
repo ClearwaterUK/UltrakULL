@@ -362,7 +362,7 @@ namespace UltrakULL
             {
                 return minossubtitles(input);
             }
-            return "Uninplemented boss subtitle string";
+            return "Uninplemented subtitle string";
         }
 
 
