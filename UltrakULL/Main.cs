@@ -169,11 +169,6 @@ namespace UltrakULL
                 Text restartDialogNo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(restartDialog, "Cancel"), "Text"));
                 restartDialogNo.text = "ANNULER";
 
-
-
-
-
-
             }
             catch(Exception e)
             {
@@ -442,10 +437,23 @@ namespace UltrakULL
             //Don't hook if it's still the intro, as it doesn't use Canvas.
             if (currentLevel.name == "Intro")
             {
-                Logger.LogInfo("Intro screen detected, not hooking.");
-
-                //TEMPORARY REDIRECT TO THE MAIN MENU TO SAVE TIME WHILE TESTING.
-                SceneManager.LoadScene("Main Menu");
+                GameObject frontEnd = null;
+                Logger.LogInfo("Intro screen detected");
+                List<GameObject> a = new List<GameObject>();
+                SceneManager.GetActiveScene().GetRootGameObjects(a);
+                Console.WriteLine(a.Count);
+                foreach (GameObject child in a)
+                {
+                    if (child.name == "Canvas")
+                    {
+                        frontEnd = child;
+                    }
+                }
+                if(frontEnd != null)
+                {
+                        Text loadingText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "LoadingScreen"),"Intro"),"Text"));
+                        loadingText.text = "CHARGEMENT...";
+                }
             }
             //Main menu hook
             else if (currentLevel.name == "Main Menu")

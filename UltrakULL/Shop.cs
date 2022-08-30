@@ -42,7 +42,7 @@ namespace UltrakULL
             //Tip panel
             GameObject tipPanel = getGameObjectChild(getGameObjectChild(shopObject, "TipBox"), "Panel");
             Text tipTitle = getTextfromGameObject(getGameObjectChild(tipPanel, "Title"));
-            tipTitle.text = "CONSEIL DU JOUR";
+            tipTitle.text = language.currentLanguage.shop.shop_tipofthedayTitle;
 
             Text tipDescription = getTextfromGameObject(getGameObjectChild(tipPanel, "TipText"));
             Console.WriteLine("Original tip text: \n" + tipDescription.text);
@@ -55,26 +55,26 @@ namespace UltrakULL
             Console.WriteLine(mainButtons.name);
 
             Text weaponsButtonTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(mainButtons, "WeaponsButton"), "Text"));
-            weaponsButtonTitle.text = "Armes";
+            weaponsButtonTitle.text = language.currentLanguage.shop.shop_weapons;
 
             //Enemies button
             Text enemiesButtonTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(mainButtons, "EnemiesButton"), "Text"));
-            enemiesButtonTitle.text = "Monstres";
+            enemiesButtonTitle.text = language.currentLanguage.shop.shop_monsters;
 
             //CG buttons
             Text cgButtonTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(mainButtons, "CyberGrindButton"), "Text"));
-            cgButtonTitle.text = "Le Cybergrind";
+            cgButtonTitle.text = language.currentLanguage.shop.shop_cybergrind;
 
             Text cgReturnButtonTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(mainButtons, "ReturnButton"), "Text"));
-            cgReturnButtonTitle.text = "Retourner au mission";
+            cgReturnButtonTitle.text = language.currentLanguage.shop.shop_returnToMission;
 
             //Sandbox button
             Text sandboxButtonTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(mainButtons, "SandboxButton"), "Text"));
-            sandboxButtonTitle.text = "BAC À SABLE";
+            sandboxButtonTitle.text = language.currentLanguage.shop.shop_sandbox;
 
             //Enemies title
             Text enemiesTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Enemies"), "Panel"),"Title"));
-            enemiesTitle.text = "ENNEMIES";
+            enemiesTitle.text = language.currentLanguage.shop.shop_monsters;
 
             //Enemies back button
             Text enemiesBackButtonText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Enemies"),"BackButton (2)"),"Text"));
@@ -103,12 +103,12 @@ namespace UltrakULL
 
             Text cgEnterDescription = getTextfromGameObject(getGameObjectChild(cgEnter, "Text"));
 
-            cgEnterDescription.text = "<color=red> Le Cybergrind est un mode de survie sans fin</color>.\n\n"
-                + "Une bonne performance donnera beaucoup de <color=red>points</color>.\n\n"
-                + "<color=red>Tout progrès dans le mission actuel sera perdu</color>.";
+            cgEnterDescription.text = language.currentLanguage.shop.shop_cybergrindDescription1 + "\n\n"
+                + language.currentLanguage.shop.shop_cybergrindDescription2 + "\n\n"
+                + language.currentLanguage.shop.shop_cybergrindDescription3;
 
             Text cgEnterButton = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgEnter, "CyberGrindButton (1)"), "Text"));
-            cgEnterButton.text = "ENTREZ LE CYBERGRIND";
+            cgEnterButton.text = language.currentLanguage.shop.shop_cybergrindEnter;
 
             /*
             //CG exit description
@@ -133,23 +133,22 @@ namespace UltrakULL
 
             //Enemies back button 
             Text enemiesBackText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Enemies"), "BackButton (2)"), "Text"));
-            enemiesBackText.text = "RETOUR";
+            enemiesBackText.text = language.currentLanguage.shop.shop_back;
 
             //Sandbox back button
             Text sandboxBackText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Sandbox"), "BackButton (2)"), "Text"));
-            sandboxBackText.text = "RETOUR";
+            sandboxBackText.text = language.currentLanguage.shop.shop_back;
 
             //EnemyInfo back button
             Text enemyInfoBackText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "EnemyInfo"),"Button"),"Text"));
-            enemyInfoBackText.text = "RETOUR";
+            enemyInfoBackText.text = language.currentLanguage.shop.shop_back;
 
 
         }
 
 
-        public void patchWeapons(ref GameObject coreGame)
+        public void patchWeapons(ref GameObject coreGame, JsonParser language)
         {
-            Console.WriteLine("In patchWeapons");
             GameObject shopWeaponsObject;
             if (SceneManager.GetActiveScene().name == "uk_construct")
             {
@@ -163,52 +162,51 @@ namespace UltrakULL
 
 
             Text weaponBackText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "BackButton (1)"), "Text"));
-            weaponBackText.text = "RETOUR";
+            weaponBackText.text = language.currentLanguage.shop.shop_back;
 
             Text weaponRevolverText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "RevolverButton"), "Text"));
-            weaponRevolverText.text = "PISTOLE";
+            weaponRevolverText.text = language.currentLanguage.shop.shop_weaponsRevolver;
 
             Text weaponShotgunText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "ShotgunButton"), "Text"));
-            weaponShotgunText.text = "FUSIL À POMPE";
+            weaponShotgunText.text = language.currentLanguage.shop.shop_weaponsShotgun;
 
             Text weaponNailgunText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "NailgunButton"), "Text"));
-            weaponNailgunText.text = "CLOUEUR";
+            weaponNailgunText.text = language.currentLanguage.shop.shop_weaponsNailgun;
 
             //Slight problem - not all the text fits in the box.
             //The longer text is, the more we'll need to reduce the font size to compensate.
             Text weaponRailcannonText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "RailcannonButton"), "Text"));
-            weaponRailcannonText.text = "CANON-ÈLECTRIQUE";
+            weaponRailcannonText.text = language.currentLanguage.shop.shop_weaponsRailcannon;
             weaponRailcannonText.fontSize = 16;
 
             Text rocketLauncherText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "RocketLauncherButton"), "Text"));
-            rocketLauncherText.text = "LANCE-ROQUETTES";
+            rocketLauncherText.text = language.currentLanguage.shop.shop_weaponsRocketLauncher;
             rocketLauncherText.fontSize = 16;
 
             Text weaponArmText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "ArmButton"), "Text"));
-            weaponArmText.text = "BRAS";
+            weaponArmText.text = language.currentLanguage.shop.shop_weaponsArms;
 
             //Revolver window and descriptions
             GameObject revolverWindow = getGameObjectChild(shopWeaponsObject, "RevolverWindow");
-            Console.WriteLine("revolverWindow: " + revolverWindow);
 
             //Piercer
             GameObject piercer = getGameObjectChild(revolverWindow, "Variation Panel (Blue)");
             Text piercerName = getTextfromGameObject(getGameObjectChild(piercer, "Text"));
-            piercerName.text = "PERCEUSE";
+            piercerName.text = language.currentLanguage.shop.shop_revolverPiercer;
 
             GameObject piercerWindow = getGameObjectChild(revolverWindow, "Variation Info (Blue)");
             Text piercerWindowName = getTextfromGameObject(getGameObjectChild(piercerWindow, "Name"));
             piercerWindowName.text = piercerName.text;
 
             Text piercerWindowDescription = getTextfromGameObject(getGameObjectChild(piercerWindow, "Description"));
-            piercerWindowDescription.text = "<color=orange>Maintenir</color> le Tir Alternatif pour charger un <color=orange>laser qui frappe 3 fois</color>."
-                + "\n\nNécessite un <color=orange>temps de rechargement</color>.";
+            piercerWindowDescription.text = language.currentLanguage.shop.shop_revolverPiercerDescription1 + "\n\n"
+                + language.currentLanguage.shop.shop_revolverPiercerDescription2;
 
             //Marksman
 
             GameObject marksman = getGameObjectChild(revolverWindow, "Variation Panel (Green)");
             Text marksmanName = getTextfromGameObject(getGameObjectChild(marksman, "Text"));
-            marksmanName.text = "TIREUR D'ÉLITE";
+            marksmanName.text = language.currentLanguage.shop.shop_revolverMarksman;
             marksmanName.fontSize = 14;
 
             GameObject marksmanWindow = getGameObjectChild(revolverWindow, "Variation Info (Green)");
@@ -216,9 +214,9 @@ namespace UltrakULL
             marksmanWindowName.text = marksmanName.text;
 
             Text marksmanWindowDescription = getTextfromGameObject(getGameObjectChild(marksmanWindow, "Description"));
-            marksmanWindowDescription.text = "Appuyer sur le tir alternatif pour <color=orange>lancer une pièce</color>.\n\n"
-            + "Frappez-le <color=orange>dans l'air</color> pour <color=orange>déflecter</color> votre tir dans le <color=orange>point faible</color> de l'ennemi le plus proche.\n\n"
-            + "Les pièces peuvent être enchaînées.";
+            marksmanWindowDescription.text = language.currentLanguage.shop.shop_revolverMarksmanDescription1 + "\n\n"
+                + language.currentLanguage.shop.shop_revolverMarksmanDescription2 + "\n\n"
+                + language.currentLanguage.shop.shop_revolverMarksmanDescription3;
             marksmanWindowDescription.fontSize = 14;
 
             //Revolver info & color tabs
@@ -227,15 +225,15 @@ namespace UltrakULL
             GameObject revolverExtraColor = getGameObjectChild(revolverExtra, "ColorButton");
 
             Text revolverExtraInfoText = getTextfromGameObject(getGameObjectChild(revolverExtraInfo, "Text"));
-            revolverExtraInfoText.text = "INF";
+            revolverExtraInfoText.text = language.currentLanguage.shop.shop_weaponInfo;
 
             Text revolverExtraInfoColors = getTextfromGameObject(getGameObjectChild(revolverExtraColor, "Text"));
-            revolverExtraInfoColors.text = "COULEURS";
+            revolverExtraInfoColors.text = language.currentLanguage.shop.shop_weaponColors;
 
             //Revolver lore
             GameObject revolverLore = getGameObjectChild(revolverWindow, "Info Screen");
             Text revolverLoreName = getTextfromGameObject(getGameObjectChild(revolverLore, "Name"));
-            revolverLoreName.text = "REVOLVER";
+            revolverLoreName.text = language.currentLanguage.shop.shop_weaponsRevolver;
 
             Text revolverLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverLore,"Scroll View"),"Viewport"),"Text"));
             revolverLoreInfo.text = "lore";
@@ -245,28 +243,29 @@ namespace UltrakULL
 
             GameObject coreEject = getGameObjectChild(shotgunWindow, "Variation Panel (Blue)");
             Text coreEjectName = getTextfromGameObject(getGameObjectChild(coreEject, "Text"));
-            coreEjectName.text = "ÉJECTION";
+            coreEjectName.text = language.currentLanguage.shop.shop_shotgunCoreEject;
 
             GameObject coreEjectWindow = getGameObjectChild(shotgunWindow, "Variation Info (Blue)");
             Text coreEjectWindowName = getTextfromGameObject(getGameObjectChild(coreEjectWindow, "Name"));
-            coreEjectWindowName.text = coreEjectName.text;
+            coreEjectWindowName.text = language.currentLanguage.shop.shop_shotgunCoreEject;
 
             Text coreEjectWindowDescription = getTextfromGameObject(getGameObjectChild(coreEjectWindow, "Description"));
-            coreEjectWindowDescription.text = "Appuyer sur le tir alternatif pour surchauffer et <color=orange>lancer</color> les <color=orange>noyeaux</color> du fusil.\n\n" + "<color=orange>Maintenir</color> pour augmenter la <color=orange>distance</color>.\n\n"
-                + "<color=orange>Explosion sur impact.</color>";
+            coreEjectWindowDescription.text = language.currentLanguage.shop.shop_shotgunCoreEjectDescription1 + "\n\n"
+                + language.currentLanguage.shop.shop_shotgunCoreEjectDescription2 + "\n\n"
+                + language.currentLanguage.shop.shop_shotgunCoreEjectDescription3;
 
             GameObject pumpCharge = getGameObjectChild(shotgunWindow, "Variation Panel (Green)");
             Text pumpChargeName = getTextfromGameObject(getGameObjectChild(pumpCharge, "Text"));
-            pumpChargeName.text = "SURCHARGEMENT";
+            pumpChargeName.text = language.currentLanguage.shop.shop_shotgunPumpCharge;
             pumpChargeName.fontSize = 16;
 
             GameObject pumpChargeWindow = getGameObjectChild(shotgunWindow, "Variation Info (Green)");
             Text pumpChargeWindowName = getTextfromGameObject(getGameObjectChild(pumpChargeWindow, "Name"));
-            pumpChargeWindowName.text = pumpChargeName.text;
+            pumpChargeWindowName.text = language.currentLanguage.shop.shop_shotgunPumpCharge;
 
             Text pumpChargeWindowDescription = getTextfromGameObject(getGameObjectChild(pumpChargeWindow, "Description"));
-            pumpChargeWindowDescription.text = "Appuyer sur le tir alternatif pour <color=orange>pomper</color> votre fusil, augmentant la <color=orange>puissance</color> et <color=orange>diminuant</color> la précision de votre <color=orange>prochain tir</color>.\n\n"
-                + "Trop de pompes résultera dans une <color=orange>explosion</color> lorsque l'arme est tirée.";
+            pumpChargeWindowDescription.text = language.currentLanguage.shop.shop_shotgunPumpChargeDescription1 + "\n\n"
+                + language.currentLanguage.shop.shop_shotgunPumpChargeDescription2;
             pumpChargeWindowDescription.fontSize = 14;
 
             //Shotgun info & color tabs
@@ -275,15 +274,15 @@ namespace UltrakULL
             GameObject shotgunExtraColor = getGameObjectChild(shotgunExtra, "ColorButton");
 
             Text shotgunExtraInfoText = getTextfromGameObject(getGameObjectChild(shotgunExtraInfo, "Text"));
-            shotgunExtraInfoText.text = "INF";
+            shotgunExtraInfoText.text = language.currentLanguage.shop.shop_weaponInfo;
 
             Text shotgunExtraInfoColors = getTextfromGameObject(getGameObjectChild(shotgunExtraColor, "Text"));
-            shotgunExtraInfoColors.text = "COULEURS";
+            shotgunExtraInfoColors.text = language.currentLanguage.shop.shop_weaponColors;
 
             //Shotgun lore
             GameObject shotgunLore = getGameObjectChild(shotgunWindow, "Info Screen");
             Text shotgunLoreName = getTextfromGameObject(getGameObjectChild(shotgunLore, "Name"));
-            shotgunLoreName.text = "FUSIL Á POMPE";
+            shotgunLoreName.text = language.currentLanguage.shop.shop_weaponsShotgun;
 
             Text shotgunLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shotgunLore, "Scroll View"), "Viewport"), "Text"));
             shotgunLoreInfo.text = "lore";
@@ -293,30 +292,30 @@ namespace UltrakULL
 
             GameObject attractor = getGameObjectChild(nailgunWindow, "Variation Panel (Blue)");
             Text attractorName = getTextfromGameObject(getGameObjectChild(attractor, "Text"));
-            attractorName.text = "AIMANT";
+            attractorName.text = language.currentLanguage.shop.shop_nailgunMagnet;
 
             GameObject attractorWindow = getGameObjectChild(nailgunWindow, "Variation Info (Blue)");
             Text attractorWindowName = getTextfromGameObject(getGameObjectChild(attractorWindow, "Name"));
-            attractorWindowName.text = attractorName.text;
+            attractorWindowName.text = language.currentLanguage.shop.shop_nailgunMagnet;
 
             Text attractorWindowDescription = getTextfromGameObject(getGameObjectChild(attractorWindow, "Description"));
-            attractorWindowDescription.text = "Le tir alternatif lance un <color=orange>aimant</color> qui attire les <color=orange>clous</color> à proximité.\n\n"
-                + "Les aimants se collent aux <color=orange>surfaces et aux ennemies</color>, et peuvent être cassés avec des armes '<color=orange>hitscan</color>'.";
+            attractorWindowDescription.text = language.currentLanguage.shop.shop_nailgunMagnetDescription1 + "\n\n"
+                + language.currentLanguage.shop.shop_nailgunMagnetDescription2;
             attractorWindowDescription.fontSize = 16;
 
 
             GameObject overheat = getGameObjectChild(nailgunWindow, "Variation Panel (Green)");
             Text overheatName = getTextfromGameObject(getGameObjectChild(overheat, "Text"));
-            overheatName.text = "SURCHAUFFEMENT";
+            overheatName.text = language.currentLanguage.shop.shop_nailgunOverheat;
             overheatName.fontSize = 16;
 
             GameObject overheatWindow = getGameObjectChild(nailgunWindow, "Variation Info (Green)");
             Text overheatWindowName = getTextfromGameObject(getGameObjectChild(overheatWindow, "Name"));
-            overheatWindowName.text = overheatName.text;
+            overheatWindowName.text = language.currentLanguage.shop.shop_nailgunOverheat;
 
             Text overheatWindowDescription = getTextfromGameObject(getGameObjectChild(overheatWindow, "Description"));
-            overheatWindowDescription.text = "Appuyer sur le tir alternatif <color=orange>pendant le tir</color> pour une coup vite de dêgàts en utilisant un <color=orange>dissipateur thermique</color>.\n\n"
-                + "Les dissipateurs se rechargent lorsque vous ne tirez pas.";
+            overheatWindowDescription.text = language.currentLanguage.shop.shop_nailgunOverheatDescription1 + "\n\n"
+                + language.currentLanguage.shop.shop_nailgunOverheatDescription2;
             overheatWindowDescription.fontSize = 14;
 
             //Nailgun info & color tabs
@@ -325,15 +324,15 @@ namespace UltrakULL
             GameObject nailgunExtraColor = getGameObjectChild(nailgunExtra, "ColorButton");
 
             Text nailgunExtraInfoText = getTextfromGameObject(getGameObjectChild(nailgunExtraInfo, "Text"));
-            nailgunExtraInfoText.text = "INF";
+            nailgunExtraInfoText.text = language.currentLanguage.shop.shop_weaponInfo;
 
             Text nailgunExtraInfoColors = getTextfromGameObject(getGameObjectChild(nailgunExtraColor, "Text"));
-            nailgunExtraInfoColors.text = "COULEURS";
+            nailgunExtraInfoColors.text = language.currentLanguage.shop.shop_weaponColors;
 
             //Nailgun lore
             GameObject nailgunLore = getGameObjectChild(nailgunWindow, "Info Screen");
             Text nailgunLoreName = getTextfromGameObject(getGameObjectChild(nailgunLore, "Name"));
-            nailgunLoreName.text = "CLOUEUR";
+            nailgunLoreName.text = language.currentLanguage.shop.shop_weaponsNailgun;
 
             Text nailgunLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunLore, "Scroll View"), "Viewport"), "Text"));
             nailgunLoreInfo.text = "lore";
@@ -345,30 +344,29 @@ namespace UltrakULL
 
             GameObject electric = getGameObjectChild(railcannonWindow, "Variation Panel (Blue)");
             Text electricName = getTextfromGameObject(getGameObjectChild(electric, "Text"));
-            electricName.text = "ÉLECTRIQUE";
+            electricName.text = language.currentLanguage.shop.shop_railcannonElectric;
 
             GameObject electricWindow = getGameObjectChild(railcannonWindow, "Variation Info (Blue)");
             Text electricWindowName = getTextfromGameObject(getGameObjectChild(electricWindow, "Name"));
-            electricWindowName.text = electricName.text;
+            electricWindowName.text = language.currentLanguage.shop.shop_railcannonElectric;
 
             Text electricWindowDescription = getTextfromGameObject(getGameObjectChild(electricWindow, "Description"));
-            electricWindowDescription.text = "Un tir puissant et pénétrant.\n\n"
-                + "<color=orange>Pénétre</color> à travers <color=orange>tout</color> les ennemies. Soyez attentif à votre <color=orange>positionnement</color> pour maximiser la destruction.\n\n"
-                + "Ne pas utiliser dans l'eau.";
+            electricWindowDescription.text = language.currentLanguage.shop.shop_railcannonElectricDescription1 + "\n\n"
+                + language.currentLanguage.shop.shop_railcannonElectricDescription2 + "\n\n"
+                + language.currentLanguage.shop.shop_railcannonElectricDescription3;
             electricWindowDescription.fontSize = 16;
-
 
             GameObject screwdriver = getGameObjectChild(railcannonWindow, "Variation Panel (Green)");
             Text screwdriverName = getTextfromGameObject(getGameObjectChild(screwdriver, "Text"));
-            screwdriverName.text = "TOURNEVIS";
+            screwdriverName.text = language.currentLanguage.shop.shop_railcannonScrewdriver;
 
             GameObject screwdriverWindow = getGameObjectChild(railcannonWindow, "Variation Info (Green)");
             Text screwdriverWindowName = getTextfromGameObject(getGameObjectChild(screwdriverWindow, "Name"));
-            screwdriverWindowName.text = screwdriverName.text;
+            screwdriverWindowName.text = language.currentLanguage.shop.shop_railcannonScrewdriver;
 
             Text screwdriverWindowDescription = getTextfromGameObject(getGameObjectChild(screwdriverWindow, "Description"));
-            screwdriverWindowDescription.text = "Tirez une perceuse puissante qui <color=orange>se colle</color> à un ennemi et qui inflige des dégâts <color=orange>au fil de temps</color>.\n\n" +
-                "La perceuse fait saigner les ennemies avec <color=orange>une distance de soignage augmenté</color>.";
+            screwdriverWindowDescription.text = language.currentLanguage.shop.shop_railcannonScrewdriverDescription1 + "\n\n"
+                + language.currentLanguage.shop.shop_railcannonScrewdriverDescription2;
             screwdriverWindowDescription.fontSize = 16;
 
             GameObject malicious = getGameObjectChild(railcannonWindow, "Variation Panel (Red)");
@@ -380,8 +378,8 @@ namespace UltrakULL
             maliciousWindowName.text = maliciousName.text;
 
             Text maliciousWindowDescription = getTextfromGameObject(getGameObjectChild(maliciousWindow, "Description"));
-            maliciousWindowDescription.text = "Tirez un laser instatané qui entraîne une <color=orange>explosion large</color> sur l'impact, un peu comme un certain tête familiaire.\n\n"
-                + "Efface des groupes d'enemmies faibles avec facilité.";
+            maliciousWindowDescription.text = language.currentLanguage.shop.shop_railcannonMaliciousDescription1 + "\n\n"
+                +  language.currentLanguage.shop.shop_railcannonMaliciousDescription2;
             maliciousWindowDescription.fontSize = 16;
 
             //Railcannon info & color tabs
@@ -390,15 +388,15 @@ namespace UltrakULL
             GameObject railcannonExtraColor = getGameObjectChild(railcannonExtra, "ColorButton");
 
             Text railcannonExtraInfoText = getTextfromGameObject(getGameObjectChild(railcannonExtraInfo, "Text"));
-            railcannonExtraInfoText.text = "INF";
+            railcannonExtraInfoText.text = language.currentLanguage.shop.shop_weaponInfo;
 
             Text railcannonExtraInfoColors = getTextfromGameObject(getGameObjectChild(railcannonExtraColor, "Text"));
-            railcannonExtraInfoColors.text = "COULEURS";
+            railcannonExtraInfoColors.text = language.currentLanguage.shop.shop_weaponColors;
 
             //Railcannon lore
             GameObject railcannonLore = getGameObjectChild(railcannonWindow, "Info Screen");
             Text railcannonLoreName = getTextfromGameObject(getGameObjectChild(railcannonLore, "Name"));
-            railcannonLoreName.text = "CANON-ÉLECTRIQUE";
+            railcannonLoreName.text = language.currentLanguage.shop.shop_weaponsRailcannon;
 
             Text railcannonLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(railcannonLore, "Scroll View"), "Viewport"), "Text"));
             railcannonLoreInfo.text = "lore";
@@ -409,12 +407,12 @@ namespace UltrakULL
 
             GameObject freezeframe = getGameObjectChild(rocketlauncherWindow, "Variation Panel (Blue)");
             Text freezeframeName = getTextfromGameObject(getGameObjectChild(freezeframe, "Text"));
-            freezeframeName.text = "ARRÊT-IMAGE";
+            freezeframeName.text = language.currentLanguage.shop.shop_rocketLauncherFreeze;
 
             GameObject freezeframeInfo = getGameObjectChild(rocketlauncherWindow, "Variation Info (Blue)");
             Text freezeframeDescription = getTextfromGameObject(getGameObjectChild(freezeframeInfo, "Description"));
-            freezeframeDescription.text = "Appuyer sur le tir alternative pour <color=orange>gèler</color> les roquettes.\n\n"
-                + "Les roquettes gèlees ont une distance d'explosion augmenté, et <color=orange>resteront gèlees</color> entre les changement d'armes.";
+            freezeframeDescription.text = language.currentLanguage.shop.shop_rocketLauncherFreezeDescription1 + "\n\n" + 
+            language.currentLanguage.shop.shop_rocketLauncherFreezeDescription2;
             freezeframeDescription.fontSize = 16;
 
             //Rocket launcher info & color tabs
@@ -423,15 +421,15 @@ namespace UltrakULL
             GameObject rocketlauncherExtraColor = getGameObjectChild(rocketlauncherExtra, "ColorButton");
 
             Text rocketlauncherExtraInfoText = getTextfromGameObject(getGameObjectChild(rocketlauncherExtraInfo, "Text"));
-            rocketlauncherExtraInfoText.text = "INF";
+            rocketlauncherExtraInfoText.text = language.currentLanguage.shop.shop_weaponInfo;
 
             Text rocketlauncherExtraInfoColors = getTextfromGameObject(getGameObjectChild(rocketlauncherExtraColor, "Text"));
-            rocketlauncherExtraInfoColors.text = "COULEURS";
+            rocketlauncherExtraInfoColors.text = language.currentLanguage.shop.shop_weaponColors;
 
             //Rocket launcher lore
             GameObject rocketlauncherLore = getGameObjectChild(rocketlauncherWindow, "Info Screen");
             Text rocketlauncherLoreName = getTextfromGameObject(getGameObjectChild(rocketlauncherLore, "Name"));
-            rocketlauncherLoreName.text = "LANCE-ROQUETTES";
+            rocketlauncherLoreName.text = language.currentLanguage.shop.shop_weaponsRocketLauncher;
 
             Text rocketlauncherLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(rocketlauncherLore, "Scroll View"), "Viewport"), "Text"));
             rocketlauncherLoreInfo.text = "lore";
@@ -441,40 +439,38 @@ namespace UltrakULL
 
             GameObject feedbacker = getGameObjectChild(armWindow, "Variation Panel 1 (New)");
             Text feedbackerName = getTextfromGameObject(getGameObjectChild(feedbacker, "Text"));
-            feedbackerName.text = "RENVOYEUR";
+            feedbackerName.text = language.currentLanguage.shop.shop_armFeedbacker;
 
             GameObject feedbackerWindow = getGameObjectChild(armWindow, "Variation 1 Info (New)");
             Text feedbackerWindowName = getTextfromGameObject(getGameObjectChild(feedbackerWindow, "Name"));
-            feedbackerWindowName.text = feedbackerName.text;
+            feedbackerWindowName.text = language.currentLanguage.shop.shop_armFeedbacker;
 
             Text feedbackerWindowDescription = getTextfromGameObject(getGameObjectChild(feedbackerWindow, "Description"));
-            feedbackerWindowDescription.text = "Coup de poing rapide avec des dêgàts moyens.\n\n"
-                + "Peut <color=orange>renvoyer</color> les projectiles, <color=orange>tirs de fusil à pompe</color> et les <color=orange>pièces</color>.";
+            feedbackerWindowDescription.text = language.currentLanguage.shop.shop_armFeedbackerDescription1 + "\n\n" + language.currentLanguage.shop.shop_armFeedbackerDescription2;
 
             GameObject knuckleblaster = getGameObjectChild(armWindow, "Variation Panel 2 (New)");
             Text knuckleblasterName = getTextfromGameObject(getGameObjectChild(knuckleblaster, "Text"));
-            knuckleblasterName.text = "BOMBARDIER";
+            knuckleblasterName.text = language.currentLanguage.shop.shop_armKnuckleblaster;
 
             GameObject knuckleblasterWindow = getGameObjectChild(armWindow, "Variation 2 Info (New)");
             Text knuckleblasterWindowName = getTextfromGameObject(getGameObjectChild(knuckleblasterWindow, "Name"));
-            knuckleblasterWindowName.text = knuckleblasterName.text;
+            knuckleblasterWindowName.text = language.currentLanguage.shop.shop_armKnuckleblaster;
 
             Text knuckleblasterWindowDescription = getTextfromGameObject(getGameObjectChild(knuckleblasterWindow, "Description"));
-            knuckleblasterWindowDescription.text = "Coup de poing lourd avec des dégâts élevés.\n\n"
-                + "<color=orange>Maintenir</color> pour tirer les cartouches dans le bras, résultant dans un <color=orange>choc</color> qui repousse les ennemies.";
+            knuckleblasterWindowDescription.text = language.currentLanguage.shop.shop_armKnuckleblasterDescription1 + "\n\n" + language.currentLanguage.shop.shop_armKnuckleblasterDescription2;
 
             GameObject whiplash = getGameObjectChild(armWindow, "Variation Panel 3 (New)");
             Text whiplashName = getTextfromGameObject(getGameObjectChild(whiplash, "Text"));
-            whiplashName.text = "FOUET";
+            whiplashName.text = language.currentLanguage.shop.shop_armWhiplash;
 
             //here
             GameObject whiplashWindow = getGameObjectChild(armWindow, "Variation 3 Info (New)");
             Text whiplashWindowName = getTextfromGameObject(getGameObjectChild(whiplashWindow, "Name"));
-            whiplashWindowName.text = whiplashName.text;
+            whiplashWindowName.text = language.currentLanguage.shop.shop_armWhiplash;
 
             Text whiplashWindowDescription = getTextfromGameObject(getGameObjectChild(whiplashWindow, "Description"));
-            whiplashWindowDescription.text = "Un winch avec une lance. <color=orange>Maintenir</color> pour lancer, <color=orange>lâcher</color> pour tirer.\n\n"
-                + "Peut attirer les ennemis et objets lègers. Vous vous serez attiré aux ennemis lourds et points d'ancrage.";
+            whiplashWindowDescription.text = language.currentLanguage.shop.shop_armWhiplashDescription1 + "\n\n"
+                + language.currentLanguage.shop.shop_armWhiplashDescription2;
             whiplashWindowDescription.fontSize = 16;
 
         }
@@ -484,7 +480,7 @@ namespace UltrakULL
         {
 
             this.patchShopFrontEnd(ref level,language);
-            this.patchWeapons(ref level);
+            this.patchWeapons(ref level,language);
 
         }
 

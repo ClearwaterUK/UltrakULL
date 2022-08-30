@@ -173,8 +173,10 @@ namespace UltrakULL.json
 
     }
     
+
     public class ShopStrings
     {
+        public string shop_tipofthedayTitle;
         public string shop_tipoftheday;
         public string shop_weapons;
         public string shop_monsters;
@@ -182,13 +184,79 @@ namespace UltrakULL.json
         public string shop_returnToMission;
         public string shop_sandbox;
 
-        public string shop_cybergrindDescription;
+        public string shop_cybergrindDescription1;
+        public string shop_cybergrindDescription2;
+        public string shop_cybergrindDescription3;
         public string shop_cybergrindEnter;
 
         public string shop_sandboxDescription;
         public string shop_sandboxEnter;
 
         public string shop_back;
+        public string shop_weaponInfo;
+        public string shop_weaponColors;
+
+        public string shop_weaponsRevolver;
+        public string shop_weaponsShotgun;
+        public string shop_weaponsNailgun;
+        public string shop_weaponsRailcannon;
+        public string shop_weaponsRocketLauncher;
+        public string shop_weaponsArms;
+
+        public string shop_revolverPiercer;
+        public string shop_revolverPiercerDescription1;
+        public string shop_revolverPiercerDescription2;
+        public string shop_revolverMarksman;
+        public string shop_revolverMarksmanDescription1;
+        public string shop_revolverMarksmanDescription2;
+        public string shop_revolverMarksmanDescription3;
+
+        public string shop_shotgunCoreEject;
+        public string shop_shotgunCoreEjectDescription1;
+        public string shop_shotgunCoreEjectDescription2;
+        public string shop_shotgunCoreEjectDescription3;
+
+        public string shop_shotgunPumpCharge;
+        public string shop_shotgunPumpChargeDescription1;
+        public string shop_shotgunPumpChargeDescription2;
+
+        public string shop_nailgunMagnet;
+        public string shop_nailgunMagnetDescription1;
+        public string shop_nailgunMagnetDescription2;
+
+        public string shop_nailgunOverheat;
+        public string shop_nailgunOverheatDescription1;
+        public string shop_nailgunOverheatDescription2;
+
+        public string shop_railcannonElectric;
+        public string shop_railcannonElectricDescription1;
+        public string shop_railcannonElectricDescription2;
+        public string shop_railcannonElectricDescription3;
+
+        public string shop_railcannonScrewdriver;
+        public string shop_railcannonScrewdriverDescription1;
+        public string shop_railcannonScrewdriverDescription2;
+
+        public string shop_railcannonMalicious;
+        public string shop_railcannonMaliciousDescription1;
+        public string shop_railcannonMaliciousDescription2;
+
+        public string shop_rocketLauncherFreeze;
+        public string shop_rocketLauncherFreezeDescription1;
+        public string shop_rocketLauncherFreezeDescription2;
+        public string shop_rocketLauncherFreezeDescription3;
+
+        public string shop_armFeedbacker;
+        public string shop_armFeedbackerDescription1;
+        public string shop_armFeedbackerDescription2;
+
+        public string shop_armKnuckleblaster;
+        public string shop_armKnuckleblasterDescription1;
+        public string shop_armKnuckleblasterDescription2;
+
+        public string shop_armWhiplash;
+        public string shop_armWhiplashDescription1;
+        public string shop_armWhiplashDescription2;
 
     }
     public class Levels
