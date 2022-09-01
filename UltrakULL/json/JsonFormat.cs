@@ -258,6 +258,65 @@ namespace UltrakULL.json
         public string shop_armWhiplashDescription1;
         public string shop_armWhiplashDescription2;
 
+        public string shop_data;
+        public string shop_strategy;
+        public string shop_advancedStrategy;
+
+        public string shop_loreRevolver1;
+        public string shop_loreRevolver2;
+        public string shop_loreRevolver3;
+        public string shop_loreRevolver4;
+        public string shop_loreRevolver5;
+        public string shop_loreRevolver6;
+        public string shop_loreRevolver7;
+        public string shop_loreRevolver8;
+        public string shop_loreRevolver9;
+        public string shop_loreRevolver10;
+
+        public string shop_loreShotgun1;
+        public string shop_loreShotgun2;
+        public string shop_loreShotgun3;
+        public string shop_loreShotgun4;
+        public string shop_loreShotgun5;
+        public string shop_loreShotgun6;
+        public string shop_loreShotgun7;
+        public string shop_loreShotgun8;
+        public string shop_loreShotgun9;
+
+        public string shop_loreNailgun1;
+        public string shop_loreNailgun2;
+        public string shop_loreNailgun3;
+        public string shop_loreNailgun4;
+        public string shop_loreNailgun5;
+        public string shop_loreNailgun6;
+        public string shop_loreNailgun7;
+        public string shop_loreNailgun8;
+        public string shop_loreNailgun9;
+
+        public string shop_loreRailcannon1;
+        public string shop_loreRailcannon2;
+        public string shop_loreRailcannon3;
+        public string shop_loreRailcannon4;
+        public string shop_loreRailcannon5;
+        public string shop_loreRailcannon6;
+        public string shop_loreRailcannon7;
+        public string shop_loreRailcannon8;
+        public string shop_loreRailcannon9;
+
+        public string shop_loreRocketLauncher1;
+        public string shop_loreRocketLauncher2;
+        public string shop_loreRocketLauncher3;
+        public string shop_loreRocketLauncher4;
+        public string shop_loreRocketLauncher5;
+        public string shop_loreRocketLauncher6;
+        public string shop_loreRocketLauncher7;
+        public string shop_loreRocketLauncher8;
+        public string shop_loreRocketLauncher9;
+        public string shop_loreRocketLauncher10;
+        public string shop_loreRocketLauncher11;
+        public string shop_loreRocketLauncher12;
+        public string shop_loreRocketLauncher13;
+
     }
     public class Levels
     {

@@ -236,7 +236,22 @@ namespace UltrakULL
             revolverLoreName.text = language.currentLanguage.shop.shop_weaponsRevolver;
 
             Text revolverLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverLore,"Scroll View"),"Viewport"),"Text"));
-            revolverLoreInfo.text = "lore";
+
+
+            revolverLoreInfo.text =
+                language.currentLanguage.shop.shop_data + "\n\n"
+                + language.currentLanguage.shop.shop_loreRevolver1 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRevolver2 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRevolver3 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRevolver4 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRevolver5 + "\n\n"
+                + language.currentLanguage.shop.shop_strategy + "\n\n"
+                + language.currentLanguage.shop.shop_loreRevolver6 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRevolver7 + "\n\n"
+                + language.currentLanguage.shop.shop_advancedStrategy + "\n\n"
+                + language.currentLanguage.shop.shop_loreRevolver8 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRevolver9 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRevolver10;
 
             //Shotgun window and descriptions
             GameObject shotgunWindow = getGameObjectChild(shopWeaponsObject, "ShotgunWindow");
@@ -285,7 +300,22 @@ namespace UltrakULL
             shotgunLoreName.text = language.currentLanguage.shop.shop_weaponsShotgun;
 
             Text shotgunLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shotgunLore, "Scroll View"), "Viewport"), "Text"));
-            shotgunLoreInfo.text = "lore";
+
+
+            shotgunLoreInfo.text =
+                language.currentLanguage.shop.shop_data + "\n\n"
+                + language.currentLanguage.shop.shop_loreShotgun1 + "\n\n"
+                + language.currentLanguage.shop.shop_loreShotgun2 + "\n\n"
+                + language.currentLanguage.shop.shop_loreShotgun3 + "\n\n"
+                + language.currentLanguage.shop.shop_loreShotgun4 + "\n\n"
+                + language.currentLanguage.shop.shop_loreShotgun5 + "\n\n"
+                + language.currentLanguage.shop.shop_strategy + "\n\n"
+                + language.currentLanguage.shop.shop_loreShotgun6 + "\n\n"
+                + language.currentLanguage.shop.shop_loreShotgun7 + "\n\n"
+                + language.currentLanguage.shop.shop_advancedStrategy + "\n\n"
+                + language.currentLanguage.shop.shop_loreShotgun8 + "\n\n"
+                + language.currentLanguage.shop.shop_loreShotgun9;
+
 
             //Nailgun window and descriptions
             GameObject nailgunWindow = getGameObjectChild(shopWeaponsObject, "NailgunWindow");
@@ -335,8 +365,19 @@ namespace UltrakULL
             nailgunLoreName.text = language.currentLanguage.shop.shop_weaponsNailgun;
 
             Text nailgunLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunLore, "Scroll View"), "Viewport"), "Text"));
-            nailgunLoreInfo.text = "lore";
-
+            nailgunLoreInfo.text =
+                language.currentLanguage.shop.shop_data + "\n\n"
+                + language.currentLanguage.shop.shop_loreNailgun1 + "\n\n"
+                + language.currentLanguage.shop.shop_loreNailgun2 + "\n\n"
+                + language.currentLanguage.shop.shop_loreNailgun3 + "\n\n"
+                + language.currentLanguage.shop.shop_loreNailgun4 + "\n\n"
+                + language.currentLanguage.shop.shop_strategy + "\n\n"
+                + language.currentLanguage.shop.shop_loreNailgun5 + "\n\n"
+                + language.currentLanguage.shop.shop_loreNailgun6 + "\n\n"
+                + language.currentLanguage.shop.shop_loreNailgun7 + "\n\n"
+                + language.currentLanguage.shop.shop_advancedStrategy + "\n\n"
+                + language.currentLanguage.shop.shop_loreNailgun8 + "\n\n"
+                + language.currentLanguage.shop.shop_loreNailgun9;
 
 
             //Railcannon window and descriptions
@@ -371,11 +412,11 @@ namespace UltrakULL
 
             GameObject malicious = getGameObjectChild(railcannonWindow, "Variation Panel (Red)");
             Text maliciousName = getTextfromGameObject(getGameObjectChild(malicious, "Text"));
-            maliciousName.text = "MALICIEUX";
+            maliciousName.text = language.currentLanguage.shop.shop_railcannonMalicious;
 
             GameObject maliciousWindow = getGameObjectChild(railcannonWindow, "Variation Info (Red)");
             Text maliciousWindowName = getTextfromGameObject(getGameObjectChild(maliciousWindow, "Name"));
-            maliciousWindowName.text = maliciousName.text;
+            maliciousWindowName.text = language.currentLanguage.shop.shop_railcannonMalicious;
 
             Text maliciousWindowDescription = getTextfromGameObject(getGameObjectChild(maliciousWindow, "Description"));
             maliciousWindowDescription.text = language.currentLanguage.shop.shop_railcannonMaliciousDescription1 + "\n\n"
@@ -399,8 +440,19 @@ namespace UltrakULL
             railcannonLoreName.text = language.currentLanguage.shop.shop_weaponsRailcannon;
 
             Text railcannonLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(railcannonLore, "Scroll View"), "Viewport"), "Text"));
-            railcannonLoreInfo.text = "lore";
-
+            railcannonLoreInfo.text =
+                 language.currentLanguage.shop.shop_data + "\n\n"
+                + language.currentLanguage.shop.shop_loreRailcannon1 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRailcannon2 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRailcannon3 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRailcannon4 + "\n\n"
+                + language.currentLanguage.shop.shop_strategy + "\n\n"
+                + language.currentLanguage.shop.shop_loreRailcannon5 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRailcannon6 + "\n\n"
+                + language.currentLanguage.shop.shop_advancedStrategy + "\n\n"
+                + language.currentLanguage.shop.shop_loreRailcannon7 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRailcannon8 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRailcannon9;
 
             //Rocket launcher window & descriptions
             GameObject rocketlauncherWindow = getGameObjectChild(shopWeaponsObject, "RocketLauncherWindow");
@@ -432,7 +484,24 @@ namespace UltrakULL
             rocketlauncherLoreName.text = language.currentLanguage.shop.shop_weaponsRocketLauncher;
 
             Text rocketlauncherLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(rocketlauncherLore, "Scroll View"), "Viewport"), "Text"));
-            rocketlauncherLoreInfo.text = "lore";
+            rocketlauncherLoreInfo.text =
+                  language.currentLanguage.shop.shop_data + "\n\n"
+                + language.currentLanguage.shop.shop_loreRocketLauncher1 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRocketLauncher2 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRocketLauncher3 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRocketLauncher4 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRocketLauncher5 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRocketLauncher6 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRocketLauncher7 + "\n\n"
+                + language.currentLanguage.shop.shop_strategy + "\n\n"
+                + language.currentLanguage.shop.shop_loreRocketLauncher8 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRocketLauncher9 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRocketLauncher10 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRocketLauncher11 + "\n\n"
+                + language.currentLanguage.shop.shop_advancedStrategy + "\n\n"
+                + language.currentLanguage.shop.shop_loreRocketLauncher12 + "\n\n"
+                + language.currentLanguage.shop.shop_loreRocketLauncher13;
+
 
             //Arm window and descriptions
             GameObject armWindow = getGameObjectChild(shopWeaponsObject, "ArmWindow");
