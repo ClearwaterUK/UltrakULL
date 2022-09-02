@@ -59,7 +59,7 @@ using UltrakULL.json;
  * 
  * ACT 2 UPDATE DAMAGE REPORT
  * 
- * - Shop needs new stuff added - weapon lore, colors, new enemies, etc
+ * - Shop needs new stuff added - colors
  * 
  * */
 

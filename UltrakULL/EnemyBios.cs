@@ -110,6 +110,47 @@ namespace UltrakULL
                             "Malgré leurs augmentations, leur intelligence reste faible, et on ignore quoi ou qui les ont augmenté.";
 
                     }
+
+                case "FERRYMAN":
+                    {
+                        return
+                            "Les Nochers sont des coques rares auquel leur corps puissants, compétences formées et foi aveugle les ont permis la chance de devenir un transporteur des âmes entre les couches de l'Enfer.\n\n" +
+
+                            "Ils ont été donné un tissu sacré par le Paradis comme symbole de leur dévotion à l'ordre de Dieu, qu'ils portent sur leur corps pour cacher la forme humaine qu'ils détestent comme souvenir de leur pêchés qui les êmpechent de devenir des anges.\n\n" +
+
+                            "Grâce au puissance sacré émanant du tissu, les corps squelettiques ont été colorés de façon vibrante et radiante, et leurs crânes portent assez d'énergie latente pour ouvrir des portes qui êmpechent autrement les Coques de quitter leurs milieux de torment.\n\n" +
+
+                            "Chaque bateau ne peut avoir qu'un seul Nocher à la fois, donc à la suite de la formation d'un nouveau Nocher, ils se lutteront à la mort pour prendre la place et hériter leur tissu. La crâne du perdant est pris comme trophée, et est utilisé pour permette au vainqueur de passer à travers les couches pour transporter les âmes des condamnés à leurs destinations.\n\n" +
+
+                            "Les Nochers utiliseront les connaissances de leurs vies précédents pour améliorer leurs bateaux, passant la besoin des rames, qui ne sont utilisés que pour des armes.\n\n" +
+
+                            "Puisque l'influx d'âmes a terminé avec l'extinction de l'humanité, les Nochers ont perdu leur but, et se baladent sans objectif, en espérant que les anges leur donnerent passage dans le Paradis, malgré Gabriel étant le seul qui prend soin de leurs efforts.";
+                    }
+
+                case "IDOL":
+                    {
+                        return
+                            "Malgré la facilité d'être confondu d'être d'origine divin, les Idoles ont été crées avec le même processus que les autres demons. Contrairement à leur proche plus grand, leurs coques sont trop petits pour porter une quantité utile de Masse d'Enfer, qui les rend à créer la vie, mais n'étant pas capable de se déplacer ou d'agir.\n\n" +
+
+                            "Les Idoles n'avait originallement aucun air divin, mais ont été sculptés attentivement pour ressembler de tels figures comme les Nochers, qui les ont collectées lors de leurs voyages à travers les couches d'Enfer. Ceci a été fait comme acte de compassion et tribut envers les anges, Gabriel en particulier, les Nochers croyant qu'ils les ont pitié." +
+
+                            "La proximité immédiate du chiffon sacré d'un Nocher lors du processus de création ont causé la puissance sacré à rentrer dans leurs corps, leur permettant de continuer la chaîne de compassion en protegeant les autres de la préjudice physique.";
+
+
+                    }
+
+                case "LEVIATHAN":
+                    {
+                        return
+                            "Contrairement aux autres demons, le Léviathan n'est pas formé à partir de la Masse d'Enfer, mais plutôt à partir des corps des Renfrognés, un nom utilisé pour ceux dans l'océan du Styx qui ont abandonné leur lutte, et ont coulé au fond de l'océan, se noyant pour tout éternité.\n\n" +
+
+                            "Les Renfrognés, dans tout leur immobilité, ont été éventuellement fusionnés ensemble par la même force qui a crée les autres demons, devenant le Léviathan biblique, une abomination prophétisé améner la fin du monde.\n\n" +
+
+                            "Le cœur, qui abrite les âmes des Renfrognés dans une angoisse sans fin tant que leurs chairs, veines et nerfs se tordent et se mutent, a tenté d'échapper de son corps, mais Gabriel l'a abattu avec ses lances divins, le collant sur l'arrière de sa tête, incapable de se déplacer.\n\n" +
+
+                            "Malgré la fin du monde, le Léviathan reste coincé dans l'océan du Styx, s'agrandissant encore plus avec plus de pêchers de Colère abandonnent tout espoir et se coulent au fond.";
+                    }
+
                 case "THE CORPSE OF KING MINOS":
                     {
                         return
@@ -204,6 +245,20 @@ namespace UltrakULL
                             "Les Illithids semblent préférer une forme féminine, mais des occasions rares des formes masculins ont été constatées.";
 
                     }
+
+                case "SENTRY":
+                    {
+                        return
+                            "Un parmi beaucoup de machines de guerres conçu lors du Dernière Guerre. Malgré des tentatives pendant la Nouvelle Paix, leur conception simplifié les ont rendu incapable de réamènagement avant le début des expéditions en Enfer.\n\n" +
+
+                            "Leur jambes et pieds extrêmement puissants les permettent de creuser dans le sol, les rendant inamovible par la force physique, et les permettant de viser tout tir sans interruption.\n\n" +
+
+                            "Malgré leur taille, ils ont été conçus pour être très lègers, qui les rendent possible de se déplacer à pas accélére avec la puissance de leurs jambes. Une telle puissance et légèreté les ont rendu une des pièces les plus recherchés par les amateurs.\n\n" +
+
+                            "La plupart des machines n'utilisent qu'une approximation simplifié de leur environnement pour un temps de traitement optimisé, mais les Mitrailleuses utilisent des approximiations complets, leur donnent une précision parfaite, même sur des distances extrêment longs.";
+
+                    }
+
                 case "V2 (2nd)":
                     {
                         return
@@ -238,7 +293,7 @@ namespace UltrakULL
 
                             "En cause des coutures cassées qui permet la mobilité sans avoir besoin de plier l'extérieur, la pierre à durcit plus que la plupart des coques des démons, le rendant complètement imperméable à tout attaque actuellement connu.";
                     }
-                case "GABRIEL":
+                case "GABRIEL, JUDGE OF HELL":
                     {
                         return
                             "Un des archanges le plus respectés et redoutés, Gabriel a gagné sa reputation par le pouvoir et l'éfficacité.\n\n" +
@@ -246,6 +301,20 @@ namespace UltrakULL
                             "Peu importe la tâche donné, Gabriel le réalisera vitement et décisivement, ce qui lui a gagné le titre de Juge d'Enfer après avoir détrôné Minos, et mis fin au renaissance du couche de Luxure.\n\n" +
 
                             "Malgré son loyauté au Conseil, il est beaucoup plus populaire et aimé parmu les anges, grâce au son personalité radiant et nature actif, surtout par rapport au Conseil, qui suit et maintient de manière stricte le dogme du Foi.";
+                    }
+
+
+                case "GABRIEL, APOSTATE OF HATE":
+                    {
+                        return
+                            "Ayant affronté le machine et avoir perdu deux fois, Gabriel a reconnu son erreur. Le feu intense qui lui brûlait dedans n'était pas la haine, mais la passion.\n\n" +
+
+                            "Gabriel n'a jamais connu la joie de la lutte, de faire face à un adversaire de mesure égale ou supérieure. Même ayant maintenant perdu deux fois, chaque perte n'a qu'augmenté son desir de surmonter.\n\n" +
+
+                            "Jusqu'au présent, il n'a fait que ce qu'on lui attendait de faire, mais maintenant, pour le premier fois, il a trouvé quelque chose qu'il voulait lui-même. La Fin de l'Enfer ne lui portait plus d'importance.\n\n" +
+
+                            "De même, ayant compris les horreurs qu'il a commis au nom du Dieu, il a resenti une grande culpabilité. Bien qu'il ne peut pas défaire ce qu'il avait fait, Gabriel savait qu'il devrait remettre les choses en ordre, et s'est dirigé vers l'Enfer pour le fernier fois.";
+
                     }
                 case "VIRTUE":
                     {
@@ -334,6 +403,45 @@ namespace UltrakULL
                             "- Les Soldats chargent leurs tirs devant eux, au lieu de en-dessus d'eux. La charge est alors plus facile à interrompre avec un tir de Revolver, pour les exploser.";
                     }
 
+
+                case "FERRYMAN":
+                    {
+                        return
+                            "Les Nochers choisissent leurs attaques en fonction des actions de son adversaire. Quand il est approché, il se recule vers une distance sûr, et quand on lui recule, ils appliqueront la pression avec des attaques à portée augmenté.\n\n" +
+
+                            "- Malgré son apparence, leur coup de point remontant est assez dangereux et peut être difficule à esquiver. Il est conseillé de ne pas rester dans l'air pour longtemps.\n\n" +
+
+                            "- Certains de ses attaques peuvent être renvoyés, d'autres non. Soyez attentif au couleur de l'attaque pour comprendre si elle peut être renvoyé.\n\n" +
+
+                            "- Les Nochers tenteront de dépasser un adversaire reculant en roulant derrière lui avant d'attaquer. Traquez leur position et s'ils roulent trop de fois, tentez de monter l'aggression.";
+
+                    }
+
+                case "SENTRY":
+                    {
+                        return
+                            "- Grâce à leurs jambes puissantes, une fois creusé dans le sol, ils ne peuvent plus se déplacer.\n\n" +
+
+                            "- Une fois dans le sol, les seuls moyens d'interrompre leur attaque sont: Le Canon-Électrique, frappant leur antenne avec le Revolver, leur lancant avec un choc au sol, ou les poignardant avec le Bombardier.\n\n" +
+
+                            "- Tant qu'ils ne sont pas creusés, leur poids lèger les rendant facile à lancer, et les garder dans l'air, les rendant sans danger.\n\n" +
+
+                            "- Un bon technique pour désactiver une Mitrailleuse pour plus longtemps est de le remplir avec des clous, et ensuite tirer un aimant du Cloueur dans un mur ou plafond, qui l'attirera une fois déséquilibré.";
+
+
+                    }
+
+                case "IDOL":
+                    {
+                        return
+                            "- Malgré leur immunité aux projectiles, ils peuvent toujours être détruits par un coup de poing ou un lancement au sol.\n\n" +
+
+                            "- Les ennemies benedits sont immunisé contre les dégâts, mais peuvent toujours êtres lancés par des foces physiques, et tués par des dangers environnmentaux, tel  que les écrasements ou chutes.\n\n" +
+
+                            "- Ni les Idoles, ni les ennemies benedits ne peuvent être saisies avec le COUP DE FOUET.";
+
+                    }
+
                 case "THE CORPSE OF KING MINOS":
                     {
                         return
@@ -343,6 +451,18 @@ namespace UltrakULL
 
                             "Le trou noir qu'il crée, même avec un déplacement ralenti, reste toujours extrêment dangereux, et ne peux pas être détruit.";
                     }
+
+
+                case "LEVIATHAN":
+                    {
+                        return
+                            "- Le cœur du Léviathan est visible sur le sommet de sa tête, le rendant un point faible pour y viser. Il n'est pas toujours visible, mais il peut être vu après une de ses attaques, offrant une oppurtunité pour infliger des dégâts directement, ou pour lancer un aimant.\n\n" +
+
+                            "- Bien que non conseillé, il est possible de monter sur le Léviathan pour une période courte. Un saut précis vous permettre d'esquiver la morsure de Léviathan, ainsi de grimper sur sa tête.\n\n" +
+
+                            "- Sa queue se lancera soit en haut, soit en bas. La hauteur du lancement peut être determiné par la direction de la rotation.";
+                    }
+
                 case "STALKER":
                     {
                         return
@@ -448,13 +568,25 @@ namespace UltrakULL
 
                             "- Si l'harpon vous attrape, il est conseillé soit de frapper de le frapper, soit d'attaquer la queue pour l'enlever.";
                     }
-                case "GABRIEL":
+                case "GABRIEL, JUDGE OF HELL":
                     {
                         return
                             "- Les mouvements de Gabriel sont vites, et ses attaques mortelles, mais en observant l'arme qu'il brandit, ses attaques peuvent être prévus même avant qu'il ne les fasse.\n\n" +
 
                             "- La fierté de Gabriel l'empêche d'attaquer lorsqu'il moque son adversaire, ce qui permet une courte période pour vous soigner.";
                     }
+
+                case "GABRIEL, APOSTATE OF HATE":
+                    {
+                        return
+
+                            "- Bien que la vitesse de Gabriel a augmenté, sa précision n'a pas. Les esquives diagonaux ou aux côtés sera plus efficace que de tenter de reculer hors de portée de ses épées.\n\n" +
+
+                            "- Tant que son épée semble impossible à esquiver, il reste une bonne arme si elle est renvoyé.\n\n" +
+
+                            "- Submergé par ses émotions, Gabriel s'arrêtera parfois pour moquer son adversaire, permettant une courte période pour vous soigner.";
+                    }
+
                 case "VIRTUE":
                     {
                         return
