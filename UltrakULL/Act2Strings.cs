@@ -114,7 +114,7 @@ namespace UltrakULL
             string fullMessage = message + message2;
             if (fullMessage.Contains("JAKITO"))
             {
-                return (language.currentLanguage.act2.act2_wrathSecond_jakito);
+                return (language.currentLanguage.act2.act2_wrathSecond_jakito1);
             }
             if (fullMessage.Contains("NO"))
             {

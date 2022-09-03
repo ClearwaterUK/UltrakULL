@@ -33,7 +33,7 @@ using UltrakULL.json;
  *  - Fill the JSON template and class as progress happens
  *  - Error and exception handling
  *  - Discord RPC (Persistant timestamp and general corrections)
- *  - All of the Act 2 stuff - subtitles, intermission, etc
+ *  - All of the Act 2 stuff - intermission, etc
  * 
  * - Less important stuff for future updates:
  *  - Cheat teleport menu

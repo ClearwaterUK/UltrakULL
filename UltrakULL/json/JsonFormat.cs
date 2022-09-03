@@ -829,6 +829,7 @@ namespace UltrakULL.json
         public string act2_wrathSecond_jakito3;
         public string act2_wrathSecond_neptune;
         public string act2_wrathSecond_hark;
+        public string act2_wrathSecond_idol;
 
         public string act2_wrathThird_rocketLauncher;
         public string act2_wrathThird_rocketLauncherMidair;

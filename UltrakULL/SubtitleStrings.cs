@@ -341,22 +341,284 @@ namespace UltrakULL
 
         }
 
-
-
-            public string getSubtitle(string input)
+        public string gabeBoatSubtitles(string input)
+        {
+            //Intro
+            if (input.Contains("Be not afraid"))
             {
+                return ("N'ayez pas peur, pêcheur.");
+            }
+            if (input.Contains("Your devotion"))
+            {
+                return ("Votre dévotion au Dieu montre le bonté dans vous-même;");
+            }
+            if (input.Contains("Plentiful"))
+            {
+                return ("Bien abondant.");
+            }
+            if (input.Contains("The heart"))
+            {
+                return ("Le cœur est prêt, mais le corps doit se reposer,");
+            }
+            if (input.Contains("Lest"))
+            {
+                return ("Sinon vous gaspillierez un des créations de Dieu.");
+            }
+            return "Unimplemented 5-3 subtitle";
+        }
+
+        public string gabeSecondSubtitles(string input)
+        {
+            if (input.Contains("Machine"))
+            {
+                return "Machine, je sais tu est ici.";
+            }
+            if (input.Contains("I can smell"))
+            {
+                return "Je peux ressentir l'odeur insolent de tes mains sanglants.";
+            }
+            if (input.Contains("I await"))
+            {
+                return "Je t'attends en bas...";
+            }
+            if (input.Contains("Come"))
+            {
+                return "Venez à moi!";
+            }
+
+            Console.WriteLine(input);
+            return "Unimplemented 6-1 subtitle";
+        }
+
+        public string gabeSecondBossSubtitles(string input)
+        {
+            //Level intro
+            if (input.Contains("Limbo"))
+            {
+                return "Les Limbes.";
+            }
+            if (input.Contains("Lust"))
+            {
+                return "Luxure.";
+            }
+            if (input.Contains("All gone"))
+            {
+                return "Tout parti...";
+            }
+            if (input.Contains("With Gluttony"))
+            {
+                return "Avec la Gourmandise à bientôt suivre.";
+            }
+            if (input.Contains("Your kind"))
+            {
+                return "Ton type ne connaît que la faim,";
+            }
+            if (input.Contains("Purged"))
+            {
+                return "Effacé toute vie sur les couches supérieurs,";
+            }
+            if (input.Contains("And yet"))
+            {
+                return "Mais ils restent insatiables...";
+            }
+            if (input.Contains("As do"))
+            {
+                return "Comme toi-même.";
+            }
+            if (input.Contains("You've taken"))
+            {
+                return "Tu m'as tout pris, machine.";
+            }
+            if (input.Contains("And now"))
+            {
+                return "Maintenant, tout ce qui reste, est";
+            }
+            if (input.Contains("PERFECT"))
+            {
+                return "LA HAINE...";
+            }
+            if (input.Contains("HATRED"))
+            {
+                return "...PARFAITE!";
+            }
+
+            //Boss info
+            Console.WriteLine(input);
+            if (input.Contains("Machine"))
+            {
+                return "Machine,";
+            }
+            if (input.Contains("I will cut"))
+            {
+                return "Je vais t'abattre en morceaux,";
+            }
+            if (input.Contains("Break you apart"))
+            {
+                return "Te casser en pièces,";
+            }
+            if (input.Contains("Splay"))
+            {
+                return "Verser le sang de ton forme profane à travers LES ÉTOILES!";
+            }
+            if (input.Contains("MERCY"))
+            {
+                return "Je vais te broyer jusqu'au même les ÉTINCELLES CRIENT LA PITIÉ!";
+            }
+            if (input.Contains("My hands"))
+            {
+                return "Mes mains vont SAVORER TE DÉLIVRER LA MORT...";
+            }
+            if (input.Contains("HERE"))
+            {
+                return "ICI,";
+            }
+            if (input.Contains("AND"))
+            {
+                return "ET,";
+            }
+            if (input.Contains("NOW"))
+            {
+                return "MAINTENANT!";
+            }
+
+            //Taunts
+            if (input.Contains("IS THAT"))
+            {
+                return "C'EST TOUT QUE TU SAIS FAIRE!?";
+            }
+            if (input.Contains("YOU NEED"))
+            {
+                return "IL TE FAUT. PLUS. DE PUISSANCE!";
+            }
+            if (input.Contains("Come get"))
+            {
+                return "VIENS CHERCHER MON SANG!";
+            }
+            if (input.Contains("What is this"))
+            {
+                return "Mais qu'est-ce que... cet SENSATION?";
+            }
+            if (input.Contains("NOTHING"))
+            {
+                return "TU N'EST QUE DU FERAILLE!";
+            }
+            if (input.Contains("You're getting"))
+            {
+                return "Tu rouilles un peu, machine!";
+            }
+            if (input.Contains("IS THIS WHAT"))
+            {
+                return "J'AI VRAIMENT PERDU CONTRE TOI?!";
+            }
+            if (input.Contains("TIME TO"))
+            {
+                return "IL EST TEMPS DE CORRIGER MON ERREUR!";
+            }
+            if (input.Contains("LET'S SETTLE"))
+            {
+                return "FINISSONS-EN!";
+            }
+            if (input.Contains("I'LL SHOW"))
+            {
+                return "JE TE MONTRERAI LA JUSTICE DIVINE!";
+            }
+            if (input.Contains("Come on"))
+            {
+                return "Aller, machine! Bats-moi comme un animal!";
+            }
+            if (input.Contains("I've never"))
+            {
+                return "Je n'ai jamais eu un tel bataille comme ceci!";
+            }
+            if (input.Contains("Show me"))
+            {
+                return "Montre moi à quoi tu serts!";
+            }
+            if (input.Contains("Now THIS"))
+            {
+                return "Ceci EST un bataille digne du volonté de Dieu!";
+            }
+
+            //Defeated
+            if (input.Contains("Twice!?"))
+            {
+                return "Deux fois?!";
+            }
+            if (input.Contains("Beaten by"))
+            {
+                return "Battu par un Objet... DEUX FOIS?!";
+            }
+            if (input.Contains("I've only"))
+            {
+                return "Je ne connais que le goût de la victoire,";
+            }
+            if (input.Contains("But this"))
+            {
+                return "Mais ce goût... Est-ce que...";
+            }
+            if (input.Contains("Is this"))
+            {
+                return "Est-ce que c'est mon sang?";
+            }
+            if (input.Contains("I've never known such..."))
+            {
+                return "Je n'ai jamais connu un tel...";
+            }
+            if (input.Contains("Such"))
+            {
+                return "Un tel... soulagement?";
+            }
+            if (input.Contains("I-"))
+            {
+                return "Je... J'ai besoin du temps pour réfléchir...";
+            }
+            if (input.Contains("We will"))
+            {
+                return "Nous allons se rencontrer encore, machine.";
+            }
+            if (input.Contains("May"))
+            {
+                return "Que tes malheurs soit beaucoup...";
+            }
+            if (input.Contains("and your"))
+            {
+                return "...et tes jours nombrés.";
+            }
+
+            return "Unimplemented 6-2 subtitle";
+        }
+
+
+        public string getSubtitle(string input)
+        {
             string currentLevel = SceneManager.GetActiveScene().name;
-            //Act 1, 3-2
+            //3-2
             if (currentLevel.Contains("3-2"))
             {
-               
                return gabesubtitles(input);
             }
-            //Act 2, 4-3 secret boss
+            //4-3 secret boss
             if (currentLevel.Contains("4-3"))
-            {
+                {
                 return druidsubtitles(input);
             }
+
+            //5-3
+            if (currentLevel.Contains("5-3"))
+            {
+                return gabeBoatSubtitles(input);
+            }
+            //6-1
+            if (currentLevel.Contains("6-1"))
+            {
+                return gabeSecondSubtitles(input);
+            }
+            //6-2
+            if (currentLevel.Contains("6-2"))
+            {
+                return gabeSecondBossSubtitles(input);
+            }
+
             //Prime sanctum, P-1 boss
             if (currentLevel.Contains("P-1"))
             {
