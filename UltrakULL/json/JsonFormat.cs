@@ -819,6 +819,24 @@ namespace UltrakULL.json
 
         public string act2_greed_secretDoor;
 
+        public string act2_wrathFirst_slingshot;
+        public string act2_wrathFirst_whiplashUnderwater;
+        public string act2_wrathFirst_waterDrained;
+        public string act2_wrathFirst_sentry;
+
+        public string act2_wrathSecond_jakito1;
+        public string act2_wrathSecond_jakito2;
+        public string act2_wrathSecond_jakito3;
+        public string act2_wrathSecond_neptune;
+        public string act2_wrathSecond_hark;
+
+        public string act2_wrathThird_rocketLauncher;
+        public string act2_wrathThird_rocketLauncherMidair;
+        public string act2_wrathThird_soldierBlock;
+        public string act2_wrathThird_hank;
+
+        public string act2_secretNotReady;
+
     }
 
     public class Prime

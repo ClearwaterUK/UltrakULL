@@ -88,21 +88,81 @@ namespace UltrakULL
 
         public string level51(string message, string message2, string input, JsonParser language)
         {
+            string fullMessage = message + message2;
+            if (fullMessage.Contains("HOOKPOINT"))
+            {
+                return (language.currentLanguage.act2.act2_wrathFirst_slingshot);
+            }
+            if (fullMessage.Contains("WHIPLASH"))
+            {
+                return (language.currentLanguage.act2.act2_wrathFirst_whiplashUnderwater);
+            }
+            if (fullMessage.Contains("SENTRIES"))
+            {
+                return (language.currentLanguage.act2.act2_wrathFirst_sentry);
+            }
+            if (fullMessage.Contains("drained"))
+            {
+                return (language.currentLanguage.act2.act2_wrathFirst_waterDrained);
+            }
+
             return "Unknown 5-1 string";
         }
 
         public string level52(string message, string message2, string input, JsonParser language)
         {
+            string fullMessage = message + message2;
+            if (fullMessage.Contains("JAKITO"))
+            {
+                return (language.currentLanguage.act2.act2_wrathSecond_jakito);
+            }
+            if (fullMessage.Contains("NO"))
+            {
+                return (language.currentLanguage.act2.act2_wrathSecond_jakito2);
+            }
+            if (fullMessage.Contains("THANK"))
+            {
+                return (language.currentLanguage.act2.act2_wrathSecond_jakito3);
+            }
+            if (fullMessage.Contains("Hark"))
+            {
+                return (language.currentLanguage.act2.act2_wrathSecond_neptune);
+            }
+            if (fullMessage.Contains("IDOL"))
+            {
+                return (language.currentLanguage.act2.act2_wrathSecond_idol);
+            }
             return "Unknown 5-2 string";
         }
 
         public string level53(string message, string message2, string input, JsonParser language)
         {
+            string fullMessage = message + message2;
+
+            if (fullMessage.Contains("Indirect"))
+            {
+                return (language.currentLanguage.act2.act2_wrathThird_rocketLauncher);
+            }
+            if (fullMessage.Contains("FALLING"))
+            {
+                return (language.currentLanguage.act2.act2_wrathThird_rocketLauncherMidair);
+            }
+            if (fullMessage.Contains("Soldiers"))
+            {
+                return (language.currentLanguage.act2.act2_wrathThird_soldierBlock);
+            }
+            if (fullMessage.Contains("Hank"))
+            {
+                return (language.currentLanguage.act2.act2_wrathThird_hank);
+            }
+
             return "Unknown 5-3 string";
         }
 
         public string level54(string message, string message2, string input, JsonParser language)
         {
+            string fullMessage = message + message2;
+
             return "Unknown 5-4 string";
         }
 
@@ -129,6 +189,10 @@ namespace UltrakULL
             if(fullMessage.Contains("opens"))
             {
                 return (language.currentLanguage.act2.act2_greed_secretDoor);
+            }
+            if (fullMessage.Contains("YOU'RE"))
+            {
+                return (language.currentLanguage.act2.act2_secretNotReady);
             }
 
             switch (currentLevel)

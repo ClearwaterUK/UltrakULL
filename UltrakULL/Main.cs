@@ -33,7 +33,6 @@ using UltrakULL.json;
  *  - Fill the JSON template and class as progress happens
  *  - Error and exception handling
  *  - Discord RPC (Persistant timestamp and general corrections)
- *  - 1-4, 2-2, 4-2, 4-3 books
  *  - All of the Act 2 stuff - subtitles, intermission, etc
  * 
  * - Less important stuff for future updates:
