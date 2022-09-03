@@ -140,25 +140,40 @@ namespace UltrakULL.json
 
     public class Book
     { 
-        public string book_limboFourth;
+        public string books_limboFourth1;
+        public string books_limboFourth2;
+        public string books_limboFourth3;
+        public string books_limboFourth4;
+        public string books_limboFourth5;
 
-        public string book_lustSecond1;
-        public string book_lustSecond2;
-        public string book_lustSecond3;
-        public string book_lustSecond4;
-        public string book_lustSecond5;
-
-
-        public string book_greedSecond1;
-        public string book_greedSecond2;
-        public string book_greedSecond3;
-        public string book_greedSecond4;
-        public string book_greedSecond5;
+        public string books_lustSecond1;
+        public string books_lustSecond2;
+        public string books_lustSecond3;
+        public string books_lustSecond4;
+        public string books_lustSecond5;
 
 
+        public string books_greedSecond1;
+        public string books_greedSecond2;
+        public string books_greedSecond3;
+        public string books_greedSecond4;
+        public string books_greedSecond5;
+        public string books_greedSecond6;
 
-        public string book_greedThird;
+        public string books_greedThird1;
+        public string books_greedThird2;
+        public string books_greedThird3;
+        public string books_greedThird4;
 
+        public string books_wrathSecond1;
+        public string books_wrathSecond2;
+        public string books_wrathSecond3;
+        public string books_wrathSecond4;
+        public string books_wrathSecond5;
+        public string books_wrathSecond6;
+        public string books_wrathSecond7;
+        public string books_wrathSecond8;
+        public string books_wrathSecond9;
 
     }
 
