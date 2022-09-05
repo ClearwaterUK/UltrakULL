@@ -79,6 +79,64 @@ namespace UltrakULL.json
         public string act1_intermission_insert;
         public string act1_intermission_returnToMenu;
 
+        public string act2_intermission_first1;
+        public string act2_intermission_first2;
+        public string act2_intermission_first3;
+        public string act2_intermission_first4;
+        public string act2_intermission_first5;
+        public string act2_intermission_first6;
+        public string act2_intermission_first7;
+        public string act2_intermission_first8;
+        public string act2_intermission_first9;
+
+        public string act2_intermission_first10;
+
+        public string act2_intermission_second1;
+        public string act2_intermission_second2;
+        public string act2_intermission_second3;
+        public string act2_intermission_second4;
+        public string act2_intermission_second5;
+
+        public string act2_intermission_second6;
+        public string act2_intermission_second7;
+        public string act2_intermission_second8;
+
+        public string act2_intermission_second9;
+        public string act2_intermission_second10;
+
+        public string act2_intermission_third1;
+        public string act2_intermission_third2;
+
+        public string act2_intermission_third3;
+        public string act2_intermission_third4;
+        public string act2_intermission_third5;
+
+        public string act2_intermission_fourth1;
+        public string act2_intermission_fourth2;
+        public string act2_intermission_fourth3;
+
+        public string act2_intermission_fourth4;
+
+        public string act2_intermission_fourth5;
+
+        public string act2_intermission_fourth6;
+        public string act2_intermission_fourth7;
+
+        public string act2_intermission_fifth1;
+
+        public string act2_intermission_fifth2;
+        public string act2_intermission_fifth3;
+        public string act2_intermission_fifth4;
+        public string act2_intermission_fifth5;
+
+        public string act2_intermission_sixth1;
+
+        public string act2_intermission_sixth2;
+        public string act2_intermission_sixth3;
+
+        public string act2_intermission_tobecontinued;
+        public string act2_intermission_tobecontinuedshadow;
+
     }
 
     public class Body

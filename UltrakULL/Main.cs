@@ -55,7 +55,6 @@ using UltrakULL.json;
  * - Could be possible to swap out rank textures in HUD for translation. Shall look into later
  * - Put all the stuff that gets inactive GameObjects into a common function for code cleanup
  * 
- * 
  * ACT 2 UPDATE DAMAGE REPORT
  * 
  * - Shop needs new stuff added - colors
@@ -576,6 +575,14 @@ namespace UltrakULL
                     patchLevelStats(ref coreGame);
                     
 
+                    //TEMPORARY REDIRECT TO SAVE TIME WHILE I'M DOING THE INTERMISSION.
+                   if (SceneManager.GetActiveScene().name == "Level 6-2")
+                   {
+                        Logger.LogWarning("Redirecting to Intermission2. Make sure to delete this when you're done!");
+                        SceneManager.LoadScene("Intermission2");
+                   }
+
+
                     //Tutorial
                     if (SceneManager.GetActiveScene().name.Contains("Tutorial"))
                     {
@@ -597,9 +604,9 @@ namespace UltrakULL
                     }
                     //Act intermission
 
-                    else if (SceneManager.GetActiveScene().name.Contains("Intermission1"))
+                    else if (SceneManager.GetActiveScene().name.Contains("Intermission"))
                     {
-                        Logger.LogInfo("Currently on Act 1 intermission.");
+                        Logger.LogInfo("Currently on intermission.");
                         Intermission intermission = new Intermission(ref coreGame,this.jsonParser);
                     }
 

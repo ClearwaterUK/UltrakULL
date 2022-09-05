@@ -14,6 +14,23 @@ namespace UltrakULL
 {
     public static class CommonFunctions
     {
+
+        public static GameObject getInactiveRootObject(string objectName)
+        {
+
+            List<GameObject> rootList = new List<GameObject>();
+            SceneManager.GetActiveScene().GetRootGameObjects(rootList);
+            foreach (GameObject child in rootList)
+            {
+                if (child.name == objectName)
+                {
+                    return child;
+                }
+            }
+            return null;
+        }
+
+
         public static void patchResultsScreen(string name, string challenge, JsonParser language)
         {
             string levelName = name;
