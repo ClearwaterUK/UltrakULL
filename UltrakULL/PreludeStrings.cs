@@ -142,8 +142,6 @@ namespace UltrakULL
 
         public string getLevelChallenge(string currentLevel, JsonParser language)
         {
-            Console.WriteLine("Getting console challenge...");
-            Console.WriteLine(currentLevel);
 
             switch (currentLevel)
             {

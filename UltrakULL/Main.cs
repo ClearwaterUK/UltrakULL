@@ -15,25 +15,20 @@ using static UltrakULL.CommonFunctions;
 using System.Linq;
 using UltrakULL.json;
 
-
-
 /*
  * 
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater
  *	Date started: 21st April 2021
- *	Last updated: 29th August 2022
+ *	Last updated: 9th September 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
  * 
- * 
  *  MAIN TODO LIST
-
- *  - Fill the JSON template and class as progress happens
+ *  - Fill the JSON template and class as progress happens, moving hardcoded text out as it goes
  *  - Error and exception handling
  *  - Discord RPC (Persistant timestamp and general corrections)
- *  - All of the Act 2 stuff - intermission, etc
  * 
  * - Less important stuff for future updates:
  *  - Cheat teleport menu
@@ -43,8 +38,7 @@ using UltrakULL.json;
  *  
  *  BUGS AND QUIRKS TO FIX:
  *  
- * -  MEMORY LEAK THAT OCCURS OVER TIME IF YOU HOP IN AND OUT OF LEVELS. SHALL NEED TO MONITOR.
- *  
+ * - MEMORY LEAK THAT OCCURS OVER TIME IF YOU HOP IN AND OUT OF LEVELS. SHALL NEED TO MONITOR.
  * - Reexamine the intro text. See if I can get input working again, as well as shorten the 3 dots time based on the Act 2 update original code
  * - 2-S uses intermission style strings. Is there a way I can patch the text without having to patch the IntermissionController class?
  * - Some of the enemy bios as the INSURRECTIONIST and VIRTUE were updated, will need to retranslate and update on this end.
@@ -54,6 +48,7 @@ using UltrakULL.json;
  * - Size/color tag isn't working on the prime testament
  * - Could be possible to swap out rank textures in HUD for translation. Shall look into later
  * - Put all the stuff that gets inactive GameObjects into a common function for code cleanup
+ * - Move the loaded language class to a seperate class. Would make it easier to access instead of doing currentLanguage.language.etc...
  * 
  * ACT 2 UPDATE DAMAGE REPORT
  * 
@@ -65,7 +60,6 @@ namespace UltrakULL
 {
     [BepInPlugin(pluginGuid, pluginName, pluginVersion)]
     [BepInProcess("ULTRAKILL.exe")]
-
     public class MainPatch : BaseUnityPlugin
     {
         public const string pluginGuid = "clearwater.ultrakill.ultrakULL";
@@ -76,7 +70,6 @@ namespace UltrakULL
         private PatchedFunctions patchedFuncs;
 
         private bool ready = false;
-
         public MainPatch()
         {
 
@@ -87,45 +80,26 @@ namespace UltrakULL
         {
             try
             {
-                List<GameObject> rootObjects = new List<GameObject>();
-                SceneManager.GetActiveScene().GetRootGameObjects(rootObjects);
-
-                GameObject pauseObject = null;
-                foreach (GameObject a in rootObjects)
-                {
-                    if (a.gameObject.name == "Canvas")
-                    {
-                        pauseObject = a.gameObject;
-                        break;
-                    }
-
-                }
-
+                GameObject pauseObject = getInactiveRootObject("Canvas");
                 GameObject pauseMenu = getGameObjectChild(pauseObject, "PauseMenu");
 
                 //Title
-
-                Console.WriteLine("title");
                 Text pauseText = getTextfromGameObject(getGameObjectChild(pauseMenu, "Text"));
                 pauseText.text = "-- " + this.jsonParser.currentLanguage.pauseMenu.pause_title + " --";
 
                 //Resume
-                Console.WriteLine("resume");
                 Text continueText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(pauseMenu, "Resume"), "Text"));
                 continueText.text = this.jsonParser.currentLanguage.pauseMenu.pause_resume;
 
                 //Checkpoint
-                Console.WriteLine("respawn");
                 Text checkpointText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(pauseMenu, "Restart Checkpoint"), "Text"));
                 checkpointText.text = this.jsonParser.currentLanguage.pauseMenu.pause_respawn;
 
                 //Restart mission
-                Console.WriteLine("restart");
                 Text restartText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(pauseMenu, "Restart Mission"), "Text"));
                 restartText.text = this.jsonParser.currentLanguage.pauseMenu.pause_restart;
 
                 //Options
-                Console.WriteLine("options");
                 Text optionsText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(pauseMenu, "Options"), "Text"));
                 optionsText.text = this.jsonParser.currentLanguage.pauseMenu.pause_options;
 
@@ -133,47 +107,43 @@ namespace UltrakULL
                 Text quitText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(pauseMenu, "Quit Mission"), "Text"));
                 quitText.text = this.jsonParser.currentLanguage.pauseMenu.pause_quit;
 
-
                 //Quit+Restart windows
                 GameObject pauseDialogs = getGameObjectChild(pauseObject, "PauseMenuDialogs");
 
                 //Quit
-
                 GameObject quitDialog = getGameObjectChild(getGameObjectChild(pauseDialogs, "Quit Confirm"),"Panel");
                 Text quitDialogText = getTextfromGameObject(getGameObjectChild(quitDialog, "Text"));
-                quitDialogText.text = "Êtes-vous sûr de vouloir <color=orange>QUITTER</color> ce mission?";
+                quitDialogText.text = this.jsonParser.currentLanguage.pauseMenu.pause_quitConfirm;
 
                 Text quitDialogTooltip = getTextfromGameObject(getGameObjectChild(quitDialog, "Text (1)"));
-                quitDialogTooltip.text = "Ce fenêtre peut être désactivé dans les options";
+                quitDialogTooltip.text = this.jsonParser.currentLanguage.pauseMenu.pause_disableWindow;
 
                 Text quitDialogYes = getTextfromGameObject(getGameObjectChild(getGameObjectChild(quitDialog, "Confirm"),"Text"));
-                quitDialogYes.text = "QUITTER";
+                quitDialogYes.text = this.jsonParser.currentLanguage.pauseMenu.pause_quitConfirmYes;
 
                 Text quitDialogNo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(quitDialog, "Cancel"), "Text"));
-                quitDialogNo.text = "ANNULER";
+                quitDialogNo.text = this.jsonParser.currentLanguage.pauseMenu.pause_quitConfirmNo;
 
                 //Restart
                 GameObject restartDialog = getGameObjectChild(getGameObjectChild(pauseDialogs, "Restart Confirm"), "Panel");
 
                 Text restartDialogText = getTextfromGameObject(getGameObjectChild(restartDialog, "Text"));
-                restartDialogText.text = "Êtes-vous sûr de vouloir <color=orange>RÉDEMARRER</color> ce mission?";
+                restartDialogText.text = this.jsonParser.currentLanguage.pauseMenu.pause_restartConfirm;
 
                 Text restartDialogTooltip = getTextfromGameObject(getGameObjectChild(restartDialog, "Text (1)"));
-                restartDialogTooltip.text = "Ce fenêtre peut être désactivé dans les options";
+                restartDialogTooltip.text = this.jsonParser.currentLanguage.pauseMenu.pause_disableWindow;
 
                 Text restartDialogYes = getTextfromGameObject(getGameObjectChild(getGameObjectChild(restartDialog, "Confirm"), "Text"));
-                restartDialogYes.text = "RÉDEMARRER";
+                restartDialogYes.text = this.jsonParser.currentLanguage.pauseMenu.pause_restartConfirmYes;
 
                 Text restartDialogNo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(restartDialog, "Cancel"), "Text"));
-                restartDialogNo.text = "ANNULER";
-
+                restartDialogNo.text = this.jsonParser.currentLanguage.pauseMenu.pause_restartConfirmNo;
             }
             catch(Exception e)
             {
                 Logger.LogError("Failed to patch pause menu");
                 Logger.LogError(e.ToString());
             }
-
         }
 
         public void patchCheats(ref GameObject coreGame)
@@ -184,35 +154,11 @@ namespace UltrakULL
 
         public void patchDeathScreen(ref GameObject coreGame)
         {
-
-            GameObject can = null;
-            Console.WriteLine("coreGame: " + coreGame.name);
-
-
-            List<GameObject> canvas = new List<GameObject>();
-            SceneManager.GetActiveScene().GetRootGameObjects(canvas);
-
-            foreach (GameObject a in canvas)
-            {
-                if (a.gameObject.name == "Canvas")
-                {
-                    can = a.gameObject;
-                    break;
-                }
-
-            }
-
-
-            for (int i = 0; i < can.transform.childCount; i++)
-            {
-                GameObject child = can.transform.GetChild(i).gameObject;
-                Console.WriteLine(child.name);
-            }
-
+            coreGame = getInactiveRootObject("Canvas");
 
             try
             {
-                GameObject deathScreen = getGameObjectChild(getGameObjectChild(can, "BlackScreen"), "YouDiedText");
+                GameObject deathScreen = getGameObjectChild(getGameObjectChild(coreGame, "BlackScreen"), "YouDiedText");
                 //Need to disable the TextOverride component.
                 Component[] test = deathScreen.GetComponents(typeof(Component));
                 Behaviour bhvr = (Behaviour)test[3];
@@ -249,173 +195,150 @@ namespace UltrakULL
         {
             MainMenu mainMenu = new MainMenu(frontEnd, jsonParser);
             Options options = new Options(ref frontEnd, this.jsonParser);
-
         }
 
         //Parent function to patch the vanilla game functions.
         public void patchVanillaFunctions()
         {
+            Logger.LogMessage("Patching game functions...");
+
             Harmony harmony = new Harmony(pluginGuid);
-            Logger.LogInfo("Patching Check for difficulty strings...");
+            Logger.LogInfo("DifficultyTitle->Check");
             MethodInfo originalCheckFunction = AccessTools.Method(typeof(DifficultyTitle), "Check");
             MethodInfo patchedCheckFunction = AccessTools.Method(typeof(PatchedFunctions), "Check_MyPatch");
             harmony.Patch(originalCheckFunction, new HarmonyMethod(patchedCheckFunction));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching checkScore for act select strings...");
+            Logger.LogInfo("LevelSelectPanel->CheckScore");
             MethodInfo originalCheckScoreFunction = AccessTools.Method(typeof(LevelSelectPanel), "CheckScore");
             MethodInfo patchedCheckScoreFunction = AccessTools.Method(typeof(PatchedFunctions), "CheckScore_MyPatch");
             harmony.Patch(originalCheckScoreFunction, new HarmonyMethod(patchedCheckScoreFunction));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching nameAppear for in-level title strings...");
+            Logger.LogInfo("LevelNamePopup->NameAppear");
             MethodInfo originalNameAppearFunction = AccessTools.Method(typeof(LevelNamePopup), "NameAppear");
             MethodInfo patchedNameAppearFunction = AccessTools.Method(typeof(PatchedFunctions), "NameAppear_MyPatch");
             harmony.Patch(originalNameAppearFunction, new HarmonyMethod(patchedNameAppearFunction));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching tutorial intro text...");
+            Logger.LogInfo("IntroText->Start");
             MethodInfo originalIntroFunction = AccessTools.Method(typeof(IntroText), "Start");
             MethodInfo patchedIntroFunction = AccessTools.Method(typeof(PatchedFunctions), "IntroTextStart_MyPatch");
             harmony.Patch(originalIntroFunction, new HarmonyMethod(patchedIntroFunction));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching HUD message box functions...");
+            Logger.LogInfo("HudMessage->PlayMessage");
             MethodInfo originalPlayMessage = typeof(HudMessage).GetMethod("PlayMessage");
             MethodInfo patchedPlayMessage = AccessTools.Method(typeof(PatchedFunctions), "PlayMessage_MyPatch");
             harmony.Patch(originalPlayMessage, new HarmonyMethod(patchedPlayMessage));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching SetInfo for results screen...");
+            Logger.LogInfo("FinalRank->SetInfo");
             MethodInfo originalSetInfo = AccessTools.Method(typeof(FinalRank), "SetInfo");
             MethodInfo patchedSetInfo = AccessTools.Method(typeof(PatchedFunctions), "SetInfo_MyPatch");
             harmony.Patch(originalSetInfo, new HarmonyMethod(patchedSetInfo));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching Boss bar names...");
+            Logger.LogInfo("BossBarManager->CreateBossBar");
             MethodInfo originalCreateBossBar = AccessTools.Method(typeof(BossBarManager), "CreateBossBar");
             MethodInfo patchedCreateBossBar = AccessTools.Method(typeof(PatchedFunctions), "CreateBossBar_MyPatch");
             harmony.Patch(originalCreateBossBar, new HarmonyMethod(patchedCreateBossBar));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching UpdateMoney for the shop...");
+            Logger.LogInfo("VariationInfo->UpdateMoney");
             MethodInfo originalUpdateMoney = AccessTools.Method(typeof(VariationInfo), "UpdateMoney");
             MethodInfo patchedUpdateMoney = AccessTools.Method(typeof(PatchedFunctions), "UpdateMoney_MyPatch");
             harmony.Patch(originalUpdateMoney, new HarmonyMethod(patchedUpdateMoney));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching AddPoints for the style meter... (1/3)");
+            Logger.LogInfo("StyleHUD->AddPoints");
             MethodInfo originalAddPoints = AccessTools.Method(typeof(StyleHUD), "AddPoints", new Type[] { typeof(int), typeof(string), typeof(GameObject), typeof(EnemyIdentifier), typeof(int), typeof(string), typeof(string) });
             MethodInfo patchedAddPoints = AccessTools.Method(typeof(PatchedFunctions), "AddPoints_MyPatch");
             harmony.Patch(originalAddPoints, new HarmonyMethod(patchedAddPoints));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching GetLocalizedName for the style meter... (2/3)");
+            Logger.LogInfo("StyleHUD->GetLocalizedName");
             MethodInfo originalGetLocalizedName = AccessTools.Method(typeof(StyleHUD), "GetLocalizedName", new Type[] { typeof(string)});
             MethodInfo patchedGetLocalizedName = AccessTools.Method(typeof(PatchedFunctions), "GetLocalizedName_MyPatch");
             harmony.Patch(originalGetLocalizedName, new HarmonyMethod(patchedGetLocalizedName));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching UpdateFreshnessSlider for the freshness meter... (2/3)");
+            Logger.LogInfo("StyleHUD->UpdateFreshnessSlider");
             MethodInfo originalUpdateFreshnessSlider = AccessTools.Method(typeof(StyleHUD), "UpdateFreshnessSlider");
             MethodInfo patchedUpdateFreshnessSlider = AccessTools.Method(typeof(PatchedFunctions), "UpdateFreshnessSlider_MyPatch");
             harmony.Patch(originalUpdateFreshnessSlider, new HarmonyMethod(patchedUpdateFreshnessSlider));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching Start in TextAppear intermission strings...");
+            Logger.LogInfo("IntermissionController->Start");
             MethodInfo originalIntermissionStart = AccessTools.Method(typeof(IntermissionController), "Start");
             MethodInfo patchedIntermissionStart = AccessTools.Method(typeof(PatchedFunctions), "Start_MyPatch");
             harmony.Patch(originalIntermissionStart, new HarmonyMethod(patchedIntermissionStart));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching DisplaySubtitle for subtitles...");
+            Logger.LogInfo("SubtitleController->DisplaySubtitle");
             MethodInfo originalDisplaySubtitle = AccessTools.Method(typeof(SubtitleController), "DisplaySubtitle", new Type[] { typeof(string), typeof(AudioSource) });
             MethodInfo patchedDisplaySubtitle = AccessTools.Method(typeof(PatchedFunctions), "DisplaySubtitle_MyPatch");
             harmony.Patch(originalDisplaySubtitle, new HarmonyMethod(patchedDisplaySubtitle));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching EnemyInfoPage for enemy bios...");
+            Logger.LogInfo("EnemyInfoPage->UpdateInfo");
             MethodInfo originalUpdateInfo = AccessTools.Method(typeof(EnemyInfoPage), "UpdateInfo");
             MethodInfo patchedUpdateInfo = AccessTools.Method(typeof(PatchedFunctions), "UpdateInfo_MyPatch");
             harmony.Patch(originalUpdateInfo, new HarmonyMethod(patchedUpdateInfo));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching OnEnable for save menu...");
+            Logger.LogInfo("SaveSlotMenu->UpdateSlotState");
             MethodInfo originalUpdateSlotState = typeof(SaveSlotMenu).GetMethod("UpdateSlotState", BindingFlags.NonPublic | BindingFlags.Instance, null,new Type[] {typeof(SlotRowPanel),typeof(SaveSlotMenu.SlotData)}, null);
             MethodInfo patchedUpdateSlotState = AccessTools.Method(typeof(PatchedFunctions), "UpdateSlotState_MyPatch");
             harmony.Patch(originalUpdateSlotState, new HarmonyMethod(patchedUpdateSlotState));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching originalClearSlot for save menu...");
+            Logger.LogInfo("SaveSlotMenu->ClearSlot");
             MethodInfo originalClearSlot = typeof(SaveSlotMenu).GetMethod("ClearSlot", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { typeof(int) }, null);
             MethodInfo patchedClearSlot = AccessTools.Method(typeof(PatchedFunctions), "ClearSlot_MyPatch");
             harmony.Patch(originalClearSlot, new HarmonyMethod(patchedClearSlot));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching FetchSceneActivity for Discord Rich Presence...");
+            Logger.LogInfo("DiscordController->FetchSceneActivity");
             MethodInfo originalFetchScene = AccessTools.Method(typeof(DiscordController), "FetchSceneActivity", new Type[] { typeof(string) });
             MethodInfo patchedFetchScene = AccessTools.Method(typeof(PatchedFunctions), "FetchSceneActivity_MyPatch");
             harmony.Patch(originalFetchScene, new HarmonyMethod(patchedFetchScene));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching updateStyle for Discord Rich Presence...");
+            Logger.LogInfo("DiscordController->UpdateStyle");
             MethodInfo originalUpdateStyle = AccessTools.Method(typeof(DiscordController), "UpdateStyle", new Type[] { typeof(int) });
             MethodInfo patchedUpdateStyle = AccessTools.Method(typeof(PatchedFunctions), "UpdateStyle_MyPatch");
             harmony.Patch(originalUpdateStyle, new HarmonyMethod(patchedUpdateStyle));
 
-            Logger.LogInfo("Patching updateRank for Discord Rich Presence...");
+            Logger.LogInfo("DiscordController->UpdateRank");
             MethodInfo originalUpdateRank = AccessTools.Method(typeof(DiscordController), "UpdateRank", new Type[] { typeof(int) });
             MethodInfo patchedUpdateRank = AccessTools.Method(typeof(PatchedFunctions), "UpdateRank_MyPatch");
             harmony.Patch(originalUpdateRank, new HarmonyMethod(patchedUpdateRank));
 
-            Logger.LogInfo("Patching updateWave for Discord Rich Presence...");
+            Logger.LogInfo("DiscordController->UpdateWave");
             MethodInfo originalUpdateWave = AccessTools.Method(typeof(DiscordController), "UpdateWave", new Type[] { typeof(int) });
             MethodInfo patchedUpdateWave = AccessTools.Method(typeof(PatchedFunctions), "UpdateWave_MyPatch");
             harmony.Patch(originalUpdateWave, new HarmonyMethod(patchedUpdateWave));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching ShowHudMessage in HudMessageReceiver ...");
+            Logger.LogInfo("HudMessageReciever->SendHudMessage");
             MethodInfo originalShowHudMessage = typeof(HudMessageReceiver).GetMethod("SendHudMessage");
             MethodInfo patchedShowHudMessage = AccessTools.Method(typeof(PatchedFunctions), "SendHudMessage_MyPatch");
             harmony.Patch(originalShowHudMessage, new HarmonyMethod(patchedShowHudMessage));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching UpdateCheatState for cheat menu...");
+            Logger.LogInfo("CheatsManager->UpdateCheatState");
             MethodInfo originalUpdateCheatState = typeof(CheatsManager).GetMethod("UpdateCheatState", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { typeof(CheatMenuItem),typeof(ICheat) }, null);
             MethodInfo patchedUpdateCheatState = AccessTools.Method(typeof(PatchedFunctions), "UpdateCheatState_MyPatch");
             harmony.Patch(originalUpdateCheatState, new HarmonyMethod(patchedUpdateCheatState));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching RenderCheatsInfo for cheat display HUD...");
+            Logger.LogInfo("CheatsManager->RenderCheatsInfo");
             MethodInfo originalRenderCheatsInfo = typeof(CheatsManager).GetMethod("RenderCheatsInfo");
             MethodInfo patchedRenderCheatsInfo = AccessTools.Method(typeof(PatchedFunctions), "RenderCheatsInfo_MyPatch");
             harmony.Patch(originalRenderCheatsInfo, new HarmonyMethod(patchedRenderCheatsInfo));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching Start for level stat window...");
+            Logger.LogInfo("LevelStats->Start");
             MethodInfo originalStart = typeof(LevelStats).GetMethod("Start", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] {}, null);
             MethodInfo patchedStart = AccessTools.Method(typeof(PatchedFunctions), "LevelStatsStart_MyPatch");
             harmony.Patch(originalStart, new HarmonyMethod(patchedStart));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching Update for level stat window...");
+            Logger.LogInfo("LevelStats->Update");
             MethodInfo originalUpdate = typeof(LevelStats).GetMethod("Update", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] {}, null);
             MethodInfo patchedUpdate = AccessTools.Method(typeof(PatchedFunctions), "LevelStatsUpdate_MyPatch");
             harmony.Patch(originalUpdate, new HarmonyMethod(patchedUpdate));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching Toggle for CG...");
+            Logger.LogInfo("CustomPatterns->Toggle");
             MethodInfo originalToggle = typeof(CustomPatterns).GetMethod("Toggle");
             MethodInfo patchedToggle = AccessTools.Method(typeof(PatchedFunctions), "Toggle_MyPatch");
             harmony.Patch(originalToggle, new HarmonyMethod(patchedToggle));
-            Logger.LogInfo("Done");
 
-            Logger.LogInfo("Patching ScanBook for books...");
+            Logger.LogInfo("ScanningStuff->ScanBook");
             MethodInfo originalScanBook = typeof(ScanningStuff).GetMethod("ScanBook", new Type[]{typeof(string), typeof(bool), typeof(int)});
             MethodInfo patchedScanBook = AccessTools.Method(typeof(PatchedFunctions), "ScanBook_MyPatch");
             harmony.Patch(originalScanBook, new HarmonyMethod(patchedScanBook));
-            Logger.LogInfo("Done");
 
+            Logger.LogInfo("Done");
         }
 
         //Most of the hook logic and checks go in this function.
@@ -428,212 +351,179 @@ namespace UltrakULL
             }
             else
             { 
-            Scene currentLevel = SceneManager.GetActiveScene();
-            Logger.LogInfo("Current scene: " + currentLevel.name);
+                Scene currentLevel = SceneManager.GetActiveScene();
+                string levelName = currentLevel.name;
+                Logger.LogInfo("Current scene: " + levelName);
 
-            //Each scene (level) has an object called Canvas. Most game objects are there.
-            //Don't hook if it's still the intro, as it doesn't use Canvas.
-            if (currentLevel.name == "Intro")
-            {
-                GameObject frontEnd = null;
-                Logger.LogInfo("Intro screen detected");
-                List<GameObject> a = new List<GameObject>();
-                SceneManager.GetActiveScene().GetRootGameObjects(a);
-                Console.WriteLine(a.Count);
-                foreach (GameObject child in a)
+                //Each scene (level) has an object called Canvas. Most game objects are there.
+                if (currentLevel.name == "Intro")
                 {
-                    if (child.name == "Canvas")
+                    GameObject frontEnd = getInactiveRootObject("Canvas");
+                    Logger.LogInfo("Intro screen detected");
+                    if(frontEnd != null)
                     {
-                        frontEnd = child;
-                    }
-                }
-                if(frontEnd != null)
-                {
                         Text loadingText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "LoadingScreen"),"Intro"),"Text"));
-                        loadingText.text = "CHARGEMENT...";
-                }
-            }
-            //Main menu hook
-            else if (currentLevel.name == "Main Menu")
-            {
-                Logger.LogInfo("Hooking into main menu...");
-                GameObject frontEnd = null;
-
-                //I hate having to do it like this...
-                List<GameObject> a = new List<GameObject>();
-                SceneManager.GetActiveScene().GetRootGameObjects(a);
-                Console.WriteLine(a.Count);
-                foreach (GameObject child in a)
-                {
-                    if (child.name == "Canvas")
-                    {
-                            frontEnd = child;
+                        loadingText.text = this.jsonParser.currentLanguage.misc.loading;
                     }
                 }
-
-                if (frontEnd == null)
+                //Main menu hook
+                else if (currentLevel.name == "Main Menu")
                 {
-                    Logger.LogError("Failed to hook.");
+                    Logger.LogInfo("Hooking into main menu...");
+                    GameObject frontEnd = getInactiveRootObject("Canvas");
+
+                    if (frontEnd == null)
+                    {
+                        Logger.LogError("Failed to hook.");
+                    }
+                    else
+                    {
+                        Logger.LogInfo("Hooked into front end, patching...");
+                        patchFrontEnd(frontEnd);
+
+                        GameObject ultrakullLogo = GameObject.Instantiate(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Title"),"Text"), frontEnd.transform);
+                            ultrakullLogo.transform.localPosition = new Vector3(1100, -470, 0);
+                            Text ultrakullLogoText = getTextfromGameObject(ultrakullLogo);
+                            ultrakullLogoText.text = "ultrakULL loaded.\nLocale: " + this.jsonParser.currentLanguage.metadata.langName;
+                            ultrakullLogoText.alignment = TextAnchor.UpperLeft;
+                            ultrakullLogoText.fontSize = 16;
+                    }
+                }
+                else if (currentLevel.name.Contains("P-"))
+                {
+                    //Prime sanctum level hook
+                    Logger.LogInfo("Prime sanctum, attempting to hook via Prime FirstRoom...");
+                    GameObject coreGame = GameObject.Find("Prime FirstRoom");
+                    if (coreGame == null)
+                    {
+                        Logger.LogError("Failed to hook.");
+                    }
+                    else
+                    {
+                        patchPauseMenu(ref coreGame);
+                        patchCheats(ref coreGame);
+                        patchDeathScreen(ref coreGame);
+                        patchLevelStats(ref coreGame);
+                        Options options = new Options(ref coreGame,this.jsonParser) ;
+                        PrimeSanctum primeSanctumClass = new PrimeSanctum(ref coreGame,this.jsonParser);
+                    }
+                }
+                else if (currentLevel.name.Contains("-S"))
+                {
+                    //In secret level hook
+                    Logger.LogInfo("In secret level detected, attempting to hook via Canvas...");
+
+                    //Potential problem here - we're hooking via Secret FirstRoom, but the words are swapped between secret levels...
+                    GameObject coreGame = getInactiveRootObject("Canvas");
+                    if (coreGame == null)
+                    {
+                        Logger.LogError("Failed to hook into secret level.");
+                    }
+                    else
+                    {
+                        Logger.LogInfo("Hooked, patching secret level");
+                        patchPauseMenu(ref coreGame);
+                        patchCheats(ref coreGame);
+                        patchLevelStats(ref coreGame);
+                        Options options = new Options(ref coreGame, this.jsonParser);
+                        SecretLevels secretLevels = new SecretLevels(ref coreGame,this.jsonParser);
+                    }
+                }
+                else if (currentLevel.name == "uk_construct")
+                //Sandbox hook
+                {
+                    Logger.LogInfo("Sandbox detected, hooking via Canvas");
+                    GameObject coreGame = GameObject.Find("Canvas");
+                    if (coreGame == null)
+                    {
+                        Logger.LogError("Failed to hook into sandbox");
+                    }
+                    else
+                    {
+                        patchPauseMenu(ref coreGame);
+                        patchCheats(ref coreGame);
+                        patchShop(ref coreGame);
+                        patchDeathScreen(ref coreGame);
+                        Options options = new Options(ref coreGame, this.jsonParser);
+                        //SandboxEnemy sandbox = new SandboxEnemy(ref coreGame);
+                    }
                 }
                 else
+                //General in-level hook
                 {
-                    Logger.LogInfo("Hooked into front end, patching...");
-                    patchFrontEnd(frontEnd);
-
-                    GameObject ultrakullLogo = GameObject.Instantiate(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Title"),"Text"), frontEnd.transform);
-                        ultrakullLogo.transform.localPosition = new Vector3(1100, -470, 0);
-                        Text ultrakullLogoText = getTextfromGameObject(ultrakullLogo);
-                        ultrakullLogoText.text = "ultrakULL loaded.\nLocale: " + this.jsonParser.currentLanguage.metadata.langName;
-                        ultrakullLogoText.alignment = TextAnchor.UpperLeft;
-                        ultrakullLogoText.fontSize = 16;
-                    }
-            }
-            else if (currentLevel.name.Contains("P-"))
-            {
-                //Prime sanctum level hook
-                Logger.LogInfo("Prime sanctum, attempting to hook via Prime FirstRoom...");
-                GameObject coreGame = GameObject.Find("Prime FirstRoom");
-                if (coreGame == null)
-                {
-                    Logger.LogError("Failed to hook.");
-                }
-                else
-                {
-                    patchPauseMenu(ref coreGame);
-                    patchCheats(ref coreGame);
-                    patchDeathScreen(ref coreGame);
-                    patchLevelStats(ref coreGame);
-                    Options options = new Options(ref coreGame,this.jsonParser) ;
-                    PrimeSanctum primeSanctumClass = new PrimeSanctum(ref coreGame,this.jsonParser);
-                }
-            }
-            else if (currentLevel.name.Contains("-S"))
-            {
-                //In secret level hook
-                Logger.LogInfo("In secret level detected, attempting to hook via Canvas...");
-
-                //Potential problem here - we're hooking via Secret FirstRoom, but the words are swapped between secret levels...
-                GameObject coreGame = GameObject.Find("Canvas");
-                if (coreGame == null)
-                {
-                    Logger.LogError("Failed to hook into secret level.");
-                }
-                else
-                {
-                    Logger.LogInfo("Hooked, patching secret level");
-                    patchPauseMenu(ref coreGame);
-                    patchCheats(ref coreGame);
-                    patchLevelStats(ref coreGame);
-                    Options options = new Options(ref coreGame, this.jsonParser);
-                    SecretLevels secretLevels = new SecretLevels(ref coreGame,this.jsonParser);
-                }
-            }
-            else if (currentLevel.name == "uk_construct")
-            //Sandbox hook
-            {
-                Logger.LogInfo("Sandbox detected, hooking via Canvas");
-                GameObject coreGame = GameObject.Find("Canvas");
-                if (coreGame == null)
-                {
-                    Logger.LogError("Failed to hook into sandbox");
-                }
-                else
-                {
-                    patchPauseMenu(ref coreGame);
-                    patchCheats(ref coreGame);
-                    patchShop(ref coreGame);
-                    patchDeathScreen(ref coreGame);
-                    Options options = new Options(ref coreGame, this.jsonParser);
-                    //SandboxEnemy sandbox = new SandboxEnemy(ref coreGame);
-                }
-            }
-
-            else
-            //In-level hook
-            {
-                Logger.LogInfo("In-level detected, attempting to hook...");
-                GameObject coreGame = GameObject.Find("FirstRoom");
-                if (coreGame == null)
-                {
-                    Logger.LogError("Failed to hook.");
-                }
-                else
-                {
-                    Logger.LogInfo("Retrieving current level name...");
-                    Logger.LogInfo("Currently in: " + SceneManager.GetActiveScene().name);
-                    Logger.LogInfo("Patching common pause menu...");
-                    patchPauseMenu(ref coreGame);
-                    Logger.LogInfo("Patching shop...");
-                    patchShop(ref coreGame);
-                    Logger.LogInfo("Patching options...");
-                    Options options = new Options(ref coreGame, this.jsonParser);
-                    Logger.LogInfo("Patching cheat consent box...");
-                    patchCheats(ref coreGame);
-                    Logger.LogInfo("Patching death screen...");
-                    patchDeathScreen(ref coreGame);
-                    Logger.LogInfo("Patching in-game stats...");
-                    patchLevelStats(ref coreGame);
-                    
-
-                    //TEMPORARY REDIRECT TO SAVE TIME WHILE I'M DOING THE INTERMISSION.
-                   if (SceneManager.GetActiveScene().name == "Level 6-2")
-                   {
-                        Logger.LogWarning("Redirecting to Intermission2. Make sure to delete this when you're done!");
-                        SceneManager.LoadScene("Intermission2");
-                   }
-
-
-                    //Tutorial
-                    if (SceneManager.GetActiveScene().name.Contains("Tutorial"))
+                    Logger.LogInfo("In-level detected, attempting to hook...");
+                    GameObject coreGame = GameObject.Find("FirstRoom");
+                    if (coreGame == null)
                     {
-                        Logger.LogInfo("Currently on tutorial. Now deferring patch to tutorial class.");
-                        TutorialStrings tutorialPatchClass = new TutorialStrings(this.jsonParser);
+                        Logger.LogError("Failed to hook.");
                     }
+                    else
+                    {
+                        Logger.LogInfo("Currently in: " + SceneManager.GetActiveScene().name);
 
-                    //Prelude
-                    else if (SceneManager.GetActiveScene().name.Contains("0-"))
-                    {
-                        Logger.LogInfo("Currently on prelude. Now deferring patch to prelude class.");
-                        Prelude preludePatchClass = new Prelude(ref coreGame, this.jsonParser);
-                    }
-                    //Act 1
-                    else if (SceneManager.GetActiveScene().name.Contains("1-") || SceneManager.GetActiveScene().name.Contains("2-") || SceneManager.GetActiveScene().name.Contains("3-"))
-                    {
-                        Logger.LogInfo("Currently on Act 1. Now deferring patch to Act 1 class.");
-                        Act1 act1Class = new Act1(ref coreGame,this.jsonParser);
-                    }
-                    //Act intermission
+                        Logger.LogInfo("Patching in-game elements...");
+                        try
+                        {
+                            patchPauseMenu(ref coreGame);
+                            patchShop(ref coreGame);
+                            patchCheats(ref coreGame);
+                            patchDeathScreen(ref coreGame);
+                            patchLevelStats(ref coreGame);
+                            Options options = new Options(ref coreGame, this.jsonParser);
+                        }
+                        catch(Exception e)
+                        {
+                            Logger.LogError("Failed to patch in-game elements.");
+                            Console.WriteLine(e.ToString());
+                        }
 
-                    else if (SceneManager.GetActiveScene().name.Contains("Intermission"))
-                    {
-                        Logger.LogInfo("Currently on intermission.");
-                        Intermission intermission = new Intermission(ref coreGame,this.jsonParser);
-                    }
+                        //Tutorial
+                        if (levelName.Contains("Tutorial"))
+                        {
+                            Logger.LogInfo("Currently on tutorial. Now deferring patch to tutorial class.");
+                            TutorialStrings tutorialPatchClass = new TutorialStrings(this.jsonParser);
+                        }
 
-                    //Act 2
-                    else if (SceneManager.GetActiveScene().name.Contains("4-") || SceneManager.GetActiveScene().name.Contains("5-") || SceneManager.GetActiveScene().name.Contains("6-"))
-                    {
-                        Logger.LogInfo("Currently on Act 2. Now deferring patch to Act 2 class.");
-                        Act2 act2Class = new Act2(ref coreGame, this.jsonParser);
-                    }
-
-                    //Cyber Grind
-                    else if (SceneManager.GetActiveScene().name.Contains("Endless"))
-                    {
-                        Logger.LogInfo("Currently in the Cyber Grind.");
-                        CyberGrind cybergrind = new CyberGrind(ref coreGame);
+                        //Prelude
+                        else if (levelName.Contains("0-"))
+                        {
+                            Logger.LogInfo("Currently on prelude. Now deferring patch to prelude class.");
+                            Prelude preludePatchClass = new Prelude(ref coreGame, this.jsonParser);
+                        }
+                        //Act 1
+                        else if (levelName.Contains("1-") || levelName.Contains("2-") || levelName.Contains("3-"))
+                        {
+                            Logger.LogInfo("Currently on Act 1. Now deferring patch to Act 1 class.");
+                            Act1 act1Class = new Act1(ref coreGame,this.jsonParser);
+                        }
+                        //Act 2
+                        else if (levelName.Contains("4-") || levelName.Contains("5-") || levelName.Contains("6-"))
+                        {
+                            Logger.LogInfo("Currently on Act 2. Now deferring patch to Act 2 class.");
+                            Act2 act2Class = new Act2(ref coreGame, this.jsonParser);
+                        }
+                        //Cyber Grind
+                        else if (SceneManager.GetActiveScene().name.Contains("Endless"))
+                        {
+                            Logger.LogInfo("Currently in the Cyber Grind.");
+                            CyberGrind cybergrind = new CyberGrind(ref coreGame);
+                        }
+                        //End of act intermission
+                        else if (SceneManager.GetActiveScene().name.Contains("Intermission"))
+                        {
+                            Logger.LogInfo("Currently on intermission.");
+                            Intermission intermission = new Intermission(ref coreGame, this.jsonParser);
+                        }
                     }
                 }
-            }
             }
         }
         //Entry point for the patch.
         public void Awake()
         {
             Debug.unityLogger.filterLogType = LogType.Exception;
-            Logger.LogInfo("UltrakULL LOADING...)");
+            Logger.LogInfo("UltrakULL LOADING...");
             Logger.LogInfo("Version: " + pluginVersion);
-
             try
             {
                 Logger.LogInfo("--- Initializing JSON parser ---");
@@ -651,9 +541,6 @@ namespace UltrakULL
                 Console.WriteLine(e.ToString());
                 return;
             }
-
-
-
         }
         void OnEnable()
         {
@@ -669,6 +556,5 @@ namespace UltrakULL
         {
 
         }
-
     }
 }

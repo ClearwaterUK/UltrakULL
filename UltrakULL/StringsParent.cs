@@ -207,6 +207,42 @@ namespace UltrakULL
                 return language.currentLanguage.levelTips.leveltips_greedFourth;
             }
 
+            //Wrath
+            if (currentLevel.Contains("5-1"))
+            {
+                return language.currentLanguage.levelTips.leveltips_wrathFirst;
+            }
+            if (currentLevel.Contains("5-2"))
+            {
+                return language.currentLanguage.levelTips.leveltips_wrathSecond;
+            }
+            if (currentLevel.Contains("5-3"))
+            {
+                return language.currentLanguage.levelTips.leveltips_wrathThird;
+            }
+            if (currentLevel.Contains("5-4"))
+            {
+                return language.currentLanguage.levelTips.leveltips_wrathFourth1 + "\n" + language.currentLanguage.levelTips.leveltips_wrathFourth2;
+            }
+
+            //Heresy
+            if (currentLevel.Contains("6-1"))
+            {
+                return language.currentLanguage.levelTips.leveltips_heresyFirst1 + "\n" + language.currentLanguage.levelTips.leveltips_heresyFirst2;
+            }
+            if (currentLevel.Contains("6-2"))
+            {
+                return language.currentLanguage.levelTips.leveltips_heresySecond1 + "\n" + language.currentLanguage.levelTips.leveltips_heresySecond2;
+            }
+
+            //Sandbox
+            if (currentLevel.Contains("uk_construct"))
+            {
+                return language.currentLanguage.levelTips.leveltips_sandbox1 +
+                    "\n<color=orange>↑ ↑ ↓ ↓ ← → ← → B A</color>\n"
+                    + language.currentLanguage.levelTips.leveltips_sandbox2;
+            }
+
 
             //Prime sanctums
             if (currentLevel.Contains("P-1"))

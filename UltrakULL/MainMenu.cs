@@ -19,7 +19,6 @@ namespace UltrakULL
 {
     class MainMenu
     {
-
         BepInEx.Logging.ManualLogSource MainMenuLogger = BepInEx.Logging.Logger.CreateLogSource("FrontEndPatcher");
 
         //Patches all text strings in the title menu.
@@ -27,26 +26,21 @@ namespace UltrakULL
         {
             try
             {
-
                 GameObject titleObject = getGameObjectChild(mainMenu, "Main Menu (1)");
 
                 //Early access/seasonal tag
-                Console.WriteLine("EA Text");
                 Text earlyAccessText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Title"), "Text"));
                 earlyAccessText.text = "--" + jsonParser.currentLanguage.frontend.mainmenu_earlyAccess + "--";
 
                 //Play button
-                Console.WriteLine("Play");
                 Text playButtonText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Continue"), "Text"));
                 playButtonText.text = jsonParser.currentLanguage.frontend.mainmenu_play;
 
                 //Options button
-                Console.WriteLine("Options");
                 Text optionsButtontext = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Options"), "Text"));
                 optionsButtontext.text = jsonParser.currentLanguage.frontend.mainmenu_options;
 
                 //Quit button
-                Console.WriteLine("Quit");
                 Text quitButtontext = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Quit"), "Text"));
                 quitButtontext.text = jsonParser.currentLanguage.frontend.mainmenu_quit;
             }
@@ -95,7 +89,7 @@ namespace UltrakULL
                 Text standardText = getTextfromGameObject(standardTextObject.transform.Find("Name").gameObject);
                 standardText.text = jsonParser.currentLanguage.frontend.difficulty_standard;
 
-                //Violent header - this is appearing in harmless for some reason?
+                //Violent header
                 GameObject violentTextObject = getGameObjectChild(difficultyObject, "Violent");
                 Text violentText = getTextfromGameObject(violentTextObject.transform.Find("Name").gameObject);
                 violentText.text = jsonParser.currentLanguage.frontend.difficulty_violent;
@@ -105,19 +99,18 @@ namespace UltrakULL
                 Text brutalText = getTextfromGameObject(brutalTextObject.transform.Find("Name").gameObject);
                 brutalText.text = jsonParser.currentLanguage.frontend.difficulty_brutal;
 
-                //No need for UMD header yet as it's not in-game
+                //No need for Brutal/UMD header yet as it's not in-game
 
                 //Tooltip
                 GameObject assistTip = getGameObjectChild(difficultyObject, "Assist Tip");
                 Text assistTipText = getTextfromGameObject(assistTip);
-                assistTipText.text = "[ LA DIFFICULTÉ PEUT ÊTRE AJUSTÉ DANS LES OPTIONS D'ASSISTANCES ]";
+                assistTipText.text = jsonParser.currentLanguage.frontend.difficulty_tweakReminder;
             }
             catch (Exception e)
             {
                 MainMenuLogger.LogError("Failed to patch difficulty menu.");
                 MainMenuLogger.LogError(e.ToString());
             }
-
         }
 
         //Same as above.
@@ -184,7 +177,7 @@ namespace UltrakULL
                     + "<color=red>" + jsonParser.currentLanguage.frontend.difficulty_violentDescription3 + "</color>";
 
                 Text underConstructionText = getTextfromGameObject(getGameObjectChild(difficultyObject, "Under Construction"));
-                underConstructionText.text = "SOUS CONSTRUCTION";
+                underConstructionText.text = jsonParser.currentLanguage.frontend.difficulty_underConstruction;
 
 
                 //Brutal and UMD stuff isn't in-game yet so the below is commmented out until the devs add them.
@@ -394,6 +387,9 @@ namespace UltrakULL
             Text greedClimaxChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(greedObject, "1-4 Panel"), "Stats"), "Challenge"), "Panel (6)"), "Text"));
             greedClimaxChallenge.text = act2Challenges.getLevelChallenge("Level 4-4", language);
 
+            Text greedSecretMissionText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(greedObject, "Secret Mission"), "Text"));
+            greedSecretMissionText.text = language.currentLanguage.frontend.chapter_secretMission;
+
             //Layer 5 - Wrath
             Text wrathTitle = getTextfromGameObject(getGameObjectChild(wrathObject, "Text"));
             wrathTitle.text = language.currentLanguage.frontend.layer_wrath;
@@ -410,8 +406,8 @@ namespace UltrakULL
             Text wrathFourthChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(wrathObject, "1-4 Panel"), "Stats"), "Challenge"), "Panel (6)"), "Text"));
             wrathFourthChallenge.text = act2Challenges.getLevelChallenge("Level 5-4", language);
 
-            Text wraithSecretMissionText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(wrathObject, "Secret Mission"), "Text"));
-            wraithSecretMissionText.text = language.currentLanguage.frontend.chapter_secretMission;
+            Text wrathSecretMissionText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(wrathObject, "Secret Mission"), "Text"));
+            wrathSecretMissionText.text = language.currentLanguage.frontend.chapter_secretMission;
 
             //Layer 6 - Heresy
             Text heresyTitle = getTextfromGameObject(getGameObjectChild(heresyObject, "Text"));
@@ -422,7 +418,6 @@ namespace UltrakULL
 
             Text heresySecondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(heresyObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
             heresySecondChallenge.text = act2Challenges.getLevelChallenge("Level 6-2", language);
-
         }
 
         public void patchLevelSelectPrime(GameObject frontEnd, JsonParser jsonParser)
@@ -430,7 +425,6 @@ namespace UltrakULL
             GameObject primeObject = getGameObjectChild(getGameObjectChild(frontEnd, "Level Select (Prime)"), "Prime Sanctums");
             Text primeTitle = getTextfromGameObject(getGameObjectChild(primeObject, "Text"));
             primeTitle.text = jsonParser.currentLanguage.frontend.layer_prime;
-
         }
 
         public MainMenu(GameObject frontEnd, JsonParser jsonParser)

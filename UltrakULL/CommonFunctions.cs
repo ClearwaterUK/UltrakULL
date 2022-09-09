@@ -36,9 +36,6 @@ namespace UltrakULL
             string levelName = name;
             string levelChallenge = challenge;
 
-            Console.WriteLine("LevelName:" + name);
-            Console.WriteLine("LevelChallenge:" + challenge);
-
             GameObject coreGame = GameObject.Find("Player");
 
             GameObject resultsPanel = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(coreGame, "Main Camera"), "HUD Camera"), "HUD"), "FinishCanvas"), "Panel");
@@ -51,7 +48,6 @@ namespace UltrakULL
             resultsTitleLevelName.text = levelName;
 
             //Disable the levelFinderComponent, so the level name doesn't get reverted when the results panel appears.
-            Console.WriteLine("Disabling levelNameFinder component...");
             LevelNameFinder finder = resultsTitleLevelName.GetComponent<LevelNameFinder>();
 
             if (finder != null)
@@ -101,17 +97,6 @@ namespace UltrakULL
         public static Text getTextfromGameObject(GameObject objectToUse)
         {
             return objectToUse.GetComponent<Text>();
-        }
-
-        public static List<GameObject> getgameObjectChildren(GameObject objectToUse)
-        {
-            Console.WriteLine("Using: " + objectToUse.name);
-            List<GameObject> Children = new List<GameObject>();
-            foreach (Transform child in objectToUse.transform)
-            {
-                Children.Add(child.gameObject);
-            }
-            return Children;
         }
     }
 }

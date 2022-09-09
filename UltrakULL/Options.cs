@@ -9,6 +9,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UltrakULL.json;
+using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
 {
@@ -18,6 +19,9 @@ namespace UltrakULL
 
         public void patchOptions(GameObject optionsMenu, JsonParser language)
         {
+            //Best to divide each section into it's own function.
+            //Makes it easier to maintain as well as make it easier to narrow down error-causing lines of code.
+
             if (optionsMenu != null)
             {
                 GameObject generalOptions = getGameObjectChild(optionsMenu, "Gameplay Options");
@@ -28,8 +32,6 @@ namespace UltrakULL
                 GameObject assistOptions = getGameObjectChild(optionsMenu, "Assist Options");
                 GameObject colorsOptions = getGameObjectChild(optionsMenu, "ColorBlindness Options");
                 GameObject savesOptions = getGameObjectChild(optionsMenu, "Save Slots");
-
-
 
                 //Main buttons and text
                 Text optionsText = getTextfromGameObject(getGameObjectChild(optionsMenu, "Text"));
@@ -405,7 +407,6 @@ namespace UltrakULL
                 //Crosshair settings
 
                 Text crosshairTitle = getTextfromGameObject(getGameObjectChild(hudContent, "-- Crosshair Settings --"));
-                Console.WriteLine("crosshairTitle:" + crosshairTitle.name);
                 crosshairTitle.text = "--"+ language.currentLanguage.options.crosshair_title+ "--";
 
                 Text crosshairTypeText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(hudContent, "Crosshair Type"), "Text"));
@@ -725,17 +726,6 @@ namespace UltrakULL
                 this.optionsMenu = getGameObjectChild(pauseObject, "OptionsMenu");
             }
             this.patchOptions(this.optionsMenu,language);
-        }
-
-        public GameObject getGameObjectChild(GameObject parentObject, string childToFind)
-        {
-            GameObject childToReturn = parentObject.transform.Find(childToFind).gameObject;
-            return childToReturn;
-        }
-
-        public Text getTextfromGameObject(GameObject objectToUse)
-        {
-            return objectToUse.GetComponent<Text>();
         }
     }
 }

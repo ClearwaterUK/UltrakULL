@@ -175,6 +175,9 @@ namespace UltrakULL.json
         public string difficulty_violentDescription2;
         public string difficulty_violentDescription3;
 
+        public string difficulty_tweakReminder;
+        public string difficulty_underConstruction;
+
         public string chapter_title;
         public string chapter_prelude;
         public string chapter_act1;
@@ -243,6 +246,15 @@ namespace UltrakULL.json
         public string pause_restart;
         public string pause_options;
         public string pause_quit;
+
+        public string pause_restartConfirm;
+        public string pause_quitConfirm;
+        public string pause_restartConfirmYes;
+        public string pause_restartConfirmNo;
+        public string pause_quitConfirmYes;
+        public string pause_quitConfirmNo;
+
+        public string pause_disableWindow;
 
     }
     
@@ -473,10 +485,23 @@ namespace UltrakULL.json
         public string leveltips_greedThird;
         public string leveltips_greedFourth;
 
+        public string leveltips_wrathFirst;
+        public string leveltips_wrathSecond;
+        public string leveltips_wrathThird;
+        public string leveltips_wrathFourth1;
+        public string leveltips_wrathFourth2;
+
+        public string leveltips_heresyFirst1;
+        public string leveltips_heresyFirst2;
+        public string leveltips_heresySecond1;
+        public string leveltips_heresySecond2;
+
         public string leveltips_primeFirst1;
         public string leveltips_primeFirst2;
 
         public string leveltips_cybergrind;
+        public string leveltips_sandbox1;
+        public string leveltips_sandbox2;
     }
 
     public class EnemyNames
@@ -959,5 +984,7 @@ namespace UltrakULL.json
         public string hellmap_third;
         public string hellmap_fourth;
         public string hellmap_climax;
+
+        public string loading;
     }
 }

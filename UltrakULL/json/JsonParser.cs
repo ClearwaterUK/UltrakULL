@@ -163,7 +163,7 @@ namespace UltrakULL.json
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("Unable to open config file, aborting.");
+                    Console.WriteLine("Unable to open/create config file, aborting.");
                     Console.WriteLine(e.Message);
                     return;
                 }

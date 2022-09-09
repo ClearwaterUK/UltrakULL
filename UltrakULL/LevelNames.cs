@@ -24,44 +24,44 @@ namespace UltrakULL
 			if (missionName.Contains("Endless")) { return language.currentLanguage.levelNames.levelName_cybergrind; }
 			if (missionName.Contains("uk_construct")) { return language.currentLanguage.levelNames.levelName_sandbox; }
 
-			if (missionName.Contains("0-1")){ return language.currentLanguage.levelNames.levelName_preludeFirst; }
-			if (missionName.Contains("0-2")) { return language.currentLanguage.levelNames.levelName_preludeSecond; }
-			if (missionName.Contains("0-3")) { return language.currentLanguage.levelNames.levelName_preludeThird; }
-			if (missionName.Contains("0-4")) { return language.currentLanguage.levelNames.levelName_preludeFourth; }
-			if (missionName.Contains("0-5")) { return language.currentLanguage.levelNames.levelName_preludeFifth; }
-			if (missionName.Contains("0-S")) { return language.currentLanguage.levelNames.levelName_preludeSecret; }
+			if (missionName.Contains("0-1")) { return "0-1: " + language.currentLanguage.levelNames.levelName_preludeFirst; }
+			if (missionName.Contains("0-2")) { return "0-2: " + language.currentLanguage.levelNames.levelName_preludeSecond; }
+			if (missionName.Contains("0-3")) { return "0-3: " + language.currentLanguage.levelNames.levelName_preludeThird; }
+			if (missionName.Contains("0-4")) { return "0-4: " + language.currentLanguage.levelNames.levelName_preludeFourth; }
+			if (missionName.Contains("0-5")) { return "0-5: " + language.currentLanguage.levelNames.levelName_preludeFifth; }
+			if (missionName.Contains("0-S")) { return "0-S: " + language.currentLanguage.levelNames.levelName_preludeSecret; }
 
-			if (missionName.Contains("1-1")) { return language.currentLanguage.levelNames.levelName_limboFirst; }
-			if (missionName.Contains("1-2")) { return language.currentLanguage.levelNames.levelName_limboSecond; }
-			if (missionName.Contains("1-3")) { return language.currentLanguage.levelNames.levelName_limboThird; }
-			if (missionName.Contains("1-4")) { return language.currentLanguage.levelNames.levelName_limboFourth; }
-			if (missionName.Contains("1-S")) { return language.currentLanguage.levelNames.levelName_limboSecret; }
+			if (missionName.Contains("1-1")) { return "1-1: " + language.currentLanguage.levelNames.levelName_limboFirst; }
+			if (missionName.Contains("1-2")) { return "1-2: " + language.currentLanguage.levelNames.levelName_limboSecond; }
+			if (missionName.Contains("1-3")) { return "1-3: " + language.currentLanguage.levelNames.levelName_limboThird; }
+			if (missionName.Contains("1-4")) { return "1-4: " + language.currentLanguage.levelNames.levelName_limboFourth; }
+			if (missionName.Contains("1-S")) { return "1-S: " + language.currentLanguage.levelNames.levelName_limboSecret; }
 
-			if (missionName.Contains("2-1")) { return language.currentLanguage.levelNames.levelName_lustFirst; }
-			if (missionName.Contains("2-2")) { return language.currentLanguage.levelNames.levelName_lustSecond; }
-			if (missionName.Contains("2-3")) { return language.currentLanguage.levelNames.levelName_lustThird; }
-			if (missionName.Contains("2-4")) { return language.currentLanguage.levelNames.levelName_lustFourth; }
-			if (missionName.Contains("2-S")) { return language.currentLanguage.levelNames.levelName_lustSecret; }
+			if (missionName.Contains("2-1")) { return "2-1: " + language.currentLanguage.levelNames.levelName_lustFirst; }
+			if (missionName.Contains("2-2")) { return "2-2: " + language.currentLanguage.levelNames.levelName_lustSecond; }
+			if (missionName.Contains("2-3")) { return "2-3: " + language.currentLanguage.levelNames.levelName_lustThird; }
+			if (missionName.Contains("2-4")) { return "2-4: " + language.currentLanguage.levelNames.levelName_lustFourth; }
+			if (missionName.Contains("2-S")) { return "2-S: " + language.currentLanguage.levelNames.levelName_lustSecret; }
 
-			if (missionName.Contains("3-1")) { return language.currentLanguage.levelNames.levelName_gluttonyFirst; }
-			if (missionName.Contains("3-2")) { return language.currentLanguage.levelNames.levelName_gluttonySecond; }
+			if (missionName.Contains("3-1")) { return "3-1: " + language.currentLanguage.levelNames.levelName_gluttonyFirst; }
+			if (missionName.Contains("3-2")) { return "3-2: " + language.currentLanguage.levelNames.levelName_gluttonySecond; }
 		
-			if (missionName.Contains("4-1")) { return language.currentLanguage.levelNames.levelName_greedFirst; }
-			if (missionName.Contains("4-2")) { return language.currentLanguage.levelNames.levelName_greedSecond; }
-			if (missionName.Contains("4-3")) { return language.currentLanguage.levelNames.levelName_greedThird; }
-			if (missionName.Contains("4-4")) { return language.currentLanguage.levelNames.levelName_greedFourth; }
-			if (missionName.Contains("4-S")) { return language.currentLanguage.levelNames.levelName_greedSecret; }
+			if (missionName.Contains("4-1")) { return "4-1: " + language.currentLanguage.levelNames.levelName_greedFirst; }
+			if (missionName.Contains("4-2")) { return "4-2: " + language.currentLanguage.levelNames.levelName_greedSecond; }
+			if (missionName.Contains("4-3")) { return "4-3: " + language.currentLanguage.levelNames.levelName_greedThird; }
+			if (missionName.Contains("4-4")) { return "4-4: " + language.currentLanguage.levelNames.levelName_greedFourth; }
+			if (missionName.Contains("4-S")) { return "4-S: " + language.currentLanguage.levelNames.levelName_greedSecret; }
 
-			if (missionName.Contains("5-1")) { return language.currentLanguage.levelNames.levelName_wrathFirst; }
-			if (missionName.Contains("5-2")) { return language.currentLanguage.levelNames.levelName_wrathSecond; }
-			if (missionName.Contains("5-3")) { return language.currentLanguage.levelNames.levelName_wrathThird; }
-			if (missionName.Contains("5-4")) { return language.currentLanguage.levelNames.levelName_wrathFourth; }
-			if (missionName.Contains("5-S")) { return language.currentLanguage.levelNames.levelName_wrathSecret; }
+			if (missionName.Contains("5-1")) { return "5-1: " + language.currentLanguage.levelNames.levelName_wrathFirst; }
+			if (missionName.Contains("5-2")) { return "5-2: " + language.currentLanguage.levelNames.levelName_wrathSecond; }
+			if (missionName.Contains("5-3")) { return "5-3: " + language.currentLanguage.levelNames.levelName_wrathThird; }
+			if (missionName.Contains("5-4")) { return "5-4: " + language.currentLanguage.levelNames.levelName_wrathFourth; }
+			if (missionName.Contains("5-S")) { return "5-5: " + language.currentLanguage.levelNames.levelName_wrathSecret; }
 
-			if (missionName.Contains("6-1")) { return language.currentLanguage.levelNames.levelName_heresyFirst; }
-			if (missionName.Contains("6-2")) { return language.currentLanguage.levelNames.levelName_heresySecond; }
+			if (missionName.Contains("6-1")) { return "6-1: " + language.currentLanguage.levelNames.levelName_heresyFirst; }
+			if (missionName.Contains("6-2")) { return "6-2: " + language.currentLanguage.levelNames.levelName_heresySecond; }
 
-			if (missionName.Contains("P-1")) { return language.currentLanguage.levelNames.levelName_primeFirst; }
+			if (missionName.Contains("P-1")) { return "P-1: " + language.currentLanguage.levelNames.levelName_primeFirst; }
 
 			return ("Unknown level - " + missionName);
         }
