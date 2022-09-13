@@ -23,17 +23,7 @@ namespace UltrakULL
             a1Logger.LogInfo("Patching Act 1 hellmap");
             try
             {
-                List<GameObject> a = new List<GameObject>();
-                SceneManager.GetActiveScene().GetRootGameObjects(a);
-                Console.WriteLine(a.Count);
-                GameObject canvas = null;
-                foreach (GameObject child in a)
-                {
-                    if (child.name == "Canvas")
-                    {
-                        canvas = child;
-                    }
-                }
+                GameObject canvas = getInactiveRootObject("Canvas");
 
                 GameObject hellMapObject = getGameObjectChild(canvas, "Hellmap");
 
@@ -61,18 +51,12 @@ namespace UltrakULL
 
             this.patchHellmap(language);
 
-            a1Logger.LogInfo("Patching results screen...");
             Act1Strings a1ChallengeStrings = new Act1Strings();
             string levelName = a1ChallengeStrings.getLevelName(language);
             string levelChallenge = a1ChallengeStrings.getLevelChallenge(currentLevel, language);
 
             patchResultsScreen(levelName, levelChallenge, language);
 
-        }
-
-        ~Act1()
-        {
-            Console.WriteLine("Act 1 Destructor called");
         }
     }
 }

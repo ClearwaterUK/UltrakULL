@@ -29,7 +29,7 @@ namespace UltrakULL
         public string act2IntermissionFifth;
         public string act2IntermissionSixth;
 
-        public string getIntermissionString(string inputString)
+        public string getIntermissionString(string inputString, JsonParser language)
         {
             string currentLevel = SceneManager.GetActiveScene().name;
 
@@ -37,9 +37,7 @@ namespace UltrakULL
             //file for organisation's sake, at least for the time being.
             if (currentLevel == "Level 2-S")
             {
-                Console.WriteLine("In 2-S.");
-                return Act1VN.getNextString(inputString);
-                
+                return Act1VN.getNextString(inputString, language);
             }
 
             //Act 1 intermission

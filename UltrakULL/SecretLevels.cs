@@ -96,22 +96,14 @@ namespace UltrakULL
 
             switch (this.currentLevel)
             {
-                case "Level 0-S": { Console.WriteLine("Setting 0-S room object"); testamentRoom = GameObject.Find("FinalRoom 2"); patchTestament(ref testamentRoom, language); break; }
-                case "Level 1-S": { Console.WriteLine("Setting 1-s room object"); testamentRoom = GameObject.Find("5 - Finale"); patchTestament(ref testamentRoom, language); break; }
-                case "Level 2-S": { Console.WriteLine("2-S visual novel"); Act1VN.patchPrompts(ref coreGame); break; }
+                case "Level 0-S": {testamentRoom = GameObject.Find("FinalRoom 2"); patchTestament(ref testamentRoom, language); break; }
+                case "Level 1-S": {testamentRoom = GameObject.Find("5 - Finale"); patchTestament(ref testamentRoom, language); break; }
+                case "Level 2-S": {Act1VN.patchPrompts(ref coreGame,language); break; }
                 case "Level 4-S": {
                         //I have absolutely no idea why I have to do it like this but I have to, for some reason the required GameObject can't be found by searching.
                         //THIS HAPPENS BECAUSE THE GAMEOBJECT ISN'T ACTIVE ON SCENE LOAD AND GameObject.Find() CANNOT DETECT INACTIVE OBJECTS.
-                        List<GameObject> rootObjects = new List<GameObject>();
-                        SceneManager.GetActiveScene().GetRootGameObjects(rootObjects);
-                        foreach(GameObject a in rootObjects)
-                        {
-                            if(a.name == "4 - Boulder Run")
-                            {
-                                Console.WriteLine("Object found, setting");
-                                testamentRoom = a;
-                            }
-                        }
+                        testamentRoom = getInactiveRootObject("4 - Boulder Run");
+
                         patchTestament(ref testamentRoom, language);
                         break;
                     }

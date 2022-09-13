@@ -27,9 +27,212 @@ namespace UltrakULL.json
         public Secret secretLevels;
         public IntermissionStrings intermission;
         public Book books;
+        public VisualNovel visualnovel;
         
     }
 
+    public class VisualNovel
+    {
+        public string visualnovel_introFirst1;
+        public string visualnovel_introFirst2;
+        public string visualnovel_introFirst3;
+        public string visualnovel_introFirst4;
+        public string visualnovel_introFirst5;
+        public string visualnovel_introFirst6;
+        public string visualnovel_introFirst7;
+
+        public string visualnovel_introSecond1;
+        public string visualnovel_introSecond2;
+        public string visualnovel_introSecond3;
+        public string visualnovel_introSecond4;
+        public string visualnovel_introSecond5;
+        public string visualnovel_introSecond6;
+        public string visualnovel_introSecond7;
+        public string visualnovel_introSecond8;
+
+        public string visualnovel_fallen1;
+        public string visualnovel_fallenPromptFirst1;
+        public string visualnovel_fallenPromptFirst2;
+        public string visualnovel_fallenPromptFirst3;
+
+        public string visualnovel_fallenResponseFirst;
+        public string visualnovel_fallenResponseSecond;
+        public string visualnovel_fallenResponseThird1;
+        public string visualnovel_fallenResponseThird2;
+
+        public string visualnovel_fallenPromptSecond1;
+        public string visualnovel_fallenPromptSecond2;
+        public string visualnovel_fallenPromptSecond3;
+
+        public string visualnovel_fallenResponseFourth;
+
+        public string visualnovel_kindFirst1;
+        public string visualnovel_kindFirst2;
+        public string visualnovel_kindSecond;
+        public string visualnovel_kindThird;
+
+        public string visualnovel_rudeFirst1;
+        public string visualnovel_rudeFirst2;
+        public string visualnovel_rudeSecond;
+        public string visualnovel_rudeThird;
+
+        public string visualnovel_middlePrompt1;
+        public string visualnovel_middlePrompt2;
+        public string visualnovel_middlePrompt3;
+
+        public string visualnovel_middleResponseFirst1;
+        public string visualnovel_middleResponseFirst2;
+        public string visualnovel_middleResponseFirst3;
+        public string visualnovel_middleResponseFirst4;
+        public string visualnovel_middleResponseFirst5;
+        public string visualnovel_middleResponseFirst6;
+
+        public string visualnovel_middleResponseSecond1;
+        public string visualnovel_middleResponseSecond2;
+        public string visualnovel_middleResponseSecond3;
+        public string visualnovel_middleResponseSecond4;
+
+        public string visualnovel_middleResponseThird1;
+        public string visualnovel_middleResponseThird2;
+        public string visualnovel_middleResponseThird3;
+
+        public string visualnovel_middlePromptSecondRecklessness;
+        public string visualnovel_middlePromptSecondWaiting;
+
+        public string visualnovel_recklessnessFirst;
+        public string visualnovel_recklessnessSecond1;
+        public string visualnovel_recklessnessSecond2;
+
+        public string visualnovel_recklessnessPrompt1;
+        public string visualnovel_recklessnessPrompt2;
+
+        public string visualnovel_recklessnessResponseFirst1;
+        public string visualnovel_recklessnessResponseFirst2;
+        public string visualnovel_recklessnessResponseFirst3;
+        public string visualnovel_recklessnessResponseFirst4;
+        public string visualnovel_recklessnessResponseFirst5;
+
+        public string visualnovel_recklessnessResponseSecond1;
+        public string visualnovel_recklessnessResponseSecond2;
+
+        public string visualnovel_recklessnessPrompt3;
+
+        public string visualnovel_recklessnessResponseThird;
+
+        public string visualnovel_waitingFirst;
+        public string visualnovel_waitingSecond;
+        public string visualnovel_waitingThird1;
+        public string visualnovel_waitingThird2;
+
+        public string visualnovel_waitingPromptFirst1;
+        public string visualnovel_waitingPromptFirst2;
+
+        public string visualnovel_waitingResponseFirst1;
+        public string visualnovel_waitingResponseFirst2;
+        public string visualnovel_waitingResponseFirst3;
+        public string visualnovel_waitingResponseFirst4;
+        public string visualnovel_waitingResponseFirst5;
+
+        public string visualnovel_waitingResponseSecond1;
+        public string visualnovel_waitingResponseSecond2;
+
+        public string visualnovel_waitingPromptThird;
+        public string visualnovel_waitingResponseThird1;
+        public string visualnovel_waitingResponseThird2;
+        public string visualnovel_waitingResponseThird3;
+
+        public string visualnovel_nihilism1;
+        public string visualnovel_nihilism2;
+        public string visualnovel_nihilism3;
+        public string visualnovel_nihilism4;
+        public string visualnovel_nihilism5;
+        public string visualnovel_nihilism6;
+        public string visualnovel_nihilism7;
+        public string visualnovel_nihilism8;
+        public string visualnovel_nihilism9;
+        public string visualnovel_nihilism10;
+        public string visualnovel_nihilism11;
+        public string visualnovel_nihilism12;
+        public string visualnovel_nihilism13;
+        public string visualnovel_nihilism14;
+        public string visualnovel_nihilism15;
+        public string visualnovel_nihilism16;
+        public string visualnovel_nihilism17;
+        public string visualnovel_nihilism18;
+        public string visualnovel_nihilism19;
+        public string visualnovel_nihilism20;
+        public string visualnovel_nihilism21;
+        public string visualnovel_nihilism22;
+        public string visualnovel_nihilism23;
+        public string visualnovel_nihilism24;
+        public string visualnovel_nihilism25;
+        public string visualnovel_nihilism26;
+        public string visualnovel_nihilism27;
+        public string visualnovel_nihilism28;
+        public string visualnovel_nihilism29;
+        public string visualnovel_nihilism30;
+        public string visualnovel_nihilism31;
+        public string visualnovel_nihilism32;
+        public string visualnovel_nihilism33;
+        public string visualnovel_nihilism34;
+        public string visualnovel_nihilism35;
+        public string visualnovel_nihilism36;
+        public string visualnovel_nihilism37;
+        public string visualnovel_nihilism38;
+        public string visualnovel_nihilism39;
+        public string visualnovel_nihilism40;
+        public string visualnovel_nihilism41;
+        public string visualnovel_nihilism42;
+        public string visualnovel_nihilism43;
+
+        public string visualnovel_nihilismPrompt1;
+        public string visualnovel_nihilismPrompt2;
+        public string visualnovel_nihilismPrompt3;
+        public string visualnovel_nihilismPrompt4;
+        public string visualnovel_nihilismPrompt5;
+        public string visualnovel_nihilismPrompt6;
+        public string visualnovel_nihilismPrompt7;
+        public string visualnovel_nihilismPrompt8;
+        public string visualnovel_nihilismPrompt9;
+        public string visualnovel_nihilismPrompt10;
+        public string visualnovel_nihilismPrompt11;
+        public string visualnovel_nihilismPrompt12;
+        public string visualnovel_nihilismPrompt13;
+        public string visualnovel_nihilismPrompt14;
+        public string visualnovel_nihilismPrompt15;
+        public string visualnovel_nihilismPrompt16;
+        public string visualnovel_nihilismPrompt17;
+        public string visualnovel_nihilismPrompt18;
+        public string visualnovel_nihilismPrompt19;
+        public string visualnovel_nihilismPrompt20;
+        public string visualnovel_nihilismPrompt21;
+        public string visualnovel_nihilismPrompt22;
+        public string visualnovel_nihilismPrompt23;
+        public string visualnovel_nihilismPrompt24;
+        public string visualnovel_nihilismPrompt25;
+
+        public string visualnovel_conclusion1;
+        public string visualnovel_conclusion2;
+        public string visualnovel_conclusion3;
+        public string visualnovel_conclusion4;
+        public string visualnovel_conclusion5;
+        public string visualnovel_conclusion6;
+        public string visualnovel_conclusion7;
+        public string visualnovel_conclusion8;
+        public string visualnovel_conclusion9;
+        public string visualnovel_conclusion10;
+
+        public string visualnovel_conclusionPrompt1;
+        public string visualnovel_conclusionPrompt2;
+
+        public string visualnovel_conclusionResponseFirst1;
+        public string visualnovel_conclusionResponseFirst2;
+        public string visualnovel_conclusionResponseFirst3;
+
+        public string visualnovel_conclusionResponseSecond1;
+        public string visualnovel_conclusionResponseSecond2;
+        public string visualnovel_conclusionResponseSecond3;
+    }
 
     public class Metadata
     {

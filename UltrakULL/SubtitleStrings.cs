@@ -383,7 +383,7 @@ namespace UltrakULL
             }
             if (input.Contains("Come"))
             {
-                return "Venez à moi!";
+                return "Viens à moi!";
             }
 
             Console.WriteLine(input);

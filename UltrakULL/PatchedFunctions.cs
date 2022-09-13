@@ -49,7 +49,6 @@ namespace UltrakULL
             Console.WriteLine("Getting text from book ID: " + instanceId);
             Console.WriteLine(text);
 
-
             ___readingText.text = Books.getBookText(language);
             ___currentBookId = instanceId;
             ___scanningPanel.SetActive(false);
@@ -1251,8 +1250,6 @@ namespace UltrakULL
         public static bool Start_MyPatch(IntermissionController __instance, string ___fullString, StringBuilder ___sb, Text ___txt, string ___tempString, bool ___skipToInput, bool ___waitingForInput, string ___preText, AudioSource ___aud, float ___origPitch)
         {
 
-            Console.WriteLine("Hit an intermission.");
-
             ___txt = __instance.GetComponent<Text>();
             ___fullString = ___txt.text;
             ___txt.text = "";
@@ -1261,7 +1258,7 @@ namespace UltrakULL
 
 
             IntermissionStrings intStrings = new IntermissionStrings(language);
-            ___fullString = intStrings.getIntermissionString(___fullString);
+            ___fullString = intStrings.getIntermissionString(___fullString,language);
 
             __instance.StartCoroutine(TextAppearMain(__instance, ___fullString, ___sb, ___txt, ___tempString, ___skipToInput, ___waitingForInput, ___preText, ___aud, ___origPitch));
 
@@ -1359,7 +1356,6 @@ namespace UltrakULL
 
         public static IEnumerator IntermissionDotsAppear(IntermissionController __instance, bool waitingForInput, Text txt, string tempString)
         {
-            Console.WriteLine("Starting IntermissionDotsAppear");
             while (waitingForInput)
             {
                 if (MonoSingleton<OptionsManager>.Instance.paused)
@@ -1367,12 +1363,10 @@ namespace UltrakULL
                     yield return new WaitUntil(() => !MonoSingleton<OptionsManager>.Instance.paused || !__instance.gameObject.scene.isLoaded);
                 }
 
-                Console.WriteLine("Arrow appear");
                 txt.text = txt.text + "▼";
                 yield return new WaitForSecondsRealtime(0.25f);
                 if (waitingForInput)
                 {
-                    Console.WriteLine("Arrow disappear");
                     txt.text = txt.text.Remove(txt.text.Length - 1);
                     yield return new WaitForSecondsRealtime(0.25f);
                 }

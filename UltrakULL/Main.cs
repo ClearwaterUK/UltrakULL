@@ -27,7 +27,11 @@ using UltrakULL.json;
  * 
  *  MAIN TODO LIST
  *  - Fill the JSON template and class as progress happens, moving hardcoded text out as it goes
+ *  2-S, subtitles, style strings, boss name strings, cheat stuff, CG, enemy bios, misc HUD, level stats, anything in patchedFunctions,prelude
+ *  
  *  - Error and exception handling
+ *  Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
+ *  
  *  - Discord RPC (Persistant timestamp and general corrections)
  * 
  * - Less important stuff for future updates:
@@ -35,6 +39,7 @@ using UltrakULL.json;
  *  - Sandbox stuff (time of day shop, spawn/cheat menu categories)
  *  - Terminals before bosses in levels (could copy the shop that's in the start of each level)
  *  - Organise and refactor stuff, move functions to other files to declutter Main (Simplify getGameObjectChild and getTextFromgameObject in each file, take itfrom CommonFunctions) (Factorise the act classes with an interface?)
+ *  Look into how I can do encoding for RTL languages such as Arabic
  *  
  *  BUGS AND QUIRKS TO FIX:
  *  
@@ -53,6 +58,12 @@ using UltrakULL.json;
  * ACT 2 UPDATE DAMAGE REPORT
  * 
  * - Shop needs new stuff added - colors
+ * 
+ * - Stuff reported by ULL team:
+ * 
+ * - Rocket launcher lore missing strings
+ * - 2-S, minor issues to fix
+ *
  * 
  * */
 
