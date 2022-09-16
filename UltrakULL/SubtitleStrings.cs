@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UltrakULL.json;
 
 namespace UltrakULL
 {
@@ -14,140 +15,139 @@ namespace UltrakULL
         BepInEx.Logging.ManualLogSource subtitleStringsLogger = BepInEx.Logging.Logger.CreateLogSource("Subtitle Strings");
 
         //3-2 Gabriel fight
-        public string gabesubtitles(string input)
+        public string gabesubtitles(string input, JsonParser language)
         {
             //Pre-arena lines
             if (input.Contains("Machine"))
             {
-                return ("Machine,");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_intro1);
             }
             if (input.Contains("Turn back now"))
             {
-                return ("faites demi-tour maintenant.");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_intro2);
             }
             if (input.Contains("The layers"))
             {
-                return ("Ton type n'est pas permis à rentrer dans les couches de ce palais.");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_intro3);
             }
             if (input.Contains("will of God"))
             {
-                return ("Faites demi-tour, sinon tu franchiras la volonté de Dieu!");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_intro4);
             }
             if (input.Contains("Your choice"))
             {
-                return ("Ton choix est fait...");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_intro5);
             }
             if (input.Contains("As the"))
             {
-                return ("Étant la main droite du Père,");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_intro6);
             }
             if (input.Contains("I shall"))
             {
-                return ("je vais te déchirer en morceaux!");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_intro7);
             }
             if (input.Contains("And you will"))
             {
-                return ("Tu deviendras inanimé une fois de plus...");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_intro8);
             }
 
             //Fight lines
             if (input.Contains("BEHOLD"))
             {
-                return ("VOICI! LA PUISSANCE D'UN ANGE!");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_fightStart);
             }
             if (input.Contains("The light"))
             {
-                return ("La lumière est la perfection!");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_taunt1);
             }
             if (input.Contains("You defy"))
             {
-                return ("Tu défies la lumière!");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_taunt2);
             }
             if (input.Contains("A mere"))
             {
-                return ("Tu n'est qu'un objet!");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_taunt3);
             }
             if (input.Contains("Not."))
             {
-                return ("Même, pas, mortel.");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_taunt4);
             }
             if (input.Contains("You are less"))
             {
-                return ("Tu n'est moins de rien!");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_taunt5);
             }
             if (input.Contains("Foolishness"))
             {
-                return ("Des bêtises, machine. Que des bêtises.");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_taunt6);
             }
             if (input.Contains("You're an error"))
             {
-                return ("Tu es une erreur à être corrigé!");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_taunt7);
             }
             if (input.Contains("There can be"))
             {
-                return ("Il ne peut n'y avoir qu'un seul!");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_taunt8);
             }
             if (input.Contains("An imperfection"))
             {
-                return ("Une imperfection à être nettoyé.");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_taunt9);
             }
             if (input.Contains("Your crime"))
             {
-                return ("Ton crime est l'existence!");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_taunt10);
             }
             if (input.Contains("You make"))
             {
-                return ("Tu feras pleurer même le diable!");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_taunt11);
             }
             if (input.Contains("You are outclassed"))
             {
-                return ("Tu est surclassé!");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_taunt12);
             }
 
             if (input.Contains("Enough!"))
             {
-                return ("ASSEZ!");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_phaseChange);
             }
 
             // Defeat/Outro
-
             if (input.Contains("What..?"))
             {
-                return ("Mais...?");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_defeated1);
             }
             if (input.Contains("How can"))
             {
-                return ("Comment cela peut-il être...?");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_defeated2);
             }
             if (input.Contains("Bested"))
             {
-                return ("Battu par ce...");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_defeated3);
             }
             if (input.Contains("this thing"))
             {
-                return ("...cette chose...?");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_defeated4);
             }
             if (input.Contains("You insignificant"))
             {
-                return ("SALE. PETITE MERDE. INSIGNIFIANTE!");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_defeated5);
             }
             if (input.Contains("THIS IS NOT OVER"))
             {
-                return ("NOUS NE SOMMES PAS TERMINÉ!");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_defeated6);
             }
             if (input.Contains("May your woes"))
             {
-                return ("Que tes malheurs soient beaucoup,");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_defeated7);
             }
             if (input.Contains("and your days"))
             {
-                return ("et tes jours nombrés!");
+                return (language.currentLanguage.subtitles.subtitles_gabriel_defeated8);
             }
 
             return ("Unimplemented Gabe fight string");
         }
 
-        public string druidsubtitles(string input)
+        public string druidsubtitles(string input,JsonParser language)
         {
             string mandaColor = "<color=#FFC49E>";
             string owlColor = "<color=#9EE6FF>";
@@ -156,483 +156,468 @@ namespace UltrakULL
             //Intro
             if (input.Contains("Finally"))
             {
-                return (mandaColor + "Enfin, notre casse-tête de patience est terminé!" + endColor);
+                return (mandaColor + language.currentLanguage.subtitles.subtitles_mandalore_intro1 + endColor);
             }
             if (input.Contains("What"))
             {
-                return (owlColor + "Hein?" + endColor);
+                return (owlColor + language.currentLanguage.subtitles.subtitles_mandalore_intro2 + endColor);
             }
 
             //Respawn intro
             if (input.Contains("I'm going to"))
             {
-                return (owlColor + "Je vais t'empoisoner, sale merde!" + endColor);
+                return (owlColor + language.currentLanguage.subtitles.subtitles_mandalore_taunt1 + endColor);
             }
             if (input.Contains("I'm gonna"))
             {
-                return (owlColor + "Je vais les tirer dessus avec une arme!" + endColor);
+                return (owlColor + language.currentLanguage.subtitles.subtitles_mandalore_taunt2 + endColor);
             }
             if (input.Contains("You cannot imagine"))
             {
-                return (mandaColor + "Tu ne peux pas imaginer ce que tu va rencontrer ici!" + endColor);
+                return (mandaColor + language.currentLanguage.subtitles.subtitles_mandalore_taunt3 + endColor);
             }
             if (input.Contains("Hold still"))
             {
-                return (mandaColor + "Arrêtes de bouger!" + endColor);
+                return (mandaColor + language.currentLanguage.subtitles.subtitles_mandalore_taunt4 + endColor);
             }
             if (input.Contains("Why are we"))
             {
-                return (owlColor + "Pourquoi sommes-nous dans le passé?" + endColor);
+                return (owlColor + language.currentLanguage.subtitles.subtitles_mandalore_taunt5 + endColor);
             }
 
             //Attacks
             if (input.Contains("Full auto"))
             {
-                return (mandaColor + "Automatique." + endColor);
+                return (mandaColor + language.currentLanguage.subtitles.subtitles_mandalore_attack1 + endColor);
             }
             if (input.Contains("Fuller auto"))
             {
-                return (mandaColor + "Encore plus automatique!" + endColor);
+                return (mandaColor + language.currentLanguage.subtitles.subtitles_mandalore_attack2 + endColor);
             }
-
 
             //Phase transitions
             //Speed increase
             if (input.Contains("Through the"))
             {
-                return (mandaColor + "J'augmentes ma vitesse grâce au magique des Druides!" + endColor);
+                return (mandaColor + language.currentLanguage.subtitles.subtitles_mandalore_phaseChangeFirst1 + endColor);
             }
             if (input.Contains("Just fucking"))
             {
-                return (owlColor + "Mais bordel, frappes-le déjà!" + endColor);
+                return (owlColor + language.currentLanguage.subtitles.subtitles_mandalore_phaseChangeFirst2 + endColor);
             }
             //Max speed
             if (input.Contains("Feel"))
             {
-                return (mandaColor + "Témoignes ma vitesse maximum!" + endColor);
+                return (mandaColor + language.currentLanguage.subtitles.subtitles_mandalore_phaseChangeSecond1 + endColor);
             }
             if (input.Contains("Slow down"))
             {
-                return (owlColor + "C'est trop vite!" + endColor);
+                return (owlColor + language.currentLanguage.subtitles.subtitles_mandalore_phaseChangeSecond2 + endColor);
             }
 
             //Sanded
             if (input.Contains("Use the salt"))
             {
-                return (owlColor + "Utilises du sel!" + endColor);
+                return (owlColor + language.currentLanguage.subtitles.subtitles_mandalore_phaseChangeThird1 + endColor);
             }
             if (input.Contains("I'm reaching"))
             {
-                return (mandaColor + "J'essaies!" + endColor);
+                return (mandaColor + language.currentLanguage.subtitles.subtitles_mandalore_phaseChangeThird2 + endColor);
             }
-
 
             //Outro
             if (input.Contains("Oh great"))
             {
-                return (owlColor + "Bah chouette, on a perdu, excellent." + endColor);
+                return (owlColor + language.currentLanguage.subtitles.subtitles_mandalore_defeated + endColor);
             }
-
             
             return "Unimplemented Druid fight string";
         }
 
-        public string minossubtitles(string input)
+        public string minossubtitles(string input, JsonParser language)
         {
             //Intro
             if (input.Contains("Ahh..."))
             {
-                return (input);
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_intro1);
             }
             if (input.Contains("Free at"))
             {
-                return ("Enfin libéré.");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_intro2);
             }
             if (input.Contains("O Gabriel"))
             {
-                return ("Oh, Gabriel...");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_intro3);
             }
             if (input.Contains("Now dawns"))
             {
-                return ("Maintenant se lève votre compte,");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_intro4);
             }
             if (input.Contains("and thy gore"))
             {
-                return ("Et votre sang luira devant les temples des hommes!");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_intro5);
             }
             if (input.Contains("Creature of"))
             {
-                return ("Bête d'acier...");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_intro6);
             }
             if (input.Contains("My gratitude"))
             {
-                return ("Je vous remercie pour ma déliverance.");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_intro7);
             }
             if (input.Contains("but the crimes"))
             {
-                return ("Mais les crimes que votre type à commis sur l'humanité");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_intro8);
             }
             if (input.Contains("are NOT"))
             {
-                return ("ne sont PAS oubliés.");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_intro9);
             }
             if (input.Contains("And thy punishment"))
             {
-                return ("Ainsi, votre sanction est...");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_intro10);
             }
             if (input.Contains("is DEATH"))
             {
-                return ("LA MORT!");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_intro11);
             }
             //Respawn intro
             if (input.Contains("Useless"))
             {
-                return ("Vous êtes inutile!");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_taunt1);
             }
-
             //Attacks
             if (input.Contains("Prepare"))
             {
-                return ("Preparez-vous!");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_attack1);
             }
             if (input.Contains("Thy end"))
             {
-                return ("Votre fin approche!");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_attack2);
             }
             if (input.Contains("Die"))
             {
-                return ("MOUREZ!");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_attack3);
             }
             if (input.Contains("Crush"))
             {
-                return ("Ècrasement!");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_attack4);
             }
             if (input.Contains("Judgement"))
             {
-                return ("Jugement!");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_attack5);
             }
-
             //Phase 2
             if (input.Contains("WEAK"))
             {
-                return ("Vous êtes FAIBLE!");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_phaseChange);
             }
-
             //Outro
             if (input.Contains("Aagh!"))
             {
-                return (input);
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_defeated1);
             }
             if (input.Contains("Forgive"))
             {
-                return ("Mes enfants... Je vous prie de me pardonner...");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_defeated2);
             }
             if (input.Contains("for I have"))
             {
-                return ("J'ai échoué de vous délivrer le salut...");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_defeated3);
             }
             if (input.Contains("from this"))
             {
-                return ("de cette monde sombre et froide.");
+                return (language.currentLanguage.subtitles.subtitles_minosPrime_defeated4);
             }
-
-
             return "Unimplemented Minos Prime string";
-
         }
-
-        public string gabeBoatSubtitles(string input)
+        public string gabeBoatSubtitles(string input,JsonParser language)
         {
             //Intro
             if (input.Contains("Be not afraid"))
             {
-                return ("N'ayez pas peur, pêcheur.");
+                return (language.currentLanguage.subtitles.subtitles_gabrielBoat1);
             }
             if (input.Contains("Your devotion"))
             {
-                return ("Votre dévotion au Dieu montre le bonté dans vous-même;");
+                return (language.currentLanguage.subtitles.subtitles_gabrielBoat2);
             }
             if (input.Contains("Plentiful"))
             {
-                return ("Bien abondant.");
+                return (language.currentLanguage.subtitles.subtitles_gabrielBoat3);
             }
             if (input.Contains("The heart"))
             {
-                return ("Le cœur est prêt, mais le corps doit se reposer,");
+                return (language.currentLanguage.subtitles.subtitles_gabrielBoat4);
             }
             if (input.Contains("Lest"))
             {
-                return ("Sinon vous gaspillierez un des créations de Dieu.");
+                return (language.currentLanguage.subtitles.subtitles_gabrielBoat5);
             }
             return "Unimplemented 5-3 subtitle";
         }
 
-        public string gabeSecondSubtitles(string input)
+        public string gabeSecondSubtitles(string input,JsonParser language)
         {
             if (input.Contains("Machine"))
             {
-                return "Machine, je sais tu est ici.";
+                return language.currentLanguage.subtitles.subtitles_gabrielHeresy1;
             }
             if (input.Contains("I can smell"))
             {
-                return "Je peux ressentir l'odeur insolent de tes mains sanglants.";
+                return language.currentLanguage.subtitles.subtitles_gabrielHeresy2;
             }
             if (input.Contains("I await"))
             {
-                return "Je t'attends en bas...";
+                return language.currentLanguage.subtitles.subtitles_gabrielHeresy3;
             }
             if (input.Contains("Come"))
             {
-                return "Viens à moi!";
+                return language.currentLanguage.subtitles.subtitles_gabrielHeresy4;
             }
 
-            Console.WriteLine(input);
             return "Unimplemented 6-1 subtitle";
         }
 
-        public string gabeSecondBossSubtitles(string input)
+        public string gabeSecondBossSubtitles(string input,JsonParser language)
         {
             //Level intro
             if (input.Contains("Limbo"))
             {
-                return "Les Limbes.";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondIntro1;
             }
             if (input.Contains("Lust"))
             {
-                return "Luxure.";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondIntro2;
             }
             if (input.Contains("All gone"))
             {
-                return "Tout parti...";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondIntro3;
             }
             if (input.Contains("With Gluttony"))
             {
-                return "Avec la Gourmandise à bientôt suivre.";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondIntro4;
             }
             if (input.Contains("Your kind"))
             {
-                return "Ton type ne connaît que la faim,";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondIntro5;
             }
             if (input.Contains("Purged"))
             {
-                return "Effacé toute vie sur les couches supérieurs,";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondIntro6;
             }
             if (input.Contains("And yet"))
             {
-                return "Mais ils restent insatiables...";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondIntro7;
             }
             if (input.Contains("As do"))
             {
-                return "Comme toi-même.";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondIntro8;
             }
             if (input.Contains("You've taken"))
             {
-                return "Tu m'as tout pris, machine.";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondIntro9;
             }
             if (input.Contains("And now"))
             {
-                return "Maintenant, tout ce qui reste, est";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondIntro10;
             }
             if (input.Contains("PERFECT"))
             {
-                return "LA HAINE...";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondIntro11;
             }
             if (input.Contains("HATRED"))
             {
-                return "...PARFAITE!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondIntro12;
             }
 
-            //Boss info
-            Console.WriteLine(input);
+            //Boss intro
             if (input.Contains("Machine"))
             {
-                return "Machine,";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondFight1;
             }
             if (input.Contains("I will cut"))
             {
-                return "Je vais t'abattre en morceaux,";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondFight2;
             }
             if (input.Contains("Break you apart"))
             {
-                return "Te casser en pièces,";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondFight3;
             }
             if (input.Contains("Splay"))
             {
-                return "Verser le sang de ton forme profane à travers LES ÉTOILES!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondFight4;
             }
             if (input.Contains("MERCY"))
             {
-                return "Je vais te broyer jusqu'au même les ÉTINCELLES CRIENT LA PITIÉ!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondFight5;
             }
             if (input.Contains("My hands"))
             {
-                return "Mes mains vont SAVORER TE DÉLIVRER LA MORT...";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondFight6;
             }
             if (input.Contains("HERE"))
             {
-                return "ICI,";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondFight7;
             }
             if (input.Contains("AND"))
             {
-                return "ET,";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondFight8;
             }
             if (input.Contains("NOW"))
             {
-                return "MAINTENANT!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondFight9;
+            }
+
+            //Phase 2
+            if (input.Contains("IS THAT"))
+            {
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondPhaseChange;
             }
 
             //Taunts
-            if (input.Contains("IS THAT"))
-            {
-                return "C'EST TOUT QUE TU SAIS FAIRE!?";
-            }
             if (input.Contains("YOU NEED"))
             {
-                return "IL TE FAUT. PLUS. DE PUISSANCE!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt1;
             }
             if (input.Contains("Come get"))
             {
-                return "VIENS CHERCHER MON SANG!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt2;
             }
             if (input.Contains("What is this"))
             {
-                return "Mais qu'est-ce que... cet SENSATION?";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt3;
             }
             if (input.Contains("NOTHING"))
             {
-                return "TU N'EST QUE DU FERAILLE!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt4;
             }
             if (input.Contains("You're getting"))
             {
-                return "Tu rouilles un peu, machine!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt5;
             }
             if (input.Contains("IS THIS WHAT"))
             {
-                return "J'AI VRAIMENT PERDU CONTRE TOI?!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt6;
             }
             if (input.Contains("TIME TO"))
             {
-                return "IL EST TEMPS DE CORRIGER MON ERREUR!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt7;
             }
             if (input.Contains("LET'S SETTLE"))
             {
-                return "FINISSONS-EN!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt8;
             }
             if (input.Contains("I'LL SHOW"))
             {
-                return "JE TE MONTRERAI LA JUSTICE DIVINE!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt9;
             }
             if (input.Contains("Come on"))
             {
-                return "Aller, machine! Bats-moi comme un animal!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt10;
             }
             if (input.Contains("I've never"))
             {
-                return "Je n'ai jamais eu un tel bataille comme ceci!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt11;
             }
             if (input.Contains("Show me"))
             {
-                return "Montre moi à quoi tu serts!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt12;
             }
             if (input.Contains("Now THIS"))
             {
-                return "Ceci EST un bataille digne du volonté de Dieu!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt13;
             }
 
             //Defeated
             if (input.Contains("Twice!?"))
             {
-                return "Deux fois?!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondDefeated1;
             }
             if (input.Contains("Beaten by"))
             {
-                return "Battu par un Objet... DEUX FOIS?!";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondDefeated2;
             }
             if (input.Contains("I've only"))
             {
-                return "Je ne connais que le goût de la victoire,";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondDefeated3;
             }
             if (input.Contains("But this"))
             {
-                return "Mais ce goût... Est-ce que...";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondDefeated4;
             }
             if (input.Contains("Is this"))
             {
-                return "Est-ce que c'est mon sang?";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondDefeated5;
             }
             if (input.Contains("I've never known such..."))
             {
-                return "Je n'ai jamais connu un tel...";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondDefeated6;
             }
             if (input.Contains("Such"))
             {
-                return "Un tel... soulagement?";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondDefeated7;
             }
             if (input.Contains("I-"))
             {
-                return "Je... J'ai besoin du temps pour réfléchir...";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondDefeated8;
             }
             if (input.Contains("We will"))
             {
-                return "Nous allons se rencontrer encore, machine.";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondDefeated9;
             }
             if (input.Contains("May"))
             {
-                return "Que tes malheurs soit beaucoup...";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondDefeated10;
             }
             if (input.Contains("and your"))
             {
-                return "...et tes jours nombrés.";
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondDefeated11;
             }
 
             return "Unimplemented 6-2 subtitle";
         }
 
-
-        public string getSubtitle(string input)
+        public string getSubtitle(string input,JsonParser language)
         {
             string currentLevel = SceneManager.GetActiveScene().name;
             //3-2
             if (currentLevel.Contains("3-2"))
             {
-               return gabesubtitles(input);
+               return gabesubtitles(input,language);
             }
             //4-3 secret boss
             if (currentLevel.Contains("4-3"))
                 {
-                return druidsubtitles(input);
+                return druidsubtitles(input, language);
             }
-
             //5-3
             if (currentLevel.Contains("5-3"))
             {
-                return gabeBoatSubtitles(input);
+                return gabeBoatSubtitles(input, language);
             }
             //6-1
             if (currentLevel.Contains("6-1"))
             {
-                return gabeSecondSubtitles(input);
+                return gabeSecondSubtitles(input, language);
             }
             //6-2
             if (currentLevel.Contains("6-2"))
             {
-                return gabeSecondBossSubtitles(input);
+                return gabeSecondBossSubtitles(input, language);
             }
 
             //Prime sanctum, P-1 boss
             if (currentLevel.Contains("P-1"))
             {
-                return minossubtitles(input);
+                return minossubtitles(input, language);
             }
             return "Uninplemented subtitle string";
         }
-
 
         public SubtitleStrings()
         {
 
         }
-
-
     }
 }

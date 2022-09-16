@@ -27,7 +27,7 @@ using UltrakULL.json;
  * 
  *  MAIN TODO LIST
  *  - Fill the JSON template and class as progress happens, moving hardcoded text out as it goes
- *  2-S, subtitles, style strings, boss name strings, cheat stuff, CG, enemy bios, misc HUD, level stats, anything in patchedFunctions,prelude
+ *  Style strings, boss name strings, cheat stuff, CG, enemy bios, misc HUD, level stats, anything in patchedFunctions,prelude
  *  
  *  - Error and exception handling
  *  Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens

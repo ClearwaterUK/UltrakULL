@@ -28,7 +28,159 @@ namespace UltrakULL.json
         public IntermissionStrings intermission;
         public Book books;
         public VisualNovel visualnovel;
+        public Subtitles subtitles;
         
+    }
+
+    public class Subtitles
+    {
+        public string subtitles_gabriel_intro1;
+        public string subtitles_gabriel_intro2;
+        public string subtitles_gabriel_intro3;
+        public string subtitles_gabriel_intro4;
+        public string subtitles_gabriel_intro5;
+        public string subtitles_gabriel_intro6;
+        public string subtitles_gabriel_intro7;
+        public string subtitles_gabriel_intro8;
+        public string subtitles_gabriel_intro9;
+        public string subtitles_gabriel_fightStart;
+        
+        public string subtitles_gabriel_taunt1;
+        public string subtitles_gabriel_taunt2;
+        public string subtitles_gabriel_taunt3;
+        public string subtitles_gabriel_taunt4;
+        public string subtitles_gabriel_taunt5;
+        public string subtitles_gabriel_taunt6;
+        public string subtitles_gabriel_taunt7;
+        public string subtitles_gabriel_taunt8;
+        public string subtitles_gabriel_taunt9;
+        public string subtitles_gabriel_taunt10;
+        public string subtitles_gabriel_taunt11;
+        public string subtitles_gabriel_taunt12;
+
+        public string subtitles_gabriel_phaseChange;
+        
+        public string subtitles_gabriel_defeated1;
+        public string subtitles_gabriel_defeated2;
+        public string subtitles_gabriel_defeated3;
+        public string subtitles_gabriel_defeated4;
+        public string subtitles_gabriel_defeated5;
+        public string subtitles_gabriel_defeated6;
+        public string subtitles_gabriel_defeated7;
+        public string subtitles_gabriel_defeated8;
+        
+        public string subtitles_mandalore_intro1;
+        public string subtitles_mandalore_intro2;
+        
+        public string subtitles_mandalore_attack1;
+        public string subtitles_mandalore_attack2;
+
+        public string subtitles_mandalore_taunt1;
+        public string subtitles_mandalore_taunt2;
+        public string subtitles_mandalore_taunt3;
+        public string subtitles_mandalore_taunt4;
+        public string subtitles_mandalore_taunt5;
+
+        public string subtitles_mandalore_phaseChangeFirst1;
+        public string subtitles_mandalore_phaseChangeFirst2;
+        public string subtitles_mandalore_phaseChangeSecond1;
+        public string subtitles_mandalore_phaseChangeSecond2;
+        public string subtitles_mandalore_phaseChangeThird1;
+        public string subtitles_mandalore_phaseChangeThird2;
+        
+        public string subtitles_mandalore_defeated;
+        
+        public string subtitles_minosPrime_intro1;
+        public string subtitles_minosPrime_intro2;
+        public string subtitles_minosPrime_intro3;
+        public string subtitles_minosPrime_intro4;
+        public string subtitles_minosPrime_intro5;
+        public string subtitles_minosPrime_intro6;
+        public string subtitles_minosPrime_intro7;
+        public string subtitles_minosPrime_intro8;
+        public string subtitles_minosPrime_intro9;
+        public string subtitles_minosPrime_intro10;
+        public string subtitles_minosPrime_intro11;
+        
+        public string subtitles_minosPrime_attack1;
+        public string subtitles_minosPrime_attack2;
+        public string subtitles_minosPrime_attack3;
+        public string subtitles_minosPrime_attack4;
+        public string subtitles_minosPrime_attack5;
+        
+        public string subtitles_minosPrime_taunt1;
+        
+        public string subtitles_minosPrime_phaseChange;
+        
+        public string subtitles_minosPrime_defeated1;
+        public string subtitles_minosPrime_defeated2;
+        public string subtitles_minosPrime_defeated3;
+        public string subtitles_minosPrime_defeated4;
+        
+        public string subtitles_gabrielBoat1;
+        public string subtitles_gabrielBoat2;
+        public string subtitles_gabrielBoat3;
+        public string subtitles_gabrielBoat4;
+        public string subtitles_gabrielBoat5;
+
+        public string subtitles_gabrielHeresy1;
+        public string subtitles_gabrielHeresy2;
+        public string subtitles_gabrielHeresy3;
+        public string subtitles_gabrielHeresy4;
+        
+        public string subtitles_gabrielSecondIntro1;
+        public string subtitles_gabrielSecondIntro2;
+        public string subtitles_gabrielSecondIntro3;
+        public string subtitles_gabrielSecondIntro4;
+        public string subtitles_gabrielSecondIntro5;
+        public string subtitles_gabrielSecondIntro6;
+        public string subtitles_gabrielSecondIntro7;
+        public string subtitles_gabrielSecondIntro8;
+        public string subtitles_gabrielSecondIntro9;
+        public string subtitles_gabrielSecondIntro10;
+        public string subtitles_gabrielSecondIntro11;
+        public string subtitles_gabrielSecondIntro12;
+        
+        public string subtitles_gabrielSecondFight1;
+        public string subtitles_gabrielSecondFight2;
+        public string subtitles_gabrielSecondFight3;
+        public string subtitles_gabrielSecondFight4;
+        public string subtitles_gabrielSecondFight5;
+        public string subtitles_gabrielSecondFight6;
+        public string subtitles_gabrielSecondFight7;
+        public string subtitles_gabrielSecondFight8;
+        public string subtitles_gabrielSecondFight9;
+        
+        public string subtitles_gabrielSecondPhaseChange;
+        
+        public string subtitles_gabrielSecondTaunt1;
+        public string subtitles_gabrielSecondTaunt2;
+        public string subtitles_gabrielSecondTaunt3;
+        public string subtitles_gabrielSecondTaunt4;
+        public string subtitles_gabrielSecondTaunt5;
+        public string subtitles_gabrielSecondTaunt6;
+        public string subtitles_gabrielSecondTaunt7;
+        public string subtitles_gabrielSecondTaunt8;
+        public string subtitles_gabrielSecondTaunt9;
+        public string subtitles_gabrielSecondTaunt10;
+        public string subtitles_gabrielSecondTaunt11;
+        public string subtitles_gabrielSecondTaunt12;
+        public string subtitles_gabrielSecondTaunt13;
+        public string subtitles_gabrielSecondTaunt14;
+
+        public string subtitles_gabrielSecondDefeated1;
+        public string subtitles_gabrielSecondDefeated2;
+        public string subtitles_gabrielSecondDefeated3;
+        public string subtitles_gabrielSecondDefeated4;
+        public string subtitles_gabrielSecondDefeated5;
+        public string subtitles_gabrielSecondDefeated6;
+        public string subtitles_gabrielSecondDefeated7;
+        public string subtitles_gabrielSecondDefeated8;
+        public string subtitles_gabrielSecondDefeated9;
+        public string subtitles_gabrielSecondDefeated10;
+        public string subtitles_gabrielSecondDefeated11;
+        public string subtitles_gabrielSecondDefeated12;
+
     }
 
     public class VisualNovel

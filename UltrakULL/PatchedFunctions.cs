@@ -1410,7 +1410,7 @@ namespace UltrakULL
                 return false;
             }
             Subtitle subtitle = UnityEngine.Object.Instantiate<Subtitle>(___subtitleLine, ___container, true);
-            subtitle.GetComponentInChildren<Text>().text = subtitleStrings.getSubtitle(caption);
+            subtitle.GetComponentInChildren<Text>().text = subtitleStrings.getSubtitle(caption,language);
             if (audioSource != null)
             {
                 subtitle.distanceCheckObject = audioSource;
