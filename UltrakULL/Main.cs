@@ -27,7 +27,7 @@ using UltrakULL.json;
  * 
  *  MAIN TODO LIST
  *  - Fill the JSON template and class as progress happens, moving hardcoded text out as it goes
- *  Style strings, boss name strings, cheat stuff, CG, enemy bios, misc HUD, level stats, anything in patchedFunctions,prelude
+ *  Boss name strings, cheat stuff, CG, enemy bios, misc HUD, level stats, anything in patchedFunctions,prelude
  *  
  *  - Error and exception handling
  *  Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
@@ -56,14 +56,13 @@ using UltrakULL.json;
  * - Move the loaded language class to a seperate class. Would make it easier to access instead of doing currentLanguage.language.etc...
  * 
  * ACT 2 UPDATE DAMAGE REPORT
- * 
  * - Shop needs new stuff added - colors
  * 
  * - Stuff reported by ULL team:
- * 
  * - Rocket launcher lore missing strings
  * - 2-S, minor issues to fix
- *
+ * - Act 2 intermission, missed a line in the French translation ("He knew words alone would never sway the masses. He chose to do something drastic.")
+ * - Missing fight start line in 6-2
  * 
  * */
 

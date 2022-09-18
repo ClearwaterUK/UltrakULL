@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
+using UltrakULL.json;
+
 namespace UltrakULL
 {
     class StyleBonusStrings
@@ -22,62 +24,63 @@ namespace UltrakULL
             return ("");
         }
 
-        public string getStyleBonusDictionary(string inputBonus)
+        public string getStyleBonusDictionary(string inputBonus,JsonParser language)
         {
+
             string regexinput = Regex.Replace(inputBonus, @"<[^>]*>", "");
             
             switch(inputBonus)
             {
-                case "ultrakill.airslam": { return "<color=cyan>ÉCRASEMENT DANS L'AIR</color>"; }
-                case "ultrakill.airshot": { return "DANS L'AIR"; }
-                case "ultrakill.attripator": { return "<color=cyan>ATTRACTEUR</color>"; }
-                case "ultrakill.arsenal": { return "<color=cyan>ARSENAL</color>"; }
-                case "ultrakill.bigheadshot": { return "GROS TUE EN PLEIN TÊTE"; }
-                case "ultrakill.bigkill": { return "GRAND TUE"; }
-                case "ultrakill.bigfistkill": { return "GRAND POIGNARD"; }
-                case "ultrakill.bipolar": { return "BIPOLAIRE"; }
-                case "ultrakill.cannonballed": { return "BOULE DE CANON"; }
-                case "ultrakill.catapaulted": { return "<color=cyan>CATAPAULTÉ</color>"; }
-                case "ultrakill.chargeback": { return "FACTURATION"; }
-                case "ultrakill.compressed": { return "COMPRIMÉ"; }
-                case "ultrakill.criticalpunch": { return "POIGNARD CRITIQUE"; }
-                case "ultrakill.disrespect": { return "MÉPRISAGE"; }
-                case "ultrakill.doublekill": { return "<color=orange>DOUBLE</color>"; }
-                case "ultrakill.downtosize": { return "<color=cyan>GROS RENVOI</color>"; }
-                case "ultrakill.enraged": { return "<color=red>ENRAGÉ</color>"; }
-                case "ultrakill.exploded": { return "EXPLOSÉ"; }
-                case "ultrakill.finishedoff": { return "<color=cyan>ACHÉVÉ</color>"; }
-                case "ultrakill.fireworks": { return "<color=cyan>FEU D'ARTIFICES</color>"; }
-                case "ultrakill.fistfullofdollar": { return "<color=cyan>POIGNÉE DE DOLLARS</color>"; }
-                case "ultrakill.fried": { return "GRILLÉ"; }
-                case "ultrakill.friendlyfire": { return "TIR AMICAL"; }
-                case "ultrakill.groundslam": { return "ÉCRASEMENT"; }
-                case "ultrakill.halfoff": { return "<color=cyan>EN MOITIÉ</color>"; }
-                case "ultrakill.headshot": { return "EN PLEIN TÊTE"; }
-                case "ultrakill.headshotcombo": { return "<color=cyan>EN PLEIN TÊTE</color>"; }
-                case "ultrakill.homerun": { return "COUP DE CIRCUIT"; }
-                case "ultrakill.instakill": { return "<color=lime>TUE INSTATANÉ</color>"; }
-                case "ultrakill.interruption": { return "<color=lime>INTERROMPU</color>"; }
-                case "ultrakill.kill": { return "TUÉ"; }
-                case "ultrakill.limbshot": { return "EN MEMBRE"; }
-                case "ultrakill.mauriced": { return "MAURICE"; }
-                case "ultrakill.multikill": { return "<color=orange>MULTI</color>"; }
-                case "ultrakill.nailbombed": { return "CLOUÉ"; }
-                case "ultrakill.nailbombedalive": { return "<color=grey>CLOUÉ</color>"; }
-                case "ultrakill.parry": { return "<color=lime>RENVOI</color>"; }
-                case "ultrakill.projectileboost": { return "<color=lime>BOOST PROJECTILE</color>"; }
-                case "ultrakill.quickdraw": { return "<color=cyan>AGILITÉ</color>"; }
-                case "ultrakill.ricoshot": { return "<color=cyan>RICOCHET</color>"; }
-                case "ultrakill.secret": { return "<color=cyan>SÉCRET</color>"; }
-                case "ultrakill.splattered": { return "ÉCLABOUSSÉ"; }
-                case "ultrakill.triplekill": { return "<color=orange>TRIPLE</color>"; }
+                case "ultrakill.airslam": { return "<color=cyan>" + language.currentLanguage.style.style_airslam + "</color>"; }
+                case "ultrakill.airshot": { return language.currentLanguage.style.style_airshot; }
+                case "ultrakill.attripator": { return "<color=cyan>" + language.currentLanguage.style.style_attraptor + "</color>"; }
+                case "ultrakill.arsenal": { return "<color=cyan>" + language.currentLanguage.style.style_arsenal + "</color>"; }
+                case "ultrakill.bigheadshot": { return language.currentLanguage.style.style_bigheadshot; }
+                case "ultrakill.bigkill": { return language.currentLanguage.style.style_bigkill; }
+                case "ultrakill.bigfistkill": { return language.currentLanguage.style.style_bigfistkill; }
+                case "ultrakill.bipolar": { return language.currentLanguage.style.style_bipolar; }
+                case "ultrakill.cannonballed": { return language.currentLanguage.style.style_cannonballed; }
+                case "ultrakill.catapaulted": { return "<color=cyan>" + language.currentLanguage.style.style_catapaulted + "</color>"; }
+                case "ultrakill.chargeback": { return language.currentLanguage.style.style_chargeback; }
+                case "ultrakill.compressed": { return language.currentLanguage.style.style_compressed; }
+                case "ultrakill.criticalpunch": { return language.currentLanguage.style.style_criticalpunch; }
+                case "ultrakill.disrespect": { return language.currentLanguage.style.style_disrespect; }
+                case "ultrakill.doublekill": { return "<color=orange>" + language.currentLanguage.style.style_doublekill + "</color>"; }
+                case "ultrakill.downtosize": { return "<color=cyan>" + language.currentLanguage.style.style_downtosize + "</color>"; }
+                case "ultrakill.enraged": { return "<color=red>" + language.currentLanguage.style.style_enraged + "</color>"; }
+                case "ultrakill.exploded": { return language.currentLanguage.style.style_exploded; }
+                case "ultrakill.finishedoff": { return "<color=cyan>" + language.currentLanguage.style.style_finishedoff + "</color>"; }
+                case "ultrakill.fireworks": { return "<color=cyan>" + language.currentLanguage.style.style_fireworks + "</color>"; }
+                case "ultrakill.fistfullofdollar": { return "<color=cyan>" + language.currentLanguage.style.style_fistfulofdollar + "</color>"; }
+                case "ultrakill.fried": { return language.currentLanguage.style.style_fried; }
+                case "ultrakill.friendlyfire": { return language.currentLanguage.style.style_friendlyfire; }
+                case "ultrakill.groundslam": { return language.currentLanguage.style.style_groundslam; }
+                case "ultrakill.halfoff": { return "<color=cyan>" + language.currentLanguage.style.style_halfoff + "</color>"; }
+                case "ultrakill.headshot": { return language.currentLanguage.style.style_headshot; }
+                case "ultrakill.headshotcombo": { return "<color=cyan>" + language.currentLanguage.style.style_headshot + "</color>"; }
+                case "ultrakill.homerun": { return language.currentLanguage.style.style_homerun; }
+                case "ultrakill.instakill": { return "<color=lime>" + language.currentLanguage.style.style_instakill + "</color>"; }
+                case "ultrakill.interruption": { return "<color=lime>" + language.currentLanguage.style.style_interruption + "</color>"; }
+                case "ultrakill.kill": { return language.currentLanguage.style.style_kill; }
+                case "ultrakill.limbshot": { return language.currentLanguage.style.style_limbshot; }
+                case "ultrakill.mauriced": { return language.currentLanguage.style.style_mauriced; }
+                case "ultrakill.multikill": { return "<color=orange>" + language.currentLanguage.style.style_multikill + "</color>"; }
+                case "ultrakill.nailbombed": { return language.currentLanguage.style.style_nailbombed; }
+                case "ultrakill.nailbombedalive": { return "<color=grey>" + language.currentLanguage.style.style_nailbombed + "</color>"; }
+                case "ultrakill.parry": { return "<color=lime>" + language.currentLanguage.style.style_parry + "</color>"; }
+                case "ultrakill.projectileboost": { return "<color=lime>" + language.currentLanguage.style.style_projectileboost + "</color>"; }
+                case "ultrakill.quickdraw": { return "<color=cyan>" + language.currentLanguage.style.style_quickdraw + "</color>"; }
+                case "ultrakill.ricoshot": { return "<color=cyan>" + language.currentLanguage.style.style_ricoshot + "</color>"; }
+                case "ultrakill.secret": { return "<color=cyan>" + language.currentLanguage.style.style_secret + "</color>"; }
+                case "ultrakill.splattered": { return language.currentLanguage.style.style_splattered; }
+                case "ultrakill.triplekill": { return "<color=orange>" + language.currentLanguage.style.style_triplekill + "</color>"; }
 
                 default: return "";
 
             }
         }
 
-        public string getStyleBonus(bool isColor, string inputBonus)
+        public string getStyleBonus(bool isColor, string inputBonus,JsonParser language)
         {
 
             string regexinput = Regex.Replace(inputBonus, @"<[^>]*>", "");
@@ -85,36 +88,36 @@ namespace UltrakULL
             //Try and keep this alphabetical as it gets bigger over time.
                 switch (regexinput)
                 {
-                    case "CONDUCTOR": { return "CONDUCTEUR"; }
-                    case "CRUSHED": { return "ÉCRASÉ"; }
-                    case "FALL": { return "TOMBÉ"; }
-                    case "FRIED": { return "GRILLÉ"; }
-                    case "MINCED": { return "EMINCÉ"; }
-                    case "OUT OF BOUNDS": { return "HORS LIMITES"; }
-                    case "RICOSHOT": { return "RICOCHET"; }
-                    case "SHREDDED": { return "RÂPÉ"; }
-                    case "ZAPPED": { return "ZAPPÉ"; }
+                    case "CONDUCTOR": { return language.currentLanguage.style.style_conductor; }
+                    case "CRUSHED": { return language.currentLanguage.style.style_crushed; }
+                    case "FALL": { return language.currentLanguage.style.style_fall; }
+                    case "FRIED": { return language.currentLanguage.style.style_fried; }
+                    case "MINCED": { return language.currentLanguage.style.style_minced; }
+                    case "OUT OF BOUNDS": { return language.currentLanguage.style.style_outofbounds; }
+                    case "RICOSHOT": { return language.currentLanguage.style.style_ricoshot; }
+                    case "SHREDDED": { return language.currentLanguage.style.style_shredded; }
+                    case "ZAPPED": { return language.currentLanguage.style.style_zapped; }
                     default: { Console.WriteLine("Missing style translation: " + regexinput); return regexinput; }
              }
         }
 
-        public static string getTranslatedRankString(string inputString)
+        public static string getTranslatedRankString(string inputString,JsonParser language)
         {
             switch (inputString)
             {
-                case "Destructive": { return "Destructif"; }
-                case "Chaotic": { return "Chaotique"; }
-                case "Brutal": { return "Brutale"; }
-                case "Anarchic": { return "Anarchique"; }
-                case "Supreme": { return "Suprême"; }
-                case "SSadistic": { return "SSadistique"; }
-                case "SSShitstorm": { return "SSSanglant"; }
-                case "ULTRAKILL": { return "ULTRAKILL"; }
+                case "Destructive": { return language.currentLanguage.style.style_d; }
+                case "Chaotic": { return language.currentLanguage.style.style_c; }
+                case "Brutal": { return language.currentLanguage.style.style_b; }
+                case "Anarchic": { return language.currentLanguage.style.style_a; }
+                case "Supreme": { return language.currentLanguage.style.style_s; }
+                case "SSadistic": { return language.currentLanguage.style.style_ss; }
+                case "SSShitstorm": { return language.currentLanguage.style.style_sss; }
+                case "ULTRAKILL": { return language.currentLanguage.style.style_ultrakill; }
                 default: { return "Unknown"; }
             }
         }
 
-        public string getTranslatedStyleBonus(string inputBonus)
+        public string getTranslatedStyleBonus(string inputBonus,JsonParser language)
         {
             //Bonus string is split up into 3 parts: the opening color tag if there is one, the bonus name, and the closing color tag if there is one.
 
@@ -122,7 +125,7 @@ namespace UltrakULL
             bool hasColorTag = (inputBonus.Contains("<color="));
             string openingColorTag;
             string closingColorTag = "</color>";
-            string styleBonus = this.getStyleBonus(hasColorTag, inputBonus);
+            string styleBonus = this.getStyleBonus(hasColorTag, inputBonus,language);
 
             if (hasColorTag)
             {
@@ -136,14 +139,14 @@ namespace UltrakULL
             
         }
         
-        public static string getWeaponFreshness(StyleFreshnessState weaponState)
+        public static string getWeaponFreshness(StyleFreshnessState weaponState,JsonParser language)
         {
             switch(weaponState)
             {
-                case StyleFreshnessState.Fresh: { return "FRAIS: 1.50X"; }
-                case StyleFreshnessState.Used: { return "NEUF: 1.00X"; }
-                case StyleFreshnessState.Stale: { return "ANCIEN: 0.50X"; }
-                case StyleFreshnessState.Dull: { return "NUL: 0.00X"; }
+                case StyleFreshnessState.Fresh: { return language.currentLanguage.style.style_weaponFresh + ": 1.50X"; }
+                case StyleFreshnessState.Used: { return language.currentLanguage.style.style_weaponUsed + ": 1.00X"; }
+                case StyleFreshnessState.Stale: { return language.currentLanguage.style.style_weaponStale + ": 0.50X"; }
+                case StyleFreshnessState.Dull: { return language.currentLanguage.style.style_weaponDull + ": 0.00X"; }
                 default: { return "Unknown state"; }
             }
         }

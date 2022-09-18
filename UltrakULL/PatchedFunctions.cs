@@ -1229,17 +1229,17 @@ namespace UltrakULL
             
             if (___idNameDict.ContainsKey(id))
             {
-                __result = bonusStrings.getStyleBonusDictionary(id);
+                __result = bonusStrings.getStyleBonusDictionary(id,language);
                 return false;
             }
-            __result = bonusStrings.getTranslatedStyleBonus(id);
+            __result = bonusStrings.getTranslatedStyleBonus(id,language);
             return false;
         }
 
         public static bool UpdateFreshnessSlider_MyPatch(StyleHUD __instance, GunControl ___gc)
         {
             StyleFreshnessState freshnessState = __instance.GetFreshnessState(___gc.currentWeapon);
-            __instance.freshnessSliderText.text = StyleBonusStrings.getWeaponFreshness(freshnessState);
+            __instance.freshnessSliderText.text = StyleBonusStrings.getWeaponFreshness(freshnessState,language);
 
             return false;
         }
@@ -1679,7 +1679,7 @@ namespace UltrakULL
                 if (rankCachedActivity.Assets.SmallText != null && rankCachedActivity.Assets.SmallImage != null)
                 {
                     privateCachedActivity.Assets.SmallImage = rankCachedActivity.Assets.SmallImage;
-                    privateCachedActivity.Assets.SmallText = StyleBonusStrings.getTranslatedRankString(rankCachedActivity.Assets.SmallText);
+                    privateCachedActivity.Assets.SmallText = StyleBonusStrings.getTranslatedRankString(rankCachedActivity.Assets.SmallText,language);
                 }
 
                 if (privateCachedActivity.Assets.SmallText != null && privateCachedActivity.Assets.SmallImage != null)
@@ -1770,7 +1770,7 @@ namespace UltrakULL
                                                                                //privateCachedActivity.State = diffString; //UltrakuLL label
 
                 privateCachedActivity.Assets.SmallImage = rankCachedActivity.Assets.SmallImage;
-                privateCachedActivity.Assets.SmallText = StyleBonusStrings.getTranslatedRankString(rankCachedActivity.Assets.SmallText);
+                privateCachedActivity.Assets.SmallText = StyleBonusStrings.getTranslatedRankString(rankCachedActivity.Assets.SmallText,language);
 
             }
 

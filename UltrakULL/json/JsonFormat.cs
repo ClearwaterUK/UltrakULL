@@ -29,7 +29,78 @@ namespace UltrakULL.json
         public Book books;
         public VisualNovel visualnovel;
         public Subtitles subtitles;
+        public Style style;
         
+    }
+
+    public class Style
+    {
+        public string style_airslam;
+        public string style_airshot;
+        public string style_attraptor;
+        public string style_arsenal;
+        public string style_bigheadshot;
+        public string style_bigkill;
+        public string style_bigfistkill;
+        public string style_bipolar;
+        public string style_cannonballed;
+        public string style_catapaulted;
+        public string style_chargeback;
+        public string style_compressed;
+        public string style_criticalpunch;
+        public string style_disrespect;
+        public string style_doublekill;
+        public string style_downtosize;
+        public string style_enraged;
+        public string style_exploded;
+        public string style_finishedoff;
+        public string style_fireworks;
+        public string style_fistfulofdollar;
+        public string style_fried;
+        public string style_friendlyfire;
+        public string style_groundslam;
+        public string style_halfoff;
+        public string style_headshot;
+        public string style_headshotcombo;
+        public string style_homerun;
+        public string style_instakill;
+        public string style_interruption;
+        public string style_kill;
+        public string style_limbshot;
+        public string style_mauriced;
+        public string style_multikill;
+        public string style_nailbombed;
+        public string style_parry;
+        public string style_projectileboost;
+        public string style_quickdraw;
+        public string style_ricoshot;
+        public string style_secret;
+        public string style_splattered;
+        public string style_triplekill;
+
+        public string style_conductor;
+        public string style_crushed;
+        public string style_fall;
+        public string style_minced;
+        public string style_outofbounds;
+        public string style_shredded;
+        public string style_zapped;
+
+        public string style_d;
+        public string style_c;
+        public string style_b;
+        public string style_a;
+        public string style_s;
+        public string style_ss;
+        public string style_sss;
+        public string style_ultrakill;
+
+        public string style_weaponFresh;
+        public string style_weaponUsed;
+        public string style_weaponStale;
+        public string style_weaponDull;
+
+
     }
 
     public class Subtitles
