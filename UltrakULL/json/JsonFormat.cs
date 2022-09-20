@@ -961,6 +961,23 @@ namespace UltrakULL.json
         public string enemyname_somethingWicked;
         public string enemyname_fleshPrison;
         public string enemyname_minosPrime;
+
+        public string enemyname_boss_cerberus;
+        public string enemyname_boss_cancerousRodent;
+        public string enemyname_boss_veryCancerousRodent;
+        public string enemyname_boss_hideousMass;
+        public string enemyname_boss_swordsmachineAgony;
+        public string enemyname_boss_swordsmachineTundra;
+        public string enemyname_boss_corpseOfKingMinos;
+        public string enemyname_boss_gabriel;
+        public string enemyname_boss_insurrectionist;
+        public string enemyname_boss_mandalore;
+        public string enemyname_boss_v2;
+        public string enemyname_boss_ferryman;
+        public string enemyname_boss_leviathan;
+        public string enemyname_boss_insurrectionistRude;
+        public string enemyname_boss_insurrectionistAngry;
+        public string enemyname_boss_gabrielSecond;
     }
 
     public class Option

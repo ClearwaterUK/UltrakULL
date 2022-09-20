@@ -63,6 +63,7 @@ using UltrakULL.json;
  * - 2-S, minor issues to fix
  * - Act 2 intermission, missed a line in the French translation ("He knew words alone would never sway the masses. He chose to do something drastic.")
  * - Missing fight start line in 6-2
+ * - Missing 1-2 line
  * 
  * */
 

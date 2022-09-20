@@ -1062,7 +1062,7 @@ namespace UltrakULL
         public static bool CreateBossBar_MyPatch(string bossName, BossBarManager.HealthLayer[] healthLayers, ref BossHealthBarTemplate createdBossBar, ref Slider[] hpSliders, ref Slider[] hpAfterImages, ref GameObject bossBar, BossBarManager __instance, BossHealthBarTemplate ___template, BossBarManager.SliderLayer[] ___layers)
         {
             BossStrings bossNames = new BossStrings();
-            bossName = bossNames.getBossName(bossName);
+            bossName = bossNames.getBossName(bossName,language);
 
             Debug.Log("Creating boss bar for " + bossName);
             List<Slider> list = new List<Slider>();
