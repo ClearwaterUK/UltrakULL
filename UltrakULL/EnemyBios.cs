@@ -3,67 +3,68 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UltrakULL.json;
 
 namespace UltrakULL
 {
     class EnemyBios
     {
-        public string getName(string originalName)
+        public string getName(string originalName,JsonParser language)
         {
             switch (originalName)
             {
-                case "FILTH": { return "SALETÉ"; }
-                case "STRAY": { return "ERRANT"; }
-                case "SCHISM": { return "SCHISME"; }
-                case "SOLDIER": { return "SOLDAT"; }
-                case "THE CORPSE OF KING MINOS": { return "LE CADAVRE DU ROI MINOS"; }
-                case "STALKER": { return "TRAQUEUR"; }
-                case "INSURRECTIONIST": { return "INSURRECTIONISTE SISYPHEANE"; }
-                case "FERRYMAN": { return "NOCHER"; }
-                case "SWORDSMACHINE": { return "MACHINE À ÉPÉE"; }
-                case "DRONE": { return "DRONE"; }
-                case "STREETCLEANER": { return "NETTOYEUR"; }
+                case "FILTH": { return language.currentLanguage.enemyNames.enemyname_filth; }
+                case "STRAY": { return language.currentLanguage.enemyNames.enemyname_stray; }
+                case "SCHISM": { return language.currentLanguage.enemyNames.enemyname_schism; }
+                case "SOLDIER": { return language.currentLanguage.enemyNames.enemyname_soldier; }
+                case "THE CORPSE OF KING MINOS": { return language.currentLanguage.enemyNames.enemyname_minos; }
+                case "STALKER": { return language.currentLanguage.enemyNames.enemyname_stalker; }
+                case "INSURRECTIONIST": { return language.currentLanguage.enemyNames.enemyname_boss_insurrectionist; }
+                case "FERRYMAN": { return language.currentLanguage.enemyNames.enemyname_ferryman; }
+                case "SWORDSMACHINE": { return language.currentLanguage.enemyNames.enemyname_swordsmachine; }
+                case "DRONE": { return language.currentLanguage.enemyNames.enemyname_drone; }
+                case "STREETCLEANER": { return language.currentLanguage.enemyNames.enemyname_streetCleaner; }
                 case "V2 (2nd)": { return "V2 (2nde)"; }
-                case "V2": { return "V2"; }
-                case "SENTRY": { return "MITRAILLEUSE"; }
-                case "MINDFLAYER": { return "ILLITHID"; }
-                case "MALICIOUS FACE": { return "TÊTE MALICIEUX"; }
-                case "IDOL": { return "IDOLE"; }
-                case "LEVIATHAN": { return "LÉVIATHAN"; }
-                case "CERBERUS": { return "CERBÈRE"; }
-                case "HIDEOUS MASS": { return "MASSE HIDEUSE"; }
-                case "GABRIEL, JUDGE OF HELL": { return "GABRIEL, JUGE D'ENFER"; }
-                case "GABRIEL, APOSTATE OF HATE": { return "GABRIEL, APOSTAT DE HAINE"; }
-                case "VIRTUE": { return "VERTU"; }
-                case "SOMETHING WICKED": { return "QUELQUE MAUDIT"; }
-                case "FLESH PRISON": { return "PRISON DE CHAIR"; }
-                case "MINOS PRIME": { return "MINOS PRIME"; }
+                case "V2": { return language.currentLanguage.enemyNames.enemyname_v2; }
+                case "SENTRY": { return language.currentLanguage.enemyNames.enemyname_sentry; }
+                case "MINDFLAYER": { return language.currentLanguage.enemyNames.enemyname_mindFlayer; }
+                case "MALICIOUS FACE": { return language.currentLanguage.enemyNames.enemyname_malFace; }
+                case "IDOL": { return language.currentLanguage.enemyNames.enemyname_idol; }
+                case "LEVIATHAN": { return language.currentLanguage.enemyNames.enemyname_leviathan; }
+                case "CERBERUS": { return language.currentLanguage.enemyNames.enemyname_cerberus; }
+                case "HIDEOUS MASS": { return language.currentLanguage.enemyNames.enemyname_hideousMass; }
+                case "GABRIEL, JUDGE OF HELL": { return language.currentLanguage.enemyNames.enemyname_gabriel; }
+                case "GABRIEL, APOSTATE OF HATE": { return language.currentLanguage.enemyNames.enemyname_gabrielSecond; }
+                case "VIRTUE": { return language.currentLanguage.enemyNames.enemyname_virtue; }
+                case "SOMETHING WICKED": { return language.currentLanguage.enemyNames.enemyname_somethingWicked; }
+                case "FLESH PRISON": { return language.currentLanguage.enemyNames.enemyname_fleshPrison; }
+                case "MINOS PRIME": { return language.currentLanguage.enemyNames.enemyname_minosPrime; }
                 default: { Console.WriteLine(originalName); return "Untranslated"; }
             }
         }
 
-        public string getType(string originaltype)
+        public string getType(string originaltype,JsonParser language)
         {
             switch (originaltype)
             {
-                case "LESSER HUSK": { return "COQUE INFÈRIEURE"; }
-                case "GREATER HUSK": { return "COQUE SUPÉRIEURE"; }
-                case "SUPREME HUSK": { return "COQUE SUPRÊME"; }
+                case "LESSER HUSK": { return language.currentLanguage.enemyNames.enemyname_type_lesserHusk; }
+                case "GREATER HUSK": { return language.currentLanguage.enemyNames.enemyname_type_greaterHusk; }
+                case "SUPREME HUSK": { return language.currentLanguage.enemyNames.enemyname_type_supremeHusk; }
 
-                case "LESSER DEMON": { return "DÉMON INFÈRIEUR"; }
-                case "GREATER DEMON": { return "DÉMON SUPÉRIEUR"; }
-                case "SUPREME DEMON": { return "DÉMON SUPRÊME"; }
+                case "LESSER DEMON": { return language.currentLanguage.enemyNames.enemyname_type_lesserDemon; }
+                case "GREATER DEMON": { return language.currentLanguage.enemyNames.enemyname_type_greaterDemon; }
+                case "SUPREME DEMON": { return language.currentLanguage.enemyNames.enemyname_type_supremeDemon; }
 
-                case "LESSER MACHINE": { return "MACHINE INFÈRIEURE"; }
-                case "GREATER MACHINE": { return "MACHINE SUPÉRIEURE"; }
-                case "SUPREME MACHINE": { return "MACHINE SUPRÊME"; }
+                case "LESSER MACHINE": { return language.currentLanguage.enemyNames.enemyname_type_lesserMachine; }
+                case "GREATER MACHINE": { return language.currentLanguage.enemyNames.enemyname_type_greaterMachine; }
+                case "SUPREME MACHINE": { return language.currentLanguage.enemyNames.enemyname_type_supremeMachine; }
 
-                case "LESSER ANGEL": { return "ANGE INFÈRIEUR"; }
-                case "GREATER ANGEL": { return "ANGE SUPÉRIEUR"; }
-                case "SUPREME ANGEL": { return "ANGE SUPRÊME"; }
+                case "LESSER ANGEL": { return language.currentLanguage.enemyNames.enemyname_type_lesserAngel; }
+                case "GREATER ANGEL": { return language.currentLanguage.enemyNames.enemyname_type_greaterAngel; }
+                case "SUPREME ANGEL": { return language.currentLanguage.enemyNames.enemyname_type_supremeAngel; }
 
                 case "???": { return "???"; }
-                case "PRIME SOUL": { return "ÂME PRIME"; }
+                case "PRIME SOUL": { return language.currentLanguage.enemyNames.enemyname_type_primeSoul; }
                 default: { return "UNKNOWN"; }
             }
         }

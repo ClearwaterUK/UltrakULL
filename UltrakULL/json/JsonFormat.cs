@@ -978,6 +978,22 @@ namespace UltrakULL.json
         public string enemyname_boss_insurrectionistRude;
         public string enemyname_boss_insurrectionistAngry;
         public string enemyname_boss_gabrielSecond;
+
+
+        public string enemyname_type_lesserHusk;
+        public string enemyname_type_greaterHusk;
+        public string enemyname_type_supremeHusk;
+        public string enemyname_type_lesserDemon;
+        public string enemyname_type_greaterDemon;
+        public string enemyname_type_supremeDemon;
+        public string enemyname_type_lesserMachine;
+        public string enemyname_type_greaterMachine;
+        public string enemyname_type_supremeMachine;
+        public string enemyname_type_lesserAngel;
+        public string enemyname_type_greaterAngel;
+        public string enemyname_type_supremeAngel;
+        public string enemyname_type_primeSoul;
+
     }
 
     public class Option
@@ -1429,5 +1445,13 @@ namespace UltrakULL.json
         public string hellmap_climax;
 
         public string loading;
+
+        public string levelstats_time;
+        public string levelstats_kills;
+        public string levelstats_style;
+        public string levelstats_challenge;
+        public string levelstats_secrets;
+        public string levelstats_majorAssists;
+        public string levelstats_boxes;
     }
 }

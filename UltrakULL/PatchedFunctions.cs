@@ -1472,8 +1472,8 @@ namespace UltrakULL
 
                         EnemyBios enemyBios = new EnemyBios();
 
-                        string enemyName = enemyBios.getName(spawnableObject.objectName);
-                        string enemyType = enemyBios.getType(spawnableObject.type);
+                        string enemyName = enemyBios.getName(spawnableObject.objectName,language);
+                        string enemyType = enemyBios.getType(spawnableObject.type,language);
                         string enemyDescription = enemyBios.getDescription(spawnableObject.objectName);
                         string enemyStrategy = enemyBios.getStrategy(spawnableObject.objectName);
 

@@ -27,7 +27,7 @@ using UltrakULL.json;
  * 
  *  MAIN TODO LIST
  *  - Fill the JSON template and class as progress happens, moving hardcoded text out as it goes
- *  Boss name strings, cheat stuff, CG, enemy bios, misc HUD, level stats, anything in patchedFunctions,prelude
+ *  Cheat stuff, CG, enemy bios, misc HUD, anything in patchedFunctions,prelude
  *  
  *  - Error and exception handling
  *  Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
@@ -40,6 +40,8 @@ using UltrakULL.json;
  *  - Terminals before bosses in levels (could copy the shop that's in the start of each level)
  *  - Organise and refactor stuff, move functions to other files to declutter Main (Simplify getGameObjectChild and getTextFromgameObject in each file, take itfrom CommonFunctions) (Factorise the act classes with an interface?)
  *  Look into how I can do encoding for RTL languages such as Arabic
+ *  Port main class so it becomes a native UMM mod instead of BepInEx. With the way its structured, could be able to move config/lang files to same folder.
+ *
  *  
  *  BUGS AND QUIRKS TO FIX:
  *  
@@ -198,7 +200,7 @@ namespace UltrakULL
         
         public void patchLevelStats(ref GameObject coreGame)
         {
-            LevelStatWindow patchStats = new LevelStatWindow(ref coreGame);
+            LevelStatWindow patchStats = new LevelStatWindow(ref coreGame,this.jsonParser);
         }
 
         //Encapsulation function to patch all of the front end.
@@ -393,9 +395,9 @@ namespace UltrakULL
                         patchFrontEnd(frontEnd);
 
                         GameObject ultrakullLogo = GameObject.Instantiate(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Title"),"Text"), frontEnd.transform);
-                            ultrakullLogo.transform.localPosition = new Vector3(1100, -470, 0);
+                            ultrakullLogo.transform.localPosition = new Vector3(1100, -400, 0);
                             Text ultrakullLogoText = getTextfromGameObject(ultrakullLogo);
-                            ultrakullLogoText.text = "ultrakULL loaded.\nLocale: " + this.jsonParser.currentLanguage.metadata.langName;
+                            ultrakullLogoText.text = "ultrakULL loaded.\nLocale: " + this.jsonParser.currentLanguage.metadata.langName + "\nWIP build\nFor internal testing only";
                             ultrakullLogoText.alignment = TextAnchor.UpperLeft;
                             ultrakullLogoText.fontSize = 16;
                     }

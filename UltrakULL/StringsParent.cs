@@ -114,7 +114,7 @@ namespace UltrakULL
             string currentLevel = SceneManager.GetActiveScene().name;
 
             //***Prelude***
-            if (currentLevel.Contains("0-2") || currentLevel == "uk_construct")
+            if (currentLevel.Contains("0-2"))
             {
                 return(language.currentLanguage.levelTips.leveltips_preludeSecond1 + "\n\n"
                     + language.currentLanguage.levelTips.leveltips_preludeSecond2);
