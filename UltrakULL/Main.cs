@@ -28,6 +28,7 @@ using UltrakULL.json;
  *  MAIN TODO LIST
  *  - Fill the JSON template and class as progress happens, moving hardcoded text out as it goes
  *  Cheat stuff, CG, enemy bios, misc HUD, anything in patchedFunctions,prelude
+ *  Add ULL credits, translation credits and Discord link to main menu with help of UKUIHelper library
  *  
  *  - Error and exception handling
  *  Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
@@ -394,12 +395,26 @@ namespace UltrakULL
                         Logger.LogInfo("Hooked into front end, patching...");
                         patchFrontEnd(frontEnd);
 
+
+
+
                         GameObject ultrakullLogo = GameObject.Instantiate(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Title"),"Text"), frontEnd.transform);
                             ultrakullLogo.transform.localPosition = new Vector3(1100, -400, 0);
                             Text ultrakullLogoText = getTextfromGameObject(ultrakullLogo);
                             ultrakullLogoText.text = "ultrakULL loaded.\nLocale: " + this.jsonParser.currentLanguage.metadata.langName + "\nWIP build\nFor internal testing only";
                             ultrakullLogoText.alignment = TextAnchor.UpperLeft;
                             ultrakullLogoText.fontSize = 16;
+
+                        Logger.LogInfo("Trying to create Discord button");
+                        //GameObject ultrakULLDiscordButton = UKUIHelper.UIHelper.CreateButton();
+                        //ultrakULLDiscordButton.GetComponent<Text>().text = "UltrakULL Discord";
+                        GameObject mainMenuButtons = getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Panel");
+                        GameObject ultrakullDiscordButton = GameObject.Instantiate(getGameObjectChild(mainMenuButtons,"Discord"), mainMenuButtons.transform);
+                        ultrakullDiscordButton.SetActive(true);
+                        ultrakullDiscordButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(492f, -461f);
+                        ultrakullDiscordButton.GetComponentInChildren<Text>().text = "UltrakULL DISCORD";
+                        ultrakullDiscordButton.GetComponentInChildren<WebButton>().url = "https://discord.gg/ZB7jk6Djv5";
+                        Logger.LogInfo("Created");
                     }
                 }
                 else if (currentLevel.name.Contains("P-"))
