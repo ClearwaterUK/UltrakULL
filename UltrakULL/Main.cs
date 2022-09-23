@@ -27,9 +27,8 @@ using UltrakULL.json;
  * 
  *  MAIN TODO LIST
  *  - Fill the JSON template and class as progress happens, moving hardcoded text out as it goes
- *  Cheat stuff, CG, enemy bios, misc HUD, anything in patchedFunctions,prelude
+ *  Cheat stuff, CG, misc HUD, anything in patchedFunctions,prelude
  *  Add ULL credits, translation credits and Discord link to main menu with help of UKUIHelper library
- *  * Add V2 rematch to shop enemy names
  *  
  *  - Error and exception handling
  *  Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
@@ -164,7 +163,7 @@ namespace UltrakULL
         public void patchCheats(ref GameObject coreGame)
         {
             coreGame = GameObject.Find("Canvas");
-            Cheats cheats = new Cheats(ref coreGame);
+            Cheats cheats = new Cheats(ref coreGame,this.jsonParser) ;
         }
 
         public void patchDeathScreen(ref GameObject coreGame)

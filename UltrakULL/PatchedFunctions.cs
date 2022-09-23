@@ -46,8 +46,6 @@ namespace UltrakULL
         {
             __instance.oldWeaponState = !MonoSingleton<GunControl>.Instance.noWeapons;
             MonoSingleton<GunControl>.Instance.NoWeapon();
-            Console.WriteLine("Getting text from book ID: " + instanceId);
-            Console.WriteLine(text);
 
             ___readingText.text = Books.getBookText(language);
             ___currentBookId = instanceId;
@@ -1974,18 +1972,18 @@ namespace UltrakULL
         //Overrides the *private* UpdateCheatState function from the CheatsManager class for translating the cheat menu.
         public static bool UpdateCheatState_MyPatch(CheatMenuItem item, ICheat cheat, CheatsManager __instance, Color ___enabledColor, Color ___disabledColor)
         {
-            item.longName.text = Cheats.getCheatName(cheat.Identifier);
+            item.longName.text = Cheats.getCheatName(cheat.Identifier,language);
             item.stateBackground.color = (cheat.IsActive ? ___enabledColor : ___disabledColor);
 
-            string cheatDisabledStatus = Cheats.getCheatStatus(cheat.ButtonDisabledOverride); //Get it based on the identifier maybe?
-            string cheatEnabledStatus = Cheats.getCheatStatus(cheat.ButtonEnabledOverride);
+            string cheatDisabledStatus = Cheats.getCheatStatus(cheat.ButtonDisabledOverride,language);
+            string cheatEnabledStatus = Cheats.getCheatStatus(cheat.ButtonEnabledOverride,language);
 
-            item.stateText.text = (cheat.IsActive ? (cheatEnabledStatus ?? "ACTIVÉE") : (cheatDisabledStatus ?? "DÉSACTIVÉE")); //Cheat status
+            item.stateText.text = (cheat.IsActive ? (cheatEnabledStatus ?? language.currentLanguage.cheats.cheats_activated) : (cheatDisabledStatus ?? language.currentLanguage.cheats.cheats_deactivated)); //Cheat status
             item.bindButtonBack.gameObject.SetActive(false);
             string text = MonoSingleton<CheatBinds>.Instance.ResolveCheatKey(cheat.Identifier);
             if (string.IsNullOrEmpty(text))
             {
-                item.bindButtonText.text = "Appuyer sur une clé"; //Press to bind
+                item.bindButtonText.text = language.currentLanguage.cheats.cheats_pressToBind; //Press to bind
             }
             else
             {
@@ -1993,7 +1991,7 @@ namespace UltrakULL
             }
             GameObject parentResetButton = item.resetBindButton.gameObject;
             Text parentResetText = CommonFunctions.getTextfromGameObject(CommonFunctions.getGameObjectChild(parentResetButton, "Text"));
-            parentResetText.text = "SUPPRIMER";
+            parentResetText.text = language.currentLanguage.cheats.cheats_delete;
             __instance.RenderCheatsInfo();
             return false;
         }
@@ -2005,11 +2003,11 @@ namespace UltrakULL
             StringBuilder stringBuilder = new StringBuilder();
             if (MonoSingleton<SandboxNavmesh>.Instance && MonoSingleton<SandboxNavmesh>.Instance.isDirty)
             {
-                stringBuilder.AppendLine("<color=red>NAVMESH OUT OF DATE<size=12>\n(Rebuild navigation in cheats menu)</size>\n</color>");
+                stringBuilder.AppendLine(language.currentLanguage.cheats.cheats_navmeshOutdated1 + "\n\n" + language.currentLanguage.cheats.cheats_navmeshOutdated2);
             }
             if (__instance.GetCheatState("ultrakill.spawner-arm"))
             {
-                stringBuilder.AppendLine("<color=#C2D7FF>Bras de spawn dans endroit N°5\n</color>");
+                stringBuilder.AppendLine(language.currentLanguage.cheats.cheats_spawnerArmSlot);
             }
             foreach (KeyValuePair<string, List<ICheat>> keyValuePair in ___allRegisteredCheats)
             {
@@ -2026,7 +2024,7 @@ namespace UltrakULL
                     {
                         stringBuilder.Append("[ ] ");
                     }
-                    stringBuilder.Append("<color=white>" + Cheats.getCheatName(cheat2.Identifier) + "</color>\n");
+                    stringBuilder.Append("<color=white>" + Cheats.getCheatName(cheat2.Identifier,language) + "</color>\n");
                 }
             }
             MonoSingleton<CheatsController>.Instance.cheatsInfo.text = stringBuilder.ToString();

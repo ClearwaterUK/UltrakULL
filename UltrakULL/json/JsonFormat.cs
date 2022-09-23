@@ -31,8 +31,67 @@ namespace UltrakULL.json
         public Subtitles subtitles;
         public Style style;
         public EnemyBioStrings enemyBios;
+        public CheatStrings cheats;
         
     }
+
+    public class CheatStrings
+    {
+        public string cheats_disclaimer1;
+        public string cheats_disclaimer2;
+        public string cheats_disclaimerConfirm;
+        public string cheats_disclaimerYes;
+        public string cheats_disclaimerNo;
+
+        public string cheats_panelTitle;
+
+        public string cheats_cheatsEnabled;
+
+        public string cheats_keepEnabled;
+        public string cheats_spawnerArm;
+        public string cheats_teleportMenu;
+        public string cheats_fullBright;
+        public string cheats_noclip;
+        public string cheats_flight;
+        public string cheats_infiniteWallJumps;
+        public string cheats_noWeaponCooldown;
+        public string cheats_infinitePowerUps;
+        public string cheats_blindEnemies;
+        public string cheats_disableEnemySpawns;
+        public string cheats_invincibleEnemies;
+        public string cheats_killAllEnemies;
+        public string cheats_quickSave;
+        public string cheats_quickLoad;
+        public string cheats_saveMenu;
+        public string cheats_clear;
+        public string cheats_rebuildNav;
+        public string cheats_snapping;
+        public string cheats_physics;
+        public string cheats_crashMode;
+
+        public string cheats_stayActive;
+        public string cheats_disableOnReload;
+        public string cheats_equip;
+        public string cheats_remove;
+        public string cheats_open;
+        public string cheats_killAll;
+        public string cheats_static;
+        public string cheats_dynamic;
+        public string cheats_rebuild;
+        public string cheats_rebuilding;
+
+        public string cheats_activated;
+        public string cheats_deactivated;
+
+        public string cheats_pressToBind;
+        public string cheats_delete;
+
+        public string cheats_navmeshOutdated1;
+        public string cheats_navmeshOutdated2;
+
+        public string cheats_spawnerArmSlot;
+    }
+
 
     public class Style
     {

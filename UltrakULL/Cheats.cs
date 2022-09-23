@@ -12,6 +12,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using static UltrakULL.CommonFunctions;
+using UltrakULL.json;
 
 namespace UltrakULL
 {
@@ -19,47 +20,34 @@ namespace UltrakULL
     class Cheats
     {
 
-        public void patchCheatConsentPanel(ref GameObject coreGame)
+        public void patchCheatConsentPanel(ref GameObject coreGame,JsonParser language)
         {
-            //Code in this function is a bandaid solution to get stuff patched correctly in secret levels.
-            //I freakin hate it, it makes me cringe as much as anyone else who may eventually look at this, but if there's a better solution, then please let me know.
 
-           
-            GameObject canvas = GameObject.Find("Canvas");
+            GameObject canvas = getInactiveRootObject("Canvas");
 
-            List<GameObject> a = new List<GameObject>();
-            SceneManager.GetActiveScene().GetRootGameObjects(a);
-            Console.WriteLine(a.Count);
-            GameObject tst = null;
-            foreach (GameObject child in a)
-            {
-               if(child.name == "Canvas")
-                {
-                    tst = child;
-                }
-            }
-
-            GameObject cheatsConsentObject = getGameObjectChild(getGameObjectChild(getGameObjectChild(tst, "Cheat Menu"), "Cheats Consent"), "Panel");
+            GameObject cheatsConsentObject = getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas, "Cheat Menu"), "Cheats Consent"), "Panel");
 
             GameObject cheatsConsentTextObject = getGameObjectChild(cheatsConsentObject, "Text");
 
             //Consent window
             Text cheatsConsentText = getTextfromGameObject(getGameObjectChild(cheatsConsentObject, "Text"));
             cheatsConsentText.text =
-                "L'activation des codes de triche vous empêchera d'obtenir un rang à la fin du niveau, et désactivera les meilleurs scores au Cybergrind.\n\n" +
-                "<color=green>Appuyer sur</color> ~ <color=green>ou</color> HOME <color=green> après avoir activé les codes de triche pour activer le menu.</color>";
+                language.currentLanguage.cheats.cheats_disclaimer1 + "\n\n"
+                + language.currentLanguage.cheats.cheats_disclaimer2;
+
+
 
             Text cheatsConsentYesText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cheatsConsentObject, "Yes"), "Text"));
-            cheatsConsentYesText.text = "ACTIVER LES CODES DE TRICHE";
+            cheatsConsentYesText.text = language.currentLanguage.cheats.cheats_disclaimerYes;
             cheatsConsentYesText.fontSize = 22;
 
             Text cheatsConsentNoText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cheatsConsentObject, "No"), "Text"));
-            cheatsConsentNoText.text = "ANNULER";
+            cheatsConsentNoText.text = language.currentLanguage.cheats.cheats_disclaimerNo;
 
-            GameObject cheatsPanelObject = getGameObjectChild(getGameObjectChild(tst, "Cheat Menu"), "Cheats Manager");
+            GameObject cheatsPanelObject = getGameObjectChild(getGameObjectChild(canvas, "Cheat Menu"), "Cheats Manager");
 
             Text cheatsPanelObjectTitle = getTextfromGameObject(getGameObjectChild(cheatsPanelObject, "Title"));
-            cheatsPanelObjectTitle.text = "GESTION DES CODES DE TRICHES";
+            cheatsPanelObjectTitle.text = language.currentLanguage.cheats.cheats_panelTitle;
 
             //Need to disable the TextOverride component.
             Component[] test = cheatsConsentTextObject.GetComponents(typeof(Component));
@@ -67,76 +55,76 @@ namespace UltrakULL
             bhvr.enabled = false;
 
             //Cheat confirmation panel
-            GameObject cheatsEnabledConfirmationObject = CommonFunctions.getGameObjectChild(CommonFunctions.getGameObjectChild(CommonFunctions.getGameObjectChild(tst, "Cheat Menu"), "Cheats Overlay"),"Cheats Enabled");
+            GameObject cheatsEnabledConfirmationObject = CommonFunctions.getGameObjectChild(CommonFunctions.getGameObjectChild(CommonFunctions.getGameObjectChild(canvas, "Cheat Menu"), "Cheats Overlay"),"Cheats Enabled");
 
             Text cheatsEnabledConfirmationTitleText = CommonFunctions.getTextfromGameObject(CommonFunctions.getGameObjectChild(cheatsEnabledConfirmationObject, "Title"));
-            cheatsEnabledConfirmationTitleText.text = "<color=lime>TRICHES</color> ACTIVÉS :^)";
+            cheatsEnabledConfirmationTitleText.text = language.currentLanguage.cheats.cheats_cheatsEnabled;
 
             //Text cheatsEnabledConfirmationButtonsText = CommonFunctions.getTextfromGameObject(CommonFunctions.getGameObjectChild(cheatsEnabledConfirmationObject, "Details Tip"));
             //cheatsEnabledConfirmationButtonsText.text = "HOME ou ~";
         }
 
-        public static string getCheatStatus(string cheatStatus)
+        public static string getCheatStatus(string cheatStatus, JsonParser language)
         {
             if(cheatStatus == null) { return null; }
             else
             {
                 switch(cheatStatus)
                 {
-                    case "STAY ACTIVE": { return "GARDER ACTIVÉ"; }
-                    case "DISABLE ON RELOAD": { return "DÉSACTIVER SUR RECHARGEMENT"; }
-                    case "EQUIP": { return "ÉQUIPPER"; }
-                    case "REMOVE": { return "SUPPRIMER"; }
-                    case "OPEN": { return "OUVRIR"; }
-                    case "KILL ALL": { return "TUE TOUS"; }
-                    case "STATIC": { return "STATIQUE"; }
-                    case "DYNAMIC": { return "DYNAMIQUE"; }
-                    case "REBUILD": { return "RECONSTRUIRE"; }
-                    case "REBUILDING...": { return "EN COURS..."; }
+                    case "STAY ACTIVE": { return language.currentLanguage.cheats.cheats_stayActive; }
+                    case "DISABLE ON RELOAD": { return language.currentLanguage.cheats.cheats_disableOnReload; }
+                    case "EQUIP": { return language.currentLanguage.cheats.cheats_equip; }
+                    case "REMOVE": { return language.currentLanguage.cheats.cheats_remove; }
+                    case "OPEN": { return language.currentLanguage.cheats.cheats_open; }
+                    case "KILL ALL": { return language.currentLanguage.cheats.cheats_killAll; }
+                    case "STATIC": { return language.currentLanguage.cheats.cheats_static; }
+                    case "DYNAMIC": { return language.currentLanguage.cheats.cheats_dynamic; }
+                    case "REBUILD": { return language.currentLanguage.cheats.cheats_rebuild; }
+                    case "REBUILDING...": { return language.currentLanguage.cheats.cheats_rebuilding; }
                     default: { return null; }
                 }
             }
         }
 
-        public static string getCheatName(string cheatIdentifier)
+        public static string getCheatName(string cheatIdentifier,JsonParser language)
         {
             switch(cheatIdentifier)
             {
-                case "ultrakill.keep-enabled": { return "GARDER CODES DE TRICHES ACTIVÉS"; }
+                case "ultrakill.keep-enabled": { return language.currentLanguage.cheats.cheats_keepEnabled; }
 
-                case "ultrakill.spawner-arm": { return "BRAS DE SPAWN"; }
-                case "ultrakill.teleport-menu": { return "MENU TELEPORTATION"; }
-                case "ultrakill.full-bright": { return "LUMINOSITÉ MAXIMUM"; }
+                case "ultrakill.spawner-arm": { return language.currentLanguage.cheats.cheats_spawnerArm; }
+                case "ultrakill.teleport-menu": { return language.currentLanguage.cheats.cheats_teleportMenu; }
+                case "ultrakill.full-bright": { return language.currentLanguage.cheats.cheats_fullBright; }
 
-                case "ultrakill.noclip": { return "NOCLIP"; }
-                case "ultrakill.flight": { return "VOL"; }
-                case "ultrakill.infinite-wall-jumps": { return "SAUTS MURS INFINIS"; }
+                case "ultrakill.noclip": { return language.currentLanguage.cheats.cheats_noclip; }
+                case "ultrakill.flight": { return language.currentLanguage.cheats.cheats_flight; }
+                case "ultrakill.infinite-wall-jumps": { return language.currentLanguage.cheats.cheats_infiniteWallJumps; }
 
-                case "ultrakill.no-weapon-cooldown": { return "AUCUNE TEMPS DE RECHARGEMENT"; }
-                case "ultrakill.infinite-power-ups": { return "BONUS INFINIS"; }
+                case "ultrakill.no-weapon-cooldown": { return language.currentLanguage.cheats.cheats_noWeaponCooldown; }
+                case "ultrakill.infinite-power-ups": { return language.currentLanguage.cheats.cheats_infinitePowerUps; }
 
-                case "ultrakill.blind-enemies": { return "ENNEMIS AVEUGLES"; }
-                case "ultrakill.disable-enemy-spawns": { return "DÉSACTIVER LES ENNEMIS"; }
-                case "ultrakill.invincible-enemies": { return "ENNEMIS INVINCIBLES"; }
-                case "ultrakill.kill-all-enemies": { return "TUER TOUS LES ENNEMIS"; }
+                case "ultrakill.blind-enemies": { return language.currentLanguage.cheats.cheats_blindEnemies; }
+                case "ultrakill.disable-enemy-spawns": { return language.currentLanguage.cheats.cheats_disableEnemySpawns; }
+                case "ultrakill.invincible-enemies": { return language.currentLanguage.cheats.cheats_invincibleEnemies; }
+                case "ultrakill.kill-all-enemies": { return language.currentLanguage.cheats.cheats_killAllEnemies; }
 
-                case "ultrakill.sandbox.quick-save": { return "SAUVEGARDE RAPIDE"; }
-                case "ultrakill.sandbox.quick-load": { return "CHARGEMENT RAPIDE"; }
-                case "ultrakill.sandbox.save-menu": { return "GESTION DE SAUVEGARDES"; }
-                case "ultrakill.sandbox.clear": { return "EFFACER LA MAP"; }
-                case "ultrakill.sandbox.rebuild-nav": { return "NAVIGATION DES ENNEMIES"; }
-                case "ultrakill.sandbox.snapping": { return "COLLAGE DES OBJETS"; }
-                case "ultrakill.sandbox.physics": { return "PHYSIQUES DES OBJETS"; }
-                case "ultrakill.sandbox.crash-mode": { return "MODE CLASH"; }
+                case "ultrakill.sandbox.quick-save": { return language.currentLanguage.cheats.cheats_quickSave; }
+                case "ultrakill.sandbox.quick-load": { return language.currentLanguage.cheats.cheats_quickLoad; }
+                case "ultrakill.sandbox.save-menu": { return language.currentLanguage.cheats.cheats_saveMenu; }
+                case "ultrakill.sandbox.clear": { return language.currentLanguage.cheats.cheats_clear; }
+                case "ultrakill.sandbox.rebuild-nav": { return language.currentLanguage.cheats.cheats_rebuildNav; }
+                case "ultrakill.sandbox.snapping": { return language.currentLanguage.cheats.cheats_snapping; }
+                case "ultrakill.sandbox.physics": { return language.currentLanguage.cheats.cheats_physics; }
+                case "ultrakill.sandbox.crash-mode": { return language.currentLanguage.cheats.cheats_crashMode; }
 
             }
 
             return cheatIdentifier;
         }
 
-        public Cheats(ref GameObject coreGame)
+        public Cheats(ref GameObject coreGame,JsonParser language)
         {
-            this.patchCheatConsentPanel(ref coreGame);
+            this.patchCheatConsentPanel(ref coreGame,language);
 
         }
 
