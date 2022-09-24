@@ -32,7 +32,60 @@ namespace UltrakULL.json
         public Style style;
         public EnemyBioStrings enemyBios;
         public CheatStrings cheats;
+        public CG cyberGrind;
         
+    }
+    public class CG
+    {
+        public string cybergrind_currentWave;
+        public string cybergrind_enemiesRemaining;
+
+        public string cybergrind_wave;
+        public string cybergrind_kills;
+        public string cybergrind_style;
+        public string cybergrind_time;
+
+        public string cybergrind_cgTitle;
+        public string cybergrind_previousRun;
+        public string cybergrind_bestRun;
+
+        public string cybergrind_total;
+
+        public string cybergrind_connectingToSteam;
+
+        public string cybergrind_friendScores;
+        public string cybergrind_globalScores;
+
+        public string cybergrind_settings;
+        public string cybergrind_settingsDescription;
+        public string cybergrind_themes;
+        public string cybergrind_patterns;
+        public string cybergrind_waves;
+
+        public string cybergrind_themesTitle;
+        public string cybergrind_themesDescription;
+        public string cybergrind_themesLight;
+        public string cybergrind_themesDark;
+        public string cybergrind_themesCustom;
+        public string cybergrind_themesModify;
+
+        public string cybergrind_themesCustomGrid;
+        public string cybergrind_themesCustomGridGlow;
+        public string cybergrind_themesCustomSkybox;
+        public string cybergrind_themesCustomBack;
+        public string cybergrind_themesCustomReload;
+        public string cybergrind_themesCustomBase;
+        public string cybergrind_themesCustomTopRow;
+        public string cybergrind_themesCustomTop;
+        public string cybergrind_themesCustomGlowIntensity;
+
+        public string cybergrind_patternsTitle;
+        public string cybergrind_patternsRefresh;
+        public string cybergrind_patternsLaunchExternalEditor;
+
+        public string cybergrind_wavesTitle;
+        public string cybergrind_wavesDescription1;
+        public string cybergrind_wavesDescription2;
     }
 
     public class CheatStrings
@@ -1739,5 +1792,8 @@ namespace UltrakULL.json
         public string levelstats_secrets;
         public string levelstats_majorAssists;
         public string levelstats_boxes;
+
+        public string state_activated;
+        public string state_deactivated;
     }
 }

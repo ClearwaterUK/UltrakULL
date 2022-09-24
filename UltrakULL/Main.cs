@@ -27,7 +27,7 @@ using UltrakULL.json;
  * 
  *  MAIN TODO LIST
  *  - Fill the JSON template and class as progress happens, moving hardcoded text out as it goes
- *  Cheat stuff, CG, misc HUD, anything in patchedFunctions,prelude
+ *  CG, misc HUD, weapon lore, anything in patchedFunctions,prelude
  *  Add ULL credits, translation credits and Discord link to main menu with help of UKUIHelper library
  *  
  *  - Error and exception handling
@@ -534,7 +534,7 @@ namespace UltrakULL
                         else if (SceneManager.GetActiveScene().name.Contains("Endless"))
                         {
                             Logger.LogInfo("Currently in the Cyber Grind.");
-                            CyberGrind cybergrind = new CyberGrind(ref coreGame);
+                            CyberGrind cybergrind = new CyberGrind(ref coreGame,this.jsonParser);
                         }
                         //End of act intermission
                         else if (SceneManager.GetActiveScene().name.Contains("Intermission"))
