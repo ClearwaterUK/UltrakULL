@@ -11,6 +11,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Events;
+
 using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
 using System.Linq;
@@ -939,7 +940,7 @@ namespace UltrakULL
 
             if (___input == "")
             {
-                ___text.text = HUDMessages.getHUDToolTip(newmessage);
+                ___text.text = HUDMessages.getHUDToolTip(newmessage,language);
             }
             else
             {
@@ -961,7 +962,7 @@ namespace UltrakULL
                 {
                     str = keyCode.ToString();
                 }
-                ___text.text = HUDMessages.getHUDToolTip(newmessage) + str + ___message2;
+                ___text.text = HUDMessages.getHUDToolTip(newmessage,language) + str + ___message2;
             }
 
 

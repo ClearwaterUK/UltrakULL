@@ -20,14 +20,14 @@ using UltrakULL.json;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater
  *	Date started: 21st April 2021
- *	Last updated: 9th September 2022
+ *	Last updated: 24th September 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
  * 
  *  MAIN TODO LIST
  *  - Fill the JSON template and class as progress happens, moving hardcoded text out as it goes
- *  CG, misc HUD, weapon lore, anything in patchedFunctions,prelude
+ *  Misc HUD, weapon lore, anything in patchedFunctions,prelude
  *  Add ULL credits, translation credits and Discord link to main menu with help of UKUIHelper library
  *  
  *  - Error and exception handling
@@ -46,7 +46,6 @@ using UltrakULL.json;
  *  
  *  BUGS AND QUIRKS TO FIX:
  *  
- * - MEMORY LEAK THAT OCCURS OVER TIME IF YOU HOP IN AND OUT OF LEVELS. SHALL NEED TO MONITOR.
  * - Reexamine the intro text. See if I can get input working again, as well as shorten the 3 dots time based on the Act 2 update original code
  * - 2-S uses intermission style strings. Is there a way I can patch the text without having to patch the IntermissionController class?
  * - Some of the enemy bios as the INSURRECTIONIST and VIRTUE were updated, will need to retranslate and update on this end.
@@ -66,7 +65,6 @@ using UltrakULL.json;
  * - 2-S, minor issues to fix
  * - Act 2 intermission, missed a line in the French translation ("He knew words alone would never sway the masses. He chose to do something drastic.")
  * - Missing fight start line in 6-2
- * - Missing 1-2 line
  * 
  * */
 
@@ -399,9 +397,9 @@ namespace UltrakULL
 
 
                         GameObject ultrakullLogo = GameObject.Instantiate(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Title"),"Text"), frontEnd.transform);
-                            ultrakullLogo.transform.localPosition = new Vector3(1100, -400, 0);
+                            ultrakullLogo.transform.localPosition = new Vector3(1025, -425, 0);
                             Text ultrakullLogoText = getTextfromGameObject(ultrakullLogo);
-                            ultrakullLogoText.text = "ultrakULL loaded.\nLocale: " + this.jsonParser.currentLanguage.metadata.langName + "\nWIP build\nFor internal testing only";
+                            ultrakullLogoText.text = "ultrakULL loaded.\nVersion: " + pluginVersion + "\nLocale: " + this.jsonParser.currentLanguage.metadata.langName + "\nWIP build\nFor internal testing only";
                             ultrakullLogoText.alignment = TextAnchor.UpperLeft;
                             ultrakullLogoText.fontSize = 16;
 

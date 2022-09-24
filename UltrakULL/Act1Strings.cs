@@ -32,9 +32,14 @@ namespace UltrakULL
             return message + message2 + input;
         }
         //1-2 - The Burning World
-        //This level has no HUD box strings.
-        public string level12(string message, string message2, string input)
+        public string level12(string message, string message2, string input,JsonParser language)
         {
+            string fullMessage = message + message2;
+            a1StringsLogger.LogInfo(fullMessage);
+            if (fullMessage.Contains("BLUE"))
+            {
+                return language.currentLanguage.act1.act1_limboSecond_blueAttack;
+            }
             return "Unknown 1-2 string";
         }
         //1-3 - Hall Of Sacred Remains
@@ -169,7 +174,7 @@ namespace UltrakULL
                     }
                 case "Level 1-2":
                     {
-                        return this.level12(message, message2, input);
+                        return this.level12(message, message2, input, language);
                     }
                 case "Level 1-3":
                     {

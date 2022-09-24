@@ -1659,6 +1659,8 @@ namespace UltrakULL.json
         public string act1_limboFirst_nailgun2;
         public string act1_limboFirst_nailgun3;
 
+        public string act1_limboSecond_blueAttack;
+
         public string act1_limboThird_splitDoor1;
         public string act1_limboThird_splitDoor2;
 
@@ -1762,6 +1764,19 @@ namespace UltrakULL.json
 
     public class Misc
     {
+        public string hud_noArm1;
+        public string hud_noArm2;
+        public string hud_majorAssists;
+        public string hud_overhealOrb1;
+        public string hud_overhealOrb2;
+        public string hud_itemGrabError;
+        public string hud_levelStats1;
+        public string hud_levelStats2;
+        public string hud_outOfBounds;
+        public string hud_clashMode;
+        public string hud_weaponVariation;
+
+
         public string stats_time;
         public string stats_kills;
         public string stats_style;
