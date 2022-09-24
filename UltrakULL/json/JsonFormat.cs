@@ -1810,5 +1810,20 @@ namespace UltrakULL.json
 
         public string state_activated;
         public string state_deactivated;
+        public string state_yes;
+        public string state_no;
+
+        public string controls_leftClick;
+        public string controls_middleClick;
+        public string controls_rightClick;
+
+        public string endstats_cheatsUsed;
+        public string endstats_assistsUsed;
+        public string endstats_noRestarts;
+        public string endstats_restarts;
+        public string endstats_noDamage;
+
+        public string weapons_unavailable;
+        public string weapons_alreadyBought;
     }
 }

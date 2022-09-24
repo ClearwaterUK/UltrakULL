@@ -27,7 +27,7 @@ using UltrakULL.json;
  * 
  *  MAIN TODO LIST
  *  - Fill the JSON template and class as progress happens, moving hardcoded text out as it goes
- *  Misc HUD, weapon lore, anything in patchedFunctions,prelude
+ *  Weapon lore, anything in patchedFunctions,prelude
  *  Add ULL credits, translation credits and Discord link to main menu with help of UKUIHelper library
  *  
  *  - Error and exception handling

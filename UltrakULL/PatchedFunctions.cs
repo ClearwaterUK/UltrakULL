@@ -40,7 +40,6 @@ namespace UltrakULL
         public static StatsManager cachedStatsManager;
         public static bool cachedStatsReady;
 
-
         //@Override
         //Overrides ScanBook from the ScanningStuff class. Used to translate books found in some levels.
         public static bool ScanBook_MyPatch(string text, bool noScan, int instanceId, ScanningStuff __instance, Text ___readingText, int ___currentBookId, GameObject ___scanningPanel, GameObject ___readingPanel, bool ___scanning)
@@ -53,8 +52,8 @@ namespace UltrakULL
             ___scanningPanel.SetActive(false);
             ___readingPanel.SetActive(true);
             ___scanning = false;
-            return false;
 
+            return false;
         }
 
 
@@ -63,7 +62,6 @@ namespace UltrakULL
         public static bool Check_MyPatch(DifficultyTitle __instance, Text ___txt)
             {
                 int @int = MonoSingleton<PrefsManager>.Instance.GetInt("difficulty", 0);
-
                 MonoBehaviour mono = new MonoBehaviour();
 
                 if (___txt == null)
@@ -115,7 +113,6 @@ namespace UltrakULL
                             text7.text += language.currentLanguage.frontend.difficulty_umd;
                             break;
                         }
-
                 }
                 if (__instance.lines)
                 {
@@ -123,11 +120,6 @@ namespace UltrakULL
                     text8.text += " -- ";
                 }
                 return false;
-
-
-
-
-
             }
 
 
@@ -393,10 +385,8 @@ namespace UltrakULL
         //@Override
         //Overrides the NameAppear function from LevelSelectPopup. This allows changes level names to appear in-game.
         //By extension, showLayer and showName also need to be patched in here, as they're originally private functions.
-        //
         public static bool NameAppear_MyPatch(LevelNamePopup __instance, bool ___activated, AudioSource ___aud, string ___layerString, string ___nameString, bool ___fadingOut, Text[] ___layerText, Text[] ___nameText)
         {
-            //Put a function here later to get the translated layer/level.
             TitleManager titleManager = new TitleManager();
 
             //Layer string is composed of layer name - level *number*.
@@ -437,9 +427,7 @@ namespace UltrakULL
             }
 
             fadingOut = true;
-
             yield break;
-
         }
 
         public static IEnumerator showLayer(LevelNamePopup instance, string layerString, Text[] layerText, string nameString, Text[] nameText, AudioSource aud, bool fadingOut)
@@ -473,12 +461,10 @@ namespace UltrakULL
         //By extension, TextAppear, PlaceColor and DotsAppear will also need to be patched due to coroutine calls.
         public static bool IntroTextStart_MyPatch(IntroText __instance, Text ___txt, string ___fullString, AudioSource ___aud, StringBuilder ___sb, string ___tempString, bool ___doneWithDots, string ___colorString, bool ___readyToContinue, int ___calibrated, int ___dotsAmount, bool ___waitingForInput, List<int> ___colorsPositions, List<int> ___colorsClosePositions)
         {
-
             ___txt = __instance.GetComponent<Text>();
             ___aud = __instance.GetComponent<AudioSource>();
 
             TutorialStrings tutStrings = new TutorialStrings(language);
-
 
             //fullString is used twice:
             //once for the first page of the intro, and again for the second page.
@@ -497,9 +483,6 @@ namespace UltrakULL
                 ___fullString = tutStrings.introSecondPage;
             }
 
-            Console.WriteLine(___fullString);
-
-
             __instance.StartCoroutine(TextAppear(__instance, ___fullString, ___sb, ___txt, ___tempString, ___doneWithDots, ___readyToContinue, ___calibrated, ___dotsAmount, ___colorString, ___waitingForInput, ___aud, ___colorsPositions, ___colorsClosePositions));
 
             return false;
@@ -512,16 +495,16 @@ namespace UltrakULL
             {
                 ___txt.text = ___tempString;
                 ___aud.Play();
-                yield return new WaitForSecondsRealtime(0.25f);
+                yield return new WaitForSecondsRealtime(0.20f);
                 ___txt.text = ___tempString + ".";
                 ___aud.Play();
-                yield return new WaitForSecondsRealtime(0.25f);
+                yield return new WaitForSecondsRealtime(0.20f);
                 ___txt.text = ___tempString + "..";
                 ___aud.Play();
-                yield return new WaitForSecondsRealtime(0.25f);
+                yield return new WaitForSecondsRealtime(0.20f);
                 ___txt.text = ___tempString + "...";
                 ___aud.Play();
-                yield return new WaitForSecondsRealtime(0.25f);
+                yield return new WaitForSecondsRealtime(0.20f);
                 num = i;
             }
             doneWithDots = true;
@@ -540,7 +523,6 @@ namespace UltrakULL
             {
                 array[i].SetActive(false);
             }
-            Console.WriteLine("End of intro text. Level transition should happen here now");
         }
 
         public static void PlaceColor(int i, IntroText __instance, StringBuilder ___sb, string ___fullString, string ___colorString, List<int> ___colorsPositions)
@@ -555,22 +537,15 @@ namespace UltrakULL
 
         public static IEnumerator TextAppear(IntroText __instance, string ___fullString, StringBuilder ___sb, Text ___txt, string ___tempString, bool ___doneWithDots, bool ___readyToContinue, int ___calibrated, int ___dotsAmount, string ___colorString, bool ___waitingForInput, AudioSource ___aud, List<int> ___colorsPositions, List<int> ___colorsClosePositions)
         {
-
             int i = ___fullString.Length;
             int j = 0;
             while (j < i + 1)
             {
-                //Vanilla code makes a call for fullString.get_Chars(j).
-                //But get_Chars doesn't exist in C#. Here's an alternative.
+                //Vanilla code makes a call for fullString.get_Chars(j), but get_Chars doesn't exist in C#, so here's an alternative.
                 //Gets the first char of fullString as a char, and removes it via substring.
                 char c;
                 if (j == 0) { c = ___fullString[j]; }
                 else { c = ___fullString[j - 1]; }
-
-                //The game skips over chars, so it doesn't detect switch/escape sequences used by uncommon characters.
-                //k appears to be incremented twice on each pass instead of just once... this is causing the issue
-                //This line seems to be the culprit. I know what it does that causes the problem, but why is it causing a problem in the first place...?
-                //___fullString = ___fullString.Substring(1);
 
                 float waitTime = 0.030f;
                 bool playSound = true;
@@ -587,7 +562,6 @@ namespace UltrakULL
                                 {
                                     goto IL_82D;
                                 }
-
                                 //End of intro text here
                                 else if (c == '&')
                                 {
@@ -689,7 +663,6 @@ namespace UltrakULL
                             ___fullString = ___sb.ToString();
                             ___txt.text = ___fullString.Substring(0, j);
                             Over(__instance);
-
                         }
                         else
                         {
@@ -798,7 +771,6 @@ namespace UltrakULL
             //__instance.GetComponentInParent<IntroTextController>().introOver = true;
         }
 
-
         //@Override
         //Overrides the PlayMessage method from the HudMessage class. This is needed for swapping text in message boxes.
         public static bool PlayMessage_MyPatch(HudMessage __instance, bool ___activated, HudMessageReceiver ___messageHud, Text ___text, Image ___img)
@@ -807,7 +779,6 @@ namespace UltrakULL
             //One for messages that displays KeyCode inputs (for controls), and one that doesn't.
 
             //Get the string table based on the area of the game we're currently in.
-
             StringsParent lvlStrings = new StringsParent();
 
             ___activated = true;
@@ -815,14 +786,9 @@ namespace UltrakULL
             ___text = ___messageHud.text;
             if (__instance.input == "")
             {
-                //Messages that don't get input.
-
-                Console.Write("Non-input message: " + __instance.message);
-
                 string newMessage = lvlStrings.getMessage(__instance.message, __instance.message2, "", language);
 
                 ___text.text = newMessage;
-
             }
             else
             {
@@ -830,15 +796,15 @@ namespace UltrakULL
                 string controlButton;
                 if (keyCode == KeyCode.Mouse0)
                 {
-                    controlButton = "Clic gauche";
+                    controlButton = language.currentLanguage.misc.controls_leftClick;
                 }
                 else if (keyCode == KeyCode.Mouse1)
                 {
-                    controlButton = "Clic droit";
+                    controlButton = language.currentLanguage.misc.controls_rightClick;
                 }
                 else if (keyCode == KeyCode.Mouse2)
                 {
-                    controlButton = "Clic milieu";
+                    controlButton = language.currentLanguage.misc.controls_middleClick;
                 }
                 else
                 {
@@ -851,9 +817,7 @@ namespace UltrakULL
                 //Compare the start of the first message with the string table.
                 __instance.message = lvlStrings.getMessage(__instance.message, __instance.message2, controlButton.ToString(), language);
 
-
                 ___text.text = __instance.message;
-                Console.WriteLine("Text: " + ___text.text);
             }
             ___text.text = ___text.text.Replace('$', '\n');
             ___text.enabled = true;
@@ -875,38 +839,30 @@ namespace UltrakULL
             }
             if (__instance.timed && __instance.notOneTime)
             {
-                Console.WriteLine("Pre-invoking...");
                 __instance.CancelInvoke("Done");
                 __instance.StartCoroutine(clearTextBox(5f, ___text, ___img));
-
-
             }
             else if (__instance.timed)
             {
-                Console.WriteLine("Clearing...");
                 clearMessageBox(ref __instance, ref ___activated, ref ___img, ref ___text);
             }
             else
             {
-                Console.WriteLine("Deflect (begone) here");
                 clearMessageBox(ref __instance, ref ___activated, ref ___img, ref ___text);
             }
             ___messageHud.GetComponent<HudOpenEffect>().Force();
-
 
             return false;
         }
 
         public static void clearMessageBox(ref HudMessage __instance, ref bool ___activated, ref Image ___img, ref Text ___text)
         {
-            Console.WriteLine("Clearing message box...");
             currentTimedMessage = __instance;
             currentTimedMessageImg = ___img;
             currentTimedMessageText = ___text;
             currentTimedMessageActivated = ___activated;
 
             __instance.StartCoroutine(wait(5f));
-
         }
 
         public static IEnumerator clearTextBox(float seconds, Text text, Image img)
@@ -936,7 +892,6 @@ namespace UltrakULL
             ___input = newinput;
             ___message2 = newmessage2;
             ___noSound = silent;
-            Console.WriteLine("Invoking message");
 
             if (___input == "")
             {
@@ -948,15 +903,15 @@ namespace UltrakULL
                 string str;
                 if (keyCode == KeyCode.Mouse0)
                 {
-                    str = "Clic gauche";
+                    str = language.currentLanguage.misc.controls_leftClick;
                 }
                 else if (keyCode == KeyCode.Mouse1)
                 {
-                    str = "Clic droit";
+                    str = language.currentLanguage.misc.controls_middleClick;
                 }
                 else if (keyCode == KeyCode.Mouse2)
                 {
-                    str = "Clic milieu";
+                    str = language.currentLanguage.misc.controls_rightClick;
                 }
                 else
                 {
@@ -964,7 +919,6 @@ namespace UltrakULL
                 }
                 ___text.text = HUDMessages.getHUDToolTip(newmessage,language) + str + ___message2;
             }
-
 
             ___text.text = ___text.text.Replace('$', '\n');
             ___text.enabled = true;
@@ -977,7 +931,6 @@ namespace UltrakULL
             }
 
             __instance.StartCoroutine(clearTextBox(5f, ___text, ___img));
-
             return false;
         }
 
@@ -1003,12 +956,12 @@ namespace UltrakULL
             if (cheatsUsed)
             {
                 Text text = __instance.extraInfo;
-                text.text += "- <color=#44FF45>CODES DE TRICHES UTILISÉS </color>\n";
+                text.text += "- <color=#44FF45>" + language.currentLanguage.misc.endstats_cheatsUsed +"</color>\n";
             }
             if (majorUsed)
             {
                 Text text2 = __instance.extraInfo;
-                text2.text += "- <color=#4C99E6>ASSISTANCES MAJEURS UTILISÉS</color>\n";
+                text2.text += "- <color=#4C99E6>" + language.currentLanguage.misc.endstats_assistsUsed + "</color>\n";
                 ___majorAssists = true;
             }
             if (restarts == 0)
@@ -1016,12 +969,12 @@ namespace UltrakULL
                 if (num >= 3)
                 {
                     Text text3 = __instance.extraInfo;
-                    text3.text += "+ AUCUN RÉDEMARRAGE\n";
+                    text3.text += "+ " + language.currentLanguage.misc.endstats_noRestarts + "\n";
                 }
                 else
                 {
                     Text text4 = __instance.extraInfo;
-                    text4.text += "+ AUCUN RÉDEMARRAGE \n  (+500<color=orange>P</color>)\n";
+                    text4.text += "+ " + language.currentLanguage.misc.endstats_noRestarts + "\n  (+500<color=orange>P</color>)\n";
                 }
                 ___noRestarts = true;
             }
@@ -1033,7 +986,7 @@ namespace UltrakULL
                 text5.text,
                 "- <color=red>",
                 restarts,
-                "</color> RÉDEMARRAGES \n"
+                "</color> " + language.currentLanguage.misc.endstats_restarts +"\n"
                 });
             }
             if (!damage)
@@ -1041,17 +994,15 @@ namespace UltrakULL
                 if (num >= 3)
                 {
                     Text text6 = __instance.extraInfo;
-                    text6.text += "+ <color=orange>AUCUN DÉGÂT</color>\n";
+                    text6.text += "+ <color=orange>" + language.currentLanguage.misc.endstats_noDamage + "</color>\n";
                 }
                 else
                 {
                     Text text7 = __instance.extraInfo;
-                    text7.text += "+ <color=orange>AUCUN DÉGÂT\n  (</color>+5,000<color=orange>P)</color>\n";
+                    text7.text += "+ <color=orange>" + language.currentLanguage.misc.endstats_noDamage + "\n  (</color>+5,000<color=orange>P)</color>\n";
                 }
                 ___noDamage = true;
             }
-
-
             return false;
         }
 
@@ -1096,10 +1047,8 @@ namespace UltrakULL
             bossBar.SetActive(false);
             __instance.StartCoroutine(FitAsync(___template.transform.parent.GetComponent<RectTransform>()));
 
-
             return false;
         }
-
 
         public static IEnumerator FitAsync(RectTransform layoutRoot)
         {
@@ -1108,10 +1057,8 @@ namespace UltrakULL
             yield break;
         }
 
-
         //@Override
-        //Overrides the UpdateMoney method from the VariationInfo class. This is needed to patch the "ALREADY OWNED" string, and will save having to change every single
-        //seperate button containing this string in the shop.
+        //Overrides the UpdateMoney method from the VariationInfo class. This is needed to patch the "ALREADY OWNED" string, and will save having to change every single seperate button containing this string in the shop.
         public static bool UpdateMoney_MyPatch(VariationInfo __instance, int ___money, Text ___buttonText, Image ___equipImage, int ___equipStatus, bool ___alreadyOwned)
         {
             ___money = GameProgressSaver.GetMoney();
@@ -1124,7 +1071,7 @@ namespace UltrakULL
             {
                 if (__instance.cost < 0)
                 {
-                    __instance.costText.text = "<color=red>NON DISPONIBLE</color>";
+                    __instance.costText.text = "<color=red>" + language.currentLanguage.misc.weapons_unavailable + "</color>";
                     if (___buttonText == null)
                     {
                         ___buttonText = __instance.buyButton.GetComponentInChildren<Text>();
@@ -1166,7 +1113,7 @@ namespace UltrakULL
                 __instance.equipButton.gameObject.SetActive(false);
                 return false;
             }
-            __instance.costText.text = "DÉJÀ ACHETÉ";
+            __instance.costText.text = language.currentLanguage.misc.weapons_alreadyBought;
             if (___buttonText == null)
             {
                 ___buttonText = __instance.buyButton.GetComponentInChildren<Text>();
@@ -1221,7 +1168,6 @@ namespace UltrakULL
         {
             return true;
         }
-
         public static bool GetLocalizedName_MyPatch(string id, StyleHUD __instance, Dictionary<string,string> ___idNameDict, ref string __result)
         {
             StyleBonusStrings bonusStrings = new StyleBonusStrings();
@@ -1245,23 +1191,18 @@ namespace UltrakULL
 
         //@Override
         //Overrides the Start method from the IntermissionController class. This is needed to swap out strings on the act intermission screens.
-
         public static bool Start_MyPatch(IntermissionController __instance, string ___fullString, StringBuilder ___sb, Text ___txt, string ___tempString, bool ___skipToInput, bool ___waitingForInput, string ___preText, AudioSource ___aud, float ___origPitch)
         {
-
             ___txt = __instance.GetComponent<Text>();
             ___fullString = ___txt.text;
             ___txt.text = "";
             ___aud = __instance.GetComponent<AudioSource>();
             ___origPitch = ___aud.pitch;
 
-
             IntermissionStrings intStrings = new IntermissionStrings(language);
             ___fullString = intStrings.getIntermissionString(___fullString,language);
 
             __instance.StartCoroutine(TextAppearMain(__instance, ___fullString, ___sb, ___txt, ___tempString, ___skipToInput, ___waitingForInput, ___preText, ___aud, ___origPitch));
-
-
 
             return false;
         }
@@ -1303,7 +1244,6 @@ namespace UltrakULL
 
                             //The above works better than the below, but unable to speed up text.
                             //yield return new WaitForSecondsRealtime(0.8f);
-
                         }
                         else
                         {
@@ -1349,9 +1289,7 @@ namespace UltrakULL
                 unityEvent2.Invoke();
             }
             yield break;
-
         }
-
 
         public static IEnumerator IntermissionDotsAppear(IntermissionController __instance, bool waitingForInput, Text txt, string tempString)
         {
@@ -1372,34 +1310,6 @@ namespace UltrakULL
             }
             yield break;
         }
-
-        //@Override
-        //Overrides the DisplaySubtitle method from the SubtitleController class. This is used to swap out subtitle strings.
-        /*public static bool DisplaySubtitle_MyPatch(string caption, SubtitleController __instance, Subtitle ___subtitleLine, Subtitle ___previousSubtitle, Transform ___container)
-        {
-            SubtitleStrings subtitleStrings = new SubtitleStrings();
-            Console.WriteLine("In DisplaySubtitle with caption: \n " + caption);
-
-            if (!__instance.subtitlesEnabled)
-            {
-                return false;
-            }
-            Subtitle subtitle = UnityEngine.Object.Instantiate<Subtitle>(___subtitleLine, ___container, true);
-            subtitle.GetComponentInChildren<Text>().text = subtitleStrings.getSubtitle(caption);
-            subtitle.gameObject.SetActive(true);
-            if (!___previousSubtitle)
-            {
-                subtitle.ContinueChain();
-            }
-            else
-            {
-                ___previousSubtitle.nextInChain = subtitle;
-            }
-            ___previousSubtitle = subtitle;
-
-            return false;
-        }*/
-
 
         public static bool DisplaySubtitle_MyPatch(SubtitleController __instance, Subtitle ___subtitleLine, Transform ___container, Subtitle ___previousSubtitle, string caption, AudioSource audioSource = null)
         {
@@ -1427,7 +1337,6 @@ namespace UltrakULL
 
             return false;
         }
-
 
         //@Override
         //Overrides the UpdateInfo method from the EnemyInfoPage class. This is to allow swapping out of monster bios in the shop.
@@ -1468,7 +1377,6 @@ namespace UltrakULL
                     {
                         ___currentSpawnable = spawnableObject;
                         //Nest the original private DisplayInfo in here.
-
                         EnemyBios enemyBios = new EnemyBios();
 
                         string enemyName = enemyBios.getName(spawnableObject.objectName,language);
@@ -1551,7 +1459,6 @@ namespace UltrakULL
 
             return false;
         }
-
         public static string SaveToString(bool exists, int highestLvlNumber, int highestDifficulty)
         {
             if (!exists)
@@ -1618,7 +1525,6 @@ namespace UltrakULL
                 Start = start
             };
 
-
             ___activityManager.UpdateActivity(___cachedActivity, delegate (Discord.Result result)
             {
             });
@@ -1628,8 +1534,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the UpdateStyle function from the DiscordController class.
-        //Have to use AccessTools functions because for some reason using arguments causes illegal IL
-        //code errors.
+        //Have to use AccessTools functions because for some reason using arguments causes illegal IL code errors.
         public static bool UpdateStyle_MyPatch(int points, DiscordController __instance)
         {
             DiscordController privateInstance = (DiscordController)AccessTools.Field(typeof(DiscordController), "Instance").GetValue(__instance);
@@ -1661,7 +1566,6 @@ namespace UltrakULL
                 case 5: { diffString += language.currentLanguage.frontend.difficulty_umd; break; }
                 default: { diffString += "UNKNOWN"; break; }
             }
-
 
             StockMapInfo instance = StockMapInfo.Instance;
             if (instance)
@@ -1728,7 +1632,6 @@ namespace UltrakULL
             rankCachedActivity.Assets.SmallText = privateRankIcons[rank].Text;
             rankCachedActivity.Assets.SmallImage = privateRankIcons[rank].Image;
 
-
             return false;
         }
 
@@ -1743,7 +1646,6 @@ namespace UltrakULL
             Discord.ActivityManager privateActivityManager = (Discord.ActivityManager)AccessTools.Field(typeof(DiscordController), "activityManager").GetValue(privateInstance);
 
             int privatelastPoints = (int)AccessTools.Field(typeof(DiscordController), "lastPoints").GetValue(privateInstance);
-
 
             if (!DiscordController.Instance)
             {
@@ -1766,13 +1668,12 @@ namespace UltrakULL
 
                 privateCachedActivity.Assets.LargeText = currentLevel; //Level name
                 privateCachedActivity.Assets.LargeImage = levelInfo.LargeImage;//Level photo
-                                                                               //privateCachedActivity.State = diffString; //UltrakuLL label
+               //privateCachedActivity.State = diffString; //UltrakuLL label
 
                 privateCachedActivity.Assets.SmallImage = rankCachedActivity.Assets.SmallImage;
                 privateCachedActivity.Assets.SmallText = StyleBonusStrings.getTranslatedRankString(rankCachedActivity.Assets.SmallText,language);
 
             }
-
 
             privatelastPoints = wave;
             privateCachedActivity.Details = "VAGUE: " + wave;
@@ -1784,18 +1685,16 @@ namespace UltrakULL
             return false;
         }
 
-
         //@Override
         //Overrides the *private* Start function from the LevelStats class for the in-game level stats window.
         public static bool LevelStatsStart_MyPatch(LevelStats __instance, StatsManager ___sman, bool ___ready, float ___seconds, float ___minutes)
         {
-            Console.WriteLine("Entering Start of LevelStats");
             ___sman = MonoSingleton<StatsManager>.Instance;
             cachedStatsManager = MonoSingleton<StatsManager>.Instance;
             if (__instance.secretLevel)
             {
                 Console.WriteLine("Secret mission detected");
-                __instance.levelName.text = "SECRET MISSION";
+                __instance.levelName.text = language.currentLanguage.frontend.chapter_secretMission;
                 ___ready = true;
                 cachedStatsReady = true;
                 CheckStats_Defer(ref __instance, ref ___sman, ref ___seconds, ref ___minutes);
@@ -1837,8 +1736,6 @@ namespace UltrakULL
 
         public static void CheckStats_Defer(ref LevelStats instance, ref StatsManager sman, ref float seconds, ref float minutes)
         {
-            Console.WriteLine("CheckStats Defer");
-
 
             if (instance.time)
             {
@@ -1881,21 +1778,21 @@ namespace UltrakULL
             {
                 if (MonoSingleton<ChallengeManager>.Instance.challengeDone && !MonoSingleton<ChallengeManager>.Instance.challengeFailed)
                 {
-                    instance.challenge.text = "<color=#FFAF00>OUI</color>";
+                    instance.challenge.text = "<color=#FFAF00>" + language.currentLanguage.misc.state_yes + "</color>";
                 }
                 else
                 {
-                    instance.challenge.text = "NON";
+                    instance.challenge.text = language.currentLanguage.misc.state_no;
                 }
             }
             if (instance.majorAssists)
             {
                 if (sman.majorUsed)
                 {
-                    instance.majorAssists.text = "<color=#4C99E6>OUI</color>";
+                    instance.majorAssists.text = "<color=#4C99E6>" + language.currentLanguage.misc.state_yes + "</color>";
                     return;
                 }
-                instance.majorAssists.text = "NON";
+                instance.majorAssists.text = language.currentLanguage.misc.state_no;
             }
         }
 
@@ -1903,7 +1800,6 @@ namespace UltrakULL
         {
             if (cachedStatsReady)
             {
-
                 ___seconds = cachedStatsManager.seconds;
                 ___minutes = 0f;
                 while (___seconds >= 60f)
@@ -1942,32 +1838,25 @@ namespace UltrakULL
                 {
                     if (MonoSingleton<ChallengeManager>.Instance.challengeDone && !MonoSingleton<ChallengeManager>.Instance.challengeFailed)
                     {
-                        __instance.challenge.text = "<color=#FFAF00>OUI</color>";
+                        __instance.challenge.text = "<color=#FFAF00>" + language.currentLanguage.misc.state_yes + "</color>";
                     }
                     else
                     {
-                        __instance.challenge.text = "NON";
+                        __instance.challenge.text = language.currentLanguage.misc.state_no;
                     }
                 }
                 if (__instance.majorAssists)
                 {
                     if (cachedStatsManager.majorUsed)
                     {
-                        __instance.majorAssists.text = "<color=#4C99E6>OUI</color>";
+                        __instance.majorAssists.text = "<color=#4C99E6>" + language.currentLanguage.misc.state_yes +"</color>";
                         return false;
                     }
-                    __instance.majorAssists.text = "NON";
+                    __instance.majorAssists.text = language.currentLanguage.misc.state_no;
                 }
             }
-
-            else
-            {
-                Console.WriteLine("Not yet ready");
-            }
-
             return false;
         }
-
 
         //@Override
         //Overrides the *private* UpdateCheatState function from the CheatsManager class for translating the cheat menu.
@@ -2039,7 +1928,7 @@ namespace UltrakULL
             Debug.Log("Toggling custom patterns");
             bool customPatternMode = MonoSingleton<EndlessGrid>.Instance.customPatternMode;
             MonoSingleton<EndlessGrid>.Instance.customPatternMode = !customPatternMode;
-            ___stateButtonText.text = (customPatternMode ? "DÉSACTIVÉE" : "ACTIVÉE");
+            ___stateButtonText.text = (customPatternMode ? language.currentLanguage.misc.state_activated : language.currentLanguage.misc.state_deactivated);
             GameObject gameObject = __instance.enableWhenCustom;
             if (gameObject != null)
             {
