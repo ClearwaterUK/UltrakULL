@@ -60,8 +60,9 @@ namespace UltrakULL.json
             }
             catch(Exception e)
             {
-                jsonLogger.LogWarning("An error occured, file not validated.");
-                Console.WriteLine(e.ToString());
+                jsonLogger.LogError("An error occured while validating. It's possible the language file is not correctly formatted in .json.\n"
+                    + "Please use https://jsonlint.com/ to make sure your .json file is correctly formatted!");
+                //Console.WriteLine(e.ToString());
                 return false;
             }
         }

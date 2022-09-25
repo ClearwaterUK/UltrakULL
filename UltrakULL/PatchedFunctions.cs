@@ -1483,12 +1483,49 @@ namespace UltrakULL
         }
 
         //@Override
+        //DiscordController->Update
+        public static bool DC_UpdateMyPatch(DiscordController __instance, bool ___disabled, Discord.Discord ___discord)
+        {
+            if (___discord == null || ___disabled)
+            {
+                Console.WriteLine("Null or disabled, exiting early");
+                return false;
+            }
+            try
+            {
+                ___discord.RunCallbacks();
+            }
+            catch (Exception e)
+            {
+                Debug.Log("Discord lost");
+                Debug.Log(e.ToString());
+                ___disabled = true;
+                //___discord.Dispose();
+            }
+            return false;
+        }
+
+        //@Override
         //Overrides the FetchSceneActivity function from the DiscordController class. This is to swap out strings in Discord Rich Presence.
         public static bool FetchSceneActivity_MyPatch(string scene, DiscordController __instance, DiscordController ___Instance, bool ___disabled, Discord.Discord ___discord, Discord.ActivityManager ___activityManager, Discord.Activity ___cachedActivity, SerializedActivityAssets ___missingActivityAssets)
         {
+            Console.WriteLine("Fetching scene activity");
+
             if (!___Instance || ___disabled || ___discord == null)
             {
                 Console.WriteLine("Pre-exiting");
+                if(!___Instance)
+                {
+                    Console.WriteLine("Instance is disabled");
+                }
+                if (___disabled)
+                {
+                    Console.WriteLine("Disabled is true");
+                }
+                if (___discord == null)
+                {
+                    Console.WriteLine("Discord instance is null");
+                }
                 return false;
             }
 
@@ -1507,6 +1544,10 @@ namespace UltrakULL
                 {
                     ___cachedActivity.Assets.LargeImage = ___missingActivityAssets.Deserialize().LargeImage;
                 }
+            }
+            else
+            {
+                Console.WriteLine("Instance is null, shouldn't be...");
             }
 
             ___cachedActivity.Assets.LargeText = LevelNames.getDiscordLevelName(SceneManager.GetActiveScene().name, language);

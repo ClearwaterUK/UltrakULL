@@ -9,20 +9,18 @@ namespace UltrakULL
 {
     class Prelude
     {
-
         public GameObject baseLevelObject;
 
-        public void patchOpeningCredits()
+        public void patchOpeningCredits(JsonParser language)
         {
             GameObject level = GameObject.Find("Canvas");
             GameObject openingCredsParent = getGameObjectChild(getGameObjectChild(level, "Canvas"), "HurtScreen");
 
             Text openingCredsFirst = getTextfromGameObject(getGameObjectChild(getGameObjectChild(openingCredsParent, "Text 1 Sound"), "Text (1)"));
-            openingCredsFirst.text = "<color=orange>NEW BLOOD</color> PRÉSENTE";
+            openingCredsFirst.text = language.currentLanguage.prelude.prelude_first_openingCredits1;
 
             Text openingCredsSecond = getTextfromGameObject(getGameObjectChild(getGameObjectChild(openingCredsParent, "Text 2 Sound"), "Text (2)"));
-            openingCredsSecond.text = "UN JEU DE ARSI '<color=orange>HAKITA</color>' PATALA";
-
+            openingCredsSecond.text = language.currentLanguage.prelude.prelude_first_openingCredits2;
         }
 
 
@@ -39,7 +37,7 @@ namespace UltrakULL
                 preludeLogger.LogInfo("In 0-1");
                 try
                 {
-                    this.patchOpeningCredits();
+                    this.patchOpeningCredits(language);
                 }
                 catch(Exception e)
                 {
@@ -53,10 +51,8 @@ namespace UltrakULL
             string levelName = preludeChallengeStrings.getLevelName(language);
             string levelChallenge = preludeChallengeStrings.getLevelChallenge(currentLevel, language);
 
-
             patchResultsScreen(levelName,levelChallenge,language);
 
         }
-
     }
 }

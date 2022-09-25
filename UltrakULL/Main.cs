@@ -27,7 +27,7 @@ using UltrakULL.json;
  * 
  *  MAIN TODO LIST
  *  - Fill the JSON template and class as progress happens, moving hardcoded text out as it goes
- *  Weapon lore, anything in patchedFunctions,prelude
+ *  Weapon lore
  *  Add ULL credits, translation credits and Discord link to main menu with help of UKUIHelper library
  *  
  *  - Error and exception handling
@@ -47,15 +47,15 @@ using UltrakULL.json;
  *  BUGS AND QUIRKS TO FIX:
  *  
  * - Reexamine the intro text. See if I can get input working again, as well as shorten the 3 dots time based on the Act 2 update original code
- * - 2-S uses intermission style strings. Is there a way I can patch the text without having to patch the IntermissionController class?
  * - Some of the enemy bios as the INSURRECTIONIST and VIRTUE were updated, will need to retranslate and update on this end.
  * - 2-S: See if I can rename Mirage's names.
  * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages
  * - Discord RPC: Style meter in CG
  * - Size/color tag isn't working on the prime testament
  * - Could be possible to swap out rank textures in HUD for translation. Shall look into later
- * - Put all the stuff that gets inactive GameObjects into a common function for code cleanup
  * - Move the loaded language class to a seperate class. Would make it easier to access instead of doing currentLanguage.language.etc...
+ * 
+ * - Discord RPC currently seems to be broken on my end as a whole, meaning I can't test Discord RPC in the mod (keeps throwing InternalError)
  * 
  * ACT 2 UPDATE DAMAGE REPORT
  * - Shop needs new stuff added - colors
@@ -290,6 +290,11 @@ namespace UltrakULL
             MethodInfo patchedUpdateSlotState = AccessTools.Method(typeof(PatchedFunctions), "UpdateSlotState_MyPatch");
             harmony.Patch(originalUpdateSlotState, new HarmonyMethod(patchedUpdateSlotState));
 
+            /*Logger.LogInfo("DiscordController->Update");
+            MethodInfo originalDiscordControllerUpdate = typeof(DiscordController).GetMethod("Update", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] {}, null);
+            MethodInfo patchedDiscordControllerUpdate = AccessTools.Method(typeof(PatchedFunctions), "DC_UpdateMyPatch");
+            harmony.Patch(originalDiscordControllerUpdate, new HarmonyMethod(patchedDiscordControllerUpdate));*/
+
             Logger.LogInfo("SaveSlotMenu->ClearSlot");
             MethodInfo originalClearSlot = typeof(SaveSlotMenu).GetMethod("ClearSlot", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { typeof(int) }, null);
             MethodInfo patchedClearSlot = AccessTools.Method(typeof(PatchedFunctions), "ClearSlot_MyPatch");
@@ -314,6 +319,10 @@ namespace UltrakULL
             MethodInfo originalUpdateWave = AccessTools.Method(typeof(DiscordController), "UpdateWave", new Type[] { typeof(int) });
             MethodInfo patchedUpdateWave = AccessTools.Method(typeof(PatchedFunctions), "UpdateWave_MyPatch");
             harmony.Patch(originalUpdateWave, new HarmonyMethod(patchedUpdateWave));
+
+
+
+
 
             Logger.LogInfo("HudMessageReciever->SendHudMessage");
             MethodInfo originalShowHudMessage = typeof(HudMessageReceiver).GetMethod("SendHudMessage");
@@ -365,7 +374,7 @@ namespace UltrakULL
             { 
                 Scene currentLevel = SceneManager.GetActiveScene();
                 string levelName = currentLevel.name;
-                Logger.LogInfo("Current scene: " + levelName);
+                //Logger.LogInfo("Current scene: " + levelName);
 
                 //Each scene (level) has an object called Canvas. Most game objects are there.
                 if (currentLevel.name == "Intro")
@@ -393,9 +402,6 @@ namespace UltrakULL
                         Logger.LogInfo("Hooked into front end, patching...");
                         patchFrontEnd(frontEnd);
 
-
-
-
                         GameObject ultrakullLogo = GameObject.Instantiate(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Title"),"Text"), frontEnd.transform);
                             ultrakullLogo.transform.localPosition = new Vector3(1025, -425, 0);
                             Text ultrakullLogoText = getTextfromGameObject(ultrakullLogo);
@@ -403,7 +409,7 @@ namespace UltrakULL
                             ultrakullLogoText.alignment = TextAnchor.UpperLeft;
                             ultrakullLogoText.fontSize = 16;
 
-                        Logger.LogInfo("Trying to create Discord button");
+                        //Logger.LogInfo("Trying to create Discord button");
                         //GameObject ultrakULLDiscordButton = UKUIHelper.UIHelper.CreateButton();
                         //ultrakULLDiscordButton.GetComponent<Text>().text = "UltrakULL Discord";
                         GameObject mainMenuButtons = getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Panel");
@@ -412,7 +418,7 @@ namespace UltrakULL
                         ultrakullDiscordButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(492f, -461f);
                         ultrakullDiscordButton.GetComponentInChildren<Text>().text = "UltrakULL DISCORD";
                         ultrakullDiscordButton.GetComponentInChildren<WebButton>().url = "https://discord.gg/ZB7jk6Djv5";
-                        Logger.LogInfo("Created");
+                        //Logger.LogInfo("Created");
                     }
                 }
                 else if (currentLevel.name.Contains("P-"))
