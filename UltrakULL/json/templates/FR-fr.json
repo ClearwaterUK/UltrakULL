@@ -5,7 +5,7 @@
 		"langVersion": "0.6"
 	},
 	"body": {
-		"bodyName": "Traduction française pour ULTRAKILL. Developpé par Clearwater, relectures et corrections par Frizou."
+		"bodyName": "Traduction française pour ULTRAKILL. Developpé par Clearwater; contributions, relectures et corrections par Frizou."
 	},
     
     "style":{
@@ -71,7 +71,7 @@
         "style_weaponFresh": "FRAIS",
         "style_weaponUsed": "NEUF",
         "style_weaponStale": "USÉ",
-        "style_weaponDull": "ENUILLANT"
+        "style_weaponDull": "ENNUYANT"
         
     },
     

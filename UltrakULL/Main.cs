@@ -61,7 +61,6 @@ using UltrakULL.json;
  * - Shop needs new stuff added - colors
  * 
  *  STUFF REPORTED BY ULL TEAM
- * - Rocket launcher lore missing strings
  * - 2-S, minor issues to fix
  * - Act 2 intermission, missed a line in the French translation ("He knew words alone would never sway the masses. He chose to do something drastic.")
  * - Missing fight start line in 6-2
