@@ -113,13 +113,12 @@ namespace UltrakULL
 
             this.act2IntermissionSecond =
                 language.currentLanguage.intermission.act2_intermission_second1 + " ▼}" + language.currentLanguage.intermission.act2_intermission_second2 + " ▼"
-                + language.currentLanguage.intermission.act2_intermission_second3 + " ▼" + language.currentLanguage.intermission.act2_intermission_second4
-                + " ▼" + language.currentLanguage.intermission.act2_intermission_second5
-                + " ▼\n"
+                + language.currentLanguage.intermission.act2_intermission_second3 + " ▼" + language.currentLanguage.intermission.act2_intermission_second4 + " ▼"
+                + language.currentLanguage.intermission.act2_intermission_second5 + " ▼\n\n"
                 + language.currentLanguage.intermission.act2_intermission_second6 + " ▼" + language.currentLanguage.intermission.act2_intermission_second7
-                + " ▼" + language.currentLanguage.intermission.act2_intermission_second8
-                + " ▼\n\n"
-                + language.currentLanguage.intermission.act2_intermission_second9 + " ▼" + language.currentLanguage.intermission.act2_intermission_second10 + " ▼";
+                + " ▼" + language.currentLanguage.intermission.act2_intermission_second8 + " ▼\n\n"
+                + language.currentLanguage.intermission.act2_intermission_second9 + " ▼\n\n"
+                + language.currentLanguage.intermission.act2_intermission_second10 + " ▼" + language.currentLanguage.intermission.act2_intermission_second11 + " ▼";
 
             this.act2IntermissionThird =
                 language.currentLanguage.intermission.act2_intermission_third1 + " ▼}" + language.currentLanguage.intermission.act2_intermission_third2

@@ -4,6 +4,7 @@ ADDED:
 enemyBios -> enemyBios_soldier_strategy3
 act2 -> act2_third_tombOfKings
 options -> controls_slot5
+intermission -> act2_intermission_second11
 
 MODIFIED:
 

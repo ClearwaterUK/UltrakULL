@@ -20,7 +20,7 @@ using UltrakULL.json;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater
  *	Date started: 21st April 2021
- *	Last updated: 24th September 2022
+ *	Last updated: 26th September 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
@@ -62,9 +62,6 @@ using UltrakULL.json;
  * 
  *  STUFF REPORTED BY ULL TEAM
  * - 2-S, minor issues to fix
- * - Act 2 intermission, missed a line in the French translation ("He knew words alone would never sway the masses. He chose to do something drastic.")
- * - Missing fight start line in 6-2
- * 
  * 
  *  FOR NEXT HOTFIX:
  * - Weird errors with patchCheatConsentPanel? getCheatName? Reported by Kiberkotleta (other people don't be seeming to have it)
