@@ -69,7 +69,7 @@ using UltrakULL.json;
  * 
  *  FOR NEXT HOTFIX:
  * - Weird errors with patchCheatConsentPanel? getCheatName? Reported by Kiberkotleta (other people don't be seeming to have it)
- * - 2-S: Split "Don't wanna" response into 2 paragraphs. Some conclusion/nihilism lines missing. Reported by Veni
+ * - 2-S: Some conclusion/nihilism lines missing. Reported by Veni
  * - Later down the line, do an English template so people aren't as confused as to what is what
  * 
  * 

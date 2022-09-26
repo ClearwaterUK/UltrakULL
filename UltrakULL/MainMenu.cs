@@ -165,7 +165,7 @@ namespace UltrakULL
                 //Violent title
                 GameObject violentObject = getGameObjectChild(difficultyObject, "Violent Info");
                 Text violentTitle = getTextfromGameObject(violentObject.transform.Find("Title (1)").gameObject);
-                standardTitle.text = jsonParser.currentLanguage.frontend.difficulty_violent;
+                violentTitle.text = jsonParser.currentLanguage.frontend.difficulty_violent;
 
                 //Violent descriptor
                 Text violentDescriptor = getTextfromGameObject(violentObject.transform.Find("Text").gameObject);

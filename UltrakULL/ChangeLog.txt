@@ -6,4 +6,5 @@
 - Fixed one of Gabe's defeat lines in 6-2 using a taunt line instead. (Reported by Timmy)
 - Fixed droning sound at start of 2-S not stopping at the correct moment. (Reported by Veni)
 - Fixed "Don't wanna" option using incorrect response strings in 2-S. (Reported by Veni)
+- Fixed the Violent title in the difficulty selection using the Standard title instead. (Reported by Timmy)
 Note: The moment the drone sound stops is not the exact same as in the vanilla game, but is at a place that is compatible with the .json language used.
