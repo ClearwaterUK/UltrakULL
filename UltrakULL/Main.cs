@@ -69,9 +69,7 @@ using UltrakULL.json;
  * 
  *  FOR NEXT HOTFIX:
  * - Weird errors with patchCheatConsentPanel? getCheatName? Reported by Kiberkotleta (other people don't be seeming to have it)
- * - Droning sound in 2-S intro that is supposed to play then stop - plays but doesn't stop. Reported by Veni (Missed a special char probably)
  * - 2-S: Split "Don't wanna" response into 2 paragraphs. Some conclusion/nihilism lines missing. Reported by Veni
- * - 6-2: One taunt line being used as another. Reported by Timmy
  * - Later down the line, do an English template so people aren't as confused as to what is what
  * 
  * 

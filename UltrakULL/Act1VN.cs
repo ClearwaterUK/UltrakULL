@@ -20,6 +20,7 @@ namespace UltrakULL
     {
         //Import symbols to use
         //▼ - Denotes pause
+        //} - stops droning noise that is present at the start of the intro
         //
         //Intro strings
 
@@ -255,7 +256,7 @@ namespace UltrakULL
                     + language.currentLanguage.visualnovel.visualnovel_introSecond3 + "▼\n"
                     + language.currentLanguage.visualnovel.visualnovel_introSecond4 + "▼\n"
                     + language.currentLanguage.visualnovel.visualnovel_introSecond5
-                    + "▼\n\n"
+                    + "▼}\n\n"
                     + language.currentLanguage.visualnovel.visualnovel_introSecond6 + "▼\n"
                     + language.currentLanguage.visualnovel.visualnovel_introSecond7 + "▼\n"
                     + language.currentLanguage.visualnovel.visualnovel_introSecond8 + "▼";
