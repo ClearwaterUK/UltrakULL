@@ -2,6 +2,7 @@
 
 ADDED:
 enemyBios_soldier_strategy3
+act2_third_tombOfKings
 
 MODIFIED:
 

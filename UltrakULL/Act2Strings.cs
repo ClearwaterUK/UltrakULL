@@ -49,6 +49,10 @@ namespace UltrakULL
             {
                 return (language.currentLanguage.act2.act2_greedThird_troll2);
             }
+            if (fullMessage.Contains("TOMB"))
+            {
+                return (language.currentLanguage.act2.act2_greedThird_tombOfKings);
+            }
             return "Unknown 4-3 string";
         }
 

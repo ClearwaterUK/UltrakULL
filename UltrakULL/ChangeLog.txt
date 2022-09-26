@@ -1,3 +1,4 @@
 ﻿0.7.1
 
-- Added missing third line to Soldier strategy.
+- Added missing third line to Soldier strategy. (Reported by Edith)
+- Added missing "Tomb Of Kings" HUD message in 4-3. (Reported by Edith)

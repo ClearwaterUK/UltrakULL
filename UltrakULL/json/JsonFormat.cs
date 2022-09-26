@@ -1690,6 +1690,7 @@ namespace UltrakULL.json
 
         public string act2_greedThird_troll1;
         public string act2_greedThird_troll2;
+        public string act2_greedThird_tombOfKings;
 
         public string act2_greedFourth_v2;
         public string act2_greedFourth_whiplash1;

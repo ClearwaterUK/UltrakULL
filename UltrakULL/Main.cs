@@ -73,10 +73,7 @@ using UltrakULL.json;
  * - 2-S: Split "Don't wanna" response into 2 paragraphs. Some conclusion/nihilism lines missing. Reported by Veni
  * - 6-2: One taunt line being used as another. Reported by Timmy
  * - Need to add slot 6 to controls. reported by hebert
- * - 4-3 - Tomb of Kings string missing. Reported by Edith
- * - Grab updated version of French translation (thanks Frizou :D )
  * - Later down the line, do an English template so people aren't as confused as to what is what
- * - Add 3rd soldier strategy line to bio, reported by Edith
  * 
  * 
  * */
