@@ -97,6 +97,7 @@ namespace UltrakULL
                     case "RICOSHOT": { return language.currentLanguage.style.style_ricoshot; }
                     case "SHREDDED": { return language.currentLanguage.style.style_shredded; }
                     case "ZAPPED": { return language.currentLanguage.style.style_zapped; }
+                    case "": { return ""; }
                     default: { Console.WriteLine("Missing style translation: " + regexinput); return regexinput; }
              }
         }

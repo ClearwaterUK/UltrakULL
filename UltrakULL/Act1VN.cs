@@ -334,13 +334,13 @@ namespace UltrakULL
 
             if (inputString.Contains("WHAT?"))
             {
-                return language.currentLanguage.visualnovel.visualnovel_middleResponseFirst1 + "▼\n"
-                    + language.currentLanguage.visualnovel.visualnovel_middleResponseFirst2 + "▼";
+                return language.currentLanguage.visualnovel.visualnovel_middleResponseSecond1 + "▼\n"
+                    + language.currentLanguage.visualnovel.visualnovel_middleResponseSecond2 + "▼";
             }
             if (inputString.Contains("If you DON'T"))
             {
-                return language.currentLanguage.visualnovel.visualnovel_middleResponseSecond1 + "▼\n"
-                    + language.currentLanguage.visualnovel.visualnovel_middleResponseSecond2 + "▼";
+                return language.currentLanguage.visualnovel.visualnovel_middleResponseSecond3 + "▼\n"
+                    + language.currentLanguage.visualnovel.visualnovel_middleResponseSecond4 + "▼";
             }
 
             if (inputString.Contains("Bullshit!"))
