@@ -516,7 +516,7 @@ namespace UltrakULL
             {
                 return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt10;
             }
-            if (input.Contains("I've never"))
+            if (input.Contains("I've never had"))
             {
                 return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt11;
             }

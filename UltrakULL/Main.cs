@@ -72,7 +72,6 @@ using UltrakULL.json;
  * - Droning sound in 2-S intro that is supposed to play then stop - plays but doesn't stop. Reported by Veni (Missed a special char probably)
  * - 2-S: Split "Don't wanna" response into 2 paragraphs. Some conclusion/nihilism lines missing. Reported by Veni
  * - 6-2: One taunt line being used as another. Reported by Timmy
- * - Need to add slot 6 to controls. reported by hebert
  * - Later down the line, do an English template so people aren't as confused as to what is what
  * 
  * 
