@@ -247,6 +247,7 @@ namespace UltrakULL.json
 
         public string enemyBios_soldier_strategy1;
         public string enemyBios_soldier_strategy2;
+        public string enemyBios_soldier_strategy3;
 
         public string enemyBios_ferryman_1;
         public string enemyBios_ferryman_2;

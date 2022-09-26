@@ -1,0 +1,3 @@
+﻿0.7.1
+
+- Added missing third line to Soldier strategy.
