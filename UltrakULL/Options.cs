@@ -245,6 +245,9 @@ namespace UltrakULL
                 Text slot4Text = getTextfromGameObject(getGameObjectChild(getGameObjectChild(weaponSettings, "Slot 4"), "Text"));
                 slot4Text.text = language.currentLanguage.options.controls_slot4;
 
+                Text slot5Text = getTextfromGameObject(getGameObjectChild(getGameObjectChild(weaponSettings, "Slot 5"), "Text"));
+                slot5Text.text = language.currentLanguage.options.controls_slot5;
+
 
                 GameObject mouseWheelSettings = getGameObjectChild(weaponSettings, "Mouse Wheel Settings");
 

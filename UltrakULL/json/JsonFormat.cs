@@ -1387,6 +1387,7 @@ namespace UltrakULL.json
         public string controls_slot2;
         public string controls_slot3;
         public string controls_slot4;
+        public string controls_slot5;
         public string controls_scrollType;
         public string controls_scrollTypeWeapons;
         public string controls_scrollTypeVariations;

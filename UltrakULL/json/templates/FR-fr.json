@@ -574,6 +574,7 @@
 		"controls_slot2": "SLOT 2",
 		"controls_slot3": "SLOT 3",
 		"controls_slot4": "SLOT 4",
+        "controls_slot5": "SLOT 5",
 		"controls_scrollType": "TYPE DE SÉLECTION",
 		"controls_scrollTypeWeapons": "ARMES",
 		"controls_scrollTypeVariations": "VARIATIONS",

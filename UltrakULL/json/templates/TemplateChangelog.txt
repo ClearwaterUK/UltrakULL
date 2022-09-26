@@ -1,8 +1,9 @@
 ﻿0.7.1:
 
 ADDED:
-enemyBios_soldier_strategy3
-act2_third_tombOfKings
+enemyBios -> enemyBios_soldier_strategy3
+act2 -> act2_third_tombOfKings
+options -> controls_slot5
 
 MODIFIED:
 
