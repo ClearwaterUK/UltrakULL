@@ -131,7 +131,7 @@ namespace UltrakULL.json
             }
             else
             {
-                jsonLogger.LogError("Language file " + this.cfgLastLanguage.Value + " does not exist.");
+                jsonLogger.LogError("Language file " + this.cfgLastLanguage.Value + ".json does not exist.");
                 return false;
             }
         }

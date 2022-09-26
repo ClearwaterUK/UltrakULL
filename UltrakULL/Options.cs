@@ -17,6 +17,86 @@ namespace UltrakULL
     {
         public GameObject optionsMenu;
 
+
+        public void patchGeneralOptions(GameObject generalOptions, JsonParser language)
+        {
+            //General options
+            Text generalText = getTextfromGameObject(getGameObjectChild(generalOptions, "Text"));
+            generalText.text = "--" + language.currentLanguage.options.category_general + "--";
+
+            GameObject generalContent = getGameObjectChild(getGameObjectChild(generalOptions, "Scroll Rect (1)"), "Contents");
+
+            Text mouseSensitivityText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Mouse Sensitivity"), "Text"));
+            mouseSensitivityText.text = language.currentLanguage.options.general_mouseSensitivity;
+
+            Text invertXAxisText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Invert Axis"), "Text"));
+            invertXAxisText.text = language.currentLanguage.options.general_xInversion;
+
+            Text invertYAxisText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Invert Axis"), "Text (1)"));
+            invertYAxisText.text = language.currentLanguage.options.general_yInversion;
+
+            Text fovText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "FOV"), "Text"));
+            fovText.text = language.currentLanguage.options.general_fieldOfVision;
+
+            Text weaponPosText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Weapon Position"), "Text"));
+            weaponPosText.text = language.currentLanguage.options.general_weaponPosition;
+
+
+            //Have to patch directly from the Dropdown.OptionData list.
+            GameObject weaponPosList = getGameObjectChild(getGameObjectChild(generalContent, "Weapon Position"), "Dropdown");
+            Dropdown weaponPosDropdown = weaponPosList.GetComponent<Dropdown>();
+            System.Collections.Generic.List<Dropdown.OptionData> weaponPosListText = weaponPosDropdown.options;
+            weaponPosListText[0].text = language.currentLanguage.options.general_weaponPositionRight;
+            weaponPosListText[1].text = language.currentLanguage.options.general_weaponPositionMiddle;
+            weaponPosListText[2].text = language.currentLanguage.options.general_weaponPositionLeft;
+
+            Text rememberWeaponText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Variation Memory"), "Text"));
+            rememberWeaponText.text = language.currentLanguage.options.general_rememberWeapon;
+
+            Text screenshakeText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Screenshake"), "Text"));
+            screenshakeText.text = language.currentLanguage.options.general_screenShake;
+
+            Text restartWarningText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Restart Warning"), "Text"));
+            restartWarningText.text = language.currentLanguage.options.general_restartWarning;
+
+            Text cameraTiltText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Camera Tilt"), "Text"));
+            cameraTiltText.text = language.currentLanguage.options.general_cameraTilt;
+
+            Text discordText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Discord Integration"), "Text"));
+            discordText.text = language.currentLanguage.options.general_discordRpc;
+
+            Text seasonEventText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Seasonal Events"), "Text"));
+            seasonEventText.text = language.currentLanguage.options.general_seasonalEvent;
+        }
+        public void patchControlOptions(GameObject optionsMenu, JsonParser language)
+        {
+
+        }
+        public void patchGraphicsOptions(GameObject optionsMenu, JsonParser language)
+        {
+
+        }
+        public void patchAudioOptions(GameObject optionsMenu, JsonParser language)
+        {
+
+        }
+        public void patchHUDOptions(GameObject optionsMenu, JsonParser language)
+        {
+
+        }
+        public void patchAssistOptions(GameObject optionsMenu, JsonParser language)
+        {
+
+        }
+        public void patchColorsOptions(GameObject optionsMenu, JsonParser language)
+        {
+
+        }
+        public void patchSavesOptions(GameObject optionsMenu, JsonParser language)
+        {
+
+        }
+
         public void patchOptions(GameObject optionsMenu, JsonParser language)
         {
             //Best to divide each section into it's own function.
@@ -24,6 +104,8 @@ namespace UltrakULL
 
             if (optionsMenu != null)
             {
+
+
                 GameObject generalOptions = getGameObjectChild(optionsMenu, "Gameplay Options");
                 GameObject controlOptions = getGameObjectChild(optionsMenu, "Controls Options");
                 GameObject graphicsOptions = getGameObjectChild(optionsMenu, "Video Options");
@@ -65,53 +147,23 @@ namespace UltrakULL
                 Text savesButton = getTextfromGameObject(getGameObjectChild(getGameObjectChild(optionsMenu, "Saves"), "Text"));
                 savesButton.text = language.currentLanguage.options.category_saves;
 
-                //General options
-                Text generalText = getTextfromGameObject(getGameObjectChild(generalOptions,"Text"));
-                generalText.text = "--"+ language.currentLanguage.options.category_general+"--";
+                try
+                {
+                    this.patchGeneralOptions(generalOptions, language);
+                    this.patchControlOptions(controlOptions, language);
+                    this.patchGraphicsOptions(graphicsOptions, language);
+                    this.patchAudioOptions(audioOptions, language);
+                    this.patchHUDOptions(hudOptions, language);
+                    this.patchAssistOptions(assistOptions, language);
+                    this.patchColorsOptions(colorsOptions, language);
+                    this.patchSavesOptions(savesOptions, language);
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
 
-                GameObject generalContent = getGameObjectChild(getGameObjectChild(generalOptions, "Scroll Rect (1)"),"Contents");
-
-                Text mouseSensitivityText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Mouse Sensitivity"), "Text"));
-                mouseSensitivityText.text = language.currentLanguage.options.general_mouseSensitivity;
-
-                Text invertXAxisText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Invert Axis"), "Text"));
-                invertXAxisText.text = language.currentLanguage.options.general_xInversion;
-
-                Text invertYAxisText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Invert Axis"), "Text (1)"));
-                invertYAxisText.text = language.currentLanguage.options.general_yInversion;
-
-                Text fovText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "FOV"), "Text"));
-                fovText.text = language.currentLanguage.options.general_fieldOfVision;
-
-                Text weaponPosText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Weapon Position"), "Text"));
-                weaponPosText.text = language.currentLanguage.options.general_weaponPosition;
-
-
-                //Have to patch directly from the Dropdown.OptionData list.
-                GameObject weaponPosList = getGameObjectChild(getGameObjectChild(generalContent, "Weapon Position"), "Dropdown");
-                Dropdown weaponPosDropdown = weaponPosList.GetComponent<Dropdown>();
-                System.Collections.Generic.List<Dropdown.OptionData> weaponPosListText = weaponPosDropdown.options;
-                weaponPosListText[0].text = language.currentLanguage.options.general_weaponPositionRight;
-                weaponPosListText[1].text = language.currentLanguage.options.general_weaponPositionMiddle;
-                weaponPosListText[2].text = language.currentLanguage.options.general_weaponPositionLeft;
-
-                Text rememberWeaponText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Variation Memory"), "Text"));
-                rememberWeaponText.text = language.currentLanguage.options.general_rememberWeapon;
-
-                Text screenshakeText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Screenshake"), "Text"));
-                screenshakeText.text = language.currentLanguage.options.general_screenShake;
-
-                Text restartWarningText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Restart Warning"), "Text"));
-                restartWarningText.text = language.currentLanguage.options.general_restartWarning;
-
-                Text cameraTiltText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Camera Tilt"), "Text"));
-                cameraTiltText.text = language.currentLanguage.options.general_cameraTilt;
-
-                Text discordText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Discord Integration"), "Text"));
-                discordText.text = language.currentLanguage.options.general_discordRpc;
-
-                Text seasonEventText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Seasonal Events"), "Text"));
-                seasonEventText.text = language.currentLanguage.options.general_seasonalEvent;
+                
 
                 //Control options
 

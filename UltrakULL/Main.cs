@@ -27,7 +27,7 @@ using UltrakULL.json;
  * 
  *  MAIN TODO LIST
  *  - Fill the JSON template and class as progress happens, moving hardcoded text out as it goes
- *  Weapon lore
+ *  
  *  Add ULL credits, translation credits and Discord link to main menu with help of UKUIHelper library
  *  
  *  - Error and exception handling
@@ -60,11 +60,24 @@ using UltrakULL.json;
  * ACT 2 UPDATE DAMAGE REPORT
  * - Shop needs new stuff added - colors
  * 
- * - Stuff reported by ULL team:
+ *  STUFF REPORTED BY ULL TEAM
  * - Rocket launcher lore missing strings
  * - 2-S, minor issues to fix
  * - Act 2 intermission, missed a line in the French translation ("He knew words alone would never sway the masses. He chose to do something drastic.")
  * - Missing fight start line in 6-2
+ * 
+ * 
+ *  FOR NEXT HOTFIX:
+ * - Weird errors with patchCheatConsentPanel? getCheatName? Reported by Kiberkotleta (other people don't be seeming to have it)
+ * - Droning sound in 2-S intro that is supposed to play then stop - plays but doesn't stop. Reported by Veni (Missed a special char probably)
+ * - 2-S: Split "Don't wanna" response into 2 paragraphs. Some conclusion/nihilism lines missing. Reported by Veni
+ * - 6-2: One taunt line being used as another. Reported by Timmy
+ * - Need to add slot 6 to controls. reported by hebert
+ * - 4-3 - Tomb of Kings string missing. Reported by Edith
+ * - Grab updated version of French translation (thanks Frizou :D )
+ * - Later down the line, do an English template so people aren't as confused as to what is what
+ * - Add 3rd soldier strategy line to bio, reported by Edith
+ * 
  * 
  * */
 
@@ -409,6 +422,7 @@ namespace UltrakULL
                             ultrakullLogoText.alignment = TextAnchor.UpperLeft;
                             ultrakullLogoText.fontSize = 16;
 
+
                         //Logger.LogInfo("Trying to create Discord button");
                         //GameObject ultrakULLDiscordButton = UKUIHelper.UIHelper.CreateButton();
                         //ultrakULLDiscordButton.GetComponent<Text>().text = "UltrakULL Discord";
@@ -432,10 +446,18 @@ namespace UltrakULL
                     }
                     else
                     {
-                        patchPauseMenu(ref coreGame);
-                        patchCheats(ref coreGame);
-                        patchDeathScreen(ref coreGame);
-                        patchLevelStats(ref coreGame);
+                        try
+                        { 
+                            patchPauseMenu(ref coreGame);
+                            patchCheats(ref coreGame);
+                            patchDeathScreen(ref coreGame);
+                            patchLevelStats(ref coreGame);
+                        }
+                        catch(Exception e)
+                        {
+                            Logger.LogError("Failed to patch in-game elements (prime).");
+                            Logger.LogInfo(e.ToString());
+                        }
                         Options options = new Options(ref coreGame,this.jsonParser) ;
                         PrimeSanctum primeSanctumClass = new PrimeSanctum(ref coreGame,this.jsonParser);
                     }
