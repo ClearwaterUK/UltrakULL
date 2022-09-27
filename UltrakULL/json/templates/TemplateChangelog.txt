@@ -1,8 +1,13 @@
-﻿0.7.1:
+﻿0.7.2:
+
+ADDED:
+enemyBios -> enemyBios_stalker_strategy3
+
+0.7.1:
 
 ADDED:
 enemyBios -> enemyBios_soldier_strategy3
-act2 -> act2_third_tombOfKings
+act2 -> act2_greedThird_tombOfKings
 options -> controls_slot5
 intermission -> act2_intermission_second11
 

@@ -295,6 +295,7 @@ namespace UltrakULL.json
 
         public string enemyBios_stalker_strategy1;
         public string enemyBios_stalker_strategy2;
+        public string enemyBios_stalker_strategy3;
 
         public string enemyBios_insurrectionist_1;
         public string enemyBios_insurrectionist_2;

@@ -1,5 +1,10 @@
 ﻿0.7.2
-Fixed 1-1 HUD prompt to pick up items getting longer and longer if you keep going away and back to the pedestal. (Reported by Veni)
+- Added missing Stalker strategy line (Reported by MKaid)
+- Fixed 1-1 HUD prompt to pick up items getting longer and longer if you keep going away and back to the pedestal. (Reported by Veni)
+
+- Added the following lines to the JSON template:
+enemyBios -> enemyBios_stalker_strategy3
+
 
 0.7.1
 

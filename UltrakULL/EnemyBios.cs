@@ -378,7 +378,8 @@ namespace UltrakULL
                     {
                         return
                               "- " + language.currentLanguage.enemyBios.enemyBios_stalker_strategy1 + "\n\n"
-                            + "- " + language.currentLanguage.enemyBios.enemyBios_stalker_strategy2;
+                            + "- " + language.currentLanguage.enemyBios.enemyBios_stalker_strategy2 + "\n\n"
+                            + "- " + language.currentLanguage.enemyBios.enemyBios_stalker_strategy3;
 
                     }
                 case "INSURRECTIONIST":

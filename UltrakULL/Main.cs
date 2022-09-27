@@ -67,9 +67,9 @@ using UltrakULL.json;
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything).
  * Disable patchedFunctions by returning true if an exception happens there, will then use original game code.
  * - 6-1 missing string (Come to me) (Edith on NB Discord)
- * - 1-1 'popout' bug if you go back and forth (Veni)
+ * - Add multiplier string in HUD (D4N5T3P)
  * - 2-S: Some conclusion/nihilism lines missing. Reported by Veni
- * - Later down the line, do an English template so people aren't as confused as to what is what
+ * - Fill out the English template
  * 
  * 
  * */
