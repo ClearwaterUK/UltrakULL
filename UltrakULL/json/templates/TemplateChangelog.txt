@@ -2,6 +2,7 @@
 
 ADDED:
 enemyBios -> enemyBios_stalker_strategy3
+style -> stylemeter_multiplier
 
 0.7.1:
 

@@ -213,6 +213,7 @@ namespace UltrakULL.json
         public string style_weaponStale;
         public string style_weaponDull;
 
+        public string stylemeter_multiplier;
 
     }
 

@@ -67,9 +67,9 @@ using UltrakULL.json;
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything).
  * Disable patchedFunctions by returning true if an exception happens there, will then use original game code.
  * - 6-1 missing string (Come to me) (Edith on NB Discord)
- * - Add multiplier string in HUD (D4N5T3P)
  * - 2-S: Some conclusion/nihilism lines missing. Reported by Veni
  * - Fill out the English template
+ * - Press ESC to skip prompt
  * 
  * 
  * */
@@ -218,6 +218,14 @@ namespace UltrakULL
         {
             MainMenu mainMenu = new MainMenu(frontEnd, jsonParser);
             Options options = new Options(ref frontEnd, this.jsonParser);
+        }
+
+        public void patchStyleMeter(ref GameObject coreGame)
+        {
+            GameObject player = GameObject.Find("Player");
+            GameObject styleMeter = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(player, "Main Camera"), "HUD Camera"), "HUD"), "StyleCanvas"), "Panel (1)"), "Panel"), "Text (1)"), "Text");
+            Text styleMeterMultiplierText = getTextfromGameObject(styleMeter);
+            styleMeterMultiplierText.text = this.jsonParser.currentLanguage.style.stylemeter_multiplier;
         }
 
         //Parent function to patch the vanilla game functions.
@@ -521,6 +529,8 @@ namespace UltrakULL
                             patchCheats(ref coreGame);
                             patchDeathScreen(ref coreGame);
                             patchLevelStats(ref coreGame);
+                            patchStyleMeter(ref coreGame);
+                            
                             Options options = new Options(ref coreGame, this.jsonParser);
                         }
                         catch(Exception e)

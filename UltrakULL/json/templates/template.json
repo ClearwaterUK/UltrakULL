@@ -72,7 +72,9 @@
         "style_weaponFresh": "",
         "style_weaponUsed": "",
         "style_weaponStale": "",
-        "style_weaponDull": ""
+        "style_weaponDull": "",
+
+        "stylemeter_multiplier": ""
     },
     
     "cyberGrind":{
