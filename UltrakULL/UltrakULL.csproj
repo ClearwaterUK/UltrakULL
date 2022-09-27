@@ -131,6 +131,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="json\templates\FR-fr.json" />
+    <None Include="json\templates\en-GB.json" />
     <None Include="json\templates\template.json" />
     <None Include="packages.config" />
   </ItemGroup>
