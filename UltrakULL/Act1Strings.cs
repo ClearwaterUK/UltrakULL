@@ -22,14 +22,16 @@ namespace UltrakULL
             string fullMessage = message + message2;
             a1StringsLogger.LogInfo(fullMessage);
             if (fullMessage.Contains("ITEMS"))
-            { 
+            {
                 return language.currentLanguage.act1.act1_limboFirst_items1 + " '<color=orange>" + input + "'</color> " + language.currentLanguage.act1.act1_limboFirst_items2;
             }
             if (fullMessage.Contains("NAILGUN"))
             {
                 return language.currentLanguage.act1.act1_limboFirst_nailgun1 + " '<color=orange>" + input + "'</color> " + language.currentLanguage.act1.act1_limboFirst_nailgun2 + "\n" + language.currentLanguage.act1.act1_limboFirst_nailgun3;
             }
-            return message + message2 + input;
+
+            //Band-aid fix
+            return language.currentLanguage.act1.act1_limboFirst_items1 + " '<color=orange>" + input + "'</color> " + language.currentLanguage.act1.act1_limboFirst_items2;
         }
         //1-2 - The Burning World
         public string level12(string message, string message2, string input,JsonParser language)

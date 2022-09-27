@@ -64,7 +64,10 @@ using UltrakULL.json;
  * - 2-S, minor issues to fix
  * 
  *  FOR NEXT HOTFIX:
- * - Weird errors with patchCheatConsentPanel? getCheatName? Reported by Kiberkotleta (other people don't be seeming to have it)
+ * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything).
+ * Disable patchedFunctions by returning true if an exception happens there, will then use original game code.
+ * - 6-1 missing string (Come to me) (Edith on NB Discord)
+ * - 1-1 'popout' bug if you go back and forth (Veni)
  * - 2-S: Some conclusion/nihilism lines missing. Reported by Veni
  * - Later down the line, do an English template so people aren't as confused as to what is what
  * 
@@ -79,7 +82,7 @@ namespace UltrakULL
     {
         public const string pluginGuid = "clearwater.ultrakill.ultrakULL";
         public const string pluginName = "UltrakULL - Ultrakill Language Library";
-        public const string pluginVersion = "0.7.0";
+        public const string pluginVersion = "0.7.2";
 
         private JsonParser jsonParser;
         private PatchedFunctions patchedFuncs;
@@ -88,6 +91,11 @@ namespace UltrakULL
         public MainPatch()
         {
 
+        }
+        
+        public void disableMod()
+        {
+            this.ready = false;
         }
 
         //Patches all text strings in the pause menu.

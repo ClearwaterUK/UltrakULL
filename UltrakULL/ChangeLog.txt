@@ -1,4 +1,7 @@
-﻿0.7.1
+﻿0.7.2
+Fixed 1-1 HUD prompt to pick up items getting longer and longer if you keep going away and back to the pedestal. (Reported by Veni)
+
+0.7.1
 
 - Added missing third line to Soldier strategy. (Reported by Edith)
 - Added missing "Tomb Of Kings" HUD message in 4-3. (Reported by Edith)
