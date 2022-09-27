@@ -19,6 +19,7 @@ namespace UltrakULL
 
     class Cheats
     {
+        
 
         public void patchCheatConsentPanel(ref GameObject coreGame,JsonParser language)
         {
@@ -69,63 +70,78 @@ namespace UltrakULL
             if(cheatStatus == null) { return null; }
             else
             {
-                switch(cheatStatus)
+                try
                 {
-                    case "STAY ACTIVE": { return language.currentLanguage.cheats.cheats_stayActive; }
-                    case "DISABLE ON RELOAD": { return language.currentLanguage.cheats.cheats_disableOnReload; }
-                    case "EQUIP": { return language.currentLanguage.cheats.cheats_equip; }
-                    case "REMOVE": { return language.currentLanguage.cheats.cheats_remove; }
-                    case "OPEN": { return language.currentLanguage.cheats.cheats_open; }
-                    case "KILL ALL": { return language.currentLanguage.cheats.cheats_killAll; }
-                    case "STATIC": { return language.currentLanguage.cheats.cheats_static; }
-                    case "DYNAMIC": { return language.currentLanguage.cheats.cheats_dynamic; }
-                    case "REBUILD": { return language.currentLanguage.cheats.cheats_rebuild; }
-                    case "REBUILDING...": { return language.currentLanguage.cheats.cheats_rebuilding; }
-                    default: { return null; }
+                    switch (cheatStatus)
+                    {
+                        case "STAY ACTIVE": { return language.currentLanguage.cheats.cheats_stayActive; }
+                        case "DISABLE ON RELOAD": { return language.currentLanguage.cheats.cheats_disableOnReload; }
+                        case "EQUIP": { return language.currentLanguage.cheats.cheats_equip; }
+                        case "REMOVE": { return language.currentLanguage.cheats.cheats_remove; }
+                        case "OPEN": { return language.currentLanguage.cheats.cheats_open; }
+                        case "KILL ALL": { return language.currentLanguage.cheats.cheats_killAll; }
+                        case "STATIC": { return language.currentLanguage.cheats.cheats_static; }
+                        case "DYNAMIC": { return language.currentLanguage.cheats.cheats_dynamic; }
+                        case "REBUILD": { return language.currentLanguage.cheats.cheats_rebuild; }
+                        case "REBUILDING...": { return language.currentLanguage.cheats.cheats_rebuilding; }
+                        default: { return null; }
+                    }
+                }
+                catch(Exception e)
+                {
+                    handleError(e, cheatStatus);
+                    return ("");
                 }
             }
         }
 
         public static string getCheatName(string cheatIdentifier,JsonParser language)
         {
-            switch(cheatIdentifier)
+            try
             {
-                case "ultrakill.keep-enabled": { return language.currentLanguage.cheats.cheats_keepEnabled; }
+                switch (cheatIdentifier)
+                {
+                    case "ultrakill.keep-enabled": { return language.currentLanguage.cheats.cheats_keepEnabled; }
 
-                case "ultrakill.spawner-arm": { return language.currentLanguage.cheats.cheats_spawnerArm; }
-                case "ultrakill.teleport-menu": { return language.currentLanguage.cheats.cheats_teleportMenu; }
-                case "ultrakill.full-bright": { return language.currentLanguage.cheats.cheats_fullBright; }
+                    case "ultrakill.spawner-arm": { return language.currentLanguage.cheats.cheats_spawnerArm; }
+                    case "ultrakill.teleport-menu": { return language.currentLanguage.cheats.cheats_teleportMenu; }
+                    case "ultrakill.full-bright": { return language.currentLanguage.cheats.cheats_fullBright; }
 
-                case "ultrakill.noclip": { return language.currentLanguage.cheats.cheats_noclip; }
-                case "ultrakill.flight": { return language.currentLanguage.cheats.cheats_flight; }
-                case "ultrakill.infinite-wall-jumps": { return language.currentLanguage.cheats.cheats_infiniteWallJumps; }
+                    case "ultrakill.noclip": { return language.currentLanguage.cheats.cheats_noclip; }
+                    case "ultrakill.flight": { return language.currentLanguage.cheats.cheats_flight; }
+                    case "ultrakill.infinite-wall-jumps": { return language.currentLanguage.cheats.cheats_infiniteWallJumps; }
 
-                case "ultrakill.no-weapon-cooldown": { return language.currentLanguage.cheats.cheats_noWeaponCooldown; }
-                case "ultrakill.infinite-power-ups": { return language.currentLanguage.cheats.cheats_infinitePowerUps; }
+                    case "ultrakill.no-weapon-cooldown": { return language.currentLanguage.cheats.cheats_noWeaponCooldown; }
+                    case "ultrakill.infinite-power-ups": { return language.currentLanguage.cheats.cheats_infinitePowerUps; }
 
-                case "ultrakill.blind-enemies": { return language.currentLanguage.cheats.cheats_blindEnemies; }
-                case "ultrakill.disable-enemy-spawns": { return language.currentLanguage.cheats.cheats_disableEnemySpawns; }
-                case "ultrakill.invincible-enemies": { return language.currentLanguage.cheats.cheats_invincibleEnemies; }
-                case "ultrakill.kill-all-enemies": { return language.currentLanguage.cheats.cheats_killAllEnemies; }
+                    case "ultrakill.blind-enemies": { return language.currentLanguage.cheats.cheats_blindEnemies; }
+                    case "ultrakill.disable-enemy-spawns": { return language.currentLanguage.cheats.cheats_disableEnemySpawns; }
+                    case "ultrakill.invincible-enemies": { return language.currentLanguage.cheats.cheats_invincibleEnemies; }
+                    case "ultrakill.kill-all-enemies": { return language.currentLanguage.cheats.cheats_killAllEnemies; }
 
-                case "ultrakill.sandbox.quick-save": { return language.currentLanguage.cheats.cheats_quickSave; }
-                case "ultrakill.sandbox.quick-load": { return language.currentLanguage.cheats.cheats_quickLoad; }
-                case "ultrakill.sandbox.save-menu": { return language.currentLanguage.cheats.cheats_saveMenu; }
-                case "ultrakill.sandbox.clear": { return language.currentLanguage.cheats.cheats_clear; }
-                case "ultrakill.sandbox.rebuild-nav": { return language.currentLanguage.cheats.cheats_rebuildNav; }
-                case "ultrakill.sandbox.snapping": { return language.currentLanguage.cheats.cheats_snapping; }
-                case "ultrakill.sandbox.physics": { return language.currentLanguage.cheats.cheats_physics; }
-                case "ultrakill.sandbox.crash-mode": { return language.currentLanguage.cheats.cheats_crashMode; }
+                    case "ultrakill.sandbox.quick-save": { return language.currentLanguage.cheats.cheats_quickSave; }
+                    case "ultrakill.sandbox.quick-load": { return language.currentLanguage.cheats.cheats_quickLoad; }
+                    case "ultrakill.sandbox.save-menu": { return language.currentLanguage.cheats.cheats_saveMenu; }
+                    case "ultrakill.sandbox.clear": { return language.currentLanguage.cheats.cheats_clear; }
+                    case "ultrakill.sandbox.rebuild-nav": { return language.currentLanguage.cheats.cheats_rebuildNav; }
+                    case "ultrakill.sandbox.snapping": { return language.currentLanguage.cheats.cheats_snapping; }
+                    case "ultrakill.sandbox.physics": { return language.currentLanguage.cheats.cheats_physics; }
+                    case "ultrakill.sandbox.crash-mode": { return language.currentLanguage.cheats.cheats_crashMode; }
 
+                }
+
+                return cheatIdentifier;
             }
-
-            return cheatIdentifier;
+            catch(Exception e)
+            {
+                handleError(e,cheatIdentifier) ;
+                return "";
+            }
         }
 
         public Cheats(ref GameObject coreGame,JsonParser language)
         {
             this.patchCheatConsentPanel(ref coreGame,language);
-
         }
 
 

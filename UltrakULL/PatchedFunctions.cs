@@ -1903,28 +1903,37 @@ namespace UltrakULL
         //Overrides the *private* UpdateCheatState function from the CheatsManager class for translating the cheat menu.
         public static bool UpdateCheatState_MyPatch(CheatMenuItem item, ICheat cheat, CheatsManager __instance, Color ___enabledColor, Color ___disabledColor)
         {
-            item.longName.text = Cheats.getCheatName(cheat.Identifier,language);
-            item.stateBackground.color = (cheat.IsActive ? ___enabledColor : ___disabledColor);
-
-            string cheatDisabledStatus = Cheats.getCheatStatus(cheat.ButtonDisabledOverride,language);
-            string cheatEnabledStatus = Cheats.getCheatStatus(cheat.ButtonEnabledOverride,language);
-
-            item.stateText.text = (cheat.IsActive ? (cheatEnabledStatus ?? language.currentLanguage.cheats.cheats_activated) : (cheatDisabledStatus ?? language.currentLanguage.cheats.cheats_deactivated)); //Cheat status
-            item.bindButtonBack.gameObject.SetActive(false);
-            string text = MonoSingleton<CheatBinds>.Instance.ResolveCheatKey(cheat.Identifier);
-            if (string.IsNullOrEmpty(text))
+            try
             {
-                item.bindButtonText.text = language.currentLanguage.cheats.cheats_pressToBind; //Press to bind
+                item.longName.text = Cheats.getCheatName(cheat.Identifier, language);
+                item.stateBackground.color = (cheat.IsActive ? ___enabledColor : ___disabledColor);
+
+                string cheatDisabledStatus = Cheats.getCheatStatus(cheat.ButtonDisabledOverride, language);
+                string cheatEnabledStatus = Cheats.getCheatStatus(cheat.ButtonEnabledOverride, language);
+
+                item.stateText.text = (cheat.IsActive ? (cheatEnabledStatus ?? language.currentLanguage.cheats.cheats_activated) : (cheatDisabledStatus ?? language.currentLanguage.cheats.cheats_deactivated)); //Cheat status
+                item.bindButtonBack.gameObject.SetActive(false);
+                string text = MonoSingleton<CheatBinds>.Instance.ResolveCheatKey(cheat.Identifier);
+                if (string.IsNullOrEmpty(text))
+                {
+                    item.bindButtonText.text = language.currentLanguage.cheats.cheats_pressToBind; //Press to bind
+                }
+                else
+                {
+                    item.bindButtonText.text = text.ToUpper();
+                }
+                GameObject parentResetButton = item.resetBindButton.gameObject;
+                Text parentResetText = CommonFunctions.getTextfromGameObject(CommonFunctions.getGameObjectChild(parentResetButton, "Text"));
+                parentResetText.text = language.currentLanguage.cheats.cheats_delete;
+                __instance.RenderCheatsInfo();
+                return false;
             }
-            else
+            catch(Exception e)
             {
-                item.bindButtonText.text = text.ToUpper();
+                handleError(e);
+                return true;
             }
-            GameObject parentResetButton = item.resetBindButton.gameObject;
-            Text parentResetText = CommonFunctions.getTextfromGameObject(CommonFunctions.getGameObjectChild(parentResetButton, "Text"));
-            parentResetText.text = language.currentLanguage.cheats.cheats_delete;
-            __instance.RenderCheatsInfo();
-            return false;
+
         }
 
         //@Override

@@ -15,6 +15,13 @@ namespace UltrakULL
     public static class CommonFunctions
     {
 
+        public static BepInEx.Logging.ManualLogSource modLogger = BepInEx.Logging.Logger.CreateLogSource("modLogger");
+
+        public static void handleError(Exception e, string missingID = "")
+        {
+            modLogger.LogError("Could not load string. THIS POSSIBLY MEANS THERE ARE MISSING/NONEXISTANT STRINGS IN THE JSON!");
+        }
+
         public static GameObject getInactiveRootObject(string objectName)
         {
 
