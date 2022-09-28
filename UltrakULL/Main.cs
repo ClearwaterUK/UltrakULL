@@ -71,8 +71,8 @@ using UltrakULL.json;
  * - Fill out the English template
  * - Press ESC to skip prompt
  * - P-1: Weird fuckery with the testament panel
- * - filth in bios typo
  * - Rank letters not showing on level select (fine on my end, json problems maybe...?)
+ *  - "Ultracounterricoshot should use counterricoshot as a base, not ricoshot(Counter does not get translated)" - Edith
  * 
  * */
 

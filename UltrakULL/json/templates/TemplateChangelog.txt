@@ -4,6 +4,12 @@ ADDED:
 enemyBios -> enemyBios_stalker_strategy3
 style -> stylemeter_multiplier
 
+MODIFIED:
+enemyBios: enemyBios_filith_4 -> enemyBios_filth_4
+
+REMOVED:
+
+
 0.7.1:
 
 ADDED:
