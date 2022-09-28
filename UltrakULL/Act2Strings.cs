@@ -65,7 +65,7 @@ namespace UltrakULL
             }
             if (fullMessage.Contains("Hold"))
             {
-                return language.currentLanguage.act2.act2_greedFourth_whiplash2 + " <color=orange>" + input + "</color> " + language.currentLanguage.act2.act2_greedFourth_whiplash3;
+                return language.currentLanguage.act2.act2_greedFourth_whiplash1 + " <color=orange>" + input + "</color> " + language.currentLanguage.act2.act2_greedFourth_whiplash2;
             }
             if (fullMessage.Contains("HEAVY"))
             {

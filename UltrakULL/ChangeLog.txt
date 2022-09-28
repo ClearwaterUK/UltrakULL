@@ -2,6 +2,7 @@
 - Added multiplier string for the style HUD. (Notified by D4N5T3P)
 - Added missing Stalker strategy line (Reported by MKaid)
 - Fixed 1-1 HUD prompt to pick up items getting longer and longer if you keep going away and back to the pedestal. (Reported by Veni)
+- Fixed one of the 4-4 Whiplash tutorials using the wrong string. (Reported by Edith)
 
 
 - Added the following lines to the JSON template:
