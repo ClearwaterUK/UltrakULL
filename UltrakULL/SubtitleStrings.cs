@@ -359,6 +359,7 @@ namespace UltrakULL
 
         public string gabeSecondSubtitles(string input,JsonParser language)
         {
+
             if (input.Contains("Machine"))
             {
                 return language.currentLanguage.subtitles.subtitles_gabrielHeresy1;
@@ -371,7 +372,7 @@ namespace UltrakULL
             {
                 return language.currentLanguage.subtitles.subtitles_gabrielHeresy3;
             }
-            if (input.Contains("Come"))
+            if (input.Contains("COME"))
             {
                 return language.currentLanguage.subtitles.subtitles_gabrielHeresy4;
             }
@@ -492,7 +493,7 @@ namespace UltrakULL
             {
                 return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt4;
             }
-            if (input.Contains("You're getting"))
+            if (input.Contains("YOU'RE GETTING"))
             {
                 return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt5;
             }
@@ -527,6 +528,10 @@ namespace UltrakULL
             if (input.Contains("Now THIS"))
             {
                 return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt13;
+            }
+            if (input.Contains("splendor"))
+            {
+                return language.currentLanguage.subtitles.subtitles_gabrielSecondTaunt14;
             }
 
             //Defeated

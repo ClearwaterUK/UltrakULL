@@ -3,6 +3,7 @@
 ADDED:
 enemyBios -> enemyBios_stalker_strategy3
 style -> stylemeter_multiplier
+subtitles -> subtitles_gabrielSecondTaunt14
 
 MODIFIED:
 enemyBios: enemyBios_filith_4 -> enemyBios_filth_4
