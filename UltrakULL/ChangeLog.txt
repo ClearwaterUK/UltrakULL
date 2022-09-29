@@ -1,4 +1,7 @@
-﻿0.7.2
+﻿0.7.3
+- Fixed "Mission name not found" on save files that have finished Act 2 in the save menu.
+
+0.7.2
 - Begun to add some more sanity checks in the mod code. Over time this should help the mod and the game break less if something goes wrong, or if something is wrong with a JSON file that is trying to be used.
 - Added multiplier string for the style HUD. (Notified by D4N5T3P)
 - Added missing Stalker strategy line. (Reported by MKaid)

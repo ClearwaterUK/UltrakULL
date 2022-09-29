@@ -127,6 +127,8 @@ namespace UltrakULL
 					return "6-1: " + language.currentLanguage.levelNames.levelName_heresyFirst;
 				case 25:
 					return "6-2: " + language.currentLanguage.levelNames.levelName_heresySecond;
+				case 26:
+					return "7-1: ???";
 				default:
 					switch (missionNum)
 					{
