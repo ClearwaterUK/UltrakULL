@@ -2,12 +2,13 @@
 - Added multiplier string for the style HUD. (Notified by D4N5T3P)
 - Added missing Stalker strategy line. (Reported by MKaid)
 - Added/Fixed a couple of Gabe's taunt lines in 3-2 and 6-2. (Reported by Timmy)
-- Added "press to skip" to the JSON. (Note: Only supports keyboard prompts for now. Controllers to come later)
+- Added "press ESC to skip" to the JSON. (Note: Only supports keyboard prompts for now. Controllers to come later)
 - Fixed 1-1 HUD prompt to pick up items getting longer and longer if you keep going away and back to the pedestal. (Reported by Veni)
 - Fixed one of the 4-4 Whiplash tutorials using the wrong string. (Reported by Edith)
 - Fixed a minor typo in the JSON template for one of the Stalker bio lines. (see JSON changes below.)
 - Fixed Hideous Mass using Cerberus descriptions in the terminal. (Reported by Soulvender)
 - Fixed 4-S jump tutorial not being correctly displayed. Also fixed appearing as an unknown string if the player goes back and forth onto the trigger. (Reported by MKaid)
+- Fixed one of the lines in the 4-3 book repeating. (Reported by Soulvender)
 
 
 - Added the following lines to the JSON template:

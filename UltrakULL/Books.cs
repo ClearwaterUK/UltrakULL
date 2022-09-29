@@ -14,8 +14,6 @@ namespace UltrakULL
 {
     public static class Books
     {
-
-
         public static string getBookText(JsonParser language)
         {
             string currentLevel = SceneManager.GetActiveScene().name;
@@ -50,7 +48,7 @@ namespace UltrakULL
 
                 case "Level 4-3": {
                         return language.currentLanguage.books.books_greedThird1 + "\n\n"
-                            + language.currentLanguage.books.books_greedThird1 + "\n\n"
+                            + language.currentLanguage.books.books_greedThird2 + "\n\n"
                             + language.currentLanguage.books.books_greedThird3 + "\n\n"
                             + language.currentLanguage.books.books_greedThird4 + "\n\n";
                     }
