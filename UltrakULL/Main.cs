@@ -66,14 +66,13 @@ using UltrakULL.json;
  *  FOR NEXT HOTFIX:
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything).
  * Disable patchedFunctions by returning true if an exception happens there, will then use original game code.
- * - 6-1 missing string (Come to me) (Edith on NB Discord)
  * - 2-S: Some conclusion/nihilism lines missing. Reported by Veni
  * - Fill out the English template
  * - Press ESC to skip prompt
  * - P-1: Weird fuckery with the testament panel
  * - Rank letters not showing on level select (fine on my end, json problems maybe...?)
  *  - "Ultracounterricoshot should use counterricoshot as a base, not ricoshot(Counter does not get translated)" - Edith
- * 
+ *  - Split 4-S jump message to two strings (MKaid)
  * */
 
 namespace UltrakULL

@@ -5,6 +5,7 @@
 - Fixed 1-1 HUD prompt to pick up items getting longer and longer if you keep going away and back to the pedestal. (Reported by Veni)
 - Fixed one of the 4-4 Whiplash tutorials using the wrong string. (Reported by Edith)
 - Fixed a minor typo in the JSON template for one of the Stalker bio lines. (see JSON changes below.)
+- Fixed Hideous Mass using Cerberus descriptions in the terminal. (Reported by Soulvender)
 
 
 - Added the following lines to the JSON template:

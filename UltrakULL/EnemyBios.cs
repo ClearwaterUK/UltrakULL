@@ -234,8 +234,8 @@ namespace UltrakULL
                 case "HIDEOUS MASS":
                     {
                         return
-                          language.currentLanguage.enemyBios.enemyBios_cerberus_1 + "\n\n" +
-                          language.currentLanguage.enemyBios.enemyBios_cerberus_2;
+                          language.currentLanguage.enemyBios.enemyBios_hideousMass_1 + "\n\n" +
+                          language.currentLanguage.enemyBios.enemyBios_hideousMass_2;
                     }
                 case "GABRIEL, JUDGE OF HELL":
                     {
