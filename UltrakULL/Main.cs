@@ -62,15 +62,14 @@ using UltrakULL.json;
  * 
  *  STUFF REPORTED BY ULL TEAM
  * - 2-S, minor issues to fix
+ * - P-1: Weird fuckery with the testament panel
+ * - Rank letters not showing on level select (fine on my end, json problems maybe...?)
  * 
  *  FOR NEXT HOTFIX:
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything).
  * Disable patchedFunctions by returning true if an exception happens there, will then use original game code.
  * - 2-S: Some conclusion/nihilism lines missing. Reported by Veni
  * - Fill out the English template
- * - P-1: Weird fuckery with the testament panel
- * - Rank letters not showing on level select (fine on my end, json problems maybe...?)
- *  - "Ultracounterricoshot should use counterricoshot as a base, not ricoshot(Counter does not get translated)" - Edith
  * */
 
 namespace UltrakULL
@@ -352,7 +351,10 @@ namespace UltrakULL
             harmony.Patch(originalUpdateWave, new HarmonyMethod(patchedUpdateWave));
 
 
-
+            Logger.LogInfo("Coin->RicoshotPointsCheck");
+            MethodInfo originalRicoshotPointsCheck = typeof(Coin).GetMethod("RicoshotPointsCheck");
+            MethodInfo patchedRicoshotPointsCheck = AccessTools.Method(typeof(PatchedFunctions), "RicoshotPointsCheck_MyPatch");
+            harmony.Patch(originalRicoshotPointsCheck, new HarmonyMethod(patchedRicoshotPointsCheck));
 
 
             Logger.LogInfo("HudMessageReciever->SendHudMessage");

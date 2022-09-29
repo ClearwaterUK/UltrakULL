@@ -6,6 +6,8 @@ style -> stylemeter_multiplier
 subtitles -> subtitles_gabrielSecondTaunt14
 act2 -> act2_greedSecret_holdToJump2
 misc -> pressToSkip
+style -> style_ricoshotUltra
+style -> style_ricoshotCounter
 
 MODIFIED:
 enemyBios: enemyBios_filith_4 -> enemyBios_filth_4

@@ -187,6 +187,8 @@ namespace UltrakULL.json
         public string style_projectileboost;
         public string style_quickdraw;
         public string style_ricoshot;
+        public string style_ricoshotUltra;
+        public string style_ricoshotCounter;
         public string style_secret;
         public string style_splattered;
         public string style_triplekill;
@@ -214,7 +216,6 @@ namespace UltrakULL.json
         public string style_weaponDull;
 
         public string stylemeter_multiplier;
-
     }
 
 

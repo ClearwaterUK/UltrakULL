@@ -1,8 +1,10 @@
 ﻿0.7.2
+- Begun to add some more sanity checks in the mod code. Over time this should help the mod and the game break less if something goes wrong, or if something is wrong with a JSON file that is trying to be used.
 - Added multiplier string for the style HUD. (Notified by D4N5T3P)
 - Added missing Stalker strategy line. (Reported by MKaid)
 - Added/Fixed a couple of Gabe's taunt lines in 3-2 and 6-2. (Reported by Timmy)
-- Added "press ESC to skip" to the JSON. (Note: Only supports keyboard prompts for now. Controllers to come later)
+- Added strings for "Ultra" and "Counter" prefixes to ricoshots. (See JSON changes below.) (Edith)
+- Added "press ESC to skip" to the JSON. (Note: Only supports keyboard prompts for now. Controller prompts to come later)
 - Fixed 1-1 HUD prompt to pick up items getting longer and longer if you keep going away and back to the pedestal. (Reported by Veni)
 - Fixed one of the 4-4 Whiplash tutorials using the wrong string. (Reported by Edith)
 - Fixed a minor typo in the JSON template for one of the Stalker bio lines. (see JSON changes below.)
@@ -17,6 +19,8 @@ style -> stylemeter_multiplier
 subtitles -> subtitles_gabrielSecondTaunt14
 act2 -> act2_greedSecret_holdToJump
 misc -> pressToSkip
+style -> style_ricoshotUltra
+style -> style_ricoshotCounter
 
 
 - Modified the following lines to the JSON template:
