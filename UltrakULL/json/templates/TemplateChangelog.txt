@@ -4,9 +4,11 @@ ADDED:
 enemyBios -> enemyBios_stalker_strategy3
 style -> stylemeter_multiplier
 subtitles -> subtitles_gabrielSecondTaunt14
+act2 -> act2_greedSecret_holdToJump2
 
 MODIFIED:
 enemyBios: enemyBios_filith_4 -> enemyBios_filth_4
+act2: act2_greedSecret_holdToJump -> act2_greedSecret_holdToJump1
 
 REMOVED:
 

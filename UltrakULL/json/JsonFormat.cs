@@ -1704,7 +1704,8 @@ namespace UltrakULL.json
         public string act2_greedFourth_whiplashHardDamage1;
         public string act2_greedFourth_whiplashHardDamage2;
 
-        public string act2_greedSecret_holdToJump;
+        public string act2_greedSecret_holdToJump1;
+        public string act2_greedSecret_holdToJump2;
 
         public string act2_greed_secretDoor;
 

@@ -6,12 +6,15 @@
 - Fixed one of the 4-4 Whiplash tutorials using the wrong string. (Reported by Edith)
 - Fixed a minor typo in the JSON template for one of the Stalker bio lines. (see JSON changes below.)
 - Fixed Hideous Mass using Cerberus descriptions in the terminal. (Reported by Soulvender)
+- Fixed 4-S jump tutorial not being correctly displayed. Also fixed appearing as an unknown string if the player goes back and forth onto the trigger. (Reported by MKaid)
 
 
 - Added the following lines to the JSON template:
 enemyBios -> enemyBios_stalker_strategy3
 style -> stylemeter_multiplier
 subtitles -> subtitles_gabrielSecondTaunt14
+act2 -> act2_greedSecret_holdToJump
+act2: act2_greedSecret_holdToJump -> act2_greedSecret_holdToJump1
 
 - Modified the following lines to the JSON template:
 enemyBios: enemyBios_filith_4 -> enemyBios_filth_4

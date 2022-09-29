@@ -72,7 +72,6 @@ using UltrakULL.json;
  * - P-1: Weird fuckery with the testament panel
  * - Rank letters not showing on level select (fine on my end, json problems maybe...?)
  *  - "Ultracounterricoshot should use counterricoshot as a base, not ricoshot(Counter does not get translated)" - Edith
- *  - Split 4-S jump message to two strings (MKaid)
  * */
 
 namespace UltrakULL

@@ -84,10 +84,10 @@ namespace UltrakULL
             string fullMessage = message + message2;
             if (fullMessage.Contains("HOLD"))
             {
-                return (language.currentLanguage.act2.act2_greedSecret_holdToJump);
+                return (language.currentLanguage.act2.act2_greedSecret_holdToJump1 + "<color=orange> " + input + " </color>" + language.currentLanguage.act2.act2_greedSecret_holdToJump2);
             }
 
-            return "Unknown 4-S string";
+            return (language.currentLanguage.act2.act2_greedSecret_holdToJump1 + "<color=orange> " + input + " </color>" + language.currentLanguage.act2.act2_greedSecret_holdToJump2);
         }
 
         public string level51(string message, string message2, string input, JsonParser language)
