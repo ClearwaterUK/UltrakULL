@@ -68,7 +68,6 @@ using UltrakULL.json;
  * Disable patchedFunctions by returning true if an exception happens there, will then use original game code.
  * - 2-S: Some conclusion/nihilism lines missing. Reported by Veni
  * - Fill out the English template
- * - Press ESC to skip prompt
  * - P-1: Weird fuckery with the testament panel
  * - Rank letters not showing on level select (fine on my end, json problems maybe...?)
  *  - "Ultracounterricoshot should use counterricoshot as a base, not ricoshot(Counter does not get translated)" - Edith
@@ -220,12 +219,25 @@ namespace UltrakULL
             Options options = new Options(ref frontEnd, this.jsonParser);
         }
 
-        public void patchStyleMeter(ref GameObject coreGame)
+        public void patchMisc(ref GameObject coreGame)
         {
             GameObject player = GameObject.Find("Player");
             GameObject styleMeter = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(player, "Main Camera"), "HUD Camera"), "HUD"), "StyleCanvas"), "Panel (1)"), "Panel"), "Text (1)"), "Text");
             Text styleMeterMultiplierText = getTextfromGameObject(styleMeter);
             styleMeterMultiplierText.text = this.jsonParser.currentLanguage.style.stylemeter_multiplier;
+
+            GameObject canvas = getInactiveRootObject("Canvas");
+            GameObject pressToSkip = getGameObjectChild(canvas, "CutsceneSkipText");
+
+            //Need to disable the TextOverride component.
+            Component[] test = pressToSkip.GetComponents(typeof(Component));
+            Behaviour bhvr = (Behaviour)test[4];
+            bhvr.enabled = false;
+
+            Text pressToSkipText = getTextfromGameObject(pressToSkip);
+            pressToSkipText.text = this.jsonParser.currentLanguage.misc.pressToSkip;
+
+
         }
 
         //Parent function to patch the vanilla game functions.
@@ -458,6 +470,7 @@ namespace UltrakULL
                             patchCheats(ref coreGame);
                             patchDeathScreen(ref coreGame);
                             patchLevelStats(ref coreGame);
+                            patchMisc(ref coreGame);
                         }
                         catch(Exception e)
                         {
@@ -529,7 +542,7 @@ namespace UltrakULL
                             patchCheats(ref coreGame);
                             patchDeathScreen(ref coreGame);
                             patchLevelStats(ref coreGame);
-                            patchStyleMeter(ref coreGame);
+                            patchMisc(ref coreGame);
                             
                             Options options = new Options(ref coreGame, this.jsonParser);
                         }
