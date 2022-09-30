@@ -1714,50 +1714,58 @@ namespace UltrakULL
         //Overrides the UpdateWave function from the DiscordController class, for Cybergrind Discord Rich Presence.
         public static bool UpdateWave_MyPatch(int wave, DiscordController __instance)
         {
-            DiscordController privateInstance = (DiscordController)AccessTools.Field(typeof(DiscordController), "Instance").GetValue(__instance);
-            Discord.Activity privateCachedActivity = (Discord.Activity)AccessTools.Field(typeof(DiscordController), "cachedActivity").GetValue(privateInstance);
-            bool privateDisabled = (bool)AccessTools.Field(typeof(DiscordController), "disabled").GetValue(privateInstance);
-
-            Discord.ActivityManager privateActivityManager = (Discord.ActivityManager)AccessTools.Field(typeof(DiscordController), "activityManager").GetValue(privateInstance);
-
-            int privatelastPoints = (int)AccessTools.Field(typeof(DiscordController), "lastPoints").GetValue(privateInstance);
-
-            if (!DiscordController.Instance)
+            try
             {
+                DiscordController privateInstance = (DiscordController)AccessTools.Field(typeof(DiscordController), "Instance").GetValue(__instance);
+                Discord.Activity privateCachedActivity = (Discord.Activity)AccessTools.Field(typeof(DiscordController), "cachedActivity").GetValue(privateInstance);
+                bool privateDisabled = (bool)AccessTools.Field(typeof(DiscordController), "disabled").GetValue(privateInstance);
+
+                Discord.ActivityManager privateActivityManager = (Discord.ActivityManager)AccessTools.Field(typeof(DiscordController), "activityManager").GetValue(privateInstance);
+
+                int privatelastPoints = (int)AccessTools.Field(typeof(DiscordController), "lastPoints").GetValue(privateInstance);
+                
+                if (!DiscordController.Instance)
+                {
+                    return false;
+                }
+                if (privateDisabled)
+                {
+                    return false;
+                }
+                if (privatelastPoints == wave)
+                {
+                    return false;
+                }
+
+                StockMapInfo instance = StockMapInfo.Instance;
+                if (instance)
+                {
+                    string currentLevel = LevelNames.getDiscordLevelName(SceneManager.GetActiveScene().name, language);
+                    Discord.ActivityAssets levelInfo = instance.assets.Deserialize();
+
+                    privateCachedActivity.Assets.LargeText = currentLevel; //Level name
+                    privateCachedActivity.Assets.LargeImage = levelInfo.LargeImage;//Level photo
+                                                                                   //privateCachedActivity.State = diffString; //UltrakuLL label
+
+                    privateCachedActivity.Assets.SmallImage = rankCachedActivity.Assets.SmallImage;
+                    privateCachedActivity.Assets.SmallText = StyleBonusStrings.getTranslatedRankString(rankCachedActivity.Assets.SmallText, language);
+
+                }
+
+                privatelastPoints = wave;
+                privateCachedActivity.Details = language.currentLanguage.cyberGrind.cybergrind_wave + ": " + wave;
+
+                privateActivityManager.UpdateActivity(privateCachedActivity, delegate (Discord.Result result)
+                {
+                });
+
                 return false;
             }
-            if (privateDisabled)
+            catch(Exception e)
             {
-                return false;
+                modLogger.LogWarning("Something went wrong while updating Discord RPC. Falling back to vanilla function.");
+                return true;
             }
-            if (privatelastPoints == wave)
-            {
-                return false;
-            }
-
-            StockMapInfo instance = StockMapInfo.Instance;
-            if (instance)
-            {
-                string currentLevel = LevelNames.getDiscordLevelName(SceneManager.GetActiveScene().name, language);
-                Discord.ActivityAssets levelInfo = instance.assets.Deserialize();
-
-                privateCachedActivity.Assets.LargeText = currentLevel; //Level name
-                privateCachedActivity.Assets.LargeImage = levelInfo.LargeImage;//Level photo
-               //privateCachedActivity.State = diffString; //UltrakuLL label
-
-                privateCachedActivity.Assets.SmallImage = rankCachedActivity.Assets.SmallImage;
-                privateCachedActivity.Assets.SmallText = StyleBonusStrings.getTranslatedRankString(rankCachedActivity.Assets.SmallText,language);
-
-            }
-
-            privatelastPoints = wave;
-            privateCachedActivity.Details = "VAGUE: " + wave;
-
-            privateActivityManager.UpdateActivity(privateCachedActivity, delegate (Discord.Result result)
-            {
-            });
-
-            return false;
         }
 
         //@Override
@@ -2009,18 +2017,26 @@ namespace UltrakULL
         //Overrides the Toggle function from the CustomPatterns class for the toggle text.
         public static bool Toggle_MyPatch(CustomPatterns __instance, Text ___stateButtonText)
         {
-            Debug.Log("Toggling custom patterns");
-            bool customPatternMode = MonoSingleton<EndlessGrid>.Instance.customPatternMode;
-            MonoSingleton<EndlessGrid>.Instance.customPatternMode = !customPatternMode;
-            ___stateButtonText.text = (customPatternMode ? language.currentLanguage.misc.state_activated : language.currentLanguage.misc.state_deactivated);
-            GameObject gameObject = __instance.enableWhenCustom;
-            if (gameObject != null)
+            try
             {
-                gameObject.SetActive(!customPatternMode);
-            }
-            MonoSingleton<PrefsManager>.Instance.SetBoolLocal("cyberGrind.customPool", MonoSingleton<EndlessGrid>.Instance.customPatternMode);
+                Debug.Log("Toggling custom patterns");
+                bool customPatternMode = MonoSingleton<EndlessGrid>.Instance.customPatternMode;
+                MonoSingleton<EndlessGrid>.Instance.customPatternMode = !customPatternMode;
+                ___stateButtonText.text = (customPatternMode ? language.currentLanguage.misc.state_activated : language.currentLanguage.misc.state_deactivated);
+                GameObject gameObject = __instance.enableWhenCustom;
+                if (gameObject != null)
+                {
+                    gameObject.SetActive(!customPatternMode);
+                }
+                MonoSingleton<PrefsManager>.Instance.SetBoolLocal("cyberGrind.customPool", MonoSingleton<EndlessGrid>.Instance.customPatternMode);
 
-            return false;
+                return false;
+            }
+            catch(Exception e)
+            {
+                handleError(e);
+                return true;
+            }
         }
 
     }
