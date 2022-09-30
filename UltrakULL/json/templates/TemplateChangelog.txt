@@ -3,6 +3,11 @@
 ADDED:
 enemyBios: enemyBios_idol_4
 
+MODIFIED:
+shop: shop_revolverMarsmanDescription1 -> shop_revolverMarksmanDescription1
+shop: shop_revolverMarsmanDescription2 -> shop_revolverMarksmanDescription3
+shop: shop_revolverMarsmanDescription2 -> shop_revolverMarksmanDescription3
+
 0.7.2:
 
 ADDED:

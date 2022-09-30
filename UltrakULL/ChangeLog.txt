@@ -1,10 +1,18 @@
 ﻿0.7.3
+- Added a few more sanity checks for various things. If something bad happens, the game should revert to using English strings for that segment only,
+instead of everything that gets patched behind it.
 - Fixed "Mission name not found" on save files that have finished Act 2 in the save menu.
 - Fixed a couple of things not being translated in the Sandbox. (MKaid)
 - Added/fixed a missing line in the Idol's bio. (Soulvender)
+- Fixed a typo for the Marksman descriptions in the JSON. See JSON changes below. (D4N5T3P)
 
 - Added the following lines to the JSON template:
 enemyBios: enemyBios_idol_4
+
+- Modified the following lines to the JSON template:
+shop: shop_revolverMarsmanDescription1 -> shop_revolverMarksmanDescription1
+shop: shop_revolverMarsmanDescription2 -> shop_revolverMarksmanDescription3
+shop: shop_revolverMarsmanDescription2 -> shop_revolverMarksmanDescription3
 
 0.7.2
 - Begun to add some more sanity checks in the mod code. Over time this should help the mod and the game break less if something goes wrong, or if something is wrong with a JSON file that is trying to be used.
