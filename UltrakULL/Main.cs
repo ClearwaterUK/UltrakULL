@@ -70,6 +70,8 @@ using UltrakULL.json;
  * Disable patchedFunctions by returning true if an exception happens there, will then use original game code.
  * - 2-S: Some conclusion/nihilism lines missing. Reported by Veni
  * - Fill out the English template
+ * 
+ * - Add the weapon color customization
  * */
 
 namespace UltrakULL
@@ -519,6 +521,7 @@ namespace UltrakULL
                         patchCheats(ref coreGame);
                         patchShop(ref coreGame);
                         patchDeathScreen(ref coreGame);
+                        patchMisc(ref coreGame);
                         Options options = new Options(ref coreGame, this.jsonParser);
                         //SandboxEnemy sandbox = new SandboxEnemy(ref coreGame);
                     }
