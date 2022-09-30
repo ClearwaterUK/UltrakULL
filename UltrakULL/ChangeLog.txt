@@ -1,6 +1,10 @@
 ﻿0.7.3
 - Fixed "Mission name not found" on save files that have finished Act 2 in the save menu.
-- Fixed a couple of things not being translated in the Sandbox.
+- Fixed a couple of things not being translated in the Sandbox. (MKaid)
+- Added/fixed a missing line in the Idol's bio. (Soulvender)
+
+- Added the following lines to the JSON template:
+enemyBios: enemyBios_idol_4
 
 0.7.2
 - Begun to add some more sanity checks in the mod code. Over time this should help the mod and the game break less if something goes wrong, or if something is wrong with a JSON file that is trying to be used.
@@ -48,3 +52,6 @@ enemyBios -> enemyBios_soldier_strategy3
 act2 -> act2_third_tombOfKings
 options -> controls_slot5
 intermission -> act2_intermission_second11
+
+0.7.0:
+INITIAL TESTING RELEASE.

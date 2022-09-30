@@ -1,4 +1,9 @@
-﻿0.7.2:
+﻿0.7.3:
+
+ADDED:
+enemyBios: enemyBios_idol_4
+
+0.7.2:
 
 ADDED:
 enemyBios -> enemyBios_stalker_strategy3

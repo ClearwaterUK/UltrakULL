@@ -266,6 +266,7 @@ namespace UltrakULL.json
         public string enemyBios_idol_1;
         public string enemyBios_idol_2;
         public string enemyBios_idol_3;
+        public string enemyBios_idol_4;
 
         public string enemyBios_idol_strategy1;
         public string enemyBios_idol_strategy2;

@@ -72,6 +72,8 @@ using UltrakULL.json;
  * - Fill out the English template
  * 
  * - Add the weapon color customization
+ * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
+ * - Marksman description not showing in shop
  * */
 
 namespace UltrakULL

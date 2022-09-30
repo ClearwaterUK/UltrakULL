@@ -120,7 +120,9 @@ namespace UltrakULL
                         return
                             language.currentLanguage.enemyBios.enemyBios_idol_1 + "\n\n" +
                             language.currentLanguage.enemyBios.enemyBios_idol_2 + "\n\n" +
-                            language.currentLanguage.enemyBios.enemyBios_idol_3;
+                            language.currentLanguage.enemyBios.enemyBios_idol_3 + "\n\n" +
+                            language.currentLanguage.enemyBios.enemyBios_idol_4;
+
                     }
 
                 case "LEVIATHAN":
