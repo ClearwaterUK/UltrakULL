@@ -69,6 +69,8 @@ using UltrakULL.json;
  * - 2-S: Some conclusion/nihilism lines missing. Reported by Veni
  * - Fill out the English template
  * - Classic HUD strings
+ * - Move death screen from hardcoded to JSON
+ * - Mindflayer uses V2 bio
  * 
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * */

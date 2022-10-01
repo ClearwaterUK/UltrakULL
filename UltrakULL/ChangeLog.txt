@@ -8,6 +8,7 @@ instead of everything that gets patched behind it.
 - Fixed "Mission name not found" on save files that have finished Act 2 in the save menu.
 - Fixed a couple of things not being translated in the Sandbox. (MKaid)
 - Fixed a typo for the Marksman descriptions in the JSON. See JSON changes below. (D4N5T3P)
+- Fixed Mindflayer bio incorrectly using V2's bio. (D4N5T3P)
 
 - Added the following lines to the JSON template:
 

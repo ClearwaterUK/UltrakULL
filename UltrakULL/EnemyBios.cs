@@ -196,10 +196,10 @@ namespace UltrakULL
                 case "MINDFLAYER":
                     {
                         return
-                            language.currentLanguage.enemyBios.enemyBios_v2_1 + "\n\n" +
-                            language.currentLanguage.enemyBios.enemyBios_v2_2 + "\n\n" +
-                            language.currentLanguage.enemyBios.enemyBios_v2_3 + "\n\n" +
-                            language.currentLanguage.enemyBios.enemyBios_v2_4;
+                            language.currentLanguage.enemyBios.enemyBios_mindflayer_1 + "\n\n" +
+                            language.currentLanguage.enemyBios.enemyBios_mindflayer_2 + "\n\n" +
+                            language.currentLanguage.enemyBios.enemyBios_mindflayer_3 + "\n\n" +
+                            language.currentLanguage.enemyBios.enemyBios_mindflayer_4;
 
                     }
 
