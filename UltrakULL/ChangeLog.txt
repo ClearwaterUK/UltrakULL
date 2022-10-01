@@ -1,18 +1,56 @@
 ﻿0.7.3
+- **Added weapon color customization strings at last.** A fair few new JSON strings that come with it, be sure to check the notes below.
 - Added a few more sanity checks for various things. If something bad happens, the game should revert to using English strings for that segment only,
 instead of everything that gets patched behind it.
+- Added/fixed a missing line in the Idol's bio. (Soulvender)
 - Fixed "Mission name not found" on save files that have finished Act 2 in the save menu.
 - Fixed a couple of things not being translated in the Sandbox. (MKaid)
-- Added/fixed a missing line in the Idol's bio. (Soulvender)
 - Fixed a typo for the Marksman descriptions in the JSON. See JSON changes below. (D4N5T3P)
 
 - Added the following lines to the JSON template:
+shop: shop_revolverPreset1
+shop: shop_revolverPreset2
+shop: shop_revolverPreset3
+shop: shop_revolverPreset4
+shop: shop_revolverPreset5
+
+shop: shop_shotgunPreset1
+shop: shop_shotgunPreset2
+shop: shop_shotgunPreset3
+shop: shop_shotgunPreset4
+shop: shop_shotgunPreset5
+
+shop: shop_nailgunPreset1
+shop: shop_nailgunPreset2
+shop: shop_nailgunPreset3
+shop: shop_nailgunPreset4
+shop: shop_nailgunPreset5
+
+shop: shop_railcannonPreset1
+shop: shop_railcannonPreset2
+shop: shop_railcannonPreset3
+shop: shop_railcannonPreset4
+shop: shop_railcannonPreset5
+
+shop: shop_rocketlauncherPreset1
+shop: shop_rocketlauncherPreset2
+shop: shop_rocketlauncherPreset3
+shop: shop_rocketlauncherPreset4
+shop: shop_rocketlauncherPreset5
+
+shop: shop_colorsPreset
+shop: shop_colorsCustom
+shop: shop_colorsAlternative
+shop: shop_colorsDone
+
 enemyBios: enemyBios_idol_4
 
 - Modified the following lines to the JSON template:
 shop: shop_revolverMarsmanDescription1 -> shop_revolverMarksmanDescription1
 shop: shop_revolverMarsmanDescription2 -> shop_revolverMarksmanDescription3
 shop: shop_revolverMarsmanDescription2 -> shop_revolverMarksmanDescription3
+act2: act2_greed_tombOfKings -> act2_greedThird_tombOfKings (I actually changed this last hotfix but forgot to mention it. Sorry!)
+
 
 0.7.2
 - Begun to add some more sanity checks in the mod code. Over time this should help the mod and the game break less if something goes wrong, or if something is wrong with a JSON file that is trying to be used.

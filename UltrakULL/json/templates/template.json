@@ -1036,7 +1036,42 @@
         "shop_loreRocketLauncher10": "",
         "shop_loreRocketLauncher11": "",
         "shop_loreRocketLauncher12": "",
-        "shop_loreRocketLauncher13": ""
+        "shop_loreRocketLauncher13": "",
+
+        "shop_revolverPreset1": "",
+        "shop_revolverPreset2": "",
+        "shop_revolverPreset3": "",
+        "shop_revolverPreset4": "",
+        "shop_revolverPreset5": "",
+
+        "shop_shotgunPreset1": "",
+        "shop_shotgunPreset2": "",
+        "shop_shotgunPreset3": "",
+        "shop_shotgunPreset4": "",
+        "shop_shotgunPreset5": "",
+
+        "shop_nailgunPreset1": "",
+        "shop_nailgunPreset2": "",
+        "shop_nailgunPreset3": "",
+        "shop_nailgunPreset4": "",
+        "shop_nailgunPreset5": "",
+
+        "shop_railcannonPreset1": "",
+        "shop_railcannonPreset2": "",
+        "shop_railcannonPreset3": "",
+        "shop_railcannonPreset4": "",
+        "shop_railcannonPreset5": "",
+
+        "shop_rocketlauncherPreset1": "",
+        "shop_rocketlauncherPreset2": "",
+        "shop_rocketlauncherPreset3": "",
+        "shop_rocketlauncherPreset4": "",
+        "shop_rocketlauncherPreset5": "",
+
+        "shop_colorsPreset": "",
+        "shop_colorsCustom": "",
+        "shop_colorsAlternative": "",
+        "shop_colorsDone": "",
 	},
 	"enemyNames":{
 		"enemyname_filth": "",

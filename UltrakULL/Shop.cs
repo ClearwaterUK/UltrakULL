@@ -256,7 +256,7 @@ namespace UltrakULL
             GameObject revolverColorWindow = getGameObjectChild(revolverWindow, "Color Screen");
 
             Text revolverColorWindowTitle = getTextfromGameObject(getGameObjectChild(revolverColorWindow,"Title"));
-            revolverColorWindowTitle.text = "--" + "REVOLVER" + "--";
+            revolverColorWindowTitle.text = "--" + language.currentLanguage.shop.shop_weaponsRevolver + "--";
 
             GameObject revolverStandardTemplates = getGameObjectChild(getGameObjectChild(revolverColorWindow, "Standard"),"Template");
             Text revolverStandardTemplate1 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverStandardTemplates, "Template 1"),"Button (Selectable)"),"Text"));
@@ -265,12 +265,12 @@ namespace UltrakULL
             Text revolverStandardTemplate4 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverStandardTemplates, "Template 4"), "Button (Selectable)"), "Text"));
             Text revolverStandardTemplate5 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverStandardTemplates, "Template 5"), "Button (Selectable)"), "Text"));
 
-            revolverStandardTemplate1.text = "STANDARD";
-            revolverStandardTemplate2.text = "MAGNUM";
-            revolverStandardTemplate3.text = "BRISE-GLACE";
-            revolverStandardTemplate4.text = "CHAUD & PRÊT";
-            revolverStandardTemplate5.text = "SANGUINE";
-            
+            revolverStandardTemplate1.text = language.currentLanguage.shop.shop_revolverPreset1;
+            revolverStandardTemplate2.text = language.currentLanguage.shop.shop_revolverPreset2;
+            revolverStandardTemplate3.text = language.currentLanguage.shop.shop_revolverPreset3;
+            revolverStandardTemplate4.text = language.currentLanguage.shop.shop_revolverPreset4;
+            revolverStandardTemplate5.text = language.currentLanguage.shop.shop_revolverPreset5;
+
             Text revolverColorSwitchToAlternative = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverColorWindow, "Standard"),"AlternateButton"),"Text"));
             revolverColorSwitchToAlternative.text = "ALTERNATIF";
 
@@ -284,39 +284,39 @@ namespace UltrakULL
             Text revolverAlternateTemplate4 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverAlternateTemplates, "Template 4"), "Button (Selectable)"), "Text"));
             Text revolverAlternateTemplate5 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverAlternateTemplates, "Template 5"), "Button (Selectable)"), "Text"));
 
-            revolverAlternateTemplate1.text = "STANDARD";
-            revolverAlternateTemplate2.text = "MAGNUM";
-            revolverAlternateTemplate3.text = "BRISE-GLACE";
-            revolverAlternateTemplate4.text = "CHAUD & PRÊT";
-            revolverAlternateTemplate5.text = "SANGUINE";
+            revolverAlternateTemplate1.text = language.currentLanguage.shop.shop_revolverPreset1;
+            revolverAlternateTemplate2.text = language.currentLanguage.shop.shop_revolverPreset2;
+            revolverAlternateTemplate3.text = language.currentLanguage.shop.shop_revolverPreset3;
+            revolverAlternateTemplate4.text = language.currentLanguage.shop.shop_revolverPreset4;
+            revolverAlternateTemplate5.text = language.currentLanguage.shop.shop_revolverPreset5;
 
             Text revolverColorStandardPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverStandardTemplates, "TemplateButton"),"Text"));
-            revolverColorStandardPreset.text = "THÈMES";
+            revolverColorStandardPreset.text = language.currentLanguage.shop.shop_colorsPreset;
 
             Text revolverColorStandardCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverStandardTemplates, "CustomButton"),"Text"));
-            revolverColorStandardCustom.text = "PERSONNALISÉ";
+            revolverColorStandardCustom.text = language.currentLanguage.shop.shop_colorsCustom;
 
             Text revolverColorAlternatePreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverAlternateTemplates, "TemplateButton"), "Text"));
-            revolverColorAlternatePreset.text = "THÈMES";
+            revolverColorAlternatePreset.text = language.currentLanguage.shop.shop_colorsPreset;
 
             Text revolverColorAlternateCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverAlternateTemplates, "CustomButton"), "Text"));
-            revolverColorAlternateCustom.text = "PERSONNALISÉ";
+            revolverColorAlternateCustom.text = language.currentLanguage.shop.shop_colorsCustom;
 
             Text revolverColorDone = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverColorWindow, "Done"),"Text"));
-            revolverColorDone.text = "FINI";
+            revolverColorDone.text = language.currentLanguage.shop.shop_colorsDone;
 
             //Revolver custom colors
             GameObject revolverStandardCustom = getGameObjectChild(getGameObjectChild(revolverColorWindow, "Standard"),"Custom");
             Text revolverStandardCustomPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverStandardCustom, "TemplateButton"), "Text"));
-            revolverStandardCustomPreset.text = "THÈMES";
+            revolverStandardCustomPreset.text = language.currentLanguage.shop.shop_colorsPreset;
             Text revolverStandardCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverStandardCustom, "CustomButton"), "Text"));
-            revolverStandardCustomCustom.text = "PERSONNALISÉ";
+            revolverStandardCustomCustom.text = language.currentLanguage.shop.shop_colorsCustom;
 
             GameObject revolverAlternateCustom = getGameObjectChild(getGameObjectChild(revolverColorWindow, "Alternate"), "Custom");
             Text revolverAlternateCustomPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverAlternateCustom, "TemplateButton"), "Text"));
-            revolverAlternateCustomPreset.text = "THÈMES";
+            revolverAlternateCustomPreset.text = language.currentLanguage.shop.shop_colorsPreset;
             Text revolverAlternateCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverAlternateCustom, "CustomButton"), "Text"));
-            revolverAlternateCustomCustom.text = "PERSONNALISÉ";
+            revolverAlternateCustomCustom.text = language.currentLanguage.shop.shop_colorsCustom;
 
             //Shotgun window and descriptions
             GameObject shotgunWindow = getGameObjectChild(shopWeaponsObject, "ShotgunWindow");
@@ -384,7 +384,7 @@ namespace UltrakULL
             GameObject shotgunColorWindow = getGameObjectChild(shotgunWindow, "Color Screen");
 
             Text shotgunColorWindowTitle = getTextfromGameObject(getGameObjectChild(shotgunColorWindow, "Title"));
-            shotgunColorWindowTitle.text = "--" + "FUSIL À POMPE" + "--";
+            shotgunColorWindowTitle.text = "--" + language.currentLanguage.shop.shop_weaponsShotgun + "--";
 
             GameObject shotgunStandardTemplates = getGameObjectChild(getGameObjectChild(shotgunColorWindow, "Standard"), "Template");
             Text shotgunStandardTemplate1 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shotgunStandardTemplates, "Template 1"), "Button (Selectable)"), "Text"));
@@ -393,27 +393,27 @@ namespace UltrakULL
             Text shotgunStandardTemplate4 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shotgunStandardTemplates, "Template 4"), "Button (Selectable)"), "Text"));
             Text shotgunStandardTemplate5 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shotgunStandardTemplates, "Template 5"), "Button (Selectable)"), "Text"));
 
-            shotgunStandardTemplate1.text = "STANDARD";
-            shotgunStandardTemplate2.text = "CLASSIQUE";
-            shotgunStandardTemplate3.text = "PALAIS";
-            shotgunStandardTemplate4.text = "CARAMEL";
-            shotgunStandardTemplate5.text = "LUXE";
+            shotgunStandardTemplate1.text = language.currentLanguage.shop.shop_shotgunPreset1;
+            shotgunStandardTemplate2.text = language.currentLanguage.shop.shop_shotgunPreset2;
+            shotgunStandardTemplate3.text = language.currentLanguage.shop.shop_shotgunPreset3;
+            shotgunStandardTemplate4.text = language.currentLanguage.shop.shop_shotgunPreset4;
+            shotgunStandardTemplate5.text = language.currentLanguage.shop.shop_shotgunPreset5;
 
             Text shotgunColorStandardPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shotgunStandardTemplates, "TemplateButton"), "Text"));
-            revolverColorStandardPreset.text = "THÈMES";
+            shotgunColorStandardPreset.text = language.currentLanguage.shop.shop_colorsPreset;
 
             Text shotgunColorStandardCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shotgunStandardTemplates, "CustomButton"), "Text"));
-            shotgunColorStandardCustom.text = "PERSONNALISÉ";
+            shotgunColorStandardCustom.text = language.currentLanguage.shop.shop_colorsCustom;
 
             Text shotgunColorDone = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shotgunColorWindow, "Done"), "Text"));
-            shotgunColorDone.text = "FINI";
+            shotgunColorDone.text = language.currentLanguage.shop.shop_colorsDone;
 
             //Shotgun custom colors
             GameObject shotgunStandardCustom = getGameObjectChild(getGameObjectChild(shotgunColorWindow, "Standard"), "Custom");
             Text shotgunStandardCustomPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shotgunStandardCustom, "TemplateButton"), "Text"));
-            shotgunStandardCustomPreset.text = "THÈMES";
+            shotgunStandardCustomPreset.text = language.currentLanguage.shop.shop_colorsPreset;
             Text shotgunStandardCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shotgunStandardCustom, "CustomButton"), "Text"));
-            shotgunStandardCustomCustom.text = "PERSONNALISÉ";
+            shotgunStandardCustomCustom.text = language.currentLanguage.shop.shop_colorsCustom;
 
             //Nailgun window and descriptions
             GameObject nailgunWindow = getGameObjectChild(shopWeaponsObject, "NailgunWindow");
@@ -480,7 +480,7 @@ namespace UltrakULL
             GameObject nailgunColorWindow = getGameObjectChild(nailgunWindow, "Color Screen");
 
             Text nailgunColorWindowTitle = getTextfromGameObject(getGameObjectChild(nailgunColorWindow, "Title"));
-            nailgunColorWindowTitle.text = "--" + "CLOUEUR" + "--";
+            nailgunColorWindowTitle.text = "--" + language.currentLanguage.shop.shop_weaponsNailgun + "--";
 
             GameObject nailgunStandardTemplates = getGameObjectChild(getGameObjectChild(nailgunColorWindow, "Standard"), "Template");
             Text nailgunStandardTemplate1 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunStandardTemplates, "Template 1"), "Button (Selectable)"), "Text"));
@@ -489,17 +489,17 @@ namespace UltrakULL
             Text nailgunStandardTemplate4 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunStandardTemplates, "Template 4"), "Button (Selectable)"), "Text"));
             Text nailgunStandardTemplate5 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunStandardTemplates, "Template 5"), "Button (Selectable)"), "Text"));
 
-            nailgunStandardTemplate1.text = "STANDARD";
-            nailgunStandardTemplate2.text = "ACIDIQUE";
-            nailgunStandardTemplate3.text = "CIEL CLAIR";
-            nailgunStandardTemplate4.text = "PANTHÈRE DES NEIGES";
-            nailgunStandardTemplate5.text = "VAMPIRE";
+            nailgunStandardTemplate1.text = language.currentLanguage.shop.shop_nailgunPreset1;
+            nailgunStandardTemplate2.text = language.currentLanguage.shop.shop_nailgunPreset2;
+            nailgunStandardTemplate3.text = language.currentLanguage.shop.shop_nailgunPreset3;
+            nailgunStandardTemplate4.text = language.currentLanguage.shop.shop_nailgunPreset4;
+            nailgunStandardTemplate5.text = language.currentLanguage.shop.shop_nailgunPreset5;
 
             Text nailgunColorSwitchToAlternative = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunColorWindow, "Standard"), "AlternateButton"), "Text"));
-            nailgunColorSwitchToAlternative.text = "ALTERNATIF";
+            nailgunColorSwitchToAlternative.text = language.currentLanguage.shop.shop_colorsAlternative;
 
             Text nailgunColorSwitchToStandard = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunColorWindow, "Alternate"), "AlternateButton"), "Text"));
-            nailgunColorSwitchToStandard.text = "ALTERNATIF";
+            nailgunColorSwitchToStandard.text = language.currentLanguage.shop.shop_colorsAlternative;
 
             GameObject nailgunAlternateTemplates = getGameObjectChild(getGameObjectChild(nailgunColorWindow, "Alternate"), "Template");
             Text nailgunAlternateTemplate1 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunAlternateTemplates, "Template 1"), "Button (Selectable)"), "Text"));
@@ -508,39 +508,39 @@ namespace UltrakULL
             Text nailgunAlternateTemplate4 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunAlternateTemplates, "Template 4"), "Button (Selectable)"), "Text"));
             Text nailgunAlternateTemplate5 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunAlternateTemplates, "Template 5"), "Button (Selectable)"), "Text"));
 
-            nailgunAlternateTemplate1.text = "STANDARD";
-            nailgunAlternateTemplate2.text = "ACIDIQUE";
-            nailgunAlternateTemplate3.text = "CIEL CLAIR";
-            nailgunAlternateTemplate4.text = "PANTHÈRE DES NEIGES";
-            nailgunAlternateTemplate5.text = "VAMPIRE";
+            nailgunAlternateTemplate1.text = language.currentLanguage.shop.shop_nailgunPreset1;
+            nailgunAlternateTemplate2.text = language.currentLanguage.shop.shop_nailgunPreset2;
+            nailgunAlternateTemplate3.text = language.currentLanguage.shop.shop_nailgunPreset3;
+            nailgunAlternateTemplate4.text = language.currentLanguage.shop.shop_nailgunPreset4;
+            nailgunAlternateTemplate5.text = language.currentLanguage.shop.shop_nailgunPreset5;
 
             Text nailgunColorStandardPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunStandardTemplates, "TemplateButton"), "Text"));
-            nailgunColorStandardPreset.text = "THÈMES";
+            nailgunColorStandardPreset.text = language.currentLanguage.shop.shop_colorsPreset;
 
             Text nailgunColorStandardCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunStandardTemplates, "CustomButton"), "Text"));
-            nailgunColorStandardCustom.text = "PERSONNALISÉ";
+            nailgunColorStandardCustom.text = language.currentLanguage.shop.shop_colorsCustom;
 
             Text nailgunColorAlternatePreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunAlternateTemplates, "TemplateButton"), "Text"));
-            nailgunColorAlternatePreset.text = "THÈMES";
+            nailgunColorAlternatePreset.text = language.currentLanguage.shop.shop_colorsPreset;
 
             Text nailgunColorAlternateCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunAlternateTemplates, "CustomButton"), "Text"));
-            nailgunColorAlternateCustom.text = "PERSONNALISÉ";
+            nailgunColorAlternateCustom.text = language.currentLanguage.shop.shop_colorsCustom;
 
             Text nailgunColorDone = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunColorWindow, "Done"), "Text"));
-            nailgunColorDone.text = "FINI";
+            nailgunColorDone.text = language.currentLanguage.shop.shop_colorsDone;
 
             //Nailgun custom colors
             GameObject nailgunStandardCustom = getGameObjectChild(getGameObjectChild(nailgunColorWindow, "Standard"), "Custom");
             Text nailgunStandardCustomPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunStandardCustom, "TemplateButton"), "Text"));
-            nailgunStandardCustomPreset.text = "THÈMES";
+            nailgunStandardCustomPreset.text = language.currentLanguage.shop.shop_colorsPreset;
             Text nailgunStandardCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunStandardCustom, "CustomButton"), "Text"));
-            nailgunStandardCustomCustom.text = "PERSONNALISÉ";
+            nailgunStandardCustomCustom.text = language.currentLanguage.shop.shop_colorsCustom;
 
             GameObject nailgunAlternateCustom = getGameObjectChild(getGameObjectChild(nailgunColorWindow, "Alternate"), "Custom");
             Text nailgunAlternateCustomPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunAlternateCustom, "TemplateButton"), "Text"));
-            nailgunAlternateCustomPreset.text = "THÈMES";
+            nailgunAlternateCustomPreset.text = language.currentLanguage.shop.shop_colorsPreset;
             Text nailgunAlternateCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunAlternateCustom, "CustomButton"), "Text"));
-            nailgunAlternateCustomCustom.text = "PERSONNALISÉ";
+            nailgunAlternateCustomCustom.text = language.currentLanguage.shop.shop_colorsCustom;
 
 
             //Railcannon window and descriptions
@@ -622,7 +622,7 @@ namespace UltrakULL
             GameObject railcannonColorWindow = getGameObjectChild(railcannonWindow, "Color Screen");
 
             Text railcannonColorWindowTitle = getTextfromGameObject(getGameObjectChild(railcannonColorWindow, "Title"));
-            railcannonColorWindowTitle.text = "--" + "CANON-ELECTRIQUE" + "--";
+            railcannonColorWindowTitle.text = "--" + language.currentLanguage.shop.shop_weaponsRailcannon + "--";
 
             GameObject railcannonStandardTemplates = getGameObjectChild(getGameObjectChild(railcannonColorWindow, "Standard"), "Template");
             Text railcannonStandardTemplate1 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(railcannonStandardTemplates, "Template 1"), "Button (Selectable)"), "Text"));
@@ -631,27 +631,27 @@ namespace UltrakULL
             Text railcannonStandardTemplate4 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(railcannonStandardTemplates, "Template 4"), "Button (Selectable)"), "Text"));
             Text railcannonStandardTemplate5 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(railcannonStandardTemplates, "Template 5"), "Button (Selectable)"), "Text"));
 
-            railcannonStandardTemplate1.text = "STANDARD";
-            railcannonStandardTemplate2.text = "INVERSÉ";
-            railcannonStandardTemplate3.text = "AMOUR & RÉGLISSE";
-            railcannonStandardTemplate4.text = "STATUE VEIN";
-            railcannonStandardTemplate5.text = "INDUSTRIEL";
+            railcannonStandardTemplate1.text = language.currentLanguage.shop.shop_railcannonPreset1;
+            railcannonStandardTemplate2.text = language.currentLanguage.shop.shop_railcannonPreset2;
+            railcannonStandardTemplate3.text = language.currentLanguage.shop.shop_railcannonPreset3;
+            railcannonStandardTemplate4.text = language.currentLanguage.shop.shop_railcannonPreset4;
+            railcannonStandardTemplate5.text = language.currentLanguage.shop.shop_railcannonPreset5;
 
             Text railcannonColorStandardPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(railcannonStandardTemplates, "TemplateButton"), "Text"));
-            railcannonColorStandardPreset.text = "THÈMES";
+            railcannonColorStandardPreset.text = language.currentLanguage.shop.shop_colorsPreset;
 
             Text railcannonColorStandardCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(railcannonStandardTemplates, "CustomButton"), "Text"));
-            railcannonColorStandardCustom.text = "PERSONNALISÉ";
+            railcannonColorStandardCustom.text = language.currentLanguage.shop.shop_colorsCustom;
 
             Text railcannonColorDone = getTextfromGameObject(getGameObjectChild(getGameObjectChild(railcannonColorWindow, "Done"), "Text"));
-            railcannonColorDone.text = "FINI";
+            railcannonColorDone.text = language.currentLanguage.shop.shop_colorsDone;
 
             //Railcannon custom colors
             GameObject railcannonStandardCustom = getGameObjectChild(getGameObjectChild(railcannonColorWindow, "Standard"), "Custom");
             Text railcannonStandardCustomPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(railcannonStandardCustom, "TemplateButton"), "Text"));
-            railcannonStandardCustomPreset.text = "THÈMES";
+            railcannonStandardCustomPreset.text = language.currentLanguage.shop.shop_colorsPreset;
             Text railcannonStandardCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(railcannonStandardCustom, "CustomButton"), "Text"));
-            railcannonStandardCustomCustom.text = "PERSONNALISÉ";
+            railcannonStandardCustomCustom.text = language.currentLanguage.shop.shop_colorsCustom;
 
 
             //Rocket launcher window & descriptions
@@ -708,7 +708,7 @@ namespace UltrakULL
             GameObject RLColorWindow = getGameObjectChild(rocketlauncherWindow, "Color Screen");
 
             Text RLColorWindowTitle = getTextfromGameObject(getGameObjectChild(RLColorWindow, "Title"));
-            RLColorWindowTitle.text = "--" + "LANCE-ROQUETTES" + "--";
+            RLColorWindowTitle.text = "--" + language.currentLanguage.shop.shop_weaponsRocketLauncher + "--";
 
             GameObject RLStandardTemplates = getGameObjectChild(getGameObjectChild(RLColorWindow, "Standard"), "Template");
             Text RLStandardTemplate1 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(RLStandardTemplates, "Template 1"), "Button (Selectable)"), "Text"));
@@ -717,28 +717,27 @@ namespace UltrakULL
             Text RLStandardTemplate4 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(RLStandardTemplates, "Template 4"), "Button (Selectable)"), "Text"));
             Text RLStandardTemplate5 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(RLStandardTemplates, "Template 5"), "Button (Selectable)"), "Text"));
 
-            RLStandardTemplate1.text = "STANDARD";
-            RLStandardTemplate2.text = "RUSTIQUE";
-            RLStandardTemplate3.text = "ROUGE À LÈVRE";
-            RLStandardTemplate4.text = "AUBERGINE";
-            RLStandardTemplate5.text = "AMÉTHYSTE DE NUIT";
+            RLStandardTemplate1.text = language.currentLanguage.shop.shop_rocketlauncherPreset1;
+            RLStandardTemplate2.text = language.currentLanguage.shop.shop_rocketlauncherPreset2;
+            RLStandardTemplate3.text = language.currentLanguage.shop.shop_rocketlauncherPreset3;
+            RLStandardTemplate4.text = language.currentLanguage.shop.shop_rocketlauncherPreset4;
+            RLStandardTemplate5.text = language.currentLanguage.shop.shop_rocketlauncherPreset5;
 
             Text RLColorStandardPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(RLStandardTemplates, "TemplateButton"), "Text"));
-            RLColorStandardPreset.text = "THÈMES";
+            RLColorStandardPreset.text = language.currentLanguage.shop.shop_colorsPreset;
 
             Text RLColorStandardCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(RLStandardTemplates, "CustomButton"), "Text"));
-            RLColorStandardCustom.text = "PERSONNALISÉ";
+            RLColorStandardCustom.text = language.currentLanguage.shop.shop_colorsCustom;
 
             Text RLColorDone = getTextfromGameObject(getGameObjectChild(getGameObjectChild(RLColorWindow, "Done"), "Text"));
-            RLColorDone.text = "FINI";
+            RLColorDone.text = language.currentLanguage.shop.shop_colorsDone;
 
             //Rocket launcher custom colors
             GameObject RLStandardCustom = getGameObjectChild(getGameObjectChild(RLColorWindow, "Standard"), "Custom");
             Text RLStandardCustomPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(RLStandardCustom, "TemplateButton"), "Text"));
-            RLStandardCustomPreset.text = "THÈMES";
+            RLStandardCustomPreset.text = language.currentLanguage.shop.shop_colorsPreset;
             Text RLStandardCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(RLStandardCustom, "CustomButton"), "Text"));
-            RLStandardCustomCustom.text = "PERSONNALISÉ";
-
+            RLStandardCustomCustom.text = language.currentLanguage.shop.shop_colorsCustom;
 
 
             //Arm window and descriptions

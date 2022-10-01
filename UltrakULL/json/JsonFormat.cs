@@ -1172,6 +1172,41 @@ namespace UltrakULL.json
         public string shop_loreRocketLauncher12;
         public string shop_loreRocketLauncher13;
 
+        public string shop_revolverPreset1;
+        public string shop_revolverPreset2;
+        public string shop_revolverPreset3;
+        public string shop_revolverPreset4;
+        public string shop_revolverPreset5;
+
+        public string shop_shotgunPreset1;
+        public string shop_shotgunPreset2;
+        public string shop_shotgunPreset3;
+        public string shop_shotgunPreset4;
+        public string shop_shotgunPreset5;
+
+        public string shop_nailgunPreset1;
+        public string shop_nailgunPreset2;
+        public string shop_nailgunPreset3;
+        public string shop_nailgunPreset4;
+        public string shop_nailgunPreset5;
+
+        public string shop_railcannonPreset1;
+        public string shop_railcannonPreset2;
+        public string shop_railcannonPreset3;
+        public string shop_railcannonPreset4;
+        public string shop_railcannonPreset5;
+
+        public string shop_rocketlauncherPreset1;
+        public string shop_rocketlauncherPreset2;
+        public string shop_rocketlauncherPreset3;
+        public string shop_rocketlauncherPreset4;
+        public string shop_rocketlauncherPreset5;
+
+        public string shop_colorsPreset;
+        public string shop_colorsCustom;
+        public string shop_colorsDone;
+        public string shop_colorsAlternative;
+
     }
     public class Levels
     {
