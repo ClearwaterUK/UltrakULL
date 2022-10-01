@@ -1,7 +1,12 @@
 ﻿0.7.3:
 
 ADDED:
+
+enemyBios: enemyBios_type
+enemyBios: enemyBios_data
+enemyBios: enemyBios_strategies
 enemyBios: enemyBios_idol_4
+
 style: style_why
 
 shop: shop_revolverPreset1

@@ -57,8 +57,6 @@ using UltrakULL.json;
  * 
  * - Discord RPC currently seems to be broken on my end as a whole, meaning I can't test Discord RPC in the mod (keeps throwing InternalError)
  * 
- * ACT 2 UPDATE DAMAGE REPORT
- * - Shop needs new stuff added - colors
  * 
  *  STUFF REPORTED BY ULL TEAM
  * - 2-S, minor issues to fix
@@ -70,10 +68,9 @@ using UltrakULL.json;
  * Disable patchedFunctions by returning true if an exception happens there, will then use original game code.
  * - 2-S: Some conclusion/nihilism lines missing. Reported by Veni
  * - Fill out the English template
+ * - Classic HUD strings
  * 
- * - Add the weapon color customization
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
- * - Marksman description not showing in shop
  * */
 
 namespace UltrakULL
@@ -84,7 +81,7 @@ namespace UltrakULL
     {
         public const string pluginGuid = "clearwater.ultrakill.ultrakULL";
         public const string pluginName = "UltrakULL - Ultrakill Language Library";
-        public const string pluginVersion = "0.7.2";
+        public const string pluginVersion = "0.8.0";
 
         private JsonParser jsonParser;
         private PatchedFunctions patchedFuncs;

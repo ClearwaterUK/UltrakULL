@@ -1193,6 +1193,11 @@
     },
     
     "enemybios":{
+
+        "enemyBios_type": "",
+        "enemyBios_data": "",
+        "enemyBios_strategy": "",
+
         "enemyBios_filth_1": "",
         "enemyBios_filth_2": "",
         "enemyBios_filth_3": "",

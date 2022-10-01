@@ -338,7 +338,7 @@ namespace UltrakULL
                     {
                         __instance.challengeIcon.fillCenter = true;
                         Text componentInChildren2 = __instance.challengeIcon.GetComponentInChildren<Text>();
-                        componentInChildren2.text = "C O M P L E T E";
+                        componentInChildren2.text = "T E R M I N É";
                         if (rank.ranks[@int] == 12 && (___allSecrets || rank.secretsAmount == 0))
                         {
                             componentInChildren2.color = new Color(0.6f, 0.4f, 0f, 1f);
@@ -352,7 +352,7 @@ namespace UltrakULL
                     {
                         __instance.challengeIcon.fillCenter = false;
                         Text componentInChildren3 = __instance.challengeIcon.GetComponentInChildren<Text>();
-                        componentInChildren3.text = "C H A L L E N G E";
+                        componentInChildren3.text = "D É F I";
                         componentInChildren3.color = Color.white;
                     }
                 }
@@ -1418,9 +1418,8 @@ namespace UltrakULL
                         string enemyDescription = enemyBios.getDescription(spawnableObject.objectName,language);
                         string enemyStrategy = enemyBios.getStrategy(spawnableObject.objectName,language);
 
-
                         ___enemyPageTitle.text = enemyName;
-                        string text = "<color=orange>TYPE: " + enemyType + "\n\nDONNÉES:</color>\n";
+                        string text = "<color=orange>" + language.currentLanguage.enemyBios.enemyBios_type + ": " + enemyType + "\n\n" + language.currentLanguage.enemyBios.enemyBios_data + "</color>\n";
                         if (MonoSingleton<BestiaryData>.Instance.GetEnemy(spawnableObject.enemyType) > 1)
                         {
                             text += enemyDescription;
@@ -1429,7 +1428,7 @@ namespace UltrakULL
                         {
                             text += "???";
                         }
-                        text = text + "\n\n<color=orange>STRATÉGIES:</color>\n" + enemyStrategy;
+                        text = text + "\n\n<color=orange>" + language.currentLanguage.enemyBios.enemyBios_strategy + ":</color>\n" + enemyStrategy;
                         ___enemyPageContent.text = text;
                         ___enemyPageContent.rectTransform.localPosition = new Vector3(___enemyPageContent.rectTransform.localPosition.x, 0f, ___enemyPageContent.rectTransform.localPosition.z);
                         for (int i = 0; i < ___enemyPreviewWrapper.childCount; i++)
@@ -1444,8 +1443,6 @@ namespace UltrakULL
                         Spin spin = go.AddComponent<Spin>();
                         spin.spinDirection = new Vector3(0f, 1f, 0f);
                         spin.speed = 10f;
-
-
                     });
                     //End of nested DisplayInfo here
                 }

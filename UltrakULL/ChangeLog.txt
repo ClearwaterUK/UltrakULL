@@ -1,6 +1,7 @@
-﻿0.7.3
+﻿0.8.0
 - **Added weapon color customization strings at last.** A fair few new JSON strings that come with it, be sure to check the notes below.
 - Added the 5-4 "why are you spawning enemies here" string in the JSON.
+- Added strings for enemy type, data and strategy titles for their bios.
 - Added a few more sanity checks for various things. If something bad happens, the game should revert to using English strings for that segment only,
 instead of everything that gets patched behind it.
 - Added/fixed a missing line in the Idol's bio. (Soulvender)
@@ -11,7 +12,11 @@ instead of everything that gets patched behind it.
 - Added the following lines to the JSON template:
 
 style: style_why
+
 enemyBios: enemyBios_idol_4
+enemyBios: enemyBios_type
+enemyBios: enemyBios_data
+enemyBios: enemyBios_strategies
 
 shop: shop_revolverPreset1
 shop: shop_revolverPreset2
@@ -52,7 +57,7 @@ shop: shop_colorsDone
 
 - Modified the following lines to the JSON template:
 shop: shop_revolverMarsmanDescription1 -> shop_revolverMarksmanDescription1
-shop: shop_revolverMarsmanDescription2 -> shop_revolverMarksmanDescription3
+shop: shop_revolverMarsmanDescription2 -> shop_revolverMarksmanDescription2
 shop: shop_revolverMarsmanDescription2 -> shop_revolverMarksmanDescription3
 act2: act2_greed_tombOfKings -> act2_greedThird_tombOfKings (I actually changed this last hotfix but forgot to mention it. Sorry!)
 

@@ -223,6 +223,10 @@ namespace UltrakULL.json
 
     public class EnemyBioStrings
     {
+        public string enemyBios_type;
+        public string enemyBios_data;
+        public string enemyBios_strategy;
+
         public string enemyBios_filth_1;
         public string enemyBios_filth_2;
         public string enemyBios_filth_3;
