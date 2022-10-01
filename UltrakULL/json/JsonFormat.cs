@@ -193,6 +193,8 @@ namespace UltrakULL.json
         public string style_splattered;
         public string style_triplekill;
 
+        public string style_why;
+
         public string style_conductor;
         public string style_crushed;
         public string style_fall;

@@ -2,37 +2,33 @@
 
 ADDED:
 enemyBios: enemyBios_idol_4
+style: style_why
 
 shop: shop_revolverPreset1
 shop: shop_revolverPreset2
 shop: shop_revolverPreset3
 shop: shop_revolverPreset4
 shop: shop_revolverPreset5
-
 shop: shop_shotgunPreset1
 shop: shop_shotgunPreset2
 shop: shop_shotgunPreset3
 shop: shop_shotgunPreset4
 shop: shop_shotgunPreset5
-
 shop: shop_nailgunPreset1
 shop: shop_nailgunPreset2
 shop: shop_nailgunPreset3
 shop: shop_nailgunPreset4
 shop: shop_nailgunPreset5
-
 shop: shop_railcannonPreset1
 shop: shop_railcannonPreset2
 shop: shop_railcannonPreset3
 shop: shop_railcannonPreset4
 shop: shop_railcannonPreset5
-
 shop: shop_rocketlauncherPreset1
 shop: shop_rocketlauncherPreset2
 shop: shop_rocketlauncherPreset3
 shop: shop_rocketlauncherPreset4
 shop: shop_rocketlauncherPreset5
-
 shop: shop_colorsPreset
 shop: shop_colorsCustom
 shop: shop_colorsAlternative

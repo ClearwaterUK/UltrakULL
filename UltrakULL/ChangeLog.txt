@@ -1,5 +1,6 @@
 ﻿0.7.3
 - **Added weapon color customization strings at last.** A fair few new JSON strings that come with it, be sure to check the notes below.
+- Added the 5-4 "why are you spawning enemies here" string in the JSON.
 - Added a few more sanity checks for various things. If something bad happens, the game should revert to using English strings for that segment only,
 instead of everything that gets patched behind it.
 - Added/fixed a missing line in the Idol's bio. (Soulvender)
@@ -8,6 +9,10 @@ instead of everything that gets patched behind it.
 - Fixed a typo for the Marksman descriptions in the JSON. See JSON changes below. (D4N5T3P)
 
 - Added the following lines to the JSON template:
+
+style: style_why
+enemyBios: enemyBios_idol_4
+
 shop: shop_revolverPreset1
 shop: shop_revolverPreset2
 shop: shop_revolverPreset3
@@ -43,7 +48,7 @@ shop: shop_colorsCustom
 shop: shop_colorsAlternative
 shop: shop_colorsDone
 
-enemyBios: enemyBios_idol_4
+
 
 - Modified the following lines to the JSON template:
 shop: shop_revolverMarsmanDescription1 -> shop_revolverMarksmanDescription1
