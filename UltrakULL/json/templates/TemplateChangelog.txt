@@ -2,6 +2,9 @@
 
 ADDED:
 
+frontend: level_challenge
+frontend: level_challengeCompleted
+
 enemyBios: enemyBios_type
 enemyBios: enemyBios_data
 enemyBios: enemyBios_strategies

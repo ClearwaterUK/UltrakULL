@@ -338,7 +338,8 @@ namespace UltrakULL
                     {
                         __instance.challengeIcon.fillCenter = true;
                         Text componentInChildren2 = __instance.challengeIcon.GetComponentInChildren<Text>();
-                        componentInChildren2.text = "T E R M I N É";
+
+                        componentInChildren2.text = String.Join(" ", language.currentLanguage.frontend.level_challengeCompleted.ToList());
                         if (rank.ranks[@int] == 12 && (___allSecrets || rank.secretsAmount == 0))
                         {
                             componentInChildren2.color = new Color(0.6f, 0.4f, 0f, 1f);
@@ -352,7 +353,7 @@ namespace UltrakULL
                     {
                         __instance.challengeIcon.fillCenter = false;
                         Text componentInChildren3 = __instance.challengeIcon.GetComponentInChildren<Text>();
-                        componentInChildren3.text = "D É F I";
+                        componentInChildren3.text = String.Join(" ", language.currentLanguage.frontend.level_challenge.ToList());
                         componentInChildren3.color = Color.white;
                     }
                 }

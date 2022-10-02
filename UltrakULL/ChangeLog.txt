@@ -1,60 +1,57 @@
 ﻿0.8.0
 - **Added weapon color customization strings at last.** A fair few new JSON strings that come with it, be sure to check the notes below.
-- Added the 5-4 "why are you spawning enemies here" string in the JSON.
-- Added strings for enemy type, data and strategy titles for their bios.
 - Added a few more sanity checks for various things. If something bad happens, the game should revert to using English strings for that segment only,
 instead of everything that gets patched behind it.
+- Added the 5-4 "why are you spawning enemies here" string in the JSON.
+- Added strings for enemy type, data and strategy titles for their bios.
+- Added strings for challenge/challenge completed on each level.
 - Added/fixed a missing line in the Idol's bio. (Soulvender)
 - Fixed "Mission name not found" on save files that have finished Act 2 in the save menu.
 - Fixed a couple of things not being translated in the Sandbox. (MKaid)
-- Fixed a typo for the Marksman descriptions in the JSON. See JSON changes below. (D4N5T3P)
+- Fixed Marksman descriptions not appearing in-game, due to a typo for the Marksman description streings in the JSON. See JSON changes below. (D4N5T3P)
 - Fixed Mindflayer bio incorrectly using V2's bio. (D4N5T3P)
 
 - Added the following lines to the JSON template:
 
-style: style_why
+frontend: level_challenge
+frontend: level_challengeCompleted
 
-enemyBios: enemyBios_idol_4
 enemyBios: enemyBios_type
 enemyBios: enemyBios_data
 enemyBios: enemyBios_strategies
+enemyBios: enemyBios_idol_4
+
+style: style_why
 
 shop: shop_revolverPreset1
 shop: shop_revolverPreset2
 shop: shop_revolverPreset3
 shop: shop_revolverPreset4
 shop: shop_revolverPreset5
-
 shop: shop_shotgunPreset1
 shop: shop_shotgunPreset2
 shop: shop_shotgunPreset3
 shop: shop_shotgunPreset4
 shop: shop_shotgunPreset5
-
 shop: shop_nailgunPreset1
 shop: shop_nailgunPreset2
 shop: shop_nailgunPreset3
 shop: shop_nailgunPreset4
 shop: shop_nailgunPreset5
-
 shop: shop_railcannonPreset1
 shop: shop_railcannonPreset2
 shop: shop_railcannonPreset3
 shop: shop_railcannonPreset4
 shop: shop_railcannonPreset5
-
 shop: shop_rocketlauncherPreset1
 shop: shop_rocketlauncherPreset2
 shop: shop_rocketlauncherPreset3
 shop: shop_rocketlauncherPreset4
 shop: shop_rocketlauncherPreset5
-
 shop: shop_colorsPreset
 shop: shop_colorsCustom
 shop: shop_colorsAlternative
 shop: shop_colorsDone
-
-
 
 - Modified the following lines to the JSON template:
 shop: shop_revolverMarsmanDescription1 -> shop_revolverMarksmanDescription1

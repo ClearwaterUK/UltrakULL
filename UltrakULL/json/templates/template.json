@@ -320,7 +320,10 @@
 		"layer_greed": "",
 		"layer_wrath": "",
 		"layer_heresy": "",
-		"layer_prime": ""
+		"layer_prime": "",
+
+        "level_challenge": "",
+		"level_challengeCompleted": ""
 	},
     "visualnovel": {
         "visualnovel_introFirst1": "",

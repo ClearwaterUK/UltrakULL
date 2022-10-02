@@ -973,6 +973,9 @@ namespace UltrakULL.json
         public string layer_heresy;
         public string layer_prime;
 
+        public string level_challenge;
+        public string level_challengeCompleted;
+
     }
 
     public class Book
