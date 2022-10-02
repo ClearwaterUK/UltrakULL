@@ -1,12 +1,15 @@
 ﻿0.7.3:
 
 ADDED:
-
 misc: youDied1
 misc: youDied2
 
 frontend: level_challenge
 frontend: level_challengeCompleted
+frontend: level_fullIntroPrompt
+frontend: level_fullIntroPromptYes
+frontend: level_fullIntroPromptNo
+frontend: level_fullIntroPromptCancel
 
 enemyBios: enemyBios_type
 enemyBios: enemyBios_data

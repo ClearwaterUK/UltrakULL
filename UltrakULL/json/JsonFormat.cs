@@ -976,6 +976,11 @@ namespace UltrakULL.json
         public string level_challenge;
         public string level_challengeCompleted;
 
+        public string level_fullIntroPrompt;
+        public string level_fullIntroPromptYes;
+        public string level_fullIntroPromptNo;
+        public string level_fullIntroPromptCancel;
+
     }
 
     public class Book

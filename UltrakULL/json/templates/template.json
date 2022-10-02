@@ -323,7 +323,12 @@
 		"layer_prime": "",
 
         "level_challenge": "",
-		"level_challengeCompleted": ""
+		"level_challengeCompleted": "",
+
+        "level_fullIntroPrompt": "",
+        "level_fullIntroPromptYes": "",
+        "level_fullIntroPromptNo": "",
+        "level_fullIntroPromptCancel": "",
 	},
     "visualnovel": {
         "visualnovel_introFirst1": "",

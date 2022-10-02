@@ -287,16 +287,16 @@ namespace UltrakULL
             GameObject fullIntroObject = getGameObjectChild(getGameObjectChild(lsPreludeObject, "FullIntroPopup"), "Panel");
 
             Text fullIntroText = getTextfromGameObject(fullIntroObject.transform.Find("Text").gameObject);
-            fullIntroText.text = "INTRO COMPLET?";
+            fullIntroText.text = language.currentLanguage.frontend.level_fullIntroPrompt;
 
             Text fullIntroYesText = getTextfromGameObject(getGameObjectChild(fullIntroObject, "Button (1)").transform.Find("Text").gameObject);
-            fullIntroYesText.text = "OUI";
+            fullIntroYesText.text = language.currentLanguage.frontend.level_fullIntroPromptYes;
 
             Text fullIntroNoText = getTextfromGameObject(getGameObjectChild(fullIntroObject, "Button").transform.Find("Text").gameObject);
-            fullIntroNoText.text = "NON";
+            fullIntroNoText.text = language.currentLanguage.frontend.level_fullIntroPromptNo;
 
             Text fullIntroCancelText = getTextfromGameObject(getGameObjectChild(fullIntroObject, "Button (2)").transform.Find("Text").gameObject);
-            fullIntroCancelText.text = "ANNULER";
+            fullIntroCancelText.text = language.currentLanguage.frontend.level_fullIntroPromptCancel;
         }
 
         //Patches all text strings in the Act 1 menu.
@@ -427,6 +427,14 @@ namespace UltrakULL
             primeTitle.text = jsonParser.currentLanguage.frontend.layer_prime;
         }
 
+
+        public void patchLoadingWindow(GameObject frontEnd, JsonParser jsonParser)
+        {
+            GameObject loadingObject = getGameObjectChild(getGameObjectChild(frontEnd, "LoadingScreen"),"Text");
+            Text loadingText = getTextfromGameObject(loadingObject);
+            loadingText.text = jsonParser.currentLanguage.misc.loading;
+        }
+
         public MainMenu(GameObject frontEnd, JsonParser jsonParser)
         {
             this.patchMainMenu(frontEnd,jsonParser);
@@ -438,6 +446,7 @@ namespace UltrakULL
             this.patchLevelSelectAct1(frontEnd,jsonParser);
             this.patchLevelSelectAct2(frontEnd,jsonParser);
             this.patchLevelSelectPrime(frontEnd,jsonParser);
+            this.patchLoadingWindow(frontEnd,jsonParser);
         }
 
     }

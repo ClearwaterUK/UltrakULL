@@ -2,9 +2,11 @@
 - **Added weapon color customization strings at last.** A fair few new JSON strings that come with it, be sure to check the notes below.
 - Added a few more sanity checks for various things. If something bad happens, the game should revert to using English strings for that segment only,
 instead of everything that gets patched behind it.
-- Added the 5-4 "why are you spawning enemies here" string in the JSON.
+- Added the 5-4 "why are you spawning enemies here" style string in the JSON.
 - Added strings for enemy type, data and strategy titles for their bios.
 - Added strings for challenge/challenge completed on each level.
+- Added strings for the 0-1 prompt.
+- Added string for the loading window on the front end.
 - Added/fixed a missing line in the Idol's bio. (Soulvender)
 - Added strings for the death screen. (Edith)
 - Fixed "Mission name not found" on save files that have finished Act 2 in the save menu.
