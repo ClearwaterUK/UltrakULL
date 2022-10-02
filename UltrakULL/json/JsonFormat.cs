@@ -1888,5 +1888,11 @@ namespace UltrakULL.json
 
         public string youDied1;
         public string youDied2;
+
+        public string classicHud_health;
+        public string classicHud_weapon;
+        public string classicHud_stamina;
+        public string classicHud_arm;
+        public string classicHud_railcannonMeter;
     }
 }

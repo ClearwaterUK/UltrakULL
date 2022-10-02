@@ -69,8 +69,6 @@ using UltrakULL.json;
  * - 2-S: Some conclusion/nihilism lines missing. Reported by Veni
  * - Fill out the English template
  * - Classic HUD strings
- * - Move death screen from hardcoded to JSON
- * - Main menu -> 0-1 full intro+loading screen: Move to JSON
  * 
  * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
@@ -240,6 +238,54 @@ namespace UltrakULL
             Text pressToSkipText = getTextfromGameObject(pressToSkip);
             pressToSkipText.text = this.jsonParser.currentLanguage.misc.pressToSkip;
 
+            //Classic HUD
+            GameObject classicHudBW = getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas, "Crosshair Filler"), "AltHud"),"Filler");
+            GameObject classicHudColor = getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas, "Crosshair Filler"), "AltHud (2)"),"Filler");
+
+            Text classicHudBWHealth = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Health"), "Title"));
+            Text classicHudBWHealthShow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Health"), "Title (1)"));
+            Text classicHudColorHealth = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "Health"), "Title"));
+            Text classicHudColorHealthShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "Health"), "Title (1)"));
+            classicHudBWHealth.text = this.jsonParser.currentLanguage.misc.classicHud_health;
+            classicHudColorHealth.text = this.jsonParser.currentLanguage.misc.classicHud_health;
+            classicHudBWHealthShow.text = this.jsonParser.currentLanguage.misc.classicHud_health;
+            classicHudColorHealthShadow.text = this.jsonParser.currentLanguage.misc.classicHud_health;
+
+            Text classicHudBWStamina = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Stamina"), "Title"));
+            Text classicHudColorStamina = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "Stamina"), "Title"));
+            Text classicHudBWStaminaShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Stamina"), "Title (1)"));
+            Text classicHudColorStaminaShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "Stamina"), "Title (1)"));
+            classicHudBWStamina.text = this.jsonParser.currentLanguage.misc.classicHud_stamina;
+            classicHudColorStamina.text = this.jsonParser.currentLanguage.misc.classicHud_stamina;
+            classicHudBWStaminaShadow.text = this.jsonParser.currentLanguage.misc.classicHud_stamina;
+            classicHudColorStaminaShadow.text = this.jsonParser.currentLanguage.misc.classicHud_stamina;
+
+            Text classicHudBWWeapon = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Weapon"), "Title"));
+            Text classicHudColorWeapon = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "Weapon"), "Title"));
+            Text classicHudBWWeaponShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Weapon"), "Title (1)"));
+            Text classicHudColorWeaponShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "Weapon"), "Title (1)"));
+            classicHudBWWeapon.text = this.jsonParser.currentLanguage.misc.classicHud_weapon;
+            classicHudColorWeapon.text = this.jsonParser.currentLanguage.misc.classicHud_weapon;
+            classicHudBWWeaponShadow.text = this.jsonParser.currentLanguage.misc.classicHud_weapon;
+            classicHudColorWeaponShadow.text = this.jsonParser.currentLanguage.misc.classicHud_weapon;
+
+            Text classicHudBWArm = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Arm"), "Title"));
+            Text classicHudColorArm = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "Arm"), "Title"));
+            Text classicHudBWArmShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Arm"), "Title (1)"));
+            Text classicHudColorArmShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "Arm"), "Title (1)"));
+            classicHudBWArm.text = this.jsonParser.currentLanguage.misc.classicHud_arm;
+            classicHudColorArm.text = this.jsonParser.currentLanguage.misc.classicHud_arm;
+            classicHudBWArmShadow.text = this.jsonParser.currentLanguage.misc.classicHud_arm;
+            classicHudColorArmShadow.text = this.jsonParser.currentLanguage.misc.classicHud_arm;
+
+            Text classicHudBWRailcannon = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "RailcannonMeter (1)"), "Title"));
+            Text classicHudColorRailcannon = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "RailcannonMeter"), "Title"));
+            Text classicHudBWRailcannonShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "RailcannonMeter (1)"), "Title (1)"));
+            Text classicHudColorRailcannonShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "RailcannonMeter"), "Title (1)"));
+            classicHudBWRailcannon.text = this.jsonParser.currentLanguage.misc.classicHud_railcannonMeter;
+            classicHudColorRailcannon.text = this.jsonParser.currentLanguage.misc.classicHud_railcannonMeter;
+            classicHudBWRailcannonShadow.text = this.jsonParser.currentLanguage.misc.classicHud_railcannonMeter;
+            classicHudColorRailcannonShadow.text = this.jsonParser.currentLanguage.misc.classicHud_railcannonMeter;
 
         }
 

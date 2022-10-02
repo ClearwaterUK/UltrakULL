@@ -4,6 +4,7 @@
 instead of everything that gets patched behind it.
 - Added the 5-4 "why are you spawning enemies here" style string in the JSON.
 - Added strings for enemy type, data and strategy titles for their bios.
+- Added strings for the classic HUDs. (Edith)
 - Added strings for challenge/challenge completed on each level.
 - Added strings for the 0-1 prompt.
 - Added string for the loading window on the front end.
@@ -15,6 +16,14 @@ instead of everything that gets patched behind it.
 - Fixed Mindflayer bio incorrectly using V2's bio. (D4N5T3P)
 
 - Added the following lines to the JSON template:
+
+misc: youDied1
+misc: youDied2
+misc: classicHud_health
+misc: classicHud_weapon
+misc: classicHud_stamina
+misc: classicHud_arm
+misc: classicHud_railcannonMeter
 
 frontend: level_challenge
 frontend: level_challengeCompleted

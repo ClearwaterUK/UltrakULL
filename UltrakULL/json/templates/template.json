@@ -1809,6 +1809,12 @@
 
         "youDied1": "",
         "youDied2": "",
+                
+        "classicHud_health": "",
+        "classicHud_stamina": "",
+        "classicHud_weapon": "",
+        "classicHud_arm": "",
+        "classicHud_railcannonMeter": "",
 
 	}
 }

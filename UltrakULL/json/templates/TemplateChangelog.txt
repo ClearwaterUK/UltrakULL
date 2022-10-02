@@ -3,6 +3,11 @@
 ADDED:
 misc: youDied1
 misc: youDied2
+misc: classicHud_health
+misc: classicHud_weapon
+misc: classicHud_stamina
+misc: classicHud_arm
+misc: classicHud_railcannonMeter
 
 frontend: level_challenge
 frontend: level_challengeCompleted
