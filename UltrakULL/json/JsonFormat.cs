@@ -1880,5 +1880,8 @@ namespace UltrakULL.json
         public string weapons_alreadyBought;
 
         public string pressToSkip;
+
+        public string youDied1;
+        public string youDied2;
     }
 }

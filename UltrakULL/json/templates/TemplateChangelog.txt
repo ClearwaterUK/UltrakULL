@@ -2,6 +2,9 @@
 
 ADDED:
 
+misc: youDied1
+misc: youDied2
+
 frontend: level_challenge
 frontend: level_challengeCompleted
 

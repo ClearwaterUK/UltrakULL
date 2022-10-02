@@ -70,8 +70,9 @@ using UltrakULL.json;
  * - Fill out the English template
  * - Classic HUD strings
  * - Move death screen from hardcoded to JSON
- * - Mindflayer uses V2 bio
+ * - Main menu -> 0-1 full intro+loading screen: Move to JSON
  * 
+ * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * */
 
@@ -189,7 +190,7 @@ namespace UltrakULL
                 bhvr.enabled = false;
 
                 Text youDiedText = getTextfromGameObject(deathScreen);
-                youDiedText.text = "[VOUS ÊTES MORT]\n\n\n\n\n[R] POUR RECOMMENCER";
+                youDiedText.text = this.jsonParser.currentLanguage.misc.youDied1 + "\n\n\n\n\n" + this.jsonParser.currentLanguage.misc.youDied2;
             }
             catch (Exception e)
             {

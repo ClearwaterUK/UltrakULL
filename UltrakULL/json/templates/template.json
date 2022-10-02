@@ -1800,7 +1800,10 @@
         "weapons_unavailable": "",
         "weapons_alreadyBought": "",
 
-        "pressToSkip": ""
+        "pressToSkip": "",
+
+        "youDied1": "",
+        "youDied2": "",
 
 	}
 }
