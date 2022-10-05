@@ -61,6 +61,9 @@ shop: shop_revolverMarsmanDescription2 -> shop_revolverMarksmanDescription3
 shop: shop_revolverMarsmanDescription2 -> shop_revolverMarksmanDescription3
 act2: act2_greed_tombOfKings -> act2_greedThird_tombOfKings (I actually changed this last hotfix but forgot to mention it. Sorry!)
 
+REMOVED:
+intermission: act1_intermission_second12
+
 0.7.2:
 
 ADDED:

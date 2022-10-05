@@ -87,14 +87,13 @@ namespace UltrakULL
                 + language.currentLanguage.intermission.act1_intermission_first11 + " ▼" + language.currentLanguage.intermission.act1_intermission_first12 + " ▼";
 
             this.act1IntermissionSecond =
-                language.currentLanguage.intermission.act1_intermission_second1 + " ▼" + language.currentLanguage.intermission.act1_intermission_second2 + " ▼\n\n"
+                language.currentLanguage.intermission.act1_intermission_second1 + " ▼\n\n"
                 + language.currentLanguage.intermission.act1_intermission_second3 + " ▼\n\n"
                 + language.currentLanguage.intermission.act1_intermission_second4 + " ▼" + language.currentLanguage.intermission.act1_intermission_second5 + " ▼"
                 + language.currentLanguage.intermission.act1_intermission_second6 + " ▼" + language.currentLanguage.intermission.act1_intermission_second5 + " ▼"
                 + language.currentLanguage.intermission.act1_intermission_second5 + " ▼" + language.currentLanguage.intermission.act1_intermission_second7 + " ▼\n"
                 + language.currentLanguage.intermission.act1_intermission_second8 + " ▼" + language.currentLanguage.intermission.act1_intermission_second9 + " ▼\n\n"
-                + language.currentLanguage.intermission.act1_intermission_second10 + " ▼" + language.currentLanguage.intermission.act1_intermission_second11 + " ▼"
-                + " ▼" + language.currentLanguage.intermission.act1_intermission_second12 + " ▼";
+                + language.currentLanguage.intermission.act1_intermission_second10 + " ▼" + language.currentLanguage.intermission.act1_intermission_second11 + " ▼";
 
             this.act1IntermissionThird =
                 language.currentLanguage.intermission.act1_intermission_third1 + " ▼" + language.currentLanguage.intermission.act1_intermission_third2 + " ▼"

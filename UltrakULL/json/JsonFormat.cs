@@ -840,7 +840,6 @@ namespace UltrakULL.json
         public string act1_intermission_second9;
         public string act1_intermission_second10;
         public string act1_intermission_second11;
-        public string act1_intermission_second12;
         
         public string act1_intermission_third1;
         public string act1_intermission_third2;
