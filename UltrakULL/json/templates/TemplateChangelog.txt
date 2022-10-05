@@ -9,6 +9,8 @@ misc: classicHud_stamina
 misc: classicHud_arm
 misc: classicHud_railcannonMeter
 
+visualnovel: visualnovel_conclusion11
+
 frontend: level_challenge
 frontend: level_challengeCompleted
 frontend: level_fullIntroPrompt

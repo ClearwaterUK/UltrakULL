@@ -10,6 +10,7 @@ instead of everything that gets patched behind it.
 - Added string for the loading window on the front end.
 - Added/fixed a missing line in the Idol's bio. (Soulvender)
 - Added strings for the death screen. (Edith)
+- Fixed some standing issues related to incorrect string placements in 4-S. One new string has been added, see JSON changes below.
 - Fixed "Mission name not found" on save files that have finished Act 2 in the save menu.
 - Fixed a couple of things not being translated in the Sandbox. (MKaid)
 - Fixed Marksman descriptions not appearing in-game, due to a typo for the Marksman description streings in the JSON. See JSON changes below. (D4N5T3P)
@@ -24,6 +25,8 @@ misc: classicHud_weapon
 misc: classicHud_stamina
 misc: classicHud_arm
 misc: classicHud_railcannonMeter
+
+visualnovel: visualnovel_conclusion11
 
 frontend: level_challenge
 frontend: level_challengeCompleted

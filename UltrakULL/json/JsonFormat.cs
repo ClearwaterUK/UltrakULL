@@ -793,6 +793,7 @@ namespace UltrakULL.json
         public string visualnovel_conclusion8;
         public string visualnovel_conclusion9;
         public string visualnovel_conclusion10;
+        public string visualnovel_conclusion11;
 
         public string visualnovel_conclusionPrompt1;
         public string visualnovel_conclusionPrompt2;
