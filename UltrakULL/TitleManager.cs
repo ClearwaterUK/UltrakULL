@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 using UltrakULL.json;
 
@@ -104,24 +105,23 @@ namespace UltrakULL
             titleToReturn.Append(" /// ");
 
             //...and then the number
-
             if (inputTitle.Contains("ACT I CRESCENDO"))
             {
-                //Placeholder string seems to revert to vanilla string. Guessing placeholder is too long.
-                titleToReturn.Append("ACTE I CRESCENDO");
+                titleToReturn.Append(language.currentLanguage.misc.hellmap_act1crescendo);
             }
             else if (inputTitle.Contains("ACT I CLIMAX"))
             {
-                titleToReturn.Append("ACTE I CLIMAXE");
+                titleToReturn.Append(language.currentLanguage.misc.hellmap_act1climax);
+                return titleToReturn.ToString();
             }
             if (inputTitle.Contains("ACT II CRESCENDO"))
             {
-                //Placeholder string seems to revert to vanilla string. Guessing placeholder is too long.
-                titleToReturn.Append("ACTE II CRESCENDO");
+                titleToReturn.Append(language.currentLanguage.misc.hellmap_act2crescendo);
             }
             else if (inputTitle.Contains("ACT II CLIMAX"))
             {
-                titleToReturn.Append("ACTE II CLIMAXE");
+                titleToReturn.Append(language.currentLanguage.misc.hellmap_act1climax);
+                return titleToReturn.ToString();
             }
 
             else if (inputTitle.Contains("FIRST"))
@@ -142,6 +142,8 @@ namespace UltrakULL
             }
             else if (inputTitle.Contains("CLIMAX"))
             {
+
+
                 titleToReturn.Append(language.currentLanguage.misc.hellmap_climax);
             }
             return titleToReturn.ToString();

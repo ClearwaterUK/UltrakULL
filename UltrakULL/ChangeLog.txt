@@ -5,9 +5,10 @@ instead of everything that gets patched behind it.
 - Added the 5-4 "why are you spawning enemies here" style string in the JSON.
 - Added strings for enemy type, data and strategy titles for their bios.
 - Added strings for the classic HUDs. (Edith)
-- Added strings for challenge/challenge completed on each level.
+- Added strings for challenge/challenge completed for each level on the chapter select menu.
 - Added strings for the 0-1 prompt.
 - Added string for the loading window on the front end.
+- Added strings for the Act Crescendo/Climax titles.
 - Added/fixed a missing line in the Idol's bio. (Soulvender)
 - Added strings for the death screen. (Edith)
 - Fixed some standing issues related to incorrect string placements in 4-S. One new string has been added, see JSON changes below.
@@ -26,6 +27,10 @@ misc: classicHud_weapon
 misc: classicHud_stamina
 misc: classicHud_arm
 misc: classicHud_railcannonMeter
+misc: hellmap_act1crescendo
+misc: hellmap_act1climax
+misc: hellmap_act2crescendo
+misc: hellmap_act2climax
 
 visualnovel: visualnovel_conclusion11
 

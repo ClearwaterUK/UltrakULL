@@ -8,6 +8,10 @@ misc: classicHud_weapon
 misc: classicHud_stamina
 misc: classicHud_arm
 misc: classicHud_railcannonMeter
+misc: hellmap_act1crescendo
+misc: hellmap_act1climax
+misc: hellmap_act2crescendo
+misc: hellmap_act2climax
 
 visualnovel: visualnovel_conclusion11
 

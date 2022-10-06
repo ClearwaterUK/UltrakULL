@@ -1855,6 +1855,10 @@ namespace UltrakULL.json
         public string hellmap_third;
         public string hellmap_fourth;
         public string hellmap_climax;
+        public string hellmap_act1crescendo;
+        public string hellmap_act1climax;
+        public string hellmap_act2crescendo;
+        public string hellmap_act2climax;
 
         public string loading;
 

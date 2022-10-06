@@ -48,7 +48,7 @@ using UltrakULL.json;
  *  
  * - Reexamine the intro text. See if I can get input working again, as well as shorten the 3 dots time based on the Act 2 update original code
  * - Some of the enemy bios as the INSURRECTIONIST and VIRTUE were updated, will need to retranslate and update on this end.
- * - 2-S: See if I can rename Mirage's names.
+ * - 2-S: See if I can rename Mirage's names. (IntermissionController has a property with the names. To investigate)
  * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages
  * - Discord RPC: Style meter in CG
  * - Size/color tag isn't working on the prime testament
@@ -59,18 +59,14 @@ using UltrakULL.json;
  * 
  * 
  *  STUFF REPORTED BY ULL TEAM
- * - 2-S, minor issues to fix
  * - P-1: Weird fuckery with the testament panel
  * - Rank letters not showing on level select (fine on my end, json problems maybe...?)
  * 
  *  FOR NEXT HOTFIX:
- * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything).
- * Disable patchedFunctions by returning true if an exception happens there, will then use original game code.
- * - 2-S: Some conclusion/nihilism lines missing. Reported by Veni
+ * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable patchedFunctions by returning true if an exception happens there, will then use original game code.
  * - Fill out the English template
- * - Classic HUD strings
  * 
- * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger
+ * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger. Maybe store last string, then if no match, reload the stored string?
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * */
 
