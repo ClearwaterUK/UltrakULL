@@ -20,7 +20,7 @@ using UltrakULL.json;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater
  *	Date started: 21st April 2021
- *	Last updated: 26th September 2022
+ *	Last updated: 7th October 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
@@ -51,7 +51,7 @@ using UltrakULL.json;
  * - 2-S: See if I can rename Mirage's names. (IntermissionController has a property with the names. To investigate)
  * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages
  * - Discord RPC: Style meter in CG
- * - Size/color tag isn't working on the prime testament
+ * - Size/color tag isn't working on the prime testament (some people have got it working. Probably an oversight on my end)
  * - Could be possible to swap out rank textures in HUD for translation. Shall look into later
  * - Move the loaded language class to a seperate class. Would make it easier to access instead of doing currentLanguage.language.etc...
  * 

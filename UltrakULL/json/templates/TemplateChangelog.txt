@@ -15,6 +15,20 @@ misc: hellmap_act2climax
 
 visualnovel: visualnovel_conclusion11
 
+intermission: act2_intermission_third6
+intermission: act2_intermission_third7
+intermission: act2_intermission_third8
+intermission: act2_intermission_third9
+intermission: act2_intermission_third10
+intermission: act2_intermission_fourth8
+intermission: act2_intermission_fourth9
+intermission: act2_intermission_fourth10
+intermission: act2_intermission_fourth11
+intermission: act2_intermission_fourth12
+intermission: act2_intermission_fourth13
+intermission: act2_intermission_fifth6
+
+
 frontend: level_challenge
 frontend: level_challengeCompleted
 frontend: level_fullIntroPrompt

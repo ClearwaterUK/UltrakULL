@@ -106,40 +106,62 @@ namespace UltrakULL
                 + language.currentLanguage.intermission.act2_intermission_first3 + " ▼" + language.currentLanguage.intermission.act2_intermission_first4 + " ▼"
                 + language.currentLanguage.intermission.act2_intermission_first5 + " ▼" + language.currentLanguage.intermission.act2_intermission_first6 + " ▼"
                 + "}\n\n"
+
                 + language.currentLanguage.intermission.act2_intermission_first7 + " ▼" + language.currentLanguage.intermission.act2_intermission_first8
                 + " ▼" + language.currentLanguage.intermission.act2_intermission_first9 + " ▼\n\n"
+
                 + language.currentLanguage.intermission.act2_intermission_first10 + " ▼";
 
             this.act2IntermissionSecond =
                 language.currentLanguage.intermission.act2_intermission_second1 + " ▼}" + language.currentLanguage.intermission.act2_intermission_second2 + " ▼"
                 + language.currentLanguage.intermission.act2_intermission_second3 + " ▼" + language.currentLanguage.intermission.act2_intermission_second4 + " ▼"
                 + language.currentLanguage.intermission.act2_intermission_second5 + " ▼\n\n"
+
                 + language.currentLanguage.intermission.act2_intermission_second6 + " ▼" + language.currentLanguage.intermission.act2_intermission_second7
                 + " ▼" + language.currentLanguage.intermission.act2_intermission_second8 + " ▼\n\n"
+
                 + language.currentLanguage.intermission.act2_intermission_second9 + " ▼\n\n"
+
                 + language.currentLanguage.intermission.act2_intermission_second10 + " ▼" + language.currentLanguage.intermission.act2_intermission_second11 + " ▼";
+
 
             this.act2IntermissionThird =
                 language.currentLanguage.intermission.act2_intermission_third1 + " ▼}" + language.currentLanguage.intermission.act2_intermission_third2
                 + " ▼\n\n"
+
                 + language.currentLanguage.intermission.act2_intermission_third3 + " ▼" + language.currentLanguage.intermission.act2_intermission_third4
-                + " ▼\n\n" + language.currentLanguage.intermission.act2_intermission_third5 + "▼";
+                + " ▼\n\n"
+
+                + language.currentLanguage.intermission.act2_intermission_third5 + " ▼" + language.currentLanguage.intermission.act2_intermission_third6 + " ▼"
+                + language.currentLanguage.intermission.act2_intermission_third7 + " ▼\n\n"
+
+                + language.currentLanguage.intermission.act2_intermission_third8 + " ▼" + language.currentLanguage.intermission.act2_intermission_third9 + " ▼" +
+                language.currentLanguage.intermission.act2_intermission_third10 + "▼";
 
             this.act2IntermissionFourth =
             language.currentLanguage.intermission.act2_intermission_fourth1 + " ▼" + language.currentLanguage.intermission.act2_intermission_fourth2
-            + " ▼\n\n" + language.currentLanguage.intermission.act2_intermission_fourth3
-            + " ▼\n\n" + language.currentLanguage.intermission.act2_intermission_fourth4
-            + " ▼\n\n" + language.currentLanguage.intermission.act2_intermission_fourth5
-            + " ▼\n\n" + language.currentLanguage.intermission.act2_intermission_fourth6
-            + " ▼\n\n" + language.currentLanguage.intermission.act2_intermission_fourth7 + " ▼";
+            + " ▼\n\n"
+            + language.currentLanguage.intermission.act2_intermission_fourth3 + " ▼" + language.currentLanguage.intermission.act2_intermission_fourth4
+
+            + " ▼\n\n" + language.currentLanguage.intermission.act2_intermission_fourth5 + " ▼\n\n"
+
+            + language.currentLanguage.intermission.act2_intermission_fourth6 + " ▼" + language.currentLanguage.intermission.act2_intermission_fourth7 + " ▼"
+            + language.currentLanguage.intermission.act2_intermission_fourth8 + " ▼\n\n"
+
+            + language.currentLanguage.intermission.act2_intermission_fourth9 + " ▼" + language.currentLanguage.intermission.act2_intermission_fourth10 + " ▼"
+            + language.currentLanguage.intermission.act2_intermission_fourth11 + language.currentLanguage.intermission.act2_intermission_fourth12 + " ▼\n\n"
+
+            + language.currentLanguage.intermission.act2_intermission_fourth13 + " ▼";
 
             this.act2IntermissionFifth =
-                language.currentLanguage.intermission.act2_intermission_fifth1
-                + " ▼\n\n" + language.currentLanguage.intermission.act2_intermission_fifth2 + " ▼\n\n"
+                language.currentLanguage.intermission.act2_intermission_fifth1 + " ▼\n\n"
+                + language.currentLanguage.intermission.act2_intermission_fifth2 + " ▼" + language.currentLanguage.intermission.act2_intermission_fifth3 + " ▼\n\n"
+
                 + "...▼\n\n"
-                + language.currentLanguage.intermission.act2_intermission_fifth3
-                + " ▼\n\n"
-                + language.currentLanguage.intermission.act2_intermission_fifth4 + " ▼" + language.currentLanguage.intermission.act2_intermission_fifth5 + " ▼";
+
+                + language.currentLanguage.intermission.act2_intermission_fifth4 + " ▼\n\n"
+
+                + language.currentLanguage.intermission.act2_intermission_fifth5 + " ▼" + language.currentLanguage.intermission.act2_intermission_fifth6 + " ▼";
 
             this.act2IntermissionSixth =
                 language.currentLanguage.intermission.act2_intermission_sixth1

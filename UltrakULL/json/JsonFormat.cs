@@ -886,24 +886,39 @@ namespace UltrakULL.json
         public string act2_intermission_third3;
         public string act2_intermission_third4;
         public string act2_intermission_third5;
+        public string act2_intermission_third6;
+        public string act2_intermission_third7;
+
+        public string act2_intermission_third8;
+        public string act2_intermission_third9;
+        public string act2_intermission_third10;
 
         public string act2_intermission_fourth1;
         public string act2_intermission_fourth2;
         public string act2_intermission_fourth3;
-
         public string act2_intermission_fourth4;
-
+        
         public string act2_intermission_fourth5;
 
         public string act2_intermission_fourth6;
         public string act2_intermission_fourth7;
+        public string act2_intermission_fourth8;
+
+        public string act2_intermission_fourth9;
+        public string act2_intermission_fourth10;
+        public string act2_intermission_fourth11;
+        public string act2_intermission_fourth12;
+
+        public string act2_intermission_fourth13;
 
         public string act2_intermission_fifth1;
 
         public string act2_intermission_fifth2;
         public string act2_intermission_fifth3;
         public string act2_intermission_fifth4;
+
         public string act2_intermission_fifth5;
+        public string act2_intermission_fifth6;
 
         public string act2_intermission_sixth1;
 

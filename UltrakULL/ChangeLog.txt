@@ -11,12 +11,12 @@ instead of everything that gets patched behind it.
 - Added strings for the Act Crescendo/Climax titles.
 - Added/fixed a missing line in the Idol's bio. (Soulvender)
 - Added strings for the death screen. (Edith)
-- Fixed some standing issues related to incorrect string placements in 4-S. One new string has been added, see JSON changes below.
+- Fixed some standing issues related to incorrect string placements in 2-S. One new string has been added, see JSON changes below.
 - Fixed "Mission name not found" on save files that have finished Act 2 in the save menu.
 - Fixed a couple of things not being translated in the Sandbox. (MKaid)
 - Fixed Marksman descriptions not appearing in-game, due to a typo for the Marksman description streings in the JSON. See JSON changes below. (D4N5T3P)
 - Fixed Mindflayer bio incorrectly using V2's bio. (D4N5T3P)
-- Fixed an inconsistency in the Act1 Intermission.
+- Fixed some inconsistencies in the Act1 and Act2 Intermissions. This results in some existing strings being further split down; see JSON changes below.
 
 - Added the following lines to the JSON template:
 
@@ -33,6 +33,19 @@ misc: hellmap_act2crescendo
 misc: hellmap_act2climax
 
 visualnovel: visualnovel_conclusion11
+
+intermission: act2_intermission_third6
+intermission: act2_intermission_third7
+intermission: act2_intermission_third8
+intermission: act2_intermission_third9
+intermission: act2_intermission_third10
+intermission: act2_intermission_fourth8
+intermission: act2_intermission_fourth9
+intermission: act2_intermission_fourth10
+intermission: act2_intermission_fourth11
+intermission: act2_intermission_fourth12
+intermission: act2_intermission_fourth13
+intermission: act2_intermission_fifth6
 
 frontend: level_challenge
 frontend: level_challengeCompleted
