@@ -40,6 +40,7 @@ enemyBios: enemyBios_type
 enemyBios: enemyBios_data
 enemyBios: enemyBios_strategies
 enemyBios: enemyBios_idol_4
+enemyBios: enemyBios_minosPrime_8
 
 style: style_why
 

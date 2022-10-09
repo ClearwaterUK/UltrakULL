@@ -288,7 +288,8 @@ namespace UltrakULL
                             language.currentLanguage.enemyBios.enemyBios_minosPrime_4 + "\n\n" +
                             language.currentLanguage.enemyBios.enemyBios_minosPrime_5 + "\n\n" +
                             language.currentLanguage.enemyBios.enemyBios_minosPrime_6 + "\n\n" +
-                            language.currentLanguage.enemyBios.enemyBios_minosPrime_7;
+                            language.currentLanguage.enemyBios.enemyBios_minosPrime_7 + "\n\n" +
+                            language.currentLanguage.enemyBios.enemyBios_minosPrime_8;
 
                     }
 

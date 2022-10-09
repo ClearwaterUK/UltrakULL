@@ -60,7 +60,6 @@ using UltrakULL.json;
  * 
  *  STUFF REPORTED BY ULL TEAM
  * - Rank letters not showing on level select (fine on my end, json problems maybe...?)
- * - Minos Prime missing line in JSON template (7 in there but actually 8 overall)
  * 
  *  FOR NEXT HOTFIX:
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable patchedFunctions by returning true if an exception happens there, will then use original game code.

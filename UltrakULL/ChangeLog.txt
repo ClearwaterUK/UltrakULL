@@ -10,6 +10,7 @@ instead of everything that gets patched behind it.
 - Added string for the loading window on the front end.
 - Added strings for the Act Crescendo/Climax titles.
 - Added/fixed a missing line in the Idol's bio. (Soulvender)
+- Added/fixed a missing line in Minos Prime's bio. (Soulvender)
 - Added strings for the death screen. (Edith)
 - Fixed some standing issues related to incorrect string placements in 2-S. One new string has been added, see JSON changes below.
 - Fixed unknown string when picking up the Sawlauncher in 4-4. (Paolotto)
@@ -56,6 +57,7 @@ enemyBios: enemyBios_type
 enemyBios: enemyBios_data
 enemyBios: enemyBios_strategies
 enemyBios: enemyBios_idol_4
+enemyBios: enemyBios_minosPrime_8
 
 style: style_why
 

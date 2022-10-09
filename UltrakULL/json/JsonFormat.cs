@@ -447,6 +447,7 @@ namespace UltrakULL.json
         public string enemyBios_minosPrime_5;
         public string enemyBios_minosPrime_6;
         public string enemyBios_minosPrime_7;
+        public string enemyBios_minosPrime_8;
 
         public string enemyBios_minosPrime_strategy1;
         public string enemyBios_minosPrime_strategy2;
