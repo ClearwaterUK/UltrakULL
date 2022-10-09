@@ -59,6 +59,12 @@ namespace UltrakULL
         public string level44(string message, string message2, string input, JsonParser language)
         {
             string fullMessage = message + message2;
+
+            if (fullMessage.Contains("ALTERNATE"))
+            {
+                return language.currentLanguage.act1.act1_limboFourth_alternateRevolver;
+            }
+
             if (fullMessage.Contains("You're"))
             {
                 return (language.currentLanguage.act2.act2_greedFourth_v2);
