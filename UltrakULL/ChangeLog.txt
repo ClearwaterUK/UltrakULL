@@ -13,6 +13,7 @@ instead of everything that gets patched behind it.
 - Added strings for the death screen. (Edith)
 - Fixed some standing issues related to incorrect string placements in 2-S. One new string has been added, see JSON changes below.
 - Fixed unknown string when picking up the Sawlauncher in 4-4. (Paolotto)
+- Fixed a formatting error for the 2-2 book. (Paolotto)
 - Fixed "Mission name not found" on save files that have finished Act 2 in the save menu.
 - Fixed a couple of things not being translated in the Sandbox. (MKaid)
 - Fixed Marksman descriptions not appearing in-game, due to a typo for the Marksman description streings in the JSON. See JSON changes below. (D4N5T3P)

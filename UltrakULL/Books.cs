@@ -34,7 +34,7 @@ namespace UltrakULL
                         + "<i>" + language.currentLanguage.books.books_lustSecond2 + "\n\n"
                         + language.currentLanguage.books.books_lustSecond3 + "\n\n"
                         + language.currentLanguage.books.books_lustSecond4 + "</i>\n\n"
-                        + "<b>" + language.currentLanguage.books.books_lustSecond5 + "<b>";
+                        + "<b>" + language.currentLanguage.books.books_lustSecond5 + "</b>";
                     }
 
                 case "Level 4-2": {
