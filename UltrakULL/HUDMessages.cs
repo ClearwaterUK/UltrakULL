@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UltrakULL.json;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UltrakULL
 {
@@ -13,6 +15,7 @@ namespace UltrakULL
         public static string getHUDToolTip(string message, JsonParser language)
         {
             Console.WriteLine(message);
+
             
             if (message.Contains("PUNCH"))
             {
@@ -48,6 +51,12 @@ namespace UltrakULL
             if (message.Contains("EQUIPPED"))
             {
                 return language.currentLanguage.misc.hud_weaponVariation;
+            }
+
+            //Cybergrind custom pattern fix
+            if(SceneManager.GetActiveScene().name == "Endless")
+            {
+                return message;
             }
 
             Console.WriteLine(message);

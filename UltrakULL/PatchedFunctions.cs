@@ -2020,7 +2020,7 @@ namespace UltrakULL
                 Debug.Log("Toggling custom patterns");
                 bool customPatternMode = MonoSingleton<EndlessGrid>.Instance.customPatternMode;
                 MonoSingleton<EndlessGrid>.Instance.customPatternMode = !customPatternMode;
-                ___stateButtonText.text = (customPatternMode ? language.currentLanguage.misc.state_activated : language.currentLanguage.misc.state_deactivated);
+                ___stateButtonText.text = (customPatternMode ? language.currentLanguage.misc.state_deactivated : language.currentLanguage.misc.state_activated);
                 GameObject gameObject = __instance.enableWhenCustom;
                 if (gameObject != null)
                 {

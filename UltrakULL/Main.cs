@@ -59,9 +59,7 @@ using UltrakULL.json;
  * 
  *  STUFF REPORTED BY ULL TEAM
  * - Rank letters not showing on level select (fine on my end, json problems maybe...?)
- * - CG custom pattern strings not appearing
- * - CG customization: custom pattern activated/deactivated swapped? (snp)
- * - 2-1 dash jump panel seems to be broken again (Timmy)
+ * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me)
  * 
  *  FOR NEXT HOTFIX:
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable patchedFunctions by returning true if an exception happens there, will then use original game code.

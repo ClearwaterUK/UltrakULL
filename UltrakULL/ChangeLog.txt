@@ -14,6 +14,8 @@ instead of everything that gets patched behind it.
 - Added/fixed a missing line in the Idol's bio. (Soulvender)
 - Added/fixed a missing line in Minos Prime's bio. (Soulvender)
 - Added strings for the death screen. (Edith)
+- Fixed custom CG pattern names not displaying correctly in the HUD. (Philia)
+- Fixed activated/deactivated states for CG custom patterns not displaying correctly in the terminal. (snp)
 - Fixed some standing issues related to incorrect string placements in 2-S. One new string has been added, see JSON changes below.
 - Fixed unknown string when picking up the Sawlauncher in 4-4. (Paolotto)
 - Fixed a formatting error for the 2-2 book. (Paolotto)
