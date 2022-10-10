@@ -1,5 +1,6 @@
 ﻿0.8.0
 - **Added weapon color customization strings at last.** A fair few new JSON strings that come with it, be sure to check the notes below.
+- **An English (EN-gb) language is now available** as a template to assist translation into other languages.
 - Added a few more sanity checks for various things. If something bad happens, the game should revert to using English strings for that segment only,
 instead of everything that gets patched behind it.
 - Added the 5-4 "why are you spawning enemies here" style string in the JSON.

@@ -37,7 +37,7 @@ using UltrakULL.json;
  * 
  * - Less important stuff for future updates:
  *  - Cheat teleport menu
- *  - Sandbox stuff (time of day shop, spawn/cheat menu categories)
+ *  - Sandbox stuff (time of day shop, spawn/cheat menu categories, dupe save/load menu)
  *  - Terminals before bosses in levels (could copy the shop that's in the start of each level)
  *  - Organise and refactor stuff, move functions to other files to declutter Main (Simplify getGameObjectChild and getTextFromgameObject in each file, take itfrom CommonFunctions) (Factorise the act classes with an interface?)
  *  Look into how I can do encoding for RTL languages such as Arabic
@@ -47,23 +47,26 @@ using UltrakULL.json;
  *  BUGS AND QUIRKS TO FIX:
  *  
  * - Reexamine the intro text. See if I can get input working again, as well as shorten the 3 dots time based on the Act 2 update original code
- * - Some of the enemy bios as the INSURRECTIONIST and VIRTUE were updated, will need to retranslate and update on this end.
+ * - Some of the enemy bios as the INSURRECTIONIST, STALKER and VIRTUE were updated, will need to retranslate and update on this end.
+ * (also update JSON due to extra strings)
  * - 2-S: See if I can rename Mirage's names. (IntermissionController has a property with the names. To investigate)
- * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages
+ * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages (currently due to current subtitle implentation. Will need to change some things)
  * - Discord RPC: Style meter in CG
  * - Size/color tag isn't working on the prime testament (some people have got it working. Probably an oversight on my end)
  * - Could be possible to swap out rank textures in HUD for translation. Shall look into later
  * - Move the loaded language class to a seperate class. Would make it easier to access instead of doing currentLanguage.language.etc...
  * 
- * - Discord RPC currently seems to be broken on my end as a whole, meaning I can't test Discord RPC in the mod (keeps throwing InternalError)
+ * - Discord RPC currently seems to be broken on my end as a whole, meaning I can't test Discord RPC in the mod on my end (keeps throwing InternalError. People that have tested seems to be working fine but can't check on my end for myself)
  * 
  * 
  *  STUFF REPORTED BY ULL TEAM
  * - Rank letters not showing on level select (fine on my end, json problems maybe...?)
+ * - CG custom pattern strings not appearing
+ * - CG customization: custom pattern activated/deactivated swapped? (snp)
+ * - 2-1 dash jump panel seems to be broken again (Timmy)
  * 
  *  FOR NEXT HOTFIX:
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable patchedFunctions by returning true if an exception happens there, will then use original game code.
- * - Fill out the English template
  * 
  * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger. Maybe store last string, then if no match, reload the stored string?
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
