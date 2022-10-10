@@ -16,23 +16,19 @@ using System.Linq;
 using UltrakULL.json;
 
 /*
- * 
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater
  *	Date started: 21st April 2021
- *	Last updated: 7th October 2022
+ *	Last updated: 10th October 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
  * 
  *  MAIN TODO LIST
  *  - Fill the JSON template and class as progress happens, moving hardcoded text out as it goes
- *  
- *  Add ULL credits, translation credits and Discord link to main menu with help of UKUIHelper library
- *  
+ *  - Add ULL credits, translation credits and Discord link to main menu with help of UKUIHelper library
  *  - Error and exception handling
- *  Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
- *  
+ *  - Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
  *  - Discord RPC (Persistant timestamp and general corrections)
  * 
  * - Less important stuff for future updates:
@@ -42,28 +38,22 @@ using UltrakULL.json;
  *  - Organise and refactor stuff, move functions to other files to declutter Main (Simplify getGameObjectChild and getTextFromgameObject in each file, take itfrom CommonFunctions) (Factorise the act classes with an interface?)
  *  - Look into how I can do encoding for RTL languages such as Arabic
  *  - Port main class so it becomes a native UMM mod instead of BepInEx. With the way its structured, could be able to move config/lang files to same folder.
- *
  *  
  *  BUGS AND QUIRKS TO FIX:
- *  
  * - Reexamine the intro text. See if I can get input working again, as well as shorten the 3 dots time based on the Act 2 update original code
  * - 2-S: See if I can rename Mirage's names. (IntermissionController has a property with the names. To investigate)
  * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages (currently due to current subtitle implentation. Will need to change some things)
  * - Discord RPC: Style meter in CG
- * - Size/color tag isn't working on the prime testament (some people have got it working. Probably an oversight on my end)
  * - Could be possible to swap out rank textures in HUD for translation. Shall look into later
  * - Move the loaded language class to a seperate class. Would make it easier to access instead of doing currentLanguage.language.etc...
- * 
  * - Discord RPC currently seems to be broken on my end as a whole, meaning I can't test Discord RPC in the mod on my end (keeps throwing InternalError. People that have tested seems to be working fine but can't check on my end for myself)
- * 
  * 
  *  STUFF REPORTED BY ULL TEAM
  * - Rank letters not showing on level select (fine on my end, json problems maybe...?)
- * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me)
+ * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me but others have reported it. Need to keep an eye on)
  * 
  *  FOR NEXT HOTFIX:
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable patchedFunctions by returning true if an exception happens there, will then use original game code.
- * 
  * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger. Maybe store last string, then if no match, reload the stored string?
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * */

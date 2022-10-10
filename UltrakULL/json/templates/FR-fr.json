@@ -58,6 +58,8 @@
         "style_outofbounds": "HORS LIMITES",
         "style_shredded": "EN MIETTES",
         "style_zapped": "ZAPPÉ",
+
+        "style_why": "pk tu spawn des ennemis ici",
         
         "style_d": "Destructif",
         "style_c": "Chaotique",
@@ -314,7 +316,15 @@
 		"layer_greed": "COUCHE 4 - AVARICE",
 		"layer_wrath": "COUCHE 5 - COLÈRE",
 		"layer_heresy": "COUCHE 6 - HÉRÉSIE",
-		"layer_prime": "LES SANCTUAIRES PRIMES"
+		"layer_prime": "LES SANCTUAIRES PRIMES",
+
+        "level_challenge": "DÈFI",
+		"level_challengeCompleted": "TERMINÉ",
+
+        "level_fullIntroPrompt": "INTRO COMPLET?",
+        "level_fullIntroPromptYes": "OUI",
+        "level_fullIntroPromptNo": "NON",
+        "level_fullIntroPromptCancel": "ANNULER"
 	},
     "visualnovel": {
         "visualnovel_introFirst1": "Des pas lourds, du respiration déchiré.",
@@ -348,7 +358,6 @@
         "visualnovel_fallenResponseSecond": "Eh bien, je me suis fait renversé par un trou de cul aveugle-par-choix qui a salé ma jupe, donc en tout, putain c'est fantastique, mais je préférais de ne pas être par terre en ce moment.",
         "visualnovel_fallenResponseThird1": "Ah super, je me suis fait renversé par une fontaine vibrante, quelle chance.",
         "visualnovel_fallenResponseThird2": "Tu peux du moins m'aider à me remonter avant que le reste de vous se fondent en cause du soleil, ou se martellent dans la Terre.",
-        
         
         "visualnovel_fallenPromptSecond1": "*Aidez-la à se relever*",
         "visualnovel_fallenPromptSecond2": "Pas avec une telle attitude.",
@@ -505,15 +514,16 @@
         "visualnovel_nihilism43": "La peur persiste, et je ne peux pas me motiver pour rechercher un objectif, malgré la connaissance que je dois le faire.",
         
         "visualnovel_conclusion1": "Quel surprise.",
-        "visualnovel_conclusion2": "On dirait que t'as bien une bonne tête sur tes épaules. Bon sang, je suis impressioné.",
-        "visualnovel_conclusion3": "Ouf...",
-        "visualnovel_conclusion4": "Je me sens comme j'ai perdu tout le poids du monde entier.",
-        "visualnovel_conclusion5": "Ou plutôt, tu me l'avais fait pour moi.",
-        "visualnovel_conclusion6": "Honnêtement, du fond de mon cœur...",
-        "visualnovel_conclusion7": "Merci.",
-        "visualnovel_conclusion8": "Tu m'as beaucoup donné auquel je dois rèflechir, et même si je sais que j'ai une chemin longue et difficile devant moi, je suis optimistique.",
-        "visualnovel_conclusion9": "Pour la première fois dans ce qu'il me semble être une éternité, je suis optimistique.",
-        "visualnovel_conclusion10": "Hé... On est déjà trop en retard pour l'école et il est devenu assez claire que personne va nous chercher, donc ça te dit de nous débarasser ce prison qui  bouffe notre énergie et aller chercher quelque chose à manger, hein?",
+        "visualnovel_conclusion2": "On dirait que t'as bien une bonne tête sur tes épaules.",
+        "visualnovel_conclusion3": "Bon sang, je suis impressioné.",
+        "visualnovel_conclusion4": "Ouf...",
+        "visualnovel_conclusion5": "Je me sens comme j'ai perdu tout le poids du monde entier.",
+        "visualnovel_conclusion6": "Ou plutôt, tu me l'avais fait pour moi.",
+        "visualnovel_conclusion7": "Honnêtement, du fond de mon cœur...",
+        "visualnovel_conclusion8": "Merci.",
+        "visualnovel_conclusion9": "Tu m'as beaucoup donné auquel je dois rèflechir, et même si je sais que j'ai une chemin longue et difficile devant moi, je suis optimistique.",
+        "visualnovel_conclusion10": "Pour la première fois dans ce qu'il me semble être une éternité, je suis optimistique.",
+        "visualnovel_conclusion11": "Hé... On est déjà trop en retard pour l'école et il est devenu assez claire que personne va nous chercher, donc ça te dit de nous débarasser ce prison qui  bouffe notre énergie et aller chercher quelque chose à manger, hein?",
         
         "visualnovel_conclusionPrompt1": "Ouais, pourquoi pas. J'ai rien de mieux à faire aujourd'hui. Par contre, c'est vous qui payez.",
         "visualnovel_conclusionPrompt2": "Non, desolé. Pour être honnête je suis toujours un peu agacé à quel point vous étiez impolie vers moi.",
@@ -799,7 +809,6 @@
 		"levelName_primeSecond": "?",
 		"levelName_primeThird": "?",
 
-		"levelName_mainMenu": "MENU PRINCIPAL",
 		"levelName_cybergrind": "LE CYBERGRIND",
 		"levelName_sandbox": "BOÎTE À SABLE"
 	},
@@ -1034,7 +1043,42 @@
         "shop_loreRocketLauncher10": "- Les roquettes sont attirés pour les Aimants du cloueur, mais pas autant que les clous. La précision du traquage peut être augmenté en gelant les roquettes avec la variation Arrêt-Image.",
         "shop_loreRocketLauncher11": "- Une roquette sera attaché au Fouet sans annuler le coup si elle est frappé avec. Si le Fouet ne rentre pas en collision avec autre chose, la roquette y sera attiré avec, causant une explosion sur collision avec l'utilisateur.",
         "shop_loreRocketLauncher12": "- Les ennemis lègers attirés par le Fouet se trouverent dans l'air, les rendant comme cibles faciles à frapper pour le bonus d'explosion. Cependant, ceci nécessite beaucoup de distance si l'utilisateur souhaite esquiver la portée augmenté de l'explosion.",
-        "shop_loreRocketLauncher13": "- Certains machines, V1 inclus, sont assez lègers pour monter sur une roquette. Ceci peut être realisé en gelant une roquette avec la variation Arrêt-Image, et y sautant dessus. Même avec le poids lèger, la roquette perdera sa puissance éventuellement, le causant à descendre au fur et à mesure, mais dans l'eau, V1 est assez lèger pour empêcher cette descente."
+        "shop_loreRocketLauncher13": "- Certains machines, V1 inclus, sont assez lègers pour monter sur une roquette. Ceci peut être realisé en gelant une roquette avec la variation Arrêt-Image, et y sautant dessus. Même avec le poids lèger, la roquette perdera sa puissance éventuellement, le causant à descendre au fur et à mesure, mais dans l'eau, V1 est assez lèger pour empêcher cette descente.",
+
+        "shop_revolverPreset1": "STANDARD",
+        "shop_revolverPreset2": "MAGNUM",
+        "shop_revolverPreset3": "BRISE-GLACE",
+        "shop_revolverPreset4": "CHAUD & PRÊT",
+        "shop_revolverPreset5": "SANGUINE",
+
+        "shop_shotgunPreset1": "STANDARD",
+        "shop_shotgunPreset2": "CLASSIQUE",
+        "shop_shotgunPreset3": "PALAIS",
+        "shop_shotgunPreset4": "CARAMEL",
+        "shop_shotgunPreset5": "LUXE",
+
+        "shop_nailgunPreset1": "STANDARD",
+        "shop_nailgunPreset2": "ACIDIQUE",
+        "shop_nailgunPreset3": "CIEL CLAIR",
+        "shop_nailgunPreset4": "PANTHÈRE DES NEIGES",
+        "shop_nailgunPreset5": "VAMPIRE",
+
+        "shop_railcannonPreset1": "STANDARD",
+        "shop_railcannonPreset2": "INVERSÉ",
+        "shop_railcannonPreset3": "AMOUR & RÉGLISSE",
+        "shop_railcannonPreset4": "STATUE VEIN",
+        "shop_railcannonPreset5": "INDUSTRIEL",
+
+        "shop_rocketlauncherPreset1": "STANDARD",
+        "shop_rocketlauncherPreset2": "RUSTIQUE",
+        "shop_rocketlauncherPreset3": "ROUGE À LÈVRE",
+        "shop_rocketlauncherPreset4": "AUBERGINE",
+        "shop_rocketlauncherPreset5": "AMÉTHYSTE DE NUIT",
+
+        "shop_colorsPreset": "THÈMES",
+        "shop_colorsCustom": "PERSONNALISÉ",
+        "shop_colorsAlternative": "ALTERNATIF",
+        "shop_colorsDone": "FINI"
 	},
 	"enemyNames": {
 		"enemyname_filth": "SALETÉ",
@@ -1155,6 +1199,10 @@
     
     "enemybios":
     {
+          "enemyBios_type": "TYPE",
+          "enemyBios_data": "DONNÉES",
+          "enemyBios_strategy": "STRATÈGIES",
+
           "enemyBios_filth_1": "Les invocations sont des manifestations physiques âmes des maudits.",
           "enemyBios_filth_2": "La forme physique est basé sur la valeur de l'âme originale, qui est determiné par la force de son volonté, et son prévalence dans la connaissance publique: les âmes vivantes qui lui en souvient.",
           "enemyBios_filth_3": "Les Saletés sont la forme le plus bas d'une Coque, dont les âmes sont trop faibles et sans importance pour même pouvoir former un corps physique complet.",
@@ -1233,6 +1281,7 @@
           "enemyBios_stalker_strategy1": "Les lumières sur son bidon donne l'information sur l'état du Traqueur. Son couleur montre l'état de leur explosif, et l'intensité du couleur signale la santé du Traqueur.",
           "enemyBios_stalker_strategy2": "Il est conseillé de exploser un Traqueur au lieu de le laisser exploser tout-seul, puisque l'explosion de ce dernier aura une portée élargie.",
           "enemyBios_stalker_strategy3": "Si un Traqueur s'approche de son cible, et ne peux plus être repoussé, un lancement au sol peux les lancer hors de portée, pour qu'ils soient explosé en toute securité, puisque l'explosion est principalement horizontal.",
+          "enemyBios_stalker_strategy4": "",
           
           "enemyBios_insurrectionist_1": "Les Insurrectionistes Sisypheanes sont une armée de invocations rassemblées et entraînées par le Roi Sisyphe pour renverser le côntrole du Paradis sur l'Enfer, liberant les pêcheurs de leur torment éternel.",
           "enemyBios_insurrectionist_2": "Durant une ère de chaos dans le Paradis, où la veille des Anges étaient absent, Sisyphe à mis son plan en motion, ses forces recrutant toutes les invocations ayant assez d'intelligence pour être utile à leur cause, et ont commencé à attaquer les démons se promenant sur les dunes d'Avarice.",
@@ -1350,7 +1399,9 @@
           
           "enemyBios_virtue_1": "La base du formation d'un ange inférieur est assez similaire de celle des invocations, où la manifestation physique de l'âme est dépendant de son valeur, mais contrairement aux invocations, la virtuosité s'agit aussi comme facteur pour les anges.",
           "enemyBios_virtue_2": "Les anges inférieurs viennent des âmes humaines, qui prennent des formes abstraits ou animales, qui les rend distinct des corps humanoïdes des anges supérieurs et suprêmes, qui ont été créés comme tels, et sont considérés plus purs et sont placés plus haut sur l'hierarchie sociale du Paradis.",
-          "enemyBios_virtue_3": "On ne sait peu sur les spécifiques des anges, puisque le Paradis est excluante et ségrégé en raison de ne pas voulant de contact avec l'expérience humain de Dieu.",
+          "enemyBios_virtue_3": "Grâce à leurs vies précedents en tant qu'humains, les Vertus sont souvent envoyés pour accomplir des tâches que les anges supérieurs les jugent indignes, tel qu'agir comme gardien d'Enfer. Ces Vertus utilisent du feu céleste pour punir les pêcheurs qui ne réalisent pas leur punition, pour ne pas gaspiller le temps de Gabriel avec des infractions mineurs.",
+          "enemyBios_virtue_4": "Les Vertus sont connus pour porter une multitude dœils, mais pour des raisons non connus, ces œils sont cachés ou supprimés pour ceux qui deviennent des gardiens d'Enfer. Certains ont speculé que ceci est en relation avec le fait que tous les Coques manquent des yeux, le seul exception étant l'ancien Juge d'Enfer, le Roi Minos.",
+          "enemyBios_virtue_5": "On ne sait peu sur les spécifiques des anges, puisque le Paradis est excluante et ségrégé en raison de ne pas voulant de contact avec l'expérience humain de Dieu.",
           
           "enemyBios_virtue_strategy1": "La verticalité et le couvert donne peu de sécurité contre les rayons de lumière des Vertus, donc le mouvement horizontal est encouragé, mais se revenir en arrière est dangereux, pusique les rayons restent pendant un période de temps.",
           "enemyBios_virtue_strategy2": "Si on l'ignore pour trop longtemps, les Vertus s'enragent, ce qui fait que les rayons suivent leur cible. Bien qu'il soit facile d'esquiver leurs attaques avec assez d'espace, les laisser sans surveillance peut très vite leur donner un avantage.",
@@ -1373,9 +1424,12 @@
           "enemyBios_minosPrime_2": "En tant que des manifestations du volonté pur, les âmes primes sont incroyablement puissants, jusqu'au point que même les anges les plus fiers les voient comme menace, et utilisera tout les moyens nécessaires pour les empêcher de prendre forme.",
           "enemyBios_minosPrime_3": "Le Roi Minos a estimé que la souffrance éternelle était une punition injuste et déraisonnable pour ceux dont le seul pêché était l'amour d'un autre. Après la Disparition de Dieu, les anges se sont perdus et le Paradis se trouvait dans le chaos, Minos a commencé ses efforts à reformer la couche de Luxure.",
           "enemyBios_minosPrime_4": "La renaissance de Luxure était prospère, avec le Roi Minos guidant ses citoyens à se réunir et bâtir une nouvelle civilisation. Les efforts combinés des innombrables qui ont été damnés au seconde couche a apporté des grandes résultats, avec la cité de Luxure se grandissant de plus en plus.",
-          "enemyBios_minosPrime_5": "Gabriel, le plus intelligent des anges, a été envoyé pour tuer Minos. Le roi, au lieu de se battre, a tenté de le raisonner avec, mais Gabriel l'a battu sans merci et sans l'écouter.",
-          "enemyBios_minosPrime_6": "Puisque la volonté de Minos a été assez fort pour tenter de faire face au règne du Paradis, les anges ont choisi d'imprisonner son âme comme tentatif de l'empêcher de devenir un âme prime, et ont nommé Gabriel comme nouveau Juge d'Enfer.",
-          "enemyBios_minosPrime_7": "À partir du prison dans son propre corps, Minos a regardé en toute impuissance, son corps maintenant côntrolé par des parasites, détruisant tout ce pour lequel il a travaillé si dur.En maudissant soi - même pour avoir échoué de proteger son peuple, il fait vŒu de vengeance...",
+          
+          "enemyBios_minosPrime_5": "Cependant, après la prise de côntrole du Paradis par le Conseil, apportant la stabilité grace à leur poignée de fer, ils ont remarqué que Minos a opposé la volonté de Dieu en ayant liberé les pêcheurs de la punition que Dieu Lui ont designé.",
+          
+          "enemyBios_minosPrime_6": "Gabriel, le plus intelligent des anges, a été envoyé pour tuer Minos. Le roi, au lieu de se battre, a tenté de le raisonner avec, mais Gabriel l'a battu sans merci et sans l'écouter.",
+          "enemyBios_minosPrime_7": "Puisque la volonté de Minos a été assez fort pour tenter de faire face au règne du Paradis, les anges ont choisi d'imprisonner son âme comme tentatif de l'empêcher de devenir un âme prime, et ont nommé Gabriel comme nouveau Juge d'Enfer.",
+          "enemyBios_minosPrime_8": "À partir du prison dans son propre corps, Minos a regardé en toute impuissance, son corps maintenant côntrolé par des parasites, détruisant tout ce pour lequel il a travaillé si dur.En maudissant soi - même pour avoir échoué de proteger son peuple, il fait vŒu de vengeance...",
           
           "enemyBios_minosPrime_strategy1": "Il est rare que Minos Prime donne un période de temps pour pouvoir vous soigner, donc il est vitale d'aprendre lequels de ses attaques lui laissent vulnérable pendant un court moment, et comment les esquiver dans un tel façon qui permet de vous donner une position d'avantage lors de ces moments.",
           "enemyBios_minosPrime_strategy2": "Ses projectiles en forme de serpent peuvent être reflectés avec le Renvoyeur pour vous soigner au plein, même si le projectile ne frappe pas Minos Prime."
@@ -1692,7 +1746,7 @@
     },
     
     "misc": {
-        "hud_noArm1": "<color=red>PAS DE COUPS DE POING SANS BRAS, PAUVRE CON!</color>",
+        "hud_noArm1": "<color=red>PAS DE COUPS DE POING SANS BRAS, PAUVRE CON</color>",
         "hud_noArm2": "Les bras peuvent être rééquipés au magasin.",
         "hud_majorAssists": "LES ASSISTANCES MAJEURES SONT ACTIVÉES.",
         "hud_overhealOrb1": "Les <color=red>ORBES D'ÂMES ROUGES</color> donnent <color=lime>200 points de vie</color>.",
@@ -1726,6 +1780,10 @@
 		"hellmap_third": "TROISIÈME",
 		"hellmap_fourth": "QUATRIÈME",
 		"hellmap_climax": "CLIMAXE",
+        "hellmap_act1crescendo": "ACTE I CRESCENDO",
+        "hellmap_act1climax": "ACTE I CLIMAXE",
+        "hellmap_act2crescendo": "ACTE II CRESCENDO",
+        "hellmap_act2climax": "ACTE II CLIMAXE",
         
         "levelstats_time": "TEMPS",
         "levelstats_kills": "ÉLIMINATION",
@@ -1752,6 +1810,17 @@
         
         "weapons_unavailable": "NON DISPONIBLE",
         "weapons_alreadyBought": "DÉJÀ ACHETÉ",
+        
+        "pressToSkip": "Appuyer sur ECH pour passer",
+
+        "youDied1": "[VOUS ÊTES MORT]",
+        "youDied2": "[R] POUR RECOMMENCER",
+        
+        "classicHud_health": "SANTÉ",
+        "classicHud_stamina": "ÉNERGIE",
+        "classicHud_weapon": "ARME",
+        "classicHud_arm": "BRAS",
+        "classicHud_railcannonMeter": "CHARGE"
         
 	}
 }

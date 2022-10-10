@@ -1035,8 +1035,8 @@
         
         
         "shop_loreRevolver1": "A weapon created during the Final War for medium-to-long distance combat. Uses electric pulses to fire microscopic pieces of metal at incredibly high speeds.",
-        "shop_loreRevolver2": "Weapons that use this technology have been dubbed "electric guns", and it quickly became the new standard, replacing bullet guns. Due to still requiring a microscopic projectile, its ammo is not actually infinite, but it would take weeks of non-stop firing to run out and refilling is as easy as just scraping some flakes from scrap metal or even the gun's surface.",
-        "shop_loreRevolver3": "In fact, a rough, uneven surface from scraping flakes is considered a point of pride for wielders of electric guns, as it shows the weapon has been reliable and used for a long time. Many users even shave off flakes just for this reason, rather than for actual ammunition, making "unflaked" electric weapons an outlier.",
+        "shop_loreRevolver2": "Weapons that use this technology have been dubbed \"electric guns\", and it quickly became the new standard, replacing bullet guns. Due to still requiring a microscopic projectile, its ammo is not actually infinite, but it would take weeks of non-stop firing to run out and refilling is as easy as just scraping some flakes from scrap metal or even the gun's surface.",
+        "shop_loreRevolver3": "In fact, a rough, uneven surface from scraping flakes is considered a point of pride for wielders of electric guns, as it shows the weapon has been reliable and used for a long time. Many users even shave off flakes just for this reason, rather than for actual ammunition, making \"unflaked\" electric weapons an outlier.",
         "shop_loreRevolver4": "Although an electric gun requires some time to recharge its battery between shots, the revolver-style design bypasses that issue by including a multi-battery cylinder that rotates after each shot, allowing each battery time to charge without slowing down the fire-rate.",
         "shop_loreRevolver5": "A common modification is to allow for the charges of all batteries to be released simultaneously for greater power, though this requires a longer recharge time.",
         "shop_loreRevolver6": "Although it may seem weak at a glance, its power comes from its consistency and simplicity. The revolver is easy to use while focusing on movement and dodging attacks, because of the instant travel time of its shots and it functioning well at any range.",
@@ -1319,7 +1319,7 @@
         "enemyBios_stalker_1": "As the Greed layer's punishment, Stalkers have been forced to carry heavy boulders up the monuments of mankind's greed for all eternity.",
         "enemyBios_stalker_2": "They have carried out their punishment for so long that their bodies have evolved, warped and grown to better suit it.",
         "enemyBios_stalker_3": "Their limbs have twisted to give them better balance while carrying boulders on their backs and their skin and muscles have completely dried up, allowing them to survive direct contact with the dunes of gold dust that Greed's sun has raised to unfathomably high temperatures.",
-        "enemyBios_stalker_4": "However, an unidentified sentient force has replaced the boulders they would normally carry with high tech bombs that, upon detonation, will transform any nearby blood into the gold dust "sand" that covers the layer's surface.",
+        "enemyBios_stalker_4": "However, an unidentified sentient force has replaced the boulders they would normally carry with high tech bombs that, upon detonation, will transform any nearby blood into the gold dust \"sand\" that covers the layer's surface.",
         "enemyBios_stalker_5": "Research has shown the technology to be very similar to the augmentations of the modified Strays known as Soldiers, so it is likely both modifications come from the same source.",
         
         "enemyBios_stalker_strategy1": "The lights on the canister give information on a Stalker's state. The color shows the state of their explosive and the brightness of the color shows how much health the Stalker has left.",
@@ -1520,7 +1520,7 @@
 		"prelude_first_parry": "PUNCH a PROJECTILE with precise timing to DEFLECT it.",
         
         "prelude_first_hardDamage1": "Taking damage TEMPORARILY reduces your MAXIMUM HP.",
-        "prelude_first_hardDamage2": "\HARD DAMAGE\" recovers faster when playing STYLISHLY.",
+        "prelude_first_hardDamage2": "\"HARD DAMAGE\" recovers faster when playing STYLISHLY.",
         
 		"prelude_first_groundSlam1": "GROUND SLAM",
 		"prelude_first_groundSlam2": "deals damage on direct hit.",
