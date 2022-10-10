@@ -10,6 +10,7 @@ instead of everything that gets patched behind it.
 - Added strings for the 0-1 prompt.
 - Added string for the loading window on the front end.
 - Added strings for the Act Crescendo/Climax titles.
+- Added/fixed missing lines in the Virtue's bio.
 - Added/fixed a missing line in the Idol's bio. (Soulvender)
 - Added/fixed a missing line in Minos Prime's bio. (Soulvender)
 - Added strings for the death screen. (Edith)
@@ -59,6 +60,8 @@ enemyBios: enemyBios_data
 enemyBios: enemyBios_strategies
 enemyBios: enemyBios_idol_4
 enemyBios: enemyBios_minosPrime_8
+enemyBios: enemyBios_virtue_4
+enemyBios: enemyBios_virtue_5
 
 style: style_why
 

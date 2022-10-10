@@ -262,7 +262,9 @@ namespace UltrakULL
                         return
                             language.currentLanguage.enemyBios.enemyBios_virtue_1 + "\n\n" +
                             language.currentLanguage.enemyBios.enemyBios_virtue_2 + "\n\n" +
-                            language.currentLanguage.enemyBios.enemyBios_virtue_3;
+                            language.currentLanguage.enemyBios.enemyBios_virtue_3 + "\n\n" +
+                            language.currentLanguage.enemyBios.enemyBios_virtue_4 + "\n\n" +
+                            language.currentLanguage.enemyBios.enemyBios_virtue_5
                     }
                 case "SOMETHING WICKED":
                     {

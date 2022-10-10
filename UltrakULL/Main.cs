@@ -40,15 +40,13 @@ using UltrakULL.json;
  *  - Sandbox stuff (time of day shop, spawn/cheat menu categories, dupe save/load menu)
  *  - Terminals before bosses in levels (could copy the shop that's in the start of each level)
  *  - Organise and refactor stuff, move functions to other files to declutter Main (Simplify getGameObjectChild and getTextFromgameObject in each file, take itfrom CommonFunctions) (Factorise the act classes with an interface?)
- *  Look into how I can do encoding for RTL languages such as Arabic
- *  Port main class so it becomes a native UMM mod instead of BepInEx. With the way its structured, could be able to move config/lang files to same folder.
+ *  - Look into how I can do encoding for RTL languages such as Arabic
+ *  - Port main class so it becomes a native UMM mod instead of BepInEx. With the way its structured, could be able to move config/lang files to same folder.
  *
  *  
  *  BUGS AND QUIRKS TO FIX:
  *  
  * - Reexamine the intro text. See if I can get input working again, as well as shorten the 3 dots time based on the Act 2 update original code
- * - Some of the enemy bios as the INSURRECTIONIST, STALKER and VIRTUE were updated, will need to retranslate and update on this end.
- * (also update JSON due to extra strings)
  * - 2-S: See if I can rename Mirage's names. (IntermissionController has a property with the names. To investigate)
  * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages (currently due to current subtitle implentation. Will need to change some things)
  * - Discord RPC: Style meter in CG

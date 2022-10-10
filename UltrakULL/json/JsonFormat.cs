@@ -422,6 +422,8 @@ namespace UltrakULL.json
         public string enemyBios_virtue_1;
         public string enemyBios_virtue_2;
         public string enemyBios_virtue_3;
+        public string enemyBios_virtue_4;
+        public string enemyBios_virtue_5;
 
         public string enemyBios_virtue_strategy1;
         public string enemyBios_virtue_strategy2;

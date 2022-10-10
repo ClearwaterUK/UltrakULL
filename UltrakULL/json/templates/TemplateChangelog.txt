@@ -41,6 +41,8 @@ enemyBios: enemyBios_data
 enemyBios: enemyBios_strategies
 enemyBios: enemyBios_idol_4
 enemyBios: enemyBios_minosPrime_8
+enemyBios: enemyBios_virtue_4
+enemyBios: enemyBios_virtue_5
 
 style: style_why
 
