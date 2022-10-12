@@ -2,6 +2,7 @@
 
 - Fixed an inconsistency in the tutorial intro text.
 - Changed the color of the assist options to use lime instead of blue. This is due to the hex color tag that was being used being broken. Normal colors still work fine, so this string will use a lime color until it has been fixed.
+- Fixed 6-2 showing Act 1 Climax instead of Act 2 Climax. (Soulvender)
 
 
 

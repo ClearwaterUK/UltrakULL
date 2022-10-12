@@ -120,7 +120,7 @@ namespace UltrakULL
             }
             else if (inputTitle.Contains("ACT II CLIMAX"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_act1climax);
+                titleToReturn.Append(language.currentLanguage.misc.hellmap_act2climax);
                 return titleToReturn.ToString();
             }
 

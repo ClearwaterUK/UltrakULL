@@ -53,7 +53,6 @@ using UltrakULL.json;
  *  STUFF REPORTED BY ULL TEAM
  * - Rank letters not showing on level select (fine on my end, json problems maybe...?)
  * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me but others have reported it. Need to keep an eye on)
- * - Intro colors broken
  * - Opening credits broken
  * 
  * 
@@ -66,6 +65,7 @@ using UltrakULL.json;
  * - Alt revolver color menu showing hardcoded French text
  * - Another safeguard against outdated JSONs: Add a minimum fileVersion tag in the JSON that is checked against modVersion (which is hardcoded in the mod).
  * - If it's outdated, LOAD IT ANYWAY BUT SHOW A MESSAGE WARNING OF MISSING STRINGS.
+ * End of Early Access Panel
  * 
  * */
 
