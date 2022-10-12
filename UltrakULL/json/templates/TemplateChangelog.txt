@@ -1,4 +1,4 @@
-﻿0.7.3:
+﻿0.8.0:
 
 ADDED:
 misc: youDied1
@@ -78,7 +78,7 @@ shop: shop_colorsDone
 
 MODIFIED:
 shop: shop_revolverMarsmanDescription1 -> shop_revolverMarksmanDescription1
-shop: shop_revolverMarsmanDescription2 -> shop_revolverMarksmanDescription3
+shop: shop_revolverMarsmanDescription2 -> shop_revolverMarksmanDescription2
 shop: shop_revolverMarsmanDescription2 -> shop_revolverMarksmanDescription3
 act2: act2_greed_tombOfKings -> act2_greedThird_tombOfKings (I actually changed this last hotfix but forgot to mention it. Sorry!)
 

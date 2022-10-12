@@ -61,8 +61,6 @@ using UltrakULL.json;
  * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger. Maybe store last string, then if no match, reload the stored string?
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * 
- * - 6-2 showing Act1 climax instead of Act2
- * - Alt revolver color menu showing hardcoded French text
  * - Another safeguard against outdated JSONs: Add a minimum fileVersion tag in the JSON that is checked against modVersion (which is hardcoded in the mod).
  * - If it's outdated, LOAD IT ANYWAY BUT SHOW A MESSAGE WARNING OF MISSING STRINGS.
  * End of Early Access Panel

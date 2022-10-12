@@ -272,10 +272,10 @@ namespace UltrakULL
             revolverStandardTemplate5.text = language.currentLanguage.shop.shop_revolverPreset5;
 
             Text revolverColorSwitchToAlternative = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverColorWindow, "Standard"),"AlternateButton"),"Text"));
-            revolverColorSwitchToAlternative.text = "ALTERNATIF";
+            revolverColorSwitchToAlternative.text = language.currentLanguage.shop.shop_colorsAlternative;
 
             Text revolverColorSwitchToStandard = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverColorWindow, "Alternate"), "AlternateButton"), "Text"));
-            revolverColorSwitchToStandard.text = "ALTERNATIF";
+            revolverColorSwitchToStandard.text = language.currentLanguage.shop.shop_colorsAlternative;
 
             GameObject revolverAlternateTemplates = getGameObjectChild(getGameObjectChild(revolverColorWindow, "Alternate"), "Template");
             Text revolverAlternateTemplate1 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverAlternateTemplates, "Template 1"), "Button (Selectable)"), "Text"));
