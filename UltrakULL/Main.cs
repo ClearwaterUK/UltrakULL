@@ -47,16 +47,26 @@ using UltrakULL.json;
  * - Could be possible to swap out rank textures in HUD for translation. Shall look into later
  * - Move the loaded language class to a seperate class. Would make it easier to access instead of doing currentLanguage.language.etc...
  * - Discord RPC currently seems to be broken on my end as a whole, meaning I can't test Discord RPC in the mod on my end (keeps throwing InternalError. People that have tested seems to be working fine but can't check on my end for myself)
+ * - Attempt to replace the default font with a version that has better special char + cyrillic support
+ * - Blue hex color used in the intro is semi-broken. Replaced it with a default color that works for now
  * 
  *  STUFF REPORTED BY ULL TEAM
  * - Rank letters not showing on level select (fine on my end, json problems maybe...?)
  * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me but others have reported it. Need to keep an eye on)
+ * - Intro colors broken
+ * - Opening credits broken
  * 
  * 
  *  FOR NEXT HOTFIX:
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable patchedFunctions by returning true if an exception happens there, will then use original game code.
  * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger. Maybe store last string, then if no match, reload the stored string?
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
+ * 
+ * - 6-2 showing Act1 climax instead of Act2
+ * - Alt revolver color menu showing hardcoded French text
+ * - Another safeguard against outdated JSONs: Add a minimum fileVersion tag in the JSON that is checked against modVersion (which is hardcoded in the mod).
+ * - If it's outdated, LOAD IT ANYWAY BUT SHOW A MESSAGE WARNING OF MISSING STRINGS.
+ * 
  * */
 
 namespace UltrakULL

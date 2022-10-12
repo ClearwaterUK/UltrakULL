@@ -117,6 +117,20 @@ namespace UltrakULL
             }
         }
 
+
+        //IMPORTANT CHARACTERS TO USE:
+        // # - 3 repeating dots
+        // § - Indent
+        // + - Lime green text
+        // * - Red text
+        // ± - Blue text
+        // _ - Close color
+        // ½ - Half second pause
+        // @ - Begins to fade out intro music
+        // ~ - Wait for input (not implemented yet, skips straight to second page)
+        // & - Ends intro text and loads the tutorial
+
+
         public TutorialStrings(JsonParser language)
         {
 
@@ -124,19 +138,19 @@ namespace UltrakULL
                 language.currentLanguage.tutorial.tutorial_introStartup1 + "#" + language.currentLanguage.tutorial.tutorial_introStartup2 + " \n\n"
                 + language.currentLanguage.tutorial.tutorial_introVersion1 + "# \n"
                 + "+" + language.currentLanguage.tutorial.tutorial_introVersion2 + "_½ \n\n"
-                + language.currentLanguage.tutorial.tutorial_introCalibration1 + "# \n"
-                + "+" + language.currentLanguage.tutorial.tutorial_introCalibration2 + "_ \n\n"
-                 + "(±" + language.currentLanguage.tutorial.tutorial_introReminder + "_)½ \n \n"
+                + language.currentLanguage.tutorial.tutorial_introCalibration1 + "#\n"
+                + "+" + language.currentLanguage.tutorial.tutorial_introCalibration2 + "_\n\n"
+                 + "(+" + language.currentLanguage.tutorial.tutorial_introReminder + "_)½\n\n"
                  + language.currentLanguage.tutorial.tutorial_introLoadStatus + "# \n\n"
                  + "~";
 
             this.introSecondPage =
-            language.currentLanguage.tutorial.tutorial_introID1 + ":§§ " + language.currentLanguage.tutorial.tutorial_introID2 + "½½ \n"
-            + language.currentLanguage.tutorial.tutorial_introLocation1 + ":§§ " + language.currentLanguage.tutorial.tutorial_introLocation2 + "@½½ \n"
-            + language.currentLanguage.tutorial.tutorial_introObjective1 + ":§§ " + language.currentLanguage.tutorial.tutorial_introObjective2 + "½½ \n"
-            + "*" + language.currentLanguage.tutorial.tutorial_introRed1 + "._½½ \n"
-            + "*" + language.currentLanguage.tutorial.tutorial_introRed2 + "._½½ \n"
-            + "*" + language.currentLanguage.tutorial.tutorial_introRed3 + "._½½&";
+            language.currentLanguage.tutorial.tutorial_introID1 + ":		" + language.currentLanguage.tutorial.tutorial_introID2 + "½½ \n"
+            + language.currentLanguage.tutorial.tutorial_introLocation1 + ":			" + language.currentLanguage.tutorial.tutorial_introLocation2 + "@½½ \n"
+            + language.currentLanguage.tutorial.tutorial_introObjective1 + ":	" + language.currentLanguage.tutorial.tutorial_introObjective2 + "½½ \n\n"
+            + "*" + language.currentLanguage.tutorial.tutorial_introRed1 + "_½½ \n"
+            + "*" + language.currentLanguage.tutorial.tutorial_introRed2 + "_½½ \n"
+            + "*" + language.currentLanguage.tutorial.tutorial_introRed3 + "_½½&";
         }
     }
 }

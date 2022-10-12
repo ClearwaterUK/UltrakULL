@@ -1,4 +1,11 @@
-﻿0.8.0
+﻿0.8.1
+
+- Fixed an inconsistency in the tutorial intro text.
+- Changed the color of the assist options to use lime instead of blue. This is due to the hex color tag that was being used being broken. Normal colors still work fine, so this string will use a lime color until it has been fixed.
+
+
+
+0.8.0
 - **Added weapon color customization strings at last.** A fair few new JSON strings that come with it, be sure to check the notes below.
 - **An English (EN-gb) language is now available** as a template to assist translation into other languages.
 - Added a few more sanity checks for various things. If something bad happens, the game should revert to using English strings for that segment only,
