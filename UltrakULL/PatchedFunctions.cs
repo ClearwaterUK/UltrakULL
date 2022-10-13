@@ -723,7 +723,7 @@ namespace UltrakULL
                 }
                 else if (c != '½')
                 {
-                    if (c != 'Ä')
+                    if (c != '¢') //Was originally an Ä but changed it to prevent conflicts with languages using these characters (German etc)
                     {
                         goto IL_82D;
                     }
