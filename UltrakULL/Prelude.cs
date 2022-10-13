@@ -13,8 +13,9 @@ namespace UltrakULL
 
         public void patchOpeningCredits(JsonParser language)
         {
-            GameObject level = GameObject.Find("Canvas");
-            GameObject openingCredsParent = getGameObjectChild(getGameObjectChild(level, "Canvas"), "HurtScreen");
+            GameObject level = getInactiveRootObject("Canvas");
+
+            GameObject openingCredsParent = getGameObjectChild(level, "HurtScreen");
 
             Text openingCredsFirst = getTextfromGameObject(getGameObjectChild(getGameObjectChild(openingCredsParent, "Text 1 Sound"), "Text (1)"));
             openingCredsFirst.text = language.currentLanguage.prelude.prelude_first_openingCredits1;

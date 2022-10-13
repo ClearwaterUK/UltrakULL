@@ -53,7 +53,6 @@ using UltrakULL.json;
  *  STUFF REPORTED BY ULL TEAM
  * - Rank letters not showing on level select (fine on my end, json problems maybe...?)
  * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me but others have reported it. Need to keep an eye on)
- * - Opening credits broken
  * 
  * 
  *  FOR NEXT HOTFIX:
@@ -64,6 +63,7 @@ using UltrakULL.json;
  * - Another safeguard against outdated JSONs: Add a minimum fileVersion tag in the JSON that is checked against modVersion (which is hardcoded in the mod).
  * - If it's outdated, LOAD IT ANYWAY BUT SHOW A MESSAGE WARNING OF MISSING STRINGS.
  * End of Early Access Panel
+ * Options->Sandbox icons names + total P gained in end of level window
  * 
  * */
 
@@ -192,7 +192,7 @@ namespace UltrakULL
         
         public void initJsonParser()
         {
-            this.jsonParser = new JsonParser();
+            this.jsonParser = new JsonParser(pluginVersion);
         }
 
         //Encapsulation function to patch the shop.
