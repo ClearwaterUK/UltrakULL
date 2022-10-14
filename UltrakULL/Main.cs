@@ -15,6 +15,8 @@ using static UltrakULL.CommonFunctions;
 using System.Linq;
 using UltrakULL.json;
 
+//using UKUIHelper;
+
 /*
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater
@@ -26,7 +28,7 @@ using UltrakULL.json;
  * 
  *  MAIN TODO LIST
  *  - Fill the JSON template and class as progress happens, moving hardcoded text out as it goes
- *  - Add ULL credits, translation credits and Discord link to main menu with help of UKUIHelper library
+ *  - Add ULL credits, translation credits to main menu with help of UKUIHelper library
  *  - Error and exception handling
  *  - Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
  *  - Discord RPC (Persistant timestamp and general corrections)
@@ -70,17 +72,20 @@ using UltrakULL.json;
 namespace UltrakULL
 {
     [BepInPlugin(pluginGuid, pluginName, pluginVersion)]
+    //[BepInDependency("zed.uk.uihelper")]
     [BepInProcess("ULTRAKILL.exe")]
     public class MainPatch : BaseUnityPlugin
     {
         public const string pluginGuid = "clearwater.ultrakill.ultrakULL";
         public const string pluginName = "UltrakULL - Ultrakill Language Library";
-        public const string pluginVersion = "0.8.0";
+        public const string pluginVersion = "0.8.1";
 
         private JsonParser jsonParser;
         private PatchedFunctions patchedFuncs;
 
         private bool ready = false;
+
+        public Font vcrFont;
         public MainPatch()
         {
 
@@ -192,7 +197,7 @@ namespace UltrakULL
         
         public void initJsonParser()
         {
-            this.jsonParser = new JsonParser(pluginVersion);
+            this.jsonParser = new JsonParser();
         }
 
         //Encapsulation function to patch the shop.
@@ -280,6 +285,23 @@ namespace UltrakULL
             classicHudBWRailcannonShadow.text = this.jsonParser.currentLanguage.misc.classicHud_railcannonMeter;
             classicHudColorRailcannonShadow.text = this.jsonParser.currentLanguage.misc.classicHud_railcannonMeter;
 
+        }
+
+        //Adds the Discord link to the UltrakULL Discord on the main menu.
+        public void addDiscord(GameObject frontEnd)
+        {
+            GameObject mainMenuCanvas = getGameObjectChild(frontEnd, "Main Menu (1)");
+
+            GameObject mainMenuButtons = getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Panel");
+            GameObject ultrakullDiscordButton = GameObject.Instantiate(getGameObjectChild(mainMenuButtons, "Discord"), mainMenuButtons.transform);
+
+            ultrakullDiscordButton.SetActive(true);
+            ultrakullDiscordButton.GetComponent<RectTransform>().localPosition = new Vector2(450f, 250f);
+            ultrakullDiscordButton.GetComponentInChildren<Text>().text = "UltrakULL DISCORD";
+            ultrakullDiscordButton.GetComponentInChildren<WebButton>().url = "https://discord.gg/ZB7jk6Djv5";
+
+            ultrakullDiscordButton.transform.parent = mainMenuButtons.transform;
+            ultrakullDiscordButton.GetComponent<RectTransform>().SetParent(mainMenuButtons.GetComponent<RectTransform>());
         }
 
         //Parent function to patch the vanilla game functions.
@@ -478,24 +500,25 @@ namespace UltrakULL
                         Logger.LogInfo("Hooked into front end, patching...");
                         patchFrontEnd(frontEnd);
 
-                        GameObject ultrakullLogo = GameObject.Instantiate(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Title"),"Text"), frontEnd.transform);
-                            ultrakullLogo.transform.localPosition = new Vector3(1025, -425, 0);
-                            Text ultrakullLogoText = getTextfromGameObject(ultrakullLogo);
-                            ultrakullLogoText.text = "ultrakULL loaded.\nVersion: " + pluginVersion + "\nLocale: " + this.jsonParser.currentLanguage.metadata.langName + "\nWIP build\nFor internal testing only";
-                            ultrakullLogoText.alignment = TextAnchor.UpperLeft;
-                            ultrakullLogoText.fontSize = 16;
+                        GameObject ultrakullLogo = GameObject.Instantiate(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Title"), "Text"), frontEnd.transform);
+                        ultrakullLogo.transform.localPosition = new Vector3(1025, -425, 0);
+                        Text ultrakullLogoText = getTextfromGameObject(ultrakullLogo);
+                        ultrakullLogoText.text = "ultrakULL loaded.\nVersion: " + pluginVersion + "\nLocale: " + this.jsonParser.currentLanguage.metadata.langName + "\nWIP build\nFor internal testing only";
+                        ultrakullLogoText.alignment = TextAnchor.UpperLeft;
+                        ultrakullLogoText.fontSize = 16;
+                        //Get the font
+                        this.vcrFont = ultrakullLogoText.font;
+
+                        /*if (this.jsonParser.loadedLanguageIsOudated)
+                        {
+                            ultrakullLogoText.text += "\n<color=yellow>WARNING - Outdated language\nloaded.</color>\nUse at your own risk!";
+                            ultrakullLogo.transform.localPosition = new Vector3(1025, -350, 0);
+                        }*/
+
+                        this.addDiscord(frontEnd);
 
 
-                        //Logger.LogInfo("Trying to create Discord button");
-                        //GameObject ultrakULLDiscordButton = UKUIHelper.UIHelper.CreateButton();
-                        //ultrakULLDiscordButton.GetComponent<Text>().text = "UltrakULL Discord";
-                        GameObject mainMenuButtons = getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Panel");
-                        GameObject ultrakullDiscordButton = GameObject.Instantiate(getGameObjectChild(mainMenuButtons,"Discord"), mainMenuButtons.transform);
-                        ultrakullDiscordButton.SetActive(true);
-                        ultrakullDiscordButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(492f, -461f);
-                        ultrakullDiscordButton.GetComponentInChildren<Text>().text = "UltrakULL DISCORD";
-                        ultrakullDiscordButton.GetComponentInChildren<WebButton>().url = "https://discord.gg/ZB7jk6Djv5";
-                        //Logger.LogInfo("Created");
+
                     }
                 }
                 else if (currentLevel.name.Contains("P-"))

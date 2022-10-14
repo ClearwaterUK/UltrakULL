@@ -1,11 +1,12 @@
 ﻿0.8.1
 
+- Added a link to the UltrakULL Discord in the main menu.
 - Fixed an inconsistency in the tutorial intro text.
 - Changed the color of the assist options to use lime instead of blue. This is due to the hex color tag that was being used being broken. Normal colors still work fine, so this string will use a lime color until it has been fixed.
 - Fixed 6-2 showing Act 1 Climax instead of Act 2 Climax. (Soulvender)
 - Fixed some missed instances of weapon color customization using hardcoded strings. (Paoletto)
 - Fixed the opening credits on 0-1 being broken. (?)
-- Changed some inner workings of the intro to prevent conflicts with certain languages using special chars/accents. (Liquid)
+- Changed some inner workings of the intro to prevent conflicts and softlocks with certain languages using special chars/accents. (Liquid)
 
 
 0.8.0

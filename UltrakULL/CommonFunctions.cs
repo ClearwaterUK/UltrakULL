@@ -14,6 +14,18 @@ namespace UltrakULL
 {
     public static class CommonFunctions
     {
+        public static ColorBlock UKButtonColors = new ColorBlock()
+        {
+            normalColor = new Color(0, 0, 0, 0.512f),
+            highlightedColor = new Color(1, 1, 1, 0.502f),
+            pressedColor = new Color(1, 0, 0, 1),
+            selectedColor = new Color(0, 0, 0, 0.512f),
+            disabledColor = new Color(0.7843f, 0.7843f, 0.7843f, 0.502f),
+            colorMultiplier = 1f,
+            fadeDuration = 0.1f
+        };
+
+
 
         public static BepInEx.Logging.ManualLogSource modLogger = BepInEx.Logging.Logger.CreateLogSource("modLogger");
 
