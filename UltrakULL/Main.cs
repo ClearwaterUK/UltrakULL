@@ -304,6 +304,31 @@ namespace UltrakULL
             ultrakullDiscordButton.GetComponent<RectTransform>().SetParent(mainMenuButtons.GetComponent<RectTransform>());
         }
 
+        public void addModCredits(GameObject frontEnd)
+        {
+            Text credits = getTextfromGameObject(getGameObjectChild(getGameObjectChild(frontEnd, "Credits"), "Text (2)"));
+
+            credits.text =
+                "WITH VOICE ACTING BY:" + "\n"
+                + "<color=orange>GIANNI MATRAGRANO</color> (GABRIEL)" + "\n"
+                + "<color=orange> STEPHAN WEYTE </color> (MINOS PRIME)" + "\n"
+                + "<color=orange>MANDALORE HERRINGTON</color> (MDK)" + "\n"
+                + "<color=orange>JUST SHAMMY </color> (&OWL)" + "\n\n"
+
+                + "AND QUALITY ASSURANCE BY:" + "\n"
+                + "<color=orange>CAMERON MARTIN</color> (LEAD QA)" + "\n"
+                + "<color=orange>TUCKER WILKIN </color> (SENIOR QA)" + "\n"
+                + "<color=orange>SCOTT GURNEY </color> (TECHNICAL QA)" + "\n"
+                + "<color=orange>DALIA FIGUEROA </color> (QA & PROMO MATERIAL)" + "\n\n\n"
+
+                + "<color=orange>UltrakULL (ULTRAKILL Language Library)</color>" + "\n"
+                + "A TRANSLATION MOD FOR ULTRAKILL" + "\n"
+                + "CREATED BY <color=orange>CLEARWATER</color> AND THE <color=orange>UltrakULL TRANSLATION TEAM</color>" + "\n"
+                + "FULL LANGUAGE CREDITS IN THE MOD README (to come later)" + "\n";
+
+
+        }
+
         //Parent function to patch the vanilla game functions.
         public void patchVanillaFunctions()
         {
@@ -516,6 +541,7 @@ namespace UltrakULL
                         }*/
 
                         this.addDiscord(frontEnd);
+                        this.addModCredits(frontEnd);
 
 
 
