@@ -16,7 +16,6 @@ using System.Linq;
 using UltrakULL.json;
 
 //using UKUIHelper;
-
 /*
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater
