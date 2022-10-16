@@ -202,6 +202,7 @@ namespace UltrakULL
                         }
                     }
                 }
+
                 RankData rank = GameProgressSaver.GetRank(num);
                 if (rank == null)
                 {
@@ -218,7 +219,7 @@ namespace UltrakULL
                     }
                     return false;
                 }
-                int @int = PlayerPrefs.GetInt("Diff", 2);
+                int @int = MonoSingleton<PrefsManager>.Instance.GetInt("difficulty", 0);
                 if (rank.levelNumber == __instance.levelNumber || (__instance.levelNumber == 666 && rank.levelNumber == __instance.levelNumber + __instance.levelNumberInLayer - 1))
                 {
                     Text componentInChildren = __instance.transform.Find("Stats").Find("Rank").GetComponentInChildren<Text>();
@@ -1549,18 +1550,18 @@ namespace UltrakULL
         //Overrides the FetchSceneActivity function from the DiscordController class. This is to swap out strings in Discord Rich Presence.
         public static bool FetchSceneActivity_MyPatch(string scene, DiscordController __instance, DiscordController ___Instance, bool ___disabled, Discord.Discord ___discord, Discord.ActivityManager ___activityManager, Discord.Activity ___cachedActivity, SerializedActivityAssets ___missingActivityAssets)
         {
-            Console.WriteLine("Fetching scene activity");
+            //Console.WriteLine("Fetching scene activity");
 
             if (!___Instance || ___disabled || ___discord == null)
             {
-                Console.WriteLine("Pre-exiting");
+                //Console.WriteLine("Pre-exiting");
                 if(!___Instance)
                 {
-                    Console.WriteLine("Instance is disabled");
+                   // Console.WriteLine("Instance is disabled");
                 }
                 if (___disabled)
                 {
-                    Console.WriteLine("Disabled is true");
+                    //Console.WriteLine("Disabled is true");
                 }
                 if (___discord == null)
                 {

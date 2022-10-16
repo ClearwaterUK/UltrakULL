@@ -45,7 +45,6 @@ namespace UltrakULL
             tipTitle.text = language.currentLanguage.shop.shop_tipofthedayTitle;
 
             Text tipDescription = getTextfromGameObject(getGameObjectChild(tipPanel, "TipText"));
-            Console.WriteLine("Original tip text: \n" + tipDescription.text);
             StringsParent levelTipStrings = new StringsParent();
             tipDescription.text = levelTipStrings.getLevelTip(language);
 

@@ -52,7 +52,6 @@ using UltrakULL.json;
  * - Blue hex color used in the intro is semi-broken. Replaced it with a default color that works for now
  * 
  *  STUFF REPORTED BY ULL TEAM
- * - Rank letters not showing on level select (fine on my end, json problems maybe...?)
  * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me but others have reported it. Need to keep an eye on)
  * enemyBios_strategies - missing letter causes empty?
  * 
