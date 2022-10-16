@@ -9,6 +9,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UltrakULL.json;
+using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
 {
@@ -23,15 +24,17 @@ namespace UltrakULL
             a1StringsLogger.LogInfo(fullMessage);
             if (fullMessage.Contains("ITEMS"))
             {
+                previousHudMessage = language.currentLanguage.act1.act1_limboFirst_items1 + " '<color=orange>" + input + "'</color> " + language.currentLanguage.act1.act1_limboFirst_items2;
                 return language.currentLanguage.act1.act1_limboFirst_items1 + " '<color=orange>" + input + "'</color> " + language.currentLanguage.act1.act1_limboFirst_items2;
             }
             if (fullMessage.Contains("NAILGUN"))
             {
+                previousHudMessage = language.currentLanguage.act1.act1_limboFirst_nailgun1 + " '<color=orange>" + input + "'</color> " + language.currentLanguage.act1.act1_limboFirst_nailgun2 + "\n" + language.currentLanguage.act1.act1_limboFirst_nailgun3;
                 return language.currentLanguage.act1.act1_limboFirst_nailgun1 + " '<color=orange>" + input + "'</color> " + language.currentLanguage.act1.act1_limboFirst_nailgun2 + "\n" + language.currentLanguage.act1.act1_limboFirst_nailgun3;
             }
 
             //Band-aid fix
-            return language.currentLanguage.act1.act1_limboFirst_items1 + " '<color=orange>" + input + "'</color> " + language.currentLanguage.act1.act1_limboFirst_items2;
+            return previousHudMessage;
         }
         //1-2 - The Burning World
         public string level12(string message, string message2, string input,JsonParser language)

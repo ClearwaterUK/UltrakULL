@@ -61,11 +61,8 @@ using UltrakULL.json;
  * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger. Maybe store last string, then if no match, reload the stored string?
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * 
- * - Another safeguard against outdated JSONs: Add a minimum fileVersion tag in the JSON that is checked against modVersion (which is hardcoded in the mod).
- * - If it's outdated, LOAD IT ANYWAY BUT SHOW A MESSAGE WARNING OF MISSING STRINGS.
  * End of Early Access Panel
- * Options->Sandbox icons names + total P gained in end of level window
- * 
+ * Options->Sandbox icons names, Sandbox title in terminal, back button when viewing weapon lore, "under construction" for weapons not yet in-game
  * 
  * */
 
