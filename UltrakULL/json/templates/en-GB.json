@@ -2,7 +2,9 @@
 	"metadata": {
 		"langName": "en-GB",
 		"langAuthor": "Hakita",
-		"langVersion": "1.0"
+		"langVersion": "1.0",
+
+        "minimumModVersion": "0.8.2"
 	},
     
 	"body": {

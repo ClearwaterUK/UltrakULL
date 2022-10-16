@@ -815,6 +815,8 @@ namespace UltrakULL.json
         public string langName;
         public string langAuthor;
         public string langVersion;
+
+        public string minimumModVersion;
     }
 
     public class IntermissionStrings

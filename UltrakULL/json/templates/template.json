@@ -2,7 +2,9 @@
 	"metadata": {
 		"langName": "te-mp",
 		"langAuthor": "Clearwater",
-		"langVersion": "0.1"
+		"langVersion": "0.1",
+
+        "minimumModVersion": "0.8.2"
 	},
     
 	"body": {
@@ -344,7 +346,7 @@
         "level_fullIntroPrompt": "",
         "level_fullIntroPromptYes": "",
         "level_fullIntroPromptNo": "",
-        "level_fullIntroPromptCancel": "",
+        "level_fullIntroPromptCancel": ""
 	},
     "visualnovel": {
         "visualnovel_introFirst1": "",
@@ -1098,7 +1100,7 @@
         "shop_colorsPreset": "",
         "shop_colorsCustom": "",
         "shop_colorsAlternative": "",
-        "shop_colorsDone": "",
+        "shop_colorsDone": ""
 	},
 	"enemyNames":{
 		"enemyname_filth": "",
@@ -1838,7 +1840,7 @@
         "classicHud_stamina": "",
         "classicHud_weapon": "",
         "classicHud_arm": "",
-        "classicHud_railcannonMeter": "",
+        "classicHud_railcannonMeter": ""
 
 	}
 }

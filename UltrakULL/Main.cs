@@ -54,6 +54,7 @@ using UltrakULL.json;
  *  STUFF REPORTED BY ULL TEAM
  * - Rank letters not showing on level select (fine on my end, json problems maybe...?)
  * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me but others have reported it. Need to keep an eye on)
+ * enemyBios_strategies - missing letter causes empty?
  * 
  * 
  *  FOR NEXT HOTFIX:
@@ -66,6 +67,7 @@ using UltrakULL.json;
  * End of Early Access Panel
  * Options->Sandbox icons names + total P gained in end of level window
  * 
+ * 
  * */
 
 namespace UltrakULL
@@ -77,7 +79,7 @@ namespace UltrakULL
     {
         public const string pluginGuid = "clearwater.ultrakill.ultrakULL";
         public const string pluginName = "UltrakULL - Ultrakill Language Library";
-        public const string pluginVersion = "0.8.1";
+        public const string pluginVersion = "0.8.2";
 
         private JsonParser jsonParser;
         private PatchedFunctions patchedFuncs;
@@ -196,7 +198,7 @@ namespace UltrakULL
         
         public void initJsonParser()
         {
-            this.jsonParser = new JsonParser();
+            this.jsonParser = new JsonParser(pluginVersion);
         }
 
         //Encapsulation function to patch the shop.
@@ -533,11 +535,11 @@ namespace UltrakULL
                         //Get the font
                         this.vcrFont = ultrakullLogoText.font;
 
-                        /*if (this.jsonParser.loadedLanguageIsOudated)
+                        if (this.jsonParser.loadedLanguageIsOudated)
                         {
-                            ultrakullLogoText.text += "\n<color=yellow>WARNING - Outdated language\nloaded.</color>\nUse at your own risk!";
+                            ultrakullLogoText.text += "\n<color=orange>WARNING - Outdated language\nloaded.</color>\nCheck console\n & use at your own risk!";
                             ultrakullLogo.transform.localPosition = new Vector3(1025, -350, 0);
-                        }*/
+                        }
 
                         this.addDiscord(frontEnd);
                         this.addModCredits(frontEnd);

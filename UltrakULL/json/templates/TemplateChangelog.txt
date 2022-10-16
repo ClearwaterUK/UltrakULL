@@ -1,4 +1,14 @@
-﻿0.8.0:
+﻿0.8.2:
+
+ADDED:
+
+metadata: minimumModVersion (IMPORTANT: If this is not found or does not match the current mod version, you wiill receive warning messages in-console and on the main menu.)
+
+CHANGED:
+
+REMOVED:
+
+0.8.0:
 
 ADDED:
 misc: youDied1
