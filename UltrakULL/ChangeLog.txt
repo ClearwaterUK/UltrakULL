@@ -1,9 +1,20 @@
 ﻿0.8.2
 
+- Reverted a section of patched code that was causing a major bug where saves would not be saved and deleted correctly. I will look into a working fix for this at a later date.
+NOTE: This reversion will make the save deletion confirmation text revert to English.
 - Added a check to make sure the version of a JSON language file matches that of the current mod version.
 If a JSON file's version does not match the current version of the mod, you will receieve warning messages in-console and in-game regarding potential missing strings.
 (NOTE: In future, outdated or mismatched files will be skipped over, however a file can be force loaded at any time by setting it in lastLang.)
+- Added strings for the Sandbox tab and descriptions in the shop.
 - Fixed obtained ranks on finished levels not appearing on the level select, if a layer was not 100% P-Ranked. (Paoletto and someone else)
+
+- Added the following lines to the JSON template:
+
+metadata: minimumModVersion (IMPORTANT: If this is not found in the JSON, or does not match the current mod version, you will receive warning messages in-console and on the main menu.)
+shop: shop_sandboxTitle
+shop: shop_sandboxDescription1
+shop: shop_sandboxDescription2
+shop: shop_sandboxEnter
 
 0.8.1
 - Added a link to the UltrakULL Discord in the main menu.

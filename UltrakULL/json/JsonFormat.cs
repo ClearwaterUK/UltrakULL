@@ -1078,7 +1078,9 @@ namespace UltrakULL.json
         public string shop_cybergrindDescription3;
         public string shop_cybergrindEnter;
 
-        public string shop_sandboxDescription;
+        public string shop_sandboxTitle;
+        public string shop_sandboxDescription1;
+        public string shop_sandboxDescription2;
         public string shop_sandboxEnter;
 
         public string shop_back;
@@ -1240,6 +1242,8 @@ namespace UltrakULL.json
         public string shop_colorsCustom;
         public string shop_colorsDone;
         public string shop_colorsAlternative;
+
+
 
     }
     public class Levels

@@ -2,7 +2,11 @@
 
 ADDED:
 
-metadata: minimumModVersion (IMPORTANT: If this is not found or does not match the current mod version, you wiill receive warning messages in-console and on the main menu.)
+metadata: minimumModVersion (IMPORTANT: If this is not found or does not match the current mod version, you will receive warning messages in-console and on the main menu.)
+shop_sandboxTitle
+shop_sandboxDescription1
+shop_sandboxDescription2
+shop_sandboxEnter
 
 CHANGED:
 

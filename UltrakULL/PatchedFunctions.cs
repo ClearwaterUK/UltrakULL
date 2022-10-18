@@ -1516,8 +1516,12 @@ namespace UltrakULL
         //Overrides the *private* ClearSlot method from the SaveSlotMenu class. This is to swap out the delete confirmation string.
         public static bool ClearSlot_MyPatch(int slot, SaveSlotMenu __instance, int ___queuedSlot, Text ___wipeConsentContent, GameObject ___wipeConsentWrapper)
         {
+            Console.WriteLine("DELETING SLOT" + slot);
+
             ___queuedSlot = slot;
-            ___wipeConsentContent.text = string.Format(language.currentLanguage.options.save_deleteWarning1+ "<color=red>" + language.currentLanguage.options.save_deleteWarning2 + "{0}</color>?", slot + 1);
+            //___wipeConsentContent.text = string.Format(language.currentLanguage.options.save_deleteWarning1+ "<color=red>" + language.currentLanguage.options.save_deleteWarning2 + "{0}</color>?", slot + 1);
+
+            ___wipeConsentContent.text = string.Format("Are you sure you want to <color=red>DELETE SLOT {0}</color>?", slot + 1);
             ___wipeConsentWrapper.SetActive(true);
 
             return false;
