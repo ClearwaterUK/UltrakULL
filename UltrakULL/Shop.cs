@@ -81,16 +81,19 @@ namespace UltrakULL
             //Sandbox enter description
             GameObject sandboxEnter = getGameObjectChild(getGameObjectChild(shopObject, "Sandbox"), "Panel");
 
+            Text sandboxTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Sandbox"), "Panel"),"Title"));
+            sandboxTitle.text = language.currentLanguage.shop.shop_sandbox;
+
             Text sandboxEnterTitle = getTextfromGameObject(getGameObjectChild(sandboxEnter, "Title"));
             sandboxButtonTitle.text = sandboxButtonTitle.text;
 
             Text sandboxEnterDescription = getTextfromGameObject(getGameObjectChild(sandboxEnter, "Text"));
 
-            sandboxEnterDescription.text = "Le <color=#4C99E6>Bac à sable</color> est un niveau vide qui peut être utilisé pour l'entraînement.\n\n" +
-                "<color=red>Tout progrès dans le mission actuel sera perdu.</color>";
+            sandboxEnterDescription.text = language.currentLanguage.shop.shop_sandboxDescription1 + "\n\n"
+                + language.currentLanguage.shop.shop_sandboxDescription2;
 
             Text sandboxEnterButton = getTextfromGameObject(getGameObjectChild(getGameObjectChild(sandboxEnter, "SandboxButton (1)"), "Text"));
-            sandboxEnterButton.text = "ENTREZ LE BAC À SABLE";
+            sandboxEnterButton.text = language.currentLanguage.shop.shop_sandboxEnter;
 
 
             //CG enter description

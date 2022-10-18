@@ -34,6 +34,7 @@ namespace UltrakULL
         public static void handleError(Exception e, string missingID = "")
         {
             modLogger.LogError("Could not load string. THIS POSSIBLY MEANS THERE ARE MISSING/NONEXISTANT STRINGS IN THE JSON!");
+            modLogger.LogError(e.ToString());
         }
 
         public static GameObject getInactiveRootObject(string objectName)

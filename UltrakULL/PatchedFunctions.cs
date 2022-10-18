@@ -173,6 +173,13 @@ namespace UltrakULL
                     });
                     __instance.transform.Find("Image").GetComponent<Image>().sprite = ___lockedSprite;
                     __instance.GetComponent<Button>().enabled = false;
+
+                    if(__instance.challengeIcon != null)
+                    {
+                        Text componentInChildren3 = __instance.challengeIcon.GetComponentInChildren<Text>();
+                        componentInChildren3.text = String.Join(" ", language.currentLanguage.frontend.level_challenge.ToList()); //Challenge not yet completed
+                        componentInChildren3.color = Color.white;
+                    }   
                 }
                 else
                 {
@@ -195,6 +202,9 @@ namespace UltrakULL
                         if (___challengeChecker == null)
                         {
                             ___challengeChecker = __instance.challengeIcon.transform.Find("EventTrigger").gameObject;
+                            Text componentInChildren3 = __instance.challengeIcon.GetComponentInChildren<Text>();
+                            componentInChildren3.text = String.Join(" ", language.currentLanguage.frontend.level_challenge.ToList()); //Challenge not yet completed
+                            componentInChildren3.color = Color.white;
                         }
                         if (___tempInt > __instance.levelNumber)
                         {
@@ -339,10 +349,11 @@ namespace UltrakULL
                     {
                         if (rank.challenge)
                         {
+
                             __instance.challengeIcon.fillCenter = true;
                             Text componentInChildren2 = __instance.challengeIcon.GetComponentInChildren<Text>();
 
-                            componentInChildren2.text = String.Join(" ", language.currentLanguage.frontend.level_challengeCompleted.ToList());
+                            componentInChildren2.text = String.Join(" ", language.currentLanguage.frontend.level_challengeCompleted.ToList()); //Challenge completed
                             if (rank.ranks[@int] == 12 && (___allSecrets || rank.secretsAmount == 0))
                             {
                                 componentInChildren2.color = new Color(0.6f, 0.4f, 0f, 1f);
@@ -356,7 +367,7 @@ namespace UltrakULL
                         {
                             __instance.challengeIcon.fillCenter = false;
                             Text componentInChildren3 = __instance.challengeIcon.GetComponentInChildren<Text>();
-                            componentInChildren3.text = String.Join(" ", language.currentLanguage.frontend.level_challenge.ToList());
+                            componentInChildren3.text = String.Join(" ", language.currentLanguage.frontend.level_challenge.ToList()); //Challenge not yet completed
                             componentInChildren3.color = Color.white;
                         }
                     }
@@ -385,7 +396,7 @@ namespace UltrakULL
 
                 return false;
         }
-            catch(Exception e)
+            catch (Exception e)
             {
                 handleError(e);
                 return true;

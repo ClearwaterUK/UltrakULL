@@ -1,12 +1,13 @@
 ﻿0.8.2
 
-- Reverted a section of patched code that was causing a major bug where saves would not be saved and deleted correctly. I will look into a working fix for this at a later date.
+- Reverted a section of patched code that was causing a major bug where saves would not be saved and deleted correctly. I will look into a working fix for this at a later date. (Liquid)
 NOTE: This reversion will make the save deletion confirmation text revert to English.
 - Added a check to make sure the version of a JSON language file matches that of the current mod version.
 If a JSON file's version does not match the current version of the mod, you will receieve warning messages in-console and in-game regarding potential missing strings.
 (NOTE: In future, outdated or mismatched files will be skipped over, however a file can be force loaded at any time by setting it in lastLang.)
 - Added strings for the Sandbox tab and descriptions in the shop.
 - Fixed obtained ranks on finished levels not appearing on the level select, if a layer was not 100% P-Ranked. (Paoletto and someone else)
+- Fixed challenge titles not being translated for uncompleted levels. (Paoletto)
 
 - Added the following lines to the JSON template:
 

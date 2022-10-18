@@ -65,7 +65,6 @@ using UltrakULL.json;
  * Options->Sandbox icons names, Sandbox title in terminal, back button when viewing weapon lore, "under construction" for weapons not yet in-game
  * 
  * MAJOR: SAVES NOT BEING DELETED/SAVED CORRECTLY - Always deletes first slot. COMING FROM ClearSlot.
- * "If a level isn't completed it won't translate the [challenge]" - Paoletto
  * 5 lines for Mindflayer bio when there's actually 4?
  * */
 
