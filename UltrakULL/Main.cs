@@ -20,7 +20,7 @@ using UltrakULL.json;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater
  *	Date started: 21st April 2021
- *	Last updated: 10th October 2022
+ *	Last updated: 19th October 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
@@ -62,7 +62,7 @@ using UltrakULL.json;
  * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger. Maybe store last string, then if no match, reload the stored string?
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * 
- * Options->Sandbox icons names, back button when viewing weapon lore, "under construction" for weapons not yet in-game
+ * Options->Sandbox icons names, "under construction" for weapons not yet in-game
  * */
 
 namespace UltrakULL

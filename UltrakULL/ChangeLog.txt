@@ -12,6 +12,7 @@ NOTE: This reversion will make the save deletion confirmation text revert back t
 - Fixed obtained ranks on finished levels not appearing on the level select, if a layer was not 100% P-Ranked. (Paoletto and someone else)
 - Fixed challenge titles not being translated for uncompleted levels. (Paoletto)
 - Fixed a missing string in the Mindflayer's bio.
+- Fixed the back button when viewing weapon lore and weapon variation info not being translated.
 
 - Added the following lines to the JSON template:
 

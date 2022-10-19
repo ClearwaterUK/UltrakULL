@@ -942,9 +942,9 @@
         "shop_revolverPiercerDescription2": "Nécessite un <color=orange>temps de rechargement</color>.",
         
         "shop_revolverMarksman": "TIREUR D'ÉLITE",
-        "shop_revolverMarsmanDescription1": "Appuyer sur le tir alternatif pour <color=orange>lancer une pièce</color>.",
-        "shop_revolverMarsmanDescription2": "Frappez-le <color=orange>dans l'air</color> pour <color=orange>déflecter</color> votre tir dans le <color=orange>point faible</color> de l'ennemi le plus proche.",
-        "shop_revolverMarsmanDescription3": "Les pièces peuvent être enchaînées.",
+        "shop_revolverMarksmanDescription1": "Appuyer sur le tir alternatif pour <color=orange>lancer une pièce</color>.",
+        "shop_revolverMarksmanDescription2": "Frappez-le <color=orange>dans l'air</color> pour <color=orange>déflecter</color> votre tir dans le <color=orange>point faible</color> de l'ennemi le plus proche.",
+        "shop_revolverMarksmanDescription3": "Les pièces peuvent être enchaînées.",
         
         "shop_shotgunCoreEject": "ÉJECTEUR",
         "shop_shotgunCoreEjectDescription1": "Appuyer sur le tir alternatif pour surchauffer et <color=orange>lancer</color> les <color=orange>noyeaux</color> du fusil.",

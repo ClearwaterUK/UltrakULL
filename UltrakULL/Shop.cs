@@ -204,6 +204,9 @@ namespace UltrakULL
             piercerWindowDescription.text = language.currentLanguage.shop.shop_revolverPiercerDescription1 + "\n\n"
                 + language.currentLanguage.shop.shop_revolverPiercerDescription2;
 
+            Text piercerWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(piercerWindow, "Button"),"Text"));
+            piercerWindowDescriptionBack.text = language.currentLanguage.options.options_back;
+
             //Marksman
 
             GameObject marksman = getGameObjectChild(revolverWindow, "Variation Panel (Green)");
@@ -220,6 +223,9 @@ namespace UltrakULL
                 + language.currentLanguage.shop.shop_revolverMarksmanDescription2 + "\n\n"
                 + language.currentLanguage.shop.shop_revolverMarksmanDescription3;
             marksmanWindowDescription.fontSize = 14;
+
+            Text marksmanWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(marksmanWindow, "Button"), "Text"));
+            marksmanWindowDescriptionBack.text = language.currentLanguage.options.options_back;
 
             //Revolver info & color tabs
             GameObject revolverExtra = getGameObjectChild(revolverWindow, "Info and Color Panel");
@@ -253,6 +259,9 @@ namespace UltrakULL
                 + language.currentLanguage.shop.shop_loreRevolver8 + "\n\n"
                 + language.currentLanguage.shop.shop_loreRevolver9 + "\n\n"
                 + language.currentLanguage.shop.shop_loreRevolver10;
+
+            Text revolverLoreBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverLore, "Button"), "Text"));
+            revolverLoreBack.text = language.currentLanguage.options.options_back;
 
             //Revolver preset colors
             GameObject revolverColorWindow = getGameObjectChild(revolverWindow, "Color Screen");
@@ -336,6 +345,9 @@ namespace UltrakULL
                 + language.currentLanguage.shop.shop_shotgunCoreEjectDescription2 + "\n\n"
                 + language.currentLanguage.shop.shop_shotgunCoreEjectDescription3;
 
+            Text coreEjectWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(coreEjectWindow, "Button"), "Text"));
+            coreEjectWindowDescriptionBack.text = language.currentLanguage.options.options_back;
+
             GameObject pumpCharge = getGameObjectChild(shotgunWindow, "Variation Panel (Green)");
             Text pumpChargeName = getTextfromGameObject(getGameObjectChild(pumpCharge, "Text"));
             pumpChargeName.text = language.currentLanguage.shop.shop_shotgunPumpCharge;
@@ -349,6 +361,9 @@ namespace UltrakULL
             pumpChargeWindowDescription.text = language.currentLanguage.shop.shop_shotgunPumpChargeDescription1 + "\n\n"
                 + language.currentLanguage.shop.shop_shotgunPumpChargeDescription2;
             pumpChargeWindowDescription.fontSize = 14;
+
+            Text pumpChargeWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(pumpChargeWindow, "Button"), "Text"));
+            pumpChargeWindowDescriptionBack.text = language.currentLanguage.options.options_back;
 
             //Shotgun info & color tabs
             GameObject shotgunExtra = getGameObjectChild(shotgunWindow, "Info and Color Panel");
@@ -381,6 +396,9 @@ namespace UltrakULL
                 + language.currentLanguage.shop.shop_advancedStrategy + "\n\n"
                 + language.currentLanguage.shop.shop_loreShotgun8 + "\n\n"
                 + language.currentLanguage.shop.shop_loreShotgun9;
+
+            Text shotgunLoreBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shotgunLore, "Button"), "Text"));
+            shotgunLoreBack.text = language.currentLanguage.options.options_back;
 
             //Shotgun preset colors
             GameObject shotgunColorWindow = getGameObjectChild(shotgunWindow, "Color Screen");
@@ -433,6 +451,9 @@ namespace UltrakULL
                 + language.currentLanguage.shop.shop_nailgunMagnetDescription2;
             attractorWindowDescription.fontSize = 16;
 
+            Text attractorWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(attractorWindow, "Button"), "Text"));
+            attractorWindowDescriptionBack.text = language.currentLanguage.options.options_back;
+
             GameObject overheat = getGameObjectChild(nailgunWindow, "Variation Panel (Green)");
             Text overheatName = getTextfromGameObject(getGameObjectChild(overheat, "Text"));
             overheatName.text = language.currentLanguage.shop.shop_nailgunOverheat;
@@ -446,6 +467,9 @@ namespace UltrakULL
             overheatWindowDescription.text = language.currentLanguage.shop.shop_nailgunOverheatDescription1 + "\n\n"
                 + language.currentLanguage.shop.shop_nailgunOverheatDescription2;
             overheatWindowDescription.fontSize = 14;
+
+            Text overheatWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(overheatWindow, "Button"), "Text"));
+            overheatWindowDescriptionBack.text = language.currentLanguage.options.options_back;
 
             //Nailgun info & color tabs
             GameObject nailgunExtra = getGameObjectChild(nailgunWindow, "Info and Color Panel");
@@ -477,6 +501,10 @@ namespace UltrakULL
                 + language.currentLanguage.shop.shop_advancedStrategy + "\n\n"
                 + language.currentLanguage.shop.shop_loreNailgun8 + "\n\n"
                 + language.currentLanguage.shop.shop_loreNailgun9;
+
+            Text nailgunLoreBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunLore, "Button"), "Text"));
+            nailgunLoreBack.text = language.currentLanguage.options.options_back;
+
 
             //Nailgun preset colors
             GameObject nailgunColorWindow = getGameObjectChild(nailgunWindow, "Color Screen");
@@ -562,6 +590,9 @@ namespace UltrakULL
                 + language.currentLanguage.shop.shop_railcannonElectricDescription3;
             electricWindowDescription.fontSize = 16;
 
+            Text electricWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(electricWindow, "Button"), "Text"));
+            electricWindowDescriptionBack.text = language.currentLanguage.options.options_back;
+
             GameObject screwdriver = getGameObjectChild(railcannonWindow, "Variation Panel (Green)");
             Text screwdriverName = getTextfromGameObject(getGameObjectChild(screwdriver, "Text"));
             screwdriverName.text = language.currentLanguage.shop.shop_railcannonScrewdriver;
@@ -575,6 +606,9 @@ namespace UltrakULL
                 + language.currentLanguage.shop.shop_railcannonScrewdriverDescription2;
             screwdriverWindowDescription.fontSize = 16;
 
+            Text screwdriverWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(screwdriverWindow, "Button"), "Text"));
+            screwdriverWindowDescriptionBack.text = language.currentLanguage.options.options_back;
+
             GameObject malicious = getGameObjectChild(railcannonWindow, "Variation Panel (Red)");
             Text maliciousName = getTextfromGameObject(getGameObjectChild(malicious, "Text"));
             maliciousName.text = language.currentLanguage.shop.shop_railcannonMalicious;
@@ -587,6 +621,9 @@ namespace UltrakULL
             maliciousWindowDescription.text = language.currentLanguage.shop.shop_railcannonMaliciousDescription1 + "\n\n"
                 +  language.currentLanguage.shop.shop_railcannonMaliciousDescription2;
             maliciousWindowDescription.fontSize = 16;
+
+            Text maliciousWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(maliciousWindow, "Button"), "Text"));
+            maliciousWindowDescriptionBack.text = language.currentLanguage.options.options_back;
 
             //Railcannon info & color tabs
             GameObject railcannonExtra = getGameObjectChild(railcannonWindow, "Info and Color Panel");
@@ -618,6 +655,9 @@ namespace UltrakULL
                 + language.currentLanguage.shop.shop_loreRailcannon7 + "\n\n"
                 + language.currentLanguage.shop.shop_loreRailcannon8 + "\n\n"
                 + language.currentLanguage.shop.shop_loreRailcannon9;
+
+            Text railcannonLoreBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(railcannonLore, "Button"), "Text"));
+            railcannonLoreBack.text = language.currentLanguage.options.options_back;
 
 
             //Railcannon preset colors
@@ -659,6 +699,7 @@ namespace UltrakULL
             //Rocket launcher window & descriptions
             GameObject rocketlauncherWindow = getGameObjectChild(shopWeaponsObject, "RocketLauncherWindow");
 
+            //Freezeframe
             GameObject freezeframe = getGameObjectChild(rocketlauncherWindow, "Variation Panel (Blue)");
             Text freezeframeName = getTextfromGameObject(getGameObjectChild(freezeframe, "Text"));
             freezeframeName.text = language.currentLanguage.shop.shop_rocketLauncherFreeze;
@@ -668,6 +709,9 @@ namespace UltrakULL
             freezeframeDescription.text = language.currentLanguage.shop.shop_rocketLauncherFreezeDescription1 + "\n\n" + 
             language.currentLanguage.shop.shop_rocketLauncherFreezeDescription2;
             freezeframeDescription.fontSize = 16;
+
+            Text freezeframeDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(freezeframeInfo, "Button"), "Text"));
+            freezeframeDescriptionBack.text = language.currentLanguage.options.options_back;
 
             //Rocket launcher info & color tabs
             GameObject rocketlauncherExtra = getGameObjectChild(rocketlauncherWindow, "Info and Color Panel");
@@ -703,6 +747,9 @@ namespace UltrakULL
                 + language.currentLanguage.shop.shop_advancedStrategy + "\n\n"
                 + language.currentLanguage.shop.shop_loreRocketLauncher12 + "\n\n"
                 + language.currentLanguage.shop.shop_loreRocketLauncher13;
+
+            Text rocketlauncherLoreBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(rocketlauncherLore, "Button"), "Text"));
+            rocketlauncherLoreBack.text = language.currentLanguage.options.options_back;
 
 
             //Rocket launcher preset colors
