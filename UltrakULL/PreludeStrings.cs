@@ -109,8 +109,6 @@ namespace UltrakULL
             string currentLevel = SceneManager.GetActiveScene().name;
             string fullMessage = message + message2;
 
-            this.previousMessage = fullMessage;
-
             switch (currentLevel)
             {
                 case "Level 0-1":
