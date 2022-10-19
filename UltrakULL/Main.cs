@@ -56,6 +56,7 @@ using UltrakULL.json;
  * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me but others have reported it. Need to keep an eye on)
  * enemyBios_strategies - missing letter causes empty?
  * 
+ * 
  *  FOR NEXT HOTFIX:
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable patchedFunctions by returning true if an exception happens there, will then use original game code.
  * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger. Maybe store last string, then if no match, reload the stored string?
