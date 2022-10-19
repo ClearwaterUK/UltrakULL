@@ -50,6 +50,7 @@ using UltrakULL.json;
  * - Discord RPC currently seems to be broken on my end as a whole, meaning I can't test Discord RPC in the mod on my end (keeps throwing InternalError. People that have tested seems to be working fine but can't check on my end for myself)
  * - Attempt to replace the default font with a version that has better special char + cyrillic support
  * - Blue hex color used in the intro is semi-broken. Replaced it with a default color that works for now
+ * - Current ClearSlot patch causes major issues with saving/deleting saves (only ever deletes 1st slot)
  * 
  *  STUFF REPORTED BY ULL TEAM
  * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me but others have reported it. Need to keep an eye on)
@@ -62,9 +63,10 @@ using UltrakULL.json;
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * 
  * End of Early Access Panel
- * Options->Sandbox icons names, Sandbox title in terminal, back button when viewing weapon lore, "under construction" for weapons not yet in-game
+ * Options->Sandbox icons names, back button when viewing weapon lore, "under construction" for weapons not yet in-game
  * 
- * MAJOR: SAVES NOT BEING DELETED/SAVED CORRECTLY - Always deletes first slot. COMING FROM ClearSlot.
+ * Add Temperz' code
+ * 
  * 5 lines for Mindflayer bio when there's actually 4?
  * */
 
@@ -323,6 +325,7 @@ namespace UltrakULL
                 + "<color=orange>UltrakULL (ULTRAKILL Language Library)</color>" + "\n"
                 + "A TRANSLATION MOD FOR ULTRAKILL" + "\n"
                 + "CREATED BY <color=orange>CLEARWATER</color> AND THE <color=orange>UltrakULL TRANSLATION TEAM</color>" + "\n"
+                + "UI CODE CONTRIBUTIONS BY <color=orange>TEMPERZ87</color>" + "\n"
                 + "FULL LANGUAGE CREDITS IN THE MOD README (to come later)" + "\n";
 
 
@@ -334,6 +337,13 @@ namespace UltrakULL
             Logger.LogMessage("Patching game functions...");
 
             Harmony harmony = new Harmony(pluginGuid);
+
+            Logger.LogInfo("DifficultyTitle->Check");
+            MethodInfo originalOptions = typeof(OptionsMenuToManager).GetMethod("Start", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
+            MethodInfo patchedOptions = AccessTools.Method(typeof(Inject_LanguageButton), "Prefix");
+            harmony.Patch(originalOptions, new HarmonyMethod(patchedOptions));
+
+
             Logger.LogInfo("DifficultyTitle->Check");
             MethodInfo originalCheckFunction = AccessTools.Method(typeof(DifficultyTitle), "Check");
             MethodInfo patchedCheckFunction = AccessTools.Method(typeof(PatchedFunctions), "Check_MyPatch");

@@ -101,6 +101,7 @@
     <Compile Include="CommonFunctions.cs" />
     <Compile Include="CyberGrind.cs" />
     <Compile Include="EnemyBios.cs" />
+    <Compile Include="LanguageOptions.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="HUDMessages.cs" />
     <Compile Include="Intermission.cs" />
@@ -143,32 +144,23 @@
     <Content Include="ChangeLog.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  
   <Target Name="CopyDLLToModFolder" AfterTargets="Build">
     <Message Text="Copying UltrakULL DLL to mod folder..." Importance="High" />
     <Copy SourceFiles="$(TargetDir)$(ProjectName).dll;" DestinationFolder="D:\Steam\steamapps\common\ULTRAKILL\BepInEx\plugins\" />
     <Message Text="DLL copied." Importance="High" />
   </Target>
-  
   <Target Name="CopyDependenciesToModFolder" AfterTargets="Build">
     <Message Text="Copying dependency files to mod folder..." Importance="High" />
-
     <ItemGroup>
       <_CopyItems Include="$(TargetDir)\..\..\..\Sprites\*.*  " />
     </ItemGroup>
-    <Copy
-        SourceFiles="@(_CopyItems)"
-        DestinationFolder="D:\Steam\steamapps\common\ULTRAKILL\BepInEx\plugins\Sprites"
-    />
-    
+    <Copy SourceFiles="@(_CopyItems)" DestinationFolder="D:\Steam\steamapps\common\ULTRAKILL\BepInEx\plugins\Sprites" />
     <Copy SourceFiles="$(TargetDir)/UKUIHelper.dll;" DestinationFolder="D:\Steam\steamapps\common\ULTRAKILL\BepInEx\plugins\" />
     <Message Text="Dependency DLLs copied." Importance="High" />
-    
   </Target>
   <Target Name="CopyJsonToModFolder" AfterTargets="Build">
     <Message Text="Copying json language files to BepInEx config folder..." Importance="High" />
     <Copy SourceFiles="$(TargetDir)/../../json/templates/template.json;$(TargetDir)/../../json/templates/FR-fr.json" DestinationFolder="D:\Steam\steamapps\common\ULTRAKILL\BepInEx\config\ultrakull\" />
     <Message Text="json files copied." Importance="High" />
   </Target>
-  
 </Project>
