@@ -65,7 +65,6 @@ using UltrakULL.json;
  * End of Early Access Panel
  * Options->Sandbox icons names, back button when viewing weapon lore, "under construction" for weapons not yet in-game
  * 
- * Add Temperz' code
  * 
  * 5 lines for Mindflayer bio when there's actually 4?
  * */

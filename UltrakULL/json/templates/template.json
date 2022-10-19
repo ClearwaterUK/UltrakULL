@@ -1845,7 +1845,11 @@
         "classicHud_stamina": "",
         "classicHud_weapon": "",
         "classicHud_arm": "",
-        "classicHud_railcannonMeter": ""
+        "classicHud_railcannonMeter": "",
+
+        "earlyAccessEnd1": "",
+        "earlyAccessEnd2": "",
+        "earlyAccessEnd3": ""
 
 	}
 }

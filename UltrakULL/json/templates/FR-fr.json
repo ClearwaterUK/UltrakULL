@@ -1827,7 +1827,11 @@
         "classicHud_stamina": "ÉNERGIE",
         "classicHud_weapon": "ARME",
         "classicHud_arm": "BRAS",
-        "classicHud_railcannonMeter": "CHARGE"
+        "classicHud_railcannonMeter": "CHARGE",
+
+        "earlyAccessEnd1": "MERCI D'AVOIR JOUÉ!",
+        "earlyAccessEnd2": "ACTE III: SUICIDE DIVIN est toujours en développément.",
+        "earlyAccessEnd3": "Pour les actus sur son progrès, suivez-nous sur:"
         
 	}
 }

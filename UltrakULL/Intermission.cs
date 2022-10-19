@@ -40,6 +40,21 @@ namespace UltrakULL
             Text tobeContinuedShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(intermissionObject, "Panel (1)"), "Text"));
             tobeContinuedShadow.text = language.currentLanguage.intermission.act2_intermission_tobecontinuedshadow;
 
+            GameObject earlyAccessEnd = getGameObjectChild(intermissionObject, "Early Access End Screen");
+            if(earlyAccessEnd != null)
+            {
+                Text earlyAccessEndText = getTextfromGameObject(getGameObjectChild(earlyAccessEnd, "Text"));
+
+                earlyAccessEndText.text =
+                    "<size=48><b>" + language.currentLanguage.misc.earlyAccessEnd1 + "</b></size>" + "\n\n"
+                    + language.currentLanguage.misc.earlyAccessEnd2 + "\n\n"
+                    + language.currentLanguage.misc.earlyAccessEnd3;
+
+                Text earlyAccessQuitToMenu = getTextfromGameObject(getGameObjectChild(getGameObjectChild(earlyAccessEnd, "Quit Mission"),"Text"));
+                earlyAccessQuitToMenu.text = language.currentLanguage.intermission.act1_intermission_returnToMenu;
+
+            }
+
         }
 
 
@@ -60,9 +75,6 @@ namespace UltrakULL
             }
 
 
-            
-
-            //ACT 2
         }
 
 

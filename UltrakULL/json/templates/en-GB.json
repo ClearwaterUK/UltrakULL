@@ -1870,7 +1870,11 @@
         "classicHud_stamina": "ENERGY",
         "classicHud_weapon": "WEAPON",
         "classicHud_arm": "ARM",
-        "classicHud_railcannonMeter": "CHARGE"
+        "classicHud_railcannonMeter": "CHARGE",
+
+        "earlyAccessEnd1": "THANKS FOR PLAYING",
+        "earlyAccessEnd2": "ACT III: GODFIST SUICIDE is still under development.",
+        "earlyAccessEnd3": "For news on its progress, follow us on"
 
 	}
 }

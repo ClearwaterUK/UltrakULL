@@ -1922,5 +1922,9 @@ namespace UltrakULL.json
         public string classicHud_stamina;
         public string classicHud_arm;
         public string classicHud_railcannonMeter;
+
+        public string earlyAccessEnd1;
+        public string earlyAccessEnd2;
+        public string earlyAccessEnd3;
     }
 }
