@@ -356,6 +356,7 @@ namespace UltrakULL.json
         public string enemyBios_mindflayer_2;
         public string enemyBios_mindflayer_3;
         public string enemyBios_mindflayer_4;
+        public string enemyBios_mindflayer_5;
 
         public string enemyBios_mindflayer_strategy1;
         public string enemyBios_mindflayer_strategy2;

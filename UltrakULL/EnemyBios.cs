@@ -199,7 +199,8 @@ namespace UltrakULL
                             language.currentLanguage.enemyBios.enemyBios_mindflayer_1 + "\n\n" +
                             language.currentLanguage.enemyBios.enemyBios_mindflayer_2 + "\n\n" +
                             language.currentLanguage.enemyBios.enemyBios_mindflayer_3 + "\n\n" +
-                            language.currentLanguage.enemyBios.enemyBios_mindflayer_4;
+                            language.currentLanguage.enemyBios.enemyBios_mindflayer_4 + "\n\n" +
+                            language.currentLanguage.enemyBios.enemyBios_mindflayer_5;
 
                     }
 

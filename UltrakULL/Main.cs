@@ -62,11 +62,7 @@ using UltrakULL.json;
  * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger. Maybe store last string, then if no match, reload the stored string?
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * 
- * End of Early Access Panel
  * Options->Sandbox icons names, back button when viewing weapon lore, "under construction" for weapons not yet in-game
- * 
- * 
- * 5 lines for Mindflayer bio when there's actually 4?
  * */
 
 namespace UltrakULL
