@@ -1,4 +1,7 @@
-﻿0.8.2
+﻿0.8.2 EMERGENCY FIX
+- Fixed a major visual bug where unlocked levels would sometimes incorrectly appear as locked. (Liquid)
+
+0.8.2
 
 - Reverted a section of patched code that was causing a major bug where saves would not be saved and deleted correctly. I will look into a working fix for this at a later date. (Liquid)
 NOTE: This reversion will make the save deletion confirmation text revert back to English.

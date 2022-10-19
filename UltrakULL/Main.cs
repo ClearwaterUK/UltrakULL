@@ -322,7 +322,6 @@ namespace UltrakULL
                 + "UI CODE CONTRIBUTIONS BY <color=orange>TEMPERZ87</color>" + "\n"
                 + "FULL LANGUAGE CREDITS IN THE MOD README (to come later)" + "\n";
 
-
         }
 
         //Parent function to patch the vanilla game functions.
@@ -337,16 +336,15 @@ namespace UltrakULL
             MethodInfo patchedOptions = AccessTools.Method(typeof(Inject_LanguageButton), "Prefix");
             harmony.Patch(originalOptions, new HarmonyMethod(patchedOptions));
 
-
             Logger.LogInfo("DifficultyTitle->Check");
             MethodInfo originalCheckFunction = AccessTools.Method(typeof(DifficultyTitle), "Check");
             MethodInfo patchedCheckFunction = AccessTools.Method(typeof(PatchedFunctions), "Check_MyPatch");
             harmony.Patch(originalCheckFunction, new HarmonyMethod(patchedCheckFunction));
 
-            Logger.LogInfo("LevelSelectPanel->CheckScore");
+            Logger.LogInfo("LevelSelectPanel->CheckScore (PostFix)");
             MethodInfo originalCheckScoreFunction = AccessTools.Method(typeof(LevelSelectPanel), "CheckScore");
-            MethodInfo patchedCheckScoreFunction = AccessTools.Method(typeof(PatchedFunctions), "CheckScore_MyPatch");
-            harmony.Patch(originalCheckScoreFunction, new HarmonyMethod(patchedCheckScoreFunction));
+            MethodInfo patchedCheckScoreFunctionPostfix = AccessTools.Method(typeof(PatchedFunctions), "CheckScore_MyPatchPostFix");
+            harmony.Patch(originalCheckScoreFunction, null, new HarmonyMethod(patchedCheckScoreFunctionPostfix));
 
             Logger.LogInfo("LevelNamePopup->NameAppear");
             MethodInfo originalNameAppearFunction = AccessTools.Method(typeof(LevelNamePopup), "NameAppear");

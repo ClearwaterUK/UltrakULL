@@ -124,283 +124,35 @@ namespace UltrakULL
 
 
         //@Override
-        //Overrides checkScore function from the vanilla game. This translated level names on the main menu.
-        //Annoying that we have to patch the entire function since it's literally just one line in the original function causing this reeeee
-
-        public static bool CheckScore_MyPatch(LevelSelectPanel __instance, Sprite ___lockedSprite, int ___tempInt, LayerSelect ___ls, string ___origName, Sprite ___origSprite, bool ___beenChecked, GameObject ___challengeChecker, bool ___allSecrets)
+        //Overrides checkScore function from the vanilla game. This translates level names, as well as if challenges have been completed or not. POSTFIX.
+        public static void CheckScore_MyPatchPostFix(LevelSelectPanel __instance)
         {
-            try
-            { 
-                ___beenChecked = true;
-                if (___ls == null)
-                {
-                    ___ls = __instance.transform.parent.GetComponent<LayerSelect>();
-                }
-                if (___origSprite == null)
-                {
-                    ___origSprite = __instance.transform.Find("Image").GetComponent<Image>().sprite;
-                }
-                if (___origName == null)
-                {
-                    ___origName = __instance.transform.Find("Name").GetComponent<Text>().text;
-                }
-                if (__instance.levelNumber == 666)
-                {
-                    ___tempInt = GameProgressSaver.GetPrime(PlayerPrefs.GetInt("Diff", 2), __instance.levelNumberInLayer);
-                }
-                else
-                {
-                    ___tempInt = GameProgressSaver.GetProgress(PlayerPrefs.GetInt("Diff", 2));
-                }
-                int num = __instance.levelNumber;
-                if (__instance.levelNumber == 666)
-                {
-                    num += __instance.levelNumberInLayer - 1;
-                }
-                if ((__instance.levelNumber == 666 && ___tempInt == 0) || (__instance.levelNumber != 666 && ___tempInt < __instance.levelNumber))
-                {
-                    string text = ___ls.layerNumber.ToString();
-                    if (___ls.layerNumber == 666)
-                    {
-                        text = "P";
-                    }
-                    __instance.transform.Find("Name").GetComponent<Text>().text = string.Concat(new object[]
-                    {
-                    text,
-                    "-",
-                    __instance.levelNumberInLayer,
-                    ": ???"
-                    });
-                    __instance.transform.Find("Image").GetComponent<Image>().sprite = ___lockedSprite;
-                    __instance.GetComponent<Button>().enabled = false;
+            int num = __instance.levelNumber;
+            RankData rank = GameProgressSaver.GetRank(num, false);
 
-                    if(__instance.challengeIcon != null)
-                    {
-                        Text componentInChildren3 = __instance.challengeIcon.GetComponentInChildren<Text>();
-                        componentInChildren3.text = String.Join(" ", language.currentLanguage.frontend.level_challenge.ToList()); //Challenge not yet completed
-                        componentInChildren3.color = Color.white;
-                    }   
-                }
-                else
-                {
-                    if (___tempInt == __instance.levelNumber || (__instance.levelNumber == 666 && ___tempInt == 1))
-                    {
-                        __instance.transform.Find("Image").GetComponent<Image>().sprite = __instance.unlockedSprite;
-                    }
-                    else
-                    {
-                        __instance.transform.Find("Image").GetComponent<Image>().sprite = ___origSprite;
-                    }
+            LevelNames ln = new LevelNames();
+            __instance.transform.Find("Name").GetComponent<Text>().text = ln.getLevelName(num, language); //Level Name
 
-                    //This is the bit that translates the level names.
-                    LevelNames levelStrings = new LevelNames();
-                    __instance.transform.Find("Name").GetComponent<Text>().text = levelStrings.getLevelName(num, language);
-
-                    __instance.GetComponent<Button>().enabled = true;
-                    if (__instance.challengeIcon != null)
-                    {
-                        if (___challengeChecker == null)
-                        {
-                            ___challengeChecker = __instance.challengeIcon.transform.Find("EventTrigger").gameObject;
-                            Text componentInChildren3 = __instance.challengeIcon.GetComponentInChildren<Text>();
-                            componentInChildren3.text = String.Join(" ", language.currentLanguage.frontend.level_challenge.ToList()); //Challenge not yet completed
-                            componentInChildren3.color = Color.white;
-                        }
-                        if (___tempInt > __instance.levelNumber)
-                        {
-                            ___challengeChecker.SetActive(true);
-                        }
-                    }
-                }
-
-                RankData rank = GameProgressSaver.GetRank(num);
-                if (rank == null)
-                {
-                    Debug.Log("Didn't Find Level " + __instance.levelNumber + " Data");
-                    Image component = __instance.transform.Find("Stats").Find("Rank").GetComponent<Image>();
-                    component.color = Color.white;
-                    component.fillCenter = false;
-                    component.GetComponentInChildren<Text>().text = "";
-                    ___allSecrets = false;
-                    foreach (Image image in __instance.secretIcons)
-                    {
-                        image.enabled = true;
-                        image.fillCenter = false;
-                    }
-                    return false;
-                }
-                int @int = MonoSingleton<PrefsManager>.Instance.GetInt("difficulty", 0);
-                if (rank.levelNumber == __instance.levelNumber || (__instance.levelNumber == 666 && rank.levelNumber == __instance.levelNumber + __instance.levelNumberInLayer - 1))
-                {
-                    Text componentInChildren = __instance.transform.Find("Stats").Find("Rank").GetComponentInChildren<Text>();
-                    if (rank.ranks[@int] == 12 && (rank.majorAssists == null || !rank.majorAssists[@int]))
-                    {
-                        componentInChildren.text = "<color=#FFFFFF>P</color>";
-                        Image component2 = componentInChildren.transform.parent.GetComponent<Image>();
-                        component2.color = new Color(1f, 0.686f, 0f, 1f);
-                        component2.fillCenter = true;
-                        ___ls.AddScore(4, true);
-                    }
-                    else if (rank.majorAssists != null && rank.majorAssists[@int])
-                    {
-                        if (rank.ranks[@int] < 0)
-                        {
-                            componentInChildren.text = "";
-                        }
-                        else
-                        {
-                            switch (rank.ranks[@int])
-                            {
-                                case 1:
-                                    componentInChildren.text = "C";
-                                    ___ls.AddScore(1, false);
-                                    break;
-                                case 2:
-                                    componentInChildren.text = "B";
-                                    ___ls.AddScore(2, false);
-                                    break;
-                                case 3:
-                                    componentInChildren.text = "A";
-                                    ___ls.AddScore(3, false);
-                                    break;
-                                case 4:
-                                case 5:
-                                case 6:
-                                    ___ls.AddScore(4, false);
-                                    componentInChildren.text = "S";
-                                    break;
-                                default:
-                                    ___ls.AddScore(0, false);
-                                    componentInChildren.text = "D";
-                                    break;
-                            }
-                            Image component3 = componentInChildren.transform.parent.GetComponent<Image>();
-                            component3.color = new Color(0.3f, 0.6f, 0.9f, 1f);
-                            component3.fillCenter = true;
-                        }
-                    }
-                    else if (rank.ranks[@int] < 0)
-                    {
-                        componentInChildren.text = "";
-                        Image component4 = componentInChildren.transform.parent.GetComponent<Image>();
-                        component4.color = Color.white;
-                        component4.fillCenter = false;
-                    }
-                    else
-                    {
-                        switch (rank.ranks[@int])
-                        {
-                            case 1:
-                                componentInChildren.text = "<color=#4CFF00>C</color>";
-                                ___ls.AddScore(1, false);
-                                break;
-                            case 2:
-                                componentInChildren.text = "<color=#FFD800>B</color>";
-                                ___ls.AddScore(2, false);
-                                break;
-                            case 3:
-                                componentInChildren.text = "<color=#FF6A00>A</color>";
-                                ___ls.AddScore(3, false);
-                                break;
-                            case 4:
-                            case 5:
-                            case 6:
-                                ___ls.AddScore(4, false);
-                                componentInChildren.text = "<color=#FF0000>S</color>";
-                                break;
-                            default:
-                                ___ls.AddScore(0, false);
-                                componentInChildren.text = "<color=#0094FF>D</color>";
-                                break;
-                        }
-                        Image component5 = componentInChildren.transform.parent.GetComponent<Image>();
-                        component5.color = Color.white;
-                        component5.fillCenter = false;
-                    }
-                    if (rank.secretsAmount > 0)
-                    {
-                        ___allSecrets = true;
-                        for (int j = 0; j < 5; j++)
-                        {
-                            if (j < rank.secretsAmount && rank.secretsFound[j])
-                            {
-                                __instance.secretIcons[j].fillCenter = true;
-                            }
-                            else if (j < rank.secretsAmount)
-                            {
-                                ___allSecrets = false;
-                                __instance.secretIcons[j].fillCenter = false;
-                            }
-                            else if (j >= rank.secretsAmount)
-                            {
-                                __instance.secretIcons[j].enabled = false;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        Image[] array = __instance.secretIcons;
-                        for (int i = 0; i < array.Length; i++)
-                        {
-                            array[i].enabled = false;
-                        }
-                    }
-                    if (__instance.challengeIcon)
-                    {
-                        if (rank.challenge)
-                        {
-
-                            __instance.challengeIcon.fillCenter = true;
-                            Text componentInChildren2 = __instance.challengeIcon.GetComponentInChildren<Text>();
-
-                            componentInChildren2.text = String.Join(" ", language.currentLanguage.frontend.level_challengeCompleted.ToList()); //Challenge completed
-                            if (rank.ranks[@int] == 12 && (___allSecrets || rank.secretsAmount == 0))
-                            {
-                                componentInChildren2.color = new Color(0.6f, 0.4f, 0f, 1f);
-                            }
-                            else
-                            {
-                                componentInChildren2.color = Color.black;
-                            }
-                        }
-                        else
-                        {
-                            __instance.challengeIcon.fillCenter = false;
-                            Text componentInChildren3 = __instance.challengeIcon.GetComponentInChildren<Text>();
-                            componentInChildren3.text = String.Join(" ", language.currentLanguage.frontend.level_challenge.ToList()); //Challenge not yet completed
-                            componentInChildren3.color = Color.white;
-                        }
-                    }
-                }
-                else
-                {
-                    Debug.Log("Error in finding " + __instance.levelNumber + " Data");
-                    Image component6 = __instance.transform.Find("Stats").Find("Rank").GetComponent<Image>();
-                    component6.color = Color.white;
-                    component6.fillCenter = false;
-                    component6.GetComponentInChildren<Text>().text = "";
-                    ___allSecrets = false;
-                    foreach (Image image2 in __instance.secretIcons)
-                    {
-                        image2.enabled = true;
-                        image2.fillCenter = false;
-                    }
-                }
-                if ((rank.challenge || !__instance.challengeIcon) && rank.ranks[@int] == 12 && (___allSecrets || rank.secretsAmount == 0))
-                {
-                    ___ls.Gold();
-                    __instance.GetComponent<Image>().color = new Color(1f, 0.686f, 0f, 0.75f);
-                    return false;
-                }
-                __instance.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0.75f);
-
-                return false;
-        }
-            catch (Exception e)
+            if (rank.levelNumber == __instance.levelNumber || (__instance.levelNumber == 666 && rank.levelNumber == __instance.levelNumber + __instance.levelNumberInLayer - 1))
             {
-                handleError(e);
-                return true;
+                if (__instance.challengeIcon)
+                {
+                    if (rank.challenge)
+                    {
+                        __instance.challengeIcon.fillCenter = true;
+                        Text componentInChildren2 = __instance.challengeIcon.GetComponentInChildren<Text>();
+                        componentInChildren2.text = String.Join(" ", language.currentLanguage.frontend.level_challengeCompleted.ToList()); //Challenge completed
+                    }
+                    else
+                    {
+                        __instance.challengeIcon.fillCenter = false;
+                        Text componentInChildren3 = __instance.challengeIcon.GetComponentInChildren<Text>();
+                        componentInChildren3.text = String.Join(" ", language.currentLanguage.frontend.level_challenge.ToList()); //Challenge not completed
+                        componentInChildren3.color = Color.white;
+                    }
+                }
             }
+                return;
         }
 
         //@Override
