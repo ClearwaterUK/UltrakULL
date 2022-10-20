@@ -54,7 +54,6 @@ using UltrakULL.json;
  * 
  *  STUFF REPORTED BY ULL TEAM
  * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me but others have reported it. Need to keep an eye on)
- * enemyBios_strategies - missing letter causes empty?
  * 
  * 
  *  FOR NEXT HOTFIX:
@@ -62,7 +61,7 @@ using UltrakULL.json;
  * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger. Maybe store last string, then if no match, reload the stored string?
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * 
- * Options->Sandbox icons names, "under construction" for weapons not yet in-game
+ * Options->Sandbox icons names
  * */
 
 namespace UltrakULL

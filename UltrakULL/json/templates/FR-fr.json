@@ -1817,6 +1817,7 @@
         
         "weapons_unavailable": "NON DISPONIBLE",
         "weapons_alreadyBought": "DÉJÀ ACHETÉ",
+        "weapons_underConstruction": "EN CONSTRUCTION",
         
         "pressToSkip": "Appuyer sur ECH pour passer",
 
