@@ -46,7 +46,7 @@
       <HintPath>$(ManagedDir)\netstandard.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>$(ManagedDir)\Newtonsoft.Json.dll</HintPath>
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -102,10 +102,10 @@
   <Target Name="WarnBeforeBuild" BeforeTargets="BeforeBuild">
     <Error Condition="!Exists($(ULTRAKILLPath))" Text="ULTRAKILLPath not set, create a UltrakUll.csproj.user file that sets this property to compile" />
   </Target>
-   <Target Name="CopyModDlls" AfterTargets="AfterBuild">
+  <Target Name="CopyModDlls" AfterTargets="AfterBuild">
     <Message Text="$(ULTRAKILLPath)" Importance="High" />
     <Message Text="Copying UltrakULL DLL to $(ULTRAKILLPath)\BepInEx\plugins\..." Importance="High" />
-    <Copy SourceFiles="$(TargetDir)$(ProjectName).dll;" DestinationFolder="$(ULTRAKILLPath)\BepInEx\plugins\"/>
+    <Copy SourceFiles="$(TargetDir)$(ProjectName).dll;" DestinationFolder="$(ULTRAKILLPath)\BepInEx\plugins\" />
   </Target>
   <Target Name="CopyDLLToModFolder" AfterTargets="Build">
     <Message Text="Copying UltrakULL DLL to $(ULTRAKILLPath)\BepInEx\plugins\..." Importance="High" />
