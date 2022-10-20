@@ -51,7 +51,6 @@ using UltrakULL.json;
  * - Discord RPC currently seems to be broken on my end as a whole, meaning I can't test Discord RPC in the mod on my end (keeps throwing InternalError. People that have tested seems to be working fine but can't check on my end for myself)
  * - Attempt to replace the default font with a version that has better special char + cyrillic support
  * - Blue hex color used in the intro is semi-broken. Replaced it with a default color that works for now
- * - Current ClearSlot patch causes major issues with saving/deleting saves (only ever deletes 1st slot)
  * 
  *  STUFF REPORTED BY ULL TEAM
  * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me but others have reported it. Need to keep an eye on)

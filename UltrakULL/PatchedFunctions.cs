@@ -131,7 +131,22 @@ namespace UltrakULL
             RankData rank = GameProgressSaver.GetRank(num, false);
 
             LevelNames ln = new LevelNames();
-            __instance.transform.Find("Name").GetComponent<Text>().text = ln.getLevelName(num, language); //Level Name
+
+            //Bandaid fix for P-2 and P-3 for now. Shall need to change/remove when they release.
+            if (__instance.transform.Find("Name").GetComponent<Text>().text.Contains("P-2"))
+            {
+                __instance.transform.Find("Name").GetComponent<Text>().text = "P-2: ???";
+            }
+
+            else if (__instance.transform.Find("Name").GetComponent<Text>().text.Contains("P-3"))
+            {
+                __instance.transform.Find("Name").GetComponent<Text>().text = "P-3: ???";
+            }
+
+            else
+            {
+                __instance.transform.Find("Name").GetComponent<Text>().text = ln.getLevelName(num, language); //Level Name
+            }
 
             if (rank.levelNumber == __instance.levelNumber || (__instance.levelNumber == 666 && rank.levelNumber == __instance.levelNumber + __instance.levelNumberInLayer - 1))
             {
