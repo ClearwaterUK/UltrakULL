@@ -1,4 +1,8 @@
-﻿0.8.2 EMERGENCY FIX
+﻿0.8.3
+
+- Fixed a standing issue with previous patched code causing saves to not be deleted correctly.
+
+0.8.2 EMERGENCY FIX
 - Fixed a major visual bug where unlocked levels would sometimes incorrectly appear as locked. (Liquid)
 
 0.8.2
