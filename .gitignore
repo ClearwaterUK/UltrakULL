@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/UltrakULL/UltrakULL.dt
+/UltrakULL/lib/Newtonsoft.Json.xml

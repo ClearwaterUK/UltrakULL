@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UltrakULL</RootNamespace>
     <AssemblyName>UltrakULL</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,20 +33,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\Libraries\0Harmony.dll</HintPath>
+      <HintPath>$(BepInExCoreDir)\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\Libraries\Assembly-CSharp.dll</HintPath>
+      <HintPath>$(ManagedDir)\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx">
-      <HintPath>..\Libraries\BepInEx.dll</HintPath>
+      <HintPath>$(BepInExCoreDir)\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libraries\netstandard.dll</HintPath>
+      <HintPath>$(ManagedDir)\netstandard.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>$(ManagedDir)\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,39 +57,75 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="UKUIHelper">
-      <HintPath>..\Libraries\UKUIHelper.dll</HintPath>
+      <HintPath>$(BepInExPluginsDir)\UKUIHelper.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\Libraries\UnityEngine.dll</HintPath>
+      <HintPath>$(ManagedDir)\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>..\Libraries\UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>$(ManagedDir)\UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>..\Libraries\UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>$(ManagedDir)\UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\Libraries\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>$(ManagedDir)\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>..\Libraries\UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>$(ManagedDir)\UnityEngine.ImageConversionModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>..\Libraries\UnityEngine.InputLegacyModule.dll</HintPath>
+      <HintPath>$(ManagedDir)\UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>..\Libraries\UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>$(ManagedDir)\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>..\Libraries\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>$(ManagedDir)\UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\Libraries\UnityEngine.UI.dll</HintPath>
+      <HintPath>$(ManagedDir)\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>..\Libraries\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>$(ManagedDir)\UnityEngine.UIModule.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <PropertyGroup>
+    <ManagedDir>$(ULTRAKILLPath)\ULTRAKILL_Data\Managed\</ManagedDir>
+    <BepInExRootDir>$(ULTRAKILLPath)\BepInEx\</BepInExRootDir>
+    <BepInExCoreDir>$(BepInExRootDir)\core\</BepInExCoreDir>
+    <BepInExPluginsDir>$(BepInExRootDir)\plugins\</BepInExPluginsDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <ModDlls Include="$(OutDir)/$(AssemblyName).dll" />
+  </ItemGroup>
+  <Target Name="WarnBeforeBuild" BeforeTargets="BeforeBuild">
+    <Error Condition="!Exists($(ULTRAKILLPath))" Text="ULTRAKILLPath not set, create a UltrakUll.csproj.user file that sets this property to compile" />
+  </Target>
+   <Target Name="CopyModDlls" AfterTargets="AfterBuild">
+    <Message Text="$(ULTRAKILLPath)" Importance="High" />
+    <Message Text="Copying UltrakULL DLL to $(ULTRAKILLPath)\BepInEx\plugins\..." Importance="High" />
+    <Copy SourceFiles="$(TargetDir)$(ProjectName).dll;" DestinationFolder="$(ULTRAKILLPath)\BepInEx\plugins\"/>
+  </Target>
+  <Target Name="CopyDLLToModFolder" AfterTargets="Build">
+    <Message Text="Copying UltrakULL DLL to $(ULTRAKILLPath)\BepInEx\plugins\..." Importance="High" />
+    <Copy SourceFiles="$(TargetDir)$(ProjectName).dll;" DestinationFolder="$(ULTRAKILLPath)\BepInEx\plugins\" />
+    <Message Text="DLL copied." Importance="High" />
+  </Target>
+  <Target Name="CopyDependenciesToModFolder" AfterTargets="Build">
+    <Message Text="Copying dependency files to $(ULTRAKILLPath)\BepInEx\plugins\..." Importance="High" />
+    <ItemGroup>
+      <_CopyItems Include="$(TargetDir)\..\..\..\Sprites\*.*  " />
+    </ItemGroup>
+    <Copy SourceFiles="@(_CopyItems)" DestinationFolder="$(ULTRAKILLPath)\BepInEx\plugins\Sprites" />
+    <Copy SourceFiles="$(TargetDir)/UKUIHelper.dll;" DestinationFolder="$(ULTRAKILLPath)\BepInEx\plugins\" />
+    <Message Text="Dependency DLLs copied." Importance="High" />
+  </Target>
+  <Target Name="CopyJsonToModFolder" AfterTargets="Build">
+    <Message Text="Copying json language files to BepInEx config folder..." Importance="High" />
+    <Copy SourceFiles="$(TargetDir)/../../json/templates/template.json;$(TargetDir)/../../json/templates/FR-fr.json" DestinationFolder="$(ULTRAKILLPath)\BepInEx\config\ultrakull\" />
+    <Message Text="json files copied." Importance="High" />
+  </Target>
   <ItemGroup>
     <Compile Include="Act1.cs" />
     <Compile Include="Act1Strings.cs" />
@@ -144,23 +181,4 @@
     <Content Include="ChangeLog.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="CopyDLLToModFolder" AfterTargets="Build">
-    <Message Text="Copying UltrakULL DLL to mod folder..." Importance="High" />
-    <Copy SourceFiles="$(TargetDir)$(ProjectName).dll;" DestinationFolder="D:\Steam\steamapps\common\ULTRAKILL\BepInEx\plugins\" />
-    <Message Text="DLL copied." Importance="High" />
-  </Target>
-  <Target Name="CopyDependenciesToModFolder" AfterTargets="Build">
-    <Message Text="Copying dependency files to mod folder..." Importance="High" />
-    <ItemGroup>
-      <_CopyItems Include="$(TargetDir)\..\..\..\Sprites\*.*  " />
-    </ItemGroup>
-    <Copy SourceFiles="@(_CopyItems)" DestinationFolder="D:\Steam\steamapps\common\ULTRAKILL\BepInEx\plugins\Sprites" />
-    <Copy SourceFiles="$(TargetDir)/UKUIHelper.dll;" DestinationFolder="D:\Steam\steamapps\common\ULTRAKILL\BepInEx\plugins\" />
-    <Message Text="Dependency DLLs copied." Importance="High" />
-  </Target>
-  <Target Name="CopyJsonToModFolder" AfterTargets="Build">
-    <Message Text="Copying json language files to BepInEx config folder..." Importance="High" />
-    <Copy SourceFiles="$(TargetDir)/../../json/templates/template.json;$(TargetDir)/../../json/templates/FR-fr.json" DestinationFolder="D:\Steam\steamapps\common\ULTRAKILL\BepInEx\config\ultrakull\" />
-    <Message Text="json files copied." Importance="High" />
-  </Target>
 </Project>
