@@ -17,7 +17,7 @@ namespace UltrakULL
     {
         private static BepInEx.Logging.ManualLogSource a1Logger = BepInEx.Logging.Logger.CreateLogSource("Act1Patcher");
 
-        private static void patchHellmap(JsonParser language)
+        private static void patchHellmap()
         {
             a1Logger.LogInfo("Patching Act 1 hellmap");
             try
@@ -27,13 +27,13 @@ namespace UltrakULL
                 GameObject hellMapObject = getGameObjectChild(canvas, "Hellmap");
 
                 Text hellmapLimbo = getTextfromGameObject(getGameObjectChild(hellMapObject, "Text"));
-                hellmapLimbo.text = language.currentLanguage.misc.hellmap_limbo;
+                hellmapLimbo.text = LanguageManager.CurrentLanguage.misc.hellmap_limbo;
 
                 Text hellmapLust = getTextfromGameObject(getGameObjectChild(hellMapObject, "Text (1)"));
-                hellmapLust.text = language.currentLanguage.misc.hellmap_lust;
+                hellmapLust.text = LanguageManager.CurrentLanguage.misc.hellmap_lust;
 
                 Text hellmapGluttony = getTextfromGameObject(getGameObjectChild(hellMapObject, "Text (2)"));
-                hellmapGluttony.text = language.currentLanguage.misc.hellmap_gluttony;
+                hellmapGluttony.text = LanguageManager.CurrentLanguage.misc.hellmap_gluttony;
             }
             catch(Exception e)
             {
@@ -42,18 +42,18 @@ namespace UltrakULL
             }
         }
 
-        public static void PatchAct1(ref GameObject level, JsonParser language) // I've never seen the level argument used, is this meant to do something?
+        public static void PatchAct1(ref GameObject level) // I've never seen the level argument used, is this meant to do something?
         {
             a1Logger.LogInfo("Now entering Act 1 class.");
             //this.baseLevelObject = level; // This isn't used so it's commented out
             string currentLevel = SceneManager.GetActiveScene().name;
 
-            patchHellmap(language);
+            patchHellmap();
 
-            string levelName = Act1Strings.getLevelName(language);
-            string levelChallenge = Act1Strings.getLevelChallenge(currentLevel, language);
+            string levelName = Act1Strings.getLevelName();
+            string levelChallenge = Act1Strings.getLevelChallenge(currentLevel);
 
-            patchResultsScreen(levelName, levelChallenge, language);
+            patchResultsScreen(levelName, levelChallenge);
 
         }
     }

@@ -1,4 +1,4 @@
-﻿using BepInEx.Configuration;
+﻿/*using BepInEx.Configuration;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -135,21 +135,13 @@ namespace UltrakULL.json
             }
         }
 
-        public void loadLanguage(string fileName, string modVersion)
+        public JsonFormat loadLanguage(string fileName, string modVersion)
         {
             Console.WriteLine("Loading strings from " + fileName);
             string file = languageDir + this.cfgLastLanguage.Value + ".json";
             Console.WriteLine(file);
 
-            this.currentLanguage = JsonConvert.DeserializeObject<JsonFormat>(File.ReadAllText(file));
-
-            if(!this.fileMatchesMinimumRequiredVersion(this.currentLanguage.metadata.minimumModVersion, modVersion))
-            {
-                jsonLogger.LogWarning("WARNING: JSON version is outdated or does not match the current mod version.\n Since this file was force loaded, you may get errors or abnormal behavior related to missing strings.");
-                jsonLogger.LogWarning("JSON version:" + this.currentLanguage.metadata.minimumModVersion);
-                jsonLogger.LogWarning("Mod version:" + modVersion);
-                this.loadedLanguageIsOudated = true;
-            }
+            return JsonConvert.DeserializeObject<JsonFormat>(File.ReadAllText(file));
         }
 
         public bool fileMatchesMinimumRequiredVersion(string requiredModVersion, string actualModVersion)
@@ -206,7 +198,15 @@ namespace UltrakULL.json
                     Dictionary<string,bool> languages = enumerateLanguages(modVersion);
                     if(checkSavedLanguage(languages))
                     {
-                        loadLanguage(this.cfgLastLanguage.Value,modVersion);
+                        JsonFormat format = loadLanguage(this.cfgLastLanguage.Value,modVersion);
+
+                        if (!this.fileMatchesMinimumRequiredVersion(this.currentLanguage.metadata.minimumModVersion, modVersion))
+                        {
+                            jsonLogger.LogWarning("WARNING: JSON version is outdated or does not match the current mod version.\n Since this file was force loaded, you may get errors or abnormal behavior related to missing strings.");
+                            jsonLogger.LogWarning("JSON version:" + this.currentLanguage.metadata.minimumModVersion);
+                            jsonLogger.LogWarning("Mod version:" + modVersion);
+                            this.loadedLanguageIsOudated = true;
+                        }
                     }
                     else
                     {
@@ -222,3 +222,4 @@ namespace UltrakULL.json
         }
     }
 }
+*/

@@ -11,91 +11,91 @@ namespace UltrakULL
 {
     public static class TitleManager
     {
-        public static string getName(string inputName, JsonParser language)
+        public static string getName(string inputName)
         {
             //Prelude titles
-            if (inputName.Contains("INTO THE FIRE")) { return (language.currentLanguage.levelNames.levelName_preludeFirst); }
-            if (inputName.Contains("THE MEATGRINDER")) { return (language.currentLanguage.levelNames.levelName_preludeSecond); }
-            if (inputName.Contains("DOUBLE DOWN")) { return (language.currentLanguage.levelNames.levelName_preludeThird); }
-            if (inputName.Contains("A ONE-MACHINE ARMY")) { return (language.currentLanguage.levelNames.levelName_preludeFourth); }
-            if (inputName.Contains("CERBERUS")) { return (language.currentLanguage.levelNames.levelName_preludeFifth); }
+            if (inputName.Contains("INTO THE FIRE")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_preludeFirst); }
+            if (inputName.Contains("THE MEATGRINDER")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_preludeSecond); }
+            if (inputName.Contains("DOUBLE DOWN")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_preludeThird); }
+            if (inputName.Contains("A ONE-MACHINE ARMY")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_preludeFourth); }
+            if (inputName.Contains("CERBERUS")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_preludeFifth); }
 
             //Act 1 titles
             //Limbo
-            if (inputName.Contains("HEART OF THE SUNRISE")) { return (language.currentLanguage.levelNames.levelName_limboFirst); }
-            if (inputName.Contains("THE BURNING WORLD")) { return (language.currentLanguage.levelNames.levelName_limboSecond); }
-            if (inputName.Contains("HALLS OF SACRED REMAINS")) { return (language.currentLanguage.levelNames.levelName_limboThird); }
-            if (inputName.Contains("CLAIR DE LUNE")) { return (language.currentLanguage.levelNames.levelName_limboFourth); }
+            if (inputName.Contains("HEART OF THE SUNRISE")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_limboFirst); }
+            if (inputName.Contains("THE BURNING WORLD")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_limboSecond); }
+            if (inputName.Contains("HALLS OF SACRED REMAINS")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_limboThird); }
+            if (inputName.Contains("CLAIR DE LUNE")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_limboFourth); }
 
             //Lust
-            if (inputName.Contains("BRIDGEBURNER")) { return (language.currentLanguage.levelNames.levelName_lustFirst); }
-            if (inputName.Contains("DEATH AT 20,000 VOLTS")) { return (language.currentLanguage.levelNames.levelName_lustSecond); }
-            if (inputName.Contains("SHEER HEART ATTACK")) { return (language.currentLanguage.levelNames.levelName_lustThird); }
-            if (inputName.Contains("COURT OF THE CORPSE KING")) { return (language.currentLanguage.levelNames.levelName_lustFourth); }
+            if (inputName.Contains("BRIDGEBURNER")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_lustFirst); }
+            if (inputName.Contains("DEATH AT 20,000 VOLTS")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_lustSecond); }
+            if (inputName.Contains("SHEER HEART ATTACK")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_lustThird); }
+            if (inputName.Contains("COURT OF THE CORPSE KING")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_lustFourth); }
 
             //Gluttony
-            if (inputName.Contains("BELLY OF THE BEAST")) { return (language.currentLanguage.levelNames.levelName_gluttonyFirst); }
-            if (inputName.Contains("IN THE FLESH")) { return (language.currentLanguage.levelNames.levelName_gluttonySecond); }
+            if (inputName.Contains("BELLY OF THE BEAST")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_gluttonyFirst); }
+            if (inputName.Contains("IN THE FLESH")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_gluttonySecond); }
 
             //Act 2 titles
             //Greed
-            if (inputName.Contains("SLAVES TO POWER")) { return (language.currentLanguage.levelNames.levelName_greedFirst); }
-            if (inputName.Contains("GOD DAMN THE SUN")) { return (language.currentLanguage.levelNames.levelName_greedSecond); }
-            if (inputName.Contains("A SHOT IN THE DARK")) { return (language.currentLanguage.levelNames.levelName_greedThird); }
-            if (inputName.Contains("CLAIR DE SOLEIL")) { return (language.currentLanguage.levelNames.levelName_greedFourth); }
+            if (inputName.Contains("SLAVES TO POWER")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_greedFirst); }
+            if (inputName.Contains("GOD DAMN THE SUN")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_greedSecond); }
+            if (inputName.Contains("A SHOT IN THE DARK")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_greedThird); }
+            if (inputName.Contains("CLAIR DE SOLEIL")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_greedFourth); }
 
             //Wrath titles
-            if (inputName.Contains("IN THE WAKE OF POSEIDON")) { return (language.currentLanguage.levelNames.levelName_wrathFirst); }
-            if (inputName.Contains("WAVES OF THE STARLESS SEA")) { return (language.currentLanguage.levelNames.levelName_wrathSecond); }
-            if (inputName.Contains("SHIP OF FOOLS")) { return (language.currentLanguage.levelNames.levelName_wrathThird); }
-            if (inputName.Contains("LEVIATHAN")) { return (language.currentLanguage.levelNames.levelName_wrathFourth); }
+            if (inputName.Contains("IN THE WAKE OF POSEIDON")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_wrathFirst); }
+            if (inputName.Contains("WAVES OF THE STARLESS SEA")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_wrathSecond); }
+            if (inputName.Contains("SHIP OF FOOLS")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_wrathThird); }
+            if (inputName.Contains("LEVIATHAN")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_wrathFourth); }
 
             //Heresy titles
-            if (inputName.Contains("CRY FOR THE WEEPER")) { return (language.currentLanguage.levelNames.levelName_heresyFirst); }
-            if (inputName.Contains("AESTHETICS OF HATE")) { return (language.currentLanguage.levelNames.levelName_heresySecond); }
+            if (inputName.Contains("CRY FOR THE WEEPER")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_heresyFirst); }
+            if (inputName.Contains("AESTHETICS OF HATE")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_heresySecond); }
 
             //Prime titles
-            if (inputName.Contains("SOUL SURVIVOR")) { return (language.currentLanguage.levelNames.levelName_primeFirst); }
+            if (inputName.Contains("SOUL SURVIVOR")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_primeFirst); }
 
             return "";
         }
 
-        public static string getLayer(string inputTitle, JsonParser language)
+        public static string getLayer(string inputTitle)
         {
             StringBuilder titleToReturn = new StringBuilder();
 
             //Grab the layer name...
             if (inputTitle.Contains("PRELUDE"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_prelude);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_prelude);
             }
             else if (inputTitle.Contains("LIMBO"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_limbo);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_limbo);
             }
             else if (inputTitle.Contains("LUST"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_lust);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_lust);
             }
             else if (inputTitle.Contains("GLUTTONY"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_gluttony);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_gluttony);
             }
             else if (inputTitle.Contains("GREED"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_greed);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_greed);
             }
             else if (inputTitle.Contains("WRATH"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_wrath);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_wrath);
             }
             else if (inputTitle.Contains("HERESY"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_heresy);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_heresy);
             }
             else if (inputTitle.Contains("PRIME"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_prime);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_prime);
             }
 
             titleToReturn.Append(" /// ");
@@ -103,44 +103,44 @@ namespace UltrakULL
             //...and then the number
             if (inputTitle.Contains("ACT I CRESCENDO"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_act1crescendo);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_act1crescendo);
             }
             else if (inputTitle.Contains("ACT I CLIMAX"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_act1climax);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_act1climax);
                 return titleToReturn.ToString();
             }
             if (inputTitle.Contains("ACT II CRESCENDO"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_act2crescendo);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_act2crescendo);
             }
             else if (inputTitle.Contains("ACT II CLIMAX"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_act2climax);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_act2climax);
                 return titleToReturn.ToString();
             }
 
             else if (inputTitle.Contains("FIRST"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_first);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_first);
             }
             else if (inputTitle.Contains("SECOND"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_second);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_second);
             }
             else if (inputTitle.Contains("THIRD"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_third);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_third);
             }
             else if (inputTitle.Contains("FOURTH"))
             {
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_fourth);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_fourth);
             }
             else if (inputTitle.Contains("CLIMAX"))
             {
 
 
-                titleToReturn.Append(language.currentLanguage.misc.hellmap_climax);
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_climax);
             }
             return titleToReturn.ToString();
         }

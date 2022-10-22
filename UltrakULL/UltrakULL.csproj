@@ -138,6 +138,7 @@
     <Compile Include="CommonFunctions.cs" />
     <Compile Include="CyberGrind.cs" />
     <Compile Include="EnemyBios.cs" />
+    <Compile Include="json\LanguageManager.cs" />
     <Compile Include="LanguageOptions.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="HUDMessages.cs" />

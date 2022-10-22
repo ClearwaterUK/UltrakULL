@@ -30,30 +30,30 @@ namespace UltrakULL
             }
         }
 
-        public string getLevelName(JsonParser language)
+        public string getLevelName()
         {
             string currentLevel = SceneManager.GetActiveScene().name;
 
             switch (currentLevel)
             {
-                case "Level P-1": { return "P-1 - " + language.currentLanguage.levelNames.levelName_primeFirst; }
+                case "Level P-1": { return "P-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_primeFirst; }
 
                 default: { return "Unknown level name"; }
             }
         }
 
-        public PrimeSanctumStrings(JsonParser language)
+        public PrimeSanctumStrings()
         {
             this.p1SecretText =
-                language.currentLanguage.primeSanctum.primeSanctum_first_secretText1 + "\n"
-                + language.currentLanguage.primeSanctum.primeSanctum_first_secretText2 + "\n\n"
-                + language.currentLanguage.primeSanctum.primeSanctum_first_secretText3 + "\n\n"
-                + language.currentLanguage.primeSanctum.primeSanctum_first_secretText4 + "\n\n"
-                + language.currentLanguage.primeSanctum.primeSanctum_first_secretText5 + "\n"
-                + language.currentLanguage.primeSanctum.primeSanctum_first_secretText6 + "\n\n"
-                + language.currentLanguage.primeSanctum.primeSanctum_first_secretText7 + "\n\n"
-                + language.currentLanguage.primeSanctum.primeSanctum_first_secretText8 + "\n\n"
-                + language.currentLanguage.primeSanctum.primeSanctum_first_secretText9;
+                LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_first_secretText1 + "\n"
+                + LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_first_secretText2 + "\n\n"
+                + LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_first_secretText3 + "\n\n"
+                + LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_first_secretText4 + "\n\n"
+                + LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_first_secretText5 + "\n"
+                + LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_first_secretText6 + "\n\n"
+                + LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_first_secretText7 + "\n\n"
+                + LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_first_secretText8 + "\n\n"
+                + LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_first_secretText9;
         }
     }
 }

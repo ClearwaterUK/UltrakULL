@@ -64,7 +64,7 @@ namespace UltrakULL
             *HELL IS FULL._½½&
          */
 
-        public string getMessage(string inputMessage, string inputMessage2, string input, JsonParser language)
+        public string getMessage(string inputMessage, string inputMessage2, string input)
         {
             Console.WriteLine(inputMessage + " - " + input);
 
@@ -73,42 +73,42 @@ namespace UltrakULL
             if (fullMessage.Contains("PUNCH"))
             {
                 //return ("Appuyer sur '<color=orange>" + input + "</color>' pour lancer un <color=orange>COUP DE POING.</color>");
-                return (language.currentLanguage.tutorial.tutorial_punch1 + " <color=orange>" + input + "</color> " + language.currentLanguage.tutorial.tutorial_punch2);
+                return (LanguageManager.CurrentLanguage.tutorial.tutorial_punch1 + " <color=orange>" + input + "</color> " + LanguageManager.CurrentLanguage.tutorial.tutorial_punch2);
             }
 
             else if (fullMessage.Contains("SLIDE"))
             {
                 //return ("Maintenir'<color=orange>" + input + "</color>' pour <color=orange>GLISSER.</color>");
-                return (language.currentLanguage.tutorial.tutorial_slide1 + " <color=orange>" + input + "</color> " + language.currentLanguage.tutorial.tutorial_slide2);
+                return (LanguageManager.CurrentLanguage.tutorial.tutorial_slide1 + " <color=orange>" + input + "</color> " + LanguageManager.CurrentLanguage.tutorial.tutorial_slide2);
             }
             else if (fullMessage.Contains("DASH"))
             {
                 // return ("Appuyer sur '<color=cyan>" + input + "</color>' pour <color=cyan>ESQUIVER</color>. (Utilise d'<color=cyan>ÉNERGIE</color>.)") +
                 //     "\n Peut étre utilisé dans l'air.";
-                return (language.currentLanguage.tutorial.tutorial_dash1 + "<color=orange>" + input + "</color> " + language.currentLanguage.tutorial.tutorial_dash2 + "\n" + language.currentLanguage.tutorial.tutorial_dash3);
+                return (LanguageManager.CurrentLanguage.tutorial.tutorial_dash1 + "<color=orange>" + input + "</color> " + LanguageManager.CurrentLanguage.tutorial.tutorial_dash2 + "\n" + LanguageManager.CurrentLanguage.tutorial.tutorial_dash3);
             }
             else if (fullMessage.Contains("HEALTH"))
             {
                 // return ("Infligir des dégâts sur des ennemis à courte distance pour <color=red>VOUS BAIGNER DANS DU SANG FRAIS.") +
                 //     "\n CECI EST LA SEULE FAÇON POUR RÉCUPÉRER VOTRE SANTÉ</color>.";
-                return (language.currentLanguage.tutorial.tutorial_health1 + "\n" + language.currentLanguage.tutorial.tutorial_health2);
+                return (LanguageManager.CurrentLanguage.tutorial.tutorial_health1 + "\n" + LanguageManager.CurrentLanguage.tutorial.tutorial_health2);
             }
             else if (fullMessage.Contains("JUMP"))
             {
                 //return ("<color=orange>SAUTER</color> prés d'un <color=orange>MUR</color> pour y <color=orange>SAUTER DESSUS</color>. (Max. 3 fois)");
-                return (language.currentLanguage.tutorial.tutorial_walljump);
+                return (LanguageManager.CurrentLanguage.tutorial.tutorial_walljump);
             }
             else if (fullMessage.Contains("SHOCKWAVE"))
             {
                 //return ("Appuyer sur '<color=orange>" + input + "</color>' pour vous <color=orange>LANCER AU SOL</color>." +
                 //    "\n Maintenir pour lancer un <color=orange>CHOC</color>. (Utilise <color=cyan>2 ÉNERGIE</color>)");
-                return (language.currentLanguage.tutorial.tutorial_shockwave1 + " <color=orange>" + input + "</color> " + language.currentLanguage.tutorial.tutorial_shockwave2 + "\n" + language.currentLanguage.tutorial.tutorial_shockwave3);
+                return (LanguageManager.CurrentLanguage.tutorial.tutorial_shockwave1 + " <color=orange>" + input + "</color> " + LanguageManager.CurrentLanguage.tutorial.tutorial_shockwave2 + "\n" + LanguageManager.CurrentLanguage.tutorial.tutorial_shockwave3);
             }
             else if (fullMessage.Contains("ORBS"))
             {
                 //return ("La plupart des niveaux contiennent des <color=cyan>GLOBES D'ÂMES.</color>" +
                 //    "\n Touchez-les pour recevoir un <color=orange>BONUS DE POINTS</color>.");
-                return (language.currentLanguage.tutorial.tutorial_orb1 + "\n" + language.currentLanguage.tutorial.tutorial_orb2);
+                return (LanguageManager.CurrentLanguage.tutorial.tutorial_orb1 + "\n" + LanguageManager.CurrentLanguage.tutorial.tutorial_orb2);
             }
 
             else
@@ -131,26 +131,26 @@ namespace UltrakULL
         // & - Ends intro text and loads the tutorial
 
 
-        public TutorialStrings(JsonParser language)
+        public TutorialStrings()
         {
 
             this.introFirstPage =
-                language.currentLanguage.tutorial.tutorial_introStartup1 + "#" + language.currentLanguage.tutorial.tutorial_introStartup2 + " \n\n"
-                + language.currentLanguage.tutorial.tutorial_introVersion1 + "# \n"
-                + "+" + language.currentLanguage.tutorial.tutorial_introVersion2 + "_½ \n\n"
-                + language.currentLanguage.tutorial.tutorial_introCalibration1 + "#\n"
-                + "+" + language.currentLanguage.tutorial.tutorial_introCalibration2 + "_\n\n"
-                 + "(+" + language.currentLanguage.tutorial.tutorial_introReminder + "_)½\n\n"
-                 + language.currentLanguage.tutorial.tutorial_introLoadStatus + "# \n\n"
+                LanguageManager.CurrentLanguage.tutorial.tutorial_introStartup1 + "#" + LanguageManager.CurrentLanguage.tutorial.tutorial_introStartup2 + " \n\n"
+                + LanguageManager.CurrentLanguage.tutorial.tutorial_introVersion1 + "# \n"
+                + "+" + LanguageManager.CurrentLanguage.tutorial.tutorial_introVersion2 + "_½ \n\n"
+                + LanguageManager.CurrentLanguage.tutorial.tutorial_introCalibration1 + "#\n"
+                + "+" + LanguageManager.CurrentLanguage.tutorial.tutorial_introCalibration2 + "_\n\n"
+                 + "(+" + LanguageManager.CurrentLanguage.tutorial.tutorial_introReminder + "_)½\n\n"
+                 + LanguageManager.CurrentLanguage.tutorial.tutorial_introLoadStatus + "# \n\n"
                  + "~";
 
             this.introSecondPage =
-            language.currentLanguage.tutorial.tutorial_introID1 + ":		" + language.currentLanguage.tutorial.tutorial_introID2 + "½½ \n"
-            + language.currentLanguage.tutorial.tutorial_introLocation1 + ":			" + language.currentLanguage.tutorial.tutorial_introLocation2 + "@½½ \n"
-            + language.currentLanguage.tutorial.tutorial_introObjective1 + ":	" + language.currentLanguage.tutorial.tutorial_introObjective2 + "½½ \n\n"
-            + "*" + language.currentLanguage.tutorial.tutorial_introRed1 + "_½½ \n"
-            + "*" + language.currentLanguage.tutorial.tutorial_introRed2 + "_½½ \n"
-            + "*" + language.currentLanguage.tutorial.tutorial_introRed3 + "_½½&";
+            LanguageManager.CurrentLanguage.tutorial.tutorial_introID1 + ":		" + LanguageManager.CurrentLanguage.tutorial.tutorial_introID2 + "½½ \n"
+            + LanguageManager.CurrentLanguage.tutorial.tutorial_introLocation1 + ":			" + LanguageManager.CurrentLanguage.tutorial.tutorial_introLocation2 + "@½½ \n"
+            + LanguageManager.CurrentLanguage.tutorial.tutorial_introObjective1 + ":	" + LanguageManager.CurrentLanguage.tutorial.tutorial_introObjective2 + "½½ \n\n"
+            + "*" + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed1 + "_½½ \n"
+            + "*" + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed2 + "_½½ \n"
+            + "*" + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed3 + "_½½&";
         }
     }
 }

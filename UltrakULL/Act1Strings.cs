@@ -18,66 +18,66 @@ namespace UltrakULL
         private static BepInEx.Logging.ManualLogSource a1StringsLogger = BepInEx.Logging.Logger.CreateLogSource("Act 1 Strings");
 
         //1-1 - Heart Of The Sunrise
-        public static string level11(string message, string message2, string input,JsonParser language)
+        public static string level11(string message, string message2, string input)
         {
             string fullMessage = message + message2;
             a1StringsLogger.LogInfo(fullMessage);
             if (fullMessage.Contains("ITEMS"))
             {
-                previousHudMessage = language.currentLanguage.act1.act1_limboFirst_items1 + " '<color=orange>" + input + "'</color> " + language.currentLanguage.act1.act1_limboFirst_items2;
-                return language.currentLanguage.act1.act1_limboFirst_items1 + " '<color=orange>" + input + "'</color> " + language.currentLanguage.act1.act1_limboFirst_items2;
+                previousHudMessage = LanguageManager.CurrentLanguage.act1.act1_limboFirst_items1 + " '<color=orange>" + input + "'</color> " + LanguageManager.CurrentLanguage.act1.act1_limboFirst_items2;
+                return LanguageManager.CurrentLanguage.act1.act1_limboFirst_items1 + " '<color=orange>" + input + "'</color> " + LanguageManager.CurrentLanguage.act1.act1_limboFirst_items2;
             }
             if (fullMessage.Contains("NAILGUN"))
             {
-                previousHudMessage = language.currentLanguage.act1.act1_limboFirst_nailgun1 + " '<color=orange>" + input + "'</color> " + language.currentLanguage.act1.act1_limboFirst_nailgun2 + "\n" + language.currentLanguage.act1.act1_limboFirst_nailgun3;
-                return language.currentLanguage.act1.act1_limboFirst_nailgun1 + " '<color=orange>" + input + "'</color> " + language.currentLanguage.act1.act1_limboFirst_nailgun2 + "\n" + language.currentLanguage.act1.act1_limboFirst_nailgun3;
+                previousHudMessage = LanguageManager.CurrentLanguage.act1.act1_limboFirst_nailgun1 + " '<color=orange>" + input + "'</color> " + LanguageManager.CurrentLanguage.act1.act1_limboFirst_nailgun2 + "\n" + LanguageManager.CurrentLanguage.act1.act1_limboFirst_nailgun3;
+                return LanguageManager.CurrentLanguage.act1.act1_limboFirst_nailgun1 + " '<color=orange>" + input + "'</color> " + LanguageManager.CurrentLanguage.act1.act1_limboFirst_nailgun2 + "\n" + LanguageManager.CurrentLanguage.act1.act1_limboFirst_nailgun3;
             }
 
             //Band-aid fix
             return previousHudMessage;
         }
         //1-2 - The Burning World
-        public static string level12(string message, string message2, string input,JsonParser language)
+        public static string level12(string message, string message2, string input)
         {
             string fullMessage = message + message2;
             a1StringsLogger.LogInfo(fullMessage);
             if (fullMessage.Contains("BLUE"))
             {
-                return language.currentLanguage.act1.act1_limboSecond_blueAttack;
+                return LanguageManager.CurrentLanguage.act1.act1_limboSecond_blueAttack;
             }
             return "Unknown 1-2 string";
         }
         //1-3 - Hall Of Sacred Remains
-        public static string level13(string message, string message2, string input, JsonParser language)
+        public static string level13(string message, string message2, string input)
         {
             string fullMessage = message + message2;
             a1StringsLogger.LogInfo(fullMessage);
             if (fullMessage.Contains("SPLIT"))
             {
-                return language.currentLanguage.act1.act1_limboThird_splitDoor1 + "\n" + language.currentLanguage.act1.act1_limboThird_splitDoor2;
+                return LanguageManager.CurrentLanguage.act1.act1_limboThird_splitDoor1 + "\n" + LanguageManager.CurrentLanguage.act1.act1_limboThird_splitDoor2;
             }
             return "Unknown 1-3 string";
         }
             //1-4 - Clair De Lune
-            public static string level14(string message, string message2, string input, JsonParser language)
+            public static string level14(string message, string message2, string input)
             {
             string fullMessage = message + message2;
             a1StringsLogger.LogInfo(fullMessage);
             if (fullMessage.Contains("PICK"))
             {
-                return language.currentLanguage.act1.act1_limboFourth_book;
+                return LanguageManager.CurrentLanguage.act1.act1_limboFourth_book;
             }
             if (fullMessage.Contains("Hank"))
             {
-                return language.currentLanguage.act1.act1_limboFourth_hank1 + "\n" + language.currentLanguage.act1.act1_limboFourth_hank2;
+                return LanguageManager.CurrentLanguage.act1.act1_limboFourth_hank1 + "\n" + LanguageManager.CurrentLanguage.act1.act1_limboFourth_hank2;
             }
             if (fullMessage.Contains("ALTERNATE"))
             {
-                return language.currentLanguage.act1.act1_limboFourth_alternateRevolver;
+                return LanguageManager.CurrentLanguage.act1.act1_limboFourth_alternateRevolver;
             }
             if (fullMessage.Contains("EQUIPPED"))
             {
-                return language.currentLanguage.act1.act1_limboFourth_newArm + " '<color=orange>" + input + "'</color>.";
+                return LanguageManager.CurrentLanguage.act1.act1_limboFourth_newArm + " '<color=orange>" + input + "'</color>.";
             }
 
             return "Unknown 1-4 string";
@@ -89,45 +89,45 @@ namespace UltrakULL
             return "Unknown 1-S string";
         }
         //2-1 - Bridgeburner
-        public static string level21(string message, string message2, string input, JsonParser language)
+        public static string level21(string message, string message2, string input)
         {
             string fullMessage = message + message2;
             a1StringsLogger.LogInfo(fullMessage);
             if (fullMessage.Contains("KNUCKLE"))
             {
-                return (language.currentLanguage.act1.act1_lustFirst_knuckleblaster1 + " '<color=orange>"+input+"</color>' " + language.currentLanguage.act1.act1_lustFirst_knuckleblaster2);
+                return (LanguageManager.CurrentLanguage.act1.act1_lustFirst_knuckleblaster1 + " '<color=orange>"+input+"</color>' " + LanguageManager.CurrentLanguage.act1.act1_lustFirst_knuckleblaster2);
             }
             if (fullMessage.Contains("DASH"))
             {
-                return (language.currentLanguage.act1.act1_lustFirst_dashJump);
+                return (LanguageManager.CurrentLanguage.act1.act1_lustFirst_dashJump);
             }
 
             return "Unknown 2-1 string";
         }
         //2-2 - Death at 20,000 Volts
-        public static string level22(string message, string message2, string input, JsonParser language)
+        public static string level22(string message, string message2, string input)
         {
             string fullMessage = message + message2;
             a1StringsLogger.LogInfo(fullMessage);
             if (fullMessage.Contains("FEEDBACKER"))
             {
-                return language.currentLanguage.act1.act1_lustSecond_feedbacker1 + "\n" + language.currentLanguage.act1.act1_lustSecond_feedbacker2 + " '<color=orange>" + input + "</color>'.";
+                return LanguageManager.CurrentLanguage.act1.act1_lustSecond_feedbacker1 + "\n" + LanguageManager.CurrentLanguage.act1.act1_lustSecond_feedbacker2 + " '<color=orange>" + input + "</color>'.";
             }
             if (fullMessage.Contains("RAILCANNON"))
             {
-                return (language.currentLanguage.act1.act1_lustSecond_railcannon);
+                return (LanguageManager.CurrentLanguage.act1.act1_lustSecond_railcannon);
             }
 
             return ("Unknown 2-2 string");
         }
         //2-3 - Sheer Heart Attack
-        public static string level23(string message, string message2, string input, JsonParser language)
+        public static string level23(string message, string message2, string input)
         {
             string fullMessage = message + message2;
             a1StringsLogger.LogInfo(fullMessage);
             if (fullMessage.Contains("water"))
             {
-                return (language.currentLanguage.act1.act1_lustThird_water);
+                return (LanguageManager.CurrentLanguage.act1.act1_lustThird_water);
             }
             return "Unknown 2-3 string";
         }
@@ -156,7 +156,7 @@ namespace UltrakULL
         }
 
 
-        public static string getMessage(string message, string message2, string input, JsonParser language)
+        public static string getMessage(string message, string message2, string input)
         {
             string currentLevel = SceneManager.GetActiveScene().name;
             string fullMessage = message + message2;
@@ -167,7 +167,7 @@ namespace UltrakULL
             //Slab revolver switch
             if (fullMessage.Contains("mechanism"))
             {
-                return (language.currentLanguage.act1.act1_secret);
+                return (LanguageManager.CurrentLanguage.act1.act1_secret);
             }
 
 
@@ -175,19 +175,19 @@ namespace UltrakULL
             {
                 case "Level 1-1":
                     {
-                        return level11(message, message2, input, language);
+                        return level11(message, message2, input);
                     }
                 case "Level 1-2":
                     {
-                        return level12(message, message2, input, language);
+                        return level12(message, message2, input);
                     }
                 case "Level 1-3":
                     {
-                        return level13(message, message2, input, language);
+                        return level13(message, message2, input);
                     }
                 case "Level 1-4":
                     {
-                        return level14(message, message2, input, language);
+                        return level14(message, message2, input);
                     }
                 case "Level 1-S":
                     {
@@ -195,15 +195,15 @@ namespace UltrakULL
                     }
                 case "Level 2-1":
                     {
-                        return level21(message, message2, input,language);
+                        return level21(message, message2, input);
                     }
                 case "Level 2-2":
                     {
-                        return level22(message, message2, input, language);
+                        return level22(message, message2, input);
                     }
                 case "Level 2-3":
                     {
-                        return level23(message, message2, input,language);
+                        return level23(message, message2, input);
                     }
                 case "Level 2-4":
                     {
@@ -225,47 +225,47 @@ namespace UltrakULL
             }
         }
 
-        public static string getLevelChallenge(string currentLevel, JsonParser language)
+        public static string getLevelChallenge(string currentLevel)
         {
             switch (currentLevel)
             {
-                case "Level 1-1": { return language.currentLanguage.levelChallenges.challenges_limboFirst; }
-                case "Level 1-2": { return language.currentLanguage.levelChallenges.challenges_limboSecond; }
-                case "Level 1-3": { return language.currentLanguage.levelChallenges.challenges_limboThird; }
-                case "Level 1-4": { return language.currentLanguage.levelChallenges.challenges_limboFourth; }
+                case "Level 1-1": { return LanguageManager.CurrentLanguage.levelChallenges.challenges_limboFirst; }
+                case "Level 1-2": { return LanguageManager.CurrentLanguage.levelChallenges.challenges_limboSecond; }
+                case "Level 1-3": { return LanguageManager.CurrentLanguage.levelChallenges.challenges_limboThird; }
+                case "Level 1-4": { return LanguageManager.CurrentLanguage.levelChallenges.challenges_limboFourth; }
 
-                case "Level 2-1": { return language.currentLanguage.levelChallenges.challenges_lustFirst; }
-                case "Level 2-2": { return language.currentLanguage.levelChallenges.challenges_lustSecond; }
-                case "Level 2-3": { return language.currentLanguage.levelChallenges.challenges_lustThird; }
-                case "Level 2-4": { return language.currentLanguage.levelChallenges.challenges_lustFourth; }
+                case "Level 2-1": { return LanguageManager.CurrentLanguage.levelChallenges.challenges_lustFirst; }
+                case "Level 2-2": { return LanguageManager.CurrentLanguage.levelChallenges.challenges_lustSecond; }
+                case "Level 2-3": { return LanguageManager.CurrentLanguage.levelChallenges.challenges_lustThird; }
+                case "Level 2-4": { return LanguageManager.CurrentLanguage.levelChallenges.challenges_lustFourth; }
 
-                case "Level 3-1": { return language.currentLanguage.levelChallenges.challenges_gluttonyFirst; }
-                case "Level 3-2": { return language.currentLanguage.levelChallenges.challenges_gluttonySecond; }
+                case "Level 3-1": { return LanguageManager.CurrentLanguage.levelChallenges.challenges_gluttonyFirst; }
+                case "Level 3-2": { return LanguageManager.CurrentLanguage.levelChallenges.challenges_gluttonySecond; }
 
                 default: { return "Unknown challenge description"; }
             }
         }
 
-        public static string getLevelName(JsonParser language)
+        public static string getLevelName()
         {
             string currentLevel = SceneManager.GetActiveScene().name;
 
             switch (currentLevel)
             {
-                case "Level 1-1": { return "1-1 - " + language.currentLanguage.levelNames.levelName_limboFirst; }
-                case "Level 1-2": { return "1-2 - " + language.currentLanguage.levelNames.levelName_limboSecond; }
-                case "Level 1-3": { return "1-3 - " + language.currentLanguage.levelNames.levelName_limboThird; }
-                case "Level 1-4": { return "1-4 - " + language.currentLanguage.levelNames.levelName_limboFourth; }
-                case "Level 1-S": { return "1-S - " + language.currentLanguage.levelNames.levelName_limboSecret; }
+                case "Level 1-1": { return "1-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_limboFirst; }
+                case "Level 1-2": { return "1-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_limboSecond; }
+                case "Level 1-3": { return "1-3 - " + LanguageManager.CurrentLanguage.levelNames.levelName_limboThird; }
+                case "Level 1-4": { return "1-4 - " + LanguageManager.CurrentLanguage.levelNames.levelName_limboFourth; }
+                case "Level 1-S": { return "1-S - " + LanguageManager.CurrentLanguage.levelNames.levelName_limboSecret; }
 
-                case "Level 2-1": { return "2-1 - " + language.currentLanguage.levelNames.levelName_lustFirst; }
-                case "Level 2-2": { return "2-2 - " + language.currentLanguage.levelNames.levelName_lustSecond; }
-                case "Level 2-3": { return "2-3 - " + language.currentLanguage.levelNames.levelName_lustThird; }
-                case "Level 2-4": { return "2-4 - " + language.currentLanguage.levelNames.levelName_lustFourth; }
-                case "Level 2-S": { return "2-S - " + language.currentLanguage.levelNames.levelName_lustSecret; }
+                case "Level 2-1": { return "2-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_lustFirst; }
+                case "Level 2-2": { return "2-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_lustSecond; }
+                case "Level 2-3": { return "2-3 - " + LanguageManager.CurrentLanguage.levelNames.levelName_lustThird; }
+                case "Level 2-4": { return "2-4 - " + LanguageManager.CurrentLanguage.levelNames.levelName_lustFourth; }
+                case "Level 2-S": { return "2-S - " + LanguageManager.CurrentLanguage.levelNames.levelName_lustSecret; }
 
-                case "Level 3-1": { return "3-1 - " + language.currentLanguage.levelNames.levelName_gluttonyFirst; }
-                case "Level 3-2": { return "3-2 - " + language.currentLanguage.levelNames.levelName_gluttonySecond; }
+                case "Level 3-1": { return "3-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_gluttonyFirst; }
+                case "Level 3-2": { return "3-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_gluttonySecond; }
 
                 default: { return "Unknown level name"; }
             }
