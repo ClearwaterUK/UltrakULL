@@ -1912,6 +1912,7 @@ namespace UltrakULL.json
 
         public string weapons_unavailable;
         public string weapons_alreadyBought;
+        public string weapons_underConstruction;
 
         public string pressToSkip;
 

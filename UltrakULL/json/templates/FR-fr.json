@@ -743,7 +743,7 @@
 		"save_selected": "SÉLECTIONNÉ",
 		"save_delete": "SUPPRIMER",
 		"save_deleteWarning1": "Êtes-vous sûr de vouloir",
-		"save_deleteWarning2": "SUPPRIMER LA SAUVEGARDE ?",
+		"save_deleteWarning2": "SUPPRIMER LA SAUVEGARDE",
 		"save_deleteYes": "SUPPRIMER",
 		"save_deleteNo": "ANNULER",
 		"save_close": "FERMER",
@@ -1817,6 +1817,7 @@
         
         "weapons_unavailable": "NON DISPONIBLE",
         "weapons_alreadyBought": "DÉJÀ ACHETÉ",
+        "weapons_underConstruction": "EN CONSTRUCTION",
         
         "pressToSkip": "Appuyer sur ECH pour passer",
 

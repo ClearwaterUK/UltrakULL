@@ -1835,6 +1835,7 @@
         
         "weapons_unavailable": "",
         "weapons_alreadyBought": "",
+        "weapons_underConstruction": "",
 
         "pressToSkip": "",
 

@@ -60,67 +60,67 @@ namespace UltrakULL
         //@Override
         //Overrides Check from the vanilla game. Used for persistant difficulty strings across all scenes.
         public static bool Check_MyPatch(DifficultyTitle __instance, Text ___txt)
+        {
+            int @int = MonoSingleton<PrefsManager>.Instance.GetInt("difficulty", 0);
+            MonoBehaviour mono = new MonoBehaviour();
+
+            if (___txt == null)
             {
-                int @int = MonoSingleton<PrefsManager>.Instance.GetInt("difficulty", 0);
-                MonoBehaviour mono = new MonoBehaviour();
-
-                if (___txt == null)
-                {
-                    ___txt = __instance.GetComponent<Text>();
-                }
-                ___txt.text = "";
-
-                if (__instance.lines)
-                {
-                    Text text = ___txt;
-                    text.text = "-- ";
-                }
-                switch (@int)
-                {
-                    case 0:
-                        {
-                            Text text2 = ___txt;
-                            text2.text += language.currentLanguage.frontend.difficulty_harmless;
-                            break;
-                        }
-                    case 1:
-                        {
-                            Text text3 = ___txt;
-                            text3.text += language.currentLanguage.frontend.difficulty_lenient;
-                            break;
-                        }
-                    case 2:
-                        {
-                            Text text4 = ___txt;
-                            text4.text += language.currentLanguage.frontend.difficulty_standard;
-                            break;
-                        }
-                    case 3:
-                        {
-                            Text text5 = ___txt;
-                            text5.text += language.currentLanguage.frontend.difficulty_violent;
-                            break;
-                        }
-                    case 4:
-                        {
-                            Text text6 = ___txt;
-                            text6.text += language.currentLanguage.frontend.difficulty_brutal;
-                            break;
-                        }
-                    case 5:
-                        {
-                            Text text7 = ___txt;
-                            text7.text += language.currentLanguage.frontend.difficulty_umd;
-                            break;
-                        }
-                }
-                if (__instance.lines)
-                {
-                    Text text8 = ___txt;
-                    text8.text += " -- ";
-                }
-                return false;
+                ___txt = __instance.GetComponent<Text>();
             }
+            ___txt.text = "";
+
+            if (__instance.lines)
+            {
+                Text text = ___txt;
+                text.text = "-- ";
+            }
+            switch (@int)
+            {
+                case 0:
+                    {
+                        Text text2 = ___txt;
+                        text2.text += language.currentLanguage.frontend.difficulty_harmless;
+                        break;
+                    }
+                case 1:
+                    {
+                        Text text3 = ___txt;
+                        text3.text += language.currentLanguage.frontend.difficulty_lenient;
+                        break;
+                    }
+                case 2:
+                    {
+                        Text text4 = ___txt;
+                        text4.text += language.currentLanguage.frontend.difficulty_standard;
+                        break;
+                    }
+                case 3:
+                    {
+                        Text text5 = ___txt;
+                        text5.text += language.currentLanguage.frontend.difficulty_violent;
+                        break;
+                    }
+                case 4:
+                    {
+                        Text text6 = ___txt;
+                        text6.text += language.currentLanguage.frontend.difficulty_brutal;
+                        break;
+                    }
+                case 5:
+                    {
+                        Text text7 = ___txt;
+                        text7.text += language.currentLanguage.frontend.difficulty_umd;
+                        break;
+                    }
+            }
+            if (__instance.lines)
+            {
+                Text text8 = ___txt;
+                text8.text += " -- ";
+            }
+            return false;
+        }
 
 
         //@Override
@@ -131,6 +131,22 @@ namespace UltrakULL
             RankData rank = GameProgressSaver.GetRank(num, false);
 
             __instance.transform.Find("Name").GetComponent<Text>().text = LevelNames.getLevelName(num, language); //Level Name
+
+            //Bandaid fix for P-2 and P-3 for now. Shall need to change/remove when they release.
+            if (__instance.transform.Find("Name").GetComponent<Text>().text.Contains("P-2"))
+            {
+                __instance.transform.Find("Name").GetComponent<Text>().text = "P-2: ???";
+            }
+
+            else if (__instance.transform.Find("Name").GetComponent<Text>().text.Contains("P-3"))
+            {
+                __instance.transform.Find("Name").GetComponent<Text>().text = "P-3: ???";
+            }
+
+            else
+            {
+                __instance.transform.Find("Name").GetComponent<Text>().text = LevelNames.getLevelName(num, language); //Level Name
+            }
 
             if (rank.levelNumber == __instance.levelNumber || (__instance.levelNumber == 666 && rank.levelNumber == __instance.levelNumber + __instance.levelNumberInLayer - 1))
             {
@@ -151,7 +167,7 @@ namespace UltrakULL
                     }
                 }
             }
-                return;
+            return;
         }
 
         //@Override
@@ -161,9 +177,9 @@ namespace UltrakULL
         {
             //Layer string is composed of layer name - level *number*.
             //Example: PRELUDE /// FIRST, LUST /// SECOND, etc
-            ___layerString = TitleManager.getLayer(___layerString,language);
+            ___layerString = TitleManager.getLayer(___layerString, language);
 
-            ___nameString = TitleManager.getName(___nameString,language);
+            ___nameString = TitleManager.getName(___nameString, language);
 
             if (!___activated)
             {
@@ -516,7 +532,7 @@ namespace UltrakULL
                     waitTime = 0.75f;
                     ___txt.text = ___fullString.Substring(0, j);
                 }
-            IL_8FA:
+                IL_8FA:
                 i = ___fullString.Length;
                 if (waitTime != 0f && playSound)
                 {
@@ -531,7 +547,7 @@ namespace UltrakULL
                 k = j;
                 j = k + 1;
                 continue;
-            IL_82D:
+                IL_82D:
                 ___txt.text = ___fullString.Substring(0, j);
                 goto IL_8FA;
             }
@@ -664,7 +680,7 @@ namespace UltrakULL
 
             if (___input == "")
             {
-                ___text.text = HUDMessages.getHUDToolTip(newmessage,language);
+                ___text.text = HUDMessages.getHUDToolTip(newmessage, language);
             }
             else
             {
@@ -686,7 +702,7 @@ namespace UltrakULL
                 {
                     str = keyCode.ToString();
                 }
-                ___text.text = HUDMessages.getHUDToolTip(newmessage,language) + str + ___message2;
+                ___text.text = HUDMessages.getHUDToolTip(newmessage, language) + str + ___message2;
             }
 
             ___text.text = ___text.text.Replace('$', '\n');
@@ -695,7 +711,6 @@ namespace UltrakULL
             ___hoe.Force();
             if (!___noSound)
             {
-
                 ___aud.Play();
             }
 
@@ -725,7 +740,7 @@ namespace UltrakULL
             if (cheatsUsed)
             {
                 Text text = __instance.extraInfo;
-                text.text += "- <color=#44FF45>" + language.currentLanguage.misc.endstats_cheatsUsed +"</color>\n";
+                text.text += "- <color=#44FF45>" + language.currentLanguage.misc.endstats_cheatsUsed + "</color>\n";
             }
             if (majorUsed)
             {
@@ -780,7 +795,7 @@ namespace UltrakULL
         //Overrides the CreateBossBar method from the BossBarManager class. This is needed to swap in the translated boss names on their health bars.
         public static bool CreateBossBar_MyPatch(string bossName, BossBarManager.HealthLayer[] healthLayers, ref BossHealthBarTemplate createdBossBar, ref Slider[] hpSliders, ref Slider[] hpAfterImages, ref GameObject bossBar, BossBarManager __instance, BossHealthBarTemplate ___template, BossBarManager.SliderLayer[] ___layers)
         {
-            bossName = BossStrings.getBossName(bossName,language);
+            bossName = BossStrings.getBossName(bossName, language);
 
             Debug.Log("Creating boss bar for " + bossName);
             List<Slider> list = new List<Slider>();
@@ -929,7 +944,7 @@ namespace UltrakULL
             return false;
         }
 
-        
+
         //@Override
         //Overrides the AddPoints method from the StyleHUD class. This is needed to intercept and translate any strings coming into the style meter in-game.
         public static bool AddPoints_MyPatch(StyleHUD __instance, GunControl ___gc, StatsManager ___sman, Dictionary<StyleFreshnessState, StyleFreshnessData> ___freshnessStateDict, float ___currentMeter, float ___rankScale, Queue<string> ___hudItemsQueue, int points, string pointID, GameObject sourceWeapon = null, EnemyIdentifier eid = null, int count = -1, string prefix = "", string postfix = "")
@@ -948,7 +963,7 @@ namespace UltrakULL
             RevolverBeam revolverBeam;
             if (___altBeam != null && ___altBeam.TryGetComponent<RevolverBeam>(out revolverBeam) && revolverBeam.ultraRicocheter)
             {
-                text = "<color=orange>" + language.currentLanguage.style.style_ricoshotUltra +  "</color>";
+                text = "<color=orange>" + language.currentLanguage.style.style_ricoshotUltra + "</color>";
                 num += 50;
             }
             if (___wasShotByEnemy)
@@ -970,22 +985,22 @@ namespace UltrakULL
             return false;
         }
 
-        public static bool GetLocalizedName_MyPatch(string id, StyleHUD __instance, Dictionary<string,string> ___idNameDict, ref string __result)
+        public static bool GetLocalizedName_MyPatch(string id, StyleHUD __instance, Dictionary<string, string> ___idNameDict, ref string __result)
         {
-            
+
             if (___idNameDict.ContainsKey(id))
             {
-                __result = StyleBonusStrings.getStyleBonusDictionary(id,language);
+                __result = StyleBonusStrings.getStyleBonusDictionary(id, language);
                 return false;
             }
-            __result = StyleBonusStrings.getTranslatedStyleBonus(id,language);
+            __result = StyleBonusStrings.getTranslatedStyleBonus(id, language);
             return false;
         }
 
         public static bool UpdateFreshnessSlider_MyPatch(StyleHUD __instance, GunControl ___gc)
         {
             StyleFreshnessState freshnessState = __instance.GetFreshnessState(___gc.currentWeapon);
-            __instance.freshnessSliderText.text = StyleBonusStrings.getWeaponFreshness(freshnessState,language);
+            __instance.freshnessSliderText.text = StyleBonusStrings.getWeaponFreshness(freshnessState, language);
 
             return false;
         }
@@ -1001,7 +1016,7 @@ namespace UltrakULL
             ___origPitch = ___aud.pitch;
 
             IntermissionStrings intStrings = new IntermissionStrings(language);
-            ___fullString = intStrings.getIntermissionString(___fullString,language);
+            ___fullString = intStrings.getIntermissionString(___fullString, language);
 
             __instance.StartCoroutine(TextAppearMain(__instance, ___fullString, ___sb, ___txt, ___tempString, ___skipToInput, ___waitingForInput, ___preText, ___aud, ___origPitch));
 
@@ -1119,7 +1134,7 @@ namespace UltrakULL
                 return false;
             }
             Subtitle subtitle = UnityEngine.Object.Instantiate<Subtitle>(___subtitleLine, ___container, true);
-            subtitle.GetComponentInChildren<Text>().text = SubtitleStrings.getSubtitle(caption,language);
+            subtitle.GetComponentInChildren<Text>().text = SubtitleStrings.getSubtitle(caption, language);
             if (audioSource != null)
             {
                 subtitle.distanceCheckObject = audioSource;
@@ -1178,10 +1193,10 @@ namespace UltrakULL
                         ___currentSpawnable = spawnableObject;
                         //Nest the original private DisplayInfo in here.
 
-                        string enemyName = EnemyBios.getName(spawnableObject.objectName,language);
-                        string enemyType = EnemyBios.getType(spawnableObject.type,language);
-                        string enemyDescription = EnemyBios.getDescription(spawnableObject.objectName,language);
-                        string enemyStrategy = EnemyBios.getStrategy(spawnableObject.objectName,language);
+                        string enemyName = EnemyBios.getName(spawnableObject.objectName, language);
+                        string enemyType = EnemyBios.getType(spawnableObject.type, language);
+                        string enemyDescription = EnemyBios.getDescription(spawnableObject.objectName, language);
+                        string enemyStrategy = EnemyBios.getStrategy(spawnableObject.objectName, language);
 
                         ___enemyPageTitle.text = enemyName;
                         string text = "<color=orange>" + language.currentLanguage.enemyBios.enemyBios_type + ": " + enemyType + "\n\n" + language.currentLanguage.enemyBios.enemyBios_data + "</color>\n";
@@ -1267,19 +1282,14 @@ namespace UltrakULL
         }
 
         //@Override
-        //Overrides the *private* ClearSlot method from the SaveSlotMenu class. This is to swap out the delete confirmation string.
-        public static bool ClearSlot_MyPatch(int slot, SaveSlotMenu __instance, int ___queuedSlot, Text ___wipeConsentContent, GameObject ___wipeConsentWrapper)
+        //Overrides the *private* ClearSlot method from the SaveSlotMenu class. This is to swap out the delete confirmation string. Postfix
+
+        public static void ClearSlotPostfix_MyPatch(int slot, Text ___wipeConsentContent)
         {
-            Console.WriteLine("DELETING SLOT" + slot);
-
-            ___queuedSlot = slot;
-            //___wipeConsentContent.text = string.Format(language.currentLanguage.options.save_deleteWarning1+ "<color=red>" + language.currentLanguage.options.save_deleteWarning2 + "{0}</color>?", slot + 1);
-
-            ___wipeConsentContent.text = string.Format("Are you sure you want to <color=red>DELETE SLOT {0}</color>?", slot + 1);
-            ___wipeConsentWrapper.SetActive(true);
-
-            return false;
+            ___wipeConsentContent.text = string.Format(language.currentLanguage.options.save_deleteWarning1 + " <color=red>" + language.currentLanguage.options.save_deleteWarning2 + " {0}</color>?", slot + 1);
+            return;
         }
+
 
         //@Override
         //DiscordController->Update
@@ -1313,9 +1323,9 @@ namespace UltrakULL
             if (!___Instance || ___disabled || ___discord == null)
             {
                 //Console.WriteLine("Pre-exiting");
-                if(!___Instance)
+                if (!___Instance)
                 {
-                   // Console.WriteLine("Instance is disabled");
+                    // Console.WriteLine("Instance is disabled");
                 }
                 if (___disabled)
                 {
@@ -1422,7 +1432,7 @@ namespace UltrakULL
                 if (rankCachedActivity.Assets.SmallText != null && rankCachedActivity.Assets.SmallImage != null)
                 {
                     privateCachedActivity.Assets.SmallImage = rankCachedActivity.Assets.SmallImage;
-                    privateCachedActivity.Assets.SmallText = StyleBonusStrings.getTranslatedRankString(rankCachedActivity.Assets.SmallText,language);
+                    privateCachedActivity.Assets.SmallText = StyleBonusStrings.getTranslatedRankString(rankCachedActivity.Assets.SmallText, language);
                 }
 
                 if (privateCachedActivity.Assets.SmallText != null && privateCachedActivity.Assets.SmallImage != null)
@@ -1488,7 +1498,7 @@ namespace UltrakULL
                 Discord.ActivityManager privateActivityManager = (Discord.ActivityManager)AccessTools.Field(typeof(DiscordController), "activityManager").GetValue(privateInstance);
 
                 int privatelastPoints = (int)AccessTools.Field(typeof(DiscordController), "lastPoints").GetValue(privateInstance);
-                
+
                 if (!DiscordController.Instance)
                 {
                     return false;
@@ -1526,7 +1536,7 @@ namespace UltrakULL
 
                 return false;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 modLogger.LogWarning("Something went wrong while updating Discord RPC. Falling back to vanilla function.");
                 return true;
@@ -1697,7 +1707,7 @@ namespace UltrakULL
                 {
                     if (cachedStatsManager.majorUsed)
                     {
-                        __instance.majorAssists.text = "<color=#4C99E6>" + language.currentLanguage.misc.state_yes +"</color>";
+                        __instance.majorAssists.text = "<color=#4C99E6>" + language.currentLanguage.misc.state_yes + "</color>";
                         return false;
                     }
                     __instance.majorAssists.text = language.currentLanguage.misc.state_no;
@@ -1735,7 +1745,7 @@ namespace UltrakULL
                 __instance.RenderCheatsInfo();
                 return false;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 handleError(e);
                 return true;
@@ -1771,7 +1781,7 @@ namespace UltrakULL
                     {
                         stringBuilder.Append("[ ] ");
                     }
-                    stringBuilder.Append("<color=white>" + Cheats.getCheatName(cheat2.Identifier,language) + "</color>\n");
+                    stringBuilder.Append("<color=white>" + Cheats.getCheatName(cheat2.Identifier, language) + "</color>\n");
                 }
             }
             MonoSingleton<CheatsController>.Instance.cheatsInfo.text = stringBuilder.ToString();
@@ -1797,7 +1807,7 @@ namespace UltrakULL
 
                 return false;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 handleError(e);
                 return true;

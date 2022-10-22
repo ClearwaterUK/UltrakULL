@@ -31,6 +31,7 @@ using UltrakULL.json;
  *  - Error and exception handling
  *  - Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
  *  - Discord RPC (Persistant timestamp and general corrections)
+ *  - Look at everything in PatchedFunctions and refactor anything from prefix to postfix.
  * 
  * - Less important stuff for future updates:
  *  - Cheat teleport menu
@@ -50,11 +51,9 @@ using UltrakULL.json;
  * - Discord RPC currently seems to be broken on my end as a whole, meaning I can't test Discord RPC in the mod on my end (keeps throwing InternalError. People that have tested seems to be working fine but can't check on my end for myself)
  * - Attempt to replace the default font with a version that has better special char + cyrillic support
  * - Blue hex color used in the intro is semi-broken. Replaced it with a default color that works for now
- * - Current ClearSlot patch causes major issues with saving/deleting saves (only ever deletes 1st slot)
  * 
  *  STUFF REPORTED BY ULL TEAM
  * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me but others have reported it. Need to keep an eye on)
- * enemyBios_strategies - missing letter causes empty?
  * 
  * 
  *  FOR NEXT HOTFIX:
@@ -62,7 +61,7 @@ using UltrakULL.json;
  * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger. Maybe store last string, then if no match, reload the stored string?
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * 
- * Options->Sandbox icons names, "under construction" for weapons not yet in-game
+ * Options->Sandbox icons names
  * */
 
 namespace UltrakULL
@@ -332,7 +331,7 @@ namespace UltrakULL
 
             Harmony harmony = new Harmony(pluginGuid);
 
-            Logger.LogInfo("DifficultyTitle->Check");
+            Logger.LogInfo("OptionsMenuToManager->Start");
             MethodInfo originalOptions = typeof(OptionsMenuToManager).GetMethod("Start", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
             MethodInfo patchedOptions = AccessTools.Method(typeof(Inject_LanguageButton), "Prefix");
             harmony.Patch(originalOptions, new HarmonyMethod(patchedOptions));
@@ -417,10 +416,10 @@ namespace UltrakULL
             MethodInfo patchedDiscordControllerUpdate = AccessTools.Method(typeof(PatchedFunctions), "DC_UpdateMyPatch");
             harmony.Patch(originalDiscordControllerUpdate, new HarmonyMethod(patchedDiscordControllerUpdate));*/
 
-            Logger.LogInfo("SaveSlotMenu->ClearSlot");
+            Logger.LogInfo("SaveSlotMenu->ClearSlot (Postfix)");
             MethodInfo originalClearSlot = typeof(SaveSlotMenu).GetMethod("ClearSlot", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { typeof(int) }, null);
-            MethodInfo patchedClearSlot = AccessTools.Method(typeof(PatchedFunctions), "ClearSlot_MyPatch");
-            //harmony.Patch(originalClearSlot, new HarmonyMethod(patchedClearSlot));
+            MethodInfo patchedClearSlotPostfix = AccessTools.Method(typeof(PatchedFunctions), "ClearSlotPostfix_MyPatch");
+            harmony.Patch(originalClearSlot, null, new HarmonyMethod(patchedClearSlotPostfix));
 
             Logger.LogInfo("DiscordController->FetchSceneActivity");
             MethodInfo originalFetchScene = AccessTools.Method(typeof(DiscordController), "FetchSceneActivity", new Type[] { typeof(string) });
@@ -442,12 +441,10 @@ namespace UltrakULL
             MethodInfo patchedUpdateWave = AccessTools.Method(typeof(PatchedFunctions), "UpdateWave_MyPatch");
             harmony.Patch(originalUpdateWave, new HarmonyMethod(patchedUpdateWave));
 
-
             Logger.LogInfo("Coin->RicoshotPointsCheck");
             MethodInfo originalRicoshotPointsCheck = typeof(Coin).GetMethod("RicoshotPointsCheck");
             MethodInfo patchedRicoshotPointsCheck = AccessTools.Method(typeof(PatchedFunctions), "RicoshotPointsCheck_MyPatch");
             harmony.Patch(originalRicoshotPointsCheck, new HarmonyMethod(patchedRicoshotPointsCheck));
-
 
             Logger.LogInfo("HudMessageReciever->SendHudMessage");
             MethodInfo originalShowHudMessage = typeof(HudMessageReceiver).GetMethod("SendHudMessage");
@@ -544,9 +541,6 @@ namespace UltrakULL
 
                         this.addDiscord(frontEnd);
                         this.addModCredits(frontEnd);
-
-
-
                     }
                 }
                 else if (currentLevel.name.Contains("P-"))
