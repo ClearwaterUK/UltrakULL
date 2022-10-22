@@ -1,8 +1,14 @@
 ﻿0.8.3
 
+- Added a string for the tutorial before 0-1 for the Discord Rich Presence.
 - Added the "under construction" string for weapons not yet available in the game.
 - Fixed a standing issue with previous patched code causing saves to not be deleted correctly.
 - Fixed P-2 and P-3 using P-1's name in the level select.
+
+- Added the following lines to the JSON template: 
+
+misc: weapons_underConstruction
+levelNames: levelName_tutorial
 
 
 0.8.2 EMERGENCY FIX

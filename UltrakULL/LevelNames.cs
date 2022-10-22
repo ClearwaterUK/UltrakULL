@@ -23,6 +23,7 @@ namespace UltrakULL
 			if (missionName.Contains("Main Menu")) { return language.currentLanguage.levelNames.levelName_mainMenu; }
 			if (missionName.Contains("Endless")) { return language.currentLanguage.levelNames.levelName_cybergrind; }
 			if (missionName.Contains("uk_construct")) { return language.currentLanguage.levelNames.levelName_sandbox; }
+			if (missionName.Contains("Tutorial")) { return language.currentLanguage.levelNames.levelName_tutorial; }
 
 			if (missionName.Contains("0-1")) { return "0-1: " + language.currentLanguage.levelNames.levelName_preludeFirst; }
 			if (missionName.Contains("0-2")) { return "0-2: " + language.currentLanguage.levelNames.levelName_preludeSecond; }

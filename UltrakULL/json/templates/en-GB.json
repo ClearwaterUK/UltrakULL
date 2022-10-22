@@ -811,6 +811,9 @@
 	},
 	"levelNames": {
         "levelName_mainMenu": "MAIN MENU",
+        "levelName_cybergrind": "THE CYBER GRIND",
+		"levelName_sandbox": "uk_construct",
+        "levelName_tutorial": "TUTORIAL",
         
 		"levelName_preludeFirst": "INTO THE FIRE",
 		"levelName_preludeSecond": "THE MEATGRINDER",
@@ -853,8 +856,7 @@
 		"levelName_primeSecond": "",
 		"levelName_primeThird": "",
 
-		"levelName_cybergrind": "THE CYBER GRIND",
-		"levelName_sandbox": "uk_construct"
+
 	},
 	"levelChallenges":{
 		"challenges_preludeFirst": "KILL 5 ENEMIES WITH A SINGLE GLASS PANEL",

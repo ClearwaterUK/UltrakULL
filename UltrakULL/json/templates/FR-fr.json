@@ -769,6 +769,9 @@
 	},
 	"levelNames": {
         "levelName_mainMenu": "MENU PRINCIPAL",
+        "levelName_tutorial": "TUTORIEL",
+        "levelName_cybergrind": "LE CYBERGRIND",
+		"levelName_sandbox": "BOÎTE À SABLE",
         
 		"levelName_preludeFirst": "DU MAUVAIS AU PIRE",
 		"levelName_preludeSecond": "L'ABBATOIR",
@@ -809,10 +812,9 @@
 
 		"levelName_primeFirst": "L'ÂME SURVIVANTE",
 		"levelName_primeSecond": "?",
-		"levelName_primeThird": "?",
+		"levelName_primeThird": "?"
 
-		"levelName_cybergrind": "LE CYBERGRIND",
-		"levelName_sandbox": "BOÎTE À SABLE"
+
 	},
 	"levelChallenges": {
 		"challenges_preludeFirst": "ÉLIMINE 5 ENNEMIS AVEC UNE PANNEAU VITRÉ",

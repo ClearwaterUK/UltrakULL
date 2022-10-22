@@ -789,6 +789,9 @@
 	},
 	"levelNames": {
         "levelName_mainMenu": "",
+		"levelName_cybergrind": "",
+		"levelName_sandbox": "",
+        "levelName_tutorial": "",
         
 		"levelName_preludeFirst": "",
 		"levelName_preludeSecond": "",
@@ -829,10 +832,8 @@
 
 		"levelName_primeFirst": "",
 		"levelName_primeSecond": "",
-		"levelName_primeThird": "",
+		"levelName_primeThird": ""
 
-		"levelName_cybergrind": "",
-		"levelName_sandbox": ""
 	},
 	"levelChallenges":{
 		"challenges_preludeFirst": "",

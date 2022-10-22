@@ -2,6 +2,7 @@
 
 ADDED:
 misc: weapons_underConstruction
+levelNames: levelName_tutorial
 
 
 CHANGED:

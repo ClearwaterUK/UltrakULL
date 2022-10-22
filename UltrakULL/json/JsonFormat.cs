@@ -1252,6 +1252,7 @@ namespace UltrakULL.json
         public string levelName_mainMenu;
         public string levelName_cybergrind;
         public string levelName_sandbox;
+        public string levelName_tutorial;
 
         public string levelName_preludeFirst;
         public string levelName_preludeSecond;
