@@ -2,6 +2,7 @@
 
 - Added a string for the tutorial before 0-1 for the Discord Rich Presence.
 - Added the "under construction" string for weapons not yet available in the game.
+- Added the Soul Orbs string for weapon preset selection, when not enough Soul Orbs have been collected to unlock a preset.
 - Fixed a standing issue with previous patched code causing saves to not be deleted correctly.
 - Fixed P-2 and P-3 using P-1's name in the level select.
 
@@ -9,6 +10,7 @@
 
 misc: weapons_underConstruction
 levelNames: levelName_tutorial
+shop: shop_soulOrbs
 
 
 0.8.2 EMERGENCY FIX

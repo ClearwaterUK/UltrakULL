@@ -40,6 +40,28 @@ namespace UltrakULL
         public static StatsManager cachedStatsManager;
         public static bool cachedStatsReady;
 
+
+        //@Override
+        //Overrides OnEnable from the GunColorTypeGetter class. Used for the Soul Orb checker.
+
+        public static void OnEnablePostFix_MyPatch(GunColorTypeGetter __instance)
+        {
+            for (int i = 1; i < 5; i++)
+            {
+                bool flag = GameProgressSaver.GetTotalSecretsFound() >= GunColorController.requiredSecrets[i];
+                if(!flag)
+                { 
+                    __instance.templateTexts[i].text = string.Concat(new object[]
+                    {
+                        language.currentLanguage.shop.shop_soulOrbs + ": ",
+                        GameProgressSaver.GetTotalSecretsFound(),
+                        " / ",
+                        GunColorController.requiredSecrets[i]
+                    });
+                }
+            }
+        }
+
         //@Override
         //Overrides ScanBook from the ScanningStuff class. Used to translate books found in some levels.
         public static bool ScanBook_MyPatch(string text, bool noScan, int instanceId, ScanningStuff __instance, Text ___readingText, int ___currentBookId, GameObject ___scanningPanel, GameObject ___readingPanel, bool ___scanning)

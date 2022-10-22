@@ -40,6 +40,7 @@ using UltrakULL.json;
  *  - Organise and refactor stuff, move functions to other files to declutter Main (Simplify getGameObjectChild and getTextFromgameObject in each file, take itfrom CommonFunctions) (Factorise the act classes with an interface?)
  *  - Look into how I can do encoding for RTL languages such as Arabic
  *  - Port main class so it becomes a native UMM mod instead of BepInEx. With the way its structured, could be able to move config/lang files to same folder.
+ *  - Green Rocketlauncher incoming
  *  
  *  BUGS AND QUIRKS TO FIX:
  * - Reexamine the intro text. See if I can get input working again, as well as shorten the 3 dots time based on the Act 2 update original code
@@ -48,7 +49,6 @@ using UltrakULL.json;
  * - Discord RPC: Style meter in CG
  * - Could be possible to swap out rank textures in HUD for translation. Shall look into later
  * - Move the loaded language class to a seperate class. Would make it easier to access instead of doing currentLanguage.language.etc...
- * - Discord RPC currently seems to be broken on my end as a whole, meaning I can't test Discord RPC in the mod on my end (keeps throwing InternalError. People that have tested seems to be working fine but can't check on my end for myself)
  * - Attempt to replace the default font with a version that has better special char + cyrillic support
  * - Blue hex color used in the intro is semi-broken. Replaced it with a default color that works for now
  * 
@@ -62,6 +62,9 @@ using UltrakULL.json;
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * 
  * Options->Sandbox icons names
+ * - 2-S arrow bugs, act 2 intermissions
+ * - CG score fucked up?
+ * - Coins to points transition at end of 4-S
  * */
 
 namespace UltrakULL
@@ -480,6 +483,11 @@ namespace UltrakULL
             MethodInfo originalScanBook = typeof(ScanningStuff).GetMethod("ScanBook", new Type[]{typeof(string), typeof(bool), typeof(int)});
             MethodInfo patchedScanBook = AccessTools.Method(typeof(PatchedFunctions), "ScanBook_MyPatch");
             harmony.Patch(originalScanBook, new HarmonyMethod(patchedScanBook));
+
+            Logger.LogInfo("GunTypeColorGetter->OnEnable (Postfix)");
+            MethodInfo originalGunTypeColorGetterOnEnable = typeof(GunColorTypeGetter).GetMethod("OnEnable", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
+            MethodInfo patchedGunTypeColorGetterOnEnable = AccessTools.Method(typeof(PatchedFunctions), "OnEnablePostFix_MyPatch");
+            harmony.Patch(originalGunTypeColorGetterOnEnable, null,new HarmonyMethod(patchedGunTypeColorGetterOnEnable));
 
             Logger.LogInfo("Done");
         }

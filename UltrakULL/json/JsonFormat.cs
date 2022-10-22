@@ -1073,6 +1073,7 @@ namespace UltrakULL.json
         public string shop_cybergrind;
         public string shop_returnToMission;
         public string shop_sandbox;
+        public string shop_soulOrbs;
 
         public string shop_cybergrindDescription1;
         public string shop_cybergrindDescription2;

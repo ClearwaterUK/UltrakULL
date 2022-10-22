@@ -3,6 +3,7 @@
 ADDED:
 misc: weapons_underConstruction
 levelNames: levelName_tutorial
+shop: shop_soulOrbs
 
 
 CHANGED:
