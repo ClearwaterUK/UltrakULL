@@ -6,13 +6,13 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-    class PreludeStrings : MonoBehaviour
+    public static class PreludeStrings
     {
 
-        BepInEx.Logging.ManualLogSource preludeStringsLogger = BepInEx.Logging.Logger.CreateLogSource("PreludeStrings");
+        private static BepInEx.Logging.ManualLogSource preludeStringsLogger = BepInEx.Logging.Logger.CreateLogSource("PreludeStrings");
 
         //0-1 - Into The Fire
-        public string level1(string message, string message2, string input, JsonParser language)
+        public static string level1(string message, string message2, string input, JsonParser language)
         {
             string fullMessage = message + message2;
             preludeStringsLogger.LogInfo(fullMessage);
@@ -37,7 +37,7 @@ namespace UltrakULL
             return "unimplemented 0-1 string";
         }
         //0-2 - The Meatgrinder
-        public string level2(string message, string message2, string input, JsonParser language)
+        public static string level2(string message, string message2, string input, JsonParser language)
         {
             string fullMessage = message + message2;
             preludeStringsLogger.LogInfo(fullMessage);
@@ -54,7 +54,7 @@ namespace UltrakULL
         }
 
         //0-3 - Double Down
-        public string level3(string message, string message2, string input, JsonParser language)
+        public static string level3(string message, string message2, string input, JsonParser language)
         {
             string fullMessage = message + message2;
             preludeStringsLogger.LogInfo(fullMessage);
@@ -76,21 +76,21 @@ namespace UltrakULL
 
         //0-4 - A One-Machine Army
         //This level has no HUD box strings, apart from maybe the overheal.
-        public string level4(string message, string message2, string input)
+        public static string level4(string message, string message2, string input)
         {
             return "unimplemented 0-4 string";
         }
 
         //0-5 - Cerberus
         //This level has no HUD box strings
-        public string level5(string message, string message2, string input)
+        public static string level5(string message, string message2, string input)
         {
             return "unimplemented 0-5 string";
         }
 
 
         //0-S - Something Wicked
-        public string levelSecret(string message, string message2, string input, JsonParser language)
+        public static string levelSecret(string message, string message2, string input, JsonParser language)
         {
             string fullMessage = message + message2;
             preludeStringsLogger.LogInfo(fullMessage);
@@ -103,8 +103,7 @@ namespace UltrakULL
         }
 
 
-
-        public string getMessage(string message, string message2, string input,JsonParser language)
+        public static string getMessage(string message, string message2, string input,JsonParser language)
         {
             string currentLevel = SceneManager.GetActiveScene().name;
             string fullMessage = message + message2;
@@ -113,34 +112,34 @@ namespace UltrakULL
             {
                 case "Level 0-1":
                     {
-                        return this.level1(message, message2, input, language);
+                        return level1(message, message2, input, language);
                     }
                 case "Level 0-2":
                     {
-                        return this.level2(message, message2, input, language);
+                        return level2(message, message2, input, language);
                     }
                 case "Level 0-3":
                     {
-                        return this.level3(message, message2, input, language);
+                        return level3(message, message2, input, language);
                     }
                 case "Level 0-4":
                     {
-                        return this.level4(message, message2, input);
+                        return level4(message, message2, input);
                     }
                 case "Level 0-5":
                     {
-                        return this.level5(message, message2, input);
+                        return level5(message, message2, input);
                     }
                 case "Level 0-S":
                     {
-                        return this.levelSecret(message, message2, input, language);
+                        return levelSecret(message, message2, input, language);
                     }
                 default: return "Unimplemented Prelude string";
             }
 
         }
 
-        public string getLevelChallenge(string currentLevel, JsonParser language)
+        public static string getLevelChallenge(string currentLevel, JsonParser language)
         {
 
             switch (currentLevel)
@@ -155,8 +154,7 @@ namespace UltrakULL
             }
         }
 
-
-        public string getLevelName(JsonParser language)
+        public static string getLevelName(JsonParser language)
         {
             string currentLevel = SceneManager.GetActiveScene().name;
 
@@ -171,7 +169,5 @@ namespace UltrakULL
                 default: { return "Unknown level name"; }
             }
         }
-
-
     }
 }

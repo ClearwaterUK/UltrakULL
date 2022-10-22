@@ -26,7 +26,6 @@ namespace UltrakULL
         };
 
 
-
         public static BepInEx.Logging.ManualLogSource modLogger = BepInEx.Logging.Logger.CreateLogSource("modLogger");
 
         public static string previousHudMessage;
@@ -39,7 +38,6 @@ namespace UltrakULL
 
         public static GameObject getInactiveRootObject(string objectName)
         {
-
             List<GameObject> rootList = new List<GameObject>();
             SceneManager.GetActiveScene().GetRootGameObjects(rootList);
             foreach (GameObject child in rootList)
@@ -115,7 +113,7 @@ namespace UltrakULL
         }
 
 
-        public static GameObject getGameObjectChild(GameObject parentObject, string childToFind)
+        public static GameObject getGameObjectChild(GameObject parentObject, string childToFind) // Why does this exist if we're just doing a single function call? 
         {
             GameObject childToReturn = parentObject.transform.Find(childToFind).gameObject;
             return childToReturn;

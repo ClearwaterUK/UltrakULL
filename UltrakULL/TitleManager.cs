@@ -9,13 +9,9 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-    class TitleManager
+    public static class TitleManager
     {
-        public TitleManager()
-        {
-
-        }
-        public string getName(string inputName, JsonParser language)
+        public static string getName(string inputName, JsonParser language)
         {
             //Prelude titles
             if (inputName.Contains("INTO THE FIRE")) { return (language.currentLanguage.levelNames.levelName_preludeFirst); }
@@ -64,7 +60,7 @@ namespace UltrakULL
             return "";
         }
 
-        public string getLayer(string inputTitle, JsonParser language)
+        public static string getLayer(string inputTitle, JsonParser language)
         {
             StringBuilder titleToReturn = new StringBuilder();
 
@@ -148,6 +144,5 @@ namespace UltrakULL
             }
             return titleToReturn.ToString();
         }
-
     }
 }

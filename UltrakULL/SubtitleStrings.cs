@@ -10,12 +10,12 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-    class SubtitleStrings
+    public static class SubtitleStrings
     {
-        BepInEx.Logging.ManualLogSource subtitleStringsLogger = BepInEx.Logging.Logger.CreateLogSource("Subtitle Strings");
+        private static BepInEx.Logging.ManualLogSource subtitleStringsLogger = BepInEx.Logging.Logger.CreateLogSource("Subtitle Strings");
 
         //3-2 Gabriel fight
-        public string gabesubtitles(string input, JsonParser language)
+        public static string gabesubtitles(string input, JsonParser language)
         {
             //Pre-arena lines
             if (input.Contains("Machine"))
@@ -147,7 +147,7 @@ namespace UltrakULL
             return ("Unimplemented Gabe fight string");
         }
 
-        public string druidsubtitles(string input,JsonParser language)
+        public static string druidsubtitles(string input,JsonParser language)
         {
             string mandaColor = "<color=#FFC49E>";
             string owlColor = "<color=#9EE6FF>";
@@ -234,7 +234,7 @@ namespace UltrakULL
             return "Unimplemented Druid fight string";
         }
 
-        public string minossubtitles(string input, JsonParser language)
+        public static string minossubtitles(string input, JsonParser language)
         {
             //Intro
             if (input.Contains("Ahh..."))
@@ -331,7 +331,8 @@ namespace UltrakULL
             }
             return "Unimplemented Minos Prime string";
         }
-        public string gabeBoatSubtitles(string input,JsonParser language)
+        
+        public static string gabeBoatSubtitles(string input,JsonParser language)
         {
             //Intro
             if (input.Contains("Be not afraid"))
@@ -357,7 +358,7 @@ namespace UltrakULL
             return "Unimplemented 5-3 subtitle";
         }
 
-        public string gabeSecondSubtitles(string input,JsonParser language)
+        public static string gabeSecondSubtitles(string input,JsonParser language)
         {
 
             if (input.Contains("Machine"))
@@ -380,7 +381,7 @@ namespace UltrakULL
             return "Unimplemented 6-1 subtitle";
         }
 
-        public string gabeSecondBossSubtitles(string input,JsonParser language)
+        public static string gabeSecondBossSubtitles(string input,JsonParser language)
         {
             //Level intro
             if (input.Contains("Limbo"))
@@ -583,7 +584,7 @@ namespace UltrakULL
             return "Unimplemented 6-2 subtitle";
         }
 
-        public string getSubtitle(string input,JsonParser language)
+        public static string getSubtitle(string input,JsonParser language)
         {
             string currentLevel = SceneManager.GetActiveScene().name;
             //3-2
@@ -618,11 +619,6 @@ namespace UltrakULL
                 return minossubtitles(input, language);
             }
             return "Uninplemented subtitle string";
-        }
-
-        public SubtitleStrings()
-        {
-
         }
     }
 }

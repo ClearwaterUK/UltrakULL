@@ -7,9 +7,9 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-    class EnemyBios
+    public static class EnemyBios
     {
-        public string getName(string originalName,JsonParser language)
+        public static string getName(string originalName,JsonParser language)
         {
             switch (originalName)
             {
@@ -43,7 +43,7 @@ namespace UltrakULL
             }
         }
 
-        public string getType(string originaltype,JsonParser language)
+        public static string getType(string originaltype,JsonParser language)
         {
             switch (originaltype)
             {
@@ -69,7 +69,7 @@ namespace UltrakULL
             }
         }
 
-        public string getDescription(string originalenemy,JsonParser language)
+        public static string getDescription(string originalenemy,JsonParser language)
         { 
             switch(originalenemy)
             {
@@ -301,7 +301,7 @@ namespace UltrakULL
             }
         }
 
-        public string getStrategy(string originalenemy,JsonParser language)
+        public static string getStrategy(string originalenemy,JsonParser language)
         {
             switch (originalenemy)
             {
@@ -505,11 +505,5 @@ namespace UltrakULL
                 default: { return "UNKNOWN"; }
             }
         }
-        public EnemyBios()
-        {
-            ;
-        }
-
-
     }
 }

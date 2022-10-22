@@ -14,9 +14,9 @@ using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
 {
-    class Shop
+    public static class Shop
     {
-        public void patchShopFrontEnd(ref GameObject coreGame, JsonParser language)
+        public static void patchShopFrontEnd(ref GameObject coreGame, JsonParser language)
         {
             Console.WriteLine("Starting patchShop");
 
@@ -45,8 +45,7 @@ namespace UltrakULL
             tipTitle.text = language.currentLanguage.shop.shop_tipofthedayTitle;
 
             Text tipDescription = getTextfromGameObject(getGameObjectChild(tipPanel, "TipText"));
-            StringsParent levelTipStrings = new StringsParent();
-            tipDescription.text = levelTipStrings.getLevelTip(language);
+            tipDescription.text = StringsParent.getLevelTip(language);
 
 
             //Weapons button
@@ -148,8 +147,7 @@ namespace UltrakULL
 
         }
 
-
-        public void patchWeapons(ref GameObject coreGame, JsonParser language)
+        public static void patchWeapons(ref GameObject coreGame, JsonParser language)
         {
             GameObject shopWeaponsObject;
             if (SceneManager.GetActiveScene().name == "uk_construct")
@@ -830,15 +828,10 @@ namespace UltrakULL
 
         }
 
-
-        public Shop(ref GameObject level, JsonParser language)
+        public static void PatchShop(ref GameObject level, JsonParser language)
         {
-
-            this.patchShopFrontEnd(ref level,language);
-            this.patchWeapons(ref level,language);
-
+            patchShopFrontEnd(ref level, language);
+            patchWeapons(ref level, language);
         }
-
-
     }
 }

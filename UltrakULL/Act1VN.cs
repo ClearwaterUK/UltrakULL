@@ -16,7 +16,7 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-    static class Act1VN
+    public static class Act1VN
     {
         //Import symbols to use
         //▼ - Denotes pause
@@ -231,7 +231,6 @@ namespace UltrakULL
 
 
         }
-
 
         public static string getNextString(string inputString, JsonParser language)
         {

@@ -130,8 +130,7 @@ namespace UltrakULL
             int num = __instance.levelNumber;
             RankData rank = GameProgressSaver.GetRank(num, false);
 
-            LevelNames ln = new LevelNames();
-            __instance.transform.Find("Name").GetComponent<Text>().text = ln.getLevelName(num, language); //Level Name
+            __instance.transform.Find("Name").GetComponent<Text>().text = LevelNames.getLevelName(num, language); //Level Name
 
             if (rank.levelNumber == __instance.levelNumber || (__instance.levelNumber == 666 && rank.levelNumber == __instance.levelNumber + __instance.levelNumberInLayer - 1))
             {
@@ -160,13 +159,11 @@ namespace UltrakULL
         //By extension, showLayer and showName also need to be patched in here, as they're originally private functions.
         public static bool NameAppear_MyPatch(LevelNamePopup __instance, bool ___activated, AudioSource ___aud, string ___layerString, string ___nameString, bool ___fadingOut, Text[] ___layerText, Text[] ___nameText)
         {
-            TitleManager titleManager = new TitleManager();
-
             //Layer string is composed of layer name - level *number*.
             //Example: PRELUDE /// FIRST, LUST /// SECOND, etc
-            ___layerString = titleManager.getLayer(___layerString,language);
+            ___layerString = TitleManager.getLayer(___layerString,language);
 
-            ___nameString = titleManager.getName(___nameString,language);
+            ___nameString = TitleManager.getName(___nameString,language);
 
             if (!___activated)
             {
@@ -552,14 +549,13 @@ namespace UltrakULL
             //One for messages that displays KeyCode inputs (for controls), and one that doesn't.
 
             //Get the string table based on the area of the game we're currently in.
-            StringsParent lvlStrings = new StringsParent();
 
             ___activated = true;
             ___messageHud = MonoSingleton<HudMessageReceiver>.Instance;
             ___text = ___messageHud.text;
             if (__instance.input == "")
             {
-                string newMessage = lvlStrings.getMessage(__instance.message, __instance.message2, "", language);
+                string newMessage = StringsParent.getMessage(__instance.message, __instance.message2, "", language);
 
                 ___text.text = newMessage;
             }
@@ -588,7 +584,7 @@ namespace UltrakULL
                 Console.Write("Input message: " + __instance.message + controlButton + __instance.message2);
 
                 //Compare the start of the first message with the string table.
-                __instance.message = lvlStrings.getMessage(__instance.message, __instance.message2, controlButton.ToString(), language);
+                __instance.message = StringsParent.getMessage(__instance.message, __instance.message2, controlButton.ToString(), language);
 
                 ___text.text = __instance.message;
             }
@@ -784,8 +780,7 @@ namespace UltrakULL
         //Overrides the CreateBossBar method from the BossBarManager class. This is needed to swap in the translated boss names on their health bars.
         public static bool CreateBossBar_MyPatch(string bossName, BossBarManager.HealthLayer[] healthLayers, ref BossHealthBarTemplate createdBossBar, ref Slider[] hpSliders, ref Slider[] hpAfterImages, ref GameObject bossBar, BossBarManager __instance, BossHealthBarTemplate ___template, BossBarManager.SliderLayer[] ___layers)
         {
-            BossStrings bossNames = new BossStrings();
-            bossName = bossNames.getBossName(bossName,language);
+            bossName = BossStrings.getBossName(bossName,language);
 
             Debug.Log("Creating boss bar for " + bossName);
             List<Slider> list = new List<Slider>();
@@ -977,14 +972,13 @@ namespace UltrakULL
 
         public static bool GetLocalizedName_MyPatch(string id, StyleHUD __instance, Dictionary<string,string> ___idNameDict, ref string __result)
         {
-            StyleBonusStrings bonusStrings = new StyleBonusStrings();
             
             if (___idNameDict.ContainsKey(id))
             {
-                __result = bonusStrings.getStyleBonusDictionary(id,language);
+                __result = StyleBonusStrings.getStyleBonusDictionary(id,language);
                 return false;
             }
-            __result = bonusStrings.getTranslatedStyleBonus(id,language);
+            __result = StyleBonusStrings.getTranslatedStyleBonus(id,language);
             return false;
         }
 
@@ -1120,13 +1114,12 @@ namespace UltrakULL
 
         public static bool DisplaySubtitle_MyPatch(SubtitleController __instance, Subtitle ___subtitleLine, Transform ___container, Subtitle ___previousSubtitle, string caption, AudioSource audioSource = null)
         {
-            SubtitleStrings subtitleStrings = new SubtitleStrings();
             if (!__instance.subtitlesEnabled)
             {
                 return false;
             }
             Subtitle subtitle = UnityEngine.Object.Instantiate<Subtitle>(___subtitleLine, ___container, true);
-            subtitle.GetComponentInChildren<Text>().text = subtitleStrings.getSubtitle(caption,language);
+            subtitle.GetComponentInChildren<Text>().text = SubtitleStrings.getSubtitle(caption,language);
             if (audioSource != null)
             {
                 subtitle.distanceCheckObject = audioSource;
@@ -1184,12 +1177,11 @@ namespace UltrakULL
                     {
                         ___currentSpawnable = spawnableObject;
                         //Nest the original private DisplayInfo in here.
-                        EnemyBios enemyBios = new EnemyBios();
 
-                        string enemyName = enemyBios.getName(spawnableObject.objectName,language);
-                        string enemyType = enemyBios.getType(spawnableObject.type,language);
-                        string enemyDescription = enemyBios.getDescription(spawnableObject.objectName,language);
-                        string enemyStrategy = enemyBios.getStrategy(spawnableObject.objectName,language);
+                        string enemyName = EnemyBios.getName(spawnableObject.objectName,language);
+                        string enemyType = EnemyBios.getType(spawnableObject.type,language);
+                        string enemyDescription = EnemyBios.getDescription(spawnableObject.objectName,language);
+                        string enemyStrategy = EnemyBios.getStrategy(spawnableObject.objectName,language);
 
                         ___enemyPageTitle.text = enemyName;
                         string text = "<color=orange>" + language.currentLanguage.enemyBios.enemyBios_type + ": " + enemyType + "\n\n" + language.currentLanguage.enemyBios.enemyBios_data + "</color>\n";
@@ -1270,9 +1262,8 @@ namespace UltrakULL
                 return language.currentLanguage.options.save_slotEmpty;
             }
 
-            LevelNames levelStrings = new LevelNames();
 
-            return levelStrings.getLevelName(highestLvlNumber, language) + " " + ((highestLvlNumber <= 0) ? string.Empty : ("(" + MonoSingleton<PresenceController>.Instance.diffNames[highestDifficulty] + ")"));
+            return LevelNames.getLevelName(highestLvlNumber, language) + " " + ((highestLvlNumber <= 0) ? string.Empty : ("(" + MonoSingleton<PresenceController>.Instance.diffNames[highestDifficulty] + ")"));
         }
 
         //@Override

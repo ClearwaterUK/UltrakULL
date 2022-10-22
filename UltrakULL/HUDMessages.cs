@@ -9,9 +9,8 @@ using UnityEngine.SceneManagement;
 
 namespace UltrakULL
 {
-    class HUDMessages
+    public static class HUDMessages
     {
-
         public static string getHUDToolTip(string message, JsonParser language)
         {
             Console.WriteLine(message);
@@ -61,8 +60,6 @@ namespace UltrakULL
 
             Console.WriteLine(message);
             return ("Unimplemented HUD string, check the console");
-
-
         }
     }
 }

@@ -13,12 +13,12 @@ using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
 {
-    class Act1Strings : MonoBehaviour
+    public static class Act1Strings
     {
-        BepInEx.Logging.ManualLogSource a1StringsLogger = BepInEx.Logging.Logger.CreateLogSource("Act 1 Strings");
+        private static BepInEx.Logging.ManualLogSource a1StringsLogger = BepInEx.Logging.Logger.CreateLogSource("Act 1 Strings");
 
         //1-1 - Heart Of The Sunrise
-        public string level11(string message, string message2, string input,JsonParser language)
+        public static string level11(string message, string message2, string input,JsonParser language)
         {
             string fullMessage = message + message2;
             a1StringsLogger.LogInfo(fullMessage);
@@ -37,7 +37,7 @@ namespace UltrakULL
             return previousHudMessage;
         }
         //1-2 - The Burning World
-        public string level12(string message, string message2, string input,JsonParser language)
+        public static string level12(string message, string message2, string input,JsonParser language)
         {
             string fullMessage = message + message2;
             a1StringsLogger.LogInfo(fullMessage);
@@ -48,7 +48,7 @@ namespace UltrakULL
             return "Unknown 1-2 string";
         }
         //1-3 - Hall Of Sacred Remains
-        public string level13(string message, string message2, string input, JsonParser language)
+        public static string level13(string message, string message2, string input, JsonParser language)
         {
             string fullMessage = message + message2;
             a1StringsLogger.LogInfo(fullMessage);
@@ -59,7 +59,7 @@ namespace UltrakULL
             return "Unknown 1-3 string";
         }
             //1-4 - Clair De Lune
-            public string level14(string message, string message2, string input, JsonParser language)
+            public static string level14(string message, string message2, string input, JsonParser language)
             {
             string fullMessage = message + message2;
             a1StringsLogger.LogInfo(fullMessage);
@@ -84,12 +84,12 @@ namespace UltrakULL
         }
         //1-S - The Witless
         //This level has no HUD box strings.
-        public string level1Secret(string message, string message2, string input)
+        public static string level1Secret(string message, string message2, string input)
         {
             return "Unknown 1-S string";
         }
         //2-1 - Bridgeburner
-        public string level21(string message, string message2, string input, JsonParser language)
+        public static string level21(string message, string message2, string input, JsonParser language)
         {
             string fullMessage = message + message2;
             a1StringsLogger.LogInfo(fullMessage);
@@ -105,7 +105,7 @@ namespace UltrakULL
             return "Unknown 2-1 string";
         }
         //2-2 - Death at 20,000 Volts
-        public string level22(string message, string message2, string input, JsonParser language)
+        public static string level22(string message, string message2, string input, JsonParser language)
         {
             string fullMessage = message + message2;
             a1StringsLogger.LogInfo(fullMessage);
@@ -121,7 +121,7 @@ namespace UltrakULL
             return ("Unknown 2-2 string");
         }
         //2-3 - Sheer Heart Attack
-        public string level23(string message, string message2, string input, JsonParser language)
+        public static string level23(string message, string message2, string input, JsonParser language)
         {
             string fullMessage = message + message2;
             a1StringsLogger.LogInfo(fullMessage);
@@ -133,30 +133,30 @@ namespace UltrakULL
         }
         //2-4 - Court Of The Corpse King
         //This level has no HUD box strings.
-        public string level24(string message, string message2, string input)
+        public static string level24(string message, string message2, string input)
         {
             return "Unknown 2-4 string";
         }
         //2-S
-        public string level2Secret(string message, string message2, string input)
+        public static string level2Secret(string message, string message2, string input)
         {
             return "Unknown 2-S string";
         }
         //3-1 - Belly Of The Beast
         //This level has no HUD box strings.
-        public string level31(string message, string message2, string input)
+        public static string level31(string message, string message2, string input)
         {
             return "Unknown 3-1 string";
         }
         //3-2 - In The Flesh
         //This level has no HUD box strings.
-        public string level32(string message, string message2, string input)
+        public static string level32(string message, string message2, string input)
         {
             return "Unknown 3-2 string";
         }
 
 
-        public string getMessage(string message, string message2, string input, JsonParser language)
+        public static string getMessage(string message, string message2, string input, JsonParser language)
         {
             string currentLevel = SceneManager.GetActiveScene().name;
             string fullMessage = message + message2;
@@ -175,57 +175,57 @@ namespace UltrakULL
             {
                 case "Level 1-1":
                     {
-                        return this.level11(message, message2, input, language);
+                        return level11(message, message2, input, language);
                     }
                 case "Level 1-2":
                     {
-                        return this.level12(message, message2, input, language);
+                        return level12(message, message2, input, language);
                     }
                 case "Level 1-3":
                     {
-                        return this.level13(message, message2, input, language);
+                        return level13(message, message2, input, language);
                     }
                 case "Level 1-4":
                     {
-                        return this.level14(message, message2, input, language);
+                        return level14(message, message2, input, language);
                     }
                 case "Level 1-S":
                     {
-                        return this.level1Secret(message, message2, input);
+                        return level1Secret(message, message2, input);
                     }
                 case "Level 2-1":
                     {
-                        return this.level21(message, message2, input,language);
+                        return level21(message, message2, input,language);
                     }
                 case "Level 2-2":
                     {
-                        return this.level22(message, message2, input, language);
+                        return level22(message, message2, input, language);
                     }
                 case "Level 2-3":
                     {
-                        return this.level23(message, message2, input,language);
+                        return level23(message, message2, input,language);
                     }
                 case "Level 2-4":
                     {
-                        return this.level24(message, message2, input);
+                        return level24(message, message2, input);
                     }
                 case "Level 2-S":
                     {
-                        return this.level2Secret(message, message2, input);
+                        return level2Secret(message, message2, input);
                     }
                 case "Level 3-1":
                     {
-                        return this.level31(message, message2, input);
+                        return level31(message, message2, input);
                     }
                 case "Level 3-2":
                     {
-                        return this.level32(message, message2, input);
+                        return level32(message, message2, input);
                     }
                 default: return "Unimplemented Act 1 string";
             }
         }
 
-        public string getLevelChallenge(string currentLevel, JsonParser language)
+        public static string getLevelChallenge(string currentLevel, JsonParser language)
         {
             switch (currentLevel)
             {
@@ -246,7 +246,7 @@ namespace UltrakULL
             }
         }
 
-        public string getLevelName(JsonParser language)
+        public static string getLevelName(JsonParser language)
         {
             string currentLevel = SceneManager.GetActiveScene().name;
 

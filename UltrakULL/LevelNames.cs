@@ -15,7 +15,7 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-	class LevelNames
+	public static class LevelNames
 	{
 
 		public static string getDiscordLevelName(string missionName, JsonParser language)
@@ -66,7 +66,7 @@ namespace UltrakULL
 			return ("Unknown level - " + missionName);
         }
 
-        public string getLevelName(int missionNum, JsonParser language)
+        public static string getLevelName(int missionNum, JsonParser language)
         {
 			
 			if (MonoSingleton<MapLoader>.Instance && MonoSingleton<MapLoader>.Instance.isCustomLoaded)
@@ -143,12 +143,5 @@ namespace UltrakULL
 					}
 			}
 		}
-
-        public LevelNames()
-        {
-
-        }
-
-
     }
 }

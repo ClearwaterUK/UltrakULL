@@ -48,9 +48,8 @@ namespace UltrakULL
             }
 
             preludeLogger.LogInfo("Patching results screen...");
-            PreludeStrings preludeChallengeStrings = new PreludeStrings();
-            string levelName = preludeChallengeStrings.getLevelName(language);
-            string levelChallenge = preludeChallengeStrings.getLevelChallenge(currentLevel, language);
+            string levelName = PreludeStrings.getLevelName(language);
+            string levelChallenge = PreludeStrings.getLevelChallenge(currentLevel, language);
 
             patchResultsScreen(levelName,levelChallenge,language);
 

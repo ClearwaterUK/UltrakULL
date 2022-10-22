@@ -7,7 +7,7 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-    class Intermission
+    public class Intermission
     {
         public void act1Int(ref GameObject level, JsonParser language, GameObject intermissionObject)
         {
@@ -54,9 +54,7 @@ namespace UltrakULL
                 earlyAccessQuitToMenu.text = language.currentLanguage.intermission.act1_intermission_returnToMenu;
 
             }
-
         }
-
 
         public Intermission(ref GameObject level, JsonParser language)
         {
@@ -67,16 +65,12 @@ namespace UltrakULL
 
             string levelName = SceneManager.GetActiveScene().name;
 
-            switch(levelName)
+            switch (levelName)
             {
                 case "Intermission1": { act1Int(ref level,language,intermissionObject);  break; }
                 case "Intermission2": { act2Int(ref level, language, intermissionObject);  break; }
                 default: { break; }
             }
-
-
         }
-
-
     }
 }

@@ -17,7 +17,6 @@ namespace UltrakULL
     {
         public GameObject optionsMenu;
 
-
         public void patchGeneralOptions(GameObject generalOptions, JsonParser language)
         {
             //General options

@@ -7,9 +7,9 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-    class BossStrings
+    public static class BossStrings
     {
-        public string getBossName(string originalBossName,JsonParser language)
+        public static string getBossName(string originalBossName,JsonParser language)
         {
             switch (originalBossName)
             {
@@ -53,10 +53,6 @@ namespace UltrakULL
 
                 default: { Console.WriteLine(originalBossName); return ("UNKNOWN BOSS NAME"); }
             }
-        }
-        public BossStrings()
-        {
-
         }
     }
 }

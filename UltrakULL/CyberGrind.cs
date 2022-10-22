@@ -14,9 +14,9 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-    class CyberGrind
+    public static class CyberGrind
     {
-        public void patchWaveBoard(JsonParser language)
+        private static void patchWaveBoard(JsonParser language)
         {
             //Get the object containing all the wave board strings.
             //If there's a better way of doing this someone let me know
@@ -46,7 +46,7 @@ namespace UltrakULL
 
         }
 
-        public void patchResults(GameObject level, JsonParser language)
+        private static void patchResults(GameObject level, JsonParser language)
         {
             level = GameObject.Find("Player");
 
@@ -125,7 +125,7 @@ namespace UltrakULL
 
         }
 
-        public void patchTerminal(GameObject level,JsonParser language)
+        private static void patchTerminal(GameObject level,JsonParser language)
         {
             level = GameObject.Find("FirstRoom");
             GameObject cgTerminal = getGameObjectChild(getGameObjectChild(getGameObjectChild(level, "Room"),"CyberGrindSettings"),"Canvas");
@@ -241,13 +241,13 @@ namespace UltrakULL
                 language.currentLanguage.cyberGrind.cybergrind_wavesDescription2;
             cgTerminalWavesText.fontSize = 16;
         }
-        public CyberGrind(ref GameObject level,JsonParser language)
+        public static void PatchCG(ref GameObject level,JsonParser language)
         {
             var cgLogger = BepInEx.Logging.Logger.CreateLogSource("CGPatcher");
             cgLogger.LogInfo("Now entering CyberGrind class.");
-            this.patchWaveBoard(language);
-            this.patchResults(level, language);
-            this.patchTerminal(level, language);
+            patchWaveBoard(language);
+            patchResults(level, language);
+            patchTerminal(level, language);
         }
 
     }

@@ -9,9 +9,9 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-    class StyleBonusStrings
+    public static class StyleBonusStrings
     {
-        public string getBonusColor(string inputBonus)
+        public static string getBonusColor(string inputBonus)
         {
             if (inputBonus.Contains("blue")) { return "<color=blue>"; }
             if (inputBonus.Contains("green")) { return "<color=green>"; }
@@ -24,7 +24,7 @@ namespace UltrakULL
             return ("");
         }
 
-        public string getStyleBonusDictionary(string inputBonus,JsonParser language)
+        public static string getStyleBonusDictionary(string inputBonus,JsonParser language)
         {
 
             string regexinput = Regex.Replace(inputBonus, @"<[^>]*>", "");
@@ -80,7 +80,7 @@ namespace UltrakULL
             }
         }
 
-        public string getStyleBonus(bool isColor, string inputBonus,JsonParser language)
+        public static string getStyleBonus(bool isColor, string inputBonus,JsonParser language)
         {
 
             string regexinput = Regex.Replace(inputBonus, @"<[^>]*>", "");
@@ -119,7 +119,7 @@ namespace UltrakULL
             }
         }
 
-        public string getTranslatedStyleBonus(string inputBonus,JsonParser language)
+        public static string getTranslatedStyleBonus(string inputBonus,JsonParser language)
         {
             //Bonus string is split up into 3 parts: the opening color tag if there is one, the bonus name, and the closing color tag if there is one.
 
@@ -127,11 +127,11 @@ namespace UltrakULL
             bool hasColorTag = (inputBonus.Contains("<color="));
             string openingColorTag;
             string closingColorTag = "</color>";
-            string styleBonus = this.getStyleBonus(hasColorTag, inputBonus,language);
+            string styleBonus = getStyleBonus(hasColorTag, inputBonus,language);
 
             if (hasColorTag)
             {
-                openingColorTag = this.getBonusColor(inputBonus);
+                openingColorTag = getBonusColor(inputBonus);
                 return (openingColorTag + styleBonus + closingColorTag);
             }
             else
@@ -152,11 +152,5 @@ namespace UltrakULL
                 default: { return "Unknown state"; }
             }
         }
-
-        public StyleBonusStrings()
-        {
-
-        }
-
     }
 }

@@ -167,9 +167,6 @@ namespace UltrakULL
                 language.currentLanguage.intermission.act2_intermission_sixth1
                 + " ▼\n\n" + language.currentLanguage.intermission.act2_intermission_sixth2 + " ▼" + language.currentLanguage.intermission.act2_intermission_sixth3
                 + " ▼";
-
         }
-        
-
     }
 }

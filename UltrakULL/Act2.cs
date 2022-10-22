@@ -13,12 +13,11 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-    class Act2
+    public static class Act2
     {
-        public GameObject baseLevelObject;
-        BepInEx.Logging.ManualLogSource a2Logger = BepInEx.Logging.Logger.CreateLogSource("Act2Patcher");
+        private static BepInEx.Logging.ManualLogSource a2Logger = BepInEx.Logging.Logger.CreateLogSource("Act2Patcher");
 
-        public Act2(ref GameObject level, JsonParser language)
+        public static void PatchAct2(ref GameObject level, JsonParser language)
         {
             a2Logger.LogInfo("Now entering Act 2 class.");
 
@@ -47,14 +46,13 @@ namespace UltrakULL
             Text hellmapHeresy = getTextfromGameObject(getGameObjectChild(hellMapObject, "Text (2)"));
             hellmapHeresy.text = language.currentLanguage.misc.hellmap_heresy;
 
-            this.baseLevelObject = level;
+            // this.baseLevelObject = level; // This hasn't been used yet so it's commented out
             string currentLevel = SceneManager.GetActiveScene().name;
 
 
             a2Logger.LogInfo("Patching results screen...");
-            Act2Strings a2ChallengeStrings = new Act2Strings();
-            string levelName = a2ChallengeStrings.getLevelName(language);
-            string levelChallenge = a2ChallengeStrings.getLevelChallenge(currentLevel, language);
+            string levelName = Act2Strings.getLevelName(language);
+            string levelChallenge = Act2Strings.getLevelChallenge(currentLevel, language);
             patchResultsScreen(levelName, levelChallenge, language);
 
         }

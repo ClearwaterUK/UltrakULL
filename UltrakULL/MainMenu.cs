@@ -241,8 +241,6 @@ namespace UltrakULL
 
         public void patchLevelSelectPrelude(GameObject frontEnd, JsonParser language)
         {
-            PreludeStrings challengeStrings = new PreludeStrings();
-
             GameObject lsPreludeObject = getGameObjectChild(frontEnd, "Level Select (Prelude)");
             GameObject preludeObject = getGameObjectChild(lsPreludeObject, "Overture");
 
@@ -255,29 +253,29 @@ namespace UltrakULL
             GameObject firstObject = getGameObjectChild(preludeObject, "0-1 Panel");
 
             Text firstChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(firstObject, "Stats"), "Challenge"), "Panel"), "Text"));
-            firstChallenge.text = challengeStrings.getLevelChallenge("Level 0-1", language);
+            firstChallenge.text = PreludeStrings.getLevelChallenge("Level 0-1", language);
 
             //0-2 challenge
 
             GameObject secondObject = getGameObjectChild(preludeObject, "0-2 Panel");
             Text secondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(secondObject, "Stats"), "Challenge"), "Panel (2)"), "Text"));
-            secondChallenge.text = challengeStrings.getLevelChallenge("Level 0-2", language);
+            secondChallenge.text = PreludeStrings.getLevelChallenge("Level 0-2", language);
 
             //0-3 challenge
             GameObject thirdObject = getGameObjectChild(preludeObject, "0-3 Panel");
             Text thirdChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(thirdObject, "Stats"), "Challenge"), "Panel (4)"), "Text"));
-            thirdChallenge.text = challengeStrings.getLevelChallenge("Level 0-3", language);
+            thirdChallenge.text = PreludeStrings.getLevelChallenge("Level 0-3", language);
 
             //0-4 challenge
             GameObject fourthObject = getGameObjectChild(preludeObject, "0-4 Panel");
             Text fourthChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(fourthObject, "Stats"), "Challenge"), "Panel (6)"), "Text"));
-            fourthChallenge.text = challengeStrings.getLevelChallenge("Level 0-4", language);
+            fourthChallenge.text = PreludeStrings.getLevelChallenge("Level 0-4", language);
 
             //0-5 challenge
             GameObject fifthObject = getGameObjectChild(preludeObject, "0-5 Panel");
 
             Text fifthChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(fifthObject, "Stats"), "Challenge"), "Panel (6)"), "Text"));
-            fifthChallenge.text = challengeStrings.getLevelChallenge("Level 0-5", language);
+            fifthChallenge.text = PreludeStrings.getLevelChallenge("Level 0-5", language);
 
             //Secret title
             Text secretText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(preludeObject, "Secret Mission"), "Text").gameObject);
@@ -308,8 +306,6 @@ namespace UltrakULL
             GameObject lustObject = getGameObjectChild(Act1Object, "Layer 2 Lust");
             GameObject gluttonyObject = getGameObjectChild(Act1Object, "Layer 3 Gluttony");
 
-            Act1Strings act1Challenges = new Act1Strings();
-
             //Layer 1 - Limbo
             Text limboTitle = getTextfromGameObject(getGameObjectChild(limboObject, "Text"));
             limboTitle.text = language.currentLanguage.frontend.layer_limbo;
@@ -318,16 +314,16 @@ namespace UltrakULL
             limboSecretMissionText.text = language.currentLanguage.frontend.chapter_secretMission;
 
             Text limboFirstChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(limboObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
-            limboFirstChallenge.text = act1Challenges.getLevelChallenge("Level 1-1",language);
+            limboFirstChallenge.text = Act1Strings.getLevelChallenge("Level 1-1",language);
 
             Text limboSecondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(limboObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
-            limboSecondChallenge.text = act1Challenges.getLevelChallenge("Level 1-2", language);
+            limboSecondChallenge.text = Act1Strings.getLevelChallenge("Level 1-2", language);
 
             Text limboThirdChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(limboObject, "1-3 Panel"), "Stats"), "Challenge"), "Panel (4)"), "Text"));
-            limboThirdChallenge.text = act1Challenges.getLevelChallenge("Level 1-3", language);
+            limboThirdChallenge.text = Act1Strings.getLevelChallenge("Level 1-3", language);
 
             Text limboClimaxChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(limboObject, "1-4 Panel"), "Stats"), "Challenge"), "Panel (6)"), "Text"));
-            limboClimaxChallenge.text = act1Challenges.getLevelChallenge("Level 1-4", language);
+            limboClimaxChallenge.text = Act1Strings.getLevelChallenge("Level 1-4", language);
 
             //Layer 2 - Lust
             Text lustTitle = getTextfromGameObject(getGameObjectChild(lustObject, "Text"));
@@ -337,26 +333,26 @@ namespace UltrakULL
             lustSecretMissionText.text = language.currentLanguage.frontend.chapter_secretMission;
 
             Text lustFirstChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(lustObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
-            lustFirstChallenge.text = act1Challenges.getLevelChallenge("Level 2-1", language);
+            lustFirstChallenge.text = Act1Strings.getLevelChallenge("Level 2-1", language);
 
             Text lustSecondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(lustObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
-            lustSecondChallenge.text = act1Challenges.getLevelChallenge("Level 2-2", language);
+            lustSecondChallenge.text = Act1Strings.getLevelChallenge("Level 2-2", language);
 
             Text lustThirdChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(lustObject, "1-3 Panel"), "Stats"), "Challenge"), "Panel (4)"), "Text"));
-            lustThirdChallenge.text = act1Challenges.getLevelChallenge("Level 2-3", language);
+            lustThirdChallenge.text = Act1Strings.getLevelChallenge("Level 2-3", language);
 
             Text lustClimaxChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(lustObject, "1-4 Panel"), "Stats"), "Challenge"), "Panel (6)"), "Text"));
-            lustClimaxChallenge.text = act1Challenges.getLevelChallenge("Level 2-4", language);
+            lustClimaxChallenge.text = Act1Strings.getLevelChallenge("Level 2-4", language);
 
             //Layer 3 - Gluttony
             Text gluttonyTitle = getTextfromGameObject(getGameObjectChild(gluttonyObject, "Text"));
             gluttonyTitle.text = language.currentLanguage.frontend.layer_gluttony;
 
             Text gluttonyFirstChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(gluttonyObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
-            gluttonyFirstChallenge.text = act1Challenges.getLevelChallenge("Level 3-1", language);
+            gluttonyFirstChallenge.text = Act1Strings.getLevelChallenge("Level 3-1", language);
 
             Text gluttonySecondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(gluttonyObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
-            gluttonySecondChallenge.text = act1Challenges.getLevelChallenge("Level 3-2", language);
+            gluttonySecondChallenge.text = Act1Strings.getLevelChallenge("Level 3-2", language);
 
         }
 
@@ -368,24 +364,22 @@ namespace UltrakULL
             GameObject wrathObject = getGameObjectChild(Act2Object, "Layer 5 Wrath");
             GameObject heresyObject = getGameObjectChild(Act2Object, "Layer 6 Heresy");
 
-            Act2Strings act2Challenges = new Act2Strings();
-
             //Layer 4 - Greed
             Text greedTitle = getTextfromGameObject(getGameObjectChild(greedObject, "Text"));
             greedTitle.text = language.currentLanguage.frontend.layer_greed;
 
 
             Text greedFirstChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(greedObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
-            greedFirstChallenge.text = act2Challenges.getLevelChallenge("Level 4-1", language);
+            greedFirstChallenge.text = Act2Strings.getLevelChallenge("Level 4-1", language);
 
             Text greedSecondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(greedObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
-            greedSecondChallenge.text = act2Challenges.getLevelChallenge("Level 4-2", language);
+            greedSecondChallenge.text = Act2Strings.getLevelChallenge("Level 4-2", language);
 
             Text greedThirdChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(greedObject, "1-3 Panel"), "Stats"), "Challenge"), "Panel (4)"), "Text"));
-            greedThirdChallenge.text = act2Challenges.getLevelChallenge("Level 4-3", language);
+            greedThirdChallenge.text = Act2Strings.getLevelChallenge("Level 4-3", language);
 
             Text greedClimaxChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(greedObject, "1-4 Panel"), "Stats"), "Challenge"), "Panel (6)"), "Text"));
-            greedClimaxChallenge.text = act2Challenges.getLevelChallenge("Level 4-4", language);
+            greedClimaxChallenge.text = Act2Strings.getLevelChallenge("Level 4-4", language);
 
             Text greedSecretMissionText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(greedObject, "Secret Mission"), "Text"));
             greedSecretMissionText.text = language.currentLanguage.frontend.chapter_secretMission;
@@ -395,16 +389,16 @@ namespace UltrakULL
             wrathTitle.text = language.currentLanguage.frontend.layer_wrath;
 
             Text wrathFirstChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(wrathObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
-            wrathFirstChallenge.text = act2Challenges.getLevelChallenge("Level 5-1", language);
+            wrathFirstChallenge.text = Act2Strings.getLevelChallenge("Level 5-1", language);
 
             Text wrathSecondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(wrathObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
-            wrathSecondChallenge.text = act2Challenges.getLevelChallenge("Level 5-2", language);
+            wrathSecondChallenge.text = Act2Strings.getLevelChallenge("Level 5-2", language);
 
             Text wrathThirdChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(wrathObject, "1-3 Panel"), "Stats"), "Challenge"), "Panel (4)"), "Text"));
-            wrathThirdChallenge.text = act2Challenges.getLevelChallenge("Level 5-3", language);
+            wrathThirdChallenge.text = Act2Strings.getLevelChallenge("Level 5-3", language);
 
             Text wrathFourthChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(wrathObject, "1-4 Panel"), "Stats"), "Challenge"), "Panel (6)"), "Text"));
-            wrathFourthChallenge.text = act2Challenges.getLevelChallenge("Level 5-4", language);
+            wrathFourthChallenge.text = Act2Strings.getLevelChallenge("Level 5-4", language);
 
             Text wrathSecretMissionText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(wrathObject, "Secret Mission"), "Text"));
             wrathSecretMissionText.text = language.currentLanguage.frontend.chapter_secretMission;
@@ -414,10 +408,10 @@ namespace UltrakULL
             heresyTitle.text = language.currentLanguage.frontend.layer_heresy;
 
             Text heresyFirstChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(heresyObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
-            heresyFirstChallenge.text = act2Challenges.getLevelChallenge("Level 6-1", language);
+            heresyFirstChallenge.text = Act2Strings.getLevelChallenge("Level 6-1", language);
 
             Text heresySecondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(heresyObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
-            heresySecondChallenge.text = act2Challenges.getLevelChallenge("Level 6-2", language);
+            heresySecondChallenge.text = Act2Strings.getLevelChallenge("Level 6-2", language);
         }
 
         public void patchLevelSelectPrime(GameObject frontEnd, JsonParser jsonParser)

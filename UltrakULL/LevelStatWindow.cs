@@ -13,7 +13,7 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-    public class LevelStatWindow
+    public static class LevelStatWindow
     {
         public static void patchStats(JsonParser language)
         {
@@ -45,12 +45,5 @@ namespace UltrakULL
                 cratesName.text = language.currentLanguage.misc.levelstats_boxes;
             }
         }
-
-        public LevelStatWindow(ref GameObject coreGame,JsonParser language)
-        {
-            patchStats(language);
-        }
-
-
     }
 }

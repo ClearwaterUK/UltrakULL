@@ -166,7 +166,7 @@ namespace UltrakULL
         public void patchCheats(ref GameObject coreGame)
         {
             coreGame = GameObject.Find("Canvas");
-            Cheats cheats = new Cheats(ref coreGame,this.jsonParser) ;
+            Cheats.patchCheatConsentPanel(ref coreGame,this.jsonParser) ;
         }
 
         public void patchDeathScreen(ref GameObject coreGame)
@@ -199,12 +199,12 @@ namespace UltrakULL
         //Encapsulation function to patch the shop.
         public void patchShop(ref GameObject coreGame)
         {
-            Shop patchShop = new Shop(ref coreGame,this.jsonParser);
+            Shop.PatchShop(ref coreGame, this.jsonParser);
         }
         
         public void patchLevelStats(ref GameObject coreGame)
         {
-            LevelStatWindow patchStats = new LevelStatWindow(ref coreGame,this.jsonParser);
+            LevelStatWindow.patchStats(this.jsonParser);
         }
 
         //Encapsulation function to patch all of the front end.
@@ -666,19 +666,19 @@ namespace UltrakULL
                         else if (levelName.Contains("1-") || levelName.Contains("2-") || levelName.Contains("3-"))
                         {
                             Logger.LogInfo("Currently on Act 1. Now deferring patch to Act 1 class.");
-                            Act1 act1Class = new Act1(ref coreGame,this.jsonParser);
+                            Act1.PatchAct1(ref coreGame,this.jsonParser);
                         }
                         //Act 2
                         else if (levelName.Contains("4-") || levelName.Contains("5-") || levelName.Contains("6-"))
                         {
                             Logger.LogInfo("Currently on Act 2. Now deferring patch to Act 2 class.");
-                            Act2 act2Class = new Act2(ref coreGame, this.jsonParser);
+                            Act2.PatchAct2(ref coreGame, this.jsonParser);
                         }
                         //Cyber Grind
                         else if (SceneManager.GetActiveScene().name.Contains("Endless"))
                         {
                             Logger.LogInfo("Currently in the Cyber Grind.");
-                            CyberGrind cybergrind = new CyberGrind(ref coreGame,this.jsonParser);
+                            CyberGrind.PatchCG(ref coreGame,this.jsonParser);
                         }
                         //End of act intermission
                         else if (SceneManager.GetActiveScene().name.Contains("Intermission"))

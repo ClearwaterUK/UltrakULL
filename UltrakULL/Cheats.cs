@@ -16,12 +16,9 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-
-    class Cheats
+    public static class Cheats
     {
-        
-
-        public void patchCheatConsentPanel(ref GameObject coreGame,JsonParser language)
+        public static void patchCheatConsentPanel(ref GameObject coreGame,JsonParser language)
         {
 
             GameObject canvas = getInactiveRootObject("Canvas");
@@ -138,12 +135,5 @@ namespace UltrakULL
                 return "";
             }
         }
-
-        public Cheats(ref GameObject coreGame,JsonParser language)
-        {
-            this.patchCheatConsentPanel(ref coreGame,language);
-        }
-
-
     }
 }

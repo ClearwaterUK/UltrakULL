@@ -14,11 +14,11 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-    class StringsParent : MonoBehaviour
+    public static class StringsParent
     {
-        BepInEx.Logging.ManualLogSource parentStringsLogger = BepInEx.Logging.Logger.CreateLogSource("ParentStrings");
+        private static BepInEx.Logging.ManualLogSource parentStringsLogger = BepInEx.Logging.Logger.CreateLogSource("ParentStrings");
 
-        public string getMessage(string message, string message2, string input, JsonParser language)
+        public static string getMessage(string message, string message2, string input, JsonParser language)
         {
             parentStringsLogger.LogInfo("Getting message...");
             Scene currentLevel = SceneManager.GetActiveScene();
@@ -32,20 +32,17 @@ namespace UltrakULL
             else if (currentLevel.name.Contains("0-"))
             {
                 parentStringsLogger.LogInfo("Current scene: Prelude");
-                PreludeStrings preludeStrings = new PreludeStrings();
-                return preludeStrings.getMessage(message, message2, input,language);
+                return PreludeStrings.getMessage(message, message2, input,language);
             }
             else if (currentLevel.name.Contains("1-") || (currentLevel.name.Contains("2-") || (currentLevel.name.Contains("3-"))))
             {
                 parentStringsLogger.LogInfo("Current scene: Act 1");
-                Act1Strings a1Strings = new Act1Strings();
-                return a1Strings.getMessage(message, message2, input, language);
+                return Act1Strings.getMessage(message, message2, input, language);
             }
             else if (currentLevel.name.Contains("4-") || (currentLevel.name.Contains("5-") || (currentLevel.name.Contains("6-"))))
             {
                 parentStringsLogger.LogInfo("Current scene: Act 2");
-                Act2Strings a2Strings = new Act2Strings();
-                return a2Strings.getMessage(message, message2, input, language);
+                return Act2Strings.getMessage(message, message2, input, language);
             }
             else if (currentLevel.name.Contains("7-") || (currentLevel.name.Contains("8-") || (currentLevel.name.Contains("9-"))))
             {
@@ -58,7 +55,7 @@ namespace UltrakULL
             }
         }
 
-        public string getReturningLevelName(string input, JsonParser language)
+        public static string getReturningLevelName(string input, JsonParser language)
         {
             PreviousMissionSaver instance = MonoSingleton<PreviousMissionSaver>.Instance;
             Console.WriteLine("Previous level ID: " + instance.previousMission);
@@ -109,7 +106,7 @@ namespace UltrakULL
         }
 
         //Tips for each level
-        public string getLevelTip(JsonParser language)
+        public static string getLevelTip(JsonParser language)
         {
             string currentLevel = SceneManager.GetActiveScene().name;
 
