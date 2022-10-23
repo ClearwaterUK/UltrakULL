@@ -34,6 +34,7 @@ namespace UltrakULL
         public static StatsManager cachedStatsManager;
         public static bool cachedStatsReady;
 
+        public static bool skipToInput = false;
 
         //@Override
         //Overrides the private CoinsToPoints function in the CrateCounter class
@@ -1054,12 +1055,15 @@ namespace UltrakULL
             IntermissionStrings intStrings = new IntermissionStrings();
             ___fullString = intStrings.getIntermissionString(___fullString);
 
+
             __instance.StartCoroutine(TextAppearMain(__instance, ___fullString, ___sb, ___txt, ___tempString, ___skipToInput, ___waitingForInput, ___preText, ___aud, ___origPitch));
 
             return false;
         }
 
-        //Two small leftover problems - Can't hold down left click to speed up text (See just below), and it takes two clicks to switch paragraphs (?)
+
+
+        //Two small leftover problems - Can't hold down left click to speed up text (See just below)
         public static IEnumerator TextAppearMain(IntermissionController __instance, string ___fullString, StringBuilder ___sb, Text ___txt, string ___tempString, bool ___skipToInput, bool ___waitingForInput, string ___preText, AudioSource ___aud, float ___origPitch)
         {
             int i = ___fullString.Length;
@@ -1068,7 +1072,15 @@ namespace UltrakULL
             for (int j = 0; j < i; j = num + 1)
             {
                 char c = ___fullString[j];
-                float waitTime = 0.02f;
+                float waitTime = 0.04f;
+                if (skipToInput)
+                {
+                    waitTime = 0.01f;
+                }
+                if ((Input.GetKeyDown(KeyCode.Mouse0) || MonoSingleton<InputManager>.Instance == null || (!MonoSingleton<InputManager>.Instance.PerformingCheatMenuCombo() && MonoSingleton<InputManager>.Instance.InputSource.Fire1.WasPerformedThisFrame) || Input.GetKey(KeyCode.Space) || MonoSingleton<InputManager>.Instance.InputSource.Dodge.IsPressed))
+                {
+                    skipToInput = true;
+                }
                 bool playSound = true;
                 if (MonoSingleton<OptionsManager>.Instance.paused)
                 {
@@ -1088,6 +1100,7 @@ namespace UltrakULL
                             ___txt.text = ___preText + ___fullString.Substring(0, j);
                             ___tempString = ___txt.text;
                             ___skipToInput = false;
+                            skipToInput = false;
                             ___waitingForInput = true;
 
                             Coroutine nextLine = __instance.StartCoroutine(IntermissionDotsAppear(__instance, ___waitingForInput, ___txt, ___tempString));

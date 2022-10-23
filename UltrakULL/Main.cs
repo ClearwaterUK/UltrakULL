@@ -43,7 +43,7 @@ using UltrakULL.json;
  *  - Green Rocketlauncher incoming
  *  
  *  BUGS AND QUIRKS TO FIX:
- * - Reexamine the intro text. See if I can get input working again, as well as shorten the 3 dots time based on the Act 2 update original code
+ * - Reexamine the intro text. See if I can get input working again
  * - 2-S: See if I can rename Mirage's names. (IntermissionController has a property with the names. To investigate)
  * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages (currently due to current subtitle implentation. Will need to change some things)
  * - Discord RPC: Style meter in CG
@@ -408,7 +408,7 @@ namespace UltrakULL
             MethodInfo patchedIntermissionStart = AccessTools.Method(typeof(PatchedFunctions), "Start_MyPatch");
             harmony.Patch(originalIntermissionStart, new HarmonyMethod(patchedIntermissionStart));
 
-            Logger.LogInfo("SubtitleController->DisplaySubtitle");
+             Logger.LogInfo("SubtitleController->DisplaySubtitle");
             MethodInfo originalDisplaySubtitle = AccessTools.Method(typeof(SubtitleController), "DisplaySubtitle", new Type[] { typeof(string), typeof(AudioSource) });
             MethodInfo patchedDisplaySubtitle = AccessTools.Method(typeof(PatchedFunctions), "DisplaySubtitle_MyPatch");
             harmony.Patch(originalDisplaySubtitle, new HarmonyMethod(patchedDisplaySubtitle));
