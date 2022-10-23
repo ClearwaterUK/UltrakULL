@@ -19,7 +19,7 @@ namespace UltrakULL
         public GameObject baseLevelObject;
         public Text secretText = null;
 
-        public void patchSecretText(PrimeSanctumStrings strings, JsonParser language)
+        public void patchSecretText(PrimeSanctumStrings strings)
         {
             GameObject baseObj = null;
 
@@ -41,7 +41,7 @@ namespace UltrakULL
             secretText.text = strings.getSecretText();
         }
 
-        public PrimeSanctum(ref GameObject level,JsonParser language)
+        public PrimeSanctum(ref GameObject level)
         {
             var primeLogger = BepInEx.Logging.Logger.CreateLogSource("PrimeSanctumsPatcher");
             primeLogger.LogInfo("Now entering prime sanctum class.");
@@ -54,13 +54,13 @@ namespace UltrakULL
                 primeLogger.LogInfo("In P-1");
 
                 primeLogger.LogInfo("Patching results screen...");
-                PrimeSanctumStrings PrimeSanctumChallengeStrings = new PrimeSanctumStrings(language);
+                PrimeSanctumStrings PrimeSanctumChallengeStrings = new PrimeSanctumStrings();
                 //this.patchResultsScreen(ref level);
-                string levelname = PrimeSanctumChallengeStrings.getLevelName(language);
-                patchResultsScreen(levelname, "", language);
+                string levelname = PrimeSanctumChallengeStrings.getLevelName();
+                patchResultsScreen(levelname, "");
 
                 primeLogger.LogInfo("Patching secret text...");
-                this.patchSecretText(PrimeSanctumChallengeStrings, language);
+                this.patchSecretText(PrimeSanctumChallengeStrings);
             }
         }
     }

@@ -26,7 +26,6 @@ namespace UltrakULL
         };
 
 
-
         public static BepInEx.Logging.ManualLogSource modLogger = BepInEx.Logging.Logger.CreateLogSource("modLogger");
 
         public static string previousHudMessage;
@@ -39,7 +38,6 @@ namespace UltrakULL
 
         public static GameObject getInactiveRootObject(string objectName)
         {
-
             List<GameObject> rootList = new List<GameObject>();
             SceneManager.GetActiveScene().GetRootGameObjects(rootList);
             foreach (GameObject child in rootList)
@@ -53,7 +51,7 @@ namespace UltrakULL
         }
 
 
-        public static void patchResultsScreen(string name, string challenge, JsonParser language)
+        public static void patchResultsScreen(string name, string challenge)
         {
             string levelName = name;
             string levelChallenge = challenge;
@@ -82,27 +80,27 @@ namespace UltrakULL
             //For some bizzare reason, the timer is labelled as "ff". Hakita were you cutting corners? :D
             GameObject timeTitle = getGameObjectChild(resultsPanel, "ff");
             Text timeTitleText = getTextfromGameObject(getGameObjectChild(timeTitle, "Text"));
-            timeTitleText.text = language.currentLanguage.misc.stats_time;
+            timeTitleText.text = LanguageManager.CurrentLanguage.misc.stats_time;
 
             //Kills
             GameObject killsTitle = getGameObjectChild(resultsPanel, "Kills - Info");
             Text killsTitleText = getTextfromGameObject(getGameObjectChild(killsTitle, "Text"));
-            killsTitleText.text = language.currentLanguage.misc.stats_kills;
+            killsTitleText.text = LanguageManager.CurrentLanguage.misc.stats_kills;
 
             //Style
             GameObject styleTitle = getGameObjectChild(resultsPanel, "Style - Info");
             Text styleTitleText = getTextfromGameObject(getGameObjectChild(styleTitle, "Text"));
-            styleTitleText.text = language.currentLanguage.misc.stats_style;
+            styleTitleText.text = LanguageManager.CurrentLanguage.misc.stats_style;
 
             //Secrets
             GameObject secretsTitle = getGameObjectChild(resultsPanel, "Secrets -  Title");
             Text secretsTitleText = getTextfromGameObject(getGameObjectChild(secretsTitle, "Text"));
-            secretsTitleText.text = language.currentLanguage.misc.stats_secrets;
+            secretsTitleText.text = LanguageManager.CurrentLanguage.misc.stats_secrets;
 
             //Challenge title
             GameObject challengeTitle = getGameObjectChild(resultsPanel, "Challenge - Title");
             Text challengeTitleText = getTextfromGameObject(getGameObjectChild(challengeTitle, "Text"));
-            challengeTitleText.text = language.currentLanguage.misc.stats_challenge;
+            challengeTitleText.text = LanguageManager.CurrentLanguage.misc.stats_challenge;
 
             //Challenge description
             GameObject challengeDescription = getGameObjectChild(resultsPanel, "Challenge");
@@ -111,11 +109,11 @@ namespace UltrakULL
 
             //Total points
             Text totalPointsText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(resultsPanel, "Total Points"),"Text (1)"));
-            totalPointsText.text = language.currentLanguage.cyberGrind.cybergrind_total + ":";
+            totalPointsText.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_total + ":";
         }
 
 
-        public static GameObject getGameObjectChild(GameObject parentObject, string childToFind)
+        public static GameObject getGameObjectChild(GameObject parentObject, string childToFind) // Why does this exist if we're just doing a single function call? 
         {
             GameObject childToReturn = parentObject.transform.Find(childToFind).gameObject;
             return childToReturn;

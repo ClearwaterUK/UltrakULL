@@ -48,7 +48,7 @@ public static class Inject_LanguageButton
 
         GameObject languageButtonPrefab = optionsParent.Find("Save Slots").Find("Grid").Find("Slot Row").gameObject;
 
-        foreach (string language in new string[] { "COMING SOON"}) // Set this accordingly, copilot just generated this code for testing purposes
+        foreach (string language in LanguageManager.AllLanguages.Keys)
         {
             GameObject languageButtonInstance = GameObject.Instantiate(languageButtonPrefab, contentParent);
             languageButtonInstance.transform.localScale = new Vector3(0.2188482f, 1.123569f, 0.5088629f);
@@ -80,7 +80,7 @@ public static class Inject_LanguageButton
 
             langButton.onClick.AddListener(delegate
             {
-                // Set language here
+                LanguageManager.SetCurrentLanguage(language);
             });
 
             languageButtonInstance.SetActive(true);

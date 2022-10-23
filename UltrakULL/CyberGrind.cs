@@ -14,9 +14,9 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-    class CyberGrind
+    public static class CyberGrind
     {
-        public void patchWaveBoard(JsonParser language)
+        private static void patchWaveBoard()
         {
             //Get the object containing all the wave board strings.
             //If there's a better way of doing this someone let me know
@@ -39,14 +39,14 @@ namespace UltrakULL
 
             //Patch all the strings here.
             Text waveText = getTextfromGameObject(getGameObjectChild(cgBoard, "Wave Title"));
-            waveText.text = language.currentLanguage.cyberGrind.cybergrind_wave +  ":";
+            waveText.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_wave +  ":";
 
             Text enemiesLeftText = getTextfromGameObject(getGameObjectChild(cgBoard, "Enemies Left Title"));
-            enemiesLeftText.text = language.currentLanguage.cyberGrind.cybergrind_enemiesRemaining + ":";
+            enemiesLeftText.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_enemiesRemaining + ":";
 
         }
 
-        public void patchResults(GameObject level, JsonParser language)
+        private static void patchResults(GameObject level)
         {
             level = GameObject.Find("Player");
 
@@ -57,19 +57,19 @@ namespace UltrakULL
             GameObject leaderboardsPanel = getGameObjectChild(resultsPanel, "Leaderboards");
 
             //Both result panels use the same strings, so declare them here to avoid redundancy.
-            string wave = language.currentLanguage.cyberGrind.cybergrind_wave;
-            string kills = language.currentLanguage.misc.levelstats_kills;
-            string style = language.currentLanguage.misc.levelstats_style;
-            string time = language.currentLanguage.misc.levelstats_time;
+            string wave = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_wave;
+            string kills = LanguageManager.CurrentLanguage.misc.levelstats_kills;
+            string style = LanguageManager.CurrentLanguage.misc.levelstats_style;
+            string time = LanguageManager.CurrentLanguage.misc.levelstats_time;
 
 
             //Title
             Text titleText= getTextfromGameObject(getGameObjectChild(getGameObjectChild(resultsPanel, "Title"),"Text"));
-            titleText.text = language.currentLanguage.cyberGrind.cybergrind_cgTitle;
+            titleText.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_cgTitle;
 
             //Last result panel
             Text lastTitle = getTextfromGameObject(getGameObjectChild(lastResult, "Text"));
-            lastTitle.text = language.currentLanguage.cyberGrind.cybergrind_previousRun;
+            lastTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_previousRun;
 
             Text lastWave = getTextfromGameObject(getGameObjectChild(getGameObjectChild(lastResult, "Wave - Info"),"Text"));
             lastWave.text = wave;
@@ -85,7 +85,7 @@ namespace UltrakULL
 
             //Best result panel
             Text bestTitle = getTextfromGameObject(getGameObjectChild(bestResult, "Text (1)"));
-            bestTitle.text = language.currentLanguage.cyberGrind.cybergrind_bestRun;
+            bestTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_bestRun;
 
             Text bestWave = getTextfromGameObject(getGameObjectChild(getGameObjectChild(bestResult, "Wave - Info (1)"), "Text"));
             bestWave.text = wave;
@@ -101,20 +101,20 @@ namespace UltrakULL
 
             //Points panel
             Text totalPoints = getTextfromGameObject(getGameObjectChild(pointsPanel, "Text (1)"));
-            totalPoints.text = language.currentLanguage.cyberGrind.cybergrind_total;
+            totalPoints.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_total;
 
             //Leaderboards
 
-            string connecting = language.currentLanguage.cyberGrind.cybergrind_connectingToSteam;
+            string connecting = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_connectingToSteam;
 
             GameObject friendScores = getGameObjectChild(leaderboardsPanel, "Friend High Scores");
             GameObject globalScores = getGameObjectChild(leaderboardsPanel, "Global High Scores");
 
             Text friendScoresTitle = getTextfromGameObject(getGameObjectChild(friendScores, "Text"));
-            friendScoresTitle.text = language.currentLanguage.cyberGrind.cybergrind_friendScores;
+            friendScoresTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_friendScores;
 
             Text globalScoresTitle = getTextfromGameObject(getGameObjectChild(globalScores, "Text"));
-            globalScoresTitle.text = language.currentLanguage.cyberGrind.cybergrind_globalScores;
+            globalScoresTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_globalScores;
 
             Text friendsConnectingText = getTextfromGameObject(getGameObjectChild(friendScores, "Connecting"));
             friendsConnectingText.text = connecting;
@@ -125,7 +125,7 @@ namespace UltrakULL
 
         }
 
-        public void patchTerminal(GameObject level,JsonParser language)
+        private static void patchTerminal(GameObject level)
         {
             level = GameObject.Find("FirstRoom");
             GameObject cgTerminal = getGameObjectChild(getGameObjectChild(getGameObjectChild(level, "Room"),"CyberGrindSettings"),"Canvas");
@@ -134,79 +134,79 @@ namespace UltrakULL
 
             //Terminal description
             Text cgTerminalTipboxTitle = getTextfromGameObject(getGameObjectChild(cgTerminalTipbox, "Title"));
-            cgTerminalTipboxTitle.text = language.currentLanguage.cyberGrind.cybergrind_settings;
+            cgTerminalTipboxTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_settings;
 
             Text cgTerminalTipboxDescription = getTextfromGameObject(getGameObjectChild(cgTerminalTipbox, "Text"));
-            cgTerminalTipboxDescription.text = language.currentLanguage.cyberGrind.cybergrind_settingsDescription;
+            cgTerminalTipboxDescription.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_settingsDescription;
 
             //Main menu
             GameObject cgTerminalMainMenu = getGameObjectChild(cgTerminal, "Main Menu");
 
             Text cgTerminalThemesText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgTerminalMainMenu, "ThemeButton"), "Text"));
-            cgTerminalThemesText.text = language.currentLanguage.cyberGrind.cybergrind_themes;
+            cgTerminalThemesText.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themes;
 
             Text cgTerminalPatternsText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgTerminalMainMenu, "PatternsButton"), "Text"));
-            cgTerminalPatternsText.text = language.currentLanguage.cyberGrind.cybergrind_patterns;
+            cgTerminalPatternsText.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_patterns;
 
             Text cgTerminalWaveText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgTerminalMainMenu, "WavesButton"), "Text"));
-            cgTerminalWaveText.text = language.currentLanguage.cyberGrind.cybergrind_waves;
+            cgTerminalWaveText.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_waves;
 
             //Themes
 
             GameObject cgTerminalThemes = getGameObjectChild(getGameObjectChild(cgTerminal, "Themes"),"Panel");
 
             Text cgTerminalThemesTitle = getTextfromGameObject(getGameObjectChild(cgTerminalThemes, "Title"));
-            cgTerminalThemesTitle.text = "--" + language.currentLanguage.cyberGrind.cybergrind_themesTitle + "--";
+            cgTerminalThemesTitle.text = "--" + LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesTitle + "--";
 
             Text cgTerminalThemesDescription = getTextfromGameObject(getGameObjectChild(cgTerminalThemes, "Text"));
-            cgTerminalThemesDescription.text = language.currentLanguage.cyberGrind.cybergrind_themesDescription;
+            cgTerminalThemesDescription.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesDescription;
 
             Text cgTerminalThemesLight = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgTerminalThemes, "LightButton"), "Text"));
-            cgTerminalThemesLight.text = language.currentLanguage.cyberGrind.cybergrind_themesLight;
+            cgTerminalThemesLight.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesLight;
 
             Text cgTerminalThemesDark = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgTerminalThemes, "DarkButton"), "Text"));
-            cgTerminalThemesDark.text = language.currentLanguage.cyberGrind.cybergrind_themesDark;
+            cgTerminalThemesDark.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesDark;
 
             Text cgTerminalThemesCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgTerminalThemes, "CustomButton"), "Text"));
-            cgTerminalThemesCustom.text = language.currentLanguage.cyberGrind.cybergrind_themesCustom;
+            cgTerminalThemesCustom.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustom;
 
             //Customize theme
             GameObject cgCustomTheme = getGameObjectChild(getGameObjectChild(cgTerminal, "Custom"),"Panel");
             Console.WriteLine("cgCustomThemeTitle");
             Text cgCustomThemeTitle = getTextfromGameObject(getGameObjectChild(cgCustomTheme, "Title"));
-            cgCustomThemeTitle.text = language.currentLanguage.cyberGrind.cybergrind_themesModify;
+            cgCustomThemeTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesModify;
 
 
 
 
             Text cgCustomGrid = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(cgCustomTheme, "ModeButtonWrapper"),"BlockTopButton"),"Text"));
-            cgCustomGrid.text = language.currentLanguage.cyberGrind.cybergrind_themesCustomGrid;
+            cgCustomGrid.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustomGrid;
 
             Text cgCustomGridGlow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(cgCustomTheme, "ModeButtonWrapper"), "BlockTopButton (3)"), "Text"));
-            cgCustomGridGlow.text = language.currentLanguage.cyberGrind.cybergrind_themesCustomGridGlow;
+            cgCustomGridGlow.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustomGridGlow;
 
             Text cgCustomSkybox = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(cgCustomTheme, "ModeButtonWrapper"), "BlockTopButton (2)"), "Text"));
-            cgCustomSkybox.text = language.currentLanguage.cyberGrind.cybergrind_themesCustomSkybox;
+            cgCustomSkybox.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustomSkybox;
 
             Text cgCustomThemeBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgCustomTheme, "BackButton"), "Text"));
-            cgCustomThemeBack.text = language.currentLanguage.cyberGrind.cybergrind_themesCustomBack;
+            cgCustomThemeBack.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustomBack;
 
             //a
             Text cgCustomRefresh = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(cgCustomTheme, "ImageSelectorWrapper"),"RefreshButton"),"Text"));
-            cgCustomRefresh.text = language.currentLanguage.cyberGrind.cybergrind_patternsRefresh;
+            cgCustomRefresh.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_patternsRefresh;
 
             GameObject cgCustomAdditionalRows = getGameObjectChild(getGameObjectChild(cgCustomTheme, "AdditionalOptions"),"GridTypeSelection");
             Text cgCustomAdditionalBase = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgCustomAdditionalRows, "BaseButton"), "Text"));
-            cgCustomAdditionalBase.text = language.currentLanguage.cyberGrind.cybergrind_themesCustomBase;
+            cgCustomAdditionalBase.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustomBase;
 
             Text cgCustomAdditionalTopRow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgCustomAdditionalRows, "TopRowButton"), "Text"));
-            cgCustomAdditionalTopRow.text = language.currentLanguage.cyberGrind.cybergrind_themesCustomTopRow;
+            cgCustomAdditionalTopRow.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustomTopRow;
 
             Text cgCustomAdditionalTop = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgCustomAdditionalRows, "TopButton"), "Text"));
-            cgCustomAdditionalTop.text = language.currentLanguage.cyberGrind.cybergrind_themesCustomTop;
+            cgCustomAdditionalTop.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustomTop;
 
             Text cgCustomAdditionalGlowIntensity = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(cgCustomTheme, "AdditionalOptions"), "GlowOptions"),"Title"));
-            cgCustomAdditionalGlowIntensity.text = language.currentLanguage.cyberGrind.cybergrind_themesCustomGlowIntensity;
+            cgCustomAdditionalGlowIntensity.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustomGlowIntensity;
 
             //Patterns
             GameObject cgTerminalPatterns = getGameObjectChild(getGameObjectChild(cgTerminal, "Patterns"), "Panel");
@@ -214,40 +214,40 @@ namespace UltrakULL
 
             Text cgCustomStateButton = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgTerminalPatterns, "StateButton"), "Text"));
             bool customPatternMode = MonoSingleton<EndlessGrid>.Instance.customPatternMode;
-            cgCustomStateButton.text = (customPatternMode ? language.currentLanguage.misc.state_activated : language.currentLanguage.misc.state_deactivated);
+            cgCustomStateButton.text = (customPatternMode ? LanguageManager.CurrentLanguage.misc.state_activated : LanguageManager.CurrentLanguage.misc.state_deactivated);
 
             Text cgTerminalPatternsTitle = getTextfromGameObject(getGameObjectChild(cgTerminalPatterns, "Title"));
-            cgTerminalPatternsTitle.text = "--" + language.currentLanguage.cyberGrind.cybergrind_patternsTitle + "--";
+            cgTerminalPatternsTitle.text = "--" + LanguageManager.CurrentLanguage.cyberGrind.cybergrind_patternsTitle + "--";
 
             //Note - Will need to patch Toggle() in CustomPatterns for the "enabled"/"disabled" button.
 
             Text cgTerminalPatternsRefresh = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(cgTerminalPatterns, "CustomStuff"), "RefreshButton"),"Text"));
-            cgTerminalPatternsRefresh.text = language.currentLanguage.cyberGrind.cybergrind_patternsRefresh;
+            cgTerminalPatternsRefresh.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_patternsRefresh;
             cgTerminalPatternsRefresh.fontSize = 14;
 
             Text cgTerminalPatternsEditor = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(cgTerminalPatterns, "CustomStuff"), "EditorButton"), "Text"));
-            cgTerminalPatternsEditor.text = language.currentLanguage.cyberGrind.cybergrind_patternsLaunchExternalEditor;
+            cgTerminalPatternsEditor.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_patternsLaunchExternalEditor;
 
             //Waves
 
             GameObject cgTerminalWaves = getGameObjectChild(getGameObjectChild(cgTerminal, "Waves"), "Panel");
 
             Text cgTerminalWavesTitle = getTextfromGameObject(getGameObjectChild(cgTerminalWaves, "Title"));
-            cgTerminalWavesTitle.text = "--" + language.currentLanguage.cyberGrind.cybergrind_wavesTitle + "--";
+            cgTerminalWavesTitle.text = "--" + LanguageManager.CurrentLanguage.cyberGrind.cybergrind_wavesTitle + "--";
 
             Text cgTerminalWavesText = getTextfromGameObject(getGameObjectChild(cgTerminalWaves, "Text"));
             cgTerminalWavesText.text =
-                language.currentLanguage.cyberGrind.cybergrind_wavesDescription1 + ":\n\n" +
-                language.currentLanguage.cyberGrind.cybergrind_wavesDescription2;
+                LanguageManager.CurrentLanguage.cyberGrind.cybergrind_wavesDescription1 + ":\n\n" +
+                LanguageManager.CurrentLanguage.cyberGrind.cybergrind_wavesDescription2;
             cgTerminalWavesText.fontSize = 16;
         }
-        public CyberGrind(ref GameObject level,JsonParser language)
+        public static void PatchCG(ref GameObject level)
         {
             var cgLogger = BepInEx.Logging.Logger.CreateLogSource("CGPatcher");
             cgLogger.LogInfo("Now entering CyberGrind class.");
-            this.patchWaveBoard(language);
-            this.patchResults(level, language);
-            this.patchTerminal(level, language);
+            patchWaveBoard();
+            patchResults(level);
+            patchTerminal(level);
         }
 
     }

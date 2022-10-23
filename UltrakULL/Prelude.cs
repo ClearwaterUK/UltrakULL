@@ -11,21 +11,21 @@ namespace UltrakULL
     {
         public GameObject baseLevelObject;
 
-        public void patchOpeningCredits(JsonParser language)
+        public void patchOpeningCredits()
         {
             GameObject level = getInactiveRootObject("Canvas");
 
             GameObject openingCredsParent = getGameObjectChild(level, "HurtScreen");
 
             Text openingCredsFirst = getTextfromGameObject(getGameObjectChild(getGameObjectChild(openingCredsParent, "Text 1 Sound"), "Text (1)"));
-            openingCredsFirst.text = language.currentLanguage.prelude.prelude_first_openingCredits1;
+            openingCredsFirst.text = LanguageManager.CurrentLanguage.prelude.prelude_first_openingCredits1;
 
             Text openingCredsSecond = getTextfromGameObject(getGameObjectChild(getGameObjectChild(openingCredsParent, "Text 2 Sound"), "Text (2)"));
-            openingCredsSecond.text = language.currentLanguage.prelude.prelude_first_openingCredits2;
+            openingCredsSecond.text = LanguageManager.CurrentLanguage.prelude.prelude_first_openingCredits2;
         }
 
 
-        public Prelude(ref GameObject level, JsonParser language)
+        public Prelude(ref GameObject level)
         {
             BepInEx.Logging.ManualLogSource preludeLogger = BepInEx.Logging.Logger.CreateLogSource("PreludePatcher");
 
@@ -38,7 +38,7 @@ namespace UltrakULL
                 preludeLogger.LogInfo("In 0-1");
                 try
                 {
-                    this.patchOpeningCredits(language);
+                    this.patchOpeningCredits();
                 }
                 catch(Exception e)
                 {
@@ -48,11 +48,10 @@ namespace UltrakULL
             }
 
             preludeLogger.LogInfo("Patching results screen...");
-            PreludeStrings preludeChallengeStrings = new PreludeStrings();
-            string levelName = preludeChallengeStrings.getLevelName(language);
-            string levelChallenge = preludeChallengeStrings.getLevelChallenge(currentLevel, language);
+            string levelName = PreludeStrings.getLevelName();
+            string levelChallenge = PreludeStrings.getLevelChallenge(currentLevel);
 
-            patchResultsScreen(levelName,levelChallenge,language);
+            patchResultsScreen(levelName,levelChallenge);
 
         }
     }

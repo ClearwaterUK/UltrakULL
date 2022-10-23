@@ -17,7 +17,7 @@ namespace UltrakULL
     {
         string currentLevel;
 
-        public void patchTestament(ref GameObject testamentRoom, JsonParser language)
+        public void patchTestament(ref GameObject testamentRoom)
         {
             Text testamentPanelText = null;
 
@@ -46,8 +46,8 @@ namespace UltrakULL
                 case "Level 0-S":
                     {
                         testamentPanelText.text =
-                            language.currentLanguage.secretLevels.secretLevels_prelude_testament1 + "\n\n" + language.currentLanguage.secretLevels.secretLevels_prelude_testament2 + "\n\n" + language.currentLanguage.secretLevels.secretLevels_prelude_testament3 + "\n\n" +
-                            language.currentLanguage.secretLevels.secretLevels_prelude_testament4;
+                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_prelude_testament1 + "\n\n" + LanguageManager.CurrentLanguage.secretLevels.secretLevels_prelude_testament2 + "\n\n" + LanguageManager.CurrentLanguage.secretLevels.secretLevels_prelude_testament3 + "\n\n" +
+                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_prelude_testament4;
 
                         break;
                     }
@@ -55,8 +55,8 @@ namespace UltrakULL
                     {
                         testamentPanelText.text =
 
-                            language.currentLanguage.secretLevels.secretLevels_first_testament1 + "\n\n" + language.currentLanguage.secretLevels.secretLevels_first_testament2 + "\n\n" + language.currentLanguage.secretLevels.secretLevels_first_testament3 + "\n\n" +
-                            language.currentLanguage.secretLevels.secretLevels_first_testament4;
+                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_first_testament1 + "\n\n" + LanguageManager.CurrentLanguage.secretLevels.secretLevels_first_testament2 + "\n\n" + LanguageManager.CurrentLanguage.secretLevels.secretLevels_first_testament3 + "\n\n" +
+                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_first_testament4;
 
                         break;
                     }
@@ -66,15 +66,15 @@ namespace UltrakULL
                     {
                         testamentPanelText.text =
 
-                            language.currentLanguage.secretLevels.secretLevels_fourth_testament1 + "\n" +
-                            language.currentLanguage.secretLevels.secretLevels_fourth_testament2 + "\n\n" +
+                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fourth_testament1 + "\n" +
+                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fourth_testament2 + "\n\n" +
 
-                            language.currentLanguage.secretLevels.secretLevels_fourth_testament3 + "\n" +
-                            language.currentLanguage.secretLevels.secretLevels_fourth_testament4 + "\n" +
-                            language.currentLanguage.secretLevels.secretLevels_fourth_testament5 + "\n\n" +
+                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fourth_testament3 + "\n" +
+                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fourth_testament4 + "\n" +
+                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fourth_testament5 + "\n\n" +
 
-                            language.currentLanguage.secretLevels.secretLevels_fourth_testament6 + "\n" +
-                            language.currentLanguage.secretLevels.secretLevels_fourth_testament7;
+                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fourth_testament6 + "\n" +
+                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fourth_testament7;
 
                         break;
                     }
@@ -87,7 +87,7 @@ namespace UltrakULL
 
         // SecretFirstRoom/Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text
         // Note - it uses a seperate panel that has the same name as the normal result panel.
-        public SecretLevels(ref GameObject coreGame, JsonParser language)
+        public SecretLevels(ref GameObject coreGame)
         {
             Console.WriteLine("In secretLevels");
             coreGame = GameObject.Find("Player");
@@ -96,15 +96,15 @@ namespace UltrakULL
 
             switch (this.currentLevel)
             {
-                case "Level 0-S": {testamentRoom = GameObject.Find("FinalRoom 2"); patchTestament(ref testamentRoom, language); break; }
-                case "Level 1-S": {testamentRoom = GameObject.Find("5 - Finale"); patchTestament(ref testamentRoom, language); break; }
-                case "Level 2-S": {Act1VN.patchPrompts(ref coreGame,language); break; }
+                case "Level 0-S": {testamentRoom = GameObject.Find("FinalRoom 2"); patchTestament(ref testamentRoom); break; }
+                case "Level 1-S": {testamentRoom = GameObject.Find("5 - Finale"); patchTestament(ref testamentRoom); break; }
+                case "Level 2-S": {Act1VN.patchPrompts(ref coreGame); break; }
                 case "Level 4-S": {
                         //I have absolutely no idea why I have to do it like this but I have to, for some reason the required GameObject can't be found by searching.
                         //THIS HAPPENS BECAUSE THE GAMEOBJECT ISN'T ACTIVE ON SCENE LOAD AND GameObject.Find() CANNOT DETECT INACTIVE OBJECTS.
                         testamentRoom = getInactiveRootObject("4 - Boulder Run");
 
-                        patchTestament(ref testamentRoom, language);
+                        patchTestament(ref testamentRoom);
                         break;
                     }
 
@@ -122,25 +122,25 @@ namespace UltrakULL
             GameObject secretLevelResultsPanel = FinishCanvasChildren[1];
 
             Text secretLevelResultsName = getTextfromGameObject(getGameObjectChild(getGameObjectChild(secretLevelResultsPanel, "Title"), "Text"));
-            secretLevelResultsName.text = getSecretLevelName(language);
+            secretLevelResultsName.text = getSecretLevelName();
 
             Text secretLevelResultsInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(secretLevelResultsPanel, "Time - Info"), "Text"));
-            secretLevelResultsInfo.text = language.currentLanguage.secretLevels.secretLevels_complete1;
+            secretLevelResultsInfo.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_complete1;
 
             Text secretLevelComplete = getTextfromGameObject(getGameObjectChild(getGameObjectChild(secretLevelResultsPanel, "Time - Rank"), "Text"));
-            secretLevelComplete.text = language.currentLanguage.secretLevels.secretLevels_complete2;
+            secretLevelComplete.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_complete2;
 
             Console.WriteLine("secretLevels finished");
         }
 
-        public string getSecretLevelName(JsonParser language)
+        public string getSecretLevelName()
         {
             switch(this.currentLevel)
             {
-                case ("Level 0-S"): { return "0-S:" + language.currentLanguage.levelNames.levelName_preludeSecret; }
-                case ("Level 1-S"): { return "1-S:" + language.currentLanguage.levelNames.levelName_limboSecret; }
-                case ("Level 2-S"): { return "2-S:" + language.currentLanguage.levelNames.levelName_lustSecret; }
-                case ("Level 4-S"): { return "4-S:" + language.currentLanguage.levelNames.levelName_greedSecret; ; }
+                case ("Level 0-S"): { return "0-S:" + LanguageManager.CurrentLanguage.levelNames.levelName_preludeSecret; }
+                case ("Level 1-S"): { return "1-S:" + LanguageManager.CurrentLanguage.levelNames.levelName_limboSecret; }
+                case ("Level 2-S"): { return "2-S:" + LanguageManager.CurrentLanguage.levelNames.levelName_lustSecret; }
+                case ("Level 4-S"): { return "4-S:" + LanguageManager.CurrentLanguage.levelNames.levelName_greedSecret; ; }
                 default: { return "UNKNOWN"; }
             }
         }

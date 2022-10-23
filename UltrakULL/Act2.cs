@@ -13,12 +13,11 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-    class Act2
+    public static class Act2
     {
-        public GameObject baseLevelObject;
-        BepInEx.Logging.ManualLogSource a2Logger = BepInEx.Logging.Logger.CreateLogSource("Act2Patcher");
+        private static BepInEx.Logging.ManualLogSource a2Logger = BepInEx.Logging.Logger.CreateLogSource("Act2Patcher");
 
-        public Act2(ref GameObject level, JsonParser language)
+        public static void PatchAct2(ref GameObject level)
         {
             a2Logger.LogInfo("Now entering Act 2 class.");
 
@@ -39,23 +38,22 @@ namespace UltrakULL
 
             GameObject hellMapObject = getGameObjectChild(canvas, "Hellmap");
             Text hellmapGreed = getTextfromGameObject(getGameObjectChild(hellMapObject, "Text"));
-            hellmapGreed.text = language.currentLanguage.misc.hellmap_greed;
+            hellmapGreed.text = LanguageManager.CurrentLanguage.misc.hellmap_greed;
 
             Text hellmapWrath = getTextfromGameObject(getGameObjectChild(hellMapObject, "Text (1)"));
-            hellmapWrath.text = language.currentLanguage.misc.hellmap_wrath;
+            hellmapWrath.text = LanguageManager.CurrentLanguage.misc.hellmap_wrath;
 
             Text hellmapHeresy = getTextfromGameObject(getGameObjectChild(hellMapObject, "Text (2)"));
-            hellmapHeresy.text = language.currentLanguage.misc.hellmap_heresy;
+            hellmapHeresy.text = LanguageManager.CurrentLanguage.misc.hellmap_heresy;
 
-            this.baseLevelObject = level;
+            // this.baseLevelObject = level; // This hasn't been used yet so it's commented out
             string currentLevel = SceneManager.GetActiveScene().name;
 
 
             a2Logger.LogInfo("Patching results screen...");
-            Act2Strings a2ChallengeStrings = new Act2Strings();
-            string levelName = a2ChallengeStrings.getLevelName(language);
-            string levelChallenge = a2ChallengeStrings.getLevelChallenge(currentLevel, language);
-            patchResultsScreen(levelName, levelChallenge, language);
+            string levelName = Act2Strings.getLevelName();
+            string levelChallenge = Act2Strings.getLevelChallenge(currentLevel);
+            patchResultsScreen(levelName, levelChallenge);
 
         }
 
