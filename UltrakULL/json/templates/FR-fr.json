@@ -4,7 +4,7 @@
 		"langAuthor": "Clearwater,Frizou",
 		"langVersion": "0.6",
         
-        "minimumModVersion": "0.8.2"
+        "minimumModVersion": "0.8.3"
 	},
 	"body": {
 		"bodyName": "Traduction française pour ULTRAKILL. Developpé par Clearwater; contributions, relectures et corrections par Frizou."
@@ -329,6 +329,10 @@
         "level_fullIntroPromptCancel": "ANNULER"
 	},
     "visualnovel": {
+        "visualnovel_mirageName1": "JUSTE QUELQU'UN",
+        "visualnovel_mirageName2": "LA FILLE LA PLUS JOLIE DU VILLE",
+        "visualnovel_mirageName3": "MIRAGE",
+
         "visualnovel_introFirst1": "Des pas lourds, du respiration déchiré.",
         "visualnovel_introFirst2": "Il ne restait pas beaucoup de temps.",
         "visualnovel_introFirst3": "Il était peut-être déjà trop tard.",

@@ -609,6 +609,10 @@ namespace UltrakULL.json
 
     public class VisualNovel
     {
+        public string visualnovel_mirageName1;
+        public string visualnovel_mirageName2;
+        public string visualnovel_mirageName3;
+
         public string visualnovel_introFirst1;
         public string visualnovel_introFirst2;
         public string visualnovel_introFirst3;
@@ -859,6 +863,7 @@ namespace UltrakULL.json
         public string act1_intermission_insertAct2;
         public string act1_intermission_insert;
         public string act1_intermission_returnToMenu;
+
 
         public string act2_intermission_first1;
         public string act2_intermission_first2;

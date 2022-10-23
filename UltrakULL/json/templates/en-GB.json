@@ -4,7 +4,7 @@
 		"langAuthor": "Hakita",
 		"langVersion": "1.0",
 
-        "minimumModVersion": "0.8.2"
+        "minimumModVersion": "0.8.3"
 	},
     
 	"body": {
@@ -348,6 +348,10 @@
         "level_fullIntroPromptCancel": "CANCEL"
 	},
     "visualnovel": {
+        "visualnovel_mirageName1": "JUST SOMEONE",
+        "visualnovel_mirageName2": "THE PRETTIEST GIRL IN TOWN",
+        "visualnovel_mirageName3": "MIRAGE",
+
         "visualnovel_introFirst1": "Heavy steps, ragged breathing.",
         "visualnovel_introFirst2": "There isn't much time left",
         "visualnovel_introFirst3": "It might already be too late.",

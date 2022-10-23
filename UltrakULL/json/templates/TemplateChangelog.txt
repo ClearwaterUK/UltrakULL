@@ -8,6 +8,10 @@ options: language_title
 options: language_languages
 act2: act2_greedSecret_transactionComplete1
 act2: act2_greedSecret_transactionComplete2
+visualNovel: visualNovel_mirageName1
+visualNovel: visualNovel_mirageName2
+visualNovel: visualNovel_mirageName3
+
 
 CHANGED:
 

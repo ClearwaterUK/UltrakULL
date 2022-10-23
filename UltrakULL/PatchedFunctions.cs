@@ -15,6 +15,7 @@ using UnityEngine.Events;
 using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace UltrakULL
 {
@@ -1055,6 +1056,24 @@ namespace UltrakULL
             IntermissionStrings intStrings = new IntermissionStrings();
             ___fullString = intStrings.getIntermissionString(___fullString);
 
+            //Section for 2-S Mirage's names.
+            if (SceneManager.GetActiveScene().name == "Level 2-S")
+            {
+                string openingTag = "<color=grey>";
+                string closingTag = "</color>";
+                string mirageName = Regex.Replace(___preText, @"<[^>]*>", "");
+                Console.WriteLine(mirageName);
+                switch(mirageName)
+                {
+                    case ("???:"): { break; }
+                    case ("JUST SOMEONE:"): { ___preText = openingTag + LanguageManager.CurrentLanguage.visualnovel.visualnovel_mirageName1 + closingTag + ":"; break; }
+                    case ("THE PRETTIEST GIRL IN TOWN:"): { ___preText = openingTag + LanguageManager.CurrentLanguage.visualnovel.visualnovel_mirageName2 + closingTag + ":"; break; }
+                    case ("MIRAGE:"): { ___preText = openingTag + LanguageManager.CurrentLanguage.visualnovel.visualnovel_mirageName3 + closingTag + ":"; break; }
+                    default: { break; }
+                }
+                Console.WriteLine(___preText);
+            }
+
 
             __instance.StartCoroutine(TextAppearMain(__instance, ___fullString, ___sb, ___txt, ___tempString, ___skipToInput, ___waitingForInput, ___preText, ___aud, ___origPitch));
 
@@ -1062,12 +1081,11 @@ namespace UltrakULL
         }
 
 
-
-        //Two small leftover problems - Can't hold down left click to speed up text (See just below)
         public static IEnumerator TextAppearMain(IntermissionController __instance, string ___fullString, StringBuilder ___sb, Text ___txt, string ___tempString, bool ___skipToInput, bool ___waitingForInput, string ___preText, AudioSource ___aud, float ___origPitch)
         {
             int i = ___fullString.Length;
             int num = 0;
+
 
             for (int j = 0; j < i; j = num + 1)
             {

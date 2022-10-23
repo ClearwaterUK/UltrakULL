@@ -4,7 +4,7 @@
 		"langAuthor": "Clearwater",
 		"langVersion": "0.1",
 
-        "minimumModVersion": "0.8.2"
+        "minimumModVersion": "0.8.3"
 	},
     
 	"body": {
@@ -349,6 +349,11 @@
         "level_fullIntroPromptCancel": ""
 	},
     "visualnovel": {
+
+        "visualnovel_mirageName1": "",
+        "visualnovel_mirageName2": "",
+        "visualnovel_mirageName3": "",
+
         "visualnovel_introFirst1": "",
         "visualnovel_introFirst2": "",
         "visualnovel_introFirst3": "",

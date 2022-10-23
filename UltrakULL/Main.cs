@@ -44,7 +44,6 @@ using UltrakULL.json;
  *  
  *  BUGS AND QUIRKS TO FIX:
  * - Reexamine the intro text. See if I can get input working again
- * - 2-S: See if I can rename Mirage's names. (IntermissionController has a property with the names. To investigate)
  * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages (currently due to current subtitle implentation. Will need to change some things)
  * - Discord RPC: Style meter in CG
  * - Could be possible to swap out rank textures in HUD for translation. Shall look into later
@@ -75,7 +74,7 @@ namespace UltrakULL
     {
         public const string pluginGuid = "clearwater.ultrakill.ultrakULL";
         public const string pluginName = "UltrakULL - Ultrakill Language Library";
-        public const string pluginVersion = "0.8.2";
+        public const string pluginVersion = "0.8.3";
 
         public static MainPatch instance = null;
         private PatchedFunctions patchedFuncs;
