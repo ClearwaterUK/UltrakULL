@@ -4,7 +4,7 @@
 		"langAuthor": "Clearwater,Frizou",
 		"langVersion": "0.6",
         
-        "minimumModVersion": "0.8.2"
+        "minimumModVersion": "0.8.3"
 	},
 	"body": {
 		"bodyName": "Traduction française pour ULTRAKILL. Developpé par Clearwater; contributions, relectures et corrections par Frizou."
@@ -329,6 +329,10 @@
         "level_fullIntroPromptCancel": "ANNULER"
 	},
     "visualnovel": {
+        "visualnovel_mirageName1": "JUSTE QUELQU'UN",
+        "visualnovel_mirageName2": "LA FILLE LA PLUS JOLIE DU VILLE",
+        "visualnovel_mirageName3": "MIRAGE",
+
         "visualnovel_introFirst1": "Des pas lourds, du respiration déchiré.",
         "visualnovel_introFirst2": "Il ne restait pas beaucoup de temps.",
         "visualnovel_introFirst3": "Il était peut-être déjà trop tard.",
@@ -747,7 +751,10 @@
 		"save_deleteYes": "SUPPRIMER",
 		"save_deleteNo": "ANNULER",
 		"save_close": "FERMER",
-		"save_slotEmpty": "VIDE"
+		"save_slotEmpty": "VIDE",
+
+        "language_title": "LANGUE",
+        "language_languages": "LANGUES"
 	},
 	"pauseMenu": {
 		"pause_title": "PAUSE",
@@ -769,6 +776,9 @@
 	},
 	"levelNames": {
         "levelName_mainMenu": "MENU PRINCIPAL",
+        "levelName_tutorial": "TUTORIEL",
+        "levelName_cybergrind": "LE CYBERGRIND",
+		"levelName_sandbox": "BOÎTE À SABLE",
         
 		"levelName_preludeFirst": "DU MAUVAIS AU PIRE",
 		"levelName_preludeSecond": "L'ABBATOIR",
@@ -809,10 +819,9 @@
 
 		"levelName_primeFirst": "L'ÂME SURVIVANTE",
 		"levelName_primeSecond": "?",
-		"levelName_primeThird": "?",
+		"levelName_primeThird": "?"
 
-		"levelName_cybergrind": "LE CYBERGRIND",
-		"levelName_sandbox": "BOÎTE À SABLE"
+
 	},
 	"levelChallenges": {
 		"challenges_preludeFirst": "ÉLIMINE 5 ENNEMIS AVEC UNE PANNEAU VITRÉ",
@@ -915,6 +924,7 @@
         "shop_cybergrind": "LE CYBERGRIND",
         "shop_sandbox": "BOÎTE À SABLE",
         "shop_returnToMission": "RETOURNER AU MISSION",
+        "shop_soulOrbs": "GLOBES D'ÂME",
         
         "shop_cybergrindDescription1": "<color=red>Le Cybergrind est un mode de survie sans fin</color>.",
         "shop_cybergrindDescription2": "Une bonne performance donnera beaucoup de <color=red>points</color>.",
@@ -1546,7 +1556,10 @@
         "act2_greedFourth_whiplashHardDamage1": "<color=lime>COUP DE FOUET</color>: Accumule des <color=grey>DÉGÂTS DURS</color> lorsque son utilisation.",
 		"act2_greedFourth_whiplashHardDamage2": "<color=orange>NE RÉDUIT PAS LA SANTÉ</color>, mais risqué quand la santé est bas.",
 
-		"act2_greedSecret_holdToJump": "MAINTENIR <color=orange>ESPACE</color> pour augmenter la distance de crebond.",
+		"act2_greedSecret_holdToJump1": "MAINTENIR",
+        "act2_greedSecret_holdToJump2": "pour augmenter la distance de rebond.",
+        "act2_greedSecret_transactionComplete1": "TRANSACTION TERMINÉ",
+        "act2_greedSecret_transactionComplete2": "PIÈCES",
         
         "act2_greed_secretDoor": "Une porte a été ouverte.",
         

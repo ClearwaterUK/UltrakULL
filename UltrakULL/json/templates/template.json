@@ -4,7 +4,7 @@
 		"langAuthor": "Clearwater",
 		"langVersion": "0.1",
 
-        "minimumModVersion": "0.8.2"
+        "minimumModVersion": "0.8.3"
 	},
     
 	"body": {
@@ -349,6 +349,11 @@
         "level_fullIntroPromptCancel": ""
 	},
     "visualnovel": {
+
+        "visualnovel_mirageName1": "",
+        "visualnovel_mirageName2": "",
+        "visualnovel_mirageName3": "",
+
         "visualnovel_introFirst1": "",
         "visualnovel_introFirst2": "",
         "visualnovel_introFirst3": "",
@@ -768,7 +773,10 @@
 		"save_deleteYes": "",
 		"save_deleteNo": "",
 		"save_close": "",
-		"save_slotEmpty": ""
+		"save_slotEmpty": "",
+
+        "language_title": "",
+        "language_languages": ""
 	},
 	"pauseMenu": {
 		"pause_title": "",
@@ -789,6 +797,9 @@
 	},
 	"levelNames": {
         "levelName_mainMenu": "",
+		"levelName_cybergrind": "",
+		"levelName_sandbox": "",
+        "levelName_tutorial": "",
         
 		"levelName_preludeFirst": "",
 		"levelName_preludeSecond": "",
@@ -829,10 +840,8 @@
 
 		"levelName_primeFirst": "",
 		"levelName_primeSecond": "",
-		"levelName_primeThird": "",
+		"levelName_primeThird": ""
 
-		"levelName_cybergrind": "",
-		"levelName_sandbox": ""
 	},
 	"levelChallenges":{
 		"challenges_preludeFirst": "",
@@ -935,6 +944,7 @@
         "shop_cybergrind": "",
         "shop_sandbox": "",
         "shop_returnToMission": "",
+        "shop_soulOrbs": "",
         
         "shop_cybergrindDescription1": "",
         "shop_cybergrindDescription2": "",
@@ -1565,6 +1575,8 @@
 
 		"act2_greedSecret_holdToJump1": "",
         "act2_greedSecret_holdToJump2": "",
+        "act2_greedSecret_transactionComplete1": "",
+        "act2_greedSecret_transactionComplete2": "",
         
         "act2_greed_secretDoor": "",
         

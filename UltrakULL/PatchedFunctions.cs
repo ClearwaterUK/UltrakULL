@@ -15,6 +15,7 @@ using UnityEngine.Events;
 using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace UltrakULL
 {
@@ -33,6 +34,49 @@ namespace UltrakULL
 
         public static StatsManager cachedStatsManager;
         public static bool cachedStatsReady;
+
+        public static bool skipToInput = false;
+
+        //@Override
+        //Overrides the private CoinsToPoints function in the CrateCounter class
+        public static bool CoinsToPoints_MyPatch(CrateCounter __instance, int ___savedCoins)
+        {
+            GameProgressSaver.AddMoney(___savedCoins * 100);
+
+            MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage(string.Concat(new object[]
+            {
+                "<color=grey>" + LanguageManager.CurrentLanguage.act2.act2_greedSecret_transactionComplete1 + ":</color> ",
+                ___savedCoins,
+                " " + LanguageManager.CurrentLanguage.act2.act2_greedSecret_transactionComplete2 +" <color=orange>=></color> ",
+                StatsManager.DivideMoney(___savedCoins * 100),
+                "<color=orange>P</color>"
+            }), "", "", 0, false);
+
+
+            ___savedCoins = 0;
+            return false;
+        }
+
+        //@Override
+        //Overrides OnEnable from the GunColorTypeGetter class. Used for the Soul Orb checker.
+
+        public static void OnEnablePostFix_MyPatch(GunColorTypeGetter __instance)
+        {
+            for (int i = 1; i < 5; i++)
+            {
+                bool flag = GameProgressSaver.GetTotalSecretsFound() >= GunColorController.requiredSecrets[i];
+                if(!flag)
+                { 
+                    __instance.templateTexts[i].text = string.Concat(new object[]
+                    {
+                        LanguageManager.CurrentLanguage.shop.shop_soulOrbs + ": ",
+                        GameProgressSaver.GetTotalSecretsFound(),
+                        " / ",
+                        GunColorController.requiredSecrets[i]
+                    });
+                }
+            }
+        }
 
         //@Override
         //Overrides ScanBook from the ScanningStuff class. Used to translate books found in some levels.
@@ -1014,21 +1058,49 @@ namespace UltrakULL
             IntermissionStrings intStrings = new IntermissionStrings();
             ___fullString = intStrings.getIntermissionString(___fullString);
 
+            //Section for 2-S Mirage's names.
+            if (SceneManager.GetActiveScene().name == "Level 2-S")
+            {
+                string openingTag = "<color=grey>";
+                string closingTag = "</color>";
+                string mirageName = Regex.Replace(___preText, @"<[^>]*>", "");
+                Console.WriteLine(mirageName);
+                switch(mirageName)
+                {
+                    case ("???:"): { break; }
+                    case ("JUST SOMEONE:"): { ___preText = openingTag + LanguageManager.CurrentLanguage.visualnovel.visualnovel_mirageName1 + closingTag + ":"; break; }
+                    case ("THE PRETTIEST GIRL IN TOWN:"): { ___preText = openingTag + LanguageManager.CurrentLanguage.visualnovel.visualnovel_mirageName2 + closingTag + ":"; break; }
+                    case ("MIRAGE:"): { ___preText = openingTag + LanguageManager.CurrentLanguage.visualnovel.visualnovel_mirageName3 + closingTag + ":"; break; }
+                    default: { break; }
+                }
+                Console.WriteLine(___preText);
+            }
+
+
             __instance.StartCoroutine(TextAppearMain(__instance, ___fullString, ___sb, ___txt, ___tempString, ___skipToInput, ___waitingForInput, ___preText, ___aud, ___origPitch));
 
             return false;
         }
 
-        //Two small leftover problems - Can't hold down left click to speed up text (See just below), and it takes two clicks to switch paragraphs (?)
+
         public static IEnumerator TextAppearMain(IntermissionController __instance, string ___fullString, StringBuilder ___sb, Text ___txt, string ___tempString, bool ___skipToInput, bool ___waitingForInput, string ___preText, AudioSource ___aud, float ___origPitch)
         {
             int i = ___fullString.Length;
             int num = 0;
 
+
             for (int j = 0; j < i; j = num + 1)
             {
                 char c = ___fullString[j];
-                float waitTime = 0.02f;
+                float waitTime = 0.04f;
+                if (skipToInput)
+                {
+                    waitTime = 0.01f;
+                }
+                if ((Input.GetKeyDown(KeyCode.Mouse0) || MonoSingleton<InputManager>.Instance == null || (!MonoSingleton<InputManager>.Instance.PerformingCheatMenuCombo() && MonoSingleton<InputManager>.Instance.InputSource.Fire1.WasPerformedThisFrame) || Input.GetKey(KeyCode.Space) || MonoSingleton<InputManager>.Instance.InputSource.Dodge.IsPressed))
+                {
+                    skipToInput = true;
+                }
                 bool playSound = true;
                 if (MonoSingleton<OptionsManager>.Instance.paused)
                 {
@@ -1048,6 +1120,7 @@ namespace UltrakULL
                             ___txt.text = ___preText + ___fullString.Substring(0, j);
                             ___tempString = ___txt.text;
                             ___skipToInput = false;
+                            skipToInput = false;
                             ___waitingForInput = true;
 
                             Coroutine nextLine = __instance.StartCoroutine(IntermissionDotsAppear(__instance, ___waitingForInput, ___txt, ___tempString));

@@ -4,7 +4,7 @@
 		"langAuthor": "Hakita",
 		"langVersion": "1.0",
 
-        "minimumModVersion": "0.8.2"
+        "minimumModVersion": "0.8.3"
 	},
     
 	"body": {
@@ -348,6 +348,10 @@
         "level_fullIntroPromptCancel": "CANCEL"
 	},
     "visualnovel": {
+        "visualnovel_mirageName1": "JUST SOMEONE",
+        "visualnovel_mirageName2": "THE PRETTIEST GIRL IN TOWN",
+        "visualnovel_mirageName3": "MIRAGE",
+
         "visualnovel_introFirst1": "Heavy steps, ragged breathing.",
         "visualnovel_introFirst2": "There isn't much time left",
         "visualnovel_introFirst3": "It might already be too late.",
@@ -790,7 +794,10 @@
 		"save_deleteYes": "YES, DELETE",
 		"save_deleteNo": "CANCEL",
 		"save_close": "CLOSE",
-		"save_slotEmpty": "EMPTY"
+		"save_slotEmpty": "EMPTY",
+
+        "language_title": "LANGUAGE",
+        "language_languages": "LANGUAGES"
 	},
 	"pauseMenu": {
 		"pause_title": "PAUSE",
@@ -811,6 +818,9 @@
 	},
 	"levelNames": {
         "levelName_mainMenu": "MAIN MENU",
+        "levelName_cybergrind": "THE CYBER GRIND",
+		"levelName_sandbox": "uk_construct",
+        "levelName_tutorial": "TUTORIAL",
         
 		"levelName_preludeFirst": "INTO THE FIRE",
 		"levelName_preludeSecond": "THE MEATGRINDER",
@@ -851,10 +861,9 @@
 
 		"levelName_primeFirst": "SOUL SURVIVOR",
 		"levelName_primeSecond": "",
-		"levelName_primeThird": "",
+		"levelName_primeThird": ""
 
-		"levelName_cybergrind": "THE CYBER GRIND",
-		"levelName_sandbox": "uk_construct"
+
 	},
 	"levelChallenges":{
 		"challenges_preludeFirst": "KILL 5 ENEMIES WITH A SINGLE GLASS PANEL",
@@ -959,6 +968,7 @@
         "shop_cybergrind": "THE CYBER GRIND",
         "shop_sandbox": "SANDBOX",
         "shop_returnToMission": "RETURN TO MISSION",
+        "shop_soulOrbs": "SOUL ORBS",
         
         "shop_cybergrindDescription1": "The Cyber Grind is an endless survival mode.",
         "shop_cybergrindDescription2": "Good performance gives many points.",
@@ -1590,6 +1600,8 @@
 
 		"act2_greedSecret_holdToJump1": "Hold",
         "act2_greedSecret_holdToJump2": "to bounce higher",
+        "act2_greedSecret_transactionComplete1": "TRANSACTION COMPLETE",
+        "act2_greedSecret_transactionComplete2": "COINS",
         
         "act2_greed_secretDoor": "An eye opens.",
         

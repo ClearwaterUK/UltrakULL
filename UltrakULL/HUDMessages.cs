@@ -51,9 +51,13 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.misc.hud_weaponVariation;
             }
+            if (message.Contains("=>"))
+            {
+                return message; //4-S transaction complete
+            }
 
             //Cybergrind custom pattern fix
-            if(SceneManager.GetActiveScene().name == "Endless")
+            if (SceneManager.GetActiveScene().name == "Endless")
             {
                 return message;
             }

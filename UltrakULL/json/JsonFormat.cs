@@ -609,6 +609,10 @@ namespace UltrakULL.json
 
     public class VisualNovel
     {
+        public string visualnovel_mirageName1;
+        public string visualnovel_mirageName2;
+        public string visualnovel_mirageName3;
+
         public string visualnovel_introFirst1;
         public string visualnovel_introFirst2;
         public string visualnovel_introFirst3;
@@ -860,6 +864,7 @@ namespace UltrakULL.json
         public string act1_intermission_insert;
         public string act1_intermission_returnToMenu;
 
+
         public string act2_intermission_first1;
         public string act2_intermission_first2;
         public string act2_intermission_first3;
@@ -1073,6 +1078,7 @@ namespace UltrakULL.json
         public string shop_cybergrind;
         public string shop_returnToMission;
         public string shop_sandbox;
+        public string shop_soulOrbs;
 
         public string shop_cybergrindDescription1;
         public string shop_cybergrindDescription2;
@@ -1252,6 +1258,7 @@ namespace UltrakULL.json
         public string levelName_mainMenu;
         public string levelName_cybergrind;
         public string levelName_sandbox;
+        public string levelName_tutorial;
 
         public string levelName_preludeFirst;
         public string levelName_preludeSecond;
@@ -1631,7 +1638,8 @@ namespace UltrakULL.json
         public string save_close;
         public string save_slotEmpty;
 
-
+        public string language_title;
+        public string language_languages;
     }
 
     public class Tutorial
@@ -1783,6 +1791,9 @@ namespace UltrakULL.json
         public string act2_greedSecret_holdToJump1;
         public string act2_greedSecret_holdToJump2;
 
+        public string act2_greedSecret_transactionComplete1;
+        public string act2_greedSecret_transactionComplete2;
+
         public string act2_greed_secretDoor;
 
         public string act2_wrathFirst_slingshot;
@@ -1928,5 +1939,6 @@ namespace UltrakULL.json
         public string earlyAccessEnd1;
         public string earlyAccessEnd2;
         public string earlyAccessEnd3;
+
     }
 }

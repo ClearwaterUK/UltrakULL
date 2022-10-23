@@ -40,15 +40,14 @@ using UltrakULL.json;
  *  - Organise and refactor stuff, move functions to other files to declutter Main (Simplify getGameObjectChild and getTextFromgameObject in each file, take itfrom CommonFunctions) (Factorise the act classes with an interface?)
  *  - Look into how I can do encoding for RTL languages such as Arabic
  *  - Port main class so it becomes a native UMM mod instead of BepInEx. With the way its structured, could be able to move config/lang files to same folder.
+ *  - Green Rocketlauncher incoming
  *  
  *  BUGS AND QUIRKS TO FIX:
- * - Reexamine the intro text. See if I can get input working again, as well as shorten the 3 dots time based on the Act 2 update original code
- * - 2-S: See if I can rename Mirage's names. (IntermissionController has a property with the names. To investigate)
+ * - Reexamine the intro text. See if I can get input working again
  * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages (currently due to current subtitle implentation. Will need to change some things)
  * - Discord RPC: Style meter in CG
  * - Could be possible to swap out rank textures in HUD for translation. Shall look into later
  * - Move the loaded language class to a seperate class. Would make it easier to access instead of doing currentLanguage.language.etc...
- * - Discord RPC currently seems to be broken on my end as a whole, meaning I can't test Discord RPC in the mod on my end (keeps throwing InternalError. People that have tested seems to be working fine but can't check on my end for myself)
  * - Attempt to replace the default font with a version that has better special char + cyrillic support
  * - Blue hex color used in the intro is semi-broken. Replaced it with a default color that works for now
  * 
@@ -62,6 +61,8 @@ using UltrakULL.json;
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * 
  * Options->Sandbox icons names
+ * - 2-S arrow bugs, act 2 intermissions
+ * - CG high scores aren't saved?
  * */
 
 namespace UltrakULL
@@ -73,7 +74,7 @@ namespace UltrakULL
     {
         public const string pluginGuid = "clearwater.ultrakill.ultrakULL";
         public const string pluginName = "UltrakULL - Ultrakill Language Library";
-        public const string pluginVersion = "0.8.2";
+        public const string pluginVersion = "0.8.3";
 
         public static MainPatch instance = null;
         private PatchedFunctions patchedFuncs;
@@ -325,7 +326,7 @@ namespace UltrakULL
                 + "<color=orange>UltrakULL (ULTRAKILL Language Library)</color>" + "\n"
                 + "A TRANSLATION MOD FOR ULTRAKILL" + "\n"
                 + "CREATED BY <color=orange>CLEARWATER</color> AND THE <color=orange>UltrakULL TRANSLATION TEAM</color>" + "\n"
-                + "UI CODE CONTRIBUTIONS BY <color=orange>TEMPERZ87</color>" + "\n"
+                + "CODE CONTRIBUTIONS BY <color=orange>TEMPERZ87</color>" + "\n"
                 + "FULL LANGUAGE CREDITS IN THE MOD README (to come later)" + "\n";
 
         }
@@ -341,6 +342,11 @@ namespace UltrakULL
             MethodInfo originalOptions = typeof(OptionsMenuToManager).GetMethod("Start", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
             MethodInfo patchedOptions = AccessTools.Method(typeof(Inject_LanguageButton), "Prefix");
             harmony.Patch(originalOptions, new HarmonyMethod(patchedOptions));
+
+            Logger.LogInfo("CrateCounter->CoinsToPoints");
+            MethodInfo originalCoinsToPoints = typeof(CrateCounter).GetMethod("CoinsToPoints");
+            MethodInfo patchedCoinsToPoints = AccessTools.Method(typeof(PatchedFunctions), "CoinsToPoints_MyPatch");
+            harmony.Patch(originalCoinsToPoints, new HarmonyMethod(patchedCoinsToPoints));
 
             Logger.LogInfo("DifficultyTitle->Check");
             MethodInfo originalCheckFunction = AccessTools.Method(typeof(DifficultyTitle), "Check");
@@ -402,7 +408,7 @@ namespace UltrakULL
             MethodInfo patchedIntermissionStart = AccessTools.Method(typeof(PatchedFunctions), "Start_MyPatch");
             harmony.Patch(originalIntermissionStart, new HarmonyMethod(patchedIntermissionStart));
 
-            Logger.LogInfo("SubtitleController->DisplaySubtitle");
+             Logger.LogInfo("SubtitleController->DisplaySubtitle");
             MethodInfo originalDisplaySubtitle = AccessTools.Method(typeof(SubtitleController), "DisplaySubtitle", new Type[] { typeof(string), typeof(AudioSource) });
             MethodInfo patchedDisplaySubtitle = AccessTools.Method(typeof(PatchedFunctions), "DisplaySubtitle_MyPatch");
             harmony.Patch(originalDisplaySubtitle, new HarmonyMethod(patchedDisplaySubtitle));
@@ -486,6 +492,11 @@ namespace UltrakULL
             MethodInfo originalScanBook = typeof(ScanningStuff).GetMethod("ScanBook", new Type[]{typeof(string), typeof(bool), typeof(int)});
             MethodInfo patchedScanBook = AccessTools.Method(typeof(PatchedFunctions), "ScanBook_MyPatch");
             harmony.Patch(originalScanBook, new HarmonyMethod(patchedScanBook));
+
+            Logger.LogInfo("GunTypeColorGetter->OnEnable (Postfix)");
+            MethodInfo originalGunTypeColorGetterOnEnable = typeof(GunColorTypeGetter).GetMethod("OnEnable", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
+            MethodInfo patchedGunTypeColorGetterOnEnable = AccessTools.Method(typeof(PatchedFunctions), "OnEnablePostFix_MyPatch");
+            harmony.Patch(originalGunTypeColorGetterOnEnable, null,new HarmonyMethod(patchedGunTypeColorGetterOnEnable));
 
             Logger.LogInfo("Done");
         }
