@@ -20,10 +20,10 @@ namespace UltrakULL
 
 		public static string getDiscordLevelName(string missionName)
         {
-			if (missionName.Contains("Main Menu")) { return language.currentLanguage.levelNames.levelName_mainMenu; }
-			if (missionName.Contains("Endless")) { return language.currentLanguage.levelNames.levelName_cybergrind; }
-			if (missionName.Contains("uk_construct")) { return language.currentLanguage.levelNames.levelName_sandbox; }
-			if (missionName.Contains("Tutorial")) { return language.currentLanguage.levelNames.levelName_tutorial; }
+			if (missionName.Contains("Main Menu")) { return LanguageManager.CurrentLanguage.levelNames.levelName_mainMenu; }
+			if (missionName.Contains("Endless")) { return LanguageManager.CurrentLanguage.levelNames.levelName_cybergrind; }
+			if (missionName.Contains("uk_construct")) { return LanguageManager.CurrentLanguage.levelNames.levelName_sandbox; }
+			if (missionName.Contains("Tutorial")) { return LanguageManager.CurrentLanguage.levelNames.levelName_tutorial; }
 
 			if (missionName.Contains("0-1")) { return "0-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_preludeFirst; }
 			if (missionName.Contains("0-2")) { return "0-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_preludeSecond; }

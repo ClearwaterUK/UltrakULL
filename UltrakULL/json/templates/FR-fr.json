@@ -747,7 +747,10 @@
 		"save_deleteYes": "SUPPRIMER",
 		"save_deleteNo": "ANNULER",
 		"save_close": "FERMER",
-		"save_slotEmpty": "VIDE"
+		"save_slotEmpty": "VIDE",
+
+        "language_title": "LANGUE",
+        "language_languages": "LANGUES"
 	},
 	"pauseMenu": {
 		"pause_title": "PAUSE",

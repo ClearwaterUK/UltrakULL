@@ -768,7 +768,10 @@
 		"save_deleteYes": "",
 		"save_deleteNo": "",
 		"save_close": "",
-		"save_slotEmpty": ""
+		"save_slotEmpty": "",
+
+        "language_title": "",
+        "language_languages": ""
 	},
 	"pauseMenu": {
 		"pause_title": "",

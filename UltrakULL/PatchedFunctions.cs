@@ -47,7 +47,7 @@ namespace UltrakULL
                 { 
                     __instance.templateTexts[i].text = string.Concat(new object[]
                     {
-                        language.currentLanguage.shop.shop_soulOrbs + ": ",
+                        LanguageManager.CurrentLanguage.shop.shop_soulOrbs + ": ",
                         GameProgressSaver.GetTotalSecretsFound(),
                         " / ",
                         GunColorController.requiredSecrets[i]

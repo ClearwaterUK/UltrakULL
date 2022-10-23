@@ -1,5 +1,9 @@
 ﻿0.8.3
 
+- The "Language" tab in the options menu now has full functionality! You can now switch your languages in-game without having to manually edit your config files.
+A huge thank you to Temperz87 for this contribution.
+- Added strings for the language tab in the options menu.
+(NOTE: Invalidated or mismatched files will not show in-game, but can still be force loaded by manually setting it in lastLang.cfg and restarting)
 - Added a string for the tutorial before 0-1 for the Discord Rich Presence.
 - Added the "under construction" string for weapons not yet available in the game.
 - Added the Soul Orbs string for weapon preset selection, when not enough Soul Orbs have been collected to unlock a preset.

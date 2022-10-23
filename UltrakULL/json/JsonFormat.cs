@@ -1633,7 +1633,8 @@ namespace UltrakULL.json
         public string save_close;
         public string save_slotEmpty;
 
-
+        public string language_title;
+        public string language_languages;
     }
 
     public class Tutorial
@@ -1930,5 +1931,6 @@ namespace UltrakULL.json
         public string earlyAccessEnd1;
         public string earlyAccessEnd2;
         public string earlyAccessEnd3;
+
     }
 }

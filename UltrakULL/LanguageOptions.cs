@@ -27,7 +27,7 @@ public static class Inject_LanguageButton
         Transform optionsParent = __instance.optionsMenu.transform;
         GameObject languageButton = GameObject.Instantiate(optionsParent.Find("Gameplay").gameObject, optionsParent);
         languageButton.transform.localPosition += new Vector3(0f, 60f, 0f);
-        languageButton.transform.GetChild(0).gameObject.GetComponent<Text>().text = "LANGUAGE"; // Be sure to localize this btw
+        languageButton.transform.GetChild(0).gameObject.GetComponent<Text>().text = LanguageManager.CurrentLanguage.options.language_languages;
 
         Button button = languageButton.GetComponent<Button>();
         GameObject pageToDisable = optionsParent.Find("Gameplay Options").gameObject;
@@ -38,7 +38,7 @@ public static class Inject_LanguageButton
 
         GameObject languagePage = GameObject.Instantiate(pageToDisable, optionsParent);
         languagePage.SetActive(false);
-        languagePage.transform.Find("Text").GetComponent<Text>().text = "--LANGUAGES--"; // Be sure to localize this buddy :P
+        languagePage.transform.Find("Text").GetComponent<Text>().text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
         Transform contentParent = languagePage.transform.Find("Scroll Rect (1)").Find("Contents");
         foreach (Transform child in contentParent.GetComponentInChildren<Transform>(true))
             child.gameObject.SetActive(false);
