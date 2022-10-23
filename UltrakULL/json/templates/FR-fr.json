@@ -1552,7 +1552,10 @@
         "act2_greedFourth_whiplashHardDamage1": "<color=lime>COUP DE FOUET</color>: Accumule des <color=grey>DÉGÂTS DURS</color> lorsque son utilisation.",
 		"act2_greedFourth_whiplashHardDamage2": "<color=orange>NE RÉDUIT PAS LA SANTÉ</color>, mais risqué quand la santé est bas.",
 
-		"act2_greedSecret_holdToJump": "MAINTENIR <color=orange>ESPACE</color> pour augmenter la distance de crebond.",
+		"act2_greedSecret_holdToJump1": "MAINTENIR",
+        "act2_greedSecret_holdToJump2": "pour augmenter la distance de rebond.",
+        "act2_greedSecret_transactionComplete1": "TRANSACTION TERMINÉ",
+        "act2_greedSecret_transactionComplete2": "PIÈCES",
         
         "act2_greed_secretDoor": "Une porte a été ouverte.",
         

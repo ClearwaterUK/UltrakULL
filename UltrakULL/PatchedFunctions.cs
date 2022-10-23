@@ -36,6 +36,26 @@ namespace UltrakULL
 
 
         //@Override
+        //Overrides the private CoinsToPoints function in the CrateCounter class
+        public static bool CoinsToPoints_MyPatch(CrateCounter __instance, int ___savedCoins)
+        {
+            GameProgressSaver.AddMoney(___savedCoins * 100);
+
+            MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage(string.Concat(new object[]
+            {
+                "<color=grey>" + LanguageManager.CurrentLanguage.act2.act2_greedSecret_transactionComplete1 + ":</color> ",
+                ___savedCoins,
+                " " + LanguageManager.CurrentLanguage.act2.act2_greedSecret_transactionComplete2 +" <color=orange>=></color> ",
+                StatsManager.DivideMoney(___savedCoins * 100),
+                "<color=orange>P</color>"
+            }), "", "", 0, false);
+
+
+            ___savedCoins = 0;
+            return false;
+        }
+
+        //@Override
         //Overrides OnEnable from the GunColorTypeGetter class. Used for the Soul Orb checker.
 
         public static void OnEnablePostFix_MyPatch(GunColorTypeGetter __instance)

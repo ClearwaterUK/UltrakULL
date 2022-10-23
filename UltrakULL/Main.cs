@@ -63,8 +63,7 @@ using UltrakULL.json;
  * 
  * Options->Sandbox icons names
  * - 2-S arrow bugs, act 2 intermissions
- * - CG score fucked up?
- * - Coins to points transition at end of 4-S
+ * - CG high scores aren't saved?
  * */
 
 namespace UltrakULL
@@ -327,7 +326,7 @@ namespace UltrakULL
                 + "<color=orange>UltrakULL (ULTRAKILL Language Library)</color>" + "\n"
                 + "A TRANSLATION MOD FOR ULTRAKILL" + "\n"
                 + "CREATED BY <color=orange>CLEARWATER</color> AND THE <color=orange>UltrakULL TRANSLATION TEAM</color>" + "\n"
-                + "UI CODE CONTRIBUTIONS BY <color=orange>TEMPERZ87</color>" + "\n"
+                + "CODE CONTRIBUTIONS BY <color=orange>TEMPERZ87</color>" + "\n"
                 + "FULL LANGUAGE CREDITS IN THE MOD README (to come later)" + "\n";
 
         }
@@ -343,6 +342,11 @@ namespace UltrakULL
             MethodInfo originalOptions = typeof(OptionsMenuToManager).GetMethod("Start", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
             MethodInfo patchedOptions = AccessTools.Method(typeof(Inject_LanguageButton), "Prefix");
             harmony.Patch(originalOptions, new HarmonyMethod(patchedOptions));
+
+            Logger.LogInfo("CrateCounter->CoinsToPoints");
+            MethodInfo originalCoinsToPoints = typeof(CrateCounter).GetMethod("CoinsToPoints");
+            MethodInfo patchedCoinsToPoints = AccessTools.Method(typeof(PatchedFunctions), "CoinsToPoints_MyPatch");
+            harmony.Patch(originalCoinsToPoints, new HarmonyMethod(patchedCoinsToPoints));
 
             Logger.LogInfo("DifficultyTitle->Check");
             MethodInfo originalCheckFunction = AccessTools.Method(typeof(DifficultyTitle), "Check");

@@ -1596,6 +1596,8 @@
 
 		"act2_greedSecret_holdToJump1": "Hold",
         "act2_greedSecret_holdToJump2": "to bounce higher",
+        "act2_greedSecret_transactionComplete1": "TRANSACTION COMPLETE",
+        "act2_greedSecret_transactionComplete2": "COINS",
         
         "act2_greed_secretDoor": "An eye opens.",
         

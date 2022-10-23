@@ -2,9 +2,10 @@
 
 - The "Language" tab in the options menu now has full functionality! You can now switch your languages in-game without having to manually edit your config files.
 A huge thank you to Temperz87 for this contribution.
-- Added strings for the language tab in the options menu.
 (NOTE: Invalidated or mismatched files will not show in-game, but can still be force loaded by manually setting it in lastLang.cfg and restarting)
+- Added strings for the language tab in the options menu.
 - Added a string for the tutorial before 0-1 for the Discord Rich Presence.
+- Added strings for the transaction message at the end of 4-S.
 - Added the "under construction" string for weapons not yet available in the game.
 - Added the Soul Orbs string for weapon preset selection, when not enough Soul Orbs have been collected to unlock a preset.
 - Fixed a standing issue with previous patched code causing saves to not be deleted correctly.
@@ -15,6 +16,10 @@ A huge thank you to Temperz87 for this contribution.
 misc: weapons_underConstruction
 levelNames: levelName_tutorial
 shop: shop_soulOrbs
+options: language_title
+options: language_languages
+act2: act2_greedSecret_transactionComplete1
+act2: act2_greedSecret_transactionComplete2
 
 
 0.8.2 EMERGENCY FIX

@@ -1786,6 +1786,9 @@ namespace UltrakULL.json
         public string act2_greedSecret_holdToJump1;
         public string act2_greedSecret_holdToJump2;
 
+        public string act2_greedSecret_transactionComplete1;
+        public string act2_greedSecret_transactionComplete2;
+
         public string act2_greed_secretDoor;
 
         public string act2_wrathFirst_slingshot;

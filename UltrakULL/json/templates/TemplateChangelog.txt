@@ -6,6 +6,8 @@ levelNames: levelName_tutorial
 shop: shop_soulOrbs
 options: language_title
 options: language_languages
+act2: act2_greedSecret_transactionComplete1
+act2: act2_greedSecret_transactionComplete2
 
 CHANGED:
 

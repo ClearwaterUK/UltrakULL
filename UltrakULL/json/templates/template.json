@@ -1570,6 +1570,8 @@
 
 		"act2_greedSecret_holdToJump1": "",
         "act2_greedSecret_holdToJump2": "",
+        "act2_greedSecret_transactionComplete1": "",
+        "act2_greedSecret_transactionComplete2": "",
         
         "act2_greed_secretDoor": "",
         
