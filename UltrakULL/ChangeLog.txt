@@ -1,4 +1,7 @@
-﻿0.8.3
+﻿0.8.4
+- Fixed the "transaction complete" HUD message from 4-S appearing at the end of every level.
+
+0.8.3
 
 - The "Language" tab in the options menu now has full functionality! You can now switch your languages in-game without having to manually edit your config files.
 A huge thank you to Temperz87 for this contribution.
