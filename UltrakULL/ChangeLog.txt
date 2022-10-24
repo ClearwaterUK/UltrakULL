@@ -1,5 +1,8 @@
 ﻿0.8.4
 - Fixed the "transaction complete" HUD message from 4-S appearing at the end of every level.
+- Fixed the UltrakULL status text on the main menu duplicating upon switching language (thanks Temperz)
+- Fixed golden borders on P-ranked levels and layers not appearing. (thanks Temperz)
+- Fixed some instances of Discord-related functions constantly nulling.(thanks Temperz)
 
 0.8.3
 
