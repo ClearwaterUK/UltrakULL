@@ -193,6 +193,8 @@ namespace UltrakULL
             {
                 if (__instance.challengeIcon)
                 {
+                    if (LanguageManager.CurrentLanguage.frontend.level_challengeCompleted == null)
+                        return;
                     if (rank.challenge)
                     {
                         __instance.challengeIcon.fillCenter = true;
@@ -1457,6 +1459,8 @@ namespace UltrakULL
         //Have to use AccessTools functions because for some reason using arguments causes illegal IL code errors.
         public static bool UpdateStyle_MyPatch(int points, DiscordController __instance)
         {
+            if (Traverse.Create(__instance).Field("disabled").GetValue<bool>())
+                return true;
             DiscordController privateInstance = (DiscordController)AccessTools.Field(typeof(DiscordController), "Instance").GetValue(__instance);
             bool privateDisabled = (bool)AccessTools.Field(typeof(DiscordController), "disabled").GetValue(privateInstance);
             int privatelastPoints = (int)AccessTools.Field(typeof(DiscordController), "lastPoints").GetValue(privateInstance);

@@ -78,6 +78,7 @@ namespace UltrakULL
 
         public static MainPatch instance = null;
         private PatchedFunctions patchedFuncs;
+        private GameObject ultrakullLogo = null;
 
         private bool ready = false;
 
@@ -540,7 +541,9 @@ namespace UltrakULL
                         Logger.LogInfo("Hooked into front end, patching...");
                         patchFrontEnd(frontEnd);
 
-                        GameObject ultrakullLogo = GameObject.Instantiate(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Title"), "Text"), frontEnd.transform);
+                        if (ultrakullLogo != null)
+                            GameObject.Destroy(ultrakullLogo);
+                        ultrakullLogo = GameObject.Instantiate(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Title"), "Text"), frontEnd.transform);
                         ultrakullLogo.transform.localPosition = new Vector3(1025, -425, 0);
                         Text ultrakullLogoText = getTextfromGameObject(ultrakullLogo);
                         ultrakullLogoText.text = "ultrakULL loaded.\nVersion: " + pluginVersion + "\nLocale: " + LanguageManager.CurrentLanguage.metadata.langName + "\nWIP build\nFor internal testing only";
