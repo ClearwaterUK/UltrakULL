@@ -130,19 +130,29 @@ namespace UltrakULL
         // ~ - Wait for input (not implemented yet, skips straight to second page)
         // & - Ends intro text and loads the tutorial
 
-
         public TutorialStrings()
         {
-
             this.introFirstPage =
-                LanguageManager.CurrentLanguage.tutorial.tutorial_introStartup1 + "#" + LanguageManager.CurrentLanguage.tutorial.tutorial_introStartup2 + " \n\n"
+                LanguageManager.CurrentLanguage.tutorial.tutorial_introStartup1 + "#" + LanguageManager.CurrentLanguage.tutorial.tutorial_introStartup2 + "½ \n\n"
+
                 + LanguageManager.CurrentLanguage.tutorial.tutorial_introVersion1 + "# \n"
                 + "+" + LanguageManager.CurrentLanguage.tutorial.tutorial_introVersion2 + "_½ \n\n"
+
                 + LanguageManager.CurrentLanguage.tutorial.tutorial_introCalibration1 + "#\n"
                 + "+" + LanguageManager.CurrentLanguage.tutorial.tutorial_introCalibration2 + "_\n\n"
-                 + "(+" + LanguageManager.CurrentLanguage.tutorial.tutorial_introReminder + "_)½\n\n"
-                 + LanguageManager.CurrentLanguage.tutorial.tutorial_introLoadStatus + "# \n\n"
-                 + "~";
+
+                + LanguageManager.CurrentLanguage.tutorial.tutorial_recalibrationPrompt + "\n β/δ~ \n\n"
+
+                + LanguageManager.CurrentLanguage.tutorial.tutorial_calibrationAudio + "§Ä½ \n"
+                + LanguageManager.CurrentLanguage.tutorial.tutorial_calibrationVideo + "§Ä½ \n"
+                + LanguageManager.CurrentLanguage.tutorial.tutorial_calibrationMechanics + "§Ä½ \n\n"
+
+                + "+" + LanguageManager.CurrentLanguage.tutorial.tutorial_calibrationComplete1 + "_ \n"
+                + "+" + LanguageManager.CurrentLanguage.tutorial.tutorial_calibrationComplete2 + "_ \n"
+                + "(±" + LanguageManager.CurrentLanguage.tutorial.tutorial_introReminder + " )½ \n\n"
+
+                + "+" + LanguageManager.CurrentLanguage.tutorial.tutorial_systemsOperational + "_½ \n"
+                + LanguageManager.CurrentLanguage.tutorial.tutorial_introLoadStatus + "§";
 
             this.introSecondPage =
             LanguageManager.CurrentLanguage.tutorial.tutorial_introID1 + ":		" + LanguageManager.CurrentLanguage.tutorial.tutorial_introID2 + "½½ \n"

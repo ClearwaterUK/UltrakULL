@@ -20,7 +20,7 @@ using UltrakULL.json;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater
  *	Date started: 21st April 2021
- *	Last updated: 19th October 2022
+ *	Last updated: 26th October 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
@@ -32,6 +32,8 @@ using UltrakULL.json;
  *  - Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
  *  - Discord RPC (Persistant timestamp and general corrections)
  *  - Look at everything in PatchedFunctions and refactor anything from prefix to postfix.
+ *  - Could be possible to swap out rank textures in HUD for translation. Shall look into later
+ *  - Attempt to replace the default font with a version that has better special char + cyrillic support
  * 
  * - Less important stuff for future updates:
  *  - Cheat teleport menu
@@ -43,17 +45,11 @@ using UltrakULL.json;
  *  - Green Rocketlauncher incoming
  *  
  *  BUGS AND QUIRKS TO FIX:
- * - Reexamine the intro text. See if I can get input working again
  * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages (currently due to current subtitle implentation. Will need to change some things)
  * - Discord RPC: Style meter in CG
- * - Could be possible to swap out rank textures in HUD for translation. Shall look into later
- * - Move the loaded language class to a seperate class. Would make it easier to access instead of doing currentLanguage.language.etc...
- * - Attempt to replace the default font with a version that has better special char + cyrillic support
- * - Blue hex color used in the intro is semi-broken. Replaced it with a default color that works for now
  * 
  *  STUFF REPORTED BY ULL TEAM
  * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me but others have reported it. Need to keep an eye on)
- * 
  * 
  *  FOR NEXT HOTFIX:
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable patchedFunctions by returning true if an exception happens there, will then use original game code.
@@ -63,6 +59,7 @@ using UltrakULL.json;
  * Options->Sandbox icons names
  * - 2-S arrow bugs, act 2 intermissions
  * - CG high scores aren't saved?
+ * - Panels in intro aren't translated, assume because they're seperate objects
  * */
 
 namespace UltrakULL
@@ -367,7 +364,7 @@ namespace UltrakULL
             MethodInfo originalIntroFunction = AccessTools.Method(typeof(IntroText), "Start");
             MethodInfo patchedIntroFunction = AccessTools.Method(typeof(PatchedFunctions), "IntroTextStart_MyPatch");
             harmony.Patch(originalIntroFunction, new HarmonyMethod(patchedIntroFunction));
-
+         
             Logger.LogInfo("HudMessage->PlayMessage");
             MethodInfo originalPlayMessage = typeof(HudMessage).GetMethod("PlayMessage");
             MethodInfo patchedPlayMessage = AccessTools.Method(typeof(PatchedFunctions), "PlayMessage_MyPatch");
@@ -422,11 +419,6 @@ namespace UltrakULL
             MethodInfo originalUpdateSlotState = typeof(SaveSlotMenu).GetMethod("UpdateSlotState", BindingFlags.NonPublic | BindingFlags.Instance, null,new Type[] {typeof(SlotRowPanel),typeof(SaveSlotMenu.SlotData)}, null);
             MethodInfo patchedUpdateSlotState = AccessTools.Method(typeof(PatchedFunctions), "UpdateSlotState_MyPatch");
             harmony.Patch(originalUpdateSlotState, new HarmonyMethod(patchedUpdateSlotState));
-
-            /*Logger.LogInfo("DiscordController->Update");
-            MethodInfo originalDiscordControllerUpdate = typeof(DiscordController).GetMethod("Update", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] {}, null);
-            MethodInfo patchedDiscordControllerUpdate = AccessTools.Method(typeof(PatchedFunctions), "DC_UpdateMyPatch");
-            harmony.Patch(originalDiscordControllerUpdate, new HarmonyMethod(patchedDiscordControllerUpdate));*/
 
             Logger.LogInfo("SaveSlotMenu->ClearSlot (Postfix)");
             MethodInfo originalClearSlot = typeof(SaveSlotMenu).GetMethod("ClearSlot", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { typeof(int) }, null);
@@ -513,11 +505,10 @@ namespace UltrakULL
             { 
                 Scene currentLevel = SceneManager.GetActiveScene();
                 string levelName = currentLevel.name;
-                //Logger.LogInfo("Current scene: " + levelName);
 
-                //Each scene (level) has an object called Canvas. Most game objects are there.
-                if (currentLevel.name == "Intro")
-                {
+                    //Each scene (level) has an object called Canvas. Most game objects are there.
+                    if (currentLevel.name == "Intro")
+                    {
                     GameObject frontEnd = getInactiveRootObject("Canvas");
                     Logger.LogInfo("Intro screen detected");
                     if(frontEnd != null)

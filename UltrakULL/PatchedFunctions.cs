@@ -21,10 +21,6 @@ namespace UltrakULL
 {
     class PatchedFunctions
     {
-
-        public static bool doneWithDots = false;
-        public static bool waitingForInput = false;
-
         public static HudMessage currentTimedMessage;
         public static Image currentTimedMessageImg;
         public static Text currentTimedMessageText;
@@ -287,317 +283,29 @@ namespace UltrakULL
 
         //@Override
         //Overrides the Start function from IntroText. This is needed for patched text to appear on the 0-0 tutorial.
-        //By extension, TextAppear, PlaceColor and DotsAppear will also need to be patched due to coroutine calls.
-        public static bool IntroTextStart_MyPatch(IntroText __instance, Text ___txt, string ___fullString, AudioSource ___aud, StringBuilder ___sb, string ___tempString, bool ___doneWithDots, string ___colorString, bool ___readyToContinue, int ___calibrated, int ___dotsAmount, bool ___waitingForInput, List<int> ___colorsPositions, List<int> ___colorsClosePositions)
+
+        public static bool IntroTextStart_MyPatch(IntroText __instance, Text ___txt, string ___fullString)
         {
             ___txt = __instance.GetComponent<Text>();
-            ___aud = __instance.GetComponent<AudioSource>();
 
             TutorialStrings tutStrings = new TutorialStrings();
-
-            //fullString is used twice:
-            //once for the first page of the intro, and again for the second page.
-            //We can check which page it's on by checking the first letter.
-            //If it's B (BOOT UP), then first page, if it's S (STATUS UPDATE), then second page.
-
             ___fullString = ___txt.text;
             Console.WriteLine(___fullString);
 
             if (___fullString[0] == 'B')
             {
                 ___fullString = tutStrings.introFirstPage;
+                
             }
             else
             {
                 ___fullString = tutStrings.introSecondPage;
             }
+            Console.WriteLine(___fullString);
+            ___txt.text = ___fullString;
+            
 
-            __instance.StartCoroutine(TextAppear(__instance, ___fullString, ___sb, ___txt, ___tempString, ___doneWithDots, ___readyToContinue, ___calibrated, ___dotsAmount, ___colorString, ___waitingForInput, ___aud, ___colorsPositions, ___colorsClosePositions));
-
-            return false;
-        }
-
-        public static IEnumerator DotsAppear(AudioSource ___aud, Text ___txt, string ___tempString)
-        {
-            int num;
-            for (int i = 0; i < 1; i = num + 1)
-            {
-                ___txt.text = ___tempString;
-                ___aud.Play();
-                yield return new WaitForSecondsRealtime(0.25f);
-                ___txt.text = ___tempString + ".";
-                ___aud.Play();
-                yield return new WaitForSecondsRealtime(0.25f);
-                ___txt.text = ___tempString + "..";
-                ___aud.Play();
-                yield return new WaitForSecondsRealtime(0.25f);
-                ___txt.text = ___tempString + "...";
-                ___aud.Play();
-                yield return new WaitForSecondsRealtime(0.25f);
-                num = i;
-            }
-            doneWithDots = true;
-            yield break;
-        }
-
-        public static void Over(IntroText __instance)
-        {
-            GameObject[] array = __instance.activateOnEnd;
-            for (int i = 0; i < array.Length; i++)
-            {
-                array[i].SetActive(true);
-            }
-            array = __instance.deactivateOnEnd;
-            for (int i = 0; i < array.Length; i++)
-            {
-                array[i].SetActive(false);
-            }
-        }
-
-        public static void PlaceColor(int i, IntroText __instance, StringBuilder ___sb, string ___fullString, string ___colorString, List<int> ___colorsPositions)
-        {
-            ___colorsPositions.Add(i);
-            ___sb = new StringBuilder(___fullString);
-            ___sb[i - 1] = ' ';
-            ___fullString = ___sb.ToString();
-            ___fullString = ___fullString.Insert(i, ___colorString);
-        }
-
-
-        public static IEnumerator TextAppear(IntroText __instance, string ___fullString, StringBuilder ___sb, Text ___txt, string ___tempString, bool ___doneWithDots, bool ___readyToContinue, int ___calibrated, int ___dotsAmount, string ___colorString, bool ___waitingForInput, AudioSource ___aud, List<int> ___colorsPositions, List<int> ___colorsClosePositions)
-        {
-            int i = ___fullString.Length;
-            int j = 0;
-            while (j < i + 1)
-            {
-                //Vanilla code makes a call for fullString.get_Chars(j), but get_Chars doesn't exist in C#, so here's an alternative.
-                //Gets the first char of fullString as a char, and removes it via substring.
-                char c;
-                if (j == 0) { c = ___fullString[j]; }
-                else { c = ___fullString[j - 1]; }
-
-                float waitTime = 0.035f;
-                bool playSound = true;
-                int k;
-                if (c <= '@')
-                {
-                    if (c <= '&')
-                    {
-                        if (c != ' ')
-                        {
-                            if (c != '#')
-                            {
-                                if (c != '&')
-                                {
-                                    goto IL_82D;
-                                }
-                                //End of intro text here
-                                else if (c == '&')
-                                {
-                                    __instance.GetComponentInParent<IntroTextController>().introOver = true;
-                                    GameProgressSaver.SetIntro(true);
-                                    waitTime = 0f;
-                                    ___sb = new StringBuilder(___fullString);
-                                    ___sb[j - 1] = ' ';
-                                    ___fullString = ___sb.ToString();
-                                    ___txt.text = ___fullString.Substring(0, j);
-                                }
-                            }
-                            else
-                            {
-                                // 3 dots segment here
-                                ___sb = new StringBuilder(___fullString);
-                                ___sb[j - 1] = ' ';
-                                ___fullString = ___sb.ToString();
-                                ___txt.text = ___fullString.Substring(0, j);
-                                ___tempString = ___txt.text;
-                                ___doneWithDots = false;
-                                doneWithDots = ___doneWithDots;
-                                ___dotsAmount = 1;
-                                __instance.StartCoroutine(DotsAppear(___aud, ___txt, ___tempString));
-                                yield return new WaitUntil(() => doneWithDots);
-                                doneWithDots = false;
-                            }
-                        }
-                        else
-                        {
-                            waitTime = 0f;
-                            ___txt.text = ___fullString.Substring(0, j);
-                        }
-                    }
-                    else if (c != '*')
-                    {
-                        if (c != '+')
-                        {
-                            if (c != '@')
-                            {
-                                goto IL_82D;
-                            }
-                            waitTime = 0f;
-                            ___sb = new StringBuilder(___fullString);
-                            ___sb[j - 1] = ' ';
-                            ___fullString = ___sb.ToString();
-                            ___txt.text = ___fullString.Substring(0, j);
-                            GameObject[] array = __instance.activateOnTextTrigger;
-                            for (k = 0; k < array.Length; k++)
-                            {
-                                array[k].SetActive(true);
-                            }
-                        }
-                        else
-                        {
-                            //Lime color here
-                            ___sb = new StringBuilder(___fullString);
-                            ___sb[j - 1] = ' ';
-                            ___fullString = ___sb.ToString();
-                            ___colorString = "<color=lime>";
-                            PlaceColor(j, __instance, ___sb, ___fullString, ___colorString, ___colorsPositions);
-                            ___fullString = ___fullString.Insert(j, ___colorString);
-
-                            j += ___colorString.Length;
-                            i += ___colorString.Length;
-                            ___txt.text = ___fullString.Substring(0, j);
-                        }
-                    }
-                    else
-                    {
-                        //Red color here
-                        ___sb = new StringBuilder(___fullString);
-                        ___sb[j - 1] = ' ';
-                        ___fullString = ___sb.ToString();
-                        ___colorString = "<color=red>";
-                        PlaceColor(j, __instance, ___sb, ___fullString, ___colorString, ___colorsPositions);
-                        ___fullString = ___fullString.Insert(j, ___colorString);
-                        j += ___colorString.Length;
-                        i += ___colorString.Length;
-                        ___txt.text = ___fullString.Substring(0, j);
-                    }
-                }
-                else if (c <= '~')
-                {
-                    if (c != '^')
-                    {
-                        if (c != '_')
-                        {
-                            if (c != '~')
-                            {
-                                goto IL_82D;
-                            }
-
-                            //Recalibration prompt
-                            Console.WriteLine("~ character, calling Over");
-                            waitTime = 0f;
-                            ___sb = new StringBuilder(___fullString);
-                            ___sb[j - 1] = ' ';
-                            ___fullString = ___sb.ToString();
-                            ___txt.text = ___fullString.Substring(0, j);
-                            Over(__instance);
-                        }
-                        else
-                        {
-                            ___colorsClosePositions.Add(j);
-                            ___sb = new StringBuilder(___fullString);
-                            ___sb[j - 1] = ' ';
-                            ___fullString = ___sb.ToString();
-                            string text = "</color>";
-                            ___fullString = ___fullString.Insert(j, text);
-                            j += text.Length;
-                            i += text.Length;
-                            ___txt.text = ___fullString.Substring(0, j);
-                        }
-                    }
-                    else
-                    {
-                        ___colorString = "<color=grey>";
-                        ___fullString = ___fullString.Insert(j, ___colorString);
-                        j += ___colorString.Length;
-                        i += ___colorString.Length;
-                        ___txt.text = ___fullString.Substring(0, j);
-                    }
-                }
-                else if (c <= '±')
-                {
-                    if (c != '§')
-                    {
-                        if (c != '±')
-                        {
-                            goto IL_82D;
-                        }
-                        ___colorString = "<color=#4C99E6>";
-                        ___fullString = ___fullString.Insert(j, ___colorString);
-                        j += ___colorString.Length;
-                        i += ___colorString.Length;
-                        ___txt.text = ___fullString.Substring(0, j);
-                    }
-                    else
-                    {
-                        ___sb = new StringBuilder(___fullString);
-                        ___sb[j - 1] = ' ';
-                        ___fullString = ___sb.ToString();
-                        ___txt.text = ___fullString.Substring(0, j);
-                        ___tempString = ___txt.text;
-                        ___doneWithDots = false;
-                        ___dotsAmount = 2;
-                        DotsAppear(___aud, ___txt, ___tempString);
-                    }
-                }
-                else if (c != '½')
-                {
-                    if (c != '¢') //Was originally an Ä but changed it to prevent conflicts with languages using these characters (German etc)
-                    {
-                        goto IL_82D;
-                    }
-                    ___sb = new StringBuilder(___fullString);
-                    ___sb[j - 1] = ' ';
-                    ___fullString = ___sb.ToString();
-                    ___txt.text = ___fullString.Substring(0, j) + "<color=red>ERROR</color>";
-                    yield return new WaitForSecondsRealtime(1f);
-                    __instance.calibrationWindows[___calibrated].SetActive(true);
-                    ___readyToContinue = false;
-                    Cursor.lockState = 0;
-                    Cursor.visible = true;
-                    yield return new WaitUntil(() => ___readyToContinue);
-                    Cursor.lockState = (CursorLockMode)1;
-                    Cursor.visible = false;
-                    ___tempString = "<color=lime>OK</color>";
-                    ___fullString = ___fullString.Insert(j, ___tempString);
-                    j += ___tempString.Length;
-                    i += ___tempString.Length;
-                    ___txt.text = ___fullString.Substring(0, j);
-                }
-                else
-                {
-                    //Second page of intro
-                    ___sb = new StringBuilder(___fullString);
-                    ___sb[j - 1] = ' ';
-                    ___fullString = ___sb.ToString();
-                    playSound = false;
-                    waitTime = 0.75f;
-                    ___txt.text = ___fullString.Substring(0, j);
-                }
-                IL_8FA:
-                i = ___fullString.Length;
-                if (waitTime != 0f && playSound)
-                {
-                    ___aud.Play();
-                }
-                if (___colorsPositions.Count > ___colorsClosePositions.Count)
-                {
-                    Text text2 = ___txt;
-                    text2.text += "</color>";
-                }
-                yield return new WaitForSecondsRealtime(waitTime);
-                k = j;
-                j = k + 1;
-                continue;
-                IL_82D:
-                ___txt.text = ___fullString.Substring(0, j);
-                goto IL_8FA;
-            }
-            Over(__instance);
-            //Add a check to make sure we're on the second page of the intro and don't trigger the level load too early.
-            yield break;
-            //__instance.GetComponentInParent<IntroTextController>().introOver = true;
+            return true;
         }
 
         //@Override

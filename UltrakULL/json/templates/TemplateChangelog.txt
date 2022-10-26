@@ -1,4 +1,16 @@
-﻿0.8.3:
+﻿0.8.4:
+
+ADDED:
+tutorial: tutorial_recalibrationPrompt;
+tutorial: tutorial_calibrationAudio;
+tutorial: tutorial_calibrationVideo;
+tutorial: tutorial_calibrationMechanics;
+tutorial: tutorial_calibrationComplete1;
+tutorial: tutorial_calibrationComplete2;
+tutorial: tutorial_calibrationComplete3;
+
+
+0.8.3:
 
 ADDED:
 misc: weapons_underConstruction

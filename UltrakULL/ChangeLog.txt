@@ -3,6 +3,18 @@
 - Fixed the UltrakULL status text on the main menu duplicating upon switching language (thanks Temperz)
 - Fixed golden borders on P-ranked levels and layers not appearing. (thanks Temperz)
 - Fixed some instances of Discord-related functions constantly nulling.(thanks Temperz)
+- Fixed a long-standing issue with the introduction missing the recalibration prompt due to a hacky implementation.
+(NOTE: Due to a refactoring of necessary code, **this will undo a previous fix where a specific accent character - Ä - would cause a softlock in the intro.** I have contacted a game dev to ask if they are able to change this in the game code for next game update/hotfix. Until then, please refrain from using this character in intro strings.)
+
+- Added the following lines to the JSON template:
+
+tutorial: tutorial_recalibrationPrompt;
+tutorial: tutorial_calibrationAudio;
+tutorial: tutorial_calibrationVideo;
+tutorial: tutorial_calibrationMechanics;
+tutorial: tutorial_calibrationComplete1;
+tutorial: tutorial_calibrationComplete2;
+tutorial: tutorial_calibrationComplete3;
 
 0.8.3
 

@@ -1650,8 +1650,17 @@ namespace UltrakULL.json
         public string tutorial_introVersion2;
         public string tutorial_introCalibration1;
         public string tutorial_introCalibration2;
+        public string tutorial_recalibrationPrompt;
+        public string tutorial_calibrationAudio;
+        public string tutorial_calibrationVideo;
+        public string tutorial_calibrationMechanics;
+        public string tutorial_calibrationComplete1;
+        public string tutorial_calibrationComplete2;
+        public string tutorial_calibrationComplete3;
         public string tutorial_introReminder;
+        public string tutorial_systemsOperational;
         public string tutorial_introLoadStatus;
+
         public string tutorial_introID1;
         public string tutorial_introID2;
         public string tutorial_introLocation1;
