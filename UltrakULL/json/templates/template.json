@@ -136,6 +136,9 @@
     },
     
     "books":{
+
+        "books_scanning": "",
+
         "books_limboFourth1": "",
         "books_limboFourth2": "",
         "books_limboFourth3": "",

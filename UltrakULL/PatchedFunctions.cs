@@ -78,19 +78,15 @@ namespace UltrakULL
         }
 
         //@Override
-        //Overrides ScanBook from the ScanningStuff class. Used to translate books found in some levels.
-        public static bool ScanBook_MyPatch(string text, bool noScan, int instanceId, ScanningStuff __instance, Text ___readingText, int ___currentBookId, GameObject ___scanningPanel, GameObject ___readingPanel, bool ___scanning)
+        //Overrides ScanBook from the ScanningStuff class, for the "scanning" panel and book translations.
+        public static bool ScanBook_MyPatch(ref string text, bool noScan, int instanceId, ScanningStuff __instance)
         {
-            __instance.oldWeaponState = !MonoSingleton<GunControl>.Instance.noWeapons;
-            MonoSingleton<GunControl>.Instance.NoWeapon();
+            GameObject canvas = getInactiveRootObject("Canvas");
 
-            ___readingText.text = Books.getBookText();
-            ___currentBookId = instanceId;
-            ___scanningPanel.SetActive(false);
-            ___readingPanel.SetActive(true);
-            ___scanning = false;
-
-            return false;
+            Text scanningText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas, "ScanningStuff"),"ScanningPanel"),"Text"));
+            scanningText.text = LanguageManager.CurrentLanguage.books.books_scanning;
+            text = Books.getBookText();
+            return true;
         }
 
 
@@ -169,7 +165,7 @@ namespace UltrakULL
 
             __instance.transform.Find("Name").GetComponent<Text>().text = LevelNames.getLevelName(num); //Level Name
 
-            //Bandaid fix for P-2 and P-3 for now. Shall need to change/remove when they release.
+            //Bandaid fix for P-2 and P-3 for now since they share the same level id as P-1 for some reason. Shall need to change/remove when they release.
             if (__instance.transform.Find("Name").GetComponent<Text>().text.Contains("P-2"))
             {
                 __instance.transform.Find("Name").GetComponent<Text>().text = "P-2: ???";

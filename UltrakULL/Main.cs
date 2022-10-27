@@ -70,7 +70,7 @@ namespace UltrakULL
     {
         public const string pluginGuid = "clearwater.ultrakill.ultrakULL";
         public const string pluginName = "UltrakULL - Ultrakill Language Library";
-        public const string pluginVersion = "0.8.3";
+        public const string pluginVersion = "0.8.4";
 
         public static MainPatch instance = null;
         private PatchedFunctions patchedFuncs;

@@ -5,18 +5,38 @@
 - Fixed some instances of Discord-related functions constantly nulling.(thanks Temperz)
 - Fixed a long-standing issue with the introduction missing the recalibration prompt due to a hacky implementation.
 - Fixed language select button wouldn't re-translate into a new language when a new language was selected and would only translate upon switching scenes (thanks me (Temperz)).
-(NOTE: Due to a refactoring of necessary code, **this will undo a previous fix where a specific accent character - Ä - would cause a softlock in the intro.** I have contacted a game dev to ask if they are able to change this in the game code for next game update/hotfix. Until then, please refrain from using this character in intro strings.)
+- Fixed the scanning panel when picking up a book not appearing. Added string for the scanning text.
 - Added strings for all recalibration prompts in the intro, if the player decides to recalibrate.
+(NOTE: Due to a refactoring of necessary code, **this will undo a previous fix where a specific accent character - Ä - would cause a softlock in the intro.** I have contacted a game dev to ask if they are able to change this in the game code for next game update/hotfix. Until then, please refrain from using this character in intro strings.)
+
+
 
 - Added the following lines to the JSON template:
 
-tutorial: tutorial_recalibrationPrompt;
+books: books_scanning
+
+tutorial: tutorial_recalibrationPrompt
 tutorial: tutorial_calibrationAudio;
 tutorial: tutorial_calibrationVideo;
-tutorial: tutorial_calibrationMechanics;
-tutorial: tutorial_calibrationComplete1;
-tutorial: tutorial_calibrationComplete2;
-tutorial: tutorial_calibrationComplete3;
+tutorial: tutorial_calibrationMechanics
+tutorial: tutorial_calibrationComplete1
+tutorial: tutorial_calibrationComplete2
+tutorial: tutorial_calibrationComplete3
+
+tutorial: tutorial_audioCalibrationTitle
+tutorial: tutorial_audioCalibrationWarning1
+tutorial: tutorial_audioCalibrationWarning2
+tutorial: tutorial_audioCalibrationWarning3
+tutorial: tutorial_audioCalibrationWarningPromptYes
+tutorial: tutorial_audioCalibrationWarningPromptNo
+
+tutorial: tutorial_videoCalibrationTitle
+tutorial: tutorial_videoCalibrationPcDescription
+tutorial: tutorial_videoCalibrationPsxDescription
+
+tutorial: tutorial_controllerCalibrationTitle
+tutorial: tutorial_controllerCalibrationSubtitle
+tutorial: tutorial_controllerCalibrationTooltip
 
 0.8.3
 

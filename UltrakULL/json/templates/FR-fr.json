@@ -132,7 +132,9 @@
     },
     
     "books":{
-        "books_limboFourth1": "ultrakill.books.limboFourth",
+        "books_scanning": "ANALYSE...",
+
+        "books_limboFourth1": "TEXT ANALYSÉ - SCRIPTE LISIBLE:",
         "books_limboFourth2": "...Mon esprit est à la dérive avec les tourments éternels. Des vistas lucides dans des tons insidieux, des murs creuses qui hurle au toucher. Une chanson moquante qui joue tout le temps, même le chant des oiesaux est faux. Tout ceci, des rappels de ma malédiction permanent.",
         "books_limboFourth3": "Gabriel, mon cher ami, dans une pétinence sans fin j'ai attendu votre embrassement dans le Paradis. J'ai resté si fidèle, acceptant mon destin, mais à quel but? Quel est cet peine, d'avoir mené moi-même à mon propre ruine sans aucun espoir du salut... Ces crânes ricanent parmi leurs sourires malicieuses, leurs voix bavardants, me tentant de descendre plus loin dans l'Enfer... Je ne le ferais pas.",
         "books_limboFourth4": "Je les ai cachés parmi les meubles, les livres, et les fondations de cet endroit maudit. Pardonnez-moi Gabriel, je vous attenderais...",

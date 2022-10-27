@@ -1010,7 +1010,9 @@ namespace UltrakULL.json
     }
 
     public class Book
-    { 
+    {
+        public string books_scanning;
+
         public string books_limboFourth1;
         public string books_limboFourth2;
         public string books_limboFourth3;

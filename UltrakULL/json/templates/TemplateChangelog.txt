@@ -1,28 +1,30 @@
 ﻿0.8.4:
 
 ADDED:
-tutorial: tutorial_recalibrationPrompt;
+books: books_scanning
+
+tutorial: tutorial_recalibrationPrompt
 tutorial: tutorial_calibrationAudio;
 tutorial: tutorial_calibrationVideo;
-tutorial: tutorial_calibrationMechanics;
-tutorial: tutorial_calibrationComplete1;
-tutorial: tutorial_calibrationComplete2;
-tutorial: tutorial_calibrationComplete3;
+tutorial: tutorial_calibrationMechanics
+tutorial: tutorial_calibrationComplete1
+tutorial: tutorial_calibrationComplete2
+tutorial: tutorial_calibrationComplete3
 
-tutorial: tutorial_audioCalibrationTitle;
-tutorial: tutorial_audioCalibrationWarning1;
-tutorial: tutorial_audioCalibrationWarning2;
-tutorial: tutorial_audioCalibrationWarning3;
-tutorial: tutorial_audioCalibrationWarningPromptYes;
-tutorial: tutorial_audioCalibrationWarningPromptNo;
+tutorial: tutorial_audioCalibrationTitle
+tutorial: tutorial_audioCalibrationWarning1
+tutorial: tutorial_audioCalibrationWarning2
+tutorial: tutorial_audioCalibrationWarning3
+tutorial: tutorial_audioCalibrationWarningPromptYes
+tutorial: tutorial_audioCalibrationWarningPromptNo
 
-tutorial: tutorial_videoCalibrationTitle;
-tutorial: tutorial_videoCalibrationPcDescription;
-tutorial: tutorial_videoCalibrationPsxDescription;
+tutorial: tutorial_videoCalibrationTitle
+tutorial: tutorial_videoCalibrationPcDescription
+tutorial: tutorial_videoCalibrationPsxDescription
 
-tutorial: tutorial_controllerCalibrationTitle;
-tutorial: tutorial_controllerCalibrationSubtitle;
-tutorial: tutorial_controllerCalibrationTooltip;
+tutorial: tutorial_controllerCalibrationTitle
+tutorial: tutorial_controllerCalibrationSubtitle
+tutorial: tutorial_controllerCalibrationTooltip
 
 
 0.8.3:

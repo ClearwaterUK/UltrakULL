@@ -136,6 +136,8 @@
     },
     
     "books":{
+        "books_scanning": "SCANNING...",
+
         "books_limboFourth1": "Text scanned - Unique Passage:",
         "books_limboFourth2": "...My mind is adrift with the eternal torments. Lucid vistas painted in insidious tones, hollow walls that scream to the touch. A mocking song plays at all hours, even the sounds of birds are fake. All reminders of my enduring damnation.",
         "books_limboFourth3": "Gabriel my dearest friend, in endless penance I have awaited your embrace into Heaven. I have been so faithful, accepting of my fate, but to what end? What punishment is this, that I am to bare the keys to my own doom with no hope of salvation... These skulls sneer their devilish grins, voices chattering, tempting me to take the plunge deeper into Hell... I won't do it.",
