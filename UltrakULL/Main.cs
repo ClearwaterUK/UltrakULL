@@ -89,7 +89,7 @@ namespace UltrakULL
         {
             LanguageManager.DumpLastLanguage();
         }
-        
+
         public void disableMod()
         {
             this.ready = false;
@@ -131,14 +131,14 @@ namespace UltrakULL
                 GameObject pauseDialogs = getGameObjectChild(pauseObject, "PauseMenuDialogs");
 
                 //Quit
-                GameObject quitDialog = getGameObjectChild(getGameObjectChild(pauseDialogs, "Quit Confirm"),"Panel");
+                GameObject quitDialog = getGameObjectChild(getGameObjectChild(pauseDialogs, "Quit Confirm"), "Panel");
                 Text quitDialogText = getTextfromGameObject(getGameObjectChild(quitDialog, "Text"));
                 quitDialogText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_quitConfirm;
 
                 Text quitDialogTooltip = getTextfromGameObject(getGameObjectChild(quitDialog, "Text (1)"));
                 quitDialogTooltip.text = LanguageManager.CurrentLanguage.pauseMenu.pause_disableWindow;
 
-                Text quitDialogYes = getTextfromGameObject(getGameObjectChild(getGameObjectChild(quitDialog, "Confirm"),"Text"));
+                Text quitDialogYes = getTextfromGameObject(getGameObjectChild(getGameObjectChild(quitDialog, "Confirm"), "Text"));
                 quitDialogYes.text = LanguageManager.CurrentLanguage.pauseMenu.pause_quitConfirmYes;
 
                 Text quitDialogNo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(quitDialog, "Cancel"), "Text"));
@@ -159,7 +159,7 @@ namespace UltrakULL
                 Text restartDialogNo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(restartDialog, "Cancel"), "Text"));
                 restartDialogNo.text = LanguageManager.CurrentLanguage.pauseMenu.pause_restartConfirmNo;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger.LogError("Failed to patch pause menu");
                 Logger.LogError(e.ToString());
@@ -169,7 +169,7 @@ namespace UltrakULL
         public void patchCheats(ref GameObject coreGame)
         {
             coreGame = GameObject.Find("Canvas");
-            Cheats.patchCheatConsentPanel(ref coreGame) ;
+            Cheats.patchCheatConsentPanel(ref coreGame);
         }
 
         public void patchDeathScreen(ref GameObject coreGame)
@@ -193,7 +193,7 @@ namespace UltrakULL
                 Console.WriteLine(e.ToString());
             }
         }
-        
+
         public void initJsonParser()
         {
             LanguageManager.InitializeManager(pluginVersion);
@@ -204,7 +204,7 @@ namespace UltrakULL
         {
             Shop.PatchShop(ref coreGame);
         }
-        
+
         public void patchLevelStats(ref GameObject coreGame)
         {
             LevelStatWindow.patchStats();
@@ -236,8 +236,8 @@ namespace UltrakULL
             pressToSkipText.text = LanguageManager.CurrentLanguage.misc.pressToSkip;
 
             //Classic HUD
-            GameObject classicHudBW = getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas, "Crosshair Filler"), "AltHud"),"Filler");
-            GameObject classicHudColor = getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas, "Crosshair Filler"), "AltHud (2)"),"Filler");
+            GameObject classicHudBW = getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas, "Crosshair Filler"), "AltHud"), "Filler");
+            GameObject classicHudColor = getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas, "Crosshair Filler"), "AltHud (2)"), "Filler");
 
             Text classicHudBWHealth = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Health"), "Title"));
             Text classicHudBWHealthShow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Health"), "Title (1)"));
@@ -364,7 +364,7 @@ namespace UltrakULL
             MethodInfo originalIntroFunction = AccessTools.Method(typeof(IntroText), "Start");
             MethodInfo patchedIntroFunction = AccessTools.Method(typeof(PatchedFunctions), "IntroTextStart_MyPatch");
             harmony.Patch(originalIntroFunction, new HarmonyMethod(patchedIntroFunction));
-         
+
             Logger.LogInfo("HudMessage->PlayMessage");
             MethodInfo originalPlayMessage = typeof(HudMessage).GetMethod("PlayMessage");
             MethodInfo patchedPlayMessage = AccessTools.Method(typeof(PatchedFunctions), "PlayMessage_MyPatch");
@@ -391,7 +391,7 @@ namespace UltrakULL
             harmony.Patch(originalAddPoints, new HarmonyMethod(patchedAddPoints));
 
             Logger.LogInfo("StyleHUD->GetLocalizedName");
-            MethodInfo originalGetLocalizedName = AccessTools.Method(typeof(StyleHUD), "GetLocalizedName", new Type[] { typeof(string)});
+            MethodInfo originalGetLocalizedName = AccessTools.Method(typeof(StyleHUD), "GetLocalizedName", new Type[] { typeof(string) });
             MethodInfo patchedGetLocalizedName = AccessTools.Method(typeof(PatchedFunctions), "GetLocalizedName_MyPatch");
             harmony.Patch(originalGetLocalizedName, new HarmonyMethod(patchedGetLocalizedName));
 
@@ -405,7 +405,7 @@ namespace UltrakULL
             MethodInfo patchedIntermissionStart = AccessTools.Method(typeof(PatchedFunctions), "Start_MyPatch");
             harmony.Patch(originalIntermissionStart, new HarmonyMethod(patchedIntermissionStart));
 
-             Logger.LogInfo("SubtitleController->DisplaySubtitle");
+            Logger.LogInfo("SubtitleController->DisplaySubtitle");
             MethodInfo originalDisplaySubtitle = AccessTools.Method(typeof(SubtitleController), "DisplaySubtitle", new Type[] { typeof(string), typeof(AudioSource) });
             MethodInfo patchedDisplaySubtitle = AccessTools.Method(typeof(PatchedFunctions), "DisplaySubtitle_MyPatch");
             harmony.Patch(originalDisplaySubtitle, new HarmonyMethod(patchedDisplaySubtitle));
@@ -416,7 +416,7 @@ namespace UltrakULL
             harmony.Patch(originalUpdateInfo, new HarmonyMethod(patchedUpdateInfo));
 
             Logger.LogInfo("SaveSlotMenu->UpdateSlotState");
-            MethodInfo originalUpdateSlotState = typeof(SaveSlotMenu).GetMethod("UpdateSlotState", BindingFlags.NonPublic | BindingFlags.Instance, null,new Type[] {typeof(SlotRowPanel),typeof(SaveSlotMenu.SlotData)}, null);
+            MethodInfo originalUpdateSlotState = typeof(SaveSlotMenu).GetMethod("UpdateSlotState", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { typeof(SlotRowPanel), typeof(SaveSlotMenu.SlotData) }, null);
             MethodInfo patchedUpdateSlotState = AccessTools.Method(typeof(PatchedFunctions), "UpdateSlotState_MyPatch");
             harmony.Patch(originalUpdateSlotState, new HarmonyMethod(patchedUpdateSlotState));
 
@@ -456,7 +456,7 @@ namespace UltrakULL
             harmony.Patch(originalShowHudMessage, new HarmonyMethod(patchedShowHudMessage));
 
             Logger.LogInfo("CheatsManager->UpdateCheatState");
-            MethodInfo originalUpdateCheatState = typeof(CheatsManager).GetMethod("UpdateCheatState", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { typeof(CheatMenuItem),typeof(ICheat) }, null);
+            MethodInfo originalUpdateCheatState = typeof(CheatsManager).GetMethod("UpdateCheatState", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { typeof(CheatMenuItem), typeof(ICheat) }, null);
             MethodInfo patchedUpdateCheatState = AccessTools.Method(typeof(PatchedFunctions), "UpdateCheatState_MyPatch");
             harmony.Patch(originalUpdateCheatState, new HarmonyMethod(patchedUpdateCheatState));
 
@@ -466,12 +466,12 @@ namespace UltrakULL
             harmony.Patch(originalRenderCheatsInfo, new HarmonyMethod(patchedRenderCheatsInfo));
 
             Logger.LogInfo("LevelStats->Start");
-            MethodInfo originalStart = typeof(LevelStats).GetMethod("Start", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] {}, null);
+            MethodInfo originalStart = typeof(LevelStats).GetMethod("Start", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
             MethodInfo patchedStart = AccessTools.Method(typeof(PatchedFunctions), "LevelStatsStart_MyPatch");
             harmony.Patch(originalStart, new HarmonyMethod(patchedStart));
 
             Logger.LogInfo("LevelStats->Update");
-            MethodInfo originalUpdate = typeof(LevelStats).GetMethod("Update", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] {}, null);
+            MethodInfo originalUpdate = typeof(LevelStats).GetMethod("Update", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
             MethodInfo patchedUpdate = AccessTools.Method(typeof(PatchedFunctions), "LevelStatsUpdate_MyPatch");
             harmony.Patch(originalUpdate, new HarmonyMethod(patchedUpdate));
 
@@ -481,14 +481,14 @@ namespace UltrakULL
             harmony.Patch(originalToggle, new HarmonyMethod(patchedToggle));
 
             Logger.LogInfo("ScanningStuff->ScanBook");
-            MethodInfo originalScanBook = typeof(ScanningStuff).GetMethod("ScanBook", new Type[]{typeof(string), typeof(bool), typeof(int)});
+            MethodInfo originalScanBook = typeof(ScanningStuff).GetMethod("ScanBook", new Type[] { typeof(string), typeof(bool), typeof(int) });
             MethodInfo patchedScanBook = AccessTools.Method(typeof(PatchedFunctions), "ScanBook_MyPatch");
             harmony.Patch(originalScanBook, new HarmonyMethod(patchedScanBook));
 
             Logger.LogInfo("GunTypeColorGetter->OnEnable (Postfix)");
             MethodInfo originalGunTypeColorGetterOnEnable = typeof(GunColorTypeGetter).GetMethod("OnEnable", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
             MethodInfo patchedGunTypeColorGetterOnEnable = AccessTools.Method(typeof(PatchedFunctions), "OnEnablePostFix_MyPatch");
-            harmony.Patch(originalGunTypeColorGetterOnEnable, null,new HarmonyMethod(patchedGunTypeColorGetterOnEnable));
+            harmony.Patch(originalGunTypeColorGetterOnEnable, null, new HarmonyMethod(patchedGunTypeColorGetterOnEnable));
 
             Logger.LogInfo("Done");
         }
@@ -496,24 +496,29 @@ namespace UltrakULL
         //Most of the hook logic and checks go in this function.
         public void onSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            if (!this.ready ||  LanguageManager.CurrentLanguage == null)
+            if (!this.ready || LanguageManager.CurrentLanguage == null)
             {
                 Logger.LogError("Not ready for patching");
                 return;
             }
             else
-            { 
+            {
                 Scene currentLevel = SceneManager.GetActiveScene();
                 string levelName = currentLevel.name;
 
-                    //Each scene (level) has an object called Canvas. Most game objects are there.
-                    if (currentLevel.name == "Intro")
-                    {
+                if (Inject_LanguageButton.languageButtonText != null)
+                {
+                    Inject_LanguageButton.languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
+                    Inject_LanguageButton.languageButtonTitleText.text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
+                }
+                //Each scene (level) has an object called Canvas. Most game objects are there.
+                if (currentLevel.name == "Intro")
+                {
                     GameObject frontEnd = getInactiveRootObject("Canvas");
                     Logger.LogInfo("Intro screen detected");
-                    if(frontEnd != null)
+                    if (frontEnd != null)
                     {
-                        Text loadingText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "LoadingScreen"),"Intro"),"Text"));
+                        Text loadingText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "LoadingScreen"), "Intro"), "Text"));
                         loadingText.text = LanguageManager.CurrentLanguage.misc.loading;
                     }
                 }
@@ -565,19 +570,19 @@ namespace UltrakULL
                     else
                     {
                         try
-                        { 
+                        {
                             patchPauseMenu(ref coreGame);
                             patchCheats(ref coreGame);
                             patchDeathScreen(ref coreGame);
                             patchLevelStats(ref coreGame);
                             patchMisc(ref coreGame);
                         }
-                        catch(Exception e)
+                        catch (Exception e)
                         {
                             Logger.LogError("Failed to patch in-game elements (prime).");
                             Logger.LogInfo(e.ToString());
                         }
-                        Options options = new Options(ref coreGame) ;
+                        Options options = new Options(ref coreGame);
                         PrimeSanctum primeSanctumClass = new PrimeSanctum(ref coreGame);
                     }
                 }
@@ -644,10 +649,10 @@ namespace UltrakULL
                             patchDeathScreen(ref coreGame);
                             patchLevelStats(ref coreGame);
                             patchMisc(ref coreGame);
-                            
+
                             Options options = new Options(ref coreGame);
                         }
-                        catch(Exception e)
+                        catch (Exception e)
                         {
                             Logger.LogError("Failed to patch in-game elements.");
                             Console.WriteLine(e.ToString());
@@ -711,7 +716,7 @@ namespace UltrakULL
                 Logger.LogInfo(" --- All done. Enjoy! ---");
                 this.ready = true;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger.LogError("An error occured while initialising.");
                 Console.WriteLine(e.ToString());
