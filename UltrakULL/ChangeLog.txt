@@ -6,6 +6,7 @@
 - Fixed a long-standing issue with the introduction missing the recalibration prompt due to a hacky implementation.
 - Fixed language select button wouldn't re-translate into a new language when a new language was selected and would only translate upon switching scenes (thanks me (Temperz)).
 (NOTE: Due to a refactoring of necessary code, **this will undo a previous fix where a specific accent character - Ä - would cause a softlock in the intro.** I have contacted a game dev to ask if they are able to change this in the game code for next game update/hotfix. Until then, please refrain from using this character in intro strings.)
+- Added strings for all recalibration prompts in the intro, if the player decides to recalibrate.
 
 - Added the following lines to the JSON template:
 

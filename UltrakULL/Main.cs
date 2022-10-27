@@ -59,7 +59,6 @@ using UltrakULL.json;
  * Options->Sandbox icons names
  * - 2-S arrow bugs, act 2 intermissions
  * - CG high scores aren't saved?
- * - Panels in intro aren't translated, assume because they're seperate objects
  * */
 
 namespace UltrakULL

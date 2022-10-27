@@ -1661,6 +1661,21 @@ namespace UltrakULL.json
         public string tutorial_systemsOperational;
         public string tutorial_introLoadStatus;
 
+        public string tutorial_audioCalibrationTitle;
+        public string tutorial_audioCalibrationWarning1;
+        public string tutorial_audioCalibrationWarning2;
+        public string tutorial_audioCalibrationWarning3;
+        public string tutorial_audioCalibrationWarningPromptYes;
+        public string tutorial_audioCalibrationWarningPromptNo;
+
+        public string tutorial_videoCalibrationTitle;
+        public string tutorial_videoCalibrationPcDescription;
+        public string tutorial_videoCalibrationPsxDescription;
+
+        public string tutorial_controllerCalibrationTitle;
+        public string tutorial_controllerCalibrationSubtitle;
+        public string tutorial_controllerCalibrationTooltip;
+
         public string tutorial_introID1;
         public string tutorial_introID2;
         public string tutorial_introLocation1;

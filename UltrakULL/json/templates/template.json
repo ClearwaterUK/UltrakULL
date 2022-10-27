@@ -1485,6 +1485,7 @@
 		"tutorial_introReminder": "",
         "tutorial_systemsOperational": "",
 		"tutorial_introLoadStatus": "",
+        "tutorial_introID1": "",
 		"tutorial_introID2": "",
 		"tutorial_introLocation1": "",
 		"tutorial_introLocation2": "",
@@ -1493,6 +1494,21 @@
 		"tutorial_introRed1": "",
 		"tutorial_introRed2": "",
 		"tutorial_introRed3": "",
+
+        "tutorial_audioCalibrationTitle": "",
+        "tutorial_audioCalibrationWarning1": "",
+        "tutorial_audioCalibrationWarning2": "",
+        "tutorial_audioCalibrationWarning3": "",
+        "tutorial_audioCalibrationWarningPromptYes": "",
+        "tutorial_audioCalibrationWarningPromptNo": "",
+
+        "tutorial_videoCalibrationTitle": "",
+        "tutorial_videoCalibrationPcDescription": "",
+        "tutorial_videoCalibrationPsxDescription": "",
+
+        "tutorial_controllerCalibrationTitle": "",
+        "tutorial_controllerCalibrationSubtitle": "",
+        "tutorial_controllerCalibrationTooltip": "",
 
 		"tutorial_punch1": "",
 		"tutorial_punch2": "",

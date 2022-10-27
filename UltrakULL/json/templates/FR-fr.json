@@ -1468,6 +1468,22 @@
 		"tutorial_introReminder": "ASSISTANCES DISPONIBLES DANS LA MENU DE PAUSE",
         "tutorial_systemsOperational": "TOUS SYSTÈMES OPÉRATIONELS",
 		"tutorial_introLoadStatus": "CHARGEMENT DE STATUT",
+
+        "tutorial_audioCalibrationTitle": "CALIBRATION SON MANUEL",
+        "tutorial_audioCalibrationWarning1": "LA VOLUME GLOBALE EST DÉSACTIVÉE.",
+        "tutorial_audioCalibrationWarning2": "VOUS N'AUREZ AUCUN SON.",
+        "tutorial_audioCalibrationWarning3": "ÊTES-VOUS D'ACCORD?",
+        "tutorial_audioCalibrationWarningPromptYes": "CONTINUER SANS SON",
+        "tutorial_audioCalibrationWarningPromptNo": "ANNULER",
+
+        "tutorial_videoCalibrationTitle": "CALIBRATION VIDÉO MANUEL",
+        "tutorial_videoCalibrationPcDescription": "FLUIDE, CLAIRE, FACILE À LIRE",
+        "tutorial_videoCalibrationPsxDescription": "RUDE, PIXELISÉ, DÉFORMÉ",
+
+        "tutorial_controllerCalibrationTitle": "MANETTE DETECTÉ",
+        "tutorial_controllerCalibrationSubtitle": "<color=#4C99E6>VISÉE AUTOMATIQUE</color> CONSEILLÉ",
+        "tutorial_controllerCalibrationTooltip": "LA VISÉE AUTOMATIQUE PEUT AUSSI ÊTRE AJUSTÉ DANS LA MENU <color=#4C99E6>D'ASSISTANCES</color>",
+
 		"tutorial_introID1": "IDENTIFIANT",
 		"tutorial_introID2": "V1",
 		"tutorial_introLocation1": "POSITION",

@@ -1500,7 +1500,7 @@
 		"tutorial_introVersion1": "FIRMWARE",
 		"tutorial_introVersion2": "UP TO DATE (2112.08.06)",
 		"tutorial_introCalibration1": "CALIBRATION",
-		"tutorial_introCalibration2": "RÉCEMMENT MIS À JOUR",
+		"tutorial_introCalibration2": "RECENTLY UPDATED",
         "tutorial_recalibrationPrompt": "RECALIBRATE?",
         "tutorial_calibrationAudio": "AUDIO",
         "tutorial_calibrationVideo": "VIDEO",
@@ -1510,6 +1510,7 @@
 		"tutorial_introReminder": "ASSIST OPTIONS AVAILABLE IN PAUSE MENU",
         "tutorial_systemsOperational": "ALL SYSTEMS OPERATIONAL",
 		"tutorial_introLoadStatus": "LOADING STATUS UPDATE",
+        "tutorial_introID1": "ID",
 		"tutorial_introID2": "V1",
 		"tutorial_introLocation1": "LOCATION",
 		"tutorial_introLocation2": "APPROACHING HELL",
@@ -1518,6 +1519,21 @@
 		"tutorial_introRed1": "MANKIND IS DEAD.",
 		"tutorial_introRed2": "BLOOD IS FUEL.",
 		"tutorial_introRed3": "HELL IS FUEL.",
+
+        "tutorial_audioCalibrationTitle": "MANUAL SOUND CALIBRATION",
+        "tutorial_audioCalibrationWarning1": "MASTER VOLUME IS OFF.",
+        "tutorial_audioCalibrationWarning2": "YOU WILL HAVE NO AUDIO.",
+        "tutorial_audioCalibrationWarning3": "ARE YOU SURE?",
+        "tutorial_audioCalibrationWarningPromptYes": "CONTINUE WITHOUT SOUND",
+        "tutorial_audioCalibrationWarningPromptNo": "CANCEL",
+
+        "tutorial_videoCalibrationTitle": "MANUAL VIDEO CALIBRATION",
+        "tutorial_videoCalibrationPcDescription": "SMOOTH, CLEAR, EASY TO READ",
+        "tutorial_videoCalibrationPsxDescription": "ROUGH, PIXELATED, WARPED",
+
+        "tutorial_controllerCalibrationTitle": "CONTROLLER DETECTED",
+        "tutorial_controllerCalibrationSubtitle": "<color=#4C99E6>AUTO-AIM</color> RECOMMENDED",
+        "tutorial_controllerCalibrationTooltip": "AUTO-AIM CAN BE STILL ADJUSTED IN THE <color=#4C99E6>ASSISTS</color> MENU.",
 
 		"tutorial_punch1": "Press",
 		"tutorial_punch2": "to PUNCH.",
