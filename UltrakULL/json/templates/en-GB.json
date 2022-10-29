@@ -291,6 +291,9 @@
     },
 	"frontend": {
 		"mainmenu_earlyAccess": "EARLY ACCESS",
+        "mainmenu_halloween": "HAPPY HALLOWEEN",
+        "mainmenu_easter": "HAPPY EASTER",
+        "mainmenu_christmas": "MERRY CHRISTMAS",
 		"mainmenu_play": "PLAY",
 		"mainmenu_options": "OPTIONS",
 		"mainmenu_quit": "QUIT",

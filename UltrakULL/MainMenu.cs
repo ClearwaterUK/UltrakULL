@@ -28,9 +28,21 @@ namespace UltrakULL
             {
                 GameObject titleObject = getGameObjectChild(mainMenu, "Main Menu (1)");
 
-                //Early access/seasonal tag
+                //Early access tag
                 Text earlyAccessText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Title"), "Text"));
                 earlyAccessText.text = "--" + LanguageManager.CurrentLanguage.frontend.mainmenu_earlyAccess + "--";
+
+                //Halloween
+                Text halloweenText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Title"), "Text (Halloween)"));
+                halloweenText.text = "<color=orange>--" + LanguageManager.CurrentLanguage.frontend.mainmenu_halloween + "--</color>";
+
+                //Easter
+                Text easterText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Title"), "Text (Easter)"));
+                easterText.text = "<color=magenta>--" + LanguageManager.CurrentLanguage.frontend.mainmenu_easter + "--</color>";
+
+                //Christmas
+                Text christmasText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Title"), "Text (Christmas)"));
+                christmasText.text = "<color=red>--" + LanguageManager.CurrentLanguage.frontend.mainmenu_christmas + "--</color>";
 
                 //Play button
                 Text playButtonText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Continue"), "Text"));

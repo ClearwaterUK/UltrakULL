@@ -949,6 +949,9 @@ namespace UltrakULL.json
     public class FrontEnd
     {
         public string mainmenu_earlyAccess;
+        public string mainmenu_halloween;
+        public string mainmenu_easter;
+        public string mainmenu_christmas;
         public string mainmenu_play;
         public string mainmenu_options;
         public string mainmenu_quit;

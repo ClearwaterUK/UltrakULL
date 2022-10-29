@@ -1,6 +1,10 @@
 ﻿0.8.4:
 
 ADDED:
+mainmenu: mainmenu_easter
+mainmenu: mainmenu_halloween
+mainmenu: mainmenu_christmas
+
 books: books_scanning
 
 tutorial: tutorial_recalibrationPrompt

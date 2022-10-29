@@ -293,6 +293,9 @@
     },
 	"frontend": {
 		"mainmenu_earlyAccess": "",
+        "mainmenu_halloween": "",
+        "mainmenu_easter": "",
+        "mainmenu_christmas": "",
 		"mainmenu_play": "",
 		"mainmenu_options": "",
 		"mainmenu_quit": "",

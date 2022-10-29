@@ -272,6 +272,9 @@
     },
 	"frontend": {
 		"mainmenu_earlyAccess": "ACCÈS ANTICIPÉ",
+        "mainmenu_halloween": "JOYEAUX HALLOWEEN",
+        "mainmenu_easter": "JOYEAUX PÂQUES",
+        "mainmenu_christmas": "JOYEAUX NOËL",
 		"mainmenu_play": "JOUER",
 		"mainmenu_options": "OPTIONS",
 		"mainmenu_quit": "QUITTER",
