@@ -1,4 +1,5 @@
 ﻿0.8.4
+- Work on some of the backend of the mod has been done to simplify and refactor things. This should hopefully in turn fix some miscellaneous bugs that some people were having.
 - Fixed the "transaction complete" HUD message from 4-S appearing at the end of every level.
 - Fixed the UltrakULL status text on the main menu duplicating upon switching language (thanks Temperz)
 - Fixed golden borders on P-ranked levels and layers not appearing. (thanks Temperz)

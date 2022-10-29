@@ -20,7 +20,7 @@ using UltrakULL.json;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater
  *	Date started: 21st April 2021
- *	Last updated: 26th October 2022
+ *	Last updated: 29th October 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
@@ -31,9 +31,7 @@ using UltrakULL.json;
  *  - Error and exception handling
  *  - Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
  *  - Discord RPC (Persistant timestamp and general corrections)
- *  - Look at everything in PatchedFunctions and refactor anything from prefix to postfix.
- *  - Could be possible to swap out rank textures in HUD for translation. Shall look into later
- *  - Attempt to replace the default font with a version that has better special char + cyrillic support
+
  * 
  * - Less important stuff for future updates:
  *  - Cheat teleport menu
@@ -43,6 +41,8 @@ using UltrakULL.json;
  *  - Look into how I can do encoding for RTL languages such as Arabic
  *  - Port main class so it becomes a native UMM mod instead of BepInEx. With the way its structured, could be able to move config/lang files to same folder.
  *  - Green Rocketlauncher incoming
+ *  - Could be possible to swap out rank textures in HUD for translation. Shall look into later
+ *  - Attempt to replace the default font with a version that has better special char + cyrillic support
  *  
  *  BUGS AND QUIRKS TO FIX:
  * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages (currently due to current subtitle implentation. Will need to change some things)
@@ -57,8 +57,8 @@ using UltrakULL.json;
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * 
  * Options->Sandbox icons names
- * - 2-S arrow bugs, act 2 intermissions
  * - CG high scores aren't saved?
+ * - Misc keys as strings (comma, period, etc)
  * */
 
 namespace UltrakULL
@@ -324,7 +324,6 @@ namespace UltrakULL
                 + "CREATED BY <color=orange>CLEARWATER</color> AND THE <color=orange>UltrakULL TRANSLATION TEAM</color>" + "\n"
                 + "CODE CONTRIBUTIONS BY <color=orange>TEMPERZ87</color>" + "\n"
                 + "FULL LANGUAGE CREDITS IN THE MOD README (to come later)" + "\n";
-
         }
 
         //Parent function to patch the vanilla game functions.
@@ -334,95 +333,40 @@ namespace UltrakULL
 
             Harmony harmony = new Harmony(pluginGuid);
 
-            Logger.LogInfo("OptionsMenuToManager->Start");
-            MethodInfo originalOptions = typeof(OptionsMenuToManager).GetMethod("Start", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
-            MethodInfo patchedOptions = AccessTools.Method(typeof(Inject_LanguageButton), "Prefix");
-            harmony.Patch(originalOptions, new HarmonyMethod(patchedOptions));
+            Logger.LogInfo("BossBarManager->CreateBossBar");
+            MethodInfo originalCreateBossBar = AccessTools.Method(typeof(BossBarManager), "CreateBossBar");
+            MethodInfo patchedCreateBossBar = AccessTools.Method(typeof(PatchedFunctions), "CreateBossBar_MyPatch");
+            harmony.Patch(originalCreateBossBar, new HarmonyMethod(patchedCreateBossBar));
+
+            Logger.LogInfo("CheatsManager->RenderCheatsInfo");
+            MethodInfo originalRenderCheatsInfo = typeof(CheatsManager).GetMethod("RenderCheatsInfo");
+            MethodInfo patchedRenderCheatsInfo = AccessTools.Method(typeof(PatchedFunctions), "RenderCheatsInfo_MyPatch");
+            harmony.Patch(originalRenderCheatsInfo, new HarmonyMethod(patchedRenderCheatsInfo));
+
+            Logger.LogInfo("CheatsManager->UpdateCheatState");
+            MethodInfo originalUpdateCheatState = typeof(CheatsManager).GetMethod("UpdateCheatState", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { typeof(CheatMenuItem), typeof(ICheat) }, null);
+            MethodInfo patchedUpdateCheatState = AccessTools.Method(typeof(PatchedFunctions), "UpdateCheatState_MyPatch");
+            harmony.Patch(originalUpdateCheatState, new HarmonyMethod(patchedUpdateCheatState));
+
+            Logger.LogInfo("Coin->RicoshotPointsCheck");
+            MethodInfo originalRicoshotPointsCheck = typeof(Coin).GetMethod("RicoshotPointsCheck");
+            MethodInfo patchedRicoshotPointsCheck = AccessTools.Method(typeof(PatchedFunctions), "RicoshotPointsCheck_MyPatch");
+            harmony.Patch(originalRicoshotPointsCheck, new HarmonyMethod(patchedRicoshotPointsCheck));
 
             Logger.LogInfo("CrateCounter->CoinsToPoints");
             MethodInfo originalCoinsToPoints = typeof(CrateCounter).GetMethod("CoinsToPoints");
             MethodInfo patchedCoinsToPoints = AccessTools.Method(typeof(PatchedFunctions), "CoinsToPoints_MyPatch");
             harmony.Patch(originalCoinsToPoints, new HarmonyMethod(patchedCoinsToPoints));
 
+            Logger.LogInfo("CustomPatterns->Toggle");
+            MethodInfo originalToggle = typeof(CustomPatterns).GetMethod("Toggle");
+            MethodInfo patchedToggle = AccessTools.Method(typeof(PatchedFunctions), "Toggle_MyPatch");
+            harmony.Patch(originalToggle, new HarmonyMethod(patchedToggle));
+
             Logger.LogInfo("DifficultyTitle->Check");
             MethodInfo originalCheckFunction = AccessTools.Method(typeof(DifficultyTitle), "Check");
             MethodInfo patchedCheckFunction = AccessTools.Method(typeof(PatchedFunctions), "Check_MyPatch");
             harmony.Patch(originalCheckFunction, new HarmonyMethod(patchedCheckFunction));
-
-            Logger.LogInfo("LevelSelectPanel->CheckScore (PostFix)");
-            MethodInfo originalCheckScoreFunction = AccessTools.Method(typeof(LevelSelectPanel), "CheckScore");
-            MethodInfo patchedCheckScoreFunctionPostfix = AccessTools.Method(typeof(PatchedFunctions), "CheckScore_MyPatchPostFix");
-            harmony.Patch(originalCheckScoreFunction, null, new HarmonyMethod(patchedCheckScoreFunctionPostfix));
-
-            Logger.LogInfo("LevelNamePopup->NameAppear");
-            MethodInfo originalNameAppearFunction = AccessTools.Method(typeof(LevelNamePopup), "NameAppear");
-            MethodInfo patchedNameAppearFunction = AccessTools.Method(typeof(PatchedFunctions), "NameAppear_MyPatch");
-            harmony.Patch(originalNameAppearFunction, new HarmonyMethod(patchedNameAppearFunction));
-
-            Logger.LogInfo("IntroText->Start");
-            MethodInfo originalIntroFunction = AccessTools.Method(typeof(IntroText), "Start");
-            MethodInfo patchedIntroFunction = AccessTools.Method(typeof(PatchedFunctions), "IntroTextStart_MyPatch");
-            harmony.Patch(originalIntroFunction, new HarmonyMethod(patchedIntroFunction));
-
-            Logger.LogInfo("HudMessage->PlayMessage");
-            MethodInfo originalPlayMessage = typeof(HudMessage).GetMethod("PlayMessage");
-            MethodInfo patchedPlayMessage = AccessTools.Method(typeof(PatchedFunctions), "PlayMessage_MyPatch");
-            harmony.Patch(originalPlayMessage, new HarmonyMethod(patchedPlayMessage));
-
-            Logger.LogInfo("FinalRank->SetInfo");
-            MethodInfo originalSetInfo = AccessTools.Method(typeof(FinalRank), "SetInfo");
-            MethodInfo patchedSetInfo = AccessTools.Method(typeof(PatchedFunctions), "SetInfo_MyPatch");
-            harmony.Patch(originalSetInfo, new HarmonyMethod(patchedSetInfo));
-
-            Logger.LogInfo("BossBarManager->CreateBossBar");
-            MethodInfo originalCreateBossBar = AccessTools.Method(typeof(BossBarManager), "CreateBossBar");
-            MethodInfo patchedCreateBossBar = AccessTools.Method(typeof(PatchedFunctions), "CreateBossBar_MyPatch");
-            harmony.Patch(originalCreateBossBar, new HarmonyMethod(patchedCreateBossBar));
-
-            Logger.LogInfo("VariationInfo->UpdateMoney");
-            MethodInfo originalUpdateMoney = AccessTools.Method(typeof(VariationInfo), "UpdateMoney");
-            MethodInfo patchedUpdateMoney = AccessTools.Method(typeof(PatchedFunctions), "UpdateMoney_MyPatch");
-            harmony.Patch(originalUpdateMoney, new HarmonyMethod(patchedUpdateMoney));
-
-            Logger.LogInfo("StyleHUD->AddPoints");
-            MethodInfo originalAddPoints = AccessTools.Method(typeof(StyleHUD), "AddPoints", new Type[] { typeof(int), typeof(string), typeof(GameObject), typeof(EnemyIdentifier), typeof(int), typeof(string), typeof(string) });
-            MethodInfo patchedAddPoints = AccessTools.Method(typeof(PatchedFunctions), "AddPoints_MyPatch");
-            harmony.Patch(originalAddPoints, new HarmonyMethod(patchedAddPoints));
-
-            Logger.LogInfo("StyleHUD->GetLocalizedName");
-            MethodInfo originalGetLocalizedName = AccessTools.Method(typeof(StyleHUD), "GetLocalizedName", new Type[] { typeof(string) });
-            MethodInfo patchedGetLocalizedName = AccessTools.Method(typeof(PatchedFunctions), "GetLocalizedName_MyPatch");
-            harmony.Patch(originalGetLocalizedName, new HarmonyMethod(patchedGetLocalizedName));
-
-            Logger.LogInfo("StyleHUD->UpdateFreshnessSlider");
-            MethodInfo originalUpdateFreshnessSlider = AccessTools.Method(typeof(StyleHUD), "UpdateFreshnessSlider");
-            MethodInfo patchedUpdateFreshnessSlider = AccessTools.Method(typeof(PatchedFunctions), "UpdateFreshnessSlider_MyPatch");
-            harmony.Patch(originalUpdateFreshnessSlider, new HarmonyMethod(patchedUpdateFreshnessSlider));
-
-            Logger.LogInfo("IntermissionController->Start");
-            MethodInfo originalIntermissionStart = AccessTools.Method(typeof(IntermissionController), "Start");
-            MethodInfo patchedIntermissionStart = AccessTools.Method(typeof(PatchedFunctions), "Start_MyPatch");
-            harmony.Patch(originalIntermissionStart, new HarmonyMethod(patchedIntermissionStart));
-
-            Logger.LogInfo("SubtitleController->DisplaySubtitle");
-            MethodInfo originalDisplaySubtitle = AccessTools.Method(typeof(SubtitleController), "DisplaySubtitle", new Type[] { typeof(string), typeof(AudioSource) });
-            MethodInfo patchedDisplaySubtitle = AccessTools.Method(typeof(PatchedFunctions), "DisplaySubtitle_MyPatch");
-            harmony.Patch(originalDisplaySubtitle, new HarmonyMethod(patchedDisplaySubtitle));
-
-            Logger.LogInfo("EnemyInfoPage->UpdateInfo");
-            MethodInfo originalUpdateInfo = AccessTools.Method(typeof(EnemyInfoPage), "UpdateInfo");
-            MethodInfo patchedUpdateInfo = AccessTools.Method(typeof(PatchedFunctions), "UpdateInfo_MyPatch");
-            harmony.Patch(originalUpdateInfo, new HarmonyMethod(patchedUpdateInfo));
-
-            Logger.LogInfo("SaveSlotMenu->UpdateSlotState");
-            MethodInfo originalUpdateSlotState = typeof(SaveSlotMenu).GetMethod("UpdateSlotState", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { typeof(SlotRowPanel), typeof(SaveSlotMenu.SlotData) }, null);
-            MethodInfo patchedUpdateSlotState = AccessTools.Method(typeof(PatchedFunctions), "UpdateSlotState_MyPatch");
-            harmony.Patch(originalUpdateSlotState, new HarmonyMethod(patchedUpdateSlotState));
-
-            Logger.LogInfo("SaveSlotMenu->ClearSlot (Postfix)");
-            MethodInfo originalClearSlot = typeof(SaveSlotMenu).GetMethod("ClearSlot", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { typeof(int) }, null);
-            MethodInfo patchedClearSlotPostfix = AccessTools.Method(typeof(PatchedFunctions), "ClearSlotPostfix_MyPatch");
-            harmony.Patch(originalClearSlot, null, new HarmonyMethod(patchedClearSlotPostfix));
 
             Logger.LogInfo("DiscordController->FetchSceneActivity");
             MethodInfo originalFetchScene = AccessTools.Method(typeof(DiscordController), "FetchSceneActivity", new Type[] { typeof(string) });
@@ -444,50 +388,105 @@ namespace UltrakULL
             MethodInfo patchedUpdateWave = AccessTools.Method(typeof(PatchedFunctions), "UpdateWave_MyPatch");
             harmony.Patch(originalUpdateWave, new HarmonyMethod(patchedUpdateWave));
 
-            Logger.LogInfo("Coin->RicoshotPointsCheck");
-            MethodInfo originalRicoshotPointsCheck = typeof(Coin).GetMethod("RicoshotPointsCheck");
-            MethodInfo patchedRicoshotPointsCheck = AccessTools.Method(typeof(PatchedFunctions), "RicoshotPointsCheck_MyPatch");
-            harmony.Patch(originalRicoshotPointsCheck, new HarmonyMethod(patchedRicoshotPointsCheck));
+            Logger.LogInfo("EnemyInfoPage->DisplayInfo (Postfix)");
+            MethodInfo originalDisplayInfo = AccessTools.Method(typeof(EnemyInfoPage), "DisplayInfo", new Type[] { typeof(SpawnableObject) });
+            MethodInfo patchedDisplayInfo = AccessTools.Method(typeof(PatchedFunctions), "DisplayInfo_Postfix");
+            harmony.Patch(originalDisplayInfo, null, new HarmonyMethod(patchedDisplayInfo));
+
+            Logger.LogInfo("FinalRank->SetInfo");
+            MethodInfo originalSetInfo = AccessTools.Method(typeof(FinalRank), "SetInfo");
+            MethodInfo patchedSetInfo = AccessTools.Method(typeof(PatchedFunctions), "SetInfo_MyPatch");
+            harmony.Patch(originalSetInfo, new HarmonyMethod(patchedSetInfo));
+
+            Logger.LogInfo("GunTypeColorGetter->OnEnable (Postfix)");
+            MethodInfo originalGunTypeColorGetterOnEnable = typeof(GunColorTypeGetter).GetMethod("OnEnable", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
+            MethodInfo patchedGunTypeColorGetterOnEnable = AccessTools.Method(typeof(PatchedFunctions), "OnEnablePostFix_MyPatch");
+            harmony.Patch(originalGunTypeColorGetterOnEnable, null, new HarmonyMethod(patchedGunTypeColorGetterOnEnable));
+
+            Logger.LogInfo("HudMessage->PlayMessage");
+            MethodInfo originalPlayMessage = typeof(HudMessage).GetMethod("PlayMessage");
+            MethodInfo patchedPlayMessage = AccessTools.Method(typeof(PatchedFunctions), "PlayMessage_MyPatch");
+            harmony.Patch(originalPlayMessage, new HarmonyMethod(patchedPlayMessage));
 
             Logger.LogInfo("HudMessageReciever->SendHudMessage");
             MethodInfo originalShowHudMessage = typeof(HudMessageReceiver).GetMethod("SendHudMessage");
             MethodInfo patchedShowHudMessage = AccessTools.Method(typeof(PatchedFunctions), "SendHudMessage_MyPatch");
             harmony.Patch(originalShowHudMessage, new HarmonyMethod(patchedShowHudMessage));
 
-            Logger.LogInfo("CheatsManager->UpdateCheatState");
-            MethodInfo originalUpdateCheatState = typeof(CheatsManager).GetMethod("UpdateCheatState", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { typeof(CheatMenuItem), typeof(ICheat) }, null);
-            MethodInfo patchedUpdateCheatState = AccessTools.Method(typeof(PatchedFunctions), "UpdateCheatState_MyPatch");
-            harmony.Patch(originalUpdateCheatState, new HarmonyMethod(patchedUpdateCheatState));
+            Logger.LogInfo("IntermissionController->Start");
+            MethodInfo originalIntermissionStart = AccessTools.Method(typeof(IntermissionController), "Start");
+            MethodInfo patchedIntermissionStart = AccessTools.Method(typeof(PatchedFunctions), "Start_MyPatch");
+            harmony.Patch(originalIntermissionStart, new HarmonyMethod(patchedIntermissionStart));
 
-            Logger.LogInfo("CheatsManager->RenderCheatsInfo");
-            MethodInfo originalRenderCheatsInfo = typeof(CheatsManager).GetMethod("RenderCheatsInfo");
-            MethodInfo patchedRenderCheatsInfo = AccessTools.Method(typeof(PatchedFunctions), "RenderCheatsInfo_MyPatch");
-            harmony.Patch(originalRenderCheatsInfo, new HarmonyMethod(patchedRenderCheatsInfo));
+            Logger.LogInfo("IntroText->Start");
+            MethodInfo originalIntroFunction = AccessTools.Method(typeof(IntroText), "Start");
+            MethodInfo patchedIntroFunction = AccessTools.Method(typeof(PatchedFunctions), "IntroTextStart_MyPatch");
+            harmony.Patch(originalIntroFunction, new HarmonyMethod(patchedIntroFunction));
 
-            Logger.LogInfo("LevelStats->Start");
-            MethodInfo originalStart = typeof(LevelStats).GetMethod("Start", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
-            MethodInfo patchedStart = AccessTools.Method(typeof(PatchedFunctions), "LevelStatsStart_MyPatch");
-            harmony.Patch(originalStart, new HarmonyMethod(patchedStart));
+            Logger.LogInfo("LevelSelectPanel->CheckScore (PostFix)");
+            MethodInfo originalCheckScoreFunction = AccessTools.Method(typeof(LevelSelectPanel), "CheckScore");
+            MethodInfo patchedCheckScoreFunctionPostfix = AccessTools.Method(typeof(PatchedFunctions), "CheckScore_MyPatchPostFix");
+            harmony.Patch(originalCheckScoreFunction, null, new HarmonyMethod(patchedCheckScoreFunctionPostfix));
 
-            Logger.LogInfo("LevelStats->Update");
-            MethodInfo originalUpdate = typeof(LevelStats).GetMethod("Update", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
-            MethodInfo patchedUpdate = AccessTools.Method(typeof(PatchedFunctions), "LevelStatsUpdate_MyPatch");
-            harmony.Patch(originalUpdate, new HarmonyMethod(patchedUpdate));
+            Logger.LogInfo("LevelStats->CheckStats (Postfix)");
+            MethodInfo originalCheckStats = typeof(LevelStats).GetMethod("CheckStats", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
+            MethodInfo patchedCheckStats = AccessTools.Method(typeof(PatchedFunctions), "CheckStats_Postfix");
+            harmony.Patch(originalCheckStats, null, new HarmonyMethod(patchedCheckStats));
 
-            Logger.LogInfo("CustomPatterns->Toggle");
-            MethodInfo originalToggle = typeof(CustomPatterns).GetMethod("Toggle");
-            MethodInfo patchedToggle = AccessTools.Method(typeof(PatchedFunctions), "Toggle_MyPatch");
-            harmony.Patch(originalToggle, new HarmonyMethod(patchedToggle));
+            Logger.LogInfo("LevelStats->Start (Postfix)");
+            MethodInfo originalLevelStatsStart = typeof(LevelStats).GetMethod("Start", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
+            MethodInfo patchedLevelStatsStart = AccessTools.Method(typeof(PatchedFunctions), "LevelStatsStart_Postfix");
+            harmony.Patch(originalLevelStatsStart, null, new HarmonyMethod(patchedLevelStatsStart));
+
+            Logger.LogInfo("LevelNamePopup->NameAppear");
+            MethodInfo originalNameAppearFunction = AccessTools.Method(typeof(LevelNamePopup), "NameAppear");
+            MethodInfo patchedNameAppearFunction = AccessTools.Method(typeof(PatchedFunctions), "NameAppear_MyPatch");
+            harmony.Patch(originalNameAppearFunction, new HarmonyMethod(patchedNameAppearFunction));
+
+            Logger.LogInfo("OptionsMenuToManager->Start");
+            MethodInfo originalOptions = typeof(OptionsMenuToManager).GetMethod("Start", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
+            MethodInfo patchedOptions = AccessTools.Method(typeof(Inject_LanguageButton), "Prefix");
+            harmony.Patch(originalOptions, new HarmonyMethod(patchedOptions));
+
+            Logger.LogInfo("SaveSlotMenu->ClearSlot (Postfix)");
+            MethodInfo originalClearSlot = typeof(SaveSlotMenu).GetMethod("ClearSlot", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { typeof(int) }, null);
+            MethodInfo patchedClearSlotPostfix = AccessTools.Method(typeof(PatchedFunctions), "ClearSlotPostfix_MyPatch");
+            harmony.Patch(originalClearSlot, null, new HarmonyMethod(patchedClearSlotPostfix));
+
+            Logger.LogInfo("SaveSlotMenu->UpdateSlotState (Postfix)");
+            MethodInfo originalUpdateSlotState = typeof(SaveSlotMenu).GetMethod("UpdateSlotState", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { typeof(SlotRowPanel), typeof(SaveSlotMenu.SlotData) }, null);
+            MethodInfo patchedUpdateSlotState = AccessTools.Method(typeof(PatchedFunctions), "UpdateSlotState_Postfix");
+            harmony.Patch(originalUpdateSlotState, null, new HarmonyMethod(patchedUpdateSlotState));
 
             Logger.LogInfo("ScanningStuff->ScanBook");
             MethodInfo originalScanBook = typeof(ScanningStuff).GetMethod("ScanBook", new Type[] { typeof(string), typeof(bool), typeof(int) });
             MethodInfo patchedScanBook = AccessTools.Method(typeof(PatchedFunctions), "ScanBook_MyPatch");
             harmony.Patch(originalScanBook, new HarmonyMethod(patchedScanBook));
 
-            Logger.LogInfo("GunTypeColorGetter->OnEnable (Postfix)");
-            MethodInfo originalGunTypeColorGetterOnEnable = typeof(GunColorTypeGetter).GetMethod("OnEnable", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
-            MethodInfo patchedGunTypeColorGetterOnEnable = AccessTools.Method(typeof(PatchedFunctions), "OnEnablePostFix_MyPatch");
-            harmony.Patch(originalGunTypeColorGetterOnEnable, null, new HarmonyMethod(patchedGunTypeColorGetterOnEnable));
+            Logger.LogInfo("StyleHUD->AddPoints");
+            MethodInfo originalAddPoints = AccessTools.Method(typeof(StyleHUD), "AddPoints", new Type[] { typeof(int), typeof(string), typeof(GameObject), typeof(EnemyIdentifier), typeof(int), typeof(string), typeof(string) });
+            MethodInfo patchedAddPoints = AccessTools.Method(typeof(PatchedFunctions), "AddPoints_MyPatch");
+            harmony.Patch(originalAddPoints, new HarmonyMethod(patchedAddPoints));
+
+            Logger.LogInfo("StyleHUD->GetLocalizedName");
+            MethodInfo originalGetLocalizedName = AccessTools.Method(typeof(StyleHUD), "GetLocalizedName", new Type[] { typeof(string) });
+            MethodInfo patchedGetLocalizedName = AccessTools.Method(typeof(PatchedFunctions), "GetLocalizedName_MyPatch");
+            harmony.Patch(originalGetLocalizedName, new HarmonyMethod(patchedGetLocalizedName));
+
+            Logger.LogInfo("StyleHUD->UpdateFreshnessSlider");
+            MethodInfo originalUpdateFreshnessSlider = AccessTools.Method(typeof(StyleHUD), "UpdateFreshnessSlider");
+            MethodInfo patchedUpdateFreshnessSlider = AccessTools.Method(typeof(PatchedFunctions), "UpdateFreshnessSlider_MyPatch");
+            harmony.Patch(originalUpdateFreshnessSlider, new HarmonyMethod(patchedUpdateFreshnessSlider));
+
+            Logger.LogInfo("SubtitleController->DisplaySubtitle");
+            MethodInfo originalDisplaySubtitle = AccessTools.Method(typeof(SubtitleController), "DisplaySubtitle", new Type[] { typeof(string), typeof(AudioSource) });
+            MethodInfo patchedDisplaySubtitle = AccessTools.Method(typeof(PatchedFunctions), "DisplaySubtitle_MyPatch");
+            harmony.Patch(originalDisplaySubtitle, new HarmonyMethod(patchedDisplaySubtitle));
+
+            Logger.LogInfo("VariationInfo->UpdateMoney (Postfix)");
+            MethodInfo originalUpdateMoney = AccessTools.Method(typeof(VariationInfo), "UpdateMoney");
+            MethodInfo patchedUpdateMoneyPostfix = AccessTools.Method(typeof(PatchedFunctions), "UpdateMoney_Postfix");
+            harmony.Patch(originalUpdateMoney, null, new HarmonyMethod(patchedUpdateMoneyPostfix));
 
             Logger.LogInfo("Done");
         }

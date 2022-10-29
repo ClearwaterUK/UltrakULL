@@ -11,7 +11,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Events;
-
 using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
 using System.Linq;
@@ -27,11 +26,6 @@ namespace UltrakULL
         public static bool currentTimedMessageActivated;
 
         public static Discord.Activity rankCachedActivity;
-
-        public static StatsManager cachedStatsManager;
-        public static bool cachedStatsReady;
-
-        public static bool skipToInput = false;
 
         //@Override
         //Overrides the private CoinsToPoints function in the CrateCounter class
@@ -49,8 +43,6 @@ namespace UltrakULL
                     StatsManager.DivideMoney(___savedCoins * 100),
                     "<color=orange>P</color>"
                 }), "", "", 0, false);
-
-
             ___savedCoins = 0;
             }
             return false;
@@ -58,7 +50,6 @@ namespace UltrakULL
 
         //@Override
         //Overrides OnEnable from the GunColorTypeGetter class. Used for the Soul Orb checker.
-
         public static void OnEnablePostFix_MyPatch(GunColorTypeGetter __instance)
         {
             for (int i = 1; i < 5; i++)
@@ -88,7 +79,6 @@ namespace UltrakULL
             text = Books.getBookText();
             return true;
         }
-
 
         //@Override
         //Overrides Check from the vanilla game. Used for persistant difficulty strings across all scenes.
@@ -155,7 +145,6 @@ namespace UltrakULL
             return false;
         }
 
-
         //@Override
         //Overrides checkScore function from the vanilla game. This translates level names, as well as if challenges have been completed or not. POSTFIX.
         public static void CheckScore_MyPatchPostFix(LevelSelectPanel __instance)
@@ -170,17 +159,14 @@ namespace UltrakULL
             {
                 __instance.transform.Find("Name").GetComponent<Text>().text = "P-2: ???";
             }
-
             else if (__instance.transform.Find("Name").GetComponent<Text>().text.Contains("P-3"))
             {
                 __instance.transform.Find("Name").GetComponent<Text>().text = "P-3: ???";
             }
-
             else
             {
                 __instance.transform.Find("Name").GetComponent<Text>().text = LevelNames.getLevelName(num); //Level Name
             }
-
             if (rank.levelNumber == __instance.levelNumber || (__instance.levelNumber == 666 && rank.levelNumber == __instance.levelNumber + __instance.levelNumberInLayer - 1))
             {
                 if (__instance.challengeIcon)
@@ -206,100 +192,27 @@ namespace UltrakULL
         }
 
         //@Override
-        //Overrides the NameAppear function from LevelSelectPopup. This allows changes level names to appear in-game.
-        //By extension, showLayer and showName also need to be patched in here, as they're originally private functions.
-        public static bool NameAppear_MyPatch(LevelNamePopup __instance, bool ___activated, AudioSource ___aud, string ___layerString, string ___nameString, bool ___fadingOut, Text[] ___layerText, Text[] ___nameText)
+        //Overrides the NameAppear function from LevelNamePopup. Used for showing layer and level names at the start of a level.
+        public static bool NameAppear_MyPatch(LevelNamePopup __instance, ref string ___layerString, ref string ___nameString)
         {
-            //Layer string is composed of layer name - level *number*.
-            //Example: PRELUDE /// FIRST, LUST /// SECOND, etc
             ___layerString = TitleManager.getLayer(___layerString);
-
             ___nameString = TitleManager.getName(___nameString);
 
-            if (!___activated)
-            {
-                ___activated = true;
-                ___aud.Play();
-                __instance.StartCoroutine(showLayer(__instance, ___layerString, ___layerText, ___nameString, ___nameText, ___aud, ___fadingOut));
-            }
-            return false;
-        }
-
-        public static IEnumerator showName(LevelNamePopup instance, string nameString, Text[] nameText, AudioSource aud, bool fadingOut)
-        {
-            aud.Play();
-            int j;
-            Text[] array = nameText;
-            for (int i = 0; i <= nameString.Length; i = j + 1)
-            {
-                for (j = 0; j < array.Length; j++)
-                {
-                    array[j].text = nameString.Substring(0, i);
-                }
-                yield return new WaitForSeconds(0.001f);
-                j = i;
-            }
-            aud.Stop();
-            yield return new WaitForSeconds(0.5f);
-
-            foreach (Text text in nameText)
-            {
-                text.CrossFadeAlpha(0f, 3.0f, false);
-            }
-
-            fadingOut = true;
-            yield break;
-        }
-
-        public static IEnumerator showLayer(LevelNamePopup instance, string layerString, Text[] layerText, string nameString, Text[] nameText, AudioSource aud, bool fadingOut)
-        {
-            aud.Play();
-            int j;
-            for (int i = 0; i <= layerString.Length; i = j + 1)
-            {
-                Text[] array = layerText;
-                for (j = 0; j < array.Length; j++)
-                {
-                    array[j].text = layerString.Substring(0, i);
-                }
-                yield return new WaitForSeconds(0.001f);
-                j = i;
-            }
-            aud.Stop();
-
-            yield return new WaitForSeconds(0.5f);
-
-            foreach (Text text in layerText)
-            {
-                text.CrossFadeAlpha(0f, 2.5f, false);
-            }
-            instance.StartCoroutine(showName(instance, nameString, nameText, aud, fadingOut));
-            yield break;
+            return true;
         }
 
         //@Override
-        //Overrides the Start function from IntroText. This is needed for patched text to appear on the 0-0 tutorial.
-
+        //Overrides the Start function from IntroText. This is needed for patched text to appear on the tutorial.
         public static bool IntroTextStart_MyPatch(IntroText __instance, Text ___txt, string ___fullString)
         {
             ___txt = __instance.GetComponent<Text>();
 
             TutorialStrings tutStrings = new TutorialStrings();
             ___fullString = ___txt.text;
-            Console.WriteLine(___fullString);
 
-            if (___fullString[0] == 'B')
-            {
-                ___fullString = tutStrings.introFirstPage;
-                
-            }
-            else
-            {
-                ___fullString = tutStrings.introSecondPage;
-            }
-            Console.WriteLine(___fullString);
+            if (___fullString[0] == 'B') { ___fullString = tutStrings.introFirstPage; }
+            else { ___fullString = tutStrings.introSecondPage; }
             ___txt.text = ___fullString;
-            
 
             return true;
         }
@@ -310,7 +223,6 @@ namespace UltrakULL
         {
             //The HUD display uses 2 kinds of messages.
             //One for messages that displays KeyCode inputs (for controls), and one that doesn't.
-
             //Get the string table based on the area of the game we're currently in.
 
             ___activated = true;
@@ -460,7 +372,6 @@ namespace UltrakULL
             {
                 ___aud.Play();
             }
-
             __instance.StartCoroutine(clearTextBox(5f, ___text, ___img));
             return false;
         }
@@ -483,7 +394,6 @@ namespace UltrakULL
             {
                 num++;
             }
-
             if (cheatsUsed)
             {
                 Text text = __instance.extraInfo;
@@ -537,160 +447,28 @@ namespace UltrakULL
             return false;
         }
 
-
         //@Override
         //Overrides the CreateBossBar method from the BossBarManager class. This is needed to swap in the translated boss names on their health bars.
-        public static bool CreateBossBar_MyPatch(string bossName, BossBarManager.HealthLayer[] healthLayers, ref BossHealthBarTemplate createdBossBar, ref Slider[] hpSliders, ref Slider[] hpAfterImages, ref GameObject bossBar, BossBarManager __instance, BossHealthBarTemplate ___template, BossBarManager.SliderLayer[] ___layers)
+        public static bool CreateBossBar_MyPatch(ref string bossName)
         {
             bossName = BossStrings.getBossName(bossName);
-
-            Debug.Log("Creating boss bar for " + bossName);
-            List<Slider> list = new List<Slider>();
-            List<Slider> list2 = new List<Slider>();
-            createdBossBar = UnityEngine.Object.Instantiate<BossHealthBarTemplate>(___template, ___template.transform.parent, true);
-            bossBar = createdBossBar.gameObject;
-            bossBar.SetActive(true);
-            createdBossBar.bossNameText.text = bossName;
-            float num = 0f;
-            for (int i = 0; i < healthLayers.Length; i++)
-            {
-                BossHealthSliderTemplate bossHealthSliderTemplate = UnityEngine.Object.Instantiate<BossHealthSliderTemplate>(createdBossBar.sliderTemplate, createdBossBar.sliderTemplate.transform.parent);
-                list2.Add(bossHealthSliderTemplate.slider);
-                bossHealthSliderTemplate.slider.minValue = num;
-                bossHealthSliderTemplate.slider.maxValue = num + healthLayers[i].health;
-                bossHealthSliderTemplate.gameObject.SetActive(true);
-                bossHealthSliderTemplate.background.SetActive(i == 0);
-                bossHealthSliderTemplate.fill.color = ___layers[i].afterImageColor;
-                BossHealthSliderTemplate bossHealthSliderTemplate2 = UnityEngine.Object.Instantiate<BossHealthSliderTemplate>(createdBossBar.sliderTemplate, createdBossBar.sliderTemplate.transform.parent);
-                list.Add(bossHealthSliderTemplate2.slider);
-                bossHealthSliderTemplate2.slider.minValue = num;
-                bossHealthSliderTemplate2.slider.maxValue = num + healthLayers[i].health;
-                bossHealthSliderTemplate2.gameObject.SetActive(true);
-                bossHealthSliderTemplate2.background.SetActive(false);
-                bossHealthSliderTemplate2.fill.color = ___layers[i].color;
-                num += healthLayers[i].health;
-            }
-            hpSliders = list.ToArray();
-            hpAfterImages = list2.ToArray();
-            ___template.sliderTemplate.gameObject.SetActive(false);
-            ___template.gameObject.SetActive(false);
-            bossBar.SetActive(false);
-            __instance.StartCoroutine(FitAsync(___template.transform.parent.GetComponent<RectTransform>()));
-
-            return false;
-        }
-
-        public static IEnumerator FitAsync(RectTransform layoutRoot)
-        {
-            yield return new WaitForFixedUpdate();
-            LayoutRebuilder.ForceRebuildLayoutImmediate(layoutRoot);
-            yield break;
+            return true;
         }
 
         //@Override
         //Overrides the UpdateMoney method from the VariationInfo class. This is needed to patch the "ALREADY OWNED" string, and will save having to change every single seperate button containing this string in the shop.
-        public static bool UpdateMoney_MyPatch(VariationInfo __instance, int ___money, Text ___buttonText, Image ___equipImage, int ___equipStatus, bool ___alreadyOwned)
+
+        public static void UpdateMoney_Postfix(VariationInfo __instance, int ___money, bool ___alreadyOwned)
         {
-            ___money = GameProgressSaver.GetMoney();
-            __instance.moneyText.text = MoneyText.DivideMoney(___money) + "<color=orange>P</color>";
-            if (!___alreadyOwned && __instance.cost < 0 && GameProgressSaver.CheckGear(__instance.weaponName) > 0)
-            {
-                ___alreadyOwned = true;
-            }
             if (!___alreadyOwned)
             {
                 if (__instance.cost < 0)
                 {
                     __instance.costText.text = "<color=red>" + LanguageManager.CurrentLanguage.misc.weapons_unavailable + "</color>";
-                    if (___buttonText == null)
-                    {
-                        ___buttonText = __instance.buyButton.GetComponentInChildren<Text>();
-                    }
-                    ___buttonText.text = __instance.costText.text;
-                    __instance.buyButton.failure = true;
-                    __instance.buyButton.GetComponent<Button>().interactable = false;
-                    __instance.buyButton.GetComponent<Image>().color = Color.red;
-                    ShopButton shopButton;
-                    if (__instance.TryGetComponent<ShopButton>(out shopButton))
-                    {
-                        shopButton.failure = true;
-                    }
                 }
-                else if (__instance.cost > ___money)
-                {
-                    __instance.costText.text = "<color=red>" + MoneyText.DivideMoney(__instance.cost) + "P</color>";
-                    if (___buttonText == null)
-                    {
-                        ___buttonText = __instance.buyButton.GetComponentInChildren<Text>();
-                    }
-                    ___buttonText.text = __instance.costText.text;
-                    __instance.buyButton.failure = true;
-                    __instance.buyButton.GetComponent<Button>().interactable = false;
-                    __instance.buyButton.GetComponent<Image>().color = Color.red;
-                }
-                else
-                {
-                    __instance.costText.text = "<color=white>" + MoneyText.DivideMoney(__instance.cost) + "</color><color=orange>P</color>";
-                    if (___buttonText == null)
-                    {
-                        ___buttonText = __instance.buyButton.GetComponentInChildren<Text>();
-                    }
-                    ___buttonText.text = __instance.costText.text;
-                    __instance.buyButton.failure = false;
-                    __instance.buyButton.GetComponent<Button>().interactable = true;
-                    __instance.buyButton.GetComponent<Image>().color = Color.white;
-                }
-                __instance.equipButton.gameObject.SetActive(false);
-                return false;
             }
             __instance.costText.text = LanguageManager.CurrentLanguage.misc.weapons_alreadyBought;
-            if (___buttonText == null)
-            {
-                ___buttonText = __instance.buyButton.GetComponentInChildren<Text>();
-            }
-            ___buttonText.text = __instance.costText.text;
-            __instance.buyButton.failure = true;
-            __instance.buyButton.GetComponent<Button>().interactable = false;
-            __instance.buyButton.GetComponent<Image>().color = Color.white;
-            __instance.equipButton.gameObject.SetActive(true);
-            __instance.equipButton.interactable = true;
-            if (___equipImage == null)
-            {
-                ___equipImage = __instance.equipButton.transform.GetChild(0).GetComponent<Image>();
-            }
-            int @int = MonoSingleton<PrefsManager>.Instance.GetInt("weapon." + __instance.weaponName, 1);
-            if (@int == 2 && GameProgressSaver.CheckGear(__instance.weaponName.Substring(0, __instance.weaponName.Length - 1) + "alt") > 0)
-            {
-                ___equipStatus = 2;
-            }
-            else if (@int > 0)
-            {
-                ___equipStatus = 1;
-            }
-            else
-            {
-                ___equipStatus = 0;
-            }
-            if (__instance.orderButtons)
-            {
-                if (___equipStatus != 0)
-                {
-                    __instance.orderButtons.SetActive(true);
-                }
-                else
-                {
-                    __instance.orderButtons.SetActive(false);
-                }
-            }
-            ___equipImage.sprite = __instance.equipSprites[___equipStatus];
-            ShopButton shopButton2;
-            if (__instance.cost < 0 && __instance.TryGetComponent<ShopButton>(out shopButton2))
-            {
-                shopButton2.failure = false;
-            }
-            return false;
         }
-
 
         //@Override
         //Overrides the AddPoints method from the StyleHUD class. This is needed to intercept and translate any strings coming into the style meter in-game.
@@ -699,10 +477,8 @@ namespace UltrakULL
             return true;
         }
 
-
         //@Override
-        //Coin->RicoshotPointsCheck()
-
+        //Overrides the RicoshotPointsCheck from the Coin class. Used for translating additional style strings that come from ricochets.
         public static bool RicoshotPointsCheck_MyPatch(Coin __instance, GameObject ___altBeam, bool ___wasShotByEnemy, StyleHUD ___shud, EnemyIdentifier ___eid)
         {
             string text = "";
@@ -728,13 +504,11 @@ namespace UltrakULL
             string prefix = text;
             styleHUD.AddPoints(points, pointID, __instance.sourceWeapon, ___eid, __instance.ricochets, prefix, "");
 
-
             return false;
         }
 
         public static bool GetLocalizedName_MyPatch(string id, StyleHUD __instance, Dictionary<string, string> ___idNameDict, ref string __result)
         {
-
             if (___idNameDict.ContainsKey(id))
             {
                 __result = StyleBonusStrings.getStyleBonusDictionary(id);
@@ -752,18 +526,15 @@ namespace UltrakULL
             return false;
         }
 
-        //@Override
-        //Overrides the Start method from the IntermissionController class. This is needed to swap out strings on the act intermission screens.
-        public static bool Start_MyPatch(IntermissionController __instance, string ___fullString, StringBuilder ___sb, Text ___txt, string ___tempString, bool ___skipToInput, bool ___waitingForInput, string ___preText, AudioSource ___aud, float ___origPitch)
+        public static bool Start_MyPatch(IntermissionController __instance, ref string ___preText, ref string ___fullString, ref Text ___txt)
         {
             ___txt = __instance.GetComponent<Text>();
             ___fullString = ___txt.text;
             ___txt.text = "";
-            ___aud = __instance.GetComponent<AudioSource>();
-            ___origPitch = ___aud.pitch;
 
             IntermissionStrings intStrings = new IntermissionStrings();
             ___fullString = intStrings.getIntermissionString(___fullString);
+            ___txt.text = ___fullString;
 
             //Section for 2-S Mirage's names.
             if (SceneManager.GetActiveScene().name == "Level 2-S")
@@ -772,7 +543,7 @@ namespace UltrakULL
                 string closingTag = "</color>";
                 string mirageName = Regex.Replace(___preText, @"<[^>]*>", "");
                 Console.WriteLine(mirageName);
-                switch(mirageName)
+                switch (mirageName)
                 {
                     case ("???:"): { break; }
                     case ("JUST SOMEONE:"): { ___preText = openingTag + LanguageManager.CurrentLanguage.visualnovel.visualnovel_mirageName1 + closingTag + ":"; break; }
@@ -780,127 +551,8 @@ namespace UltrakULL
                     case ("MIRAGE:"): { ___preText = openingTag + LanguageManager.CurrentLanguage.visualnovel.visualnovel_mirageName3 + closingTag + ":"; break; }
                     default: { break; }
                 }
-                Console.WriteLine(___preText);
             }
-
-
-            __instance.StartCoroutine(TextAppearMain(__instance, ___fullString, ___sb, ___txt, ___tempString, ___skipToInput, ___waitingForInput, ___preText, ___aud, ___origPitch));
-
-            return false;
-        }
-
-
-        public static IEnumerator TextAppearMain(IntermissionController __instance, string ___fullString, StringBuilder ___sb, Text ___txt, string ___tempString, bool ___skipToInput, bool ___waitingForInput, string ___preText, AudioSource ___aud, float ___origPitch)
-        {
-            int i = ___fullString.Length;
-            int num = 0;
-
-
-            for (int j = 0; j < i; j = num + 1)
-            {
-                char c = ___fullString[j];
-                float waitTime = 0.04f;
-                if (skipToInput)
-                {
-                    waitTime = 0.01f;
-                }
-                if ((Input.GetKeyDown(KeyCode.Mouse0) || MonoSingleton<InputManager>.Instance == null || (!MonoSingleton<InputManager>.Instance.PerformingCheatMenuCombo() && MonoSingleton<InputManager>.Instance.InputSource.Fire1.WasPerformedThisFrame) || Input.GetKey(KeyCode.Space) || MonoSingleton<InputManager>.Instance.InputSource.Dodge.IsPressed))
-                {
-                    skipToInput = true;
-                }
-                bool playSound = true;
-                if (MonoSingleton<OptionsManager>.Instance.paused)
-                {
-                    yield return new WaitUntil(() => MonoSingleton<OptionsManager>.Instance == null || !MonoSingleton<OptionsManager>.Instance.paused);
-                }
-                char c2 = c;
-
-                if (c2 != ' ')
-                {
-                    if (c2 != '}')
-                    {
-                        if (c2 == '▼')
-                        {
-                            ___sb = new StringBuilder(___fullString);
-                            ___sb[j] = ' ';
-                            ___fullString = ___sb.ToString();
-                            ___txt.text = ___preText + ___fullString.Substring(0, j);
-                            ___tempString = ___txt.text;
-                            ___skipToInput = false;
-                            skipToInput = false;
-                            ___waitingForInput = true;
-
-                            Coroutine nextLine = __instance.StartCoroutine(IntermissionDotsAppear(__instance, ___waitingForInput, ___txt, ___tempString));
-                            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
-                            __instance.StopCoroutine(nextLine);
-
-                            //The above works better than the below, but unable to speed up text.
-                            //yield return new WaitForSecondsRealtime(0.8f);
-                        }
-                        else
-                        {
-                            ___txt.text = ___preText + ___fullString.Substring(0, j);
-                        }
-                    }
-                    else
-                    {
-                        ___sb = new StringBuilder(___fullString);
-                        ___sb[j] = ' ';
-                        ___fullString = ___sb.ToString();
-                        playSound = false;
-                        waitTime = 0f;
-                        ___txt.text = ___preText + ___fullString.Substring(0, j);
-                        UnityEvent unityEvent = __instance.onTextEvent;
-                        if (unityEvent != null)
-                        {
-                            unityEvent.Invoke();
-                        }
-                    }
-                }
-                else
-                {
-                    waitTime = 0f;
-                    ___txt.text = ___preText + ___fullString.Substring(0, j);
-                }
-                i = ___fullString.Length;
-                if (waitTime != 0f && playSound)
-                {
-                    ___aud.pitch = UnityEngine.Random.Range(___origPitch - 0.05f, ___origPitch + 0.05f);
-                    ___aud.Play();
-                }
-                if (___skipToInput)
-                {
-                    waitTime = 0f;
-                }
-                yield return new WaitForSecondsRealtime(waitTime);
-                num = j;
-            }
-            UnityEvent unityEvent2 = __instance.onComplete;
-            if (unityEvent2 != null)
-            {
-                unityEvent2.Invoke();
-            }
-            yield break;
-        }
-
-        public static IEnumerator IntermissionDotsAppear(IntermissionController __instance, bool waitingForInput, Text txt, string tempString)
-        {
-            while (waitingForInput)
-            {
-                if (MonoSingleton<OptionsManager>.Instance.paused)
-                {
-                    yield return new WaitUntil(() => !MonoSingleton<OptionsManager>.Instance.paused || !__instance.gameObject.scene.isLoaded);
-                }
-
-                txt.text = txt.text + "▼";
-                yield return new WaitForSecondsRealtime(0.25f);
-                if (waitingForInput)
-                {
-                    txt.text = txt.text.Remove(txt.text.Length - 1);
-                    yield return new WaitForSecondsRealtime(0.25f);
-                }
-            }
-            yield break;
+                return true;
         }
 
         public static bool DisplaySubtitle_MyPatch(SubtitleController __instance, Subtitle ___subtitleLine, Transform ___container, Subtitle ___previousSubtitle, string caption, AudioSource audioSource = null)
@@ -929,113 +581,37 @@ namespace UltrakULL
             return false;
         }
 
+
         //@Override
-        //Overrides the UpdateInfo method from the EnemyInfoPage class. This is to allow swapping out of monster bios in the shop.
-        public static bool UpdateInfo_MyPatch(EnemyInfoPage __instance, Transform ___enemyList, SpawnableObjectsDatabase ___objects, Image ___buttonTemplateBackground, Image ___buttonTemplateForeground, Sprite ___lockedSprite, SpawnableObject ___currentSpawnable, GameObject ___buttonTemplate, Text ___enemyPageTitle, Text ___enemyPageContent, Transform ___enemyPreviewWrapper)
+        //Overrides the DisplayInfo method from the EnemyInfoPage class. This is to allow swapping out of monster bios in the shop.
+        public static void DisplayInfo_Postfix(SpawnableObject source, EnemyInfoPage __instance, Text ___enemyPageTitle, Text ___enemyPageContent)
         {
-            if (___enemyList.childCount > 1)
-            {
-                for (int i = ___enemyList.childCount - 1; i > 0; i--)
-                {
-                    UnityEngine.Object.Destroy(___enemyList.GetChild(i).gameObject);
-                }
-            }
-            SpawnableObject[] enemies = ___objects.enemies;
-            for (int j = 0; j < enemies.Length; j++)
-            {
-                SpawnableObject spawnableObject = enemies[j];
-                bool flag = true;
-                if (MonoSingleton<BestiaryData>.Instance.GetEnemy(spawnableObject.enemyType) < 1)
-                {
-                    flag = false;
-                }
-                if (flag)
-                {
-                    ___buttonTemplateBackground.color = spawnableObject.backgroundColor;
-                    ___buttonTemplateForeground.sprite = spawnableObject.gridIcon;
-                }
-                else
-                {
-                    ___buttonTemplateBackground.color = Color.gray;
-                    ___buttonTemplateForeground.sprite = ___lockedSprite;
-                }
-                GameObject gameObject = UnityEngine.Object.Instantiate<GameObject>(___buttonTemplate, ___enemyList);
-                gameObject.SetActive(true);
-                if (flag)
-                {
-                    gameObject.GetComponentInChildren<ShopButton>().deactivated = false;
-                    gameObject.GetComponentInChildren<Button>().onClick.AddListener(delegate ()
-                    {
-                        ___currentSpawnable = spawnableObject;
-                        //Nest the original private DisplayInfo in here.
+            string enemyName = EnemyBios.getName(source.objectName);
+            string enemyType = EnemyBios.getType(source.type);
+            string enemyDescription = EnemyBios.getDescription(source.objectName);
+            string enemyStrategy = EnemyBios.getStrategy(source.objectName);
 
-                        string enemyName = EnemyBios.getName(spawnableObject.objectName);
-                        string enemyType = EnemyBios.getType(spawnableObject.type);
-                        string enemyDescription = EnemyBios.getDescription(spawnableObject.objectName);
-                        string enemyStrategy = EnemyBios.getStrategy(spawnableObject.objectName);
-
-                        ___enemyPageTitle.text = enemyName;
-                        string text = "<color=orange>" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_type + ": " + enemyType + "\n\n" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_data + "</color>\n";
-                        if (MonoSingleton<BestiaryData>.Instance.GetEnemy(spawnableObject.enemyType) > 1)
-                        {
-                            text += enemyDescription;
-                        }
-                        else
-                        {
-                            text += "???";
-                        }
-                        text = text + "\n\n<color=orange>" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_strategy + ":</color>\n" + enemyStrategy;
-                        ___enemyPageContent.text = text;
-                        ___enemyPageContent.rectTransform.localPosition = new Vector3(___enemyPageContent.rectTransform.localPosition.x, 0f, ___enemyPageContent.rectTransform.localPosition.z);
-                        for (int i = 0; i < ___enemyPreviewWrapper.childCount; i++)
-                        {
-                            UnityEngine.Object.Destroy(___enemyPreviewWrapper.GetChild(i).gameObject);
-                        }
-                        GameObject go = UnityEngine.Object.Instantiate<GameObject>(spawnableObject.preview, ___enemyPreviewWrapper);
-                        int layer = ___enemyPreviewWrapper.gameObject.layer;
-                        SwapLayers(go.transform, layer);
-                        go.layer = layer;
-                        go.transform.localPosition = spawnableObject.menuOffset;
-                        Spin spin = go.AddComponent<Spin>();
-                        spin.spinDirection = new Vector3(0f, 1f, 0f);
-                        spin.speed = 10f;
-                    });
-                    //End of nested DisplayInfo here
-                }
-                else
-                {
-                    gameObject.GetComponentInChildren<ShopButton>().deactivated = true;
-                }
-            }
-            ___buttonTemplate.SetActive(false);
-
-            return false;
-        }
-        public static void SwapLayers(Transform target, int layer)
-        {
-            foreach (object obj in target)
+            ___enemyPageTitle.text = enemyName;
+            string text = "<color=orange>" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_type + ": " + enemyType + "\n\n" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_data + "</color>\n";
+            if (MonoSingleton<BestiaryData>.Instance.GetEnemy(source.enemyType) > 1)
             {
-                Transform transform = (Transform)obj;
-                transform.gameObject.layer = layer;
-                if (transform.childCount > 0)
-                {
-                    SwapLayers(transform, layer);
-                }
+                text += enemyDescription;
             }
+            else
+            {
+                text += "???";
+            }
+            text = text + "\n\n<color=orange>" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_strategy + ":</color>\n" + enemyStrategy;
+            ___enemyPageContent.text = text;
+
         }
 
         //@Override
         //Overrides the *private* UpdateSlotState method from the SaveSlotMenu class. This is to allow save menu strings to be swapped out.
-        public static bool UpdateSlotState_MyPatch(SlotRowPanel targetPanel, SaveSlotMenu.SlotData data, SaveSlotMenu __instance, Color ___ActiveColor)
+        public static void UpdateSlotState_Postfix(SlotRowPanel targetPanel, SaveSlotMenu.SlotData data)
         {
             bool flag = GameProgressSaver.currentSlot == targetPanel.slotIndex;
-            targetPanel.backgroundPanel.color = (flag ? ___ActiveColor : Color.black);
-            targetPanel.slotNumberLabel.color = (flag ? Color.black : (data.exists ? Color.white : Color.red));
-            targetPanel.stateLabel.color = (flag ? Color.black : (data.exists ? Color.white : Color.red));
-            targetPanel.selectButton.interactable = !flag;
             targetPanel.selectButton.GetComponentInChildren<Text>().text = (flag ? LanguageManager.CurrentLanguage.options.save_selected : LanguageManager.CurrentLanguage.options.save_select);
-            targetPanel.deleteButton.interactable = data.exists;
-            targetPanel.slotNumberLabel.text = string.Format("Slot {0}", targetPanel.slotIndex + 1);
             targetPanel.stateLabel.text = SaveToString(data.exists, data.highestLvlNumber, data.highestDifficulty);
 
             GameObject deleteButtonText = targetPanel.deleteButton.gameObject;
@@ -1043,9 +619,8 @@ namespace UltrakULL
 
             Text deleteText = child.GetComponent<Text>();
             deleteText.text = LanguageManager.CurrentLanguage.options.save_delete;
-
-            return false;
         }
+
         public static string SaveToString(bool exists, int highestLvlNumber, int highestDifficulty)
         {
             if (!exists)
@@ -1053,19 +628,30 @@ namespace UltrakULL
                 return LanguageManager.CurrentLanguage.options.save_slotEmpty;
             }
 
+            string highestDiff = MonoSingleton<PresenceController>.Instance.diffNames[highestDifficulty];
+            Console.WriteLine(highestDiff);
 
-            return LevelNames.getLevelName(highestLvlNumber) + " " + ((highestLvlNumber <= 0) ? string.Empty : ("(" + MonoSingleton<PresenceController>.Instance.diffNames[highestDifficulty] + ")"));
+            switch(highestDiff)
+            {
+                case "HARMLESS": { highestDiff = LanguageManager.CurrentLanguage.frontend.difficulty_harmless; break; }
+                case "LENIENT": { highestDiff = LanguageManager.CurrentLanguage.frontend.difficulty_lenient; break; }
+                case "STANDARD": { highestDiff = LanguageManager.CurrentLanguage.frontend.difficulty_standard; break; }
+                case "VIOLENT": { highestDiff = LanguageManager.CurrentLanguage.frontend.difficulty_violent; break; }
+                case "BRUTAL": { highestDiff = LanguageManager.CurrentLanguage.frontend.difficulty_brutal; break; }
+                case "ULTRAKILL MUST DIE": { highestDiff = LanguageManager.CurrentLanguage.frontend.difficulty_umd; break; }
+                default: { highestDiff = "UNKNOWN DIFFICULTY"; break; }
+            }
+
+            return LevelNames.getLevelName(highestLvlNumber) + " " + ((highestLvlNumber <= 0) ? string.Empty : ("(" + highestDiff + ")"));
         }
 
         //@Override
-        //Overrides the *private* ClearSlot method from the SaveSlotMenu class. This is to swap out the delete confirmation string. Postfix
-
+        //Overrides the *private* ClearSlot method from the SaveSlotMenu class. This is to swap out the delete confirmation string.
         public static void ClearSlotPostfix_MyPatch(int slot, Text ___wipeConsentContent)
         {
             ___wipeConsentContent.text = string.Format(LanguageManager.CurrentLanguage.options.save_deleteWarning1 + " <color=red>" + LanguageManager.CurrentLanguage.options.save_deleteWarning2 + " {0}</color>?", slot + 1);
             return;
         }
-
 
         //@Override
         //DiscordController->Update
@@ -1094,26 +680,11 @@ namespace UltrakULL
         //Overrides the FetchSceneActivity function from the DiscordController class. This is to swap out strings in Discord Rich Presence.
         public static bool FetchSceneActivity_MyPatch(string scene, DiscordController __instance, DiscordController ___Instance, bool ___disabled, Discord.Discord ___discord, Discord.ActivityManager ___activityManager, Discord.Activity ___cachedActivity, SerializedActivityAssets ___missingActivityAssets)
         {
-            //Console.WriteLine("Fetching scene activity");
 
             if (!___Instance || ___disabled || ___discord == null)
             {
-                //Console.WriteLine("Pre-exiting");
-                if (!___Instance)
-                {
-                    // Console.WriteLine("Instance is disabled");
-                }
-                if (___disabled)
-                {
-                    //Console.WriteLine("Disabled is true");
-                }
-                if (___discord == null)
-                {
-                    Console.WriteLine("Discord instance is null");
-                }
                 return false;
             }
-
 
             if (___discord == null || ___activityManager == null || ___disabled)
             {
@@ -1129,10 +700,6 @@ namespace UltrakULL
                 {
                     ___cachedActivity.Assets.LargeImage = ___missingActivityAssets.Deserialize().LargeImage;
                 }
-            }
-            else
-            {
-                Console.WriteLine("Instance is null, shouldn't be...");
             }
 
             ___cachedActivity.Assets.LargeText = LevelNames.getDiscordLevelName(SceneManager.GetActiveScene().name);
@@ -1242,7 +809,6 @@ namespace UltrakULL
             }
             if (privateDisabled)
             {
-                Console.WriteLine("Instance Disabled");
                 return false;
             }
             if (privateRankIcons.Length <= rank)
@@ -1302,7 +868,6 @@ namespace UltrakULL
 
                     privateCachedActivity.Assets.SmallImage = rankCachedActivity.Assets.SmallImage;
                     privateCachedActivity.Assets.SmallText = StyleBonusStrings.getTranslatedRankString(rankCachedActivity.Assets.SmallText);
-
                 }
 
                 privatelastPoints = wave;
@@ -1321,28 +886,16 @@ namespace UltrakULL
             }
         }
 
-        //@Override
-        //Overrides the *private* Start function from the LevelStats class for the in-game level stats window.
-        public static bool LevelStatsStart_MyPatch(LevelStats __instance, StatsManager ___sman, bool ___ready, float ___seconds, float ___minutes)
+        public static void LevelStatsStart_Postfix(LevelStats __instance, StatsManager ___sman)
         {
-            ___sman = MonoSingleton<StatsManager>.Instance;
-            cachedStatsManager = MonoSingleton<StatsManager>.Instance;
             if (__instance.secretLevel)
             {
-                Console.WriteLine("Secret mission detected");
                 __instance.levelName.text = LanguageManager.CurrentLanguage.frontend.chapter_secretMission;
-                ___ready = true;
-                cachedStatsReady = true;
-                CheckStats_Defer(ref __instance, ref ___sman, ref ___seconds, ref ___minutes);
-                return false;
             }
             if (MonoSingleton<MapLoader>.Instance && MonoSingleton<MapLoader>.Instance.isCustomLoaded)
             {
                 MapInfo instance = MapInfo.Instance;
-                __instance.levelName.text = "Custom LevelName";
-                ___ready = true;
-                cachedStatsReady = true;
-                //CheckStats_Defer(ref __instance, ref ___sman, ref ___seconds, ref ___minutes);
+                __instance.levelName.text = ((instance != null) ? instance.levelName : "???");
             }
             RankData rankData = null;
             if (___sman.levelNumber != 0 && !Debug.isDebugBuild)
@@ -1356,142 +909,31 @@ namespace UltrakULL
                 {
                     __instance.levelName.text = LevelNames.getDiscordLevelName(SceneManager.GetActiveScene().name);
                 }
-                else
-                {
-                    __instance.levelName.text = "???";
-                }
-                ___ready = true;
-                cachedStatsReady = true;
-                CheckStats_Defer(ref __instance, ref ___sman, ref ___seconds, ref ___minutes);
-
-                return false;
             }
-            __instance.gameObject.SetActive(false);
-            return false;
         }
 
-        public static void CheckStats_Defer(ref LevelStats instance, ref StatsManager sman, ref float seconds, ref float minutes)
+        public static void CheckStats_Postfix(LevelStats __instance, StatsManager ___sman)
         {
-
-            if (instance.time)
-            {
-                Console.WriteLine(sman.seconds);
-                seconds = sman.seconds;
-                minutes = 0f;
-                while (seconds >= 60f)
-                {
-                    seconds -= 60f;
-                    minutes += 1f;
-                }
-                instance.time.text = minutes + ":" + seconds.ToString("00.000");
-            }
-            if (instance.timeRank)
-            {
-                instance.timeRank.text = sman.GetRanks(sman.timeRanks, sman.seconds, true, false);
-            }
-            if (instance.kills)
-            {
-                instance.kills.text = sman.kills.ToString();
-            }
-            if (instance.killsRank)
-            {
-                instance.killsRank.text = sman.GetRanks(sman.killRanks, (float)sman.kills, false, false);
-            }
-            if (instance.style)
-            {
-                instance.style.text = sman.stylePoints.ToString();
-            }
-            if (instance.styleRank)
-            {
-                instance.styleRank.text = sman.GetRanks(sman.styleRanks, (float)sman.stylePoints, false, false);
-            }
-            if (instance.secrets)
-            {
-                int num = sman.secrets + sman.prevSecrets.Count;
-                instance.secrets.text = num + "/" + sman.secretObjects.Length;
-            }
-            if (instance.challenge)
+            if (__instance.challenge)
             {
                 if (MonoSingleton<ChallengeManager>.Instance.challengeDone && !MonoSingleton<ChallengeManager>.Instance.challengeFailed)
                 {
-                    instance.challenge.text = "<color=#FFAF00>" + LanguageManager.CurrentLanguage.misc.state_yes + "</color>";
+                    __instance.challenge.text = "<color=#FFAF00>" + LanguageManager.CurrentLanguage.misc.state_yes + "</color>";
                 }
                 else
                 {
-                    instance.challenge.text = LanguageManager.CurrentLanguage.misc.state_no;
+                    __instance.challenge.text = LanguageManager.CurrentLanguage.misc.state_no;
                 }
             }
-            if (instance.majorAssists)
+            if (__instance.majorAssists)
             {
-                if (sman.majorUsed)
+                if (___sman.majorUsed)
                 {
-                    instance.majorAssists.text = "<color=#4C99E6>" + LanguageManager.CurrentLanguage.misc.state_yes + "</color>";
+                    __instance.majorAssists.text = "<color=#4C99E6>" + LanguageManager.CurrentLanguage.misc.state_yes + "</color>";
                     return;
                 }
-                instance.majorAssists.text = LanguageManager.CurrentLanguage.misc.state_no;
+                __instance.majorAssists.text = LanguageManager.CurrentLanguage.misc.state_no;
             }
-        }
-
-        public static bool LevelStatsUpdate_MyPatch(LevelStats __instance, StatsManager ___sman, bool ___ready, float ___seconds, float ___minutes)
-        {
-            if (cachedStatsReady)
-            {
-                ___seconds = cachedStatsManager.seconds;
-                ___minutes = 0f;
-                while (___seconds >= 60f)
-                {
-                    ___seconds -= 60f;
-                    ___minutes += 1f;
-                }
-                __instance.time.text = ___minutes + ":" + ___seconds.ToString("00.000");
-
-                if (__instance.timeRank)
-                {
-                    __instance.timeRank.text = cachedStatsManager.GetRanks(cachedStatsManager.timeRanks, cachedStatsManager.seconds, true, false);
-                }
-                if (__instance.kills)
-                {
-                    __instance.kills.text = cachedStatsManager.kills.ToString();
-                }
-                if (__instance.killsRank)
-                {
-                    __instance.killsRank.text = cachedStatsManager.GetRanks(cachedStatsManager.killRanks, (float)cachedStatsManager.kills, false, false);
-                }
-                if (__instance.style)
-                {
-                    __instance.style.text = cachedStatsManager.stylePoints.ToString();
-                }
-                if (__instance.styleRank)
-                {
-                    __instance.styleRank.text = cachedStatsManager.GetRanks(cachedStatsManager.styleRanks, (float)cachedStatsManager.stylePoints, false, false);
-                }
-                if (__instance.secrets)
-                {
-                    int num = cachedStatsManager.secrets + cachedStatsManager.prevSecrets.Count;
-                    __instance.secrets.text = num + "/" + cachedStatsManager.secretObjects.Length;
-                }
-                if (__instance.challenge)
-                {
-                    if (MonoSingleton<ChallengeManager>.Instance.challengeDone && !MonoSingleton<ChallengeManager>.Instance.challengeFailed)
-                    {
-                        __instance.challenge.text = "<color=#FFAF00>" + LanguageManager.CurrentLanguage.misc.state_yes + "</color>";
-                    }
-                    else
-                    {
-                        __instance.challenge.text = LanguageManager.CurrentLanguage.misc.state_no;
-                    }
-                }
-                if (__instance.majorAssists)
-                {
-                    if (cachedStatsManager.majorUsed)
-                    {
-                        __instance.majorAssists.text = "<color=#4C99E6>" + LanguageManager.CurrentLanguage.misc.state_yes + "</color>";
-                        return false;
-                    }
-                    __instance.majorAssists.text = LanguageManager.CurrentLanguage.misc.state_no;
-                }
-            }
-            return false;
         }
 
         //@Override
@@ -1528,7 +970,6 @@ namespace UltrakULL
                 handleError(e);
                 return true;
             }
-
         }
 
         //@Override
@@ -1591,6 +1032,5 @@ namespace UltrakULL
                 return true;
             }
         }
-
     }
 }
