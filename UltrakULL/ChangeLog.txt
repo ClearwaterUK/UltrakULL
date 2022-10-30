@@ -2,6 +2,7 @@
 - Work on some of the backend of the mod has been done to simplify and refactor things. This should hopefully in turn fix some miscellaneous bugs that some people were having.
 - Added seasonal strings (Halloween, Easter, Christmas) from the main menu.
 - Fixed the "transaction complete" HUD message from 4-S appearing at the end of every level.
+- Fixed a standing issue where subtitles of bosses spawned outside their respective levels would not correctly display.
 - Fixed the UltrakULL status text on the main menu duplicating upon switching language (thanks Temperz)
 - Fixed golden borders on P-ranked levels and layers not appearing. (thanks Temperz)
 - Fixed some instances of Discord-related functions constantly nulling.(thanks Temperz)
@@ -10,8 +11,6 @@
 - Fixed the scanning panel when picking up a book not appearing. Added string for the scanning text.
 - Added strings for all recalibration prompts in the intro, if the player decides to recalibrate.
 (NOTE: Due to a refactoring of necessary code, **this will undo a previous fix where a specific accent character - Ä - would cause a softlock in the intro.** I have contacted a game dev to ask if they are able to change this in the game code for next game update/hotfix. Until then, please refrain from using this character in intro strings.)
-
-
 
 - Added the following lines to the JSON template:
 

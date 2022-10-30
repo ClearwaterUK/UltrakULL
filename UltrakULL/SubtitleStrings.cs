@@ -14,6 +14,10 @@ namespace UltrakULL
     {
         private static BepInEx.Logging.ManualLogSource subtitleStringsLogger = BepInEx.Logging.Logger.CreateLogSource("Subtitle Strings");
 
+        private static string mandaColor = "<color=#FFC49E>";
+        private static string owlColor = "<color=#9EE6FF>";
+        private static string endColor = "</color>";
+
         //3-2 Gabriel fight
         public static string gabesubtitles(string input)
         {
@@ -51,64 +55,12 @@ namespace UltrakULL
                 return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_intro8);
             }
 
-            //Fight lines
             if (input.Contains("BEHOLD"))
             {
                 return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_fightStart);
             }
-            if (input.Contains("The light"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt1);
-            }
-            if (input.Contains("You defy"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt2);
-            }
-            if (input.Contains("A mere"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt3);
-            }
-            if (input.Contains("Not."))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt4);
-            }
-            if (input.Contains("You are less"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt5);
-            }
-            if (input.Contains("Foolishness"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt6);
-            }
-            if (input.Contains("You're an error"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt7);
-            }
-            if (input.Contains("There can be"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt8);
-            }
-            if (input.Contains("An imperfection"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt9);
-            }
-            if (input.Contains("Your crime"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt10);
-            }
-            if (input.Contains("You make"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt11);
-            }
-            if (input.Contains("You are outclassed"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt12);
-            }
 
-            if (input.Contains("Enough!"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_phaseChange);
-            }
+            
 
             // Defeat/Outro
             if (input.Contains("What..?"))
@@ -149,10 +101,6 @@ namespace UltrakULL
 
         public static string druidsubtitles(string input)
         {
-            string mandaColor = "<color=#FFC49E>";
-            string owlColor = "<color=#9EE6FF>";
-            string endColor = "</color>";
-
             //Intro
             if (input.Contains("Finally"))
             {
@@ -161,74 +109,6 @@ namespace UltrakULL
             if (input.Contains("What"))
             {
                 return (owlColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_intro2 + endColor);
-            }
-
-            //Respawn intro
-            if (input.Contains("I'm going to"))
-            {
-                return (owlColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_taunt1 + endColor);
-            }
-            if (input.Contains("I'm gonna"))
-            {
-                return (owlColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_taunt2 + endColor);
-            }
-            if (input.Contains("You cannot imagine"))
-            {
-                return (mandaColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_taunt3 + endColor);
-            }
-            if (input.Contains("Hold still"))
-            {
-                return (mandaColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_taunt4 + endColor);
-            }
-            if (input.Contains("Why are we"))
-            {
-                return (owlColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_taunt5 + endColor);
-            }
-
-            //Attacks
-            if (input.Contains("Full auto"))
-            {
-                return (mandaColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_attack1 + endColor);
-            }
-            if (input.Contains("Fuller auto"))
-            {
-                return (mandaColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_attack2 + endColor);
-            }
-
-            //Phase transitions
-            //Speed increase
-            if (input.Contains("Through the"))
-            {
-                return (mandaColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_phaseChangeFirst1 + endColor);
-            }
-            if (input.Contains("Just fucking"))
-            {
-                return (owlColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_phaseChangeFirst2 + endColor);
-            }
-            //Max speed
-            if (input.Contains("Feel"))
-            {
-                return (mandaColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_phaseChangeSecond1 + endColor);
-            }
-            if (input.Contains("Slow down"))
-            {
-                return (owlColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_phaseChangeSecond2 + endColor);
-            }
-
-            //Sanded
-            if (input.Contains("Use the salt"))
-            {
-                return (owlColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_phaseChangeThird1 + endColor);
-            }
-            if (input.Contains("I'm reaching"))
-            {
-                return (mandaColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_phaseChangeThird2 + endColor);
-            }
-
-            //Outro
-            if (input.Contains("Oh great"))
-            {
-                return (owlColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_defeated + endColor);
             }
             
             return "Unimplemented Druid fight string";
@@ -280,37 +160,6 @@ namespace UltrakULL
             if (input.Contains("is DEATH"))
             {
                 return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_intro11);
-            }
-            //Respawn intro
-            if (input.Contains("Useless"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_taunt1);
-            }
-            //Attacks
-            if (input.Contains("Prepare"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_attack1);
-            }
-            if (input.Contains("Thy end"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_attack2);
-            }
-            if (input.Contains("Die"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_attack3);
-            }
-            if (input.Contains("Crush"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_attack4);
-            }
-            if (input.Contains("Judgement"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_attack5);
-            }
-            //Phase 2
-            if (input.Contains("WEAK"))
-            {
-                return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_phaseChange);
             }
             //Outro
             if (input.Contains("Aagh!"))
@@ -471,6 +320,184 @@ namespace UltrakULL
                 return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondFight9;
             }
 
+            //Defeated
+            if (input.Contains("Twice!?"))
+            {
+                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated1;
+            }
+            if (input.Contains("Beaten by"))
+            {
+                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated2;
+            }
+            if (input.Contains("I've only"))
+            {
+                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated3;
+            }
+            if (input.Contains("But this"))
+            {
+                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated4;
+            }
+            if (input.Contains("Is this"))
+            {
+                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated5;
+            }
+            if (input.Contains("I've never known such..."))
+            {
+                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated6;
+            }
+            if (input.Contains("Such"))
+            {
+                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated7;
+            }
+            if (input.Contains("I-"))
+            {
+                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated8;
+            }
+            if (input.Contains("We will"))
+            {
+                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated9;
+            }
+            if (input.Contains("May"))
+            {
+                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated10;
+            }
+            if (input.Contains("and your"))
+            {
+                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated11;
+            }
+
+            return "Unimplemented 6-2 subtitle";
+        }
+
+        public static string getFightLine(string input)
+        {
+
+            //-- Gabriel 1st
+            if (input.Contains("The light"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt1);
+            }
+            if (input.Contains("You defy"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt2);
+            }
+            if (input.Contains("A mere"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt3);
+            }
+            if (input.Contains("Not."))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt4);
+            }
+            if (input.Contains("You are less"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt5);
+            }
+            if (input.Contains("Foolishness"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt6);
+            }
+            if (input.Contains("You're an error"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt7);
+            }
+            if (input.Contains("There can be"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt8);
+            }
+            if (input.Contains("An imperfection"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt9);
+            }
+            if (input.Contains("Your crime"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt10);
+            }
+            if (input.Contains("You make"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt11);
+            }
+            if (input.Contains("You are outclassed"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_taunt12);
+            }
+
+            if (input.Contains("Enough!"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_gabriel_phaseChange);
+            }
+
+            // -- MDK
+            //Respawn intro
+            if (input.Contains("I'm going to"))
+            {
+                return (owlColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_taunt1 + endColor);
+            }
+            if (input.Contains("I'm gonna"))
+            {
+                return (owlColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_taunt2 + endColor);
+            }
+            if (input.Contains("You cannot imagine"))
+            {
+                return (mandaColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_taunt3 + endColor);
+            }
+            if (input.Contains("Hold still"))
+            {
+                return (mandaColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_taunt4 + endColor);
+            }
+            if (input.Contains("Why are we"))
+            {
+                return (owlColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_taunt5 + endColor);
+            }
+
+            //Attacks
+            if (input.Contains("Full auto"))
+            {
+                return (mandaColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_attack1 + endColor);
+            }
+            if (input.Contains("Fuller auto"))
+            {
+                return (mandaColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_attack2 + endColor);
+            }
+
+            //Phase transitions
+            //Speed increase
+            if (input.Contains("Through the"))
+            {
+                return (mandaColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_phaseChangeFirst1 + endColor);
+            }
+            if (input.Contains("Just fucking"))
+            {
+                return (owlColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_phaseChangeFirst2 + endColor);
+            }
+            //Max speed
+            if (input.Contains("Feel"))
+            {
+                return (mandaColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_phaseChangeSecond1 + endColor);
+            }
+            if (input.Contains("Slow down"))
+            {
+                return (owlColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_phaseChangeSecond2 + endColor);
+            }
+
+            //Sanded
+            if (input.Contains("Use the salt"))
+            {
+                return (owlColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_phaseChangeThird1 + endColor);
+            }
+            if (input.Contains("I'm reaching"))
+            {
+                return (mandaColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_phaseChangeThird2 + endColor);
+            }
+
+            //Outro
+            if (input.Contains("Oh great"))
+            {
+                return (owlColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_defeated + endColor);
+            }
+
+            //--Gabriel 2nd
+
             //Phase 2
             if (input.Contains("IS THAT"))
             {
@@ -535,57 +562,51 @@ namespace UltrakULL
                 return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondTaunt14;
             }
 
-            //Defeated
-            if (input.Contains("Twice!?"))
+            //--Minos Prime
+
+            //Respawn intro
+            if (input.Contains("Useless"))
             {
-                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated1;
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_taunt1);
             }
-            if (input.Contains("Beaten by"))
+            //Attacks
+            if (input.Contains("Prepare"))
             {
-                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated2;
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_attack1);
             }
-            if (input.Contains("I've only"))
+            if (input.Contains("Thy end"))
             {
-                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated3;
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_attack2);
             }
-            if (input.Contains("But this"))
+            if (input.Contains("Die"))
             {
-                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated4;
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_attack3);
             }
-            if (input.Contains("Is this"))
+            if (input.Contains("Crush"))
             {
-                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated5;
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_attack4);
             }
-            if (input.Contains("I've never known such..."))
+            if (input.Contains("Judgement"))
             {
-                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated6;
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_attack5);
             }
-            if (input.Contains("Such"))
+            //Phase 2
+            if (input.Contains("WEAK"))
             {
-                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated7;
-            }
-            if (input.Contains("I-"))
-            {
-                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated8;
-            }
-            if (input.Contains("We will"))
-            {
-                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated9;
-            }
-            if (input.Contains("May"))
-            {
-                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated10;
-            }
-            if (input.Contains("and your"))
-            {
-                return LanguageManager.CurrentLanguage.subtitles.subtitles_gabrielSecondDefeated11;
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_phaseChange);
             }
 
-            return "Unimplemented 6-2 subtitle";
+            return null;
         }
 
         public static string getSubtitle(string input)
         {
+            //Lines to move to before the level checks: Taunts, phase changes
+
+            if(getFightLine(input) != null)
+            {
+                return getFightLine(input);
+            }
             string currentLevel = SceneManager.GetActiveScene().name;
             //3-2
             if (currentLevel.Contains("3-2"))

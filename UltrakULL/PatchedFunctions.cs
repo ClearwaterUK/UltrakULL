@@ -555,30 +555,10 @@ namespace UltrakULL
                 return true;
         }
 
-        public static bool DisplaySubtitle_MyPatch(SubtitleController __instance, Subtitle ___subtitleLine, Transform ___container, Subtitle ___previousSubtitle, string caption, AudioSource audioSource = null)
+        public static bool DisplaySubtitle_MyPatch(SubtitleController __instance, Subtitle ___subtitleLine, Transform ___container, Subtitle ___previousSubtitle, ref string caption, AudioSource audioSource = null)
         {
-            if (!__instance.subtitlesEnabled)
-            {
-                return false;
-            }
-            Subtitle subtitle = UnityEngine.Object.Instantiate<Subtitle>(___subtitleLine, ___container, true);
-            subtitle.GetComponentInChildren<Text>().text = SubtitleStrings.getSubtitle(caption);
-            if (audioSource != null)
-            {
-                subtitle.distanceCheckObject = audioSource;
-            }
-            subtitle.gameObject.SetActive(true);
-            if (!___previousSubtitle)
-            {
-                subtitle.ContinueChain();
-            }
-            else
-            {
-                ___previousSubtitle.nextInChain = subtitle;
-            }
-            ___previousSubtitle = subtitle;
-
-            return false;
+            caption = SubtitleStrings.getSubtitle(caption);
+            return true;
         }
 
 

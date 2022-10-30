@@ -15,12 +15,11 @@ using static UltrakULL.CommonFunctions;
 using System.Linq;
 using UltrakULL.json;
 
-//using UKUIHelper;
 /*
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater
  *	Date started: 21st April 2021
- *	Last updated: 29th October 2022
+ *	Last updated: 30th October 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
@@ -43,7 +42,6 @@ using UltrakULL.json;
  *  - Attempt to replace the default font with a version that has better special char + cyrillic support
  *  
  *  -- BUGS AND QUIRKS TO FIX --
- * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages (currently due to current subtitle implentation. Will need to change some things)
  * 
  *  -- STUFF REPORTED BY ULL TEAM --
  * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me but others have reported it. Need to keep an eye on)
@@ -53,14 +51,12 @@ using UltrakULL.json;
  * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger. Maybe store last string, then if no match, reload the stored string?
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * Options->Sandbox icons names
- * - CG high scores aren't saved? (Only happens when using UMM)
  * - Misc keys as strings (comma, period, etc)
  * */
 
 namespace UltrakULL
 {
     [BepInPlugin(pluginGuid, pluginName, pluginVersion)]
-    //[BepInDependency("zed.uk.uihelper")]
     [BepInProcess("ULTRAKILL.exe")]
     public class MainPatch : BaseUnityPlugin
     {
@@ -73,8 +69,8 @@ namespace UltrakULL
         private GameObject ultrakullLogo = null;
 
         private bool ready = false;
-
         public Font vcrFont;
+
         public MainPatch()
         {
             instance = this;
@@ -278,7 +274,6 @@ namespace UltrakULL
             classicHudColorRailcannon.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
             classicHudBWRailcannonShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
             classicHudColorRailcannonShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
-
         }
 
         //Adds the Discord link to the UltrakULL Discord on the main menu.
@@ -603,7 +598,6 @@ namespace UltrakULL
                         patchDeathScreen(ref coreGame);
                         patchMisc(ref coreGame);
                         Options options = new Options(ref coreGame);
-                        //SandboxEnemy sandbox = new SandboxEnemy(ref coreGame);
                     }
                 }
                 else
@@ -618,7 +612,6 @@ namespace UltrakULL
                     else
                     {
                         Logger.LogInfo("Currently in: " + SceneManager.GetActiveScene().name);
-
                         Logger.LogInfo("Patching in-game elements...");
                         try
                         {
@@ -678,6 +671,7 @@ namespace UltrakULL
                 }
             }
         }
+
         //Entry point for the patch.
         public void Awake()
         {
