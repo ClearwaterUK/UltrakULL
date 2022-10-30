@@ -152,8 +152,6 @@ namespace UltrakULL
             int num = __instance.levelNumber;
             RankData rank = GameProgressSaver.GetRank(num, false);
 
-            __instance.transform.Find("Name").GetComponent<Text>().text = LevelNames.getLevelName(num); //Level Name
-
             //Bandaid fix for P-2 and P-3 for now since they share the same level id as P-1 for some reason. Shall need to change/remove when they release.
             if (__instance.transform.Find("Name").GetComponent<Text>().text.Contains("P-2"))
             {
