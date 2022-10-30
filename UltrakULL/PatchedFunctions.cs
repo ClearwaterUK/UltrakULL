@@ -653,237 +653,70 @@ namespace UltrakULL
             return;
         }
 
-        //@Override
-        //DiscordController->Update
-        public static bool DC_UpdateMyPatch(DiscordController __instance, bool ___disabled, Discord.Discord ___discord)
+
+        public static bool SendActivity_MyPatch(DiscordController __instance, Discord.Activity ___cachedActivity, RankIcon[] ___rankIcons, Discord.ActivityManager ___activityManager)
         {
-            if (___discord == null || ___disabled)
+            //Details: Contains total style if in a normal level or wave number if in CG.
+            if (SceneManager.GetActiveScene().name != "Main Menu")
             {
-                Console.WriteLine("Null or disabled, exiting early");
-                return false;
-            }
-            try
-            {
-                ___discord.RunCallbacks();
-            }
-            catch (Exception e)
-            {
-                Debug.Log("Discord lost");
-                Debug.Log(e.ToString());
-                ___disabled = true;
-                //___discord.Dispose();
-            }
-            return false;
-        }
+                try 
+                { 
+                    string[] splitDetails = ___cachedActivity.Details.Split(' ');
+                    string[] splitState = ___cachedActivity.Details.Split(' ');
 
-        //@Override
-        //Overrides the FetchSceneActivity function from the DiscordController class. This is to swap out strings in Discord Rich Presence.
-        public static bool FetchSceneActivity_MyPatch(string scene, DiscordController __instance, DiscordController ___Instance, bool ___disabled, Discord.Discord ___discord, Discord.ActivityManager ___activityManager, Discord.Activity ___cachedActivity, SerializedActivityAssets ___missingActivityAssets)
-        {
-
-            if (!___Instance || ___disabled || ___discord == null)
-            {
-                return false;
-            }
-
-            if (___discord == null || ___activityManager == null || ___disabled)
-            {
-                Console.WriteLine("Post-exiting");
-                return false;
-            }
-            StockMapInfo instance = StockMapInfo.Instance;
-
-            if (instance)
-            {
-                ___cachedActivity.Assets = instance.assets.Deserialize();
-                if (string.IsNullOrEmpty(___cachedActivity.Assets.LargeImage))
+                    if (splitDetails[0] == "STYLE:")
+                    {
+                        ___cachedActivity.Details = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_style + ": " + splitDetails[1];
+                    }
+                    else if (splitDetails[0] == "WAVE:")
+                    {
+                        ___cachedActivity.Details = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_wave + ": " + splitDetails[1];
+                    }
+                }
+                catch(Exception splitException)
                 {
-                    ___cachedActivity.Assets.LargeImage = ___missingActivityAssets.Deserialize().LargeImage;
+                    Console.WriteLine("Exception occured in SendActivity, should be harmless unless if the console gets spammed with this");
                 }
             }
-
-            ___cachedActivity.Assets.LargeText = LevelNames.getDiscordLevelName(SceneManager.GetActiveScene().name);
-            ___cachedActivity.State = "Running UltrakULL";
-
-            Discord.ActivityAssets currentLevel = ___missingActivityAssets.Deserialize();
-            if (scene == "Main Menu")
+            else
             {
-                ___cachedActivity.Details = "Menu Principal";
+                ___cachedActivity.Details = "";
             }
 
-            DateTime d = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-            long start = (long)(DateTime.UtcNow - d).TotalSeconds;
-            ___cachedActivity.Timestamps = new Discord.ActivityTimestamps
+            //State: Contains current difficulty if in-level, or only displays "Main Menu"
+            if(SceneManager.GetActiveScene().name == "Main Menu")
             {
-                Start = start
-            };
+                ___cachedActivity.State = LanguageManager.CurrentLanguage.levelNames.levelName_mainMenu;
+            }
+            else
+            {
+                string translatedDifficulty = MonoSingleton<PresenceController>.Instance.diffNames[MonoSingleton<PrefsManager>.Instance.GetInt("difficulty", 0)];
+                ___cachedActivity.State = LanguageManager.CurrentLanguage.frontend.difficulty_title + ": " + translatedDifficulty;
+            }
 
+            //Assets.SmallText: Rank name
+            switch (___cachedActivity.Assets.SmallText)
+            {
+                case "Destructive": { ___cachedActivity.Assets.SmallText = LanguageManager.CurrentLanguage.style.style_d;break; }
+                case "Chaotic": { ___cachedActivity.Assets.SmallText = LanguageManager.CurrentLanguage.style.style_c; break; }
+                case "Brutal": { ___cachedActivity.Assets.SmallText = LanguageManager.CurrentLanguage.style.style_b; break; }
+                case "Anarchic": { ___cachedActivity.Assets.SmallText = LanguageManager.CurrentLanguage.style.style_a; break; }
+                case "Supreme": { ___cachedActivity.Assets.SmallText = LanguageManager.CurrentLanguage.style.style_s; break; }
+                case "SSadistic": { ___cachedActivity.Assets.SmallText = LanguageManager.CurrentLanguage.style.style_ss; break; }
+                case "SSShitstorm": { ___cachedActivity.Assets.SmallText = LanguageManager.CurrentLanguage.style.style_sss; break; }
+                case "ULTRAKILL": { ___cachedActivity.Assets.SmallText = LanguageManager.CurrentLanguage.style.style_ultrakill; break; }
+                default: { break; }
+            }
+
+            //Assets.LargeText = Level name
+            ___cachedActivity.Assets.LargeText = LevelNames.getDiscordLevelName(SceneManager.GetActiveScene().name);
+
+            //Shoot the data off to Discord RPC.
             ___activityManager.UpdateActivity(___cachedActivity, delegate (Discord.Result result)
             {
             });
 
             return false;
-        }
-
-        //@Override
-        //Overrides the UpdateStyle function from the DiscordController class.
-        //Have to use AccessTools functions because for some reason using arguments causes illegal IL code errors.
-        public static bool UpdateStyle_MyPatch(int points, DiscordController __instance)
-        {
-            if (Traverse.Create(__instance).Field("disabled").GetValue<bool>())
-                return true;
-            DiscordController privateInstance = (DiscordController)AccessTools.Field(typeof(DiscordController), "Instance").GetValue(__instance);
-            bool privateDisabled = (bool)AccessTools.Field(typeof(DiscordController), "disabled").GetValue(privateInstance);
-            int privatelastPoints = (int)AccessTools.Field(typeof(DiscordController), "lastPoints").GetValue(privateInstance);
-
-            Discord.Activity privateCachedActivity = (Discord.Activity)AccessTools.Field(typeof(DiscordController), "cachedActivity").GetValue(privateInstance);
-
-            Discord.ActivityManager privateActivityManager = (Discord.ActivityManager)AccessTools.Field(typeof(DiscordController), "activityManager").GetValue(privateInstance);
-
-            if (!privateInstance)
-            {
-                return false;
-            }
-            if (points == privatelastPoints)
-            {
-                return false;
-            }
-
-            int diffInt = MonoSingleton<PrefsManager>.Instance.GetInt("difficulty", 0);
-            string diffString = LanguageManager.CurrentLanguage.frontend.difficulty_title + ": ";
-            switch (diffInt)
-            {
-                case 0: { diffString += LanguageManager.CurrentLanguage.frontend.difficulty_harmless; break; }
-                case 1: { diffString += LanguageManager.CurrentLanguage.frontend.difficulty_lenient; break; }
-                case 2: { diffString += LanguageManager.CurrentLanguage.frontend.difficulty_standard; break; }
-                case 3: { diffString += LanguageManager.CurrentLanguage.frontend.difficulty_violent; break; }
-                case 4: { diffString += LanguageManager.CurrentLanguage.frontend.difficulty_brutal; break; }
-                case 5: { diffString += LanguageManager.CurrentLanguage.frontend.difficulty_umd; break; }
-                default: { diffString += "UNKNOWN"; break; }
-            }
-
-            StockMapInfo instance = StockMapInfo.Instance;
-            if (instance)
-            {
-                string currentLevel = LevelNames.getDiscordLevelName(SceneManager.GetActiveScene().name);
-                Discord.ActivityAssets levelInfo = instance.assets.Deserialize();
-
-                privatelastPoints = points;
-                privateCachedActivity.Assets.LargeText = currentLevel; //Level name
-                privateCachedActivity.Assets.LargeImage = levelInfo.LargeImage;//Level photo
-                privateCachedActivity.State = diffString; //UltrakuLL label
-                privateCachedActivity.Details = "STYLE: " + points; //Style
-
-                if (rankCachedActivity.Assets.SmallText != null && rankCachedActivity.Assets.SmallImage != null)
-                {
-                    privateCachedActivity.Assets.SmallImage = rankCachedActivity.Assets.SmallImage;
-                    privateCachedActivity.Assets.SmallText = StyleBonusStrings.getTranslatedRankString(rankCachedActivity.Assets.SmallText);
-                }
-
-                if (privateCachedActivity.Assets.SmallText != null && privateCachedActivity.Assets.SmallImage != null)
-                {
-                    privateActivityManager.UpdateActivity(privateCachedActivity, delegate (Discord.Result result)
-                    {
-                    });
-                }
-            }
-            return false;
-        }
-        //@Override
-        //Overrides the UpdateRank function from the DiscordController class.
-        public static bool UpdateRank_MyPatch(int rank, DiscordController __instance)
-        {
-            DiscordController privateInstance = (DiscordController)AccessTools.Field(typeof(DiscordController), "Instance").GetValue(__instance);
-            bool privateDisabled = (bool)AccessTools.Field(typeof(DiscordController), "disabled").GetValue(privateInstance);
-
-            RankIcon[] privateRankIcons = (RankIcon[])AccessTools.Field(typeof(DiscordController), "rankIcons").GetValue(privateInstance);
-
-            Discord.Activity privateCachedActivity = (Discord.Activity)AccessTools.Field(typeof(DiscordController), "cachedActivity").GetValue(privateInstance);
-
-            Discord.ActivityManager privateActivityManager = (Discord.ActivityManager)AccessTools.Field(typeof(DiscordController), "activityManager").GetValue(privateInstance);
-
-            if (!privateInstance)
-            {
-                Console.WriteLine("Instance not ready");
-                return false;
-            }
-            if (privateDisabled)
-            {
-                return false;
-            }
-            if (privateRankIcons.Length <= rank)
-            {
-                Debug.LogError("Discord Controller is missing rank names/icons!");
-                return false;
-            }
-
-            privateCachedActivity.Assets.SmallText = privateRankIcons[rank].Text;
-            privateCachedActivity.Details = privateRankIcons[rank].Text;
-            privateCachedActivity.Assets.SmallImage = privateRankIcons[rank].Image;
-            Console.WriteLine(privateCachedActivity.Assets.SmallText);
-            Console.WriteLine(privateCachedActivity.Assets.SmallImage);
-
-            rankCachedActivity.Assets.SmallText = privateRankIcons[rank].Text;
-            rankCachedActivity.Assets.SmallImage = privateRankIcons[rank].Image;
-
-            return false;
-        }
-
-        //@Override
-        //Overrides the UpdateWave function from the DiscordController class, for Cybergrind Discord Rich Presence.
-        public static bool UpdateWave_MyPatch(int wave, DiscordController __instance)
-        {
-            try
-            {
-                DiscordController privateInstance = (DiscordController)AccessTools.Field(typeof(DiscordController), "Instance").GetValue(__instance);
-                Discord.Activity privateCachedActivity = (Discord.Activity)AccessTools.Field(typeof(DiscordController), "cachedActivity").GetValue(privateInstance);
-                bool privateDisabled = (bool)AccessTools.Field(typeof(DiscordController), "disabled").GetValue(privateInstance);
-
-                Discord.ActivityManager privateActivityManager = (Discord.ActivityManager)AccessTools.Field(typeof(DiscordController), "activityManager").GetValue(privateInstance);
-
-                int privatelastPoints = (int)AccessTools.Field(typeof(DiscordController), "lastPoints").GetValue(privateInstance);
-
-                if (!DiscordController.Instance)
-                {
-                    return false;
-                }
-                if (privateDisabled)
-                {
-                    return false;
-                }
-                if (privatelastPoints == wave)
-                {
-                    return false;
-                }
-
-                StockMapInfo instance = StockMapInfo.Instance;
-                if (instance)
-                {
-                    string currentLevel = LevelNames.getDiscordLevelName(SceneManager.GetActiveScene().name);
-                    Discord.ActivityAssets levelInfo = instance.assets.Deserialize();
-
-                    privateCachedActivity.Assets.LargeText = currentLevel; //Level name
-                    privateCachedActivity.Assets.LargeImage = levelInfo.LargeImage;//Level photo
-                                                                                   //privateCachedActivity.State = diffString; //UltrakuLL label
-
-                    privateCachedActivity.Assets.SmallImage = rankCachedActivity.Assets.SmallImage;
-                    privateCachedActivity.Assets.SmallText = StyleBonusStrings.getTranslatedRankString(rankCachedActivity.Assets.SmallText);
-                }
-
-                privatelastPoints = wave;
-                privateCachedActivity.Details = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_wave + ": " + wave;
-
-                privateActivityManager.UpdateActivity(privateCachedActivity, delegate (Discord.Result result)
-                {
-                });
-
-                return false;
-            }
-            catch (Exception e)
-            {
-                modLogger.LogWarning("Something went wrong while updating Discord RPC. Falling back to vanilla function.");
-                return true;
-            }
         }
 
         public static void LevelStatsStart_Postfix(LevelStats __instance, StatsManager ___sman)

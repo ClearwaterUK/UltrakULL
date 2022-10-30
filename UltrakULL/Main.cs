@@ -25,15 +25,13 @@ using UltrakULL.json;
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
  * 
- *  MAIN TODO LIST
+ *  -- MAIN TODO LIST --
  *  - Fill the JSON template and class as progress happens, moving hardcoded text out as it goes
  *  - Add ULL credits, translation credits to main menu with help of UKUIHelper library
  *  - Error and exception handling
  *  - Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
- *  - Discord RPC (Persistant timestamp and general corrections)
-
  * 
- * - Less important stuff for future updates:
+ *  -- Less important stuff for future updates --
  *  - Cheat teleport menu
  *  - Sandbox stuff (time of day shop, spawn/cheat menu categories, dupe save/load menu)
  *  - Terminals before bosses in levels (could copy the shop that's in the start of each level)
@@ -44,20 +42,18 @@ using UltrakULL.json;
  *  - Could be possible to swap out rank textures in HUD for translation. Shall look into later
  *  - Attempt to replace the default font with a version that has better special char + cyrillic support
  *  
- *  BUGS AND QUIRKS TO FIX:
+ *  -- BUGS AND QUIRKS TO FIX --
  * - Bosses spawned with the spawner arm outside of their normal level have unimplemented string messages (currently due to current subtitle implentation. Will need to change some things)
- * - Discord RPC: Style meter in CG
  * 
- *  STUFF REPORTED BY ULL TEAM
+ *  -- STUFF REPORTED BY ULL TEAM --
  * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me but others have reported it. Need to keep an eye on)
  * 
- *  FOR NEXT HOTFIX:
+ *  -- FOR NEXT HOTFIX --
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable patchedFunctions by returning true if an exception happens there, will then use original game code.
  * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger. Maybe store last string, then if no match, reload the stored string?
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
- * 
  * Options->Sandbox icons names
- * - CG high scores aren't saved?
+ * - CG high scores aren't saved? (Only happens when using UMM)
  * - Misc keys as strings (comma, period, etc)
  * */
 
@@ -368,25 +364,10 @@ namespace UltrakULL
             MethodInfo patchedCheckFunction = AccessTools.Method(typeof(PatchedFunctions), "Check_MyPatch");
             harmony.Patch(originalCheckFunction, new HarmonyMethod(patchedCheckFunction));
 
-            Logger.LogInfo("DiscordController->FetchSceneActivity");
-            MethodInfo originalFetchScene = AccessTools.Method(typeof(DiscordController), "FetchSceneActivity", new Type[] { typeof(string) });
-            MethodInfo patchedFetchScene = AccessTools.Method(typeof(PatchedFunctions), "FetchSceneActivity_MyPatch");
-            harmony.Patch(originalFetchScene, new HarmonyMethod(patchedFetchScene));
-
-            Logger.LogInfo("DiscordController->UpdateStyle");
-            MethodInfo originalUpdateStyle = AccessTools.Method(typeof(DiscordController), "UpdateStyle", new Type[] { typeof(int) });
-            MethodInfo patchedUpdateStyle = AccessTools.Method(typeof(PatchedFunctions), "UpdateStyle_MyPatch");
-            harmony.Patch(originalUpdateStyle, new HarmonyMethod(patchedUpdateStyle));
-
-            Logger.LogInfo("DiscordController->UpdateRank");
-            MethodInfo originalUpdateRank = AccessTools.Method(typeof(DiscordController), "UpdateRank", new Type[] { typeof(int) });
-            MethodInfo patchedUpdateRank = AccessTools.Method(typeof(PatchedFunctions), "UpdateRank_MyPatch");
-            harmony.Patch(originalUpdateRank, new HarmonyMethod(patchedUpdateRank));
-
-            Logger.LogInfo("DiscordController->UpdateWave");
-            MethodInfo originalUpdateWave = AccessTools.Method(typeof(DiscordController), "UpdateWave", new Type[] { typeof(int) });
-            MethodInfo patchedUpdateWave = AccessTools.Method(typeof(PatchedFunctions), "UpdateWave_MyPatch");
-            harmony.Patch(originalUpdateWave, new HarmonyMethod(patchedUpdateWave));
+            Logger.LogInfo("DiscordController->SendActivity");
+            MethodInfo originalSendActivity = typeof(DiscordController).GetMethod("SendActivity", BindingFlags.NonPublic | BindingFlags.Instance, null, new Type[] { }, null);
+            MethodInfo patchedSendActivity = AccessTools.Method(typeof(PatchedFunctions), "SendActivity_MyPatch");
+            harmony.Patch(originalSendActivity,new HarmonyMethod(patchedSendActivity));
 
             Logger.LogInfo("EnemyInfoPage->DisplayInfo (Postfix)");
             MethodInfo originalDisplayInfo = AccessTools.Method(typeof(EnemyInfoPage), "DisplayInfo", new Type[] { typeof(SpawnableObject) });

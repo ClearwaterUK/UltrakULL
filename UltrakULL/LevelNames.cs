@@ -64,6 +64,8 @@ namespace UltrakULL
 
 			if (missionName.Contains("P-1")) { return "P-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeFirst; }
 
+			if (missionName.Contains("Intermission")) { return "???"; }
+
 			return ("Unknown level - " + missionName);
         }
 
