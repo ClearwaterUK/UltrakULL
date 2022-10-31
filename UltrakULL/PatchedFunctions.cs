@@ -29,6 +29,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the private CoinsToPoints function in the CrateCounter class
+        [HarmonyPatch(typeof(CrateCounter), "CoinsToPoints")]
         public static bool CoinsToPoints_MyPatch(CrateCounter __instance, int ___savedCoins)
         {
             if (SceneManager.GetActiveScene().name == "Level 4-S")
@@ -50,6 +51,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides OnEnable from the GunColorTypeGetter class. Used for the Soul Orb checker.
+        [HarmonyPatch(typeof(GunColorTypeGetter), "OnEnable")]
         public static void OnEnablePostFix_MyPatch(GunColorTypeGetter __instance)
         {
             for (int i = 1; i < 5; i++)
@@ -70,6 +72,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides ScanBook from the ScanningStuff class, for the "scanning" panel and book translations.
+        [HarmonyPatch(typeof(ScanningStuff), "ScanBook")]
         public static bool ScanBook_MyPatch(ref string text, bool noScan, int instanceId, ScanningStuff __instance)
         {
             GameObject canvas = getInactiveRootObject("Canvas");
@@ -82,6 +85,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides Check from the vanilla game. Used for persistant difficulty strings across all scenes.
+        [HarmonyPatch(typeof(GameProgressSaver), "Check")]
         public static bool Check_MyPatch(DifficultyTitle __instance, Text ___txt)
         {
             int @int = MonoSingleton<PrefsManager>.Instance.GetInt("difficulty", 0);
@@ -147,6 +151,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides checkScore function from the vanilla game. This translates level names, as well as if challenges have been completed or not. POSTFIX.
+        [HarmonyPatch(typeof(GameProgressSaver), "CheckScore")]
         public static void CheckScore_MyPatchPostFix(LevelSelectPanel __instance)
         {
             int num = __instance.levelNumber;
@@ -191,6 +196,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the NameAppear function from LevelNamePopup. Used for showing layer and level names at the start of a level.
+        [HarmonyPatch(typeof(LevelNamePopup), "NameAppear")]
         public static bool NameAppear_MyPatch(LevelNamePopup __instance, ref string ___layerString, ref string ___nameString)
         {
             ___layerString = TitleManager.getLayer(___layerString);
@@ -201,6 +207,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the Start function from IntroText. This is needed for patched text to appear on the tutorial.
+        [HarmonyPatch(typeof(IntroText), "Start")]
         public static bool IntroTextStart_MyPatch(IntroText __instance, Text ___txt, string ___fullString)
         {
             ___txt = __instance.GetComponent<Text>();
@@ -217,6 +224,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the PlayMessage method from the HudMessage class. This is needed for swapping text in message boxes.
+        [HarmonyPatch(typeof(HudMessage), "PlayMessage")]
         public static bool PlayMessage_MyPatch(HudMessage __instance, bool ___activated, HudMessageReceiver ___messageHud, Text ___text, Image ___img)
         {
             //The HUD display uses 2 kinds of messages.
@@ -328,6 +336,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the SendHudMessage function from the HudMessageReciever class for non-standard HUD messages.
+        [HarmonyPatch(typeof(HudMessageReceiver), "SendHudMessage")]
         public static bool SendHudMessage_MyPatch(HudMessageReceiver __instance, HudOpenEffect ___hoe, Text ___text, Image ___img, AudioSource ___aud, string ___message, string ___input, string ___message2, bool ___noSound, string newmessage, string newinput = "", string newmessage2 = "", int delay = 0, bool silent = false)
         {
             ___message = newmessage;
@@ -376,6 +385,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the SetInfo method from the FinalRank class. This is needed to swap text in the extra into box on the results screen.
+        [HarmonyPatch(typeof(FinalRank), "SetInfo")]
         public static bool SetInfo_MyPatch(int restarts, bool damage, bool majorUsed, bool cheatsUsed, FinalRank __instance, bool ___noRestarts, bool ___majorAssists, bool ___noDamage)
         {
             __instance.extraInfo.text = "";
@@ -447,6 +457,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the CreateBossBar method from the BossBarManager class. This is needed to swap in the translated boss names on their health bars.
+        [HarmonyPatch(typeof(BossBarManager), "CreateBossBar")]
         public static bool CreateBossBar_MyPatch(ref string bossName)
         {
             bossName = BossStrings.getBossName(bossName);
@@ -455,7 +466,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the UpdateMoney method from the VariationInfo class. This is needed to patch the "ALREADY OWNED" string, and will save having to change every single seperate button containing this string in the shop.
-
+        [HarmonyPatch(typeof(VariationInfo), "UpdateMoney")]
         public static void UpdateMoney_Postfix(VariationInfo __instance, int ___money, bool ___alreadyOwned)
         {
             if (!___alreadyOwned)
@@ -470,6 +481,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the AddPoints method from the StyleHUD class. This is needed to intercept and translate any strings coming into the style meter in-game.
+        [HarmonyPatch(typeof(StyleHUD), "AddPoints")]
         public static bool AddPoints_MyPatch(StyleHUD __instance, GunControl ___gc, StatsManager ___sman, Dictionary<StyleFreshnessState, StyleFreshnessData> ___freshnessStateDict, float ___currentMeter, float ___rankScale, Queue<string> ___hudItemsQueue, int points, string pointID, GameObject sourceWeapon = null, EnemyIdentifier eid = null, int count = -1, string prefix = "", string postfix = "")
         {
             return true;
@@ -477,6 +489,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the RicoshotPointsCheck from the Coin class. Used for translating additional style strings that come from ricochets.
+        [HarmonyPatch(typeof(Coin), "RicoshotPointsCheck")]
         public static bool RicoshotPointsCheck_MyPatch(Coin __instance, GameObject ___altBeam, bool ___wasShotByEnemy, StyleHUD ___shud, EnemyIdentifier ___eid)
         {
             string text = "";
@@ -505,6 +518,7 @@ namespace UltrakULL
             return false;
         }
 
+        [HarmonyPatch(typeof(StyleHUD), "GetLocalizedName")]
         public static bool GetLocalizedName_MyPatch(string id, StyleHUD __instance, Dictionary<string, string> ___idNameDict, ref string __result)
         {
             if (___idNameDict.ContainsKey(id))
@@ -515,7 +529,10 @@ namespace UltrakULL
             __result = StyleBonusStrings.getTranslatedStyleBonus(id);
             return false;
         }
+        //@Override
+        //Overrides the UpdateFreshnessSlider to localize freshness strings
 
+        [HarmonyPatch(typeof(StyleHUD), "UpdateFreshnessSlider")]
         public static bool UpdateFreshnessSlider_MyPatch(StyleHUD __instance, GunControl ___gc)
         {
             StyleFreshnessState freshnessState = __instance.GetFreshnessState(___gc.currentWeapon);
@@ -523,7 +540,9 @@ namespace UltrakULL
 
             return false;
         }
-
+        //@Override
+        //Overrides the Start method to intercept and localize string in the intermissions
+        [HarmonyPatch(typeof(IntermissionController), "Start")]
         public static bool Start_MyPatch(IntermissionController __instance, ref string ___preText, ref string ___fullString, ref Text ___txt)
         {
             ___txt = __instance.GetComponent<Text>();
@@ -562,6 +581,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the DisplayInfo method from the EnemyInfoPage class. This is to allow swapping out of monster bios in the shop.
+        [HarmonyPatch(typeof(EnemyInfoPage), "DisplayInfo")]
         public static void DisplayInfo_Postfix(SpawnableObject source, EnemyInfoPage __instance, Text ___enemyPageTitle, Text ___enemyPageContent)
         {
             string enemyName = EnemyBios.getName(source.objectName);
@@ -586,6 +606,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the *private* UpdateSlotState method from the SaveSlotMenu class. This is to allow save menu strings to be swapped out.
+        [HarmonyPatch(typeof(SaveSlotMenu), "UpdateSlotState")]
         public static void UpdateSlotState_Postfix(SlotRowPanel targetPanel, SaveSlotMenu.SlotData data)
         {
             bool flag = GameProgressSaver.currentSlot == targetPanel.slotIndex;
@@ -625,13 +646,16 @@ namespace UltrakULL
 
         //@Override
         //Overrides the *private* ClearSlot method from the SaveSlotMenu class. This is to swap out the delete confirmation string.
+        [HarmonyPatch(typeof(SaveSlotMenu), "ClearSlot")]
         public static void ClearSlotPostfix_MyPatch(int slot, Text ___wipeConsentContent)
         {
             ___wipeConsentContent.text = string.Format(LanguageManager.CurrentLanguage.options.save_deleteWarning1 + " <color=red>" + LanguageManager.CurrentLanguage.options.save_deleteWarning2 + " {0}</color>?", slot + 1);
             return;
         }
 
-
+        //@Override
+        //Overrides the SendActivity method from the DiscordController class to localize strings
+        [HarmonyPatch(typeof(DiscordController), "SendActivity")]
         public static bool SendActivity_MyPatch(DiscordController __instance, Discord.Activity ___cachedActivity, RankIcon[] ___rankIcons, Discord.ActivityManager ___activityManager)
         {
             //Details: Contains total style if in a normal level or wave number if in CG.
@@ -697,6 +721,9 @@ namespace UltrakULL
             return false;
         }
 
+        //@Override
+        //Overrides the Start method from LevelStats class to localize level names
+        [HarmonyPatch(typeof(LevelStats), "Start")]
         public static void LevelStatsStart_Postfix(LevelStats __instance, StatsManager ___sman)
         {
             if (__instance.secretLevel)
@@ -723,6 +750,9 @@ namespace UltrakULL
             }
         }
 
+        //@Override
+        //Overrides the CheckStats method from the LevelStats class to localize the stats screen
+        [HarmonyPatch(typeof(LevelStats), "CheckStats")]
         public static void CheckStats_Postfix(LevelStats __instance, StatsManager ___sman)
         {
             if (__instance.challenge)
@@ -749,6 +779,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the *private* UpdateCheatState function from the CheatsManager class for translating the cheat menu.
+        [HarmonyPatch(typeof(CheatsManager), "UpdateCheatState")]
         public static bool UpdateCheatState_MyPatch(CheatMenuItem item, ICheat cheat, CheatsManager __instance, Color ___enabledColor, Color ___disabledColor)
         {
             try
@@ -785,6 +816,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the RenderCheatsInfo function from the CheatsManager class for displaying the active cheats on the HUD.
+        [HarmonyPatch(typeof(CheatsManager), "RenderCheatsInfo")]
         public static bool RenderCheatsInfo_MyPatch(CheatsManager __instance, Dictionary<string, List<ICheat>> ___allRegisteredCheats)
         {
             StringBuilder stringBuilder = new StringBuilder();
@@ -820,6 +852,7 @@ namespace UltrakULL
 
         //@Override
         //Overrides the Toggle function from the CustomPatterns class for the toggle text.
+        [HarmonyPatch(typeof(CustomPatterns), "Toggle")]
         public static bool Toggle_MyPatch(CustomPatterns __instance, Text ___stateButtonText)
         {
             try
