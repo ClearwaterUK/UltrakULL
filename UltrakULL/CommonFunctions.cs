@@ -58,7 +58,7 @@ namespace UltrakULL
 
             GameObject coreGame = GameObject.Find("Player");
 
-            GameObject resultsPanel = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(coreGame, "Main Camera"), "HUD Camera"), "HUD"), "FinishCanvas"), "Panel");
+            GameObject resultsPanel = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(coreGame, "Main Camera"), "HUD Camera"), "HUD"), "FinishCanvas"), "Panel"); // What happened here?
 
             Console.WriteLine("resultsPanel name: " + resultsPanel.name);
 
