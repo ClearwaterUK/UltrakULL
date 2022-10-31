@@ -12,7 +12,7 @@ namespace UltrakULL.Harmony_Patches
 {
     //@Override
     //Overrides the *private* UpdateCheatState function from the CheatsManager class for translating the cheat menu.
-    [HarmonyPatch(typeof(CheatsManager), "UpdateCheatState")]
+    [HarmonyPatch(typeof(CheatsManager), "UpdateCheatState", new Type[] { typeof(CheatMenuItem), typeof(ICheat) })]
     public static class Localize_CheatState
     {
         [HarmonyPrefix]

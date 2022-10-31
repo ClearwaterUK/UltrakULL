@@ -537,6 +537,9 @@ namespace UltrakULL
                 Harmony harmony = new Harmony(pluginGuid);
                 harmony.PatchAll();
                 Logger.LogInfo(" --- All done. Enjoy! ---");
+
+                SceneManager.sceneLoaded += onSceneLoaded;
+                
                 this.ready = true;
             }
             catch (Exception e)

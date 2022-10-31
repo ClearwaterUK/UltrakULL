@@ -1,12 +1,13 @@
 ﻿using HarmonyLib;
 using UnityEngine.UI;
 using UltrakULL.json;
+using System;
 
 namespace UltrakULL.Harmony_Patches
 {
     //@Override
     //Overrides the DisplayInfo method from the EnemyInfoPage class. This is to allow swapping out of monster bios in the shop.
-    [HarmonyPatch(typeof(EnemyInfoPage), "DisplayInfo")]
+    [HarmonyPatch(typeof(EnemyInfoPage), "DisplayInfo", new Type[] { typeof(SpawnableObject) })]
     public static class Localize_EnemyInfo
     {
         [HarmonyPostfix]

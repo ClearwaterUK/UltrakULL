@@ -143,10 +143,11 @@
     <Compile Include="Harmony Patches\Coin.cs" />
     <Compile Include="Harmony Patches\CrateCounter.cs" />
     <Compile Include="Harmony Patches\CustomPatterns.cs" />
+    <Compile Include="Harmony Patches\DifficultyTitle.cs" />
     <Compile Include="Harmony Patches\DiscordController.cs" />
     <Compile Include="Harmony Patches\EnemyInfoPage.cs" />
     <Compile Include="Harmony Patches\FinalRank.cs" />
-    <Compile Include="Harmony Patches\GameProgressSaver.cs" />
+    <Compile Include="Harmony Patches\LevelSelectPanel.cs" />
     <Compile Include="Harmony Patches\GunColorTypeGetter.cs" />
     <Compile Include="Harmony Patches\HudMessage.cs" />
     <Compile Include="Harmony Patches\HudMessageReceiver.cs" />
