@@ -2,6 +2,7 @@
 using System;
 using UnityEngine.SceneManagement;
 using UltrakULL.json;
+using UnityEngine;
 
 namespace UltrakULL.Harmony_Patches
 {
@@ -13,6 +14,8 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool SendActivity_MyPatch(DiscordController __instance, Discord.Activity ___cachedActivity, RankIcon[] ___rankIcons, Discord.ActivityManager ___activityManager)
         {
+            if (___activityManager == null) // I don't know how this happens, but it somehow does?
+                return false;
             //Details: Contains total style if in a normal level or wave number if in CG.
             if (SceneManager.GetActiveScene().name != "Main Menu")
             {
