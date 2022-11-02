@@ -1716,6 +1716,7 @@ namespace UltrakULL.json
     {
         public string prelude_first_openingCredits1;
         public string prelude_first_openingCredits2;
+        public string prelude_first_pipeClip;
         public string prelude_first_revolverPierce1;
         public string prelude_first_revolverPierce2;
         public string prelude_first_parry;
@@ -1726,6 +1727,7 @@ namespace UltrakULL.json
         public string prelude_first_groundSlam2;
 
         public string prelude_second_shop;
+        public string prelude_second_doorClip;
         public string prelude_second_changeEquipped;
 
         public string prelude_third_needShotgun;

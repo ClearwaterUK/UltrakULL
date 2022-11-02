@@ -1517,6 +1517,7 @@
 	"prelude": {
 		"prelude_first_openingCredits1": "<color=orange>NEW BLOOD</color> PRÉSENTE",
 		"prelude_first_openingCredits2": "UN JEU DE ARSI '<color=orange>HAKITA</color>' PATALA",
+        "prelude_first_pipeClip": "\"LE CLIP DU TUYEAU VIT.\"$T. HAKITA",
 		"prelude_first_revolverPierce1": "<color=cyan>REVOLVER</color>: Maintenir",
 		"prelude_first_revolverPierce2": "pour tirer un coup <color=orange>PERÇANT</color>.",
 		"prelude_first_parry": "Frapper un projectile au bon moment pour le <color=red>renvoyer</color> à un ennemi.",
@@ -1528,6 +1529,7 @@
 		"prelude_first_groundSlam2": "</color>) inflige des dégâts lors d'un coup direct.",
 
 		"prelude_second_shop": "Utilisez vos <color=orange>POINTS</color> au </color=orange>MAGASIN</color> au début de chaque niveau pour achèter du nouveau équipement.",
+        "prelude_second_doorClip": "\"C'EST QUOI UPDOOR?\"$T. HAKITA",
 		"prelude_second_changeEquipped": "Changez de variation d'arme <color=orange>ÉQUIPÉ</color> avec",
 
 		"prelude_third_needShotgun": "<color=red>PUISSANCE DE FEU INSUFFISANTE</color>",

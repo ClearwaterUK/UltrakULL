@@ -17,9 +17,9 @@ using UltrakULL.json;
 
 /*
  *	UltrakULL (Ultrakill Language Library)
- *	Written by Clearwater
+ *	Written by Clearwater, additional code contributions by Temperz87, translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 30th October 2022
+ *	Last updated: 2nd November 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
@@ -34,7 +34,7 @@ using UltrakULL.json;
  *  - Cheat teleport menu
  *  - Sandbox stuff (time of day shop, spawn/cheat menu categories, dupe save/load menu)
  *  - Terminals before bosses in levels (could copy the shop that's in the start of each level)
- *  - Organise and refactor stuff, move functions to other files to declutter Main (Simplify getGameObjectChild and getTextFromgameObject in each file, take itfrom CommonFunctions) (Factorise the act classes with an interface?)
+ *  - Organise and refactor stuff, move functions to other files to declutter Main (Factorise the act classes with an interface?)
  *  - Look into how I can do encoding for RTL languages such as Arabic
  *  - Port main class so it becomes a native UMM mod instead of BepInEx. With the way its structured, could be able to move config/lang files to same folder.
  *  - Green Rocketlauncher incoming
@@ -44,7 +44,6 @@ using UltrakULL.json;
  *  -- BUGS AND QUIRKS TO FIX --
  * 
  *  -- STUFF REPORTED BY ULL TEAM --
- * - 2-1 dash jump panel seems to be broken again (Timmy) (seems to be fine for me but others have reported it. Need to keep an eye on)
  * 
  *  -- FOR NEXT HOTFIX --
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable a patched function by returning true if an exception happens there, will then use original game code.
@@ -63,7 +62,7 @@ namespace UltrakULL
     {
         public const string pluginGuid = "clearwater.ultrakill.ultrakULL";
         public const string pluginName = "UltrakULL - Ultrakill Language Library";
-        public const string pluginVersion = "0.8.4";
+        public const string pluginVersion = "0.9.0";
 
         public static MainPatch instance = null;
         private GameObject ultrakullLogo = null;
