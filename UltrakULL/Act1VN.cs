@@ -219,7 +219,7 @@ namespace UltrakULL
 
             GameObject nihilismChoices23Object = getGameObjectChild(getGameObjectChild(choicesBaseObject, "Nihilism"), "Choices Box (24)");
             Text nihilismChoices23Text = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nihilismChoices23Object, "Button (A)"), "Text"));
-            nihilismChoices23Text.text = LanguageManager.CurrentLanguage.visualnovel.visualnovel_nihilismPrompt25;
+            nihilismChoices23Text.text = LanguageManager.CurrentLanguage.visualnovel.visualnovel_nihilismPrompt23;
 
 
             //Conclusion choice
@@ -281,6 +281,11 @@ namespace UltrakULL
             if (inputString.Contains("Alright, alright"))
             {
                 return LanguageManager.CurrentLanguage.visualnovel.visualnovel_fallenResponseFourth + "▼";
+            }
+
+            if (inputString.Contains("UGH?"))
+            {
+                return LanguageManager.CurrentLanguage.visualnovel.visualnovel_fallenResponseFifth + "▼";
             }
             //Kind
             if (inputString.Contains("*Sigh*"))
@@ -452,7 +457,7 @@ namespace UltrakULL
             if (inputString.Contains("Human intelligence"))
             {
                 return LanguageManager.CurrentLanguage.visualnovel.visualnovel_nihilism10 + "▼\n"
-                + LanguageManager.CurrentLanguage.visualnovel.visualnovel_nihilism11;
+                + LanguageManager.CurrentLanguage.visualnovel.visualnovel_nihilism11 + "▼";
             }
             if (inputString.Contains("Our intelligence"))
             {
@@ -544,7 +549,7 @@ namespace UltrakULL
             if (inputString.Contains("Guess you got a good"))
             {
                 return LanguageManager.CurrentLanguage.visualnovel.visualnovel_conclusion2 + "▼\n"
-                    + LanguageManager.CurrentLanguage.visualnovel.visualnovel_conclusion3;
+                    + LanguageManager.CurrentLanguage.visualnovel.visualnovel_conclusion3 + "▼";
             }
             if (inputString.Contains("Man..."))
             {

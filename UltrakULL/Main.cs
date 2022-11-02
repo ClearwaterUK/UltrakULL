@@ -53,6 +53,7 @@ using UltrakULL.json;
  * Options->Sandbox icons names
  * - Misc keys as strings (comma, period, etc)
  * - English template seems to have some problems. The file "loads" but then immediately throws not ready for patching
+ * 
  * */
 
 namespace UltrakULL

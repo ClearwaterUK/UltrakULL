@@ -645,6 +645,9 @@ namespace UltrakULL.json
         public string visualnovel_fallenPromptSecond3;
 
         public string visualnovel_fallenResponseFourth;
+        public string visualnovel_fallenResponseFifth;
+
+
 
         public string visualnovel_kindFirst1;
         public string visualnovel_kindFirst2;

@@ -5,6 +5,8 @@ mainmenu: mainmenu_easter
 mainmenu: mainmenu_halloween
 mainmenu: mainmenu_christmas
 
+visualnovel: visualnovel_fallenResponseFifth
+
 books: books_scanning
 
 tutorial: tutorial_recalibrationPrompt
@@ -29,6 +31,10 @@ tutorial: tutorial_videoCalibrationPsxDescription
 tutorial: tutorial_controllerCalibrationTitle
 tutorial: tutorial_controllerCalibrationSubtitle
 tutorial: tutorial_controllerCalibrationTooltip
+
+REMOVED:
+visualnovel: visualnovel_nihilismPrompt24
+visualnovel: visualnovel_nihilismPrompt25
 
 
 0.8.3:
