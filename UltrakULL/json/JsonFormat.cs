@@ -1019,6 +1019,9 @@ namespace UltrakULL.json
     {
         public string books_scanning;
 
+        public string books_pressToClose1;
+        public string books_pressToClose2;
+
         public string books_limboFourth1;
         public string books_limboFourth2;
         public string books_limboFourth3;

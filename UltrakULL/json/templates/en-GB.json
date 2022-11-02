@@ -4,7 +4,7 @@
 		"langAuthor": "Hakita",
 		"langVersion": "1.0",
 
-        "minimumModVersion": "0.8.3"
+        "minimumModVersion": "0.9.0"
 	},
     
 	"body": {
@@ -137,6 +137,8 @@
     
     "books":{
         "books_scanning": "SCANNING...",
+        "books_pressToClose1": "PRESS",
+        "books_pressToClose2": "TO CLOSE.",
 
         "books_limboFourth1": "Text scanned - Unique Passage:",
         "books_limboFourth2": "...My mind is adrift with the eternal torments. Lucid vistas painted in insidious tones, hollow walls that scream to the touch. A mocking song plays at all hours, even the sounds of birds are fake. All reminders of my enduring damnation.",

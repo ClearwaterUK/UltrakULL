@@ -1,7 +1,8 @@
-﻿0.8.4
+﻿0.9.0
 - Work on some of the backend of the mod has been done to simplify and refactor things. This should hopefully in turn fix some miscellaneous bugs that some people were having.
 - Added seasonal strings (Halloween, Easter, Christmas) from the main menu.
 - Added strings for the two speedrun clips on 0-1 and 0-2.
+- Added the "press to close" string when reading a book.
 - Fixed a long-standing issue with the introduction missing the recalibration prompt due to a hacky implementation.
 (NOTE: Due to a refactoring of necessary code, **this will undo a previous fix where a specific accent character - Ä - would cause a softlock in the intro.** I have contacted a game dev to ask if they are able to change this in the game code for next game update/hotfix. Until then, please refrain from using this character in intro strings.)
 - Fixed the "transaction complete" HUD message from 4-S appearing at the end of every level.

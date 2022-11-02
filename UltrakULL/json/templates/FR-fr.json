@@ -4,7 +4,7 @@
 		"langAuthor": "Clearwater,Frizou",
 		"langVersion": "0.6",
         
-        "minimumModVersion": "0.8.4"
+        "minimumModVersion": "0.9.0"
 	},
 	"body": {
 		"bodyName": "Traduction française pour ULTRAKILL. Developpé par Clearwater; contributions, relectures et corrections par Frizou."
@@ -133,6 +133,9 @@
     
     "books":{
         "books_scanning": "ANALYSE...",
+
+        "books_pressToClose1": "APPUYER SUR",
+        "books_pressToClose2": "POUR FERMER.",
 
         "books_limboFourth1": "TEXT ANALYSÉ - SCRIPTE LISIBLE:",
         "books_limboFourth2": "...Mon esprit est à la dérive avec les tourments éternels. Des vistas lucides dans des tons insidieux, des murs creuses qui hurle au toucher. Une chanson moquante qui joue tout le temps, même le chant des oiesaux est faux. Tout ceci, des rappels de ma malédiction permanent.",

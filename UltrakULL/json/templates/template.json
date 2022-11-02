@@ -4,7 +4,7 @@
 		"langAuthor": "Clearwater",
 		"langVersion": "0.1",
 
-        "minimumModVersion": "0.8.3"
+        "minimumModVersion": "0.9.0"
 	},
     
 	"body": {
@@ -138,6 +138,8 @@
     "books":{
 
         "books_scanning": "",
+        "books_pressToClose1": "",
+        "books_pressToClose2": "",
 
         "books_limboFourth1": "",
         "books_limboFourth2": "",
