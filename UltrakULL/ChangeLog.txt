@@ -6,11 +6,13 @@
 - Fixed the UltrakULL status text on the main menu duplicating upon switching language (thanks Temperz)
 - Fixed golden borders on P-ranked levels and layers not appearing. (thanks Temperz)
 - Fixed some instances of Discord-related functions constantly nulling.(thanks Temperz)
+- Made scrollbar resize based on how many languages are loaded. (Thanks Temperz)
 - Fixed language select button wouldn't re-translate into a new language when a new language was selected and would only translate upon switching scenes (thanks me (Temperz)).
 - Fixed the scanning panel when picking up a book not appearing. Added string for the scanning text.
 - Fixed a couple of lingering issues with strings in 2-S. (DANTE)
 - Added strings for all recalibration prompts in the intro, if the player decides to recalibrate.
 - Fixed a long-standing issue with the introduction missing the recalibration prompt due to a hacky implementation.
+
 (NOTE: Due to a refactoring of necessary code, **this will undo a previous fix where a specific accent character - Ä - would cause a softlock in the intro.** I have contacted a game dev to ask if they are able to change this in the game code for next game update/hotfix. Until then, please refrain from using this character in intro strings.)
 
 - Added the following lines to the JSON template:

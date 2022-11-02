@@ -1,18 +1,7 @@
-﻿using BepInEx;
-using HarmonyLib;
+﻿using HarmonyLib;
 using System;
-using System.IO;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
-using UltrakULL;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.Events;
-using static UltrakULL.CommonFunctions;
-using System.Linq;
 using UltrakULL.json;
 
 
@@ -91,6 +80,10 @@ public static class Inject_LanguageButton
             languageButtonInstance.SetActive(true);
         }
         button.onClick.AddListener(delegate { languagePage.SetActive(true); });
+
+        
+        RectTransform cRect = languagePage.transform.Find("Scroll Rect (1)").Find("Contents").GetComponent<RectTransform>();
+        cRect.sizeDelta = new Vector2(600f, LanguageManager.AllLanguages.Keys.Count * 100);
 
         optionsParent.Find("Gameplay").GetComponent<Button>().onClick.AddListener(delegate { languagePage.SetActive(false); });
         optionsParent.Find("Controls").GetComponent<Button>().onClick.AddListener(delegate { languagePage.SetActive(false); });
