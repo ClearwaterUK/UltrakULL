@@ -1,6 +1,9 @@
 ﻿0.8.4
 - Work on some of the backend of the mod has been done to simplify and refactor things. This should hopefully in turn fix some miscellaneous bugs that some people were having.
 - Added seasonal strings (Halloween, Easter, Christmas) from the main menu.
+- Added strings for the two speedrun clips on 0-1 and 0-2.
+- Fixed a long-standing issue with the introduction missing the recalibration prompt due to a hacky implementation.
+(NOTE: Due to a refactoring of necessary code, **this will undo a previous fix where a specific accent character - Ä - would cause a softlock in the intro.** I have contacted a game dev to ask if they are able to change this in the game code for next game update/hotfix. Until then, please refrain from using this character in intro strings.)
 - Fixed the "transaction complete" HUD message from 4-S appearing at the end of every level.
 - Fixed a standing issue where subtitles of bosses spawned outside their respective levels would not correctly display.
 - Fixed the UltrakULL status text on the main menu duplicating upon switching language (thanks Temperz)
@@ -12,10 +15,6 @@
 - Fixed a couple of lingering issues with strings in 2-S. (DANTE)
 - Fixed an issue with HUD messages in some levels that keep reappearing if the player moves back and forth on its trigger.
 - Added strings for all recalibration prompts in the intro, if the player decides to recalibrate.
-- Fixed a long-standing issue with the introduction missing the recalibration prompt due to a hacky implementation.
-
-(NOTE: Due to a refactoring of necessary code, **this will undo a previous fix where a specific accent character - Ä - would cause a softlock in the intro.** I have contacted a game dev to ask if they are able to change this in the game code for next game update/hotfix. Until then, please refrain from using this character in intro strings.)
-
 - Added the following lines to the JSON template:
 
 mainmenu: mainmenu_easter
@@ -23,6 +22,9 @@ mainmenu: mainmenu_halloween
 mainmenu: mainmenu_christmas
 
 books: books_scanning
+
+prelude: prelude_first_pipeClip;
+prelude: prelude_second_doorClip;
 
 tutorial: tutorial_recalibrationPrompt
 tutorial: tutorial_calibrationAudio;

@@ -1558,6 +1558,7 @@
 	"prelude":{
 		"prelude_first_openingCredits1": "NEW BLOOD PRESENTS",
 		"prelude_first_openingCredits2": "A GAME BY ARSI 'HAKITA' PATALA",
+        "prelude_first_pipeClip": "\"PIPE CLIP LIVES.\"$T.HAKITA",
 		"prelude_first_revolverPierce1": "REVOLVER: Hold",
 		"prelude_first_revolverPierce2": "to fire a PIERCING SHOT.",
 		"prelude_first_parry": "PUNCH a PROJECTILE with precise timing to DEFLECT it.",
@@ -1569,6 +1570,7 @@
 		"prelude_first_groundSlam2": "deals damage on direct hit.",
 
 		"prelude_second_shop": "Use your POINTS at the SHOP at the start of each level to buy new equipment.",
+        "prelude_second_doorClip": "\"WHAT'S UPDOOR?\"$T. HAKITA",
 		"prelude_second_changeEquipped": "Cycle through EQUIPPED variations with",
 
 		"prelude_third_needShotgun": "INSUFFICIENT FIREPOWER",

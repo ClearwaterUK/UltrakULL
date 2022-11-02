@@ -1534,6 +1534,7 @@
 	"prelude":{
 		"prelude_first_openingCredits1": "",
 		"prelude_first_openingCredits2": "",
+        "prelude_first_pipeClip": "",
 		"prelude_first_revolverPierce1": "",
 		"prelude_first_revolverPierce2": "",
 		"prelude_first_parry": "",
@@ -1545,6 +1546,7 @@
 		"prelude_first_groundSlam2": "",
 
 		"prelude_second_shop": "",
+        "prelude_second_doorClip": "",
 		"prelude_second_changeEquipped": "",
 
 		"prelude_third_needShotgun": "",

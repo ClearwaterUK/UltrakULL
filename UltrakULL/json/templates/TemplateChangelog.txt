@@ -9,6 +9,9 @@ visualnovel: visualnovel_fallenResponseFifth
 
 books: books_scanning
 
+prelude: prelude_first_pipeClip;
+prelude: prelude_second_doorClip;
+
 tutorial: tutorial_recalibrationPrompt
 tutorial: tutorial_calibrationAudio;
 tutorial: tutorial_calibrationVideo;

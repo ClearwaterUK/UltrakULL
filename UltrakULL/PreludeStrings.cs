@@ -16,6 +16,12 @@ namespace UltrakULL
         {
             string fullMessage = message + message2;
             preludeStringsLogger.LogInfo(fullMessage);
+
+            if (fullMessage.Contains("PIPE CLIP"))
+            {
+                return (LanguageManager.CurrentLanguage.prelude.prelude_first_pipeClip);
+            }
+
             if (fullMessage.Contains("REVOLVER"))
             {
                 return (LanguageManager.CurrentLanguage.prelude.prelude_first_revolverPierce1 + " '<color=orange>" + input + "</color>'" + LanguageManager.CurrentLanguage.prelude.prelude_first_revolverPierce2);
@@ -45,6 +51,10 @@ namespace UltrakULL
             if (fullMessage.Contains("POINTS"))
             {
                 return LanguageManager.CurrentLanguage.prelude.prelude_second_shop;
+            }
+            if (fullMessage.Contains("UPDOOR"))
+            {
+                return (LanguageManager.CurrentLanguage.prelude.prelude_second_doorClip);
             }
             if (fullMessage.Contains("EQUIPPED"))
             {
