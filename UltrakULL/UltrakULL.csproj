@@ -173,6 +173,7 @@
     <None Include="json\templates\en-GB.json" />
     <None Include="json\templates\template.json" />
     <None Include="packages.config" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Sprites\Checkmark.png" />
