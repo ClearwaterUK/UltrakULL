@@ -23,6 +23,8 @@ mainmenu: mainmenu_halloween
 mainmenu: mainmenu_christmas
 
 books: books_scanning
+books: books_pressToClose1
+books: books_pressToClose2
 
 prelude: prelude_first_pipeClip;
 prelude: prelude_second_doorClip;

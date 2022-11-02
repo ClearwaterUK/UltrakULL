@@ -20,7 +20,7 @@ public static class Inject_LanguageButton
         GameObject languageButton = GameObject.Instantiate(optionsParent.Find("Gameplay").gameObject, optionsParent);
         languageButton.transform.localPosition += new Vector3(0f, 60f, 0f);
         languageButtonText = languageButton.transform.GetChild(0).gameObject.GetComponent<Text>();
-        languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
+
 
         Button button = languageButton.GetComponent<Button>();
         GameObject pageToDisable = optionsParent.Find("Gameplay Options").gameObject;
@@ -32,7 +32,7 @@ public static class Inject_LanguageButton
         GameObject languagePage = GameObject.Instantiate(pageToDisable, optionsParent);
         languagePage.SetActive(false);
         languageButtonTitleText = languagePage.transform.Find("Text").GetComponent<Text>();
-        languageButtonTitleText.text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
+       
         Transform contentParent = languagePage.transform.Find("Scroll Rect (1)").Find("Contents");
         foreach (Transform child in contentParent.GetComponentInChildren<Transform>(true))
             child.gameObject.SetActive(false);
@@ -93,6 +93,18 @@ public static class Inject_LanguageButton
         optionsParent.Find("Assist").GetComponent<Button>().onClick.AddListener(delegate { languagePage.SetActive(false); });
         optionsParent.Find("Colors").GetComponent<Button>().onClick.AddListener(delegate { languagePage.SetActive(false); });
         optionsParent.Find("Saves").GetComponent<Button>().onClick.AddListener(delegate { languagePage.SetActive(false); });
+
+        try
+        {
+            languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
+            languageButtonTitleText.text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
+        }
+        catch(Exception e)
+        {
+            languageButtonText.text = "LANGUAGES";
+            languageButtonTitleText.text = "--" + "LANGUAGES" + "--";
+        }
+
 
         return true;
     }
