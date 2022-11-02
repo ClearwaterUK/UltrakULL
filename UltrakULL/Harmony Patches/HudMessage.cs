@@ -4,9 +4,24 @@ using UnityEngine;
 using static UltrakULL.CommonFunctions;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
 namespace UltrakULL.Harmony_Patches
 {
+
+    [HarmonyPatch(typeof(HudMessage), "Update")]
+    public static class Update_Patch
+    {
+        [HarmonyPrefix]
+        public static bool Update_MyPatch(HudMessage __instance, Image ___img, Text ___text)
+        {
+            if(___img != null && ___text != null)
+            {
+                return true;
+            }
+            return false;
+        }
+    }
 
     //@Override
     //Overrides the PlayMessage method from the HudMessage class. This is needed for swapping text in message boxes.
