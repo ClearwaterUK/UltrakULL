@@ -10,6 +10,7 @@
 - Fixed language select button wouldn't re-translate into a new language when a new language was selected and would only translate upon switching scenes (thanks me (Temperz)).
 - Fixed the scanning panel when picking up a book not appearing. Added string for the scanning text.
 - Fixed a couple of lingering issues with strings in 2-S. (DANTE)
+- Fixed an issue with HUD messages in some levels that keep reappearing if the player moves back and forth on its trigger.
 - Added strings for all recalibration prompts in the intro, if the player decides to recalibrate.
 - Fixed a long-standing issue with the introduction missing the recalibration prompt due to a hacky implementation.
 

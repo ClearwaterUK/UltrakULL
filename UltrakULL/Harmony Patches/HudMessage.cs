@@ -19,7 +19,7 @@ namespace UltrakULL.Harmony_Patches
         public static bool currentTimedMessageActivated;
         
         [HarmonyPrefix]
-        public static bool PlayMessage_MyPatch(HudMessage __instance, bool ___activated, HudMessageReceiver ___messageHud, Text ___text, Image ___img)
+        public static bool PlayMessage_MyPatch(HudMessage __instance, ref bool ___activated, HudMessageReceiver ___messageHud, Text ___text, Image ___img)
         {
             //The HUD display uses 2 kinds of messages.
             //One for messages that displays KeyCode inputs (for controls), and one that doesn't.

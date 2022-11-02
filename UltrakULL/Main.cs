@@ -48,11 +48,10 @@ using UltrakULL.json;
  * 
  *  -- FOR NEXT HOTFIX --
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable a patched function by returning true if an exception happens there, will then use original game code.
- * - Find a more robust solution for HUD messages not displaying correctly when player goes back and forth to a trigger. Maybe store last string, then if no match, reload the stored string?
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * Options->Sandbox icons names
  * - Misc keys as strings (comma, period, etc)
- * - English template seems to have some problems. The file "loads" but then immediately throws not ready for patching
+ * - English template seems to have some problems. The file "loads" but then immediately throws not ready for patching. (Switching to it in-game seems to work though)
  * 
  * */
 
