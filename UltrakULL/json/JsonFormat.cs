@@ -1667,7 +1667,6 @@ namespace UltrakULL.json
         public string tutorial_calibrationMechanics;
         public string tutorial_calibrationComplete1;
         public string tutorial_calibrationComplete2;
-        public string tutorial_calibrationComplete3;
         public string tutorial_introReminder;
         public string tutorial_systemsOperational;
         public string tutorial_introLoadStatus;
@@ -1813,6 +1812,7 @@ namespace UltrakULL.json
     {
         public string act2_greedSecond_sand;
 
+        public string act2_greedThird_wallClip;
         public string act2_greedThird_troll1;
         public string act2_greedThird_troll2;
         public string act2_greedThird_tombOfKings;

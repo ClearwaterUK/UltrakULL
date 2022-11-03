@@ -1,4 +1,11 @@
-﻿0.9.0
+﻿0.9.1
+- Added a missing string for a clip in 4-3.
+
+
+- Added the following lines to the JSON template:
+act2: act2_greedThird_wallClip
+
+0.9.0
 - Work on some of the backend of the mod has been done to simplify and refactor things. This should hopefully in turn fix some miscellaneous bugs that some people were having.
 - Added seasonal strings (Halloween, Easter, Christmas) from the main menu.
 - Added strings for the two speedrun clips on 0-1 and 0-2.

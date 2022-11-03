@@ -36,6 +36,10 @@ namespace UltrakULL
         {
             string fullMessage = message + message2;
             a2StringsLogger.LogInfo(fullMessage);
+            if (fullMessage.Contains("FILTH"))
+            {
+                return (LanguageManager.CurrentLanguage.act2.act2_greedThird_wallClip);
+            }
             if (fullMessage.Contains("wicked"))
             {
                 return (LanguageManager.CurrentLanguage.act2.act2_greedThird_troll1);

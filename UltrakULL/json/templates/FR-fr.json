@@ -1576,6 +1576,7 @@
 	"act2": {
 		"act2_greedSecond_sand": "LES ENNEMIS COUVERTS DANS LE SABLE <color=red>NE SAIGNERONT PAS</color>.",
 
+        "act2_greedThird_wallClip": "\"LES SALETÉS SONT PARTIS, MAIS LA MEMOIRE Y RESTe.\"$T. HAKITA",
 		"act2_greedThird_troll1": "Quelque chose de maudit arrive.",
 		"act2_greedThird_troll2": "Je plaisante :)",
         "act2_greedThird_tombOfKings": "TOMBE DES ROIS",

@@ -1616,6 +1616,7 @@
 	"act2":{
 		"act2_greedSecond_sand": "Enemies covered in sand WILL NOT BLEED.",
 
+        "act2_greedThird_wallClip": "\"THE FILTH IS GONE, BUT THE MEMORY REMAINS.\"$T. HAKITA",
 		"act2_greedThird_troll1": "Something wicked this way comes.",
 		"act2_greedThird_troll2": "Just kidding :)",
         "act2_greedThird_tombOfKings": "TOMB OF KINGS",

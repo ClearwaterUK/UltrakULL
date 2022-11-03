@@ -1592,6 +1592,7 @@
 	"act2":{
 		"act2_greedSecond_sand": "",
 
+        "act2_greedThird_wallClip": "",
 		"act2_greedThird_troll1": "",
 		"act2_greedThird_troll2": "",
         "act2_greedThird_tombOfKings": "",

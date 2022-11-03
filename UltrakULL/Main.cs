@@ -25,7 +25,6 @@ using UltrakULL.json;
  *	This tool is primarily meant to assist with language translation.
  * 
  *  -- MAIN TODO LIST --
- *  - Fill the JSON template and class as progress happens, moving hardcoded text out as it goes
  *  - Add ULL credits, translation credits to main menu with help of UKUIHelper library
  *  - Error and exception handling
  *  - Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
