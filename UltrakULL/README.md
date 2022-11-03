@@ -20,7 +20,7 @@ Additional language files can be obtained on the UltrakULL Discord, in the #lang
 # Installation
 
 ### Prerequisites:
-- A Steam copy of ULTRAKILL.<br>**Demo, GOG.com and cracked versions are NOT supported.**
+- A [Steam copy](https://store.steampowered.com/app/1229490/ULTRAKILL/) of ULTRAKILL.<br>**Demo, GOG.com and cracked versions are NOT supported.**
 - BepInEx 5 64-bit. It can be directly downloaded from [here](https://github.com/BepInEx/BepInEx/releases/download/v5.4.21/BepInEx_x64_5.4.21.0.zip).<br>**Do not download/install BepInEx 6, ULTRAKILL does not support it.**
 - A release of UltrakULL. Details to obtain it are given in the [Download](#Download) section.<br>**It is highly recommended to acquire the latest version available when downloading.**
 
@@ -79,15 +79,32 @@ Additional language files can be obtained on the UltrakULL Discord, in the #lang
 
 # Documentation
 
-Coming soon.
+GitHub documentation coming soon. Until then, documentation on how to create your own language
+can be found in the [UltrakULL Discord.](https://discord.gg/ZB7jk6Djv5)
 
 # Building
 
-Coming soon.
+Build instructions coming soon.
 
 # Troubleshooting
 
-Coming soon.
+### ULTRAKILL received an update, and UltrakULL is now broken/not working correctly.
+As is the case with most updates for other games,
+any and all updates and hotfixes to ULTRAKILL will almost certainly break mod functionality
+to some degree. Work to future-proof the mod as much as possible is done to minimise such occurrences,
+but if an update breaks the mod, it will be fixed as quickly as possible.
+
+### My language does not appear as selectable in-game in the language tab.
+
+Language files are formatted in JSON. If it does not appear as available, it is either not formatted correctly
+or does not match the minimum version required by the mod.\
+To check if a file is formatted correctly, open [JSONLint](https://jsonlint.com/) in your browser, copy and paste the contents
+of your file into the window and click on "Validate JSON". \
+If the file is not formatted correctly, JSONLint will report any errors.
+
+### My problem is not listed here.
+
+A dedicated troubleshooting and support channel can be found at the [UltrakULL Discord](https://discord.gg/ZB7jk6Djv5).
 
 # FAQ
 
@@ -98,14 +115,24 @@ including French, Brazilian Portugese, Traditional Chinese, with many other lang
 If you wish to contribute to, or begin work on a new or existing translation or language, feel free to stop by and inquire
 at the [UltrakULL Discord.](https://discord.gg/ZB7jk6Djv5)
 
-### ULTRAKILL received an update, and UltrakULL is now broken/not working correctly.
-As is the case with most updates for other games,
-any and all updates and hotfixes to ULTRAKILL will almost certainly break mod functionality
-to some degree. Work to future-proof the mod as much as possible is done to minimise such occurrences,
-but if an update breaks the mod, it will be fixed as quickly as possible.
+### Will this mod affect my saves?
+
+No, this mod merely changes text in the game. It does not alter your saves in any way.
+
+### Can voice lines from characters be translated?
+
+It's indeed possible to swap out audio clips as other mods have already accomplished this,
+so it should also be able to be applied to speaking characters. UltrakULL does not currently support this, but it
+is a feature that I would like to implement in future.
+
+### Where can I follow UltrakULL's development?
+I usually like to post updates and news about development in multiple places, including the [UltrakULL Discord](https://discord.gg/ZB7jk6Djv5) itself,
+the [New Blood Discord](https://discord.gg/newblood), and my [personal Twitter](https://twitter.com/ClearwaterHLL).
+
 
 ### Is UltrakULL compatible with other mods?
-Compatability with other mods has not been tested and is unknown at this time.
+[Ultrakill Mod Manager](https://github.com/Temperz87/ultra-mod-manager): Confirmed to be working, however has not been fully tested.\
+Compatability with other mods not listed here is unknown.
 
 # Credits & Contributors
 UltrakULL created by **Clearwater**\
