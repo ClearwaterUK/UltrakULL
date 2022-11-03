@@ -341,7 +341,6 @@ namespace UltrakULL
                 if (currentLevel.name == "Intro")
                 {
                     GameObject frontEnd = getInactiveRootObject("Canvas");
-                    Logger.LogInfo("Intro screen detected");
                     if (frontEnd != null)
                     {
                         Text loadingText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "LoadingScreen"), "Intro"), "Text"));
@@ -351,16 +350,14 @@ namespace UltrakULL
                 //Main menu hook
                 else if (currentLevel.name == "Main Menu")
                 {
-                    Logger.LogInfo("Hooking into main menu...");
                     GameObject frontEnd = getInactiveRootObject("Canvas");
 
                     if (frontEnd == null)
                     {
-                        Logger.LogError("Failed to hook.");
+                        Logger.LogError("Failed to hook into main menu.");
                     }
                     else
                     {
-                        Logger.LogInfo("Hooked into front end, patching...");
                         patchFrontEnd(frontEnd);
 
                         if (ultrakullLogo != null)
@@ -387,11 +384,10 @@ namespace UltrakULL
                 else if (currentLevel.name.Contains("P-"))
                 {
                     //Prime sanctum level hook
-                    Logger.LogInfo("Prime sanctum, attempting to hook via Prime FirstRoom...");
                     GameObject coreGame = GameObject.Find("Prime FirstRoom");
                     if (coreGame == null)
                     {
-                        Logger.LogError("Failed to hook.");
+                        Logger.LogError("Failed to hook into Prime levels.");
                     }
                     else
                     {
@@ -415,7 +411,6 @@ namespace UltrakULL
                 else if (currentLevel.name.Contains("-S"))
                 {
                     //In secret level hook
-                    Logger.LogInfo("In secret level detected, attempting to hook via Canvas...");
 
                     //Potential problem here - we're hooking via Secret FirstRoom, but the words are swapped between secret levels...
                     GameObject coreGame = getInactiveRootObject("Canvas");
@@ -425,7 +420,6 @@ namespace UltrakULL
                     }
                     else
                     {
-                        Logger.LogInfo("Hooked, patching secret level");
                         patchPauseMenu(ref coreGame);
                         patchCheats(ref coreGame);
                         patchLevelStats(ref coreGame);
@@ -436,11 +430,10 @@ namespace UltrakULL
                 else if (currentLevel.name == "uk_construct")
                 //Sandbox hook
                 {
-                    Logger.LogInfo("Sandbox detected, hooking via Canvas");
-                    GameObject coreGame = GameObject.Find("Canvas");
+                    GameObject coreGame = getInactiveRootObject("Canvas");
                     if (coreGame == null)
                     {
-                        Logger.LogError("Failed to hook into sandbox");
+                        Logger.LogError("Failed to hook into sandbox.");
                     }
                     else
                     {
@@ -455,16 +448,13 @@ namespace UltrakULL
                 else
                 //General in-level hook
                 {
-                    Logger.LogInfo("In-level detected, attempting to hook...");
                     GameObject coreGame = GameObject.Find("FirstRoom");
                     if (coreGame == null)
                     {
-                        Logger.LogError("Failed to hook.");
+                        Logger.LogError("Failed to hook into in-game elements.");
                     }
                     else
                     {
-                        Logger.LogInfo("Currently in: " + SceneManager.GetActiveScene().name);
-                        Logger.LogInfo("Patching in-game elements...");
                         try
                         {
                             patchPauseMenu(ref coreGame);
@@ -485,38 +475,32 @@ namespace UltrakULL
                         //Tutorial
                         if (levelName.Contains("Tutorial"))
                         {
-                            Logger.LogInfo("Currently on tutorial. Now deferring patch to tutorial class.");
                             TutorialStrings tutorialPatchClass = new TutorialStrings();
                         }
 
                         //Prelude
                         else if (levelName.Contains("0-"))
                         {
-                            Logger.LogInfo("Currently on prelude. Now deferring patch to prelude class.");
                             Prelude preludePatchClass = new Prelude(ref coreGame);
                         }
                         //Act 1
                         else if (levelName.Contains("1-") || levelName.Contains("2-") || levelName.Contains("3-"))
                         {
-                            Logger.LogInfo("Currently on Act 1. Now deferring patch to Act 1 class.");
                             Act1.PatchAct1(ref coreGame);
                         }
                         //Act 2
                         else if (levelName.Contains("4-") || levelName.Contains("5-") || levelName.Contains("6-"))
                         {
-                            Logger.LogInfo("Currently on Act 2. Now deferring patch to Act 2 class.");
                             Act2.PatchAct2(ref coreGame);
                         }
                         //Cyber Grind
                         else if (SceneManager.GetActiveScene().name.Contains("Endless"))
                         {
-                            Logger.LogInfo("Currently in the Cyber Grind.");
                             CyberGrind.PatchCG(ref coreGame);
                         }
                         //End of act intermission
                         else if (SceneManager.GetActiveScene().name.Contains("Intermission"))
                         {
-                            Logger.LogInfo("Currently on intermission.");
                             Intermission intermission = new Intermission(ref coreGame);
                         }
                     }
@@ -534,7 +518,6 @@ namespace UltrakULL
             {
                 Logger.LogInfo("--- Initializing JSON parser ---");
                 initJsonParser();
-                Logger.LogInfo("--- Inserting loaded language into patched functions ---");
                 Logger.LogInfo("--- Patching vanilla game functions ---");
                 Logger.LogMessage("Patching game functions...");
                 Harmony harmony = new Harmony(pluginGuid);

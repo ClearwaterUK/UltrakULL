@@ -13,8 +13,6 @@ namespace UltrakULL
     {
         public static string getHUDToolTip(string message)
         {
-            Console.WriteLine(message);
-
             
             if (message.Contains("PUNCH"))
             {

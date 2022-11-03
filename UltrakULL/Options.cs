@@ -759,13 +759,10 @@ namespace UltrakULL
             //In-game it's root/Canvas/OptionsMenu.
             if (SceneManager.GetActiveScene().name == "Main Menu")
             {
-                Console.WriteLine("Patching options menu from Main Menu");
                 this.optionsMenu = getGameObjectChild(game, "OptionsMenu");
             }
             else
             {
-                Console.WriteLine("Patching options menu from in-level");
-
                 List<GameObject> rootObjects = new List<GameObject>();
                 SceneManager.GetActiveScene().GetRootGameObjects(rootObjects);
                 GameObject pauseObject = null;

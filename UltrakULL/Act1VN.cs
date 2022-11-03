@@ -48,7 +48,6 @@ namespace UltrakULL
                 if (a.gameObject.name == "Choices Box")
                 {
                     fallenChoiceObjects.Add(a.gameObject);
-                    Console.WriteLine(a.gameObject.name);
                 }
             }
 

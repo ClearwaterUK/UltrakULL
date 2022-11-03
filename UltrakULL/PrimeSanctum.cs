@@ -21,22 +21,9 @@ namespace UltrakULL
 
         public void patchSecretText(PrimeSanctumStrings strings)
         {
-            GameObject baseObj = null;
+            GameObject bossRoom = getInactiveRootObject("3 - Fuckatorium");
 
-            //I hate having to do it like this...
-            List<GameObject> a = new List<GameObject>();
-            SceneManager.GetActiveScene().GetRootGameObjects(a);
-            Console.WriteLine(a.Count);
-            foreach (GameObject child in a)
-            {
-                if (child.name == "3 - Fuckatorium")
-                {
-                    baseObj = child;
-                }
-            }
-
-            Text secretText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(baseObj, "3 Stuff"),"End"),"FinalRoom Prime"),"Testament Shop"),"Canvas"),"Border"),"TipBox"),"Panel"),"Scroll View"),"Viewport"),"Content"),"Text (1)"));
-            Console.WriteLine(secretText.text);
+            Text secretText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(bossRoom, "3 Stuff"),"End"),"FinalRoom Prime"),"Testament Shop"),"Canvas"),"Border"),"TipBox"),"Panel"),"Scroll View"),"Viewport"),"Content"),"Text (1)"));
             secretText.fontSize = 18;
             secretText.text = strings.getSecretText();
         }

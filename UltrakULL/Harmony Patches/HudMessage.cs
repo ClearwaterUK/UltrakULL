@@ -126,7 +126,6 @@ namespace UltrakULL.Harmony_Patches
 
         public static IEnumerator clearTextBox(float seconds, Text text, Image img)
         {
-            //Console.WriteLine("Sleeping for " + seconds + "seconds...");
             yield return new WaitForSeconds(seconds);
             text.enabled = false;
             img.enabled = false;
@@ -134,7 +133,6 @@ namespace UltrakULL.Harmony_Patches
 
         public static IEnumerator wait(float seconds)
         {
-            //Console.WriteLine("Waiting for " + seconds + " seconds...");
             yield return new WaitForSeconds(seconds);
 
             currentTimedMessage.enabled = false;

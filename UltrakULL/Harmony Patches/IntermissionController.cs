@@ -28,7 +28,6 @@ namespace UltrakULL.Harmony_Patches
                 string openingTag = "<color=grey>";
                 string closingTag = "</color>";
                 string mirageName = Regex.Replace(___preText, @"<[^>]*>", "");
-                //Console.WriteLine(mirageName);
                 switch (mirageName)
                 {
                     case ("???:"): { break; }

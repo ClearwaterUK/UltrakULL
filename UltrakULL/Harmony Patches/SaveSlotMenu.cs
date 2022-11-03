@@ -38,7 +38,6 @@ namespace UltrakULL.Harmony_Patches
             }
 
             string highestDiff = MonoSingleton<PresenceController>.Instance.diffNames[highestDifficulty];
-            Console.WriteLine(highestDiff);
 
             switch (highestDiff)
             {

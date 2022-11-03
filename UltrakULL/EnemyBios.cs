@@ -39,7 +39,7 @@ namespace UltrakULL
                 case "SOMETHING WICKED": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_somethingWicked; }
                 case "FLESH PRISON": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_fleshPrison; }
                 case "MINOS PRIME": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_minosPrime; }
-                default: { Console.WriteLine(originalName); return "Untranslated"; }
+                default: { return "Untranslated enemy name"; }
             }
         }
 
@@ -65,7 +65,7 @@ namespace UltrakULL
 
                 case "???": { return "???"; }
                 case "PRIME SOUL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_type_primeSoul; }
-                default: { return "UNKNOWN"; }
+                default: { return "UNKNOWN ENEMY TYPE"; }
             }
         }
 
@@ -211,7 +211,6 @@ namespace UltrakULL
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_sentry_2 + "\n\n" +
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_sentry_3 + "\n\n" +
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_sentry_4;
-
                     }
 
                 case "V2 (2nd)":
@@ -248,7 +247,6 @@ namespace UltrakULL
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_gabriel_3;
                     }
 
-
                 case "GABRIEL, APOSTATE OF HATE":
                     {
                         return
@@ -256,7 +254,6 @@ namespace UltrakULL
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_gabrielSecond_2 + "\n\n" +
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_gabrielSecond_3 + "\n\n" +
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_gabrielSecond_4;
-
                     }
                 case "VIRTUE":
                     {
@@ -276,7 +273,6 @@ namespace UltrakULL
                     }
                 case "FLESH PRISON":
                     {
-
                         return
                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_fleshPrison_1 + "\n\n" +
                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_fleshPrison_2 + "\n\n" +
@@ -293,11 +289,8 @@ namespace UltrakULL
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_minosPrime_6 + "\n\n" +
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_minosPrime_7 + "\n\n" +
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_minosPrime_8;
-
                     }
-
-                default: {return "UNKNOWN";}
-
+                default: {return "UNKNOWN ENEMY BIO";}
             }
         }
 

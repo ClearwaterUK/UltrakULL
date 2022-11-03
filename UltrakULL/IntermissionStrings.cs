@@ -56,7 +56,6 @@ namespace UltrakULL
             //Act 2 intermission
             if(currentLevel == "Intermission2")
             {
-                Console.WriteLine(inputString);
                 //1 P1
                 if (inputString.Contains("Silence")) { return this.act2IntermissionFirst; }
 

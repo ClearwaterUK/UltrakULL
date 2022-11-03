@@ -19,14 +19,8 @@ namespace UltrakULL
 
         public static void PatchAct2(ref GameObject level)
         {
-            a2Logger.LogInfo("Now entering Act 2 class.");
-
-            a2Logger.LogInfo("Patching Act 2 hellmap");
-
-
             List<GameObject> a = new List<GameObject>();
             SceneManager.GetActiveScene().GetRootGameObjects(a);
-            Console.WriteLine(a.Count);
             GameObject canvas = null;
             foreach (GameObject child in a)
             {
@@ -48,7 +42,6 @@ namespace UltrakULL
 
             // this.baseLevelObject = level; // This hasn't been used yet so it's commented out
             string currentLevel = SceneManager.GetActiveScene().name;
-
 
             a2Logger.LogInfo("Patching results screen...");
             string levelName = Act2Strings.getLevelName();

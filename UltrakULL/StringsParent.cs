@@ -58,7 +58,6 @@ namespace UltrakULL
         public static string getReturningLevelName(string input)
         {
             PreviousMissionSaver instance = MonoSingleton<PreviousMissionSaver>.Instance;
-            Console.WriteLine("Previous level ID: " + instance.previousMission);
 
             switch(instance.previousMission)
             {

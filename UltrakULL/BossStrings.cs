@@ -51,7 +51,7 @@ namespace UltrakULL
                 case ("FLESH PRISON"): { return (LanguageManager.CurrentLanguage.enemyNames.enemyname_fleshPrison); }
                 case ("MINOS PRIME"): { return (LanguageManager.CurrentLanguage.enemyNames.enemyname_minosPrime); }
 
-                default: { Console.WriteLine(originalBossName); return ("UNKNOWN BOSS NAME"); }
+                default: { return ("UNKNOWN BOSS NAME"); }
             }
         }
     }

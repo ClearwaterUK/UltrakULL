@@ -50,7 +50,6 @@ namespace UltrakULL
             return null;
         }
 
-
         public static void patchResultsScreen(string name, string challenge)
         {
             string levelName = name;
@@ -59,8 +58,6 @@ namespace UltrakULL
             GameObject coreGame = GameObject.Find("Player");
 
             GameObject resultsPanel = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(coreGame, "Main Camera"), "HUD Camera"), "HUD"), "FinishCanvas"), "Panel"); // What happened here?
-
-            Console.WriteLine("resultsPanel name: " + resultsPanel.name);
 
             //Level title
             GameObject resultsTitle = getGameObjectChild(resultsPanel, "Title");
@@ -72,7 +69,6 @@ namespace UltrakULL
 
             if (finder != null)
             {
-                Console.WriteLine(finder.name);
                 finder.enabled = false;
             }
 

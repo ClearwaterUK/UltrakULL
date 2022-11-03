@@ -39,7 +39,6 @@ namespace UltrakULL
             {
                 return (LanguageManager.CurrentLanguage.prelude.prelude_first_groundSlam1 + "'<color=orange>" + input + "</color>'" + LanguageManager.CurrentLanguage.prelude.prelude_first_groundSlam2);
             }
-            Console.WriteLine("Unimplemented 0-1 string \n Text: " + fullMessage);
             return "unimplemented 0-1 string";
         }
         //0-2 - The Meatgrinder

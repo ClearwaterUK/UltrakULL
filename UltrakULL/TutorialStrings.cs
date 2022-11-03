@@ -36,7 +36,6 @@ namespace UltrakULL
 
         public string getMessage(string inputMessage, string inputMessage2, string input)
         {
-            Console.WriteLine(inputMessage + " - " + input);
 
             string fullMessage = inputMessage + inputMessage2;
 

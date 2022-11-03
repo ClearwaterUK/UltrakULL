@@ -18,7 +18,6 @@ namespace UltrakULL
     {
         public static void patchShopFrontEnd(ref GameObject coreGame)
         {
-            Console.WriteLine("Starting patchShop");
 
             //NOTE
             //Harmless, but still present, exception that happens, in a normal level when trying to patch the Return From Cyber Grind button
@@ -29,7 +28,6 @@ namespace UltrakULL
             GameObject shopObject;
             if (SceneManager.GetActiveScene().name == "uk_construct")
             {
-                Console.WriteLine("Using sandbox shop");
                 shopObject = getGameObjectChild(GameObject.Find("Shop"),"Canvas");
             }
             else
@@ -47,10 +45,8 @@ namespace UltrakULL
             Text tipDescription = getTextfromGameObject(getGameObjectChild(tipPanel, "TipText"));
             tipDescription.text = StringsParent.getLevelTip();
 
-
             //Weapons button
             GameObject mainButtons = getGameObjectChild(shopObject, "Main Menu");
-            Console.WriteLine(mainButtons.name);
 
             Text weaponsButtonTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(mainButtons, "WeaponsButton"), "Text"));
             weaponsButtonTitle.text = LanguageManager.CurrentLanguage.shop.shop_weapons;
@@ -152,7 +148,6 @@ namespace UltrakULL
             GameObject shopWeaponsObject;
             if (SceneManager.GetActiveScene().name == "uk_construct")
             {
-                Console.WriteLine("Using sandbox shop");
                 shopWeaponsObject = getGameObjectChild(getGameObjectChild(GameObject.Find("Shop"), "Canvas"),"Weapons");
             }
             else

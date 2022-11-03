@@ -80,16 +80,12 @@ namespace UltrakULL
                     }
                 default: { break; }
             }
-
         }
-
-
 
         // SecretFirstRoom/Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text
         // Note - it uses a seperate panel that has the same name as the normal result panel.
         public SecretLevels(ref GameObject coreGame)
         {
-            Console.WriteLine("In secretLevels");
             coreGame = GameObject.Find("Player");
             this.currentLevel = SceneManager.GetActiveScene().name;
             GameObject testamentRoom = null;
@@ -110,8 +106,6 @@ namespace UltrakULL
 
                 default: { break; }
             }
-
-            Console.WriteLine("Getting secret level end results");
             GameObject secretLevelResults = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(GameObject.Find("Player"), "Main Camera"), "HUD Camera"), "HUD"), "FinishCanvas");
 
             List<GameObject> FinishCanvasChildren = new List<GameObject>();
@@ -130,7 +124,6 @@ namespace UltrakULL
             Text secretLevelComplete = getTextfromGameObject(getGameObjectChild(getGameObjectChild(secretLevelResultsPanel, "Time - Rank"), "Text"));
             secretLevelComplete.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_complete2;
 
-            Console.WriteLine("secretLevels finished");
         }
 
         public string getSecretLevelName()

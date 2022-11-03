@@ -60,8 +60,6 @@ namespace UltrakULL
         {
             level = getInactiveRootObject("Canvas");
             GameObject intermissionObject = getGameObjectChild(getGameObjectChild(level, "PowerUpVignette"), "Panel");
-            
-            Console.WriteLine("IntermissionObject:" + intermissionObject.name);
 
             string levelName = SceneManager.GetActiveScene().name;
 
