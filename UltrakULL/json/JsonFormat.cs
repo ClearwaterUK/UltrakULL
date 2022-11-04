@@ -1457,6 +1457,8 @@ namespace UltrakULL.json
         public string general_weaponPositionLeft;
         public string general_rememberWeapon;
         public string general_screenShake;
+        public string general_screenShakeMinimum;
+        public string general_screenShakeMaximum;
         public string general_cameraTilt;
         public string general_restartWarning;
         public string general_discordRpc;
@@ -1510,6 +1512,7 @@ namespace UltrakULL.json
         public string graphics_pixelisation144p;
         public string graphics_pixelisation36p;
         public string graphics_dithering;
+        public string graphics_ditheringMinimum;
         public string graphics_textureWarping;
         public string graphics_vertexWarping;
         public string graphics_vertexWarpingNone;
@@ -1555,6 +1558,8 @@ namespace UltrakULL.json
         public string hud_typeClassicWhite;
         public string hud_hudElements;
         public string hud_backgroundOpacity;
+        public string hud_backgroundOpacityMinimum;
+        public string hud_backgroundOpacityMaximum;
         public string hud_alwaysOnTop;
         public string hud_icons;
         public string hud_weaponIcon;
@@ -1600,9 +1605,12 @@ namespace UltrakULL.json
         public string assists_minor;
         public string assists_autoAim;
         public string assists_autoAimPercent;
+        public string assists_autoAimPercentMinimum;
+        public string assists_autoAimPercentMaximum;
         public string assists_enemySilhouettes;
         public string assists_enemySilhouettesOutlines;
         public string assists_enemySilhouettesDistance;
+        public string assists_enemySilhouettesDistanceMinimum;
         public string assists_enemySilhouettesOutlinesOnly;
         public string assists_major;
         public string assists_majorActivate;

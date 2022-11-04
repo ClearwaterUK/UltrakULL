@@ -55,6 +55,10 @@ namespace UltrakULL
             Text screenshakeText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Screenshake"), "Text"));
             screenshakeText.text = LanguageManager.CurrentLanguage.options.general_screenShake;
 
+            SliderValueToText screenshakeSlider = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(generalContent, "Screenshake"), "Button"), "Slider (1)"), "Text (2)").GetComponentInChildren<SliderValueToText>();
+            screenshakeSlider.ifMin = LanguageManager.CurrentLanguage.options.general_screenShakeMinimum;
+            screenshakeSlider.ifMax = LanguageManager.CurrentLanguage.options.general_screenShakeMaximum;
+
             Text restartWarningText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(generalContent, "Restart Warning"), "Text"));
             restartWarningText.text = LanguageManager.CurrentLanguage.options.general_restartWarning;
 
@@ -321,6 +325,11 @@ namespace UltrakULL
                 Text ditheringText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(graphicsContent, "Dithering (1)"), "Text"));
                 ditheringText.text = LanguageManager.CurrentLanguage.options.graphics_dithering;
 
+                SliderValueToText ditheringSlider = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(graphicsContent, "Dithering (1)"), "Button"),"Slider (2)"),"Text (3)").GetComponentInChildren<SliderValueToText>();
+                ditheringSlider.ifMin = LanguageManager.CurrentLanguage.options.graphics_ditheringMinimum;
+
+
+
                 Text textureWarpingText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(graphicsContent, "Texture Warping (1)"), "Text"));
                 textureWarpingText.text = LanguageManager.CurrentLanguage.options.graphics_textureWarping;
 
@@ -433,6 +442,11 @@ namespace UltrakULL
 
                 Text backgroundOpacityText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(hudContent, "Background Opacity"), "Text"));
                 backgroundOpacityText.text = LanguageManager.CurrentLanguage.options.hud_backgroundOpacity;
+
+                SliderValueToText backgroundOpacitySlider = getGameObjectChild(getGameObjectChild(getGameObjectChild(hudContent, "Background Opacity"), "Button"),"Slider (1)").GetComponentInChildren<SliderValueToText>();
+
+                backgroundOpacitySlider.ifMin = LanguageManager.CurrentLanguage.options.hud_backgroundOpacityMinimum;
+                backgroundOpacitySlider.ifMax = LanguageManager.CurrentLanguage.options.hud_backgroundOpacityMaximum;
 
                 Text alwaysOnTopText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(hudContent, "Always On Top"), "Text"));
                 alwaysOnTopText.text = LanguageManager.CurrentLanguage.options.hud_alwaysOnTop;
@@ -551,6 +565,10 @@ namespace UltrakULL
                 Text assistAutoAimAmountText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(assistContent, "Auto Aim Amount"), "Text (1)"));
                 assistAutoAimAmountText.text = LanguageManager.CurrentLanguage.options.assists_autoAimPercent;
 
+                SliderValueToText autoAimSlider = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(assistContent, "Auto Aim Amount"), "Button"), "Slider"), "Text (2)").GetComponentInChildren<SliderValueToText>();
+                autoAimSlider.ifMin = LanguageManager.CurrentLanguage.options.assists_autoAimPercentMinimum;
+                autoAimSlider.ifMax = LanguageManager.CurrentLanguage.options.assists_autoAimPercentMaximum;
+
                 Text assistEnemySilhouettesTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(assistContent, "Enemy Simplifier (1)"), "Text (1)"));
                 assistEnemySilhouettesTitle.text = LanguageManager.CurrentLanguage.options.assists_enemySilhouettes;
 
@@ -563,6 +581,9 @@ namespace UltrakULL
 
                 Text assistEnemySilhouettesDistance = getTextfromGameObject(getGameObjectChild(assistEnemySilhouettesExtra, "Text (1)"));
                 assistEnemySilhouettesDistance.text = LanguageManager.CurrentLanguage.options.assists_enemySilhouettesDistance;
+
+                SliderValueToText assistEnemySilhouettesDistanceSlider = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(assistContent, "Enemy Simplifier"),"Button"),"Slider"),"Text (2)").GetComponentInChildren<SliderValueToText>();
+                assistEnemySilhouettesDistanceSlider.ifMin = LanguageManager.CurrentLanguage.options.assists_enemySilhouettesDistanceMinimum;
 
                 Text assistEnemySilhouettesOutlinesOnlyText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(assistEnemySilhouettesExtra, "Extra"),"Text (2)"));
                 assistEnemySilhouettesOutlinesOnlyText.text = LanguageManager.CurrentLanguage.options.assists_enemySilhouettes;

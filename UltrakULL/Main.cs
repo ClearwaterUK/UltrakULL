@@ -50,6 +50,9 @@ using UltrakULL.json;
  * Options->Sandbox icons names
  * - Misc keys as strings (comma, period, etc)
  * - English template seems to have some problems. The file "loads" but then immediately throws not ready for patching. (Switching to it in-game seems to work though)
+ * 
+ * Add credits tab in main menu, move game+mod credits out from hardcoded
+ * Return from CG panel in shop
  * */
 
 namespace UltrakULL
