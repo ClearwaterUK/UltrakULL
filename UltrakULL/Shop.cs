@@ -30,6 +30,10 @@ namespace UltrakULL
             {
                 shopObject = getGameObjectChild(GameObject.Find("Shop"),"Canvas");
             }
+            else if(SceneManager.GetActiveScene().name.Contains("P-"))
+            {
+                shopObject = getGameObjectChild(getGameObjectChild(getGameObjectChild(GameObject.Find("Prime FirstRoom"),"Room"),"Shop"),"Canvas");
+            }
             else
             {
                 shopObject = getGameObjectChild(getGameObjectChild(getGameObjectChild(coreGame, "Room"), "Shop"), "Canvas");
@@ -108,24 +112,24 @@ namespace UltrakULL
             cgEnterButton.text = LanguageManager.CurrentLanguage.shop.shop_cybergrindEnter;
 
             /*
+            
             //CG exit description
             GameObject cgExit = getGameObjectChild(getGameObjectChild(shopObject, "Return from Cyber Grind"), "Panel");
 
             Text cgExitTitle = getTextfromGameObject(getGameObjectChild(cgExit, "Title"));
-            cgExitTitle.text = "FUCK FUCK GO BACK";
+            cgExitTitle.text = "aa"; // LanguageManager.CurrentLanguage.cyberGrind.cybergrind_leavingTitle;
 
+            
             //Disable the LevelNameFinder component so it doesn't remove the translated string!
             GameObject levelText = getGameObjectChild(cgExit, "Text");
             LevelNameFinder comp = levelText.GetComponent<LevelNameFinder>();
             comp.enabled = false;
 
             Text cgExitDescriptionText = getTextfromGameObject(getGameObjectChild(cgExit, "Text"));
-            StringsParent returningLevel = new StringsParent();
-            cgExitDescriptionText.text = "<color=red> Going back to </color>: \n" + returningLevel.getReturningLevelName(cgExitDescriptionText.text);
+            cgExitDescriptionText.text = "<color=red> Going back to </color>: \n" + StringsParent.getReturningLevelName(cgExitDescriptionText.text);
 
             Text cgExitDescription = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgExit, "CyberGrindButton (1)"), "Text"));
-            cgExitDescription.text = "SEE YOU NEXT UPDATE pepePoint";
-            */
+            cgExitDescription.text = "SEE YOU NEXT UPDATE pepePoint";*/
 
 
             //Enemies back button 
@@ -149,6 +153,10 @@ namespace UltrakULL
             if (SceneManager.GetActiveScene().name == "uk_construct")
             {
                 shopWeaponsObject = getGameObjectChild(getGameObjectChild(GameObject.Find("Shop"), "Canvas"),"Weapons");
+            }
+            else if (SceneManager.GetActiveScene().name.Contains("P-"))
+            {
+                shopWeaponsObject = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(GameObject.Find("Prime FirstRoom"), "Room"), "Shop"), "Canvas"), "Weapons");
             }
             else
             {

@@ -401,6 +401,7 @@ namespace UltrakULL
                             patchDeathScreen(ref coreGame);
                             patchLevelStats(ref coreGame);
                             patchMisc(ref coreGame);
+                            patchShop(ref coreGame);
                         }
                         catch (Exception e)
                         {
