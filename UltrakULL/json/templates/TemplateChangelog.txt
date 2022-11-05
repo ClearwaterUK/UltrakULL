@@ -12,6 +12,9 @@ options: assists_autoAimPercentMinimum
 options: assists_autoAimPercentMaximum
 options: assists_enemySilhouettesDistanceMinimum
 
+shop: shop_cybergrindReturningTo
+shop: shop_cybergrindExit
+
 
 0.9.0:
 

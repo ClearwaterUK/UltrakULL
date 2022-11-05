@@ -280,6 +280,7 @@
         "mainmenu_christmas": "JOYEAUX NOËL",
 		"mainmenu_play": "JOUER",
 		"mainmenu_options": "OPTIONS",
+        "mainmenu_credits": "CRÉDITS",
 		"mainmenu_quit": "QUITTER",
 
 		"difficulty_title": "DIFFICULTÉ",
@@ -945,6 +946,8 @@
         "shop_cybergrindDescription2": "Une bonne performance donnera beaucoup de <color=red>points</color>.",
         "shop_cybergrindDescription3": "<color=red>Tout progrès dans le mission actuel sera perdu</color>.",
         "shop_cybergrindEnter": "ENTRER LE CYBERGRIND",
+        "shop_cybergrindReturningTo": "Retourner à:",
+        "shop_cybergrindExit": "QUITTER LE CYBERGRIND",
 
         "shop_sandboxTitle": "BAC À SABLE",
         "shop_sandboxDescription1": "Le <color=#4C99E6>Bac à sable</color> est un niveau vide qui peut être utilisé pour l'entraînement.",

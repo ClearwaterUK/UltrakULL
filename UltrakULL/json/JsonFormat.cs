@@ -957,6 +957,7 @@ namespace UltrakULL.json
         public string mainmenu_christmas;
         public string mainmenu_play;
         public string mainmenu_options;
+        public string mainmenu_credits;
         public string mainmenu_quit;
 
         public string difficulty_title;
@@ -1095,6 +1096,8 @@ namespace UltrakULL.json
         public string shop_cybergrindDescription2;
         public string shop_cybergrindDescription3;
         public string shop_cybergrindEnter;
+        public string shop_cybergrindReturningTo;
+        public string shop_cybergrindExit;
 
         public string shop_sandboxTitle;
         public string shop_sandboxDescription1;

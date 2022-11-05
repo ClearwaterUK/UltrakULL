@@ -24,6 +24,8 @@ namespace UltrakULL
             //since it isn't active. Will need to fix since an exception here prevents any code to come from running
             //Commented out the offending block for now. Scroll down a bit to see it.
 
+            coreGame = GameObject.Find("FirstRoom");
+
             //FirstRoom/Room/Shop/Canvas
             GameObject shopObject;
             if (SceneManager.GetActiveScene().name == "uk_construct")
@@ -36,10 +38,10 @@ namespace UltrakULL
             }
             else
             {
+                Console.WriteLine("Normal level");
+
                 shopObject = getGameObjectChild(getGameObjectChild(getGameObjectChild(coreGame, "Room"), "Shop"), "Canvas");
             }
-
-
 
             //Tip panel
             GameObject tipPanel = getGameObjectChild(getGameObjectChild(shopObject, "TipBox"), "Panel");
@@ -111,38 +113,35 @@ namespace UltrakULL
             Text cgEnterButton = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgEnter, "CyberGrindButton (1)"), "Text"));
             cgEnterButton.text = LanguageManager.CurrentLanguage.shop.shop_cybergrindEnter;
 
-            /*
+            
             
             //CG exit description
             GameObject cgExit = getGameObjectChild(getGameObjectChild(shopObject, "Return from Cyber Grind"), "Panel");
 
             Text cgExitTitle = getTextfromGameObject(getGameObjectChild(cgExit, "Title"));
-            cgExitTitle.text = "aa"; // LanguageManager.CurrentLanguage.cyberGrind.cybergrind_leavingTitle;
+            cgExitTitle.text = "EXIT TITLE"; // LanguageManager.CurrentLanguage.cyberGrind.cybergrind_leavingTitle;
 
             
             //Disable the LevelNameFinder component so it doesn't remove the translated string!
             GameObject levelText = getGameObjectChild(cgExit, "Text");
-            LevelNameFinder comp = levelText.GetComponent<LevelNameFinder>();
-            comp.enabled = false;
 
             Text cgExitDescriptionText = getTextfromGameObject(getGameObjectChild(cgExit, "Text"));
-            cgExitDescriptionText.text = "<color=red> Going back to </color>: \n" + StringsParent.getReturningLevelName(cgExitDescriptionText.text);
 
             Text cgExitDescription = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgExit, "CyberGrindButton (1)"), "Text"));
-            cgExitDescription.text = "SEE YOU NEXT UPDATE pepePoint";*/
+            cgExitDescription.text = LanguageManager.CurrentLanguage.shop.shop_cybergrindExit;
 
 
             //Enemies back button 
             Text enemiesBackText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Enemies"), "BackButton (2)"), "Text"));
-            enemiesBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
+            //enemiesBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
             //Sandbox back button
             Text sandboxBackText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Sandbox"), "BackButton (2)"), "Text"));
-            sandboxBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
+            //sandboxBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
             //EnemyInfo back button
             Text enemyInfoBackText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "EnemyInfo"),"Button"),"Text"));
-            enemyInfoBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
+            //enemyInfoBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
 
         }

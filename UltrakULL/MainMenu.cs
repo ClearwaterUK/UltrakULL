@@ -52,6 +52,10 @@ namespace UltrakULL
                 Text optionsButtontext = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Options"), "Text"));
                 optionsButtontext.text = LanguageManager.CurrentLanguage.frontend.mainmenu_options;
 
+                //Options button
+                Text creditsButtontext = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Credits"), "Text"));
+                creditsButtontext.text = LanguageManager.CurrentLanguage.frontend.mainmenu_credits;
+
                 //Quit button
                 Text quitButtontext = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Quit"), "Text"));
                 quitButtontext.text = LanguageManager.CurrentLanguage.frontend.mainmenu_quit;

@@ -298,6 +298,7 @@
         "mainmenu_christmas": "MERRY CHRISTMAS",
 		"mainmenu_play": "PLAY",
 		"mainmenu_options": "OPTIONS",
+        "mainmenu_credits": "CREDITS",
 		"mainmenu_quit": "QUIT",
 
 		"difficulty_title": "DIFFICULTY",
@@ -988,6 +989,8 @@
         "shop_cybergrindDescription2": "Good performance gives many points.",
         "shop_cybergrindDescription3": "Progress in the current mission will be lost.",
         "shop_cybergrindEnter": "ENTER THE CYBER GRIND",
+        "shop_cybergrindReturningTo": "Returning to:",
+        "shop_cybergrindExit": "LEAVE THE CYBER GRIND",
 
         "shop_sandboxTitle": "SANDBOX",
         "shop_sandboxDescription1": "The Sandbox is an empty level that can be used for practicing.",

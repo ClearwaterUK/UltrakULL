@@ -1,5 +1,6 @@
 ﻿0.9.1
 - Added a missing string for a clip in 4-3.
+- Added Cybergrind entry/exit strings to the shop
 - Redo how HudMessage are patched. (Thanks me (Temperz))
 
 

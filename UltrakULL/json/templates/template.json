@@ -300,6 +300,7 @@
         "mainmenu_christmas": "",
 		"mainmenu_play": "",
 		"mainmenu_options": "",
+        "mainmenu_credits": "",
 		"mainmenu_quit": "",
 
 		"difficulty_title": "",
@@ -965,6 +966,8 @@
         "shop_cybergrindDescription2": "",
         "shop_cybergrindDescription3": "",
         "shop_cybergrindEnter": "",
+        "shop_cybergrindReturningTo": "",
+        "shop_cybergrindExit": "",
 
         "shop_sandboxTitle": "",
         "shop_sandboxDescription1": "",
