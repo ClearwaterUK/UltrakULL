@@ -16,7 +16,6 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void OnEnable_Postfix(LevelNameFinder __instance, Text ___targetText)
         {
-            Console.WriteLine("Post-patching");
             ___targetText.text = "<color=red>" + LanguageManager.CurrentLanguage.shop.shop_cybergrindReturningTo + "</color>:\n" + LevelNames.getLevelName(__instance.otherLevelNumber);
         }
     }

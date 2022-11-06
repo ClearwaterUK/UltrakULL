@@ -44,15 +44,11 @@ namespace UltrakULL
 
         public static void PatchAct1(ref GameObject level) // I've never seen the level argument used, is this meant to do something?
         {
-            a1Logger.LogInfo("Now entering Act 1 class.");
-            //this.baseLevelObject = level; // This isn't used so it's commented out
             string currentLevel = SceneManager.GetActiveScene().name;
-
-            patchHellmap();
-
             string levelName = Act1Strings.getLevelName();
             string levelChallenge = Act1Strings.getLevelChallenge(currentLevel);
 
+            patchHellmap();
             patchResultsScreen(levelName, levelChallenge);
 
         }

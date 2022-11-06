@@ -244,7 +244,6 @@ namespace UltrakULL
         public static void PatchCG(ref GameObject level)
         {
             var cgLogger = BepInEx.Logging.Logger.CreateLogSource("CGPatcher");
-            cgLogger.LogInfo("Now entering CyberGrind class.");
             patchWaveBoard();
             patchResults(level);
             patchTerminal(level);

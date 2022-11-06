@@ -51,6 +51,13 @@ using UltrakULL.json;
  * - Misc keys as strings (comma, period, etc)
  * - English template seems to have some problems. The file "loads" but then immediately throws not ready for patching. (Switching to it in-game seems to work though)
  * 
+ *  Intro second page not aligned correctly
+ *  Freshness not translated in tutorial (ridiculously minor)
+ *  Shop: Variation info of weapon - "already owned" not translated
+ *  Shop: Buy custom color prompt not translated
+ *  Shop: Back buttons from CG/Sandbox not translated
+ *  Some stuff missing in page 2 of Act 1 intermission (might be related to json file)
+ * 
  * */
 
 namespace UltrakULL
@@ -61,7 +68,7 @@ namespace UltrakULL
     {
         public const string pluginGuid = "clearwater.ultrakill.ultrakULL";
         public const string pluginName = "UltrakULL - Ultrakill Language Library";
-        public const string pluginVersion = "0.9.0";
+        public const string pluginVersion = "0.9.1";
 
         public static MainPatch instance = null;
         private GameObject ultrakullLogo = null;

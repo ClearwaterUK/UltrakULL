@@ -18,12 +18,6 @@ namespace UltrakULL
     {
         public static void patchShopFrontEnd(ref GameObject coreGame)
         {
-
-            //NOTE
-            //Harmless, but still present, exception that happens, in a normal level when trying to patch the Return From Cyber Grind button
-            //since it isn't active. Will need to fix since an exception here prevents any code to come from running
-            //Commented out the offending block for now. Scroll down a bit to see it.
-
             coreGame = GameObject.Find("FirstRoom");
 
             //FirstRoom/Room/Shop/Canvas
@@ -332,6 +326,9 @@ namespace UltrakULL
             revolverAlternateCustomPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
             Text revolverAlternateCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverAlternateCustom, "CustomButton"), "Text"));
             revolverAlternateCustomCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
+
+            //Revolver custom color unlock prompt
+            GameObject revolver;
 
             //Shotgun window and descriptions
             GameObject shotgunWindow = getGameObjectChild(shopWeaponsObject, "ShotgunWindow");

@@ -28,8 +28,6 @@ namespace UltrakULL
         public Prelude(ref GameObject level)
         {
             BepInEx.Logging.ManualLogSource preludeLogger = BepInEx.Logging.Logger.CreateLogSource("PreludePatcher");
-
-            preludeLogger.LogInfo("Now entering prelude class.");
             this.baseLevelObject = level;
             string currentLevel = SceneManager.GetActiveScene().name;
 
