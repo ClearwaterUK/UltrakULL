@@ -570,12 +570,12 @@ namespace UltrakULL
                 autoAimSlider.ifMax = LanguageManager.CurrentLanguage.options.assists_autoAimPercentMaximum;
 
                 Text assistEnemySilhouettesTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(assistContent, "Enemy Simplifier (1)"), "Text (1)"));
-                assistEnemySilhouettesTitle.text = LanguageManager.CurrentLanguage.options.assists_enemySilhouettes;
+                assistEnemySilhouettesTitle.text = LanguageManager.CurrentLanguage.options.assists_enemySilhouettesOutlines;
 
                 GameObject assistEnemySilhouettes = getGameObjectChild(assistContent, "Enemy Simplifier (1)");
 
                 Text assistEnemySilhouettesOutlineText = getTextfromGameObject(getGameObjectChild(assistEnemySilhouettes, "Text (1)"));
-                assistEnemySilhouettesOutlineText.text = LanguageManager.CurrentLanguage.options.assists_enemySilhouettesOutlines;
+                assistEnemySilhouettesOutlineText.text =  LanguageManager.CurrentLanguage.options.assists_enemySilhouettes;
 
                 GameObject assistEnemySilhouettesExtra = getGameObjectChild(assistContent, "Enemy Simplifier");
 
