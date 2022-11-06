@@ -33,8 +33,49 @@ namespace UltrakULL.json
         public EnemyBioStrings enemyBios;
         public CheatStrings cheats;
         public CG cyberGrind;
+        public Credits credits;
         
     }
+
+    public class Credits
+    {
+        public string credits_title;
+        public string credits_createdBy;
+
+        public string credits_helpedByTitle;
+        public string credits_helpedBy1;
+        public string credits_helpedBy2;
+        public string credits_helpedBy3;
+        public string credits_helpedBy4;
+        public string credits_helpedBy5;
+        public string credits_helpedBy6;
+        public string credits_helpedBy7;
+
+        public string credits_contributionsTitle;
+        public string credits_contributions1;
+        public string credits_contributions2;
+        public string credits_contributions3;
+        public string credits_contributions4;
+        public string credits_contributions5;
+        public string credits_contributions6;
+        public string credits_contributions7;
+        public string credits_contributions8;
+        public string credits_contributions9;
+
+        public string credits_VATitle;
+        public string credits_VA1;
+        public string credits_VA2;
+        public string credits_VA3;
+        public string credits_VA4;
+
+        public string credits_QATitle;
+        public string credits_QA1;
+        public string credits_QA2;
+        public string credits_QA3;
+        public string credits_QA4;
+
+    }
+
     public class CG
     {
         public string cybergrind_currentWave;

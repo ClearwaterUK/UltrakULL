@@ -10,6 +10,45 @@
 		"bodyName": "Traduction française pour ULTRAKILL. Developpé par Clearwater; contributions, relectures et corrections par Frizou."
 	},
     
+        "credits":{
+        "credits_title": "ULTRAKILL",
+        "credits_createdBy": "UN JEU CRÉÉE PAR <color=orange>ARSI \"HAKITA\" PATALA</color>",
+
+        "credits_helpedByTitle": "AVEC L'AIDE DE:",
+        "credits_helpedBy1": "<color=orange>DAVE OSHRY</color> (PRODUCTEUR DÉLÉGUÉ)",
+        "credits_helpedBy2": "<color=orange>PITR</color> (PROGRAMMEUR)",
+        "credits_helpedBy3": "<color=orange>RYANN VICTORIA</color> (ARTISTE 3D & PROGRAMMEUR SHADER)",
+        "credits_helpedBy4": "<color=orange>SAMUEL JAMES BRYAN</color> (ARTISTE 3D)",
+        "credits_helpedBy5": "<color=orange>BIGROCKBMP</color> (ARTISTE CONCEPTE)",
+        "credits_helpedBy6": "<color=orange>JERICHO_RUS</color> (ILLUSTRATEUR, ARTISTE TEXTURE & CONCEPTE)",
+        "credits_helpedBy7": "<color=orange>FRANCIS XIE</color> (ARTISTE TEXTURE & CONCEPTE)",
+
+        "credits_contributionsTitle": "CONTRIBUTIONS SUPPLÉMENTAIRES:",
+        "credits_contributions1": "<color=orange>MAXIMILIAN OVESSON</color> (ARTISTE UI)",
+        "credits_contributions2": "<color=orange>JACOB H.H.R.</color> (ÉCRIVAIN [PROSE & DIALOGUE])",
+        "credits_contributions3": "<color=orange>FLYINGDOG</color> (ARTISTE 3D)",
+        "credits_contributions4": "<color=orange>TONI STIGELL</color> (ARTISTE 3D)",
+        "credits_contributions5": "<color=orange>BEN MOIR</color> (PROGRAMMEUR)",
+        "credits_contributions6": "<color=orange>LUCAS VARNEY</color> (PROGRAMMEUR)",
+        "credits_contributions7": "<color=orange>EMANUIL \"CABALCROW\" CHIZHOV</color> (PROGRAMMEUR)",
+        "credits_contributions8": "<color=orange>HECKTECK</color> (PROGRAMMEUR)",
+        "credits_contributions9": "<color=orange>MEGANEKO</color> (COMPOSITEUR MUSIQUE CYBERGRIND)",
+
+        "credits_VATitle": "VOIX PAR:",
+        "credits_VA1": "<color=orange>GIANNI MATRAGRANO</color> (GABRIEL)",
+        "credits_VA2": "<color=orange>STEPHAN WEYTE</color> (MINOS PRIME)",
+        "credits_VA3": "<color=orange>MANDALORE HERRINGTON</color> (DCM)",
+        "credits_VA4": "<color=orange>JUST SHAMMY</color> (& HIBOU)",
+
+        "credits_QATitle": "ASSURANCE QUALITÉ PAR:",
+        "credits_QA1": "<color=orange>CAMERON MARTIN</color> (CHEF AQ)",
+        "credits_QA2": "<color=orange>TUCKER WILKIN</color> (AQ SÉNIOR)",
+        "credits_QA3": "<color=orange>SCOTT GURNEY</color> (AQ TECHNIQUE)",
+        "credits_QA4": "<color=orange>DALIA FIGUEROA</color> (AQ & MATÈRIEL PROMOTIONEL)",
+    },
+
+
+
     "style":{
         "style_airslam": "ÉCRASEMENT DANS L'AIR",
         "style_airshot": "TIR EN L'AIR",

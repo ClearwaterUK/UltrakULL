@@ -47,12 +47,10 @@ using UltrakULL.json;
  *  -- FOR NEXT HOTFIX --
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable a patched function by returning true if an exception happens there, will then use original game code.
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
- * Options->Sandbox icons names
+ * Options->Sandbox icons namesb
  * - Misc keys as strings (comma, period, etc)
  * - English template seems to have some problems. The file "loads" but then immediately throws not ready for patching. (Switching to it in-game seems to work though)
  * 
- * Add credits tab in main menu, move game+mod credits out from hardcoded
- * Return from CG panel in shop
  * */
 
 namespace UltrakULL
@@ -300,26 +298,48 @@ namespace UltrakULL
 
         public void addModCredits(GameObject frontEnd)
         {
-            Text credits = getTextfromGameObject(getGameObjectChild(getGameObjectChild(frontEnd, "Credits"), "Text (2)"));
+            Text creditsFirst = getTextfromGameObject(getGameObjectChild(getGameObjectChild(frontEnd, "Credits"), "Text (1)"));
+            Text creditsSecond = getTextfromGameObject(getGameObjectChild(getGameObjectChild(frontEnd, "Credits"), "Text (2)"));
 
-            credits.text =
-                "WITH VOICE ACTING BY:" + "\n"
-                + "<color=orange>GIANNI MATRAGRANO</color> (GABRIEL)" + "\n"
-                + "<color=orange> STEPHAN WEYTE </color> (MINOS PRIME)" + "\n"
-                + "<color=orange>MANDALORE HERRINGTON</color> (MDK)" + "\n"
-                + "<color=orange>JUST SHAMMY </color> (&OWL)" + "\n\n"
+            creditsFirst.text =
+                LanguageManager.CurrentLanguage.credits.credits_title + "\n\n"
+                + LanguageManager.CurrentLanguage.credits.credits_createdBy + "\n\n"
 
-                + "AND QUALITY ASSURANCE BY:" + "\n"
-                + "<color=orange>CAMERON MARTIN</color> (LEAD QA)" + "\n"
-                + "<color=orange>TUCKER WILKIN </color> (SENIOR QA)" + "\n"
-                + "<color=orange>SCOTT GURNEY </color> (TECHNICAL QA)" + "\n"
-                + "<color=orange>DALIA FIGUEROA </color> (QA & PROMO MATERIAL)" + "\n\n\n"
+                + LanguageManager.CurrentLanguage.credits.credits_helpedByTitle + "\n\n"
 
-                + "<color=orange>UltrakULL (ULTRAKILL Language Library)</color>" + "\n"
-                + "A TRANSLATION MOD FOR ULTRAKILL" + "\n"
-                + "CREATED BY <color=orange>CLEARWATER</color> AND THE <color=orange>UltrakULL TRANSLATION TEAM</color>" + "\n"
-                + "CODE CONTRIBUTIONS BY <color=orange>TEMPERZ87</color>" + "\n"
-                + "FULL LANGUAGE CREDITS IN THE MOD README (to come later)" + "\n";
+                + LanguageManager.CurrentLanguage.credits.credits_helpedBy1 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_helpedBy2 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_helpedBy3 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_helpedBy4 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_helpedBy5 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_helpedBy6 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_helpedBy7 + "\n\n\n\n"
+
+                + LanguageManager.CurrentLanguage.credits.credits_contributionsTitle + "\n\n"
+                + LanguageManager.CurrentLanguage.credits.credits_contributions1 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_contributions2 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_contributions3 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_contributions4 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_contributions5 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_contributions6 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_contributions7 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_contributions8 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_contributions9 + "\n";
+
+            creditsSecond.text =  "\n" 
+                + LanguageManager.CurrentLanguage.credits.credits_VATitle + "\n\n"
+
+                + LanguageManager.CurrentLanguage.credits.credits_VA1 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_VA2 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_VA3 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_VA4 + "\n\n\n\n\n\n\n"
+
+                + LanguageManager.CurrentLanguage.credits.credits_QATitle + "\n\n"
+                + LanguageManager.CurrentLanguage.credits.credits_QA1 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_QA2 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_QA3 + "\n"
+                + LanguageManager.CurrentLanguage.credits.credits_QA4 + "\n";
+
         }
 
         //Most of the hook logic and checks go in this function.

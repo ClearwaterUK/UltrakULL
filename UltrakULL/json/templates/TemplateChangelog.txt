@@ -1,6 +1,43 @@
 ﻿0.9.1:
 
 ADDED:
+
+NEW SECTION: credits
+
+credits: credits_title
+credits: credits_createdBy
+credits: credits_helpedByTitle
+credits: credits_helpedBy1
+credits: credits_helpedBy2
+credits: credits_helpedBy3
+credits: credits_helpedBy4
+credits: credits_helpedBy5
+credits: credits_helpedBy6
+credits: credits_helpedBy7
+
+credits: credits_contributionsTitle
+credits: credits_contributions1
+credits: credits_contributions2
+credits: credits_contributions3
+credits: credits_contributions4
+credits: credits_contributions5
+credits: credits_contributions6
+credits: credits_contributions7
+credits: credits_contributions8
+credits: credits_contributions9
+
+credits: credits_VATitle
+credits: credits_VA1
+credits: credits_VA2
+credits: credits_VA3
+credits: credits_VA4
+
+credits: credits_QATitle
+credits: credits_QA1
+credits: credits_QA2
+credits: credits_QA3
+credits: credits_QA4
+
 act2: act2_greedThird_wallClip
 
 options: general_screenShakeMinimum
@@ -11,6 +48,8 @@ options: hud_backgroundOpacityMinimum
 options: assists_autoAimPercentMinimum
 options: assists_autoAimPercentMaximum
 options: assists_enemySilhouettesDistanceMinimum
+
+
 
 shop: shop_cybergrindReturningTo
 shop: shop_cybergrindExit
