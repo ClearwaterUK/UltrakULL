@@ -1152,7 +1152,8 @@
         "shop_colorsPreset": "THÈMES",
         "shop_colorsCustom": "PERSONNALISÉ",
         "shop_colorsAlternative": "ALTERNATIF",
-        "shop_colorsDone": "FINI"
+        "shop_colorsDone": "FINI",
+        "shop_colorsCustomUnlockPrompt": "DÉBLOQUER LES COULEURS PERSONNALISÉ POUR:"
 	},
 	"enemyNames": {
 		"enemyname_filth": "SALETÉ",

@@ -53,10 +53,8 @@ using UltrakULL.json;
  * 
  *  Intro second page not aligned correctly
  *  Freshness not translated in tutorial (ridiculously minor)
- *  Shop: Variation info of weapon - "already owned" not translated
- *  Shop: Buy custom color prompt not translated
- *  Shop: Back buttons from CG/Sandbox not translated
- *  Some stuff missing in page 2 of Act 1 intermission (might be related to json file)
+ *  Shop: Variation info of weapon - "already owned" not translated (can't seem to track down the source)
+ *  Sandbox: Category names in spawner arm
  *  
  * 
  * */

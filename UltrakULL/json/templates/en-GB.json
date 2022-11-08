@@ -1193,7 +1193,8 @@
         "shop_colorsPreset": "PRESET",
         "shop_colorsCustom": "CUSTOM",
         "shop_colorsAlternative": "ALTERNATE",
-        "shop_colorsDone": "DONE"
+        "shop_colorsDone": "DONE",
+        "shop_colorsCustomUnlockPrompt": "UNLOCK CUSTOM COLORS FOR:"
 	},
 	"enemyNames":{
 		"enemyname_filth": "FILTH",

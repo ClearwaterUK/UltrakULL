@@ -1170,7 +1170,8 @@
         "shop_colorsPreset": "",
         "shop_colorsCustom": "",
         "shop_colorsAlternative": "",
-        "shop_colorsDone": ""
+        "shop_colorsDone": "",
+        "shop_colorsCustomUnlockPrompt": ""
 	},
 	"enemyNames":{
 		"enemyname_filth": "",

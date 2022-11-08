@@ -113,7 +113,7 @@ namespace UltrakULL
             GameObject cgExit = getGameObjectChild(getGameObjectChild(shopObject, "Return from Cyber Grind"), "Panel");
 
             Text cgExitTitle = getTextfromGameObject(getGameObjectChild(cgExit, "Title"));
-            cgExitTitle.text = "EXIT TITLE"; // LanguageManager.CurrentLanguage.cyberGrind.cybergrind_leavingTitle;
+            cgExitTitle.text = "EXIT TITLE";
 
             
             //Disable the LevelNameFinder component so it doesn't remove the translated string!
@@ -124,18 +124,25 @@ namespace UltrakULL
             Text cgExitDescription = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgExit, "CyberGrindButton (1)"), "Text"));
             cgExitDescription.text = LanguageManager.CurrentLanguage.shop.shop_cybergrindExit;
 
-
             //Enemies back button 
             Text enemiesBackText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Enemies"), "BackButton (2)"), "Text"));
-            //enemiesBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
+            enemiesBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
             //Sandbox back button
             Text sandboxBackText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Sandbox"), "BackButton (2)"), "Text"));
-            //sandboxBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
+            sandboxBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
             //EnemyInfo back button
             Text enemyInfoBackText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "EnemyInfo"),"Button"),"Text"));
-            //enemyInfoBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
+            enemyInfoBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
+
+            //Enter CG back text
+            Text CGEnterBackButtonText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "The Cyber Grind"), "BackButton (2)"), "Text"));
+            CGEnterBackButtonText.text = LanguageManager.CurrentLanguage.shop.shop_back;
+
+            //Exit CG back text
+            Text CGExitBackButtonText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Return from Cyber Grind"), "BackButton (2)"), "Text"));
+            CGExitBackButtonText.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
 
         }
@@ -328,7 +335,9 @@ namespace UltrakULL
             revolverAlternateCustomCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
             //Revolver custom color unlock prompt
-            GameObject revolver;
+            Text revolverCustomColorPrompt = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverWindow, "Color Screen"),"Standard"),"Custom"),"Locked"),"Blocker"),"Text"));
+
+            revolverCustomColorPrompt.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustomUnlockPrompt + " " + LanguageManager.CurrentLanguage.shop.shop_weaponsRevolver;
 
             //Shotgun window and descriptions
             GameObject shotgunWindow = getGameObjectChild(shopWeaponsObject, "ShotgunWindow");
@@ -442,6 +451,11 @@ namespace UltrakULL
             shotgunStandardCustomPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
             Text shotgunStandardCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shotgunStandardCustom, "CustomButton"), "Text"));
             shotgunStandardCustomCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
+
+            //Shotgun custom color unlock prompt
+            Text shotgunCustomColorPrompt = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(shotgunWindow, "Color Screen"), "Standard"), "Custom"), "Locked"), "Blocker"), "Text"));
+
+            shotgunCustomColorPrompt.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustomUnlockPrompt + " " + LanguageManager.CurrentLanguage.shop.shop_weaponsRevolver;
 
             //Nailgun window and descriptions
             GameObject nailgunWindow = getGameObjectChild(shopWeaponsObject, "NailgunWindow");
@@ -587,6 +601,11 @@ namespace UltrakULL
             Text nailgunAlternateCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunAlternateCustom, "CustomButton"), "Text"));
             nailgunAlternateCustomCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
+            //Nailgun custom color unlock prompt
+            Text nailgunCustomColorPrompt = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunWindow, "Color Screen"), "Standard"), "Custom"), "Locked"), "Blocker"), "Text"));
+
+            nailgunCustomColorPrompt.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustomUnlockPrompt + ": " + LanguageManager.CurrentLanguage.shop.shop_weaponsNailgun;
+
             //Railcannon window and descriptions
             GameObject railcannonWindow = getGameObjectChild(shopWeaponsObject, "RailcannonWindow");
 
@@ -712,6 +731,11 @@ namespace UltrakULL
             Text railcannonStandardCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(railcannonStandardCustom, "CustomButton"), "Text"));
             railcannonStandardCustomCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
+            //Railcannon custom color unlock prompt
+            Text railcannonCustomColorPrompt = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(railcannonWindow, "Color Screen"), "Standard"), "Custom"), "Locked"), "Blocker"), "Text"));
+
+            railcannonCustomColorPrompt.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustomUnlockPrompt + ": " + LanguageManager.CurrentLanguage.shop.shop_weaponsRailcannon;
+
 
             //Rocket launcher window & descriptions
             GameObject rocketlauncherWindow = getGameObjectChild(shopWeaponsObject, "RocketLauncherWindow");
@@ -754,8 +778,6 @@ namespace UltrakULL
             rocketlauncherExtraInfoColors.text = LanguageManager.CurrentLanguage.shop.shop_weaponColors;
 
             //Rocket launcher lore
-
-            
             GameObject rocketlauncherLore = getGameObjectChild(rocketlauncherWindow, "Info Screen");
             Text rocketlauncherLoreName = getTextfromGameObject(getGameObjectChild(rocketlauncherLore, "Name"));
             rocketlauncherLoreName.text = LanguageManager.CurrentLanguage.shop.shop_weaponsRocketLauncher;
@@ -817,6 +839,11 @@ namespace UltrakULL
             RLStandardCustomPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
             Text RLStandardCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(RLStandardCustom, "CustomButton"), "Text"));
             RLStandardCustomCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
+
+            //Rocket launcher custom color unlock prompt
+            Text RLCustomColorPrompt = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(rocketlauncherWindow, "Color Screen"), "Standard"), "Custom"), "Locked"), "Blocker"), "Text"));
+
+            RLCustomColorPrompt.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustomUnlockPrompt + ": " + LanguageManager.CurrentLanguage.shop.shop_weaponsRocketLauncher;
 
             //Arm window and descriptions
             GameObject armWindow = getGameObjectChild(shopWeaponsObject, "ArmWindow");

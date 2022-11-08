@@ -1304,6 +1304,7 @@ namespace UltrakULL.json
         public string shop_colorsCustom;
         public string shop_colorsDone;
         public string shop_colorsAlternative;
+        public string shop_colorsCustomUnlockPrompt;
 
 
 
