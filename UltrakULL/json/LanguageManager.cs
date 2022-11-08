@@ -132,6 +132,11 @@ namespace UltrakULL.json
 
         public static void SetCurrentLanguage(string langName)
         {
+            if (CurrentLanguage != null && CurrentLanguage.metadata.langName == langName)
+            {
+                JsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Tried to switch language to " + langName + " but it was already set as that!");
+                return;
+            }
             if (AllLanguages.ContainsKey(langName))
             {
                 CurrentLanguage = AllLanguages[langName];

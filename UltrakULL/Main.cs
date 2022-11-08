@@ -363,10 +363,10 @@ namespace UltrakULL
                 Scene currentLevel = SceneManager.GetActiveScene();
                 string levelName = currentLevel.name;
 
-                if (Inject_LanguageButton.languageButtonText != null)
+                if (Harmony_Patches.Inject_LanguageButton.languageButtonText != null)
                 {
-                    Inject_LanguageButton.languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
-                    Inject_LanguageButton.languageButtonTitleText.text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
+                    Harmony_Patches.Inject_LanguageButton.languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
+                    Harmony_Patches.Inject_LanguageButton.languageButtonTitleText.text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
                 }
                 //Each scene (level) has an object called Canvas. Most game objects are there.
                 if (currentLevel.name == "Intro")

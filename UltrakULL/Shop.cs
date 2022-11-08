@@ -722,6 +722,8 @@ namespace UltrakULL
             freezeframeName.text = LanguageManager.CurrentLanguage.shop.shop_rocketLauncherFreeze;
 
             GameObject freezeframeInfo = getGameObjectChild(rocketlauncherWindow, "Variation Info (Blue)");
+            Text freezeframeInfoName = getTextfromGameObject(getGameObjectChild(freezeframeInfo, "Name"));
+            freezeframeInfoName.text = LanguageManager.CurrentLanguage.shop.shop_rocketLauncherFreeze;
             Text freezeframeDescription = getTextfromGameObject(getGameObjectChild(freezeframeInfo, "Description"));
             freezeframeDescription.text = LanguageManager.CurrentLanguage.shop.shop_rocketLauncherFreezeDescription1 + "\n\n" + 
             LanguageManager.CurrentLanguage.shop.shop_rocketLauncherFreezeDescription2;
@@ -738,8 +740,7 @@ namespace UltrakULL
             //Rocket Launcher red variation (under construction)
             GameObject rlRedVariation = getGameObjectChild(rocketlauncherWindow, "Variation Panel (Red)");
             Text rlRedUnderConstruction = getTextfromGameObject(getGameObjectChild(rlRedVariation, "Text (1)"));
-            rlGreenUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
-
+            rlRedUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
 
             //Rocket launcher info & color tabs
             GameObject rocketlauncherExtra = getGameObjectChild(rocketlauncherWindow, "Info and Color Panel");
@@ -753,6 +754,8 @@ namespace UltrakULL
             rocketlauncherExtraInfoColors.text = LanguageManager.CurrentLanguage.shop.shop_weaponColors;
 
             //Rocket launcher lore
+
+            
             GameObject rocketlauncherLore = getGameObjectChild(rocketlauncherWindow, "Info Screen");
             Text rocketlauncherLoreName = getTextfromGameObject(getGameObjectChild(rocketlauncherLore, "Name"));
             rocketlauncherLoreName.text = LanguageManager.CurrentLanguage.shop.shop_weaponsRocketLauncher;
@@ -776,9 +779,9 @@ namespace UltrakULL
                 + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher12 + "\n\n"
                 + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher13;
 
+
             Text rocketlauncherLoreBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(rocketlauncherLore, "Button"), "Text"));
             rocketlauncherLoreBack.text = LanguageManager.CurrentLanguage.options.options_back;
-
 
             //Rocket launcher preset colors
             GameObject RLColorWindow = getGameObjectChild(rocketlauncherWindow, "Color Screen");
