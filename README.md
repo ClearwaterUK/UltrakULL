@@ -136,7 +136,7 @@ Compatability with other mods not listed here is unknown.
 
 # Credits & Contributors
 UltrakULL created by **Clearwater**\
-Additional code contributions by **Temperz87**\
+Additional code contributions by **[Temperz87](https://github.com/Temperz87/)**\
 Language translations by members of the **UltrakULL Translation Team** \
 (view [the Languages section](#Languages) for full information and crediting)\
 ULTRAKILL created by **Arsi 'Hakita' Patala** and published by **New Blood Interactive**
