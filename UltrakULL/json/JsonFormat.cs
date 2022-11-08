@@ -1902,6 +1902,8 @@ namespace UltrakULL.json
         public string act2_wrathThird_soldierBlock;
         public string act2_wrathThird_hank;
 
+        public string act2_heresyFirst_armboy;
+
         public string act2_secretNotReady;
 
     }

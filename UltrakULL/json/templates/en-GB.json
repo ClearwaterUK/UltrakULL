@@ -1699,6 +1699,8 @@
         "act2_wrathThird_rocketLauncherMidair": "ROCKET LAUNCHER: Direct hits on FALLING enemies will cause a STRONGER explosions",
         "act2_wrathThird_soldierBlock": "Soldiers CANNOT block explosions while in the AIR.$ Shoot a rocket NEAR them to launch them.",
         "act2_wrathThird_hank": "Nothing happens, but you're sure Hank Jr and his Hankcestors would appreciate it... If they weren't dead.",
+
+        "act2_heresyFirst_armboy": "A R M B O Y !!!",
         
         "act2_secretNotReady": "YOU'RE NOT SUPPOSED TO BE HERE."
 	},

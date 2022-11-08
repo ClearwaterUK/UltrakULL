@@ -1,11 +1,65 @@
 ﻿0.9.1
 - Added a missing string for a clip in 4-3.
-- Added Cybergrind entry/exit strings to the shop
+- Added Cybergrind entry/exit strings to the shop.
+- Added a new section to the JSON: credits. This is all the strings related to the credits panel on the main menu.
+- Added the missing armboy string in 6-1.
+- Added the missing wall-clip string in 4-3.
+- Added a few missing text strings for certain sliders in the options.
 - Redo how HudMessage are patched. (Thanks me (Temperz))
 
-
 - Added the following lines to the JSON template:
+ADDED:
+
+NEW SECTION: credits
+
+credits: credits_title
+credits: credits_createdBy
+credits: credits_helpedByTitle
+credits: credits_helpedBy1
+credits: credits_helpedBy2
+credits: credits_helpedBy3
+credits: credits_helpedBy4
+credits: credits_helpedBy5
+credits: credits_helpedBy6
+credits: credits_helpedBy7
+
+credits: credits_contributionsTitle
+credits: credits_contributions1
+credits: credits_contributions2
+credits: credits_contributions3
+credits: credits_contributions4
+credits: credits_contributions5
+credits: credits_contributions6
+credits: credits_contributions7
+credits: credits_contributions8
+credits: credits_contributions9
+
+credits: credits_VATitle
+credits: credits_VA1
+credits: credits_VA2
+credits: credits_VA3
+credits: credits_VA4
+
+credits: credits_QATitle
+credits: credits_QA1
+credits: credits_QA2
+credits: credits_QA3
+credits: credits_QA4
+
 act2: act2_greedThird_wallClip
+act2: act2_heresyFirst_armboy
+
+options: general_screenShakeMinimum
+options: general_screenShakeMaximum
+options: graphics_ditheringMinimum
+options: hud_backgroundOpacityMinimum
+options: hud_backgroundOpacityMinimum
+options: assists_autoAimPercentMinimum
+options: assists_autoAimPercentMaximum
+options: assists_enemySilhouettesDistanceMinimum
+
+shop: shop_cybergrindReturningTo
+shop: shop_cybergrindExit
 
 0.9.0
 - Work on some of the backend of the mod has been done to simplify and refactor things. This should hopefully in turn fix some miscellaneous bugs that some people were having.
@@ -25,6 +79,7 @@ act2: act2_greedThird_wallClip
 - Fixed a couple of lingering issues with strings in 2-S. (DANTE)
 - Fixed an issue with HUD messages in some levels that keep reappearing if the player moves back and forth on its trigger.
 - Added strings for all recalibration prompts in the intro, if the player decides to recalibrate.
+- Added the missing armboy string in 6-1.
 - Added the following lines to the JSON template:
 
 mainmenu: mainmenu_easter

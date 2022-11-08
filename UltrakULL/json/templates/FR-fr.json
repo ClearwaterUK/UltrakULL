@@ -1661,6 +1661,8 @@
         "act2_wrathThird_rocketLauncherMidair": "<color=cyan>LANCE-ROQUETTES</color>: Les coups directes sur les ennemies <color=orange>TOMBANTS</color> causeront une explosion <color=orange>PLUS FORT</color>.",
         "act2_wrathThird_soldierBlock": "Les Soldats ne <color=orange>PEUVENT PAS</color> bloquer les explosions dans <color=orange>L'AIR</color>.$ Tirez une roquette <color=orange>A CÔTÉ</color> d'eux pour les lancer.",
         "act2_wrathThird_hank": "Rien ne se passe, mais vous êtes sûr que Hank Jr. et ses Hankcêtres l'apprécieraient... S'ils n'étaient pas morts.",
+
+        "act2_heresyFirst_armboy": "A R M B O Y !!!",
         
         "act2_secretNotReady": "VOUS N'ÊTES PAS CENSÉ ÊTRE ICI."
 	},

@@ -182,6 +182,12 @@ namespace UltrakULL
 
         public static string level61(string message, string message2, string input)
         {
+            string fullMessage = message + message2;
+
+            if (fullMessage.Contains("A R M B O Y"))
+            {
+                return (LanguageManager.CurrentLanguage.act2.act2_heresyFirst_armboy);
+            }
             return "Unknown 6-1 string";
         }
 

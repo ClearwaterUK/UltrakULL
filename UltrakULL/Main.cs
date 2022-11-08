@@ -57,6 +57,7 @@ using UltrakULL.json;
  *  Shop: Buy custom color prompt not translated
  *  Shop: Back buttons from CG/Sandbox not translated
  *  Some stuff missing in page 2 of Act 1 intermission (might be related to json file)
+ *  
  * 
  * */
 
