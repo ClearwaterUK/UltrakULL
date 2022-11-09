@@ -1962,6 +1962,10 @@ namespace UltrakULL.json
         public string hud_clashMode;
         public string hud_weaponVariation;
 
+        public string spawner_sandboxTools;
+        public string spawner_sandbox;
+        public string spawner_enemies;
+        public string spawner_items;
 
         public string stats_time;
         public string stats_kills;

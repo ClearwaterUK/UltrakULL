@@ -47,14 +47,14 @@ using UltrakULL.json;
  *  -- FOR NEXT HOTFIX --
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable a patched function by returning true if an exception happens there, will then use original game code.
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
- * Options->Sandbox icons namesb
+ * Options->Sandbox icons names
  * - Misc keys as strings (comma, period, etc)
  * - English template seems to have some problems. The file "loads" but then immediately throws not ready for patching. (Switching to it in-game seems to work though)
  * 
  *  Intro second page not aligned correctly
  *  Freshness not translated in tutorial (ridiculously minor)
  *  Shop: Variation info of weapon - "already owned" not translated (can't seem to track down the source)
- *  Sandbox: Category names in spawner arm
+ *  Testament titles in terminals of secret missions
  *  
  * 
  * */
@@ -283,6 +283,7 @@ namespace UltrakULL
             TextBinds bookPanelBinds = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas, "ScanningStuff"), "ReadingScanned"), "Panel"), "Text (1)").GetComponent<TextBinds>();
             bookPanelBinds.text1 = LanguageManager.CurrentLanguage.books.books_pressToClose1 + " <color=orange>";
             bookPanelBinds.text2 = "</color> " + LanguageManager.CurrentLanguage.books.books_pressToClose2;
+
         }
 
         //Adds the Discord link to the UltrakULL Discord on the main menu.

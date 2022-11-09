@@ -1929,6 +1929,11 @@
         "classicHud_arm": "BRAS",
         "classicHud_railcannonMeter": "CHARGE",
 
+        "spawner_sandboxTools": "OUTILS DU BOITE A SABLE :^)",
+        "spawner_sandbox": "BOITE A SABLE",
+        "spawner_enemies": "ENNEMIES",
+        "spawner_items": "OBJETS",
+
         "earlyAccessEnd1": "MERCI D'AVOIR JOUÉ!",
         "earlyAccessEnd2": "ACTE III: SUICIDE DIVIN est toujours en développément.",
         "earlyAccessEnd3": "Pour les actus sur son progrès, suivez-nous sur:"

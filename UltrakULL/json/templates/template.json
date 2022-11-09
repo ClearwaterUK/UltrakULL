@@ -740,6 +740,11 @@
 		"hud_styleMeter": "",
 		"hud_styleInfo": "",
 
+        "spawner_sandboxTools": "",
+        "spawner_sandbox": "",
+        "spawner_enemies": "",
+        "spawner_items": "",
+
 		"crosshair_title": "",
 		"crosshair_type": "",
 		"crosshair_typeNone": "",

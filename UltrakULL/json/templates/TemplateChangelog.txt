@@ -54,6 +54,11 @@ shop: shop_cybergrindReturningTo
 shop: shop_cybergrindExit
 shop: shop_colorsCustomUnlockPrompt
 
+misc: spawner_sandboxItems
+misc: spawner_sandbox
+misc: spawner_enemies
+misc: spawner_items
+
 
 0.9.0:
 

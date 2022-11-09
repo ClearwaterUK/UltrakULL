@@ -760,6 +760,11 @@
 		"hud_styleMeter": "STYLE METER",
 		"hud_styleInfo": "STYLE INFO",
 
+        "spawner_sandboxTools": "SANDBOX ITEMS :^)",
+        "spawner_sandbox": "SANDBOX",
+        "spawner_enemies": "ENEMIES",
+        "spawner_items": "OBJETS",
+
 		"crosshair_title": "CROSSHAIR SETTINGS",
 		"crosshair_type": "CROSSHAIR TYPE",
 		"crosshair_typeNone": "NONE",

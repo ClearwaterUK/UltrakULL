@@ -7,6 +7,7 @@
 - Added a few missing text strings for certain sliders in the options.
 - Redo how HudMessage are patched. (Thanks me (Temperz))
 - Added prompt strings for buying weapon custom colors. Added "back" strings to shop.
+- Added strings for the spawn arm categories.
 
 - Added the following lines to the JSON template:
 ADDED:
@@ -62,6 +63,11 @@ options: assists_enemySilhouettesDistanceMinimum
 shop: shop_cybergrindReturningTo
 shop: shop_cybergrindExit
 shop: shop_colorsCustomUnlockPrompt
+
+misc: spawner_sandboxItems
+misc: spawner_sandbox
+misc: spawner_enemies
+misc: spawner_items
 
 0.9.0
 - Work on some of the backend of the mod has been done to simplify and refactor things. This should hopefully in turn fix some miscellaneous bugs that some people were having.

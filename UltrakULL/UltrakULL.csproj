@@ -157,6 +157,7 @@
     <Compile Include="Harmony Patches\LevelStats.cs" />
     <Compile Include="Harmony Patches\SaveSlotMenu.cs" />
     <Compile Include="Harmony Patches\ScanningStuff.cs" />
+    <Compile Include="Harmony Patches\SpawnMenu.cs" />
     <Compile Include="Harmony Patches\StyleHUD.cs" />
     <Compile Include="Harmony Patches\SubtitleController.cs" />
     <Compile Include="Harmony Patches\VariationInfo.cs" />
