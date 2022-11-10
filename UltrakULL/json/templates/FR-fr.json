@@ -4,7 +4,7 @@
 		"langAuthor": "Clearwater,Frizou",
 		"langVersion": "0.6",
         
-        "minimumModVersion": "0.9.0"
+        "minimumModVersion": "0.9.1"
 	},
 	"body": {
 		"bodyName": "Traduction française pour ULTRAKILL. Developpé par Clearwater; contributions, relectures et corrections par Frizou."
@@ -1681,16 +1681,19 @@
     "secretLevels":{
         "secretLevels_prelude_somethingWicked": "Quelque chose de maudit arrive.",
         
+        "secretLevels_prelude_testamentTitle": "TESTAMENT I",
         "secretLevels_prelude_testament1": "L'Humanité à échoué",
         "secretLevels_prelude_testament2": "Le libre arbitre est un défaut.",
         "secretLevels_prelude_testament3": "Que le mal de leurs propres paroles les consomment.",
         "secretLevels_prelude_testament4": "Alors, je recommencerais à nouveau, avec ma parole faisant la loi.",
         
+        "secretLevels_first_testamentTitle": "TESTAMENT II",
         "secretLevels_first_testament1": "ÉCHEC APRÈS ÉCHEC APRÈS ÉCHEC APRÈS ÉCHEC APRÈS ÉCHEC",
         "secretLevels_first_testament2": "LES RÉSULTATS REFUSENT DE S'ÉTABLIR",
         "secretLevels_first_testament3": "ENCORE ET ENCORE ET ENCORE ET ENCORE ET ENCORE ET ENCORE",
         "secretLevels_first_testament4": "MA FOI COMMENCE A SE FAIBLIR",
         
+        "secretLevels_fourth_testamentTitle": "TESTAMENT III",
         "secretLevels_fourth_testament1": "DES CYCLES DE CRÉATION DÉNOMBRABLES DE GASPILLÉ",
         "secretLevels_fourth_testament2": "DES FORMULES DÉNOMBRABLES POUR UN ESPRIT SANS CHOIX LIBRE GASPILLÉ",
         "secretLevels_fourth_testament3": "CONDAMNÉ SOIT L'HOMME D'AVOIR ÉCHOUÉ DE SUIVRE MA RÈGNE, MA PAROLE, MA LOI",

@@ -1723,17 +1723,20 @@
     },
     "secretLevels":{
         "secretLevels_prelude_somethingWicked": "Something wicked this way comes.",
-        
+
+        "secretLevels_prelude_testamentTitle": "TESTAMENT I",
         "secretLevels_prelude_testament1": "MANKIND IS A FAILURE",
         "secretLevels_prelude_testament2": "FREE WILL IS A FLAW.",
         "secretLevels_prelude_testament3": "LET THE EVIL OF THEIR OWN LIPS CONSUME THEM",
         "secretLevels_prelude_testament4": "THEN I SHALL BEGIN AGAIN, WITH MY WORD AS LAW.",
         
+        "secretLevels_first_testamentTitle": "TESTAMENT II",
         "secretLevels_first_testament1": "FAILURE AFTER FAILURE AFTER FAILURE AFTER FAILURE AFTER FAILURE",
         "secretLevels_first_testament2": "THE RESULTS REFUSE TO ALTER",
         "secretLevels_first_testament3": "AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN",
         "secretLevels_first_testament4": "MY FAITH BEGINS TO FALTER",
         
+        "secretLevels_fourth_testamentTitle": "TESTAMENT III",
         "secretLevels_fourth_testament1": "UNCOUNTABLE CYCLES OF CREATION WASTED",
         "secretLevels_fourth_testament2": "NCOUNTABLE FORMULAS FOR A MIND WITHOUT FREE WILL WASTED",
         "secretLevels_fourth_testament3": "DAMNED IS MAN FOR FAILING TO FOLLOW MY RULE, MY WORD, MY LAW",

@@ -41,6 +41,10 @@ credits: credits_QA4
 act2: act2_greedThird_wallClip
 act2: act2_heresyFirst_armboy
 
+secretlevels: secretLevels_prelude_testamentTitle
+secretlevels: secretLevels_first_testamentTitle
+secretlevels: secretLevels_fourth_testamentTitle
+
 options: general_screenShakeMinimum
 options: general_screenShakeMaximum
 options: graphics_ditheringMinimum
@@ -58,6 +62,8 @@ misc: spawner_sandboxItems
 misc: spawner_sandbox
 misc: spawner_enemies
 misc: spawner_items
+
+
 
 
 0.9.0:

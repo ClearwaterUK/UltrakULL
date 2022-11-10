@@ -1925,17 +1925,22 @@ namespace UltrakULL.json
 
     public class Secret
     {
+
+
         public string secretLevels_prelude_somethingWicked;
+        public string secretLevels_prelude_testamentTitle;
         public string secretLevels_prelude_testament1;
         public string secretLevels_prelude_testament2;
         public string secretLevels_prelude_testament3;
         public string secretLevels_prelude_testament4;
 
+        public string secretLevels_first_testamentTitle;
         public string secretLevels_first_testament1;
         public string secretLevels_first_testament2;
         public string secretLevels_first_testament3;
         public string secretLevels_first_testament4;
 
+        public string secretLevels_fourth_testamentTitle;
         public string secretLevels_fourth_testament1;
         public string secretLevels_fourth_testament2;
         public string secretLevels_fourth_testament3;

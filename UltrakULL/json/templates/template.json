@@ -1700,16 +1700,19 @@
     "secretLevels":{
         "secretLevels_prelude_somethingWicked": "",
         
+        "secretLevels_prelude_testamentTitle": "",
         "secretLevels_prelude_testament1": "",
         "secretLevels_prelude_testament2": "",
         "secretLevels_prelude_testament3": "",
         "secretLevels_prelude_testament4": "",
         
+        "secretLevels_first_testamentTitle": "",
         "secretLevels_first_testament1": "",
         "secretLevels_first_testament2": "",
         "secretLevels_first_testament3": "",
         "secretLevels_first_testament4": "",
         
+        "secretLevels_fourth_testamentTitle": "",
         "secretLevels_fourth_testament1": "",
         "secretLevels_fourth_testament2": "",
         "secretLevels_fourth_testament3": "",

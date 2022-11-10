@@ -19,7 +19,7 @@ using UltrakULL.json;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater, additional code contributions by Temperz87, translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 2nd November 2022
+ *	Last updated: 10th November 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
@@ -41,21 +41,19 @@ using UltrakULL.json;
  *  - Attempt to replace the default font with a version that has better special char + cyrillic support
  *  
  *  -- BUGS AND QUIRKS TO FIX --
+ * - Misc keys as strings (comma, period, etc) missing
+ * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
+ * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable a patched function by returning true if an exception happens there, will then use original game code.
+ * - English template seems to have some problems. The file "loads" but then immediately throws not ready for patching. (Switching to it in-game seems to work though)
+ * - Intro second page not aligned correctly (dependant on length of words from translation to translation, not really something that can be fixed globally)
+ * - Freshness not translated in tutorial (ridiculously minor, I personally don't see a need to patch it but will leave here anyways)
+ * - Shop: Variation info of weapon - "already owned" not translated (can't seem to track down the source, it's doesn't originate from a Text object and there's no source code related to it)
+ * - Options->Sandbox icons names (Can't seem to get the dropdown data inside of the gameObject it's linked to - keeps saying 0 elements but when viewed manually in UnityExplorer it shows them)
  * 
  *  -- STUFF REPORTED BY ULL TEAM --
  * 
  *  -- FOR NEXT HOTFIX --
- * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable a patched function by returning true if an exception happens there, will then use original game code.
- * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
- * Options->Sandbox icons names
- * - Misc keys as strings (comma, period, etc)
- * - English template seems to have some problems. The file "loads" but then immediately throws not ready for patching. (Switching to it in-game seems to work though)
  * 
- *  Intro second page not aligned correctly
- *  Freshness not translated in tutorial (ridiculously minor)
- *  Shop: Variation info of weapon - "already owned" not translated (can't seem to track down the source)
- *  Testament titles in terminals of secret missions
- *  
  * 
  * */
 
