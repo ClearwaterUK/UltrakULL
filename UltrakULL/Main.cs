@@ -69,6 +69,7 @@ namespace UltrakULL
 
         public static MainPatch instance = null;
         private GameObject ultrakullLogo = null;
+        private GameObject ultrakullDiscordButton = null;
 
         private bool ready = false;
         public Font vcrFont;
@@ -290,7 +291,11 @@ namespace UltrakULL
             GameObject mainMenuCanvas = getGameObjectChild(frontEnd, "Main Menu (1)");
 
             GameObject mainMenuButtons = getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Panel");
-            GameObject ultrakullDiscordButton = GameObject.Instantiate(getGameObjectChild(mainMenuButtons, "Discord"), mainMenuButtons.transform);
+
+            if (ultrakullDiscordButton != null)
+                GameObject.Destroy(ultrakullDiscordButton);
+            ultrakullDiscordButton = GameObject.Instantiate(getGameObjectChild(mainMenuButtons, "Discord"), mainMenuButtons.transform);
+
 
             ultrakullDiscordButton.SetActive(true);
             ultrakullDiscordButton.GetComponent<RectTransform>().localPosition = new Vector2(450f, 250f);
@@ -393,7 +398,7 @@ namespace UltrakULL
                         ultrakullLogo = GameObject.Instantiate(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Title"), "Text"), frontEnd.transform);
                         ultrakullLogo.transform.localPosition = new Vector3(1025, -425, 0);
                         Text ultrakullLogoText = getTextfromGameObject(ultrakullLogo);
-                        ultrakullLogoText.text = "ultrakULL loaded.\nVersion: " + pluginVersion + "\nLocale: " + LanguageManager.CurrentLanguage.metadata.langName + "\nWIP build\nFor internal testing only";
+                        ultrakullLogoText.text = "ultrakULL loaded.\nVersion: " + pluginVersion + "\nCurrent locale: " + LanguageManager.CurrentLanguage.metadata.langName;
                         ultrakullLogoText.alignment = TextAnchor.UpperLeft;
                         ultrakullLogoText.fontSize = 16;
                         //Get the font
