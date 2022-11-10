@@ -1,4 +1,5 @@
 ﻿0.9.1
+- Changed how language names are shown in the language tab. It now displays a full name that's set in the JSON. (see changes below)
 - Added a missing string for a clip in 4-3.
 - Added Cybergrind entry/exit strings to the shop.
 - Added a new section to the JSON: credits. This is all the strings related to the credits panel on the main menu.

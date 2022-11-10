@@ -864,6 +864,7 @@ namespace UltrakULL.json
         public string langName;
         public string langAuthor;
         public string langVersion;
+        public string langDisplayName;
 
         public string minimumModVersion;
     }

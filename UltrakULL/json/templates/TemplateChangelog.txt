@@ -4,6 +4,8 @@ ADDED:
 
 NEW SECTION: credits
 
+metadata: langDisplayName
+
 credits: credits_title
 credits: credits_createdBy
 credits: credits_helpedByTitle
@@ -62,8 +64,6 @@ misc: spawner_sandboxItems
 misc: spawner_sandbox
 misc: spawner_enemies
 misc: spawner_items
-
-
 
 
 0.9.0:

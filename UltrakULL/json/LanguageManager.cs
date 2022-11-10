@@ -10,6 +10,7 @@ namespace UltrakULL.json
     public static class LanguageManager
     {
         public static Dictionary<string, JsonFormat> AllLanguages = new Dictionary<string, JsonFormat>();
+        public static Dictionary<string, JsonFormat> AllLanguagesDisplayNames = new Dictionary<string, JsonFormat>();
         public static JsonFormat CurrentLanguage { get; private set; } = null;
         private static BepInEx.Logging.ManualLogSource JsonLogger = BepInEx.Logging.Logger.CreateLogSource("LanguageManager");
 
@@ -44,6 +45,7 @@ namespace UltrakULL.json
                 if (TryLoadLang(file, out JsonFormat lang) && !AllLanguages.ContainsKey(lang.metadata.langName) && lang.metadata.langName != "te-mp")
                 {
                     AllLanguages.Add(lang.metadata.langName, lang);
+                    AllLanguagesDisplayNames.Add(lang.metadata.langDisplayName, lang);
                     if (!ValidateFile(lang, modVersion))
                         JsonLogger.Log(BepInEx.Logging.LogLevel.Debug ,"Failed to validate " + lang.metadata.langName + " however I don't really care");
                 }

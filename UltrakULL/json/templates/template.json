@@ -3,6 +3,7 @@
 		"langName": "te-mp",
 		"langAuthor": "Clearwater",
 		"langVersion": "0.1",
+        "langDisplayName": "Template",
 
         "minimumModVersion": "0.9.0"
 	},

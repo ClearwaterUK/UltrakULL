@@ -56,7 +56,7 @@ namespace UltrakULL.Harmony_Patches
                 slotTextTf.localScale = new Vector3(4.983107f, 0.970607f, 2.1431f);
                 slotTextTf.localPosition = new Vector3(0f, 0f, 0f);
                 Text slotText = slotTextTf.GetComponent<Text>();
-                slotText.text = language;
+                slotText.text = LanguageManager.AllLanguages[language].metadata.langDisplayName;
                 slotText.alignment = TextAnchor.MiddleCenter;
                 slotText.fontSize = 27;
 

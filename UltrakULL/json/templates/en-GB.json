@@ -3,6 +3,7 @@
 		"langName": "en-GB",
 		"langAuthor": "Hakita",
 		"langVersion": "1.0",
+        "langDisplayName": "English",
 
         "minimumModVersion": "0.9.0"
 	},
