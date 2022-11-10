@@ -38,10 +38,23 @@ namespace UltrakULL
             dupeMenuSave.text = LanguageManager.CurrentLanguage.cheats.cheats_dupesNewSave;
         }
 
+        public void patchMisc()
+        {
+            GameObject todShop = GameObject.Find("Time of day Shop");
+
+            //Time of day loading message
+            Text todShopLoadingText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(todShop,"Canvas"),"Border"), "TipBox"),"Panel"),"Blocker"),"Panel"),"Text"));
+
+            todShopLoadingText.text = LanguageManager.CurrentLanguage.misc.loading;
+
+
+
+        }
 
         public Sandbox()
         {
             patchSandboxDupeMenu();
+            patchMisc();
         }
 
     }

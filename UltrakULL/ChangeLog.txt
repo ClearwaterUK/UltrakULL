@@ -11,6 +11,7 @@
 - Added prompt strings for buying weapon custom colors. Added "back" strings to shop.
 - Added strings for the spawn arm categories.
 - Added strings for the testament titles in secret levels.
+- Fixed the time of day terminal in the sandbox not using the loading string.
 - Fixed the Discord button being constantly redrawn if languages are repeatedly toggled.
 
 
