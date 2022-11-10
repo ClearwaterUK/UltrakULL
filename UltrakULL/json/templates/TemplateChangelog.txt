@@ -65,6 +65,14 @@ misc: spawner_sandbox
 misc: spawner_enemies
 misc: spawner_items
 
+cheats: cheats_dupesTitle
+cheats: cheats_dupesSaveNamePrompt
+cheats: cheats_dupesNewSave
+cheats: cheats_dupesOpenFolder
+cheats: cheats_dupesSave
+cheats: cheats_dupesLoad
+cheats: cheats_dupesDelete
+
 
 0.9.0:
 

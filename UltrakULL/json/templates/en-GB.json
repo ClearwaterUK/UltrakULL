@@ -1316,7 +1316,15 @@
         "cheats_navmeshOutdated1": "NAVMESH OUT OF DATE",
         "cheats_navmeshOutdated2": "(Rebuild navigation in cheats menu)",
         
-        "cheats_spawnerArmSlot": "Spawner Arm in slot 6"
+        "cheats_spawnerArmSlot": "Spawner Arm in slot 6",
+
+        "cheats_dupesTitle": "SANDBOX SAVES",
+        "cheats_dupesSaveNamePrompt": "ENTER A NAME HERE",
+        "cheats_dupesNewSave": "NEW SAVE",
+        "cheats_dupesOpenFolder": "OPEN FOLDER",
+        "cheats_dupesSave": "SAVE",
+        "cheats_dupesLoad": "LOAD",
+        "cheats_dupesDelete": "DELETE"
     },
     
     "enemybios":{

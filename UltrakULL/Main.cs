@@ -31,7 +31,6 @@ using UltrakULL.json;
  * 
  *  -- Less important stuff for future updates --
  *  - Cheat teleport menu
- *  - Sandbox stuff (time of day shop, spawn/cheat menu categories, dupe save/load menu)
  *  - Terminals before bosses in levels (could copy the shop that's in the start of each level)
  *  - Organise and refactor stuff, move functions to other files to declutter Main (Factorise the act classes with an interface?)
  *  - Look into how I can do encoding for RTL languages such as Arabic
@@ -39,12 +38,12 @@ using UltrakULL.json;
  *  - Green Rocketlauncher incoming
  *  - Could be possible to swap out rank textures in HUD for translation. Shall look into later
  *  - Attempt to replace the default font with a version that has better special char + cyrillic support
+ *  - Add a "Open folder" button to the language tab that opens the language folder, makes adding languages to the game easier (Something for Temperz since he knows more UI stuff than me)
  *  
  *  -- BUGS AND QUIRKS TO FIX --
  * - Misc keys as strings (comma, period, etc) missing
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable a patched function by returning true if an exception happens there, will then use original game code.
- * - English template seems to have some problems. The file "loads" but then immediately throws not ready for patching. (Switching to it in-game seems to work though)
  * - Intro second page not aligned correctly (dependant on length of words from translation to translation, not really something that can be fixed globally)
  * - Freshness not translated in tutorial (ridiculously minor, I personally don't see a need to patch it but will leave here anyways)
  * - Shop: Variation info of weapon - "already owned" not translated (can't seem to track down the source, it's doesn't originate from a Text object and there's no source code related to it)
@@ -53,8 +52,7 @@ using UltrakULL.json;
  *  -- STUFF REPORTED BY ULL TEAM --
  * 
  *  -- FOR NEXT HOTFIX --
- * 
- * 
+ *   *  - Sandbox stuff (time of day shop)
  * */
 
 namespace UltrakULL
@@ -283,6 +281,8 @@ namespace UltrakULL
             bookPanelBinds.text1 = LanguageManager.CurrentLanguage.books.books_pressToClose1 + " <color=orange>";
             bookPanelBinds.text2 = "</color> " + LanguageManager.CurrentLanguage.books.books_pressToClose2;
 
+
+
         }
 
         //Adds the Discord link to the UltrakULL Discord on the main menu.
@@ -477,6 +477,7 @@ namespace UltrakULL
                         patchDeathScreen(ref coreGame);
                         patchMisc(ref coreGame);
                         Options options = new Options(ref coreGame);
+                        Sandbox sandbox = new Sandbox();
                     }
                 }
                 else

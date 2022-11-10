@@ -1270,7 +1270,15 @@
           "cheats_navmeshOutdated1": "<color=red>NAVMESH OUT OF DATE<size=12>",
           "cheats_navmeshOutdated2": "(Rebuild navigation in cheats menu)</size></color>",
           
-          "cheats_spawnerArmSlot": "<color=#C2D7FF>Bras de spawn dans endroit N°6\n</color>"
+          "cheats_spawnerArmSlot": "<color=#C2D7FF>Bras de spawn dans endroit N°6\n</color>",
+
+          "cheats_dupesTitle": "SAUVEGARDES BOÎTE À SABLE",
+          "cheats_dupesSaveNamePrompt": "ENTREZ UN NOM ICI",
+          "cheats_dupesNewSave": "SAUVEGARDER",
+          "cheats_dupesOpenFolder": "OUVRIR DOSSIER",
+          "cheats_dupesSave": "SAUVEGARDER",
+          "cheats_dupesLoad": "CHARGER",
+          "cheats_dupesDelete": "SUPPRIMER"
     },
     
     "enemybios":

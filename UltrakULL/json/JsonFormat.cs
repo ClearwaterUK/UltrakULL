@@ -184,6 +184,14 @@ namespace UltrakULL.json
         public string cheats_navmeshOutdated2;
 
         public string cheats_spawnerArmSlot;
+
+        public string cheats_dupesTitle;
+        public string cheats_dupesSaveNamePrompt;
+        public string cheats_dupesNewSave;
+        public string cheats_dupesOpenFolder;
+        public string cheats_dupesDelete;
+        public string cheats_dupesSave;
+        public string cheats_dupesLoad;
     }
 
 

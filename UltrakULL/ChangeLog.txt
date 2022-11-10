@@ -6,11 +6,13 @@
 - Added the missing armboy string in 6-1.
 - Added the missing wall-clip string in 4-3.
 - Added a few missing text strings for certain sliders in the options.
+- Added strings for the sandbox dupe save window.
 - Redo how HudMessage are patched. (Thanks me (Temperz))
 - Added prompt strings for buying weapon custom colors. Added "back" strings to shop.
 - Added strings for the spawn arm categories.
 - Added strings for the testament titles in secret levels.
 - Fixed the Discord button being constantly redrawn if languages are repeatedly toggled.
+
 
 - Added the following lines to the JSON template:
 ADDED:

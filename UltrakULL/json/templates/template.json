@@ -1293,7 +1293,15 @@
         "cheats_navmeshOutdated1": "",
         "cheats_navmeshOutdated2": "",
         
-        "cheats_spawnerArmSlot": ""
+        "cheats_spawnerArmSlot": "",
+
+        "cheats_dupesTitle": "",
+        "cheats_dupesSaveNamePrompt": "",
+        "cheats_dupesNewSave": "",
+        "cheats_dupesOpenFolder": "",
+        "cheats_dupesSave": "",
+        "cheats_dupesLoad": "",
+        "cheats_dupesDelete": ""
     },
     
     "enemybios":{
