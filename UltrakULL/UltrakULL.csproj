@@ -194,6 +194,7 @@
     <None Include="json\templates\FR-fr.json" />
     <None Include="json\templates\en-GB.json" />
     <None Include="json\templates\template.json" />
+    <None Include="LICENCE.md" />
     <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
