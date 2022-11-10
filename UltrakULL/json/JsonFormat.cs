@@ -1857,6 +1857,8 @@ namespace UltrakULL.json
         public string act1_limboFourth_alternateRevolver;
         public string act1_limboFourth_newArm;
 
+        public string act1_limboSecret_noclipSkip;
+
         public string act1_lustFirst_knuckleblaster1;
         public string act1_lustFirst_knuckleblaster2;
         public string act1_lustFirst_dashJump;
@@ -1867,7 +1869,9 @@ namespace UltrakULL.json
 
         public string act1_lustThird_water;
 
+
         public string act1_secret;
+
 
     }
     public class a2

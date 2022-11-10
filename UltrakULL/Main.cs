@@ -29,7 +29,7 @@ using UltrakULL.json;
  *  - Error and exception handling
  *  - Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
  * 
- *  -- Less important stuff for future updates --
+ *  -- LESS IMPORTANT STUFF FOR FUTURE UPDATES --
  *  - Cheat teleport menu
  *  - Terminals before bosses in levels (could copy the shop that's in the start of each level)
  *  - Organise and refactor stuff, move functions to other files to declutter Main (Factorise the act classes with an interface?)
@@ -52,7 +52,6 @@ using UltrakULL.json;
  *  -- STUFF REPORTED BY ULL TEAM --
  * 
  *  -- FOR NEXT HOTFIX --
- *   *  - Sandbox stuff (time of day shop)
  * */
 
 namespace UltrakULL

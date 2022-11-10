@@ -40,6 +40,8 @@ credits: credits_QA2
 credits: credits_QA3
 credits: credits_QA4
 
+act1: act1_limboSecret_noclipSkip
+
 act2: act2_greedThird_wallClip
 act2: act2_heresyFirst_armboy
 

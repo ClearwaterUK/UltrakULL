@@ -1621,6 +1621,8 @@
 		"act1_limboFourth_alternateRevolver": "Les versions <color=orange>ALTERNATIFS</color> changera le comportement de base d'une arme. Ils sont changables au <color=ORANGE>MAGASIN</color>.",
 		"act1_limboFourth_newArm": "Changer de <color=orange>BRAS</color> équipés avec",
 
+        "act1_limboSecret_noclipSkip": "\"ON DIRAIT TU NE SAIT PLUS QUOI FAIRE\"$T.HAKITA",
+
 		"act1_lustFirst_knuckleblaster1": "<color=red>BOMBARDIER</color>: <color=orange>MAINTENIR</color>",
 		"act1_lustFirst_knuckleblaster2": "pour lancer un <color=orange>CHOC</color> qui repoussent les ennemies.",
 		"act1_lustFirst_dashjump": "<color=cyan>SAUT PROPULSÉE</color>: Gardez la vitesse <color=cyan>D'ESQUIVE</color> en y <color=orange>SAUTANT</color> en plein milieu d'esquive.",

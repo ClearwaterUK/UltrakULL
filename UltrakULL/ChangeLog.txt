@@ -5,6 +5,7 @@
 - Added a new section to the JSON: credits. This is all the strings related to the credits panel on the main menu.
 - Added the missing armboy string in 6-1.
 - Added the missing wall-clip string in 4-3.
+- Added a missing OOB string in 1-S.
 - Added a few missing text strings for certain sliders in the options.
 - Added strings for the sandbox dupe save window.
 - Redo how HudMessage are patched. (Thanks me (Temperz))
@@ -19,6 +20,8 @@
 ADDED:
 
 NEW SECTION: credits
+
+metadata: langDisplayName
 
 credits: credits_title
 credits: credits_createdBy
@@ -54,8 +57,14 @@ credits: credits_QA2
 credits: credits_QA3
 credits: credits_QA4
 
+act1: act1_limboSecret_noclipSkip
+
 act2: act2_greedThird_wallClip
 act2: act2_heresyFirst_armboy
+
+secretlevels: secretLevels_prelude_testamentTitle
+secretlevels: secretLevels_first_testamentTitle
+secretlevels: secretLevels_fourth_testamentTitle
 
 options: general_screenShakeMinimum
 options: general_screenShakeMaximum
@@ -74,6 +83,14 @@ misc: spawner_sandboxItems
 misc: spawner_sandbox
 misc: spawner_enemies
 misc: spawner_items
+
+cheats: cheats_dupesTitle
+cheats: cheats_dupesSaveNamePrompt
+cheats: cheats_dupesNewSave
+cheats: cheats_dupesOpenFolder
+cheats: cheats_dupesSave
+cheats: cheats_dupesLoad
+cheats: cheats_dupesDelete
 
 0.9.0
 - Work on some of the backend of the mod has been done to simplify and refactor things. This should hopefully in turn fix some miscellaneous bugs that some people were having.

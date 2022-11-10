@@ -83,9 +83,14 @@ namespace UltrakULL
             return "Unknown 1-4 string";
         }
         //1-S - The Witless
-        //This level has no HUD box strings.
         public static string level1Secret(string message, string message2, string input)
         {
+            string fullMessage = message + message2;
+            if (fullMessage.Contains("LOOKS"))
+            {
+                return LanguageManager.CurrentLanguage.act1.act1_limboSecret_noclipSkip;
+            }
+
             return "Unknown 1-S string";
         }
         //2-1 - Bridgeburner

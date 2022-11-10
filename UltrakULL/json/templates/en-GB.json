@@ -1664,6 +1664,8 @@
 		"act1_limboFourth_alternateRevolver": "ALTERNATE versions will change a weapon's base behavior. They can be changed at the SHOP.",
 		"act1_limboFourth_newArm": "Cycle through EQUIPPED arms with",
 
+        "act1_limboSecret_noclipSkip": "\"LOOKS LIKE YOU'RE AT WIT'S END\"$T.HAKITA",
+
 		"act1_lustFirst_knuckleblaster1": "KNUCKLEBLASTER: Hold",
 		"act1_lustFirst_knuckleblaster2": "to launch a shockwave that knocks back enemies.",
 		"act1_lustFirst_dashjump": "DASH JUMP: Keep the DASH momentum by JUMPING during it.",
