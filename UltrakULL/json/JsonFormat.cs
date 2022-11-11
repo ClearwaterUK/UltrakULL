@@ -1155,8 +1155,10 @@ namespace UltrakULL.json
         public string shop_cybergrindDescription1;
         public string shop_cybergrindDescription2;
         public string shop_cybergrindDescription3;
+        public string shop_cybergrindEnterTitle;
         public string shop_cybergrindEnter;
         public string shop_cybergrindReturningTo;
+        public string shop_cybergrindExitTitle;
         public string shop_cybergrindExit;
 
         public string shop_sandboxTitle;

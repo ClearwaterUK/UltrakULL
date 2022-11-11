@@ -96,7 +96,7 @@ namespace UltrakULL
             GameObject cgEnter = getGameObjectChild(getGameObjectChild(shopObject, "The Cyber Grind"), "Panel");
 
             Text cgEnterTitle = getTextfromGameObject(getGameObjectChild(cgEnter, "Title"));
-            cgEnterTitle.text = "LE CYBERGRIND";
+            cgEnterTitle.text = LanguageManager.CurrentLanguage.shop.shop_cybergrindEnterTitle;
 
             Text cgEnterDescription = getTextfromGameObject(getGameObjectChild(cgEnter, "Text"));
 
@@ -113,9 +113,9 @@ namespace UltrakULL
             GameObject cgExit = getGameObjectChild(getGameObjectChild(shopObject, "Return from Cyber Grind"), "Panel");
 
             Text cgExitTitle = getTextfromGameObject(getGameObjectChild(cgExit, "Title"));
-            cgExitTitle.text = "EXIT TITLE";
+            cgExitTitle.text = LanguageManager.CurrentLanguage.shop.shop_cybergrindExitTitle;
 
-            
+
             //Disable the LevelNameFinder component so it doesn't remove the translated string!
             GameObject levelText = getGameObjectChild(cgExit, "Text");
 

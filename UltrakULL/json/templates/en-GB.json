@@ -1031,8 +1031,10 @@
         "shop_cybergrindDescription1": "The Cyber Grind is an endless survival mode.",
         "shop_cybergrindDescription2": "Good performance gives many points.",
         "shop_cybergrindDescription3": "Progress in the current mission will be lost.",
+        "shop_cybergrindEnterTitle": "THE CYBER GRIND",
         "shop_cybergrindEnter": "ENTER THE CYBER GRIND",
         "shop_cybergrindReturningTo": "Returning to:",
+        "shop_cybergrindExitTitle": "RETURN TO MISSION",
         "shop_cybergrindExit": "LEAVE THE CYBER GRIND",
 
         "shop_sandboxTitle": "SANDBOX",

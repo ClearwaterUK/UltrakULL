@@ -53,7 +53,6 @@ using UltrakULL.json;
  * 
  *  -- FOR NEXT HOTFIX --
  *  
- *  - CG menu in shop: titles for entry/exit still hardcoded
  *  - VN: Instances of repeated lines
  *  - Shop: Variation info of weapons - "already owned" not translated (attempt if-else hardcoding)
  * */
