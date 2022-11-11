@@ -192,6 +192,16 @@ namespace UltrakULL.json
         public string cheats_dupesDelete;
         public string cheats_dupesSave;
         public string cheats_dupesLoad;
+
+        public string cheats_categoryMeta;
+        public string cheats_categorySandbox;
+        public string cheats_categoryGeneral;
+        public string cheats_categoryMovement;
+        public string cheats_categoryWeapons;
+        public string cheats_categoryEnemies;
+        public string cheats_categoryItems;
+        public string cheats_categorySpecial;
+
     }
 
 

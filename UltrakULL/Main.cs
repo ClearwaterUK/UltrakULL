@@ -46,12 +46,16 @@ using UltrakULL.json;
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable a patched function by returning true if an exception happens there, will then use original game code.
  * - Intro second page not aligned correctly (dependant on length of words from translation to translation, not really something that can be fixed globally)
  * - Freshness not translated in tutorial (ridiculously minor, I personally don't see a need to patch it but will leave here anyways)
- * - Shop: Variation info of weapon - "already owned" not translated (can't seem to track down the source, it's doesn't originate from a Text object and there's no source code related to it)
+ * 
  * - Options->Sandbox icons names (Can't seem to get the dropdown data inside of the gameObject it's linked to - keeps saying 0 elements but when viewed manually in UnityExplorer it shows them)
  * 
  *  -- STUFF REPORTED BY ULL TEAM --
  * 
  *  -- FOR NEXT HOTFIX --
+ *  
+ *  - CG menu in shop: titles for entry/exit still hardcoded
+ *  - VN: Instances of repeated lines
+ *  - Shop: Variation info of weapons - "already owned" not translated (attempt if-else hardcoding)
  * */
 
 namespace UltrakULL

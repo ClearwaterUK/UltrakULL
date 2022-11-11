@@ -1,4 +1,16 @@
-﻿0.9.1:
+﻿0.9.2:
+
+ADDED:
+
+cheats: cheats_categorySandbox
+cheats: cheats_categoryGeneral
+cheats: cheats_categoryEnemies
+cheats: cheats_categoryWeapons
+cheats: cheats_categoryItems
+cheats: cheats_categorySpecial
+
+
+0.9.1:
 
 ADDED:
 

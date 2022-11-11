@@ -1278,7 +1278,15 @@
           "cheats_dupesOpenFolder": "OUVRIR DOSSIER",
           "cheats_dupesSave": "SAUVEGARDER",
           "cheats_dupesLoad": "CHARGER",
-          "cheats_dupesDelete": "SUPPRIMER"
+          "cheats_dupesDelete": "SUPPRIMER",
+
+          "cheats_categoryMeta": "META",
+          "cheats_categorySandbox": "BOÎTE À SABLE",
+          "cheats_categoryGeneral": "GÉNERAL",
+          "cheats_categoryEnemies": "ENNEMIES",
+          "cheats_categoryWeapons": "ARMES",
+          "cheats_categoryItems": "OBJETS",
+          "cheats_categorySpecial": "SPÉCIAUX"
     },
     
     "enemybios":

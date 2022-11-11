@@ -1,4 +1,8 @@
-﻿0.9.1
+﻿0.9.2
+- Added strings for cheat categories.
+
+
+0.9.1
 - Changed how language names are shown in the language tab. It now displays a full name that's set in the JSON. (see changes below)
 - Added a missing string for a clip in 4-3.
 - Added Cybergrind entry/exit strings to the shop.

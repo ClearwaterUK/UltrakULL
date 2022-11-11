@@ -3,342 +3,342 @@
 		"langName": "te-mp",
 		"langAuthor": "Clearwater",
 		"langVersion": "0.1",
-        "langDisplayName": "Template",
+		"langDisplayName": "Template",
 
-        "minimumModVersion": "0.9.0"
+		"minimumModVersion": "0.9.1"
 	},
-    
+
 	"body": {
 		"bodyName": "A template file for translating. NOT MEANT TO BE USED AS-IS WITH UltrakULL. Make sure you edit the metadata to reflect the author and language changes!"
 	},
 
-    "credits":{
-        "credits_title": "",
-        "credits_createdBy": "",
+	"credits": {
+		"credits_title": "",
+		"credits_createdBy": "",
 
-        "credits_helpedByTitle": "",
-        "credits_helpedBy1": "",
-        "credits_helpedBy2": "",
-        "credits_helpedBy3": "",
-        "credits_helpedBy4": "",
-        "credits_helpedBy5": "",
-        "credits_helpedBy6": "",
-        "credits_helpedBy7": "",
+		"credits_helpedByTitle": "",
+		"credits_helpedBy1": "",
+		"credits_helpedBy2": "",
+		"credits_helpedBy3": "",
+		"credits_helpedBy4": "",
+		"credits_helpedBy5": "",
+		"credits_helpedBy6": "",
+		"credits_helpedBy7": "",
 
-        "credits_contributionsTitle": "",
-        "credits_contributions1": "",
-        "credits_contributions2": "",
-        "credits_contributions3": "",
-        "credits_contributions4": "",
-        "credits_contributions5": "",
-        "credits_contributions6": "",
-        "credits_contributions7": "",
-        "credits_contributions8": "",
-        "credits_contributions9": "",
+		"credits_contributionsTitle": "",
+		"credits_contributions1": "",
+		"credits_contributions2": "",
+		"credits_contributions3": "",
+		"credits_contributions4": "",
+		"credits_contributions5": "",
+		"credits_contributions6": "",
+		"credits_contributions7": "",
+		"credits_contributions8": "",
+		"credits_contributions9": "",
 
-        "credits_VATitle": "",
-        "credits_VA1": "",
-        "credits_VA2": "",
-        "credits_VA3": "",
-        "credits_VA4": "",
+		"credits_VATitle": "",
+		"credits_VA1": "",
+		"credits_VA2": "",
+		"credits_VA3": "",
+		"credits_VA4": "",
 
-        "credits_QATitle": "",
-        "credits_QA1": "",
-        "credits_QA2": "",
-        "credits_QA3": "",
-        "credits_QA4": "",
-    },
-    
-    "style":{
-        "style_airslam": "",
-        "style_airshot": "",
-        "style_attraptor": "",
-        "style_arsenal": "",
-        "style_bigheadshot": "",
-        "style_bigkill": "",
-        "style_bigfistkill": "",
-        "style_bipolar": "",
-        "style_cannonballed": "",
-        "style_catapaulted": "",
-        "style_chargeback": "",
-        "style_compressed": "",
-        "style_criticalpunch": "",
-        "style_disrespect": "",
-        "style_doublekill": "",
-        "style_downtosize": "",
-        "style_enraged": "",
-        "style_exploded": "",
-        "style_finishedoff": "",
-        "style_fireworks": "",
-        "style_fistfulofdollar": "",
-        "style_fried": "",
-        "style_friendlyfire": "",
-        "style_groundslam": "",
-        "style_halfoff": "",
-        "style_headshot": "",
-        "style_homerun": "",
-        "style_instakill": "",
-        "style_interruption": "",
-        "style_kill": "",
-        "style_limbshot": "",
-        "style_mauriced": "",
-        "style_multikill": "",
-        "style_nailbombed": "",
-        "style_parry": "",
-        "style_projectileboost": "",
-        "style_quickdraw": "",
-        "style_ricoshot": "",
-        "style_ricoshotUltra": "",
-        "style_ricoshotCounter": "",
-        "style_secret": "",
-        "style_splattered": "",
-        "style_triplekill": "",
-        
-        "style_conductor": "",
-        "style_crushed": "",
-        "style_fall": "",
-        "style_minced": "",
-        "style_outofbounds": "",
-        "style_shredded": "",
-        "style_zapped": "",
+		"credits_QATitle": "",
+		"credits_QA1": "",
+		"credits_QA2": "",
+		"credits_QA3": "",
+		"credits_QA4": ""
+	},
 
-        "style_why": "",
-        
-        "style_d": "",
-        "style_c": "",
-        "style_b": "",
-        "style_a": "",
-        "style_s": "",
-        "style_ss": "",
-        "style_sss": "",
-        "style_ultrakill": "",
-        
-        "style_weaponFresh": "",
-        "style_weaponUsed": "",
-        "style_weaponStale": "",
-        "style_weaponDull": "",
+	"style": {
+		"style_airslam": "",
+		"style_airshot": "",
+		"style_attraptor": "",
+		"style_arsenal": "",
+		"style_bigheadshot": "",
+		"style_bigkill": "",
+		"style_bigfistkill": "",
+		"style_bipolar": "",
+		"style_cannonballed": "",
+		"style_catapaulted": "",
+		"style_chargeback": "",
+		"style_compressed": "",
+		"style_criticalpunch": "",
+		"style_disrespect": "",
+		"style_doublekill": "",
+		"style_downtosize": "",
+		"style_enraged": "",
+		"style_exploded": "",
+		"style_finishedoff": "",
+		"style_fireworks": "",
+		"style_fistfulofdollar": "",
+		"style_fried": "",
+		"style_friendlyfire": "",
+		"style_groundslam": "",
+		"style_halfoff": "",
+		"style_headshot": "",
+		"style_homerun": "",
+		"style_instakill": "",
+		"style_interruption": "",
+		"style_kill": "",
+		"style_limbshot": "",
+		"style_mauriced": "",
+		"style_multikill": "",
+		"style_nailbombed": "",
+		"style_parry": "",
+		"style_projectileboost": "",
+		"style_quickdraw": "",
+		"style_ricoshot": "",
+		"style_ricoshotUltra": "",
+		"style_ricoshotCounter": "",
+		"style_secret": "",
+		"style_splattered": "",
+		"style_triplekill": "",
 
-        "stylemeter_multiplier": ""
-    },
-    
-    "cyberGrind":{
-        "cybergrind_currentWave": "",
-        "cybergrind_enemiesRemaining": "",
-        
-        "cybergrind_wave": "",
-        "cybergrind_kills": "",
-        "cybergrind_style": "",
-        "cybergrind_time": "",
-        
-        "cybergrind_cgTitle": "",
-        "cybergrind_previousRun": "",
-        "cybergrind_bestRun": "",
-        
-        "cybergrind_total": "",
-        
-        "cybergrind_connectingToSteam": "",
-        
-        "cybergrind_friendScores": "",
-        "cybergrind_globalScores": "",
-        
-        "cybergrind_settings": "",
-        "cybergrind_settingsDescription": "",
-        "cybergrind_themes": "",
-        "cybergrind_patterns": "",
-        "cybergrind_waves": "",
-        
-        "cybergrind_themesTitle": "",
-        "cybergrind_themesDescription": "",
-        "cybergrind_themesLight": "",
-        "cybergrind_themesDark": "",
-        "cybergrind_themesCustom": "",
-        "cybergrind_themesModify": "",
-        
-        "cybergrind_themesCustomGrid": "",
-        "cybergrind_themesCustomGridGlow": "",
-        "cybergrind_themesCustomSkybox": "",
-        "cybergrind_themesCustomBack": "",
-        "cybergrind_themesCustomReload": "",
-        "cybergrind_themesCustomBase": "",
-        "cybergrind_themesCustomTopRow": "",
-        "cybergrind_themesCustomTop": "",
-        "cybergrind_themesCustomGlowIntensity": "",
-        
-        "cybergrind_patternsTitle": "",
-        "cybergrind_patternsRefresh": "",
-        "cybergrind_patternsLaunchExternalEditor": "",
-        
-        "cybergrind_wavesTitle": "",
-        "cybergrind_wavesDescription1": "",
-        "cybergrind_wavesDescription2": ""
-    },
-    
-    "books":{
+		"style_conductor": "",
+		"style_crushed": "",
+		"style_fall": "",
+		"style_minced": "",
+		"style_outofbounds": "",
+		"style_shredded": "",
+		"style_zapped": "",
 
-        "books_scanning": "",
-        "books_pressToClose1": "",
-        "books_pressToClose2": "",
+		"style_why": "",
 
-        "books_limboFourth1": "",
-        "books_limboFourth2": "",
-        "books_limboFourth3": "",
-        "books_limboFourth4": "",
-        "books_limboFourth5": "",
-        
-        "books_lustSecond1": "",
-        "books_lustSecond2": "",
-        "books_lustSecond3": "",
-        "books_lustSecond4": "",
-        "books_lustSecond5": "",
-        
-        "books_greedSecond1": "",
-        "books_greedSecond2": "",
-        "books_greedSecond3": "",
-        "books_greedSecond4": "",
-        "books_greedSecond5": "",
-        "books_greedSecond6": "",
-        
-        "books_greedThird1": "",
-        "books_greedThird2": "",
-        "books_greedThird3": "",
-        "books_greedThird4": "",
-        
-        "books_wrathSecond1": "",
-        "books_wrathSecond2": "",
-        "books_wrathSecond3": "",
-        "books_wrathSecond4": "",
-        "books_wrathSecond5": "",
-        "books_wrathSecond6": "",
-        "books_wrathSecond7": "",
-        "books_wrathSecond8": "",
-        "books_wrathSecond9": ""
-    },
-    "intermission":{
-        "act1_intermission_first1": "",
-        "act1_intermission_first2": "",
-        "act1_intermission_first3": "",
-        "act1_intermission_first4": "",
-        "act1_intermission_first5": "",
-        "act1_intermission_first6": "",
-        "act1_intermission_first7": "",
-        "act1_intermission_first8": "",
-        "act1_intermission_first9": "",
-        "act1_intermission_first10": "",
-        "act1_intermission_first11": "",
-        "act1_intermission_first12": "",
-        
-        "act1_intermission_second1": "",
-        "act1_intermission_second2": "",
-        "act1_intermission_second3": "",
-        "act1_intermission_second4": "",
-        "act1_intermission_second5": "",
-        "act1_intermission_second6": "",
-        "act1_intermission_second7": "",
-        "act1_intermission_second8": "",
-        "act1_intermission_second9": "",
-        "act1_intermission_second10": "",
-        "act1_intermission_second11": "",
-        "act1_intermission_second12": "",
-        
-        "act1_intermission_third1": "",
-        "act1_intermission_third2": "",
-        "act1_intermission_third3": "",
-        "act1_intermission_third4": "",
-        "act1_intermission_third5": "",
+		"style_d": "",
+		"style_c": "",
+		"style_b": "",
+		"style_a": "",
+		"style_s": "",
+		"style_ss": "",
+		"style_sss": "",
+		"style_ultrakill": "",
 
+		"style_weaponFresh": "",
+		"style_weaponUsed": "",
+		"style_weaponStale": "",
+		"style_weaponDull": "",
 
-        "act2_intermission_first1": "",
-        "act2_intermission_first2": "",
-        "act2_intermission_first3": "",
-        "act2_intermission_first4": "",
-        "act2_intermission_first5": "",
-        "act2_intermission_first6": "",
-        
-        "act2_intermission_first7": "",
-        "act2_intermission_first8": "",
-        "act2_intermission_first9": "",
-        
-        "act2_intermission_first10": "",
-        
-        "act2_intermission_second1": "",
-        "act2_intermission_second2": "",
-        "act2_intermission_second3": "",
-        "act2_intermission_second4": "",
-        "act2_intermission_second5": "",
-        
-        "act2_intermission_second6": "",
-        "act2_intermission_second7": "",
-        "act2_intermission_second8": "",
-        
-        "act2_intermission_second9": "",
-        "act2_intermission_second10": "",
-        "act2_intermission_second11": "",
-        
-        "act2_intermission_third1": "",
-        "act2_intermission_third2": "",
-        
-        "act2_intermission_third3": "",
-        "act2_intermission_third4": "",
-        "act2_intermission_third5": "",
+		"stylemeter_multiplier": ""
+	},
 
-        "act2_intermission_third6": "",
-        "act2_intermission_third7": "",
-        "act2_intermission_third8": "",
-        "act2_intermission_third9": "",
-        "act2_intermission_third10": "",
-        
-        "act2_intermission_fourth1": "",
-        "act2_intermission_fourth2": "",
-        "act2_intermission_fourth3": "",
-        
-        "act2_intermission_fourth4": "",
-        
-        "act2_intermission_fourth5": "",
-        
-        "act2_intermission_fourth6": "",
-        "act2_intermission_fourth7": "",
-        "act2_intermission_fourth8": "",
-        "act2_intermission_fourth9": "",
-        "act2_intermission_fourth10": "",
-        "act2_intermission_fourth11": "",
-        "act2_intermission_fourth12": "",
-        "act2_intermission_fourth13": "",
+	"cyberGrind": {
+		"cybergrind_currentWave": "",
+		"cybergrind_enemiesRemaining": "",
+
+		"cybergrind_wave": "",
+		"cybergrind_kills": "",
+		"cybergrind_style": "",
+		"cybergrind_time": "",
+
+		"cybergrind_cgTitle": "",
+		"cybergrind_previousRun": "",
+		"cybergrind_bestRun": "",
+
+		"cybergrind_total": "",
+
+		"cybergrind_connectingToSteam": "",
+
+		"cybergrind_friendScores": "",
+		"cybergrind_globalScores": "",
+
+		"cybergrind_settings": "",
+		"cybergrind_settingsDescription": "",
+		"cybergrind_themes": "",
+		"cybergrind_patterns": "",
+		"cybergrind_waves": "",
+
+		"cybergrind_themesTitle": "",
+		"cybergrind_themesDescription": "",
+		"cybergrind_themesLight": "",
+		"cybergrind_themesDark": "",
+		"cybergrind_themesCustom": "",
+		"cybergrind_themesModify": "",
+
+		"cybergrind_themesCustomGrid": "",
+		"cybergrind_themesCustomGridGlow": "",
+		"cybergrind_themesCustomSkybox": "",
+		"cybergrind_themesCustomBack": "",
+		"cybergrind_themesCustomReload": "",
+		"cybergrind_themesCustomBase": "",
+		"cybergrind_themesCustomTopRow": "",
+		"cybergrind_themesCustomTop": "",
+		"cybergrind_themesCustomGlowIntensity": "",
+
+		"cybergrind_patternsTitle": "",
+		"cybergrind_patternsRefresh": "",
+		"cybergrind_patternsLaunchExternalEditor": "",
+
+		"cybergrind_wavesTitle": "",
+		"cybergrind_wavesDescription1": "",
+		"cybergrind_wavesDescription2": ""
+	},
+
+	"books": {
+
+		"books_scanning": "",
+		"books_pressToClose1": "",
+		"books_pressToClose2": "",
+
+		"books_limboFourth1": "",
+		"books_limboFourth2": "",
+		"books_limboFourth3": "",
+		"books_limboFourth4": "",
+		"books_limboFourth5": "",
+
+		"books_lustSecond1": "",
+		"books_lustSecond2": "",
+		"books_lustSecond3": "",
+		"books_lustSecond4": "",
+		"books_lustSecond5": "",
+
+		"books_greedSecond1": "",
+		"books_greedSecond2": "",
+		"books_greedSecond3": "",
+		"books_greedSecond4": "",
+		"books_greedSecond5": "",
+		"books_greedSecond6": "",
+
+		"books_greedThird1": "",
+		"books_greedThird2": "",
+		"books_greedThird3": "",
+		"books_greedThird4": "",
+
+		"books_wrathSecond1": "",
+		"books_wrathSecond2": "",
+		"books_wrathSecond3": "",
+		"books_wrathSecond4": "",
+		"books_wrathSecond5": "",
+		"books_wrathSecond6": "",
+		"books_wrathSecond7": "",
+		"books_wrathSecond8": "",
+		"books_wrathSecond9": ""
+	},
+	"intermission": {
+		"act1_intermission_first1": "",
+		"act1_intermission_first2": "",
+		"act1_intermission_first3": "",
+		"act1_intermission_first4": "",
+		"act1_intermission_first5": "",
+		"act1_intermission_first6": "",
+		"act1_intermission_first7": "",
+		"act1_intermission_first8": "",
+		"act1_intermission_first9": "",
+		"act1_intermission_first10": "",
+		"act1_intermission_first11": "",
+		"act1_intermission_first12": "",
+
+		"act1_intermission_second1": "",
+		"act1_intermission_second2": "",
+		"act1_intermission_second3": "",
+		"act1_intermission_second4": "",
+		"act1_intermission_second5": "",
+		"act1_intermission_second6": "",
+		"act1_intermission_second7": "",
+		"act1_intermission_second8": "",
+		"act1_intermission_second9": "",
+		"act1_intermission_second10": "",
+		"act1_intermission_second11": "",
+		"act1_intermission_second12": "",
+
+		"act1_intermission_third1": "",
+		"act1_intermission_third2": "",
+		"act1_intermission_third3": "",
+		"act1_intermission_third4": "",
+		"act1_intermission_third5": "",
 
 
-        "act2_intermission_fifth1": "",
-        
-        "act2_intermission_fifth2": "",
-        "act2_intermission_fifth3": "",
-        "act2_intermission_fifth4": "",
-        "act2_intermission_fifth5": "",
-        "act2_intermission_fifth6": "",
+		"act2_intermission_first1": "",
+		"act2_intermission_first2": "",
+		"act2_intermission_first3": "",
+		"act2_intermission_first4": "",
+		"act2_intermission_first5": "",
+		"act2_intermission_first6": "",
 
-        
-        "act2_intermission_sixth1": "",
-        
-        "act2_intermission_sixth2": "",
-        "act2_intermission_sixth3": "",
-        
-        "act1_intermission_tobecontinued": "",
-        "act1_intermission_tobecontinuedshadow": "",
-        
-        "act1_intermission_endof": "",
-        "act1_intermission_insertAct2": "",
-        "act1_intermission_insert": "",
-        "act1_intermission_returnToMenu": "",
-        
-        "act2_intermission_tobecontinued": "",
-        "act2_intermission_tobecontinuedshadow": ""
-        
-    },
+		"act2_intermission_first7": "",
+		"act2_intermission_first8": "",
+		"act2_intermission_first9": "",
+
+		"act2_intermission_first10": "",
+
+		"act2_intermission_second1": "",
+		"act2_intermission_second2": "",
+		"act2_intermission_second3": "",
+		"act2_intermission_second4": "",
+		"act2_intermission_second5": "",
+
+		"act2_intermission_second6": "",
+		"act2_intermission_second7": "",
+		"act2_intermission_second8": "",
+
+		"act2_intermission_second9": "",
+		"act2_intermission_second10": "",
+		"act2_intermission_second11": "",
+
+		"act2_intermission_third1": "",
+		"act2_intermission_third2": "",
+
+		"act2_intermission_third3": "",
+		"act2_intermission_third4": "",
+		"act2_intermission_third5": "",
+
+		"act2_intermission_third6": "",
+		"act2_intermission_third7": "",
+		"act2_intermission_third8": "",
+		"act2_intermission_third9": "",
+		"act2_intermission_third10": "",
+
+		"act2_intermission_fourth1": "",
+		"act2_intermission_fourth2": "",
+		"act2_intermission_fourth3": "",
+
+		"act2_intermission_fourth4": "",
+
+		"act2_intermission_fourth5": "",
+
+		"act2_intermission_fourth6": "",
+		"act2_intermission_fourth7": "",
+		"act2_intermission_fourth8": "",
+		"act2_intermission_fourth9": "",
+		"act2_intermission_fourth10": "",
+		"act2_intermission_fourth11": "",
+		"act2_intermission_fourth12": "",
+		"act2_intermission_fourth13": "",
+
+
+		"act2_intermission_fifth1": "",
+
+		"act2_intermission_fifth2": "",
+		"act2_intermission_fifth3": "",
+		"act2_intermission_fifth4": "",
+		"act2_intermission_fifth5": "",
+		"act2_intermission_fifth6": "",
+
+
+		"act2_intermission_sixth1": "",
+
+		"act2_intermission_sixth2": "",
+		"act2_intermission_sixth3": "",
+
+		"act1_intermission_tobecontinued": "",
+		"act1_intermission_tobecontinuedshadow": "",
+
+		"act1_intermission_endof": "",
+		"act1_intermission_insertAct2": "",
+		"act1_intermission_insert": "",
+		"act1_intermission_returnToMenu": "",
+
+		"act2_intermission_tobecontinued": "",
+		"act2_intermission_tobecontinuedshadow": ""
+
+	},
 	"frontend": {
 		"mainmenu_earlyAccess": "",
-        "mainmenu_halloween": "",
-        "mainmenu_easter": "",
-        "mainmenu_christmas": "",
+		"mainmenu_halloween": "",
+		"mainmenu_easter": "",
+		"mainmenu_christmas": "",
 		"mainmenu_play": "",
 		"mainmenu_options": "",
-        "mainmenu_credits": "",
+		"mainmenu_credits": "",
 		"mainmenu_quit": "",
 
 		"difficulty_title": "",
@@ -351,9 +351,9 @@
 		"difficulty_violent": "",
 		"difficulty_brutal": "",
 		"difficulty_umd": "",
-        
-        "difficulty_tweakReminder": "",
-        "difficulty_underConstruction": "",
+
+		"difficulty_tweakReminder": "",
+		"difficulty_underConstruction": "",
 
 		"difficulty_harmlessDescription1": "",
 		"difficulty_harmlessDescription2": "",
@@ -387,229 +387,229 @@
 		"layer_heresy": "",
 		"layer_prime": "",
 
-        "level_challenge": "",
+		"level_challenge": "",
 		"level_challengeCompleted": "",
 
-        "level_fullIntroPrompt": "",
-        "level_fullIntroPromptYes": "",
-        "level_fullIntroPromptNo": "",
-        "level_fullIntroPromptCancel": ""
+		"level_fullIntroPrompt": "",
+		"level_fullIntroPromptYes": "",
+		"level_fullIntroPromptNo": "",
+		"level_fullIntroPromptCancel": ""
 	},
-    "visualnovel": {
+	"visualnovel": {
 
-        "visualnovel_mirageName1": "",
-        "visualnovel_mirageName2": "",
-        "visualnovel_mirageName3": "",
+		"visualnovel_mirageName1": "",
+		"visualnovel_mirageName2": "",
+		"visualnovel_mirageName3": "",
 
-        "visualnovel_introFirst1": "",
-        "visualnovel_introFirst2": "",
-        "visualnovel_introFirst3": "",
-        
-        "visualnovel_introFirst4": "",
-        
-        "visualnovel_introFirst5": "",
-        "visualnovel_introFirst6": "",
-        
-        "visualnovel_introFirst7": "",
-        
-        "visualnovel_introSecond1": "",
-        "visualnovel_introSecond2": "",
-        "visualnovel_introSecond3": "",
-        "visualnovel_introSecond4": "",
-        "visualnovel_introSecond5": "",
-        
-        "visualnovel_introSecond6": "",
-        "visualnovel_introSecond7": "",
-        "visualnovel_introSecond8": "",
-        
-        "visualnovel_fallen1": "",
-        
-        "visualnovel_fallenPromptFirst1": "",
-        "visualnovel_fallenPromptFirst2": "",
-        "visualnovel_fallenPromptFirst3": "",
-        
-        "visualnovel_fallenResponseFirst": "",
-        "visualnovel_fallenResponseSecond": "",
-        "visualnovel_fallenResponseThird1": "",
-        "visualnovel_fallenResponseThird2": "",
-        
-        
-        "visualnovel_fallenPromptSecond1": "",
-        "visualnovel_fallenPromptSecond2": "",
-        "visualnovel_fallenPromptSecond3": "",
-        
-        "visualnovel_fallenResponseFourth": "",
-        "visualnovel_fallenResponseFifth": "",
-       
-       
-        "visualnovel_kindFirst1": "",
-        "visualnovel_kindFirst2": "",
-        
-        "visualnovel_kindSecond": "",
-        "visualnovel_kindThird": "",
-        
-        "visualnovel_rudeFirst1": "",
-        "visualnovel_rudeFirst2": "",
-        "visualnovel_rudeSecond": "",
-        "visualnovel_rudeThird": "",
-        
-        "visualnovel_middlePrompt1": "",
-        "visualnovel_middlePrompt2": "",
-        "visualnovel_middlePrompt3": "",
-        
-        "visualnovel_middleResponseFirst1": "",
-        "visualnovel_middleResponseFirst2": "",
-        "visualnovel_middleResponseFirst3": "",
-        "visualnovel_middleResponseFirst4": "",
-        "visualnovel_middleResponseFirst5": "",
-        
-        "visualnovel_middleResponseSecond1": "",
-        "visualnovel_middleResponseSecond2": "",
-        "visualnovel_middleResponseSecond3": "",
-        "visualnovel_middleResponseSecond4": "",
-        
-        "visualnovel_middleResponseThird1": "",
-        "visualnovel_middleResponseThird2": "",
-        "visualnovel_middleResponseThird3": "",
-        
-        "visualnovel_middlePromptSecondRecklessness": "",
-        "visualnovel_middlePromptSecondWaiting": "",
-        
-        "visualnovel_recklessnessFirst": "",
-        "visualnovel_recklessnessSecond1": "",
-        "visualnovel_recklessnessSecond2": "",
-        
-        "visualnovel_recklessnessPrompt1": "",
-        "visualnovel_recklessnessPrompt2": "",
-        
-        "visualnovel_recklessnessResponseFirst1": "",
-        "visualnovel_recklessnessResponseFirst2": "",
-        "visualnovel_recklessnessResponseFirst3": "",
-        "visualnovel_recklessnessResponseFirst4": "",
-        "visualnovel_recklessnessResponseFirst5": "",
-        
-        "visualnovel_recklessnessResponseSecond1": "",
-        "visualnovel_recklessnessResponseSecond2": "",
-        
-        "visualnovel_recklessnessPrompt3": "",
-        
-        "visualnovel_recklessnessResponseThird": "",
-        
-        "visualnovel_waitingFirst": "",
-        "visualnovel_waitingSecond": "",
-        "visualnovel_waitingThird1": "",
-        "visualnovel_waitingThird2": "",
-        
-        "visualnovel_waitingPromptFirst1": "",
-        "visualnovel_waitingPromptFirst2": "",
-        
-        "visualnovel_waitingResponseFirst1": "",
-        "visualnovel_waitingResponseFirst2": "",
-        "visualnovel_waitingResponseFirst3": "",
-        "visualnovel_waitingResponseFirst4": "",
-        "visualnovel_waitingResponseFirst5": "",
-        
-        "visualnovel_waitingResponseSecond1": "",
-        "visualnovel_waitingResponseSecond2": "",
+		"visualnovel_introFirst1": "",
+		"visualnovel_introFirst2": "",
+		"visualnovel_introFirst3": "",
 
-        "visualnovel_waitingPromptThird": "",
-        
-        "visualnovel_waitingResponseThird1": "",
-        "visualnovel_waitingResponseThird2": "",
-        "visualnovel_waitingResponseThird3": "",
-        
-        "visualnovel_nihilism1": "",
-        "visualnovel_nihilism2": "",
-        "visualnovel_nihilism3": "",
-        "visualnovel_nihilism4": "",
-        "visualnovel_nihilism5": "",
-        "visualnovel_nihilism6": "",
-        "visualnovel_nihilism7": "",
-        "visualnovel_nihilism8": "",
-        "visualnovel_nihilism9": "",
-        "visualnovel_nihilism10": "",
-        "visualnovel_nihilism11": "",
-        "visualnovel_nihilism12": "",
-        "visualnovel_nihilism13": "",
-        "visualnovel_nihilism14": "",
-        "visualnovel_nihilism15": "",
-        "visualnovel_nihilism16": "",
-        "visualnovel_nihilism17": "",
-        "visualnovel_nihilism18": "",
-        "visualnovel_nihilism19": "",
-        "visualnovel_nihilism20": "",
-        "visualnovel_nihilism21": "",
-        "visualnovel_nihilism22": "",
-        "visualnovel_nihilism23": "",
-        "visualnovel_nihilism24": "",
-        "visualnovel_nihilism25": "",
-        "visualnovel_nihilism26": "",
-        "visualnovel_nihilism27": "",
-        "visualnovel_nihilism28": "",
-        "visualnovel_nihilism29": "",
-        "visualnovel_nihilism30": "",
-        "visualnovel_nihilism31": "",
-        "visualnovel_nihilism32": "",
-        "visualnovel_nihilism33": "",
-        
-        "visualnovel_nihilismPrompt1": "",
-        "visualnovel_nihilismPrompt2": "",
-        "visualnovel_nihilismPrompt3": "",
-        "visualnovel_nihilismPrompt4": "",
-        "visualnovel_nihilismPrompt5": "",
-        "visualnovel_nihilismPrompt6": "",
-        "visualnovel_nihilismPrompt7": "",
-        "visualnovel_nihilismPrompt8": "",
-        "visualnovel_nihilismPrompt9": "",
-        "visualnovel_nihilismPrompt10": "",
-        "visualnovel_nihilismPrompt11": "",
-        "visualnovel_nihilismPrompt12": "",
-        "visualnovel_nihilismPrompt13": "",
-        "visualnovel_nihilismPrompt14": "",
-        "visualnovel_nihilismPrompt15": "",
-        "visualnovel_nihilismPrompt16": "",
-        "visualnovel_nihilismPrompt17": "",
-        "visualnovel_nihilismPrompt18": "",
-        "visualnovel_nihilismPrompt19": "",
-        "visualnovel_nihilismPrompt20": "",
-        "visualnovel_nihilismPrompt21": "",
-        "visualnovel_nihilismPrompt22": "",
-        "visualnovel_nihilismPrompt23": "",
-        
-        "visualnovel_nihilism34": "",
-        "visualnovel_nihilism35": "",
-        "visualnovel_nihilism36": "",
-        "visualnovel_nihilism37": "",
-        "visualnovel_nihilism38": "", 
-        "visualnovel_nihilism39": "",
-        "visualnovel_nihilism40": "",
-        "visualnovel_nihilism41": "",
-        "visualnovel_nihilism42": "",
-        "visualnovel_nihilism43": "",
-        
-        "visualnovel_conclusion1": "",
-        "visualnovel_conclusion2": "",
-        "visualnovel_conclusion3": "",
-        "visualnovel_conclusion4": "",
-        "visualnovel_conclusion5": "",
-        "visualnovel_conclusion6": "",
-        "visualnovel_conclusion7": "",
-        "visualnovel_conclusion8": "",
-        "visualnovel_conclusion9": "",
-        "visualnovel_conclusion10": "",
-        "visualnovel_conclusion11": "",
-        
-        "visualnovel_conclusionPrompt1": "",
-        "visualnovel_conclusionPrompt2": "",
-      
-        "visualnovel_conclusionResponseFirst1": "",
-        "visualnovel_conclusionResponseFirst2": "",
-        "visualnovel_conclusionResponseFirst3": "",
-        
-        "visualnovel_conclusionResponseSecond1": "",
-        "visualnovel_conclusionResponseSecond2": "",
-        "visualnovel_conclusionResponseSecond3": ""
-    },
+		"visualnovel_introFirst4": "",
+
+		"visualnovel_introFirst5": "",
+		"visualnovel_introFirst6": "",
+
+		"visualnovel_introFirst7": "",
+
+		"visualnovel_introSecond1": "",
+		"visualnovel_introSecond2": "",
+		"visualnovel_introSecond3": "",
+		"visualnovel_introSecond4": "",
+		"visualnovel_introSecond5": "",
+
+		"visualnovel_introSecond6": "",
+		"visualnovel_introSecond7": "",
+		"visualnovel_introSecond8": "",
+
+		"visualnovel_fallen1": "",
+
+		"visualnovel_fallenPromptFirst1": "",
+		"visualnovel_fallenPromptFirst2": "",
+		"visualnovel_fallenPromptFirst3": "",
+
+		"visualnovel_fallenResponseFirst": "",
+		"visualnovel_fallenResponseSecond": "",
+		"visualnovel_fallenResponseThird1": "",
+		"visualnovel_fallenResponseThird2": "",
+
+
+		"visualnovel_fallenPromptSecond1": "",
+		"visualnovel_fallenPromptSecond2": "",
+		"visualnovel_fallenPromptSecond3": "",
+
+		"visualnovel_fallenResponseFourth": "",
+		"visualnovel_fallenResponseFifth": "",
+
+
+		"visualnovel_kindFirst1": "",
+		"visualnovel_kindFirst2": "",
+
+		"visualnovel_kindSecond": "",
+		"visualnovel_kindThird": "",
+
+		"visualnovel_rudeFirst1": "",
+		"visualnovel_rudeFirst2": "",
+		"visualnovel_rudeSecond": "",
+		"visualnovel_rudeThird": "",
+
+		"visualnovel_middlePrompt1": "",
+		"visualnovel_middlePrompt2": "",
+		"visualnovel_middlePrompt3": "",
+
+		"visualnovel_middleResponseFirst1": "",
+		"visualnovel_middleResponseFirst2": "",
+		"visualnovel_middleResponseFirst3": "",
+		"visualnovel_middleResponseFirst4": "",
+		"visualnovel_middleResponseFirst5": "",
+
+		"visualnovel_middleResponseSecond1": "",
+		"visualnovel_middleResponseSecond2": "",
+		"visualnovel_middleResponseSecond3": "",
+		"visualnovel_middleResponseSecond4": "",
+
+		"visualnovel_middleResponseThird1": "",
+		"visualnovel_middleResponseThird2": "",
+		"visualnovel_middleResponseThird3": "",
+
+		"visualnovel_middlePromptSecondRecklessness": "",
+		"visualnovel_middlePromptSecondWaiting": "",
+
+		"visualnovel_recklessnessFirst": "",
+		"visualnovel_recklessnessSecond1": "",
+		"visualnovel_recklessnessSecond2": "",
+
+		"visualnovel_recklessnessPrompt1": "",
+		"visualnovel_recklessnessPrompt2": "",
+
+		"visualnovel_recklessnessResponseFirst1": "",
+		"visualnovel_recklessnessResponseFirst2": "",
+		"visualnovel_recklessnessResponseFirst3": "",
+		"visualnovel_recklessnessResponseFirst4": "",
+		"visualnovel_recklessnessResponseFirst5": "",
+
+		"visualnovel_recklessnessResponseSecond1": "",
+		"visualnovel_recklessnessResponseSecond2": "",
+
+		"visualnovel_recklessnessPrompt3": "",
+
+		"visualnovel_recklessnessResponseThird": "",
+
+		"visualnovel_waitingFirst": "",
+		"visualnovel_waitingSecond": "",
+		"visualnovel_waitingThird1": "",
+		"visualnovel_waitingThird2": "",
+
+		"visualnovel_waitingPromptFirst1": "",
+		"visualnovel_waitingPromptFirst2": "",
+
+		"visualnovel_waitingResponseFirst1": "",
+		"visualnovel_waitingResponseFirst2": "",
+		"visualnovel_waitingResponseFirst3": "",
+		"visualnovel_waitingResponseFirst4": "",
+		"visualnovel_waitingResponseFirst5": "",
+
+		"visualnovel_waitingResponseSecond1": "",
+		"visualnovel_waitingResponseSecond2": "",
+
+		"visualnovel_waitingPromptThird": "",
+
+		"visualnovel_waitingResponseThird1": "",
+		"visualnovel_waitingResponseThird2": "",
+		"visualnovel_waitingResponseThird3": "",
+
+		"visualnovel_nihilism1": "",
+		"visualnovel_nihilism2": "",
+		"visualnovel_nihilism3": "",
+		"visualnovel_nihilism4": "",
+		"visualnovel_nihilism5": "",
+		"visualnovel_nihilism6": "",
+		"visualnovel_nihilism7": "",
+		"visualnovel_nihilism8": "",
+		"visualnovel_nihilism9": "",
+		"visualnovel_nihilism10": "",
+		"visualnovel_nihilism11": "",
+		"visualnovel_nihilism12": "",
+		"visualnovel_nihilism13": "",
+		"visualnovel_nihilism14": "",
+		"visualnovel_nihilism15": "",
+		"visualnovel_nihilism16": "",
+		"visualnovel_nihilism17": "",
+		"visualnovel_nihilism18": "",
+		"visualnovel_nihilism19": "",
+		"visualnovel_nihilism20": "",
+		"visualnovel_nihilism21": "",
+		"visualnovel_nihilism22": "",
+		"visualnovel_nihilism23": "",
+		"visualnovel_nihilism24": "",
+		"visualnovel_nihilism25": "",
+		"visualnovel_nihilism26": "",
+		"visualnovel_nihilism27": "",
+		"visualnovel_nihilism28": "",
+		"visualnovel_nihilism29": "",
+		"visualnovel_nihilism30": "",
+		"visualnovel_nihilism31": "",
+		"visualnovel_nihilism32": "",
+		"visualnovel_nihilism33": "",
+
+		"visualnovel_nihilismPrompt1": "",
+		"visualnovel_nihilismPrompt2": "",
+		"visualnovel_nihilismPrompt3": "",
+		"visualnovel_nihilismPrompt4": "",
+		"visualnovel_nihilismPrompt5": "",
+		"visualnovel_nihilismPrompt6": "",
+		"visualnovel_nihilismPrompt7": "",
+		"visualnovel_nihilismPrompt8": "",
+		"visualnovel_nihilismPrompt9": "",
+		"visualnovel_nihilismPrompt10": "",
+		"visualnovel_nihilismPrompt11": "",
+		"visualnovel_nihilismPrompt12": "",
+		"visualnovel_nihilismPrompt13": "",
+		"visualnovel_nihilismPrompt14": "",
+		"visualnovel_nihilismPrompt15": "",
+		"visualnovel_nihilismPrompt16": "",
+		"visualnovel_nihilismPrompt17": "",
+		"visualnovel_nihilismPrompt18": "",
+		"visualnovel_nihilismPrompt19": "",
+		"visualnovel_nihilismPrompt20": "",
+		"visualnovel_nihilismPrompt21": "",
+		"visualnovel_nihilismPrompt22": "",
+		"visualnovel_nihilismPrompt23": "",
+
+		"visualnovel_nihilism34": "",
+		"visualnovel_nihilism35": "",
+		"visualnovel_nihilism36": "",
+		"visualnovel_nihilism37": "",
+		"visualnovel_nihilism38": "",
+		"visualnovel_nihilism39": "",
+		"visualnovel_nihilism40": "",
+		"visualnovel_nihilism41": "",
+		"visualnovel_nihilism42": "",
+		"visualnovel_nihilism43": "",
+
+		"visualnovel_conclusion1": "",
+		"visualnovel_conclusion2": "",
+		"visualnovel_conclusion3": "",
+		"visualnovel_conclusion4": "",
+		"visualnovel_conclusion5": "",
+		"visualnovel_conclusion6": "",
+		"visualnovel_conclusion7": "",
+		"visualnovel_conclusion8": "",
+		"visualnovel_conclusion9": "",
+		"visualnovel_conclusion10": "",
+		"visualnovel_conclusion11": "",
+
+		"visualnovel_conclusionPrompt1": "",
+		"visualnovel_conclusionPrompt2": "",
+
+		"visualnovel_conclusionResponseFirst1": "",
+		"visualnovel_conclusionResponseFirst2": "",
+		"visualnovel_conclusionResponseFirst3": "",
+
+		"visualnovel_conclusionResponseSecond1": "",
+		"visualnovel_conclusionResponseSecond2": "",
+		"visualnovel_conclusionResponseSecond3": ""
+	},
 	"options": {
 		"options_title": "",
 		"options_back": "",
@@ -632,10 +632,10 @@
 		"general_weaponPositionLeft": "",
 		"general_rememberWeapon": "",
 		"general_screenShake": "",
-        "general_screenShakeMinimum": "",
-        "general_screenShakeMaximum": "",
+		"general_screenShakeMinimum": "",
+		"general_screenShakeMaximum": "",
 		"general_cameraTilt": "",
-        "general_restartWarning": "",
+		"general_restartWarning": "",
 		"general_discordRpc": "",
 		"general_seasonalEvent": "",
 
@@ -661,7 +661,7 @@
 		"controls_slot2": "",
 		"controls_slot3": "",
 		"controls_slot4": "",
-        "controls_slot5": "",
+		"controls_slot5": "",
 		"controls_scrollType": "",
 		"controls_scrollTypeWeapons": "",
 		"controls_scrollTypeVariations": "",
@@ -687,7 +687,7 @@
 		"graphics_pixelisation144p": "",
 		"graphics_pixelisation36p": "",
 		"graphics_dithering": "",
-        "graphics_ditheringMinimum": "",
+		"graphics_ditheringMinimum": "",
 		"graphics_textureWarping": "",
 		"graphics_vertexWarping": "",
 		"graphics_vertexWarpingNone": "",
@@ -696,8 +696,8 @@
 		"graphics_vertexWarpingStrong": "",
 		"graphics_vertexWarpingVeryStrong": "",
 		"graphics_vertexWarpingAbsurd": "",
-        "graphics_customColorPalette": "",
-        "graphics_customColorPaletteSelect": "",
+		"graphics_customColorPalette": "",
+		"graphics_customColorPaletteSelect": "",
 		"graphics_colorCompression": "",
 		"graphics_colorCompressionNone": "",
 		"graphics_colorCompressionLight": "",
@@ -731,8 +731,8 @@
 		"hud_typeClassicWhite": "",
 		"hud_hudElements": "",
 		"hud_backgroundOpacity": "",
-        "hud_backgroundOpacityMinimum": "",
-        "hud_backgroundOpacityMaximum": "",
+		"hud_backgroundOpacityMinimum": "",
+		"hud_backgroundOpacityMaximum": "",
 		"hud_alwaysOnTop": "",
 		"hud_icons": "",
 		"hud_weaponIcon": "",
@@ -741,10 +741,10 @@
 		"hud_styleMeter": "",
 		"hud_styleInfo": "",
 
-        "spawner_sandboxTools": "",
-        "spawner_sandbox": "",
-        "spawner_enemies": "",
-        "spawner_items": "",
+		"spawner_sandboxTools": "",
+		"spawner_sandbox": "",
+		"spawner_enemies": "",
+		"spawner_items": "",
 
 		"crosshair_title": "",
 		"crosshair_type": "",
@@ -782,12 +782,12 @@
 		"assists_minor": "",
 		"assists_autoAim": "",
 		"assists_autoAimPercent": "",
-        "assists_autoAimPercentMinimum": "",
-        "assists_autoAimPercentMaximum": "",
+		"assists_autoAimPercentMinimum": "",
+		"assists_autoAimPercentMaximum": "",
 		"assists_enemySilhouettes": "",
 		"assists_enemySilhouettesOutlines": "",
 		"assists_enemySilhouettesDistance": "",
-        "assists_enemySilhouettesDistanceMinimum": "",
+		"assists_enemySilhouettesDistanceMinimum": "",
 		"assists_enemySilhouettesOutlinesOnly": "",
 		"assists_major": "",
 		"assists_majorActivate": "",
@@ -797,9 +797,9 @@
 		"assists_bossOverrideNone": "",
 		"assists_bossRestartRequired": "",
 		"assists_infiniteEnergy": "",
-        "assists_disableHardDamage": "",
+		"assists_disableHardDamage": "",
 		"assists_disableWhiplashHardDamage": "",
-        "assists_disableWeaponFreshness": "",
+		"assists_disableWeaponFreshness": "",
 		"assists_disablePopupHints": "",
 
 		"colors_title": "",
@@ -834,8 +834,8 @@
 		"save_close": "",
 		"save_slotEmpty": "",
 
-        "language_title": "",
-        "language_languages": ""
+		"language_title": "",
+		"language_languages": ""
 	},
 	"pauseMenu": {
 		"pause_title": "",
@@ -844,22 +844,22 @@
 		"pause_restart": "",
 		"pause_options": "",
 		"pause_quit": "",
-        
-        "pause_restartConfirm": "",
-        "pause_quitConfirm": "",
-        "pause_quitConfirmYes": "",
-        "pause_quitConfirmNo": "",
-        "pause_restartConfirmYes": "",
-        "pause_restartConfirmNo": "",
-        
-        "pause_disableWindow": ""
+
+		"pause_restartConfirm": "",
+		"pause_quitConfirm": "",
+		"pause_quitConfirmYes": "",
+		"pause_quitConfirmNo": "",
+		"pause_restartConfirmYes": "",
+		"pause_restartConfirmNo": "",
+
+		"pause_disableWindow": ""
 	},
 	"levelNames": {
-        "levelName_mainMenu": "",
+		"levelName_mainMenu": "",
 		"levelName_cybergrind": "",
 		"levelName_sandbox": "",
-        "levelName_tutorial": "",
-        
+		"levelName_tutorial": "",
+
 		"levelName_preludeFirst": "",
 		"levelName_preludeSecond": "",
 		"levelName_preludeThird": "",
@@ -893,8 +893,8 @@
 		"levelName_wrathThird": "",
 		"levelName_wrathFourth": "",
 		"levelName_wrathSecret": "",
-        
-        "levelName_heresyFirst": "",
+
+		"levelName_heresyFirst": "",
 		"levelName_heresySecond": "",
 
 		"levelName_primeFirst": "",
@@ -902,7 +902,7 @@
 		"levelName_primeThird": ""
 
 	},
-	"levelChallenges":{
+	"levelChallenges": {
 		"challenges_preludeFirst": "",
 		"challenges_preludeSecond": "",
 		"challenges_preludeThird": "",
@@ -926,17 +926,17 @@
 		"challenges_greedSecond": "",
 		"challenges_greedThird": "",
 		"challenges_greedFourth": "",
-        
-        "challenges_wrathFirst": "",
+
+		"challenges_wrathFirst": "",
 		"challenges_wrathSecond": "",
 		"challenges_wrathThird": "",
 		"challenges_wrathFourth": "",
-        
-        "challenges_heresyFirst": "",
+
+		"challenges_heresyFirst": "",
 		"challenges_heresySecond": ""
 
 	},
-	"levelTips":{
+	"levelTips": {
 		"leveltips_preludeSecond1": "",
 		"leveltips_preludeSecond2": "",
 
@@ -979,222 +979,222 @@
 
 		"leveltips_primeFirst1": "",
 		"leveltips_primeFirst2": "",
-        
-        "leveltips_wrathFirst": "",
-        "leveltips_wrathSecond": "",
-        "leveltips_wrathThird": "",
-        "leveltips_wrathFourth1": "",
-        "leveltips_wrathFourth2": "",
-        
-        "leveltips_heresyFirst1": "",
-        "leveltips_heresyFirst2": "",
-        "leveltips_heresySecond1": "",
-        "leveltips_heresySecond2": "",
+
+		"leveltips_wrathFirst": "",
+		"leveltips_wrathSecond": "",
+		"leveltips_wrathThird": "",
+		"leveltips_wrathFourth1": "",
+		"leveltips_wrathFourth2": "",
+
+		"leveltips_heresyFirst1": "",
+		"leveltips_heresyFirst2": "",
+		"leveltips_heresySecond1": "",
+		"leveltips_heresySecond2": "",
 
 		"leveltips_cybergrind": "",
-        "leveltips_sandbox1": "",
-        "leveltips_sandbox2": ""
+		"leveltips_sandbox1": "",
+		"leveltips_sandbox2": ""
 	},
-	"shop":{
-        "shop_tipofthedayTitle": "",
-        "shop_tipoftheday": "",
-        "shop_weapons": "",
-        "shop_monsters": "",
-        "shop_cybergrind": "",
-        "shop_sandbox": "",
-        "shop_returnToMission": "",
-        "shop_soulOrbs": "",
-        
-        "shop_cybergrindDescription1": "",
-        "shop_cybergrindDescription2": "",
-        "shop_cybergrindDescription3": "",
-        "shop_cybergrindEnter": "",
-        "shop_cybergrindReturningTo": "",
-        "shop_cybergrindExit": "",
+	"shop": {
+		"shop_tipofthedayTitle": "",
+		"shop_tipoftheday": "",
+		"shop_weapons": "",
+		"shop_monsters": "",
+		"shop_cybergrind": "",
+		"shop_sandbox": "",
+		"shop_returnToMission": "",
+		"shop_soulOrbs": "",
 
-        "shop_sandboxTitle": "",
-        "shop_sandboxDescription1": "",
-        "shop_sandboxDescription2": "",
-        "shop_sandboxEnter": "",
-        
-        "shop_back": "",
-        "shop_weaponInfo": "",
-        "shop_weaponColors": "",
-        
-        "shop_weaponsRevolver": "",
-        "shop_weaponsShotgun": "",
-        "shop_weaponsNailgun": "",
-        "shop_weaponsRailcannon": "",
-        "shop_weaponsRocketLauncher": "",
-        "shop_weaponsArms": "",
-        
-        "shop_revolverPiercer": "",
-        "shop_revolverPiercerDescription1": "",
-        "shop_revolverPiercerDescription2": "",
-        
-        "shop_revolverMarksman": "",
-        "shop_revolverMarksmanDescription1": "",
-        "shop_revolverMarksmanDescription2": "",
-        "shop_revolverMarksmanDescription3": "",
-        
-        "shop_shotgunCoreEject": "",
-        "shop_shotgunCoreEjectDescription1": "",
-        "shop_shotgunCoreEjectDescription2": "",
-        "shop_shotgunCoreEjectDescription3": "",
-        
-        "shop_shotgunPumpCharge": "",
-        "shop_shotgunPumpChargeDescription1": "",
-        "shop_shotgunPumpChargeDescription2": "",
-        
-        "shop_nailgunMagnet": "",
-        "shop_nailgunMagnetDescription1": "",
-        "shop_nailgunMagnetDescription2": "",
-        
-        "shop_nailgunOverheat": "",
-        "shop_nailgunOverheatDescription1": "",
-        "shop_nailgunOverheatDescription2": "",
-        
-        "shop_railcannonElectric": "",
-        "shop_railcannonElectricDescription1": "",
-        "shop_railcannonElectricDescription2": "",
-        "shop_railcannonElectricDescription3": "",
-        
-        "shop_railcannonScrewdriver": "",
-        "shop_railcannonScrewdriverDescription1": "",
-        "shop_railcannonScrewdriverDescription2": "",
-        
-        "shop_railcannonMalicious": "",
-        "shop_railcannonMaliciousDescription1": "",
-        "shop_railcannonMaliciousDescription2": "",
-        
-        "shop_rocketLauncherFreeze": "",
-        "shop_rocketLauncherFreezeDescription1": "",
-        "shop_rocketLauncherFreezeDescription2": "",
-        
-        "shop_armFeedbacker": "",
-        "shop_armFeedbackerDescription1": "",
-        "shop_armFeedbackerDescription2": "",
-        
-        "shop_armKnuckleblaster": "",
-        "shop_armKnuckleblasterDescription1": "",
-        "shop_armKnuckleblasterDescription2": "",
-        
-        "shop_armWhiplash": "",
-        "shop_armWhiplashDescription1": "",
-        "shop_armWhiplashDescription2": "",
-        
-        "shop_data": "",
-        "shop_strategy": "",
-        "shop_advancedStrategy": "",
-        
-        
-        "shop_loreRevolver1": "",
-        "shop_loreRevolver2": "",
-        "shop_loreRevolver3": "",
-        "shop_loreRevolver4": "",
-        "shop_loreRevolver5": "",
-        "shop_loreRevolver6": "",
-        "shop_loreRevolver7": "",
-        "shop_loreRevolver8": "",
-        "shop_loreRevolver9": "",
-        "shop_loreRevolver10": "",
-        
-        "shop_loreShotgun1": "",
-        "shop_loreShotgun2": "",
-        "shop_loreShotgun3": "",
-        "shop_loreShotgun4": "",
-        "shop_loreShotgun5": "",
-        "shop_loreShotgun6": "",
-        "shop_loreShotgun7": "",
-        "shop_loreShotgun8": "",
-        "shop_loreShotgun9": "",
-        
-        "shop_loreNailgun1": "",
-        "shop_loreNailgun2": "",
-        "shop_loreNailgun3": "",
-        "shop_loreNailgun4": "",
-        "shop_loreNailgun5": "",
-        "shop_loreNailgun6": "",
-        "shop_loreNailgun7": "",
-        "shop_loreNailgun8": "",
-        "shop_loreNailgun9": "",
-        
-        "shop_loreRailcannon1": "",
-        "shop_loreRailcannon2": "",
-        "shop_loreRailcannon3": "",
-        "shop_loreRailcannon4": "",
-        "shop_loreRailcannon5": "",
-        "shop_loreRailcannon6": "",
-        "shop_loreRailcannon7": "",
-        "shop_loreRailcannon8": "",
-        "shop_loreRailcannon9": "",
-        
-        "shop_loreRocketLauncher1": "",
-        "shop_loreRocketLauncher2": "",
-        "shop_loreRocketLauncher3": "",
-        "shop_loreRocketLauncher4": "",
-        "shop_loreRocketLauncher5": "",
-        "shop_loreRocketLauncher6": "",
-        "shop_loreRocketLauncher7": "",
-        "shop_loreRocketLauncher8": "",
-        "shop_loreRocketLauncher9": "",
-        "shop_loreRocketLauncher10": "",
-        "shop_loreRocketLauncher11": "",
-        "shop_loreRocketLauncher12": "",
-        "shop_loreRocketLauncher13": "",
+		"shop_cybergrindDescription1": "",
+		"shop_cybergrindDescription2": "",
+		"shop_cybergrindDescription3": "",
+		"shop_cybergrindEnter": "",
+		"shop_cybergrindReturningTo": "",
+		"shop_cybergrindExit": "",
 
-        "shop_revolverPreset1": "",
-        "shop_revolverPreset2": "",
-        "shop_revolverPreset3": "",
-        "shop_revolverPreset4": "",
-        "shop_revolverPreset5": "",
+		"shop_sandboxTitle": "",
+		"shop_sandboxDescription1": "",
+		"shop_sandboxDescription2": "",
+		"shop_sandboxEnter": "",
 
-        "shop_shotgunPreset1": "",
-        "shop_shotgunPreset2": "",
-        "shop_shotgunPreset3": "",
-        "shop_shotgunPreset4": "",
-        "shop_shotgunPreset5": "",
+		"shop_back": "",
+		"shop_weaponInfo": "",
+		"shop_weaponColors": "",
 
-        "shop_nailgunPreset1": "",
-        "shop_nailgunPreset2": "",
-        "shop_nailgunPreset3": "",
-        "shop_nailgunPreset4": "",
-        "shop_nailgunPreset5": "",
+		"shop_weaponsRevolver": "",
+		"shop_weaponsShotgun": "",
+		"shop_weaponsNailgun": "",
+		"shop_weaponsRailcannon": "",
+		"shop_weaponsRocketLauncher": "",
+		"shop_weaponsArms": "",
 
-        "shop_railcannonPreset1": "",
-        "shop_railcannonPreset2": "",
-        "shop_railcannonPreset3": "",
-        "shop_railcannonPreset4": "",
-        "shop_railcannonPreset5": "",
+		"shop_revolverPiercer": "",
+		"shop_revolverPiercerDescription1": "",
+		"shop_revolverPiercerDescription2": "",
 
-        "shop_rocketlauncherPreset1": "",
-        "shop_rocketlauncherPreset2": "",
-        "shop_rocketlauncherPreset3": "",
-        "shop_rocketlauncherPreset4": "",
-        "shop_rocketlauncherPreset5": "",
+		"shop_revolverMarksman": "",
+		"shop_revolverMarksmanDescription1": "",
+		"shop_revolverMarksmanDescription2": "",
+		"shop_revolverMarksmanDescription3": "",
 
-        "shop_colorsPreset": "",
-        "shop_colorsCustom": "",
-        "shop_colorsAlternative": "",
-        "shop_colorsDone": "",
-        "shop_colorsCustomUnlockPrompt": ""
+		"shop_shotgunCoreEject": "",
+		"shop_shotgunCoreEjectDescription1": "",
+		"shop_shotgunCoreEjectDescription2": "",
+		"shop_shotgunCoreEjectDescription3": "",
+
+		"shop_shotgunPumpCharge": "",
+		"shop_shotgunPumpChargeDescription1": "",
+		"shop_shotgunPumpChargeDescription2": "",
+
+		"shop_nailgunMagnet": "",
+		"shop_nailgunMagnetDescription1": "",
+		"shop_nailgunMagnetDescription2": "",
+
+		"shop_nailgunOverheat": "",
+		"shop_nailgunOverheatDescription1": "",
+		"shop_nailgunOverheatDescription2": "",
+
+		"shop_railcannonElectric": "",
+		"shop_railcannonElectricDescription1": "",
+		"shop_railcannonElectricDescription2": "",
+		"shop_railcannonElectricDescription3": "",
+
+		"shop_railcannonScrewdriver": "",
+		"shop_railcannonScrewdriverDescription1": "",
+		"shop_railcannonScrewdriverDescription2": "",
+
+		"shop_railcannonMalicious": "",
+		"shop_railcannonMaliciousDescription1": "",
+		"shop_railcannonMaliciousDescription2": "",
+
+		"shop_rocketLauncherFreeze": "",
+		"shop_rocketLauncherFreezeDescription1": "",
+		"shop_rocketLauncherFreezeDescription2": "",
+
+		"shop_armFeedbacker": "",
+		"shop_armFeedbackerDescription1": "",
+		"shop_armFeedbackerDescription2": "",
+
+		"shop_armKnuckleblaster": "",
+		"shop_armKnuckleblasterDescription1": "",
+		"shop_armKnuckleblasterDescription2": "",
+
+		"shop_armWhiplash": "",
+		"shop_armWhiplashDescription1": "",
+		"shop_armWhiplashDescription2": "",
+
+		"shop_data": "",
+		"shop_strategy": "",
+		"shop_advancedStrategy": "",
+
+
+		"shop_loreRevolver1": "",
+		"shop_loreRevolver2": "",
+		"shop_loreRevolver3": "",
+		"shop_loreRevolver4": "",
+		"shop_loreRevolver5": "",
+		"shop_loreRevolver6": "",
+		"shop_loreRevolver7": "",
+		"shop_loreRevolver8": "",
+		"shop_loreRevolver9": "",
+		"shop_loreRevolver10": "",
+
+		"shop_loreShotgun1": "",
+		"shop_loreShotgun2": "",
+		"shop_loreShotgun3": "",
+		"shop_loreShotgun4": "",
+		"shop_loreShotgun5": "",
+		"shop_loreShotgun6": "",
+		"shop_loreShotgun7": "",
+		"shop_loreShotgun8": "",
+		"shop_loreShotgun9": "",
+
+		"shop_loreNailgun1": "",
+		"shop_loreNailgun2": "",
+		"shop_loreNailgun3": "",
+		"shop_loreNailgun4": "",
+		"shop_loreNailgun5": "",
+		"shop_loreNailgun6": "",
+		"shop_loreNailgun7": "",
+		"shop_loreNailgun8": "",
+		"shop_loreNailgun9": "",
+
+		"shop_loreRailcannon1": "",
+		"shop_loreRailcannon2": "",
+		"shop_loreRailcannon3": "",
+		"shop_loreRailcannon4": "",
+		"shop_loreRailcannon5": "",
+		"shop_loreRailcannon6": "",
+		"shop_loreRailcannon7": "",
+		"shop_loreRailcannon8": "",
+		"shop_loreRailcannon9": "",
+
+		"shop_loreRocketLauncher1": "",
+		"shop_loreRocketLauncher2": "",
+		"shop_loreRocketLauncher3": "",
+		"shop_loreRocketLauncher4": "",
+		"shop_loreRocketLauncher5": "",
+		"shop_loreRocketLauncher6": "",
+		"shop_loreRocketLauncher7": "",
+		"shop_loreRocketLauncher8": "",
+		"shop_loreRocketLauncher9": "",
+		"shop_loreRocketLauncher10": "",
+		"shop_loreRocketLauncher11": "",
+		"shop_loreRocketLauncher12": "",
+		"shop_loreRocketLauncher13": "",
+
+		"shop_revolverPreset1": "",
+		"shop_revolverPreset2": "",
+		"shop_revolverPreset3": "",
+		"shop_revolverPreset4": "",
+		"shop_revolverPreset5": "",
+
+		"shop_shotgunPreset1": "",
+		"shop_shotgunPreset2": "",
+		"shop_shotgunPreset3": "",
+		"shop_shotgunPreset4": "",
+		"shop_shotgunPreset5": "",
+
+		"shop_nailgunPreset1": "",
+		"shop_nailgunPreset2": "",
+		"shop_nailgunPreset3": "",
+		"shop_nailgunPreset4": "",
+		"shop_nailgunPreset5": "",
+
+		"shop_railcannonPreset1": "",
+		"shop_railcannonPreset2": "",
+		"shop_railcannonPreset3": "",
+		"shop_railcannonPreset4": "",
+		"shop_railcannonPreset5": "",
+
+		"shop_rocketlauncherPreset1": "",
+		"shop_rocketlauncherPreset2": "",
+		"shop_rocketlauncherPreset3": "",
+		"shop_rocketlauncherPreset4": "",
+		"shop_rocketlauncherPreset5": "",
+
+		"shop_colorsPreset": "",
+		"shop_colorsCustom": "",
+		"shop_colorsAlternative": "",
+		"shop_colorsDone": "",
+		"shop_colorsCustomUnlockPrompt": ""
 	},
-	"enemyNames":{
+	"enemyNames": {
 		"enemyname_filth": "",
 		"enemyname_stray": "",
 		"enemyname_schism": "",
 		"enemyname_soldier": "",
 		"enemyname_minos": "",
-        "enemyname_sentry": "",
-        "enemyname_idol": "",
-        "enemyname_ferryman": "",
+		"enemyname_sentry": "",
+		"enemyname_idol": "",
+		"enemyname_ferryman": "",
 		"enemyname_stalker": "",
 		"enemyname_insurrectionist": "",
 		"enemyname_swordsmachine": "",
 		"enemyname_drone": "",
 		"enemyname_streetCleaner": "",
 		"enemyname_v2": "",
-        "enemyname_v2Second": "",
+		"enemyname_v2Second": "",
 		"enemyname_mindFlayer": "",
 		"enemyname_malFace": "",
 		"enemyname_cerberus": "",
@@ -1204,358 +1204,366 @@
 		"enemyname_somethingWicked": "",
 		"enemyname_fleshPrison": "",
 		"enemyname_minosPrime": "",
-        
-        "enemyname_boss_cerberus": "",
-        "enemyname_boss_cancerousRodent": "",
-        "enemyname_boss_veryCancerousRodent": "",
-        "enemyname_boss_hideousMass": "",
-        "enemyname_boss_swordsmachineAgony": "",
-        "enemyname_boss_swordsmachineTundra": "",
-        "enemyname_boss_corpseOfKingMinos": "",
-        "enemyname_boss_gabriel": "",
-        "enemyname_boss_insurrectionist": "",
-        "enemyname_boss_mandalore": "",
-        "enemyname_boss_v2": "",
-        "enemyname_boss_v2Second": "",
-        "enemyname_boss_ferryman": "",
-        "enemyname_boss_leviathan": "",
-        "enemyname_boss_insurrectionistAngry": "",
-        "enemyname_boss_insurrectionistRude": "",
-        "enemyname_boss_gabrielSecond": "",
-        
-        "enemyname_type_lesserHusk": "",
-        "enemyname_type_greaterHusk": "",
-        "enemyname_type_supremeHusk": "",
-        
-        "enemyname_type_lesserDemon": "",
-        "enemyname_type_greaterDemon": "",
-        "enemyname_type_supremeDemon": "",
-        
-        "enemyname_type_lesserMachine": "",
-        "enemyname_type_greaterMachine": "",
-        "enemyname_type_supremeMachine": "",
-        
-        "enemyname_type_lesserAngel": "",
-        "enemyname_type_greaterAngel": "",
-        "enemyname_type_supremeAngel": "",
-        
-        "enemyname_type_primeSoul": ""
-        
+
+		"enemyname_boss_cerberus": "",
+		"enemyname_boss_cancerousRodent": "",
+		"enemyname_boss_veryCancerousRodent": "",
+		"enemyname_boss_hideousMass": "",
+		"enemyname_boss_swordsmachineAgony": "",
+		"enemyname_boss_swordsmachineTundra": "",
+		"enemyname_boss_corpseOfKingMinos": "",
+		"enemyname_boss_gabriel": "",
+		"enemyname_boss_insurrectionist": "",
+		"enemyname_boss_mandalore": "",
+		"enemyname_boss_v2": "",
+		"enemyname_boss_v2Second": "",
+		"enemyname_boss_ferryman": "",
+		"enemyname_boss_leviathan": "",
+		"enemyname_boss_insurrectionistAngry": "",
+		"enemyname_boss_insurrectionistRude": "",
+		"enemyname_boss_gabrielSecond": "",
+
+		"enemyname_type_lesserHusk": "",
+		"enemyname_type_greaterHusk": "",
+		"enemyname_type_supremeHusk": "",
+
+		"enemyname_type_lesserDemon": "",
+		"enemyname_type_greaterDemon": "",
+		"enemyname_type_supremeDemon": "",
+
+		"enemyname_type_lesserMachine": "",
+		"enemyname_type_greaterMachine": "",
+		"enemyname_type_supremeMachine": "",
+
+		"enemyname_type_lesserAngel": "",
+		"enemyname_type_greaterAngel": "",
+		"enemyname_type_supremeAngel": "",
+
+		"enemyname_type_primeSoul": ""
+
 	},
-    
-    "cheats":{
-        "cheats_disclaimer1": "",
-        "cheats_disclaimer2": "",
-        "cheats_disclaimerYes": "",
-        "cheats_disclaimerNo": "",
-        
-        "cheats_panelTitle": "",
-        "cheats_cheatsEnabled": "",
-        
-        "cheats_keepEnabled": "",
-        "cheats_spawnerArm": "",
-        "cheats_teleportMenu": "",
-        "cheats_fullBright": "",
-        "cheats_noclip": "",
-        "cheats_flight": "",
-        "cheats_infiniteWallJumps": "",
-        "cheats_noWeaponCooldown": "",
-        "cheats_infinitePowerUps": "",
-        "cheats_blindEnemies": "",
-        "cheats_disableEnemySpawns": "",
-        "cheats_invincibleEnemies": "",
-        "cheats_killAllEnemies": "",
-        "cheats_quickSave": "",
-        "cheats_quickLoad": "",
-        "cheats_saveMenu": "",
-        "cheats_clear": "",
-        "cheats_rebuildNav": "",
-        "cheats_snapping": "",
-        "cheats_physics": "",
-        "cheats_crashMode": "",
-        
-        "cheats_stayActive": "",
-        "cheats_disableOnReload": "",
-        "cheats_equip": "",
-        "cheats_remove": "",
-        "cheats_open": "",
-        "cheats_killAll": "",
-        "cheats_static": "",
-        "cheats_dynamic": "",
-        "cheats_rebuild": "",
-        "cheats_rebuilding": "",
-        
-        "cheats_activated": "",
-        "cheats_deactivated": "",
-        "cheats_pressToBind": "",
-        "cheats_delete": "",
-        
-        "cheats_navmeshOutdated1": "",
-        "cheats_navmeshOutdated2": "",
-        
-        "cheats_spawnerArmSlot": "",
 
-        "cheats_dupesTitle": "",
-        "cheats_dupesSaveNamePrompt": "",
-        "cheats_dupesNewSave": "",
-        "cheats_dupesOpenFolder": "",
-        "cheats_dupesSave": "",
-        "cheats_dupesLoad": "",
-        "cheats_dupesDelete": ""
-    },
-    
-    "enemybios":{
+	"cheats": {
+		"cheats_disclaimer1": "",
+		"cheats_disclaimer2": "",
+		"cheats_disclaimerYes": "",
+		"cheats_disclaimerNo": "",
 
-        "enemyBios_type": "",
-        "enemyBios_data": "",
-        "enemyBios_strategy": "",
+		"cheats_panelTitle": "",
+		"cheats_cheatsEnabled": "",
 
-        "enemyBios_filth_1": "",
-        "enemyBios_filth_2": "",
-        "enemyBios_filth_3": "",
-        "enemyBios_filth_4": "",
-        
-        "enemyBios_filth_strategy1": "",
-        "enemyBios_filth_strategy2": "",
-        
-        "enemyBios_stray_1": "",
-        "enemyBios_stray_2": "",
-        "enemyBios_stray_3": "",
-        
-        "enemyBios_stray_strategy1": "",
-        "enemyBios_stray_strategy2": "",
-        
-        "enemyBios_schism_1": "",
-        "enemyBios_schism_2": "",
-        
-        "enemyBios_schism_strategy1": "",
-        "enemyBios_schism_strategy2": "",
-        "enemyBios_schism_strategy3": "",
-        
-        "enemyBios_soldier_1": "",
-        "enemyBios_soldier_2": "",
-        "enemyBios_soldier_3": "",
-        
-        "enemyBios_soldier_strategy1": "",
-        "enemyBios_soldier_strategy2": "",
-        "enemyBios_soldier_strategy3": "",
-        
-        "enemyBios_ferryman_1": "",
-        "enemyBios_ferryman_2": "",
-        "enemyBios_ferryman_3": "",
-        "enemyBios_ferryman_4": "",
-        "enemyBios_ferryman_5": "",
-        "enemyBios_ferryman_6": "",
-        
-        "enemyBios_ferryman_strategy1": "",
-        "enemyBios_ferryman_strategy2": "",
-        "enemyBios_ferryman_strategy3": "",
-        "enemyBios_ferryman_strategy4": "",
-        
-        "enemyBios_idol_1": "",
-        "enemyBios_idol_2": "",
-        "enemyBios_idol_3": "",
-        "enemyBios_idol_4": "",
-        
-        "enemyBios_idol_strategy1": "",
-        "enemyBios_idol_strategy2": "",
-        "enemyBios_idol_strategy3": "",
-        
-        "enemyBios_leviathan_1": "",
-        "enemyBios_leviathan_2": "",
-        "enemyBios_leviathan_3": "",
-        "enemyBios_leviathan_4": "",
-        
-        "enemyBios_leviathan_strategy1": "",
-        "enemyBios_leviathan_strategy2": "",
-        "enemyBios_leviathan_strategy3": "",
-        
-        "enemyBios_corpseOfKingMinos_1": "",
-        "enemyBios_corpseOfKingMinos_2": "",
-        "enemyBios_corpseOfKingMinos_3": "",
-        "enemyBios_corpseOfKingMinos_4": "",
-        
-        "enemyBios_corpseOfKingMinos_strategy1": "",
-        "enemyBios_corpseOfKingMinos_strategy2": "",
-        "enemyBios_corpseOfKingMinos_strategy3": "",
-        
-        "enemyBios_stalker_1": "",
-        "enemyBios_stalker_2": "",
-        "enemyBios_stalker_3": "",
-        "enemyBios_stalker_4": "",
-        "enemyBios_stalker_5": "",
-        
-        "enemyBios_stalker_strategy1": "",
-        "enemyBios_stalker_strategy2": "",
-        "enemyBios_stalker_strategy3": "",
-        
-        "enemyBios_insurrectionist_1": "",
-        "enemyBios_insurrectionist_2": "",
-        "enemyBios_insurrectionist_3": "",
-        "enemyBios_insurrectionist_4": "",
-        "enemyBios_insurrectionist_5": "",
-        "enemyBios_insurrectionist_6": "",
-        
-        "enemyBios_insurrectionist_strategy1": "",
-        "enemyBios_insurrectionist_strategy2": "",
-        "enemyBios_insurrectionist_strategy3": "",
-        "enemyBios_insurrectionist_strategy4": "",
-        
-        "enemyBios_swordsmachine_1": "",
-        "enemyBios_swordsmachine_2": "",
-        "enemyBios_swordsmachine_3": "",
-        
-        "enemyBios_swordsmachine_strategy1": "",
-        "enemyBios_swordsmachine_strategy2": "",
-        "enemyBios_swordsmachine_strategy3": "",
-        
-        "enemyBios_drone_1": "",
-        "enemyBios_drone_2": "",
-        "enemyBios_drone_3": "",
-        
-        "enemyBios_drone_strategy1": "",
-        "enemyBios_drone_strategy2": "",
-        "enemyBios_drone_strategy3": "",
-        "enemyBios_drone_strategy4": "",
-        
-        "enemyBios_streetcleaner_1": "",
-        "enemyBios_streetcleaner_2": "",
-        
-        "enemyBios_streetcleaner_strategy1": "",
-        "enemyBios_streetcleaner_strategy2": "",
-        "enemyBios_streetcleaner_strategy3": "",
-        
-        "enemyBios_v2_1": "",
-        "enemyBios_v2_2": "",
-        "enemyBios_v2_3": "",
-        "enemyBios_v2_4": "",
-        "enemyBios_v2_5": "",
-        
-        "enemyBios_v2_strategy1": "",
-        "enemyBios_v2_strategy2": "",
-        "enemyBios_v2_strategy3": "",
-        "enemyBios_v2_strategy4": "",
-        
-        "enemyBios_mindflayer_1": "",
-        "enemyBios_mindflayer_2": "",
-        "enemyBios_mindflayer_3": "",
-        "enemyBios_mindflayer_4": "",
-        "enemyBios_mindflayer_5": "",
-        
-        "enemyBios_mindflayer_strategy1": "",
-        "enemyBios_mindflayer_strategy2": "",
-        "enemyBios_mindflayer_strategy3": "",
-        
-        "enemyBios_sentry_1": "",
-        "enemyBios_sentry_2": "",
-        "enemyBios_sentry_3": "",
-        "enemyBios_sentry_4": "",
-        
-        "enemyBios_sentry_strategy1": "",
-        "enemyBios_sentry_strategy2": "",
-        "enemyBios_sentry_strategy3": "",
-        "enemyBios_sentry_strategy4": "",
-        
-        "enemyBios_v2Second_1": "",
-        "enemyBios_v2Second_2": "",
-        "enemyBios_v2Second_3": "",
-        "enemyBios_v2Second_4": "",
-        
-        "enemyBios_v2Second_strategy1": "",
-        "enemyBios_v2Second_strategy2": "",
-        "enemyBios_v2Second_strategy3": "",
-        
-        "enemyBios_maliciousFace_1": "",
-        "enemyBios_maliciousFace_2": "",
-        "enemyBios_maliciousFace_3": "",
-        
-        "enemyBios_maliciousFace_strategy1": "",
-        "enemyBios_maliciousFace_strategy2": "",
-        
-        "enemyBios_cerberus_1": "",
-        "enemyBios_cerberus_2": "",
-        
-        "enemyBios_cerberus_strategy1": "",
-        "enemyBios_cerberus_strategy2": "",
-        "enemyBios_cerberus_strategy3": "",
-        
-        "enemyBios_hideousMass_1": "",
-        "enemyBios_hideousMass_2": "",
-        
-        "enemyBios_hideousMass_strategy1": "",
-        "enemyBios_hideousMass_strategy2": "",
-        "enemyBios_hideousMass_strategy3": "",
-        "enemyBios_hideousMass_strategy4": "",
-        
-        "enemyBios_gabriel_1": "",
-        "enemyBios_gabriel_2": "",
-        "enemyBios_gabriel_3": "",
-        
-        "enemyBios_gabriel_strategy1": "",
-        "enemyBios_gabriel_strategy2": "",
-        
-        "enemyBios_gabrielSecond_1": "",
-        "enemyBios_gabrielSecond_2": "",
-        "enemyBios_gabrielSecond_3": "",
-        "enemyBios_gabrielSecond_4": "",
-        
-        "enemyBios_gabrielSecond_strategy1": "",
-        "enemyBios_gabrielSecond_strategy2": "",
-        "enemyBios_gabrielSecond_strategy3": "",
-        
-        "enemyBios_virtue_1": "",
-        "enemyBios_virtue_2": "",
-        "enemyBios_virtue_3": "",
-        "enemyBios_virtue_4": "",
-        "enemyBios_virtue_5": "",
-        
-        "enemyBios_virtue_strategy1": "",
-        "enemyBios_virtue_strategy2": "",
-        
-        "enemyBios_somethingWicked_1": "",
-        "enemyBios_somethingWicked_2": "",
-        "enemyBios_somethingWicked_3": "",
-        
-        "enemyBios_somethingWicked_strategy1": "",
-        "enemyBios_somethingWicked_strategy2": "",
-        
-        "enemyBios_fleshPrison_1": "",
-        "enemyBios_fleshPrison_2": "",
-        "enemyBios_fleshPrison_3": "",
-        
-        "enemyBios_fleshPrison_strategy1": "",
-        "enemyBios_fleshPrison_strategy2": "",
-        
-        "enemyBios_minosPrime_1": "",
-        "enemyBios_minosPrime_2": "",
-        "enemyBios_minosPrime_3": "",
-        "enemyBios_minosPrime_4": "",
-        "enemyBios_minosPrime_5": "",
-        "enemyBios_minosPrime_6": "",
-        "enemyBios_minosPrime_7": "",
-        "enemyBios_minosPrime_8": "",
-        
-        "enemyBios_minosPrime_strategy1": "",
-        "enemyBios_minosPrime_strategy2": ""
-    },
-    
-	"tutorial":{
+		"cheats_keepEnabled": "",
+		"cheats_spawnerArm": "",
+		"cheats_teleportMenu": "",
+		"cheats_fullBright": "",
+		"cheats_noclip": "",
+		"cheats_flight": "",
+		"cheats_infiniteWallJumps": "",
+		"cheats_noWeaponCooldown": "",
+		"cheats_infinitePowerUps": "",
+		"cheats_blindEnemies": "",
+		"cheats_disableEnemySpawns": "",
+		"cheats_invincibleEnemies": "",
+		"cheats_killAllEnemies": "",
+		"cheats_quickSave": "",
+		"cheats_quickLoad": "",
+		"cheats_saveMenu": "",
+		"cheats_clear": "",
+		"cheats_rebuildNav": "",
+		"cheats_snapping": "",
+		"cheats_physics": "",
+		"cheats_crashMode": "",
+
+		"cheats_stayActive": "",
+		"cheats_disableOnReload": "",
+		"cheats_equip": "",
+		"cheats_remove": "",
+		"cheats_open": "",
+		"cheats_killAll": "",
+		"cheats_static": "",
+		"cheats_dynamic": "",
+		"cheats_rebuild": "",
+		"cheats_rebuilding": "",
+
+		"cheats_activated": "",
+		"cheats_deactivated": "",
+		"cheats_pressToBind": "",
+		"cheats_delete": "",
+
+		"cheats_navmeshOutdated1": "",
+		"cheats_navmeshOutdated2": "",
+
+		"cheats_spawnerArmSlot": "",
+
+		"cheats_dupesTitle": "",
+		"cheats_dupesSaveNamePrompt": "",
+		"cheats_dupesNewSave": "",
+		"cheats_dupesOpenFolder": "",
+		"cheats_dupesSave": "",
+		"cheats_dupesLoad": "",
+		"cheats_dupesDelete": "",
+
+		"cheats_categoryMeta": "",
+        "cheats_categorySandbox": "",
+        "cheats_categoryGeneral": "",
+        "cheats_categoryEnemies": "",
+        "cheats_categoryWeapons": "",
+        "cheats_categoryItems": "",
+        "cheats_categorySpecial": ""
+	},
+
+	"enemybios": {
+
+		"enemyBios_type": "",
+		"enemyBios_data": "",
+		"enemyBios_strategy": "",
+
+		"enemyBios_filth_1": "",
+		"enemyBios_filth_2": "",
+		"enemyBios_filth_3": "",
+		"enemyBios_filth_4": "",
+
+		"enemyBios_filth_strategy1": "",
+		"enemyBios_filth_strategy2": "",
+
+		"enemyBios_stray_1": "",
+		"enemyBios_stray_2": "",
+		"enemyBios_stray_3": "",
+
+		"enemyBios_stray_strategy1": "",
+		"enemyBios_stray_strategy2": "",
+
+		"enemyBios_schism_1": "",
+		"enemyBios_schism_2": "",
+
+		"enemyBios_schism_strategy1": "",
+		"enemyBios_schism_strategy2": "",
+		"enemyBios_schism_strategy3": "",
+
+		"enemyBios_soldier_1": "",
+		"enemyBios_soldier_2": "",
+		"enemyBios_soldier_3": "",
+
+		"enemyBios_soldier_strategy1": "",
+		"enemyBios_soldier_strategy2": "",
+		"enemyBios_soldier_strategy3": "",
+
+		"enemyBios_ferryman_1": "",
+		"enemyBios_ferryman_2": "",
+		"enemyBios_ferryman_3": "",
+		"enemyBios_ferryman_4": "",
+		"enemyBios_ferryman_5": "",
+		"enemyBios_ferryman_6": "",
+
+		"enemyBios_ferryman_strategy1": "",
+		"enemyBios_ferryman_strategy2": "",
+		"enemyBios_ferryman_strategy3": "",
+		"enemyBios_ferryman_strategy4": "",
+
+		"enemyBios_idol_1": "",
+		"enemyBios_idol_2": "",
+		"enemyBios_idol_3": "",
+		"enemyBios_idol_4": "",
+
+		"enemyBios_idol_strategy1": "",
+		"enemyBios_idol_strategy2": "",
+		"enemyBios_idol_strategy3": "",
+
+		"enemyBios_leviathan_1": "",
+		"enemyBios_leviathan_2": "",
+		"enemyBios_leviathan_3": "",
+		"enemyBios_leviathan_4": "",
+
+		"enemyBios_leviathan_strategy1": "",
+		"enemyBios_leviathan_strategy2": "",
+		"enemyBios_leviathan_strategy3": "",
+
+		"enemyBios_corpseOfKingMinos_1": "",
+		"enemyBios_corpseOfKingMinos_2": "",
+		"enemyBios_corpseOfKingMinos_3": "",
+		"enemyBios_corpseOfKingMinos_4": "",
+
+		"enemyBios_corpseOfKingMinos_strategy1": "",
+		"enemyBios_corpseOfKingMinos_strategy2": "",
+		"enemyBios_corpseOfKingMinos_strategy3": "",
+
+		"enemyBios_stalker_1": "",
+		"enemyBios_stalker_2": "",
+		"enemyBios_stalker_3": "",
+		"enemyBios_stalker_4": "",
+		"enemyBios_stalker_5": "",
+
+		"enemyBios_stalker_strategy1": "",
+		"enemyBios_stalker_strategy2": "",
+		"enemyBios_stalker_strategy3": "",
+
+		"enemyBios_insurrectionist_1": "",
+		"enemyBios_insurrectionist_2": "",
+		"enemyBios_insurrectionist_3": "",
+		"enemyBios_insurrectionist_4": "",
+		"enemyBios_insurrectionist_5": "",
+		"enemyBios_insurrectionist_6": "",
+
+		"enemyBios_insurrectionist_strategy1": "",
+		"enemyBios_insurrectionist_strategy2": "",
+		"enemyBios_insurrectionist_strategy3": "",
+		"enemyBios_insurrectionist_strategy4": "",
+
+		"enemyBios_swordsmachine_1": "",
+		"enemyBios_swordsmachine_2": "",
+		"enemyBios_swordsmachine_3": "",
+
+		"enemyBios_swordsmachine_strategy1": "",
+		"enemyBios_swordsmachine_strategy2": "",
+		"enemyBios_swordsmachine_strategy3": "",
+
+		"enemyBios_drone_1": "",
+		"enemyBios_drone_2": "",
+		"enemyBios_drone_3": "",
+
+		"enemyBios_drone_strategy1": "",
+		"enemyBios_drone_strategy2": "",
+		"enemyBios_drone_strategy3": "",
+		"enemyBios_drone_strategy4": "",
+
+		"enemyBios_streetcleaner_1": "",
+		"enemyBios_streetcleaner_2": "",
+
+		"enemyBios_streetcleaner_strategy1": "",
+		"enemyBios_streetcleaner_strategy2": "",
+		"enemyBios_streetcleaner_strategy3": "",
+
+		"enemyBios_v2_1": "",
+		"enemyBios_v2_2": "",
+		"enemyBios_v2_3": "",
+		"enemyBios_v2_4": "",
+		"enemyBios_v2_5": "",
+
+		"enemyBios_v2_strategy1": "",
+		"enemyBios_v2_strategy2": "",
+		"enemyBios_v2_strategy3": "",
+		"enemyBios_v2_strategy4": "",
+
+		"enemyBios_mindflayer_1": "",
+		"enemyBios_mindflayer_2": "",
+		"enemyBios_mindflayer_3": "",
+		"enemyBios_mindflayer_4": "",
+		"enemyBios_mindflayer_5": "",
+
+		"enemyBios_mindflayer_strategy1": "",
+		"enemyBios_mindflayer_strategy2": "",
+		"enemyBios_mindflayer_strategy3": "",
+
+		"enemyBios_sentry_1": "",
+		"enemyBios_sentry_2": "",
+		"enemyBios_sentry_3": "",
+		"enemyBios_sentry_4": "",
+
+		"enemyBios_sentry_strategy1": "",
+		"enemyBios_sentry_strategy2": "",
+		"enemyBios_sentry_strategy3": "",
+		"enemyBios_sentry_strategy4": "",
+
+		"enemyBios_v2Second_1": "",
+		"enemyBios_v2Second_2": "",
+		"enemyBios_v2Second_3": "",
+		"enemyBios_v2Second_4": "",
+
+		"enemyBios_v2Second_strategy1": "",
+		"enemyBios_v2Second_strategy2": "",
+		"enemyBios_v2Second_strategy3": "",
+
+		"enemyBios_maliciousFace_1": "",
+		"enemyBios_maliciousFace_2": "",
+		"enemyBios_maliciousFace_3": "",
+
+		"enemyBios_maliciousFace_strategy1": "",
+		"enemyBios_maliciousFace_strategy2": "",
+
+		"enemyBios_cerberus_1": "",
+		"enemyBios_cerberus_2": "",
+
+		"enemyBios_cerberus_strategy1": "",
+		"enemyBios_cerberus_strategy2": "",
+		"enemyBios_cerberus_strategy3": "",
+
+		"enemyBios_hideousMass_1": "",
+		"enemyBios_hideousMass_2": "",
+
+		"enemyBios_hideousMass_strategy1": "",
+		"enemyBios_hideousMass_strategy2": "",
+		"enemyBios_hideousMass_strategy3": "",
+		"enemyBios_hideousMass_strategy4": "",
+
+		"enemyBios_gabriel_1": "",
+		"enemyBios_gabriel_2": "",
+		"enemyBios_gabriel_3": "",
+
+		"enemyBios_gabriel_strategy1": "",
+		"enemyBios_gabriel_strategy2": "",
+
+		"enemyBios_gabrielSecond_1": "",
+		"enemyBios_gabrielSecond_2": "",
+		"enemyBios_gabrielSecond_3": "",
+		"enemyBios_gabrielSecond_4": "",
+
+		"enemyBios_gabrielSecond_strategy1": "",
+		"enemyBios_gabrielSecond_strategy2": "",
+		"enemyBios_gabrielSecond_strategy3": "",
+
+		"enemyBios_virtue_1": "",
+		"enemyBios_virtue_2": "",
+		"enemyBios_virtue_3": "",
+		"enemyBios_virtue_4": "",
+		"enemyBios_virtue_5": "",
+
+		"enemyBios_virtue_strategy1": "",
+		"enemyBios_virtue_strategy2": "",
+
+		"enemyBios_somethingWicked_1": "",
+		"enemyBios_somethingWicked_2": "",
+		"enemyBios_somethingWicked_3": "",
+
+		"enemyBios_somethingWicked_strategy1": "",
+		"enemyBios_somethingWicked_strategy2": "",
+
+		"enemyBios_fleshPrison_1": "",
+		"enemyBios_fleshPrison_2": "",
+		"enemyBios_fleshPrison_3": "",
+
+		"enemyBios_fleshPrison_strategy1": "",
+		"enemyBios_fleshPrison_strategy2": "",
+
+		"enemyBios_minosPrime_1": "",
+		"enemyBios_minosPrime_2": "",
+		"enemyBios_minosPrime_3": "",
+		"enemyBios_minosPrime_4": "",
+		"enemyBios_minosPrime_5": "",
+		"enemyBios_minosPrime_6": "",
+		"enemyBios_minosPrime_7": "",
+		"enemyBios_minosPrime_8": "",
+
+		"enemyBios_minosPrime_strategy1": "",
+		"enemyBios_minosPrime_strategy2": ""
+	},
+
+	"tutorial": {
 		"tutorial_introStartup1": "",
 		"tutorial_introStartup2": "",
 		"tutorial_introVersion1": "",
 		"tutorial_introVersion2": "",
 		"tutorial_introCalibration1": "",
 		"tutorial_introCalibration2": "",
-        "tutorial_recalibrationPrompt": "",
-        "tutorial_calibrationAudio": "",
-        "tutorial_calibrationVideo": "",
-        "tutorial_calibrationMechanics": "",
-        "tutorial_calibrationComplete1": "",
-        "tutorial_calibrationComplete2": "",
+		"tutorial_recalibrationPrompt": "",
+		"tutorial_calibrationAudio": "",
+		"tutorial_calibrationVideo": "",
+		"tutorial_calibrationMechanics": "",
+		"tutorial_calibrationComplete1": "",
+		"tutorial_calibrationComplete2": "",
 		"tutorial_introReminder": "",
-        "tutorial_systemsOperational": "",
+		"tutorial_systemsOperational": "",
 		"tutorial_introLoadStatus": "",
-        "tutorial_introID1": "",
+		"tutorial_introID1": "",
 		"tutorial_introID2": "",
 		"tutorial_introLocation1": "",
 		"tutorial_introLocation2": "",
@@ -1565,20 +1573,20 @@
 		"tutorial_introRed2": "",
 		"tutorial_introRed3": "",
 
-        "tutorial_audioCalibrationTitle": "",
-        "tutorial_audioCalibrationWarning1": "",
-        "tutorial_audioCalibrationWarning2": "",
-        "tutorial_audioCalibrationWarning3": "",
-        "tutorial_audioCalibrationWarningPromptYes": "",
-        "tutorial_audioCalibrationWarningPromptNo": "",
+		"tutorial_audioCalibrationTitle": "",
+		"tutorial_audioCalibrationWarning1": "",
+		"tutorial_audioCalibrationWarning2": "",
+		"tutorial_audioCalibrationWarning3": "",
+		"tutorial_audioCalibrationWarningPromptYes": "",
+		"tutorial_audioCalibrationWarningPromptNo": "",
 
-        "tutorial_videoCalibrationTitle": "",
-        "tutorial_videoCalibrationPcDescription": "",
-        "tutorial_videoCalibrationPsxDescription": "",
+		"tutorial_videoCalibrationTitle": "",
+		"tutorial_videoCalibrationPcDescription": "",
+		"tutorial_videoCalibrationPsxDescription": "",
 
-        "tutorial_controllerCalibrationTitle": "",
-        "tutorial_controllerCalibrationSubtitle": "",
-        "tutorial_controllerCalibrationTooltip": "",
+		"tutorial_controllerCalibrationTitle": "",
+		"tutorial_controllerCalibrationSubtitle": "",
+		"tutorial_controllerCalibrationTooltip": "",
 
 		"tutorial_punch1": "",
 		"tutorial_punch2": "",
@@ -1596,22 +1604,22 @@
 		"tutorial_orb1": "",
 		"tutorial_orb2": ""
 	},
-	"prelude":{
+	"prelude": {
 		"prelude_first_openingCredits1": "",
 		"prelude_first_openingCredits2": "",
-        "prelude_first_pipeClip": "",
+		"prelude_first_pipeClip": "",
 		"prelude_first_revolverPierce1": "",
 		"prelude_first_revolverPierce2": "",
 		"prelude_first_parry": "",
-        
-        "prelude_first_hardDamage1": "",
-        "prelude_first_hardDamage2": "",
-        
+
+		"prelude_first_hardDamage1": "",
+		"prelude_first_hardDamage2": "",
+
 		"prelude_first_groundSlam1": "",
 		"prelude_first_groundSlam2": "",
 
 		"prelude_second_shop": "",
-        "prelude_second_doorClip": "",
+		"prelude_second_doorClip": "",
 		"prelude_second_changeEquipped": "",
 
 		"prelude_third_needShotgun": "",
@@ -1622,14 +1630,14 @@
 
 		"prelude_secret_somethingWicked": ""
 	},
-	"act1":{
+	"act1": {
 		"act1_limboFirst_items1": "",
 		"act1_limboFirst_items2": "",
 		"act1_limboFirst_nailgun1": "",
 		"act1_limboFirst_nailgun2": "",
 		"act1_limboFirst_nailgun3": "",
-        
-        "act1_limboSecond_blueAttack": "",
+
+		"act1_limboSecond_blueAttack": "",
 
 		"act1_limboThird_splitDoor1": "",
 		"act1_limboThird_splitDoor2": "",
@@ -1640,7 +1648,7 @@
 		"act1_limboFourth_alternateRevolver": "",
 		"act1_limboFourth_newArm": "",
 
-        "act1_limboSecret_noclipSkip": "",
+		"act1_limboSecret_noclipSkip": "",
 
 		"act1_lustFirst_knuckleblaster1": "",
 		"act1_lustFirst_knuckleblaster2": "",
@@ -1654,251 +1662,251 @@
 
 		"act1_secret": ""
 	},
-	"act2":{
+	"act2": {
 		"act2_greedSecond_sand": "",
 
-        "act2_greedThird_wallClip": "",
+		"act2_greedThird_wallClip": "",
 		"act2_greedThird_troll1": "",
 		"act2_greedThird_troll2": "",
-        "act2_greedThird_tombOfKings": "",
+		"act2_greedThird_tombOfKings": "",
 
 		"act2_greedFourth_v2": "",
 		"act2_greedFourth_whiplash1": "",
 		"act2_greedFourth_whiplash2": "",
 		"act2_greedFourth_whiplash3": "",
-        
-        "act2_greedFourth_whiplashHardDamage1": "",
+
+		"act2_greedFourth_whiplashHardDamage1": "",
 		"act2_greedFourth_whiplashHardDamage2": "",
 
 		"act2_greedSecret_holdToJump1": "",
-        "act2_greedSecret_holdToJump2": "",
-        "act2_greedSecret_transactionComplete1": "",
-        "act2_greedSecret_transactionComplete2": "",
-        
-        "act2_greed_secretDoor": "",
-        
-        "act2_wrathFirst_slingshot": "",
-        "act2_wrathFirst_whiplashUnderwater": "",
-        "act2_wrathFirst_waterDrained": "",
-        "act2_wrathFirst_sentry": "",
-        
-        "act2_wrathSecond_idol": "",
-        "act2_wrathSecond_neptune": "",
-        "act2_wrathSecond_jakito1": "",
-        "act2_wrathSecond_jakito2": "",
-        "act2_wrathSecond_jakito3": "",
-        
-        "act2_wrathThird_rocketLauncher": "",
-        "act2_wrathThird_rocketLauncherMidair": "",
-        "act2_wrathThird_soldierBlock": "",
-        "act2_wrathThird_hank": "",
+		"act2_greedSecret_holdToJump2": "",
+		"act2_greedSecret_transactionComplete1": "",
+		"act2_greedSecret_transactionComplete2": "",
 
-        "act2_heresyFirst_armboy": "",
-        
-        "act2_secretNotReady": ""
+		"act2_greed_secretDoor": "",
+
+		"act2_wrathFirst_slingshot": "",
+		"act2_wrathFirst_whiplashUnderwater": "",
+		"act2_wrathFirst_waterDrained": "",
+		"act2_wrathFirst_sentry": "",
+
+		"act2_wrathSecond_idol": "",
+		"act2_wrathSecond_neptune": "",
+		"act2_wrathSecond_jakito1": "",
+		"act2_wrathSecond_jakito2": "",
+		"act2_wrathSecond_jakito3": "",
+
+		"act2_wrathThird_rocketLauncher": "",
+		"act2_wrathThird_rocketLauncherMidair": "",
+		"act2_wrathThird_soldierBlock": "",
+		"act2_wrathThird_hank": "",
+
+		"act2_heresyFirst_armboy": "",
+
+		"act2_secretNotReady": ""
 	},
-    "primeSanctum":{
-        "primeSanctum_first_secretText1": "",
-        "primeSanctum_first_secretText2": "",
-        "primeSanctum_first_secretText3": "",
-        "primeSanctum_first_secretText4": "",
-        "primeSanctum_first_secretText5": "",
-        "primeSanctum_first_secretText6": "",
-        "primeSanctum_first_secretText7": "",
-        "primeSanctum_first_secretText8": "",
-        "primeSanctum_first_secretText9": ""
-    },
-    "secretLevels":{
-        "secretLevels_prelude_somethingWicked": "",
-        
-        "secretLevels_prelude_testamentTitle": "",
-        "secretLevels_prelude_testament1": "",
-        "secretLevels_prelude_testament2": "",
-        "secretLevels_prelude_testament3": "",
-        "secretLevels_prelude_testament4": "",
-        
-        "secretLevels_first_testamentTitle": "",
-        "secretLevels_first_testament1": "",
-        "secretLevels_first_testament2": "",
-        "secretLevels_first_testament3": "",
-        "secretLevels_first_testament4": "",
-        
-        "secretLevels_fourth_testamentTitle": "",
-        "secretLevels_fourth_testament1": "",
-        "secretLevels_fourth_testament2": "",
-        "secretLevels_fourth_testament3": "",
-        "secretLevels_fourth_testament4": "",
-        "secretLevels_fourth_testament5": "",
-        "secretLevels_fourth_testament6": "",
-        "secretLevels_fourth_testament7": "",
-        
-        "secretLevels_complete1": "",
-        "secretLevels_complete2": ""
-    },
-	
-    "subtitles":{
-        
-        "subtitles_gabriel_intro1": "",
-        "subtitles_gabriel_intro2": "",
-        "subtitles_gabriel_intro3": "",
-        "subtitles_gabriel_intro4": "",
-        "subtitles_gabriel_intro5": "",
-        "subtitles_gabriel_intro6": "",
-        "subtitles_gabriel_intro7": "",
-        "subtitles_gabriel_intro8": "",
-        "subtitles_gabriel_fightStart": "",
-        
-        "subtitles_gabriel_taunt1": "",
-        "subtitles_gabriel_taunt2": "",
-        "subtitles_gabriel_taunt3": "",
-        "subtitles_gabriel_taunt4": "",
-        "subtitles_gabriel_taunt5": "",
-        "subtitles_gabriel_taunt6": "",
-        "subtitles_gabriel_taunt7": "",
-        "subtitles_gabriel_taunt8": "",
-        "subtitles_gabriel_taunt9": "",
-        "subtitles_gabriel_taunt10": "",
-        "subtitles_gabriel_taunt11": "",
-        "subtitles_gabriel_taunt12": "",
-        
-        "subtitles_gabriel_phaseChange": "",
-        
-        "subtitles_gabriel_defeated1": "",
-        "subtitles_gabriel_defeated2": "",
-        "subtitles_gabriel_defeated3": "",
-        "subtitles_gabriel_defeated4": "",
-        "subtitles_gabriel_defeated5": "",
-        "subtitles_gabriel_defeated6": "",
-        "subtitles_gabriel_defeated7": "",
-        "subtitles_gabriel_defeated8": "",
-        
-        "subtitles_mandalore_intro1": "",
-        "subtitles_mandalore_intro2": "",
-        
-        "subtitles_mandalore_taunt1": "",
-        "subtitles_mandalore_taunt2": "",
-        "subtitles_mandalore_taunt3": "",
-        "subtitles_mandalore_taunt4": "",
-        "subtitles_mandalore_taunt5": "",
-        
-        "subtitles_mandalore_attack1": "",
-        "subtitles_mandalore_attack2": "",
-        
-        "subtitles_mandalore_phaseChangeFirst1": "",
-        "subtitles_mandalore_phaseChangeFirst2": "",
-        "subtitles_mandalore_phaseChangeSecond1": "",
-        "subtitles_mandalore_phaseChangeSecond2": "",
-        "subtitles_mandalore_phaseChangeThird1": "",
-        "subtitles_mandalore_phaseChangeThird2": "",
-        
-        "subtitles_mandalore_defeated": "",
-        
-        "subtitles_minosPrime_intro1": "",
-        "subtitles_minosPrime_intro2": "",
-        "subtitles_minosPrime_intro3": "",
-        "subtitles_minosPrime_intro4": "",
-        "subtitles_minosPrime_intro5": "",
-        "subtitles_minosPrime_intro6": "",
-        "subtitles_minosPrime_intro7": "",
-        "subtitles_minosPrime_intro8": "",
-        "subtitles_minosPrime_intro9": "",
-        "subtitles_minosPrime_intro10": "",
-        "subtitles_minosPrime_intro11": "",
-        
-        "subtitles_minosPrime_attack1": "",
-        "subtitles_minosPrime_attack2": "",
-        "subtitles_minosPrime_attack3": "",
-        "subtitles_minosPrime_attack4": "",
-        "subtitles_minosPrime_attack5": "",
-        
-        "subtitles_minosPrime_taunt1": "",
-        "subtitles_minosPrime_phaseChange": "",
+	"primeSanctum": {
+		"primeSanctum_first_secretText1": "",
+		"primeSanctum_first_secretText2": "",
+		"primeSanctum_first_secretText3": "",
+		"primeSanctum_first_secretText4": "",
+		"primeSanctum_first_secretText5": "",
+		"primeSanctum_first_secretText6": "",
+		"primeSanctum_first_secretText7": "",
+		"primeSanctum_first_secretText8": "",
+		"primeSanctum_first_secretText9": ""
+	},
+	"secretLevels": {
+		"secretLevels_prelude_somethingWicked": "",
 
-        
-        "subtitles_minosPrime_defeated1": "",
-        "subtitles_minosPrime_defeated2": "",
-        "subtitles_minosPrime_defeated3": "",
-        "subtitles_minosPrime_defeated4": "",
-        
-        "subtitles_gabrielBoat1": "",
-        "subtitles_gabrielBoat2": "",
-        "subtitles_gabrielBoat3": "",
-        "subtitles_gabrielBoat4": "",
-        "subtitles_gabrielBoat5": "",
-        
-        "subtitles_gabrielHeresy1": "",
-        "subtitles_gabrielHeresy2": "",
-        "subtitles_gabrielHeresy3": "",
-        "subtitles_gabrielHeresy4": "",
-        
-        "subtitles_gabrielSecondIntro1": "",
-        "subtitles_gabrielSecondIntro2": "",
-        "subtitles_gabrielSecondIntro3": "",
-        "subtitles_gabrielSecondIntro4": "",
-        "subtitles_gabrielSecondIntro5": "",
-        "subtitles_gabrielSecondIntro6": "",
-        "subtitles_gabrielSecondIntro7": "",
-        "subtitles_gabrielSecondIntro8": "",
-        "subtitles_gabrielSecondIntro9": "",
-        "subtitles_gabrielSecondIntro10": "",
-        "subtitles_gabrielSecondIntro11": "",
-        "subtitles_gabrielSecondIntro12": "",
-        
-        "subtitles_gabrielSecondFight1": "",
-        "subtitles_gabrielSecondFight2": "",
-        "subtitles_gabrielSecondFight3": "",
-        "subtitles_gabrielSecondFight4": "",
-        "subtitles_gabrielSecondFight5": "",
-        "subtitles_gabrielSecondFight6": "",
-        "subtitles_gabrielSecondFight7": "",
-        "subtitles_gabrielSecondFight8": "",
-        "subtitles_gabrielSecondFight9": "",
-        
-        "subtitles_gabrielSecondPhaseChange": "",
-        
-        "subtitles_gabrielSecondTaunt1": "",
-        "subtitles_gabrielSecondTaunt2": "",
-        "subtitles_gabrielSecondTaunt3": "",
-        "subtitles_gabrielSecondTaunt4": "",
-        "subtitles_gabrielSecondTaunt5": "",
-        "subtitles_gabrielSecondTaunt6": "",
-        "subtitles_gabrielSecondTaunt7": "",
-        "subtitles_gabrielSecondTaunt8": "",
-        "subtitles_gabrielSecondTaunt9": "",
-        "subtitles_gabrielSecondTaunt10": "",
-        "subtitles_gabrielSecondTaunt11": "",
-        "subtitles_gabrielSecondTaunt12": "",
-        "subtitles_gabrielSecondTaunt13": "",
-        
-        "subtitles_gabrielSecondDefeated1": "",
-        "subtitles_gabrielSecondDefeated2": "",
-        "subtitles_gabrielSecondDefeated3": "",
-        "subtitles_gabrielSecondDefeated4": "",
-        "subtitles_gabrielSecondDefeated5": "",
-        "subtitles_gabrielSecondDefeated6": "",
-        "subtitles_gabrielSecondDefeated7": "",
-        "subtitles_gabrielSecondDefeated8": "",
-        "subtitles_gabrielSecondDefeated9": "",
-        "subtitles_gabrielSecondDefeated10": "",
-        "subtitles_gabrielSecondDefeated11": ""
-        
-    },
-    
-    "misc": {
-        "hud_noArm1": "",
-        "hud_noArm2": "",
-        "hud_majorAssists": "",
-        "hud_overhealOrb1": "",
-        "hud_overhealOrb2": "",
-        "hud_itemGrabError": "",
-        "hud_levelStats1": "",
-        "hud_levelStats2": "",
-        "hud_outOfBounds": "",
-        "hud_clashMode": "",
-        "hud_weaponVariation": "",
-        
-        "loading": "",
-        
+		"secretLevels_prelude_testamentTitle": "",
+		"secretLevels_prelude_testament1": "",
+		"secretLevels_prelude_testament2": "",
+		"secretLevels_prelude_testament3": "",
+		"secretLevels_prelude_testament4": "",
+
+		"secretLevels_first_testamentTitle": "",
+		"secretLevels_first_testament1": "",
+		"secretLevels_first_testament2": "",
+		"secretLevels_first_testament3": "",
+		"secretLevels_first_testament4": "",
+
+		"secretLevels_fourth_testamentTitle": "",
+		"secretLevels_fourth_testament1": "",
+		"secretLevels_fourth_testament2": "",
+		"secretLevels_fourth_testament3": "",
+		"secretLevels_fourth_testament4": "",
+		"secretLevels_fourth_testament5": "",
+		"secretLevels_fourth_testament6": "",
+		"secretLevels_fourth_testament7": "",
+
+		"secretLevels_complete1": "",
+		"secretLevels_complete2": ""
+	},
+
+	"subtitles": {
+
+		"subtitles_gabriel_intro1": "",
+		"subtitles_gabriel_intro2": "",
+		"subtitles_gabriel_intro3": "",
+		"subtitles_gabriel_intro4": "",
+		"subtitles_gabriel_intro5": "",
+		"subtitles_gabriel_intro6": "",
+		"subtitles_gabriel_intro7": "",
+		"subtitles_gabriel_intro8": "",
+		"subtitles_gabriel_fightStart": "",
+
+		"subtitles_gabriel_taunt1": "",
+		"subtitles_gabriel_taunt2": "",
+		"subtitles_gabriel_taunt3": "",
+		"subtitles_gabriel_taunt4": "",
+		"subtitles_gabriel_taunt5": "",
+		"subtitles_gabriel_taunt6": "",
+		"subtitles_gabriel_taunt7": "",
+		"subtitles_gabriel_taunt8": "",
+		"subtitles_gabriel_taunt9": "",
+		"subtitles_gabriel_taunt10": "",
+		"subtitles_gabriel_taunt11": "",
+		"subtitles_gabriel_taunt12": "",
+
+		"subtitles_gabriel_phaseChange": "",
+
+		"subtitles_gabriel_defeated1": "",
+		"subtitles_gabriel_defeated2": "",
+		"subtitles_gabriel_defeated3": "",
+		"subtitles_gabriel_defeated4": "",
+		"subtitles_gabriel_defeated5": "",
+		"subtitles_gabriel_defeated6": "",
+		"subtitles_gabriel_defeated7": "",
+		"subtitles_gabriel_defeated8": "",
+
+		"subtitles_mandalore_intro1": "",
+		"subtitles_mandalore_intro2": "",
+
+		"subtitles_mandalore_taunt1": "",
+		"subtitles_mandalore_taunt2": "",
+		"subtitles_mandalore_taunt3": "",
+		"subtitles_mandalore_taunt4": "",
+		"subtitles_mandalore_taunt5": "",
+
+		"subtitles_mandalore_attack1": "",
+		"subtitles_mandalore_attack2": "",
+
+		"subtitles_mandalore_phaseChangeFirst1": "",
+		"subtitles_mandalore_phaseChangeFirst2": "",
+		"subtitles_mandalore_phaseChangeSecond1": "",
+		"subtitles_mandalore_phaseChangeSecond2": "",
+		"subtitles_mandalore_phaseChangeThird1": "",
+		"subtitles_mandalore_phaseChangeThird2": "",
+
+		"subtitles_mandalore_defeated": "",
+
+		"subtitles_minosPrime_intro1": "",
+		"subtitles_minosPrime_intro2": "",
+		"subtitles_minosPrime_intro3": "",
+		"subtitles_minosPrime_intro4": "",
+		"subtitles_minosPrime_intro5": "",
+		"subtitles_minosPrime_intro6": "",
+		"subtitles_minosPrime_intro7": "",
+		"subtitles_minosPrime_intro8": "",
+		"subtitles_minosPrime_intro9": "",
+		"subtitles_minosPrime_intro10": "",
+		"subtitles_minosPrime_intro11": "",
+
+		"subtitles_minosPrime_attack1": "",
+		"subtitles_minosPrime_attack2": "",
+		"subtitles_minosPrime_attack3": "",
+		"subtitles_minosPrime_attack4": "",
+		"subtitles_minosPrime_attack5": "",
+
+		"subtitles_minosPrime_taunt1": "",
+		"subtitles_minosPrime_phaseChange": "",
+
+
+		"subtitles_minosPrime_defeated1": "",
+		"subtitles_minosPrime_defeated2": "",
+		"subtitles_minosPrime_defeated3": "",
+		"subtitles_minosPrime_defeated4": "",
+
+		"subtitles_gabrielBoat1": "",
+		"subtitles_gabrielBoat2": "",
+		"subtitles_gabrielBoat3": "",
+		"subtitles_gabrielBoat4": "",
+		"subtitles_gabrielBoat5": "",
+
+		"subtitles_gabrielHeresy1": "",
+		"subtitles_gabrielHeresy2": "",
+		"subtitles_gabrielHeresy3": "",
+		"subtitles_gabrielHeresy4": "",
+
+		"subtitles_gabrielSecondIntro1": "",
+		"subtitles_gabrielSecondIntro2": "",
+		"subtitles_gabrielSecondIntro3": "",
+		"subtitles_gabrielSecondIntro4": "",
+		"subtitles_gabrielSecondIntro5": "",
+		"subtitles_gabrielSecondIntro6": "",
+		"subtitles_gabrielSecondIntro7": "",
+		"subtitles_gabrielSecondIntro8": "",
+		"subtitles_gabrielSecondIntro9": "",
+		"subtitles_gabrielSecondIntro10": "",
+		"subtitles_gabrielSecondIntro11": "",
+		"subtitles_gabrielSecondIntro12": "",
+
+		"subtitles_gabrielSecondFight1": "",
+		"subtitles_gabrielSecondFight2": "",
+		"subtitles_gabrielSecondFight3": "",
+		"subtitles_gabrielSecondFight4": "",
+		"subtitles_gabrielSecondFight5": "",
+		"subtitles_gabrielSecondFight6": "",
+		"subtitles_gabrielSecondFight7": "",
+		"subtitles_gabrielSecondFight8": "",
+		"subtitles_gabrielSecondFight9": "",
+
+		"subtitles_gabrielSecondPhaseChange": "",
+
+		"subtitles_gabrielSecondTaunt1": "",
+		"subtitles_gabrielSecondTaunt2": "",
+		"subtitles_gabrielSecondTaunt3": "",
+		"subtitles_gabrielSecondTaunt4": "",
+		"subtitles_gabrielSecondTaunt5": "",
+		"subtitles_gabrielSecondTaunt6": "",
+		"subtitles_gabrielSecondTaunt7": "",
+		"subtitles_gabrielSecondTaunt8": "",
+		"subtitles_gabrielSecondTaunt9": "",
+		"subtitles_gabrielSecondTaunt10": "",
+		"subtitles_gabrielSecondTaunt11": "",
+		"subtitles_gabrielSecondTaunt12": "",
+		"subtitles_gabrielSecondTaunt13": "",
+
+		"subtitles_gabrielSecondDefeated1": "",
+		"subtitles_gabrielSecondDefeated2": "",
+		"subtitles_gabrielSecondDefeated3": "",
+		"subtitles_gabrielSecondDefeated4": "",
+		"subtitles_gabrielSecondDefeated5": "",
+		"subtitles_gabrielSecondDefeated6": "",
+		"subtitles_gabrielSecondDefeated7": "",
+		"subtitles_gabrielSecondDefeated8": "",
+		"subtitles_gabrielSecondDefeated9": "",
+		"subtitles_gabrielSecondDefeated10": "",
+		"subtitles_gabrielSecondDefeated11": ""
+
+	},
+
+	"misc": {
+		"hud_noArm1": "",
+		"hud_noArm2": "",
+		"hud_majorAssists": "",
+		"hud_overhealOrb1": "",
+		"hud_overhealOrb2": "",
+		"hud_itemGrabError": "",
+		"hud_levelStats1": "",
+		"hud_levelStats2": "",
+		"hud_outOfBounds": "",
+		"hud_clashMode": "",
+		"hud_weaponVariation": "",
+
+		"loading": "",
+
 		"stats_time": "",
 		"stats_kills": "",
 		"stats_style": "",
@@ -1913,58 +1921,58 @@
 		"hellmap_wrath": "",
 		"hellmap_heresy": "",
 		"hellmap_prime": "",
-        "hellmap_act1crescendo": "",
-        "hellmap_act1climax": "",
-        "hellmap_act2crescendo": "",
-        "hellmap_act2climax": "",
+		"hellmap_act1crescendo": "",
+		"hellmap_act1climax": "",
+		"hellmap_act2crescendo": "",
+		"hellmap_act2climax": "",
 
 		"hellmap_first": "",
 		"hellmap_second": "",
 		"hellmap_third": "",
 		"hellmap_fourth": "",
 		"hellmap_climax": "",
-        
-        "levelstats_time": "",
-        "levelstats_kills": "",
-        "levelstats_style": "",
-        "levelstats_secrets": "",
-        "levelstats_challenge": "",
-        "levelstats_majorAssists": "",
-        "levelstats_boxes": "",
-        
-        "state_activated": "",
-        "state_deactivated": "",
-        "state_yes": "",
-        "state_no": "",
-        
-        "controls_leftClick": "",
-        "controls_middleClick": "",
-        "controls_rightClick": "",
-        
-        "endStats_cheatsUsed": "",
-        "endStats_assistsUsed": "",
-        "endStats_noRestarts": "",
-        "endStats_restarts": "",
-        "endstats_noDamage": "",
-        
-        "weapons_unavailable": "",
-        "weapons_alreadyBought": "",
-        "weapons_underConstruction": "",
 
-        "pressToSkip": "",
+		"levelstats_time": "",
+		"levelstats_kills": "",
+		"levelstats_style": "",
+		"levelstats_secrets": "",
+		"levelstats_challenge": "",
+		"levelstats_majorAssists": "",
+		"levelstats_boxes": "",
 
-        "youDied1": "",
-        "youDied2": "",
-                
-        "classicHud_health": "",
-        "classicHud_stamina": "",
-        "classicHud_weapon": "",
-        "classicHud_arm": "",
-        "classicHud_railcannonMeter": "",
+		"state_activated": "",
+		"state_deactivated": "",
+		"state_yes": "",
+		"state_no": "",
 
-        "earlyAccessEnd1": "",
-        "earlyAccessEnd2": "",
-        "earlyAccessEnd3": ""
+		"controls_leftClick": "",
+		"controls_middleClick": "",
+		"controls_rightClick": "",
+
+		"endStats_cheatsUsed": "",
+		"endStats_assistsUsed": "",
+		"endStats_noRestarts": "",
+		"endStats_restarts": "",
+		"endstats_noDamage": "",
+
+		"weapons_unavailable": "",
+		"weapons_alreadyBought": "",
+		"weapons_underConstruction": "",
+
+		"pressToSkip": "",
+
+		"youDied1": "",
+		"youDied2": "",
+
+		"classicHud_health": "",
+		"classicHud_stamina": "",
+		"classicHud_weapon": "",
+		"classicHud_arm": "",
+		"classicHud_railcannonMeter": "",
+
+		"earlyAccessEnd1": "",
+		"earlyAccessEnd2": "",
+		"earlyAccessEnd3": ""
 
 	}
 }

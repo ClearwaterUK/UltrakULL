@@ -10,6 +10,36 @@ using System.Linq;
 
 namespace UltrakULL.Harmony_Patches
 {
+    [HarmonyPatch(typeof(CheatsManager), "RebuildMenu")]
+    public static class RebuildMenu_Patch
+    {
+        [HarmonyPostfix]
+        public static void RebuildMenu_Postfix()
+        {
+            GameObject canvas = getInactiveRootObject("Canvas");
+
+            GameObject cheatMenu = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas, "Cheat Menu"), "Cheats Manager"), "Scroll View"), "Viewport");
+
+            CheatMenuItem[] cheatList = cheatMenu.GetComponentsInChildren<CheatMenuItem>();
+            foreach (CheatMenuItem category in cheatList)
+            {
+                switch(category.longName.text)
+                {
+                    case "META": { category.longName.text = LanguageManager.CurrentLanguage.cheats.cheats_categoryMeta; break; }
+                    case "SANDBOX": { category.longName.text = LanguageManager.CurrentLanguage.cheats.cheats_categorySandbox; break; }
+                    case "GENERAL": { category.longName.text = LanguageManager.CurrentLanguage.cheats.cheats_categoryGeneral; break; }
+                    case "MOVEMENT": { category.longName.text = LanguageManager.CurrentLanguage.cheats.cheats_categoryMovement; break; }
+                    case "WEAPONS": { category.longName.text = LanguageManager.CurrentLanguage.cheats.cheats_categoryWeapons; break; }
+                    case "ENEMIES": { category.longName.text = LanguageManager.CurrentLanguage.cheats.cheats_categoryEnemies; break; }
+                    case "SPECIAL": { category.longName.text = LanguageManager.CurrentLanguage.cheats.cheats_categorySpecial; break; }
+                    default: { break; }
+                }
+            }
+        }
+
+    }
+
+
     //@Override
     //Overrides the *private* UpdateCheatState function from the CheatsManager class for translating the cheat menu.
     [HarmonyPatch(typeof(CheatsManager), "UpdateCheatState", new Type[] { typeof(CheatMenuItem), typeof(ICheat) })]
