@@ -12,6 +12,10 @@ cheats: cheats_categorySpecial
 shop: shop_cybergrindEnterTitle
 shop: shop_cybergrindExitTitle
 
+MODIFIED:
+
+misc: spawner_sandboxItems -> spawner_sandboxTools (Mistake on my behalf with the naming. Sorry!)
+
 
 0.9.1:
 

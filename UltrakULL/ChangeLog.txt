@@ -1,6 +1,8 @@
 ﻿0.9.2
 - Fixed CG enter/exit titles in the shop using hardcoded strings.
+- Fixed purchase buttons for weapons in the shop being untranslated.
 - Added strings for cheat categories.
+
 
 
 0.9.1

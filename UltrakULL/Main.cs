@@ -54,7 +54,7 @@ using UltrakULL.json;
  *  -- FOR NEXT HOTFIX --
  *  
  *  - VN: Instances of repeated lines
- *  - Shop: Variation info of weapons - "already owned" not translated (attempt if-else hardcoding)
+ *  - CG: Enable custom patterns but don't turn any on = untranslated hud message
  * */
 
 namespace UltrakULL

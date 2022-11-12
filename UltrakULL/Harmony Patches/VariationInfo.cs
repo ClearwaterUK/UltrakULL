@@ -1,5 +1,7 @@
 ﻿using HarmonyLib;
+using System;
 using UltrakULL.json;
+using UnityEngine.UI;
 
 namespace UltrakULL.Harmony_Patches
 {
@@ -9,8 +11,9 @@ namespace UltrakULL.Harmony_Patches
     public static class Localize_VariationOwnership
     {
         [HarmonyPostfix]
-        public static void UpdateMoney_Postfix(VariationInfo __instance, int ___money, bool ___alreadyOwned)
+        public static void UpdateMoney_Postfix(VariationInfo __instance, int ___money, bool ___alreadyOwned, Text ___buttonText)
         {
+
             if (!___alreadyOwned)
             {
                 if (__instance.cost < 0)
@@ -30,6 +33,7 @@ namespace UltrakULL.Harmony_Patches
             { 
                 __instance.costText.text = LanguageManager.CurrentLanguage.misc.weapons_alreadyBought;
             }
+            ___buttonText.text = (___buttonText.text == "ALREADY OWNED" ? LanguageManager.CurrentLanguage.misc.weapons_alreadyBought : ___buttonText.text);
         }
     }
 }
