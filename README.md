@@ -1,7 +1,5 @@
 ﻿[![Discord](https://img.shields.io/discord/1017473804592754778?label=UltrakULL%20Discord)](https://discord.gg/ZB7jk6Djv5 "Discord Invite")
- 
 ![Version](https://img.shields.io/github/v/release/ClearwaterTM/UltrakULL)
-
 ![GitHub](https://img.shields.io/github/license/ClearwaterTM/UltrakULL?logo=MIT%20Licence&logoColor=MIT%20Licence)
 
 # UltrakULL
