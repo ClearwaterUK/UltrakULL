@@ -55,6 +55,7 @@ using UltrakULL.json;
  *  
  *  - VN: Instances of repeated lines
  *  - CG: Enable custom patterns but don't turn any on = untranslated hud message
+ *  - Misc HUD messages broken due to no call towards relevant function
  * */
 
 namespace UltrakULL

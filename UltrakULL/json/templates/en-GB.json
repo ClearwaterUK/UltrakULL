@@ -170,7 +170,9 @@
         
         "cybergrind_wavesTitle": "WAVES",
         "cybergrind_wavesDescription1": "SELECT STARTING WAVE",
-        "cybergrind_wavesDescription2": "(Highest wave must be at least twice as high)"
+        "cybergrind_wavesDescription2": "(Highest wave must be at least twice as high)",
+
+        "cybergrind_noPatternsSelected": "NO PATTERNS SELECTED."
     },
     
     "books":{

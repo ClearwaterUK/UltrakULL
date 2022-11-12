@@ -127,6 +127,8 @@ namespace UltrakULL.json
         public string cybergrind_wavesTitle;
         public string cybergrind_wavesDescription1;
         public string cybergrind_wavesDescription2;
+
+        public string cybergrind_noPatternsSelected;
     }
 
     public class CheatStrings

@@ -12,6 +12,8 @@ cheats: cheats_categorySpecial
 shop: shop_cybergrindEnterTitle
 shop: shop_cybergrindExitTitle
 
+cybergrind: cybergrind_noPatternsSelected
+
 MODIFIED:
 
 misc: spawner_sandboxItems -> spawner_sandboxTools (Mistake on my behalf with the naming. Sorry!)

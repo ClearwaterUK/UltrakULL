@@ -57,6 +57,11 @@ namespace UltrakULL
             //Cybergrind custom pattern fix
             if (SceneManager.GetActiveScene().name == "Endless")
             {
+                if(message.Contains("NO PATTERNS"))
+                {
+                    return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_noPatternsSelected;
+                }
+
                 return message;
             }
 

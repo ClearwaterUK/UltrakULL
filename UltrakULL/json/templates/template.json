@@ -170,7 +170,9 @@
 
 		"cybergrind_wavesTitle": "",
 		"cybergrind_wavesDescription1": "",
-		"cybergrind_wavesDescription2": ""
+		"cybergrind_wavesDescription2": "",
+
+		"cybergrind_noPatternsSelected": ""
 	},
 
 	"books": {

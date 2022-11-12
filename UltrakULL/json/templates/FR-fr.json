@@ -168,7 +168,9 @@
           
           "cybergrind_wavesTitle": "VAGUES",
           "cybergrind_wavesDescription1": "SÉlECTIONNEZ LA VAGUE DE DÉPART",
-          "cybergrind_wavesDescription2": "(Le meilleur score doit être au moins le double de la vague de départ choisie)"
+          "cybergrind_wavesDescription2": "(Le meilleur score doit être au moins le double de la vague de départ choisie)",
+
+          "cybergrind_noPatternsSelected": "AUCUNE SCHÈMA SÉLECTIONNÉ."
     },
     
     "books":{
