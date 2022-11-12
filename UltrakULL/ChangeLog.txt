@@ -7,6 +7,28 @@
 - Added HUD message warning in Cybergrind when custom patterns are enabled, but no patterns are selected.
 - Added strings for cheat categories.
 
+- Added the following strings to the JSON template:
+
+cheats: cheats_categorySandbox
+cheats: cheats_categoryGeneral
+cheats: cheats_categoryEnemies
+cheats: cheats_categoryWeapons
+cheats: cheats_categoryItems
+cheats: cheats_categorySpecial
+
+shop: shop_cybergrindEnterTitle
+shop: shop_cybergrindExitTitle
+
+cybergrind: cybergrind_noPatternsSelected
+
+- Changed the following strings in the JSON template:
+
+misc: spawner_sandboxItems -> spawner_sandboxTools (Mistake on my behalf with the naming from last hotfix. Sorry!)
+
+- Removed the following strings from the JSON template:
+
+visualnovel: visualnovel_waitingResponseFirst5
+
 
 
 0.9.1

@@ -41,7 +41,7 @@ or via the [UltrakULL Discord](https://discord.gg/ZB7jk6Djv5) in the #language-r
 - Launch ULTRAKILL. If the mod has loaded correctly, you should see a new "Languages" tab in the options menu.
 <img src="https://cdn.discordapp.com/attachments/472691871806652429/1037354187341701130/unknown.png" alt="drawing" width="650"/>
 - From the Languages tab, you can select any available language based on the language files UltrakULL has found, and will load them into the game.
-    - **<ins>Optional</ins>**: Enable the BepInEx console by opening the BepInEx.cfg inside the config folder. Find the Logging.Console option and set it to true.<br>This will activate the BepInEx console every time your game launches, and will output the status of the game there. This is very helpful for tracking down problems or errors.
+- **Optional**: Enable the BepInEx console by opening the BepInEx.cfg inside the config folder. Find the Logging.Console option and set it to true. This will activate the BepInEx console every time your game launches, and will output the status of the game there. This is very helpful for tracking down problems or errors.
 
 
 # Uninstallation:
