@@ -3,6 +3,7 @@
 - Fixed purchase buttons for weapons in the shop being untranslated.
 - Fixed some non-standard HUD messages not being translated.
 - Fixed one of MDK+Owl's respawn strings not correctly displaying.
+- Fixed some (more) issues with incorrect lines in 2-S.
 - Added HUD message warning in Cybergrind when custom patterns are enabled, but no patterns are selected.
 - Added strings for cheat categories.
 

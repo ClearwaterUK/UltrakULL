@@ -52,8 +52,6 @@ using UltrakULL.json;
  *  -- STUFF REPORTED BY ULL TEAM --
  * 
  *  -- FOR NEXT HOTFIX --
- *  
- *  - VN: Instances of repeated lines
  * */
 
 namespace UltrakULL

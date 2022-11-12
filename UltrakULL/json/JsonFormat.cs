@@ -775,7 +775,6 @@ namespace UltrakULL.json
         public string visualnovel_waitingResponseFirst2;
         public string visualnovel_waitingResponseFirst3;
         public string visualnovel_waitingResponseFirst4;
-        public string visualnovel_waitingResponseFirst5;
 
         public string visualnovel_waitingResponseSecond1;
         public string visualnovel_waitingResponseSecond2;

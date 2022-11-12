@@ -375,11 +375,15 @@ namespace UltrakULL
             //First response
             if (inputString.Contains("Suit yourself"))
             {
-                return LanguageManager.CurrentLanguage.visualnovel.visualnovel_waitingResponseFirst1 + "▼\n"
-                    + LanguageManager.CurrentLanguage.visualnovel.visualnovel_waitingResponseFirst2 + "▼\n"
+                return LanguageManager.CurrentLanguage.visualnovel.visualnovel_waitingResponseFirst1 + "▼\n";
+            }
+            if (inputString.Contains("Couldn't care less"))
+            {
+                return LanguageManager.CurrentLanguage.visualnovel.visualnovel_waitingResponseFirst2 + "▼\n"
                     + LanguageManager.CurrentLanguage.visualnovel.visualnovel_waitingResponseFirst3 + "▼\n"
                     + LanguageManager.CurrentLanguage.visualnovel.visualnovel_waitingResponseFirst4 + "▼";
             }
+
 
 
             //Second response

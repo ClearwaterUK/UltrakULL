@@ -18,6 +18,10 @@ MODIFIED:
 
 misc: spawner_sandboxItems -> spawner_sandboxTools (Mistake on my behalf with the naming. Sorry!)
 
+REMOVED:
+
+visualnovel: visualnovel_waitingResponseFirst5
+
 
 0.9.1:
 
