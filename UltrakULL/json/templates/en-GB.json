@@ -1333,6 +1333,7 @@
         "cheats_categoryMeta": "META",
         "cheats_categorySandbox": "SANDBOX",
         "cheats_categoryGeneral": "GENERAL",
+        "cheats_categoryMovement": "MOVEMENT",
         "cheats_categoryEnemies": "ENEMIES",
         "cheats_categoryWeapons": "WEAPONS",
         "cheats_categoryItems": "ITEMS",
