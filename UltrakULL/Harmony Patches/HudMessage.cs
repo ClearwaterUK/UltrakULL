@@ -23,6 +23,21 @@ namespace UltrakULL.Harmony_Patches
         }
     }
 
+    [HarmonyPatch(typeof(HudMessageReceiver),"SendHudMessage")]
+    public static class SendHudMessage_Patch
+    {
+        [HarmonyPrefix]
+        public static bool SendHudMessage_Prefix(ref string newmessage, string newinput = "", string newmessage2 = "", int delay = 0, bool silent = false)
+        {
+            Console.WriteLine(newmessage);
+
+            newmessage = HUDMessages.getHUDToolTip(newmessage);
+
+            return true;
+        }
+
+    }
+
     //@Override
     //Overrides the PlayMessage method from the HudMessage class. This is needed for swapping text in message boxes.
     [HarmonyPatch(typeof(HudMessage), "PlayMessage")]
