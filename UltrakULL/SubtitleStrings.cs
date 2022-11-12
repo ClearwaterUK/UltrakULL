@@ -437,6 +437,12 @@ namespace UltrakULL
             {
                 return (owlColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_taunt2 + endColor);
             }
+            if (input.Contains(mandaColor + "What"))
+            {
+                return (mandaColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_intro2 + endColor);
+            }
+
+
             if (input.Contains("You cannot imagine"))
             {
                 return (mandaColor + LanguageManager.CurrentLanguage.subtitles.subtitles_mandalore_taunt3 + endColor);
