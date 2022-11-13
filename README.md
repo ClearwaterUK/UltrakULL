@@ -147,7 +147,7 @@ Compatability with other mods not listed here is unknown.
 # Credits & Contributors
 UltrakULL created by **[Clearwater](https://github.com/ClearwaterTM)**\
 Additional code contributions by **[Temperz87](https://github.com/Temperz87/)**\
-GitHub repo banner by tunacan#0110
+GitHub repo banner by **tunacan#0110**\
 Language translations by members of the **UltrakULL Translation Team** \
 (view the [Languages](#Languages) section for full information and crediting)\
 ULTRAKILL created by **Arsi 'Hakita' Patala** and published by **New Blood Interactive**
