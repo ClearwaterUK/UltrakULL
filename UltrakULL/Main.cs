@@ -19,7 +19,7 @@ using UltrakULL.json;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater, additional code contributions by Temperz87, translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 12th November 2022
+ *	Last updated: 13th November 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.

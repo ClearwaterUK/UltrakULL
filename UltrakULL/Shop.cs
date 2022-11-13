@@ -122,10 +122,17 @@ namespace UltrakULL
             Text cgExitDescriptionText = getTextfromGameObject(getGameObjectChild(cgExit, "Text"));
 
             Text cgExitDescription = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgExit, "CyberGrindButton (1)"), "Text"));
-            cgExitDescription.text = LanguageManager.CurrentLanguage.shop.shop_cybergrindExit;
+            if (SceneManager.GetActiveScene().name == "uk_construct")
+            {
+                cgExitDescription.text = LanguageManager.CurrentLanguage.frontend.mainmenu_quit;
+            }
+            else
+            {
+                cgExitDescription.text = LanguageManager.CurrentLanguage.shop.shop_cybergrindExit;
+            }
 
-            //Enemies back button 
-            Text enemiesBackText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Enemies"), "BackButton (2)"), "Text"));
+        //Enemies back button 
+        Text enemiesBackText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Enemies"), "BackButton (2)"), "Text"));
             enemiesBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
             //Sandbox back button
