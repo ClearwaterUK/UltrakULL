@@ -38,7 +38,7 @@ or via the [UltrakULL Discord](https://discord.gg/ZB7jk6Djv5) in the #language-r
 - Download UltrakULL from either the [Releases page](https://github.com/ClearwaterTM/UltrakULL/releases) or the #mod-releases channel from the [UltrakULL Discord.](https://discord.gg/ZB7jk6Djv5)
 - Download BepInEx 5, and extract the contents to where your ULTRAKILL install folder is located. 
 - Launch ULTRAKILL once so BepInEx can generate the required files and folders in the install folder. Quit the game once it has loaded to the main menu.
-- Extract the contents of UltrakULL to your ULTRAKILL install folder. Overwrite any files if prompted.
+- Extract the contents of UltrakULL to your BepInEx folder. Overwrite any files if prompted.
   - If you have any additional language files, place them in BepInEx/config/ultrakull .
 - Launch ULTRAKILL. If the mod has loaded correctly, you should see a new "Languages" tab in the options menu.
 <img src="https://cdn.discordapp.com/attachments/472691871806652429/1037354187341701130/unknown.png" alt="drawing" width="650"/>
