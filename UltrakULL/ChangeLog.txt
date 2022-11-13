@@ -1,4 +1,9 @@
-﻿0.9.2
+﻿1.0.0
+
+THE BIG INITIAL RELEASE.
+- Fixed a small issue where the quit confirmation button in the sandbox shop would incorrectly show that of the Cybergrind.
+
+0.9.2
 - Fixed CG enter/exit titles in the shop using hardcoded strings.
 - Fixed purchase buttons for weapons in the shop being untranslated.
 - Fixed some non-standard HUD messages not being translated.
