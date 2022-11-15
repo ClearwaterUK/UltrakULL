@@ -38,7 +38,7 @@ using UltrakULL.json;
  *  - Green Rocketlauncher incoming
  *  - Could be possible to swap out rank textures in HUD for translation. Shall look into later
  *  - Attempt to replace the default font with a version that has better special char + cyrillic support
- *  - Add a "Open folder" button to the language tab that opens the language folder, makes adding languages to the game easier (Something for Temperz since he knows more UI stuff than me)
+ *  
  *  
  *  -- BUGS AND QUIRKS TO FIX --
  * - Misc keys as strings (comma, period, etc) missing
@@ -52,6 +52,13 @@ using UltrakULL.json;
  *  -- STUFF REPORTED BY ULL TEAM --
  * 
  *  -- FOR NEXT HOTFIX --
+ *  
+ *  Fix slight conflict with UltraTweaker when using it in UMM, move Language tab to somewhere else in the options
+ *  Fix first-time launch looking for wrong file and causing problems since the "default" lang file can't be found (looking for wrong name)
+ *  Add Russian translation to default languages
+ *  Add download buttons to Github readme for finished languages
+ * Add a "Open folder" button to the language tab that opens the language folder, makes adding languages to the game easier (Something for Temperz since he knows more UI stuff than me)
+ * Fix up errors and typos in English template
  * */
 
 namespace UltrakULL
@@ -62,7 +69,7 @@ namespace UltrakULL
     {
         public const string pluginGuid = "clearwater.ultrakill.ultrakULL";
         public const string pluginName = "UltrakULL - Ultrakill Language Library";
-        public const string pluginVersion = "1.0.0";
+        public const string pluginVersion = "1.0.1";
 
         public static MainPatch instance = null;
         private GameObject ultrakullLogo = null;
