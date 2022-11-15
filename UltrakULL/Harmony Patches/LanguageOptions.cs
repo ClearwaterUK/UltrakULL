@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UltrakULL.json;
 
 
+
 namespace UltrakULL.Harmony_Patches
 {
     [HarmonyPatch(typeof(OptionsMenuToManager), "Start")]
@@ -19,6 +20,7 @@ namespace UltrakULL.Harmony_Patches
 
             Transform optionsParent = __instance.optionsMenu.transform;
             GameObject languageButton = GameObject.Instantiate(optionsParent.Find("Gameplay").gameObject, optionsParent);
+            languageButton.name = "Language";
             languageButton.transform.localPosition += new Vector3(0f, 60f, 0f);
             languageButtonText = languageButton.transform.GetChild(0).gameObject.GetComponent<Text>();
 
@@ -105,7 +107,7 @@ namespace UltrakULL.Harmony_Patches
                 languageButtonText.text = "LANGUAGES";
                 languageButtonTitleText.text = "--" + "LANGUAGES" + "--";
             }
-
+            
 
             return true;
         }

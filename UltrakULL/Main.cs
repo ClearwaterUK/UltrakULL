@@ -15,6 +15,8 @@ using static UltrakULL.CommonFunctions;
 using System.Linq;
 using UltrakULL.json;
 
+using UMM;
+
 /*
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater, additional code contributions by Temperz87, translations by UltrakULL Translation Team
@@ -59,6 +61,10 @@ using UltrakULL.json;
  *  Add download buttons to Github readme for finished languages
  * Add a "Open folder" button to the language tab that opens the language folder, makes adding languages to the game easier (Something for Temperz since he knows more UI stuff than me)
  * Fix up errors and typos in English template
+ * 
+ * Update readme with new languages+contributors
+ * 
+ * Port the damn thing to UMM, would be easier instead of trying to make a BIE/UMM cross-compatability layer
  * */
 
 namespace UltrakULL

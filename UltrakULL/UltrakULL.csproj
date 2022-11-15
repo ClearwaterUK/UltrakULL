@@ -61,6 +61,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="UMM">
+      <HintPath>lib\UMM.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>$(ManagedDir)\UnityEngine.dll</HintPath>
       <Private>False</Private>
@@ -114,37 +117,31 @@
   <Target Name="WarnBeforeBuild" BeforeTargets="BeforeBuild">
     <Error Condition="!Exists($(ULTRAKILLPath))" Text="ULTRAKILLPath not set, create a UltrakUll.csproj.user file that sets this property to compile" />
   </Target>
-  
-  
   <!-- Building to local build folder -->
-  
   <!-- Create config+plugins folder for BepInEx -->
-    <Target Name="MakeMyDir" AfterTargets="BeforeBuild">
+  <Target Name="MakeMyDir" AfterTargets="BeforeBuild">
     <Message Text="Creating folders..." Importance="High" />
-    <MakeDir Directories="$(TargetDir)config" Condition="!Exists('$(TargetDir)config')"  />
-    <MakeDir Directories="$(TargetDir)config/ultrakull" Condition="!Exists('$(TargetDir)config/ultrakull')"  />
-    <MakeDir Directories="$(TargetDir)plugins" Condition="!Exists('$(TargetDir)plugins')"  />
+    <MakeDir Directories="$(TargetDir)config" Condition="!Exists('$(TargetDir)config')" />
+    <MakeDir Directories="$(TargetDir)config/ultrakull" Condition="!Exists('$(TargetDir)config/ultrakull')" />
+    <MakeDir Directories="$(TargetDir)plugins" Condition="!Exists('$(TargetDir)plugins')" />
     <Message Text="Folders created." Importance="High" />
   </Target>
-  
   <!-- Copy any .json files in the solution to config/ultrakull - normally should just be English and template -->
   <Target Name="CopyJSONToFolder" AfterTargets="AfterBuild">
     <ItemGroup>
-        <_CopyItems Include="$(TargetDir)/../../json/templates/*.json" />
+      <_CopyItems Include="$(TargetDir)/../../json/templates/*.json" />
     </ItemGroup>
     <Message Text="Copying all JSONs to config/ultrakull..." Importance="High" />
     <Copy SourceFiles="@(_CopyItems)" DestinationFolder="$(TargetDir)config/ultrakull" />
     <Message Text="JSONs copied." Importance="High" />
   </Target>
-  
   <!-- Copy the compiled .dll to plugins folder. -->
-    <Target Name="MoveDLLToFolder" AfterTargets="AfterBuild">
+  <Target Name="MoveDLLToFolder" AfterTargets="AfterBuild">
     <Message Text="Moving DLL to config/ultrakull..." Importance="High" />
-    <Move SourceFiles="$(TargetDir)UltrakULL.dll" DestinationFolder="$(TargetDir)plugins"></Move>
+    <Move SourceFiles="$(TargetDir)UltrakULL.dll" DestinationFolder="$(TargetDir)plugins">
+    </Move>
     <Message Text="DLL moved." Importance="High" />
-    </Target>
-  
-  
+  </Target>
   <ItemGroup>
     <Compile Include="Act1.cs" />
     <Compile Include="Act1Strings.cs" />

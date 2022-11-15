@@ -25,6 +25,10 @@ namespace UltrakULL
             fadeDuration = 0.1f
         };
 
+        public static IEnumerator waitforSeconds(int seconds)
+        {
+            yield return new WaitForSeconds(seconds);
+        }
 
         public static BepInEx.Logging.ManualLogSource modLogger = BepInEx.Logging.Logger.CreateLogSource("modLogger");
 
