@@ -15,7 +15,7 @@ namespace UltrakULL
         public static string level1(string message, string message2, string input)
         {
             string fullMessage = message + message2;
-            preludeStringsLogger.LogInfo(fullMessage);
+            Debug.Log(fullMessage);
 
             if (fullMessage.Contains("PIPE CLIP"))
             {
@@ -45,7 +45,7 @@ namespace UltrakULL
         public static string level2(string message, string message2, string input)
         {
             string fullMessage = message + message2;
-            preludeStringsLogger.LogInfo(fullMessage);
+            Debug.Log(fullMessage);
 
             if (fullMessage.Contains("POINTS"))
             {
@@ -66,7 +66,7 @@ namespace UltrakULL
         public static string level3(string message, string message2, string input)
         {
             string fullMessage = message + message2;
-            preludeStringsLogger.LogInfo(fullMessage);
+            Debug.Log(fullMessage);
 
             if (fullMessage.Contains("FIREPOWER"))
             {
@@ -102,7 +102,7 @@ namespace UltrakULL
         public static string levelSecret(string message, string message2, string input)
         {
             string fullMessage = message + message2;
-            preludeStringsLogger.LogInfo(fullMessage);
+            Debug.Log(fullMessage);
 
             if (fullMessage.Contains("wicked"))
             {

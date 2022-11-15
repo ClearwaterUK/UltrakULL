@@ -11,9 +11,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using static UltrakULL.CommonFunctions;
+
 using System.Linq;
 using UltrakULL.json;
+
+using static UltrakULL.CommonFunctions;
+using static UltrakULL.ModPatches;
 
 using UMM;
 
@@ -62,20 +65,20 @@ using UMM;
  * Add a "Open folder" button to the language tab that opens the language folder, makes adding languages to the game easier (Something for Temperz since he knows more UI stuff than me)
  * Fix up errors and typos in English template
  * 
- * Update readme with new languages+contributors
+ * Update readme with new languages+contributors, update readme to reflect UMM port and new installation guide
  * 
- * Port the damn thing to UMM, would be easier instead of trying to make a BIE/UMM cross-compatability layer
  * */
 
 namespace UltrakULL
 {
-    [BepInPlugin(pluginGuid, pluginName, pluginVersion)]
-    [BepInProcess("ULTRAKILL.exe")]
-    public class MainPatch : BaseUnityPlugin
+    [UKPlugin(pluginName,pluginVersion,pluginDescription,false,false)]
+
+    public class MainPatch : UKMod
     {
         public const string pluginGuid = "clearwater.ultrakill.ultrakULL";
-        public const string pluginName = "UltrakULL - Ultrakill Language Library";
+        public const string pluginName = "UltrakULL (Ultrakill Language Library)";
         public const string pluginVersion = "1.0.1";
+        public const string pluginDescription = "A localization and translation plugin for ULTRAKILL. Created by Clearwater.";
 
         public static MainPatch instance = null;
         private GameObject ultrakullLogo = null;
@@ -165,8 +168,7 @@ namespace UltrakULL
             }
             catch (Exception e)
             {
-                Logger.LogError("Failed to patch pause menu");
-                Logger.LogError(e.ToString());
+                Debug.Log(e.ToString());
             }
         }
 
@@ -193,7 +195,7 @@ namespace UltrakULL
             }
             catch (Exception e)
             {
-                Logger.LogError("Failed to patch death screen");
+                Debug.Log("Failed to patch death screen");
                 Console.WriteLine(e.ToString());
             }
         }
@@ -297,26 +299,6 @@ namespace UltrakULL
 
         }
 
-        //Adds the Discord link to the UltrakULL Discord on the main menu.
-        public void addDiscord(GameObject frontEnd)
-        {
-            GameObject mainMenuCanvas = getGameObjectChild(frontEnd, "Main Menu (1)");
-
-            GameObject mainMenuButtons = getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Panel");
-
-            if (ultrakullDiscordButton != null)
-                GameObject.Destroy(ultrakullDiscordButton);
-            ultrakullDiscordButton = GameObject.Instantiate(getGameObjectChild(mainMenuButtons, "Discord"), mainMenuButtons.transform);
-
-
-            ultrakullDiscordButton.SetActive(true);
-            ultrakullDiscordButton.GetComponent<RectTransform>().localPosition = new Vector2(450f, 250f);
-            ultrakullDiscordButton.GetComponentInChildren<Text>().text = "UltrakULL DISCORD";
-            ultrakullDiscordButton.GetComponentInChildren<WebButton>().url = "https://discord.gg/ZB7jk6Djv5";
-
-            ultrakullDiscordButton.transform.parent = mainMenuButtons.transform;
-            ultrakullDiscordButton.GetComponent<RectTransform>().SetParent(mainMenuButtons.GetComponent<RectTransform>());
-        }
 
         public void addModCredits(GameObject frontEnd)
         {
@@ -364,13 +346,18 @@ namespace UltrakULL
 
         }
 
-        //Most of the hook logic and checks go in this function.
-        public void onSceneLoaded(Scene scene, LoadSceneMode mode)
+
+        public IEnumerator patchScene()
         {
+            //Wait a bit to allow any other loaded mods to place their GameObjects down so we can manipulate them as need be afterwards.
+            yield return new WaitForSeconds(0.25f);
+
+            Console.WriteLine("Beginning patch");
+
             if (!this.ready || LanguageManager.CurrentLanguage == null)
             {
-                Logger.LogError("Not ready for patching");
-                return;
+                Debug.Log("Not ready for patching");
+                yield return false;
             }
             else
             {
@@ -399,7 +386,7 @@ namespace UltrakULL
 
                     if (frontEnd == null)
                     {
-                        Logger.LogError("Failed to hook into main menu.");
+                        Debug.Log("Failed to hook into main menu.");
                     }
                     else
                     {
@@ -422,7 +409,6 @@ namespace UltrakULL
                             ultrakullLogo.transform.localPosition = new Vector3(1025, -350, 0);
                         }
 
-                        this.addDiscord(frontEnd);
                         this.addModCredits(frontEnd);
                     }
                 }
@@ -432,7 +418,7 @@ namespace UltrakULL
                     GameObject coreGame = GameObject.Find("Prime FirstRoom");
                     if (coreGame == null)
                     {
-                        Logger.LogError("Failed to hook into Prime levels.");
+                        Debug.Log("Failed to hook into Prime levels.");
                     }
                     else
                     {
@@ -447,8 +433,8 @@ namespace UltrakULL
                         }
                         catch (Exception e)
                         {
-                            Logger.LogError("Failed to patch in-game elements (prime).");
-                            Logger.LogInfo(e.ToString());
+                            Debug.Log("Failed to patch in-game elements (prime).");
+                            Debug.Log(e.ToString());
                         }
                         Options options = new Options(ref coreGame);
                         PrimeSanctum primeSanctumClass = new PrimeSanctum(ref coreGame);
@@ -462,7 +448,7 @@ namespace UltrakULL
                     GameObject coreGame = getInactiveRootObject("Canvas");
                     if (coreGame == null)
                     {
-                        Logger.LogError("Failed to hook into secret level.");
+                        Debug.Log("Failed to hook into secret level.");
                     }
                     else
                     {
@@ -479,7 +465,7 @@ namespace UltrakULL
                     GameObject coreGame = getInactiveRootObject("Canvas");
                     if (coreGame == null)
                     {
-                        Logger.LogError("Failed to hook into sandbox.");
+                        Debug.Log("Failed to hook into sandbox.");
                     }
                     else
                     {
@@ -498,7 +484,7 @@ namespace UltrakULL
                     GameObject coreGame = GameObject.Find("FirstRoom");
                     if (coreGame == null)
                     {
-                        Logger.LogError("Failed to hook into in-game elements.");
+                        Debug.Log("Failed to hook into in-game elements.");
                     }
                     else
                     {
@@ -515,7 +501,7 @@ namespace UltrakULL
                         }
                         catch (Exception e)
                         {
-                            Logger.LogError("Failed to patch in-game elements.");
+                            Debug.Log("Failed to patch in-game elements.");
                             Console.WriteLine(e.ToString());
                         }
 
@@ -553,23 +539,44 @@ namespace UltrakULL
                     }
                 }
             }
+
+            //Check for any other mods that are loaded that might cause conflicts. If so, do some stuff.
+            ModInformation[] loadedMods = UKAPI.GetAllLoadedModInformation();
+            foreach (ModInformation mod in loadedMods)
+            {
+                Console.WriteLine(mod.modName);
+                if (mod.modName == "ULTRAKILLtweaker")
+                {
+                    Console.WriteLine("UltraTweaker detected, doing stuff");
+                    StartCoroutine(UltraTweakerPatch());
+                }
+            }
+
+        }
+
+
+
+        //Most of the hook logic and checks go in this function.
+        public void onSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            StartCoroutine(patchScene());
         }
 
         //Entry point for the patch.
         public void Awake()
         {
             Debug.unityLogger.filterLogType = LogType.Exception;
-            Logger.LogInfo("UltrakULL LOADING...");
-            Logger.LogInfo("Version: " + pluginVersion);
+            Debug.Log("UltrakULL LOADING...");
+            Debug.Log("Version: " + pluginVersion);
             try
             {
-                Logger.LogInfo("--- Initializing JSON parser ---");
+                Debug.Log("--- Initializing JSON parser ---");
                 initJsonParser();
-                Logger.LogInfo("--- Patching vanilla game functions ---");
-                Logger.LogMessage("Patching game functions...");
+                Debug.Log("--- Patching vanilla game functions ---");
+                Debug.Log("Patching game functions...");
                 Harmony harmony = new Harmony(pluginGuid);
                 harmony.PatchAll();
-                Logger.LogInfo(" --- All done. Enjoy! ---");
+                Debug.Log(" --- All done. Enjoy! ---");
 
                 SceneManager.sceneLoaded += onSceneLoaded;
                 
@@ -577,7 +584,7 @@ namespace UltrakULL
             }
             catch (Exception e)
             {
-                Logger.LogError("An error occured while initialising.");
+                Debug.Log("An error occured while initialising.");
                 Console.WriteLine(e.ToString());
                 return;
             }

@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace UltrakULL.json
@@ -63,14 +64,14 @@ namespace UltrakULL.json
             }
             catch (Exception e)
             {
-                JsonLogger.LogError("Failed to load language file " + pathName + ": " + e.Message);
+                Debug.Log("Failed to load language file " + pathName + ": " + e.Message);
                 return false;
             }
         }
 
         private static bool ValidateFile(JsonFormat language, string modVersion)
         {
-            JsonLogger.LogInfo("Opening file: " + language.metadata.langName + "...");
+            Debug.Log("Opening file: " + language.metadata.langName + "...");
             try
             {
                 //Following conditions to validate a file:
@@ -78,19 +79,19 @@ namespace UltrakULL.json
                 //Must have a metadata attribute and a body attribute
                 //Version logged in the JSON file must match or be newer than the current mod version
                 //Will need to implement further sanity checks.
-                JsonLogger.LogInfo("Checking version...");
+                Debug.Log("Checking version...");
 
                 if (!FileMatchesMinimumRequiredVersion(language.metadata.minimumModVersion, modVersion))
                 {
-                    JsonLogger.LogError(language.metadata.langName + " does not match the version required by the mod. Skipping.");
-                    JsonLogger.LogError("(If you wish to force load this file, you may do so via manually editing lastLang.cfg and setting the language to this filename. Expect in-game errors if you do this, you have been warned.)");
+                    Debug.Log(language.metadata.langName + " does not match the version required by the mod. Skipping.");
+                    Debug.Log("(If you wish to force load this file, you may do so via manually editing lastLang.cfg and setting the language to this filename. Expect in-game errors if you do this, you have been warned.)");
                     return false;
                 }
 
-                JsonLogger.LogInfo("Checking contents...");
+                Debug.Log("Checking contents...");
                 if (language.metadata != null && language.body != null)
                 {
-                    JsonLogger.LogMessage("File " + language.metadata.langName + " validated.");
+                    Debug.Log("File " + language.metadata.langName + " validated.");
                     return true;
                 }
                 else
@@ -100,7 +101,7 @@ namespace UltrakULL.json
             }
             catch (Exception e)
             {
-                JsonLogger.LogError("An error occured while validating. It's possible the language file is not correctly formatted in .json.\n"
+                Debug.Log("An error occured while validating. It's possible the language file is not correctly formatted in .json.\n"
                     + "Please use https://jsonlint.com/ to make sure your .json file is correctly formatted!");
                 Console.WriteLine(e.ToString());
                 return false;
@@ -111,7 +112,7 @@ namespace UltrakULL.json
         {
             if (requiredModVersion == "")
             {
-                JsonLogger.LogError("Language file has not defined the minimum mod version required!");
+                Debug.Log("Language file has not defined the minimum mod version required!");
                 return false;
             }
 
@@ -122,7 +123,7 @@ namespace UltrakULL.json
             //JSON version is greater or matches mod version
             if (jsonVersion == ultrakullVersion || isCompatible > 0)
             {
-                JsonLogger.LogMessage("Matches current mod version.");
+                Debug.Log("Matches current mod version.");
                 return true;
             }
             //JSON version is lower than mod version

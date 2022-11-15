@@ -59,11 +59,27 @@ namespace UltrakULL
                 //Quit button
                 Text quitButtontext = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Quit"), "Text"));
                 quitButtontext.text = LanguageManager.CurrentLanguage.frontend.mainmenu_quit;
+
+                //UMM buttons
+                foreach (Transform a in titleObject.GetComponentsInChildren<Transform>())
+                {
+                    if(a.name == "Continue(Clone)")
+                    {
+                        Text ummButton = getTextfromGameObject(getGameObjectChild(a.gameObject, "Text"));
+                        switch(ummButton.text)
+                        {
+                            case "MODS": { ummButton.text = LanguageManager.CurrentLanguage.frontend.mainmenu_mods; break; }
+                            case "RESTART": { ummButton.text = LanguageManager.CurrentLanguage.frontend.mainmenu_restart; ; break; }
+                            default: {break; }
+                        }
+
+                    }
+                }
             }
             catch (Exception e)
             {
-                MainMenuLogger.LogError("An error occured while patching main menu. Check the console for details.");
-                MainMenuLogger.LogError(e.ToString());
+                Debug.Log("An error occured while patching main menu. Check the console for details.");
+                Debug.Log(e.ToString());
             }
         }
 
@@ -124,8 +140,8 @@ namespace UltrakULL
             }
             catch (Exception e)
             {
-                MainMenuLogger.LogError("Failed to patch difficulty menu.");
-                MainMenuLogger.LogError(e.ToString());
+                Debug.Log("Failed to patch difficulty menu.");
+                Debug.Log(e.ToString());
             }
         }
 
@@ -214,7 +230,7 @@ namespace UltrakULL
             }
             catch (Exception e)
             {
-                MainMenuLogger.LogError("Failed to patch difficulty text.");
+                Debug.Log("Failed to patch difficulty text.");
                 Console.WriteLine(e.ToString());
             }
 

@@ -37,15 +37,15 @@ namespace UltrakULL
 
             if (currentLevel.Contains("P-1"))
             {
-                primeLogger.LogInfo("In P-1");
+                Debug.Log("In P-1");
 
-                primeLogger.LogInfo("Patching results screen...");
+                Debug.Log("Patching results screen...");
                 PrimeSanctumStrings PrimeSanctumChallengeStrings = new PrimeSanctumStrings();
                 //this.patchResultsScreen(ref level);
                 string levelname = PrimeSanctumChallengeStrings.getLevelName();
                 patchResultsScreen(levelname, "");
 
-                primeLogger.LogInfo("Patching secret text...");
+                Debug.Log("Patching secret text...");
                 this.patchSecretText(PrimeSanctumChallengeStrings);
             }
         }

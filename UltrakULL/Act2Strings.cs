@@ -24,7 +24,7 @@ namespace UltrakULL
         public static string level42(string message, string message2, string input)
         {
             string fullMessage = message + message2;
-            a2StringsLogger.LogInfo(fullMessage);
+            Debug.Log(fullMessage);
             if (fullMessage.Contains("BLEED"))
             {
                 return (LanguageManager.CurrentLanguage.act2.act2_greedSecond_sand);
@@ -35,7 +35,7 @@ namespace UltrakULL
         public static string level43(string message, string message2, string input)
         {
             string fullMessage = message + message2;
-            a2StringsLogger.LogInfo(fullMessage);
+            Debug.Log(fullMessage);
             if (fullMessage.Contains("FILTH"))
             {
                 return (LanguageManager.CurrentLanguage.act2.act2_greedThird_wallClip);

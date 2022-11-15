@@ -21,7 +21,7 @@ namespace UltrakULL
         public static string level11(string message, string message2, string input)
         {
             string fullMessage = message + message2;
-            a1StringsLogger.LogInfo(fullMessage);
+            Debug.Log(fullMessage);
             if (fullMessage.Contains("ITEMS"))
             {
                 previousHudMessage = LanguageManager.CurrentLanguage.act1.act1_limboFirst_items1 + " '<color=orange>" + input + "'</color> " + LanguageManager.CurrentLanguage.act1.act1_limboFirst_items2;
@@ -40,7 +40,7 @@ namespace UltrakULL
         public static string level12(string message, string message2, string input)
         {
             string fullMessage = message + message2;
-            a1StringsLogger.LogInfo(fullMessage);
+            Debug.Log(fullMessage);
             if (fullMessage.Contains("BLUE"))
             {
                 return LanguageManager.CurrentLanguage.act1.act1_limboSecond_blueAttack;
@@ -51,7 +51,7 @@ namespace UltrakULL
         public static string level13(string message, string message2, string input)
         {
             string fullMessage = message + message2;
-            a1StringsLogger.LogInfo(fullMessage);
+            Debug.Log(fullMessage);
             if (fullMessage.Contains("SPLIT"))
             {
                 return LanguageManager.CurrentLanguage.act1.act1_limboThird_splitDoor1 + "\n" + LanguageManager.CurrentLanguage.act1.act1_limboThird_splitDoor2;
@@ -62,7 +62,7 @@ namespace UltrakULL
             public static string level14(string message, string message2, string input)
             {
             string fullMessage = message + message2;
-            a1StringsLogger.LogInfo(fullMessage);
+            Debug.Log(fullMessage);
             if (fullMessage.Contains("PICK"))
             {
                 return LanguageManager.CurrentLanguage.act1.act1_limboFourth_book;
@@ -97,7 +97,7 @@ namespace UltrakULL
         public static string level21(string message, string message2, string input)
         {
             string fullMessage = message + message2;
-            a1StringsLogger.LogInfo(fullMessage);
+            Debug.Log(fullMessage);
             if (fullMessage.Contains("KNUCKLE"))
             {
                 return (LanguageManager.CurrentLanguage.act1.act1_lustFirst_knuckleblaster1 + " '<color=orange>"+input+"</color>' " + LanguageManager.CurrentLanguage.act1.act1_lustFirst_knuckleblaster2);
@@ -113,7 +113,7 @@ namespace UltrakULL
         public static string level22(string message, string message2, string input)
         {
             string fullMessage = message + message2;
-            a1StringsLogger.LogInfo(fullMessage);
+            Debug.Log(fullMessage);
             if (fullMessage.Contains("FEEDBACKER"))
             {
                 return LanguageManager.CurrentLanguage.act1.act1_lustSecond_feedbacker1 + "\n" + LanguageManager.CurrentLanguage.act1.act1_lustSecond_feedbacker2 + " '<color=orange>" + input + "</color>'.";
@@ -129,7 +129,7 @@ namespace UltrakULL
         public static string level23(string message, string message2, string input)
         {
             string fullMessage = message + message2;
-            a1StringsLogger.LogInfo(fullMessage);
+            Debug.Log(fullMessage);
             if (fullMessage.Contains("water"))
             {
                 return (LanguageManager.CurrentLanguage.act1.act1_lustThird_water);

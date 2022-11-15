@@ -33,19 +33,19 @@ namespace UltrakULL
 
             if (currentLevel.Contains("-1"))
             {
-                preludeLogger.LogInfo("In 0-1");
+                Debug.Log("In 0-1");
                 try
                 {
                     this.patchOpeningCredits();
                 }
                 catch(Exception e)
                 {
-                    preludeLogger.LogError("Failed to patch opening credits in 0-1");
+                    Debug.Log("Failed to patch opening credits in 0-1");
                     Console.Write(e.ToString());
                 }
             }
 
-            preludeLogger.LogInfo("Patching results screen...");
+            Debug.Log("Patching results screen...");
             string levelName = PreludeStrings.getLevelName();
             string levelChallenge = PreludeStrings.getLevelChallenge(currentLevel);
 

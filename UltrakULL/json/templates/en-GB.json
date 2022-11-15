@@ -340,6 +340,8 @@
 		"mainmenu_options": "OPTIONS",
         "mainmenu_credits": "CREDITS",
 		"mainmenu_quit": "QUIT",
+        "mainmenu_mods": "MODS",
+		"mainmenu_restart": "RESTART",
 
 		"difficulty_title": "DIFFICULTY",
 		"difficulty_easy": "ACCESSIBLE",

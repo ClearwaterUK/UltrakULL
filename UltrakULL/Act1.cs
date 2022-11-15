@@ -19,7 +19,7 @@ namespace UltrakULL
 
         private static void patchHellmap()
         {
-            a1Logger.LogInfo("Patching Act 1 hellmap");
+            Debug.Log("Patching Act 1 hellmap");
             try
             {
                 GameObject canvas = getInactiveRootObject("Canvas");
@@ -37,7 +37,7 @@ namespace UltrakULL
             }
             catch(Exception e)
             {
-                a1Logger.LogError("Failed to patch Act 1 hellmap.");
+                Debug.Log("Failed to patch Act 1 hellmap.");
                 Console.WriteLine(e.ToString());
             }
         }

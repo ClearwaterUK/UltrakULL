@@ -342,6 +342,8 @@
 		"mainmenu_options": "",
 		"mainmenu_credits": "",
 		"mainmenu_quit": "",
+		"mainmenu_mods": "",
+		"mainmenu_restart": "",
 
 		"difficulty_title": "",
 		"difficulty_easy": "",

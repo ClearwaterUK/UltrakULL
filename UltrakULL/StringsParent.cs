@@ -20,33 +20,33 @@ namespace UltrakULL
 
         public static string getMessage(string message, string message2, string input)
         {
-            parentStringsLogger.LogInfo("Getting message...");
+            Debug.Log("Getting message...");
             Scene currentLevel = SceneManager.GetActiveScene();
 
             if (currentLevel.name.Contains("Tutorial"))
             {
-                parentStringsLogger.LogInfo("Current scene: Tutorial");
+                Debug.Log("Current scene: Tutorial");
                 TutorialStrings tutStrings = new TutorialStrings();
                 return tutStrings.getMessage(message, message2, input);
             }
             else if (currentLevel.name.Contains("0-"))
             {
-                parentStringsLogger.LogInfo("Current scene: Prelude");
+                Debug.Log("Current scene: Prelude");
                 return PreludeStrings.getMessage(message, message2, input);
             }
             else if (currentLevel.name.Contains("1-") || (currentLevel.name.Contains("2-") || (currentLevel.name.Contains("3-"))))
             {
-                parentStringsLogger.LogInfo("Current scene: Act 1");
+                Debug.Log("Current scene: Act 1");
                 return Act1Strings.getMessage(message, message2, input);
             }
             else if (currentLevel.name.Contains("4-") || (currentLevel.name.Contains("5-") || (currentLevel.name.Contains("6-"))))
             {
-                parentStringsLogger.LogInfo("Current scene: Act 2");
+                Debug.Log("Current scene: Act 2");
                 return Act2Strings.getMessage(message, message2, input);
             }
             else if (currentLevel.name.Contains("7-") || (currentLevel.name.Contains("8-") || (currentLevel.name.Contains("9-"))))
             {
-                parentStringsLogger.LogInfo("Current scene: Act 3");
+                Debug.Log("Current scene: Act 3");
                 return "Unimplemented Act 3 function";
             }
             else

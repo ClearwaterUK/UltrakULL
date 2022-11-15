@@ -43,7 +43,7 @@ namespace UltrakULL
             // this.baseLevelObject = level; // This hasn't been used yet so it's commented out
             string currentLevel = SceneManager.GetActiveScene().name;
 
-            a2Logger.LogInfo("Patching results screen...");
+            Debug.Log("Patching results screen...");
             string levelName = Act2Strings.getLevelName();
             string levelChallenge = Act2Strings.getLevelChallenge(currentLevel);
             patchResultsScreen(levelName, levelChallenge);

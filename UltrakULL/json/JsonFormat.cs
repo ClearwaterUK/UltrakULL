@@ -1020,6 +1020,8 @@ namespace UltrakULL.json
         public string mainmenu_options;
         public string mainmenu_credits;
         public string mainmenu_quit;
+        public string mainmenu_mods;
+        public string mainmenu_restart;
 
         public string difficulty_title;
         public string difficulty_easy;
