@@ -58,7 +58,6 @@ using UMM;
  * 
  *  -- FOR NEXT HOTFIX --
  *  
- *  Fix first-time launch looking for wrong file and causing problems since the "default" lang file can't be found (looking for wrong name)
  *  Add Russian translation to default languages
  *  Add download buttons to Github readme for finished languages
  * Add a "Open folder" button to the language tab that opens the language folder, makes adding languages to the game easier (Something for Temperz since he knows more UI stuff than me)

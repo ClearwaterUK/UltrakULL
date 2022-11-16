@@ -1,5 +1,6 @@
 ﻿1.0.1
 - Changed mod framework to now use UMM instead of BepInEx. THIS WILL MEAN BEPINEX WILL NO LONGER WORK AS-IS. UMM IS NOW REQUIRED TO LOAD THE MOD.
+- Changed the name of the default language that the mod attempts to load when starting for the first time ("en-GB"). This fixes a bug related to being unable to load a language file on first-time startup.
 - Added a cross-mod fix when running UltrakULL with UltraTweaker. If both are detected, UltrakULL will move its language button in the options to a different location to avoid overlap.
 
 

@@ -21,7 +21,7 @@ namespace UltrakULL.json
 
             ConfigFile cfg = new ConfigFile("BepInEx\\config\\ultrakull\\lastLang.cfg", true);
 
-            string value = cfg.Bind("General", "LastLanguage", "EN-en").Value;
+            string value = cfg.Bind("General", "LastLanguage", "en-GB").Value;
             if (AllLanguages.ContainsKey(value))
             {
                 JsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Setting language to " + value);
@@ -34,7 +34,7 @@ namespace UltrakULL.json
         public static void DumpLastLanguage()
         {
             ConfigFile cfg = new ConfigFile("BepInEx\\config\\ultrakull\\lastLang.cfg", true);
-            cfg.Bind("General", "LastLanguage", "English.json").Value = CurrentLanguage.metadata.langName; // Thank you copilot
+            cfg.Bind("General", "LastLanguage", "en-GB").Value = CurrentLanguage.metadata.langName; // Thank you copilot
         }
 
         public static void LoadLanguages(string modVersion)
