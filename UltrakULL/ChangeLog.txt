@@ -1,4 +1,9 @@
-﻿1.0.0
+﻿1.0.1
+- Changed mod framework to now use UMM instead of BepInEx. THIS WILL MEAN BEPINEX WILL NO LONGER WORK AS-IS. UMM IS NOW REQUIRED TO LOAD THE MOD.
+- Added a cross-mod fix when running UltrakULL with UltraTweaker. If both are detected, UltrakULL will move its language button in the options to a different location to avoid overlap.
+
+
+1.0.0
 
 THE BIG INITIAL RELEASE.
 - Fixed a small issue where the quit confirmation button in the sandbox shop would incorrectly show that of the Cybergrind.

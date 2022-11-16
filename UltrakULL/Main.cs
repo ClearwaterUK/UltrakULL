@@ -58,7 +58,6 @@ using UMM;
  * 
  *  -- FOR NEXT HOTFIX --
  *  
- *  Fix slight conflict with UltraTweaker when using it in UMM, move Language tab to somewhere else in the options
  *  Fix first-time launch looking for wrong file and causing problems since the "default" lang file can't be found (looking for wrong name)
  *  Add Russian translation to default languages
  *  Add download buttons to Github readme for finished languages
@@ -66,6 +65,14 @@ using UMM;
  * Fix up errors and typos in English template
  * 
  * Update readme with new languages+contributors, update readme to reflect UMM port and new installation guide
+ * style_nailbombed typo in templates
+ * Jakito uses duplicate/incorrectly swapped lines?
+ * Shop: Arms back button not translated
+ * Discord RPC: Not using translated difficulty names
+ * Assists: enemySilhouettesOutlines not used, using enemySilhouettes twice
+ * Crosshair size should be called HUD sized - check original game text
+ * Movement category not rendering in cheats? Check templates 
+ * Shadows on text not aligning correctly in intermissions
  * 
  * */
 
@@ -350,7 +357,7 @@ namespace UltrakULL
         public IEnumerator patchScene()
         {
             //Wait a bit to allow any other loaded mods to place their GameObjects down so we can manipulate them as need be afterwards.
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(0.10f);
 
             Console.WriteLine("Beginning patch");
 
@@ -551,7 +558,6 @@ namespace UltrakULL
                     StartCoroutine(UltraTweakerPatch());
                 }
             }
-
         }
 
 

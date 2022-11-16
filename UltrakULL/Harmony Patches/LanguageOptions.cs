@@ -3,8 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UltrakULL.json;
-
-
+using UnityEngine.SceneManagement;
 
 namespace UltrakULL.Harmony_Patches
 {
@@ -16,14 +15,17 @@ namespace UltrakULL.Harmony_Patches
 
         public static bool Prefix(OptionsMenuToManager __instance)
         {
-            Transform panel = __instance.pauseMenu.transform.Find("Panel");
-            GameObject discordButton = panel.Find("Discord").gameObject;
+            if (SceneManager.GetActiveScene().name == "Main Menu")
+            {
+                Transform panel = __instance.pauseMenu.transform.Find("Panel");
+                GameObject discordButton = panel.Find("Discord").gameObject;
 
-            GameObject ultrakullDiscordButton = GameObject.Instantiate(discordButton, discordButton.transform.parent);
-            ultrakullDiscordButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(492f, -295f);
-            ultrakullDiscordButton.GetComponentInChildren<Text>().text = "UltrakULL DISCORD";
-            ultrakullDiscordButton.GetComponentInChildren<Image>().color = discordButton.GetComponentInChildren<Image>().color;
-            ultrakullDiscordButton.GetComponentInChildren<WebButton>().url = "https://discord.gg/ZB7jk6Djv5";
+                GameObject ultrakullDiscordButton = GameObject.Instantiate(discordButton, discordButton.transform.parent);
+                ultrakullDiscordButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(492f, -295f);
+                ultrakullDiscordButton.GetComponentInChildren<Text>().text = "UltrakULL DISCORD";
+                ultrakullDiscordButton.GetComponentInChildren<Image>().color = discordButton.GetComponentInChildren<Image>().color;
+                ultrakullDiscordButton.GetComponentInChildren<WebButton>().url = "https://discord.gg/ZB7jk6Djv5";
+            }
 
 
             Console.WriteLine("Adding language option to options menu...");
