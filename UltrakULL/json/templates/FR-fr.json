@@ -813,7 +813,8 @@
 		"save_slotEmpty": "VIDE",
 
         "language_title": "LANGUE",
-        "language_languages": "LANGUES"
+        "language_languages": "LANGUES",
+        "language_openLanguageFolder": "OUVRIR DOSSIER LANGUAGES"
 	},
 	"pauseMenu": {
 		"pause_title": "PAUSE",

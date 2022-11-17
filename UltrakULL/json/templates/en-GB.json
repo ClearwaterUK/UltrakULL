@@ -859,7 +859,8 @@
 		"save_slotEmpty": "EMPTY",
 
         "language_title": "LANGUAGE",
-        "language_languages": "LANGUAGES"
+        "language_languages": "LANGUAGES",
+        "language_openLanguageFolder": "OPEN LANGUAGE FOLDER"
 	},
 	"pauseMenu": {
 		"pause_title": "PAUSE",

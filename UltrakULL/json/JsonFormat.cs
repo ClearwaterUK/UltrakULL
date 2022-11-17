@@ -1728,6 +1728,7 @@ namespace UltrakULL.json
 
         public string language_title;
         public string language_languages;
+        public string language_openLanguageFolder;
     }
 
     public class Tutorial

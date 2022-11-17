@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UltrakULL.json;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 namespace UltrakULL.Harmony_Patches
 {
@@ -87,6 +88,7 @@ namespace UltrakULL.Harmony_Patches
                 };
                 langButton.targetGraphic = languageButtonInstance.transform.Find("Panel").GetComponent<Graphic>();
 
+
                 langButton.onClick.AddListener(delegate
                 {
                     LanguageManager.SetCurrentLanguage(language);
@@ -95,6 +97,31 @@ namespace UltrakULL.Harmony_Patches
                 languageButtonInstance.SetActive(true);
             }
             button.onClick.AddListener(delegate { languagePage.SetActive(true); });
+
+            // "Open language folder" button
+            GameObject openLangFolder = GameObject.Instantiate(languageButtonPrefab, contentParent);
+            openLangFolder.transform.localScale = new Vector3(0.2188482f, 1.123569f, 0.5088629f);
+            openLangFolder.transform.Find("Select Wrapper").gameObject.SetActive(false);
+            openLangFolder.transform.Find("Delete Wrapper").gameObject.SetActive(false);
+            openLangFolder.transform.Find("State Text").gameObject.SetActive(false);
+            GameObject.Destroy(openLangFolder.GetComponent<SlotRowPanel>());
+
+            Transform slotTextLangButton = openLangFolder.transform.Find("Slot Text");
+            slotTextLangButton.localScale = new Vector3(4.983107f, 0.970607f, 2.1431f);
+            slotTextLangButton.localPosition = new Vector3(0f, 0f, 0f);
+            Text openLangFolderText = slotTextLangButton.GetComponent<Text>();
+            openLangFolderText.text = LanguageManager.CurrentLanguage.options.language_openLanguageFolder;
+            Button openLangFolderButton = openLangFolder.AddComponent<Button>();
+            openLangFolderButton.colors = new ColorBlock()
+            {
+                normalColor = new Color32(255, 255, 255, 255),
+                highlightedColor = new Color32(255, 0, 0, 255),
+                pressedColor = new Color32(255, 255, 0, 255),
+                disabledColor = new Color32(255, 255, 0, 255),
+                colorMultiplier = 1f,
+                fadeDuration = 0.1f
+            };
+            openLangFolderButton.onClick.AddListener(delegate { Application.OpenURL(Path.Combine(Directory.GetCurrentDirectory() + "\\BepInEx\\config\\ultrakull")); });
 
 
             RectTransform cRect = languagePage.transform.Find("Scroll Rect (1)").Find("Contents").GetComponent<RectTransform>();

@@ -5,6 +5,8 @@ ADDED:
 mainmenu: mainmenu_restart
 mainmenu: mainmenu_mods
 
+options: language_openLanguageFolder
+
 
 0.9.2:
 

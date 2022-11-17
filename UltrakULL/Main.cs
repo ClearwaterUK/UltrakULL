@@ -60,7 +60,6 @@ using UMM;
  *  
  *  Add Russian translation to default languages
  *  Add download buttons to Github readme for finished languages
- * Add a "Open folder" button to the language tab that opens the language folder, makes adding languages to the game easier (Something for Temperz since he knows more UI stuff than me)
  * Fix up errors and typos in English template
  * 
  * Update readme with new languages+contributors, update readme to reflect UMM port and new installation guide
@@ -72,6 +71,7 @@ using UMM;
  * Crosshair size should be called HUD sized - check original game text
  * Movement category not rendering in cheats? Check templates 
  * Shadows on text not aligning correctly in intermissions
+ * Shop: Leviathan title in bio missing
  * 
  * */
 
@@ -88,7 +88,6 @@ namespace UltrakULL
 
         public static MainPatch instance = null;
         private GameObject ultrakullLogo = null;
-        private GameObject ultrakullDiscordButton = null;
 
         private bool ready = false;
         public Font vcrFont;
