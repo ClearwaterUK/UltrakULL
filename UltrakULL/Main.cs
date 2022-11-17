@@ -66,7 +66,6 @@ using UMM;
  * style_nailbombed typo in templates
  * Jakito uses duplicate/incorrectly swapped lines?
  * Shop: Arms back button not translated
- * Discord RPC: Not using translated difficulty names
  * Assists: enemySilhouettesOutlines not used, using enemySilhouettes twice
  * Crosshair size should be called HUD sized - check original game text
  * Movement category not rendering in cheats? Check templates 

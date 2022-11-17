@@ -51,6 +51,15 @@ namespace UltrakULL.Harmony_Patches
             else
             {
                 string translatedDifficulty = MonoSingleton<PresenceController>.Instance.diffNames[MonoSingleton<PrefsManager>.Instance.GetInt("difficulty", 0)];
+                switch(translatedDifficulty)
+                {
+                    case "HARMLESS": { translatedDifficulty = LanguageManager.CurrentLanguage.frontend.difficulty_harmless; break; }
+                    case "LENIENT": { translatedDifficulty = LanguageManager.CurrentLanguage.frontend.difficulty_lenient; break; }
+                    case "STANDARD": { translatedDifficulty = LanguageManager.CurrentLanguage.frontend.difficulty_standard; break; }
+                    case "VIOLENT": { translatedDifficulty = LanguageManager.CurrentLanguage.frontend.difficulty_violent; break; }
+                    case "BRUTAL": { translatedDifficulty = LanguageManager.CurrentLanguage.frontend.difficulty_brutal; break; }
+                    case "ULTRAKILL MUST DIE": { translatedDifficulty = LanguageManager.CurrentLanguage.frontend.difficulty_umd; break; }
+                }
                 ___cachedActivity.State = LanguageManager.CurrentLanguage.frontend.difficulty_title + ": " + translatedDifficulty;
             }
 
