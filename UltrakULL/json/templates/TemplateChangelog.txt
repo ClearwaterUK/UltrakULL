@@ -7,6 +7,8 @@ mainmenu: mainmenu_mods
 
 options: language_openLanguageFolder
 
+enemyNames: enemyname_leviathan
+
 
 0.9.2:
 

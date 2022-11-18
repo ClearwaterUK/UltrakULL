@@ -70,7 +70,6 @@ using UMM;
  * Crosshair size should be called HUD sized - check original game text
  * Movement category not rendering in cheats? Check templates 
  * Shadows on text not aligning correctly in intermissions
- * Shop: Leviathan title in bio missing
  * 
  * */
 
