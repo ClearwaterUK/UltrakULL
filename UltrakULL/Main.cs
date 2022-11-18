@@ -63,12 +63,10 @@ using UMM;
  * Fix up errors and typos in English template
  * 
  * Update readme with new languages+contributors, update readme to reflect UMM port and new installation guide
- * style_nailbombed typo in templates
  * Jakito uses duplicate/incorrectly swapped lines?
  * Shop: Arms back button not translated
  * Assists: enemySilhouettesOutlines not used, using enemySilhouettes twice
  * Crosshair size should be called HUD sized - check original game text
- * Movement category not rendering in cheats? Check templates 
  * Shadows on text not aligning correctly in intermissions
  * 
  * */

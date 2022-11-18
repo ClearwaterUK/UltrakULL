@@ -5,6 +5,7 @@
 - Added a button to the Language tab that opens the language folder in Windows, to help simplify the process for adding new language files.
 - Fixed the Leviathan name not appearing in the enemy bios section of the shop.
 - Fixed difficulty titles always displaying in English in the Discord Rich Presence.
+- Fixed the missing movement category string in the cheats menu.
 
 
 1.0.0
