@@ -65,7 +65,7 @@ The installation section is divided into 3 parts:
 # Uninstallation:
 
 ### Removing UltrakULL:
-- Delete UltrakULL.dll from BepInEx/plugins
+- Delete UltrakULL.dll from BepInEx/UMM Mods/UltrakULL
 
 ### Removing UMM:
 - Delete UMM.dll from BepInEx/plugins.
