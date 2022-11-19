@@ -586,7 +586,7 @@ namespace UltrakULL
                 assistEnemySilhouettesDistanceSlider.ifMin = LanguageManager.CurrentLanguage.options.assists_enemySilhouettesDistanceMinimum;
 
                 Text assistEnemySilhouettesOutlinesOnlyText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(assistEnemySilhouettesExtra, "Extra"),"Text (2)"));
-                assistEnemySilhouettesOutlinesOnlyText.text = LanguageManager.CurrentLanguage.options.assists_enemySilhouettes;
+                assistEnemySilhouettesOutlinesOnlyText.text = LanguageManager.CurrentLanguage.options.assists_enemySilhouettesOutlinesOnly;
 
                 GameObject assistsMajor = getGameObjectChild(assistContent, "Major Assists");
                 Text assistsMajorTitle = getTextfromGameObject(assistsMajor);
