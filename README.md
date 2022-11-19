@@ -1,6 +1,6 @@
 ﻿[![Discord](https://img.shields.io/discord/1017473804592754778?label=UltrakULL%20Discord)](https://discord.gg/ZB7jk6Djv5 "Discord Invite")
 ![Version](https://img.shields.io/github/v/release/ClearwaterTM/UltrakULL)
-![GitHub](https://img.shields.io/github/license/ClearwaterTM/UltrakULL?logo=MIT%20Licence&logoColor=MIT%20Licence)
+![Licence](https://img.shields.io/github/license/ClearwaterTM/UltrakULL)
 
 # UltrakULL
 
@@ -29,24 +29,47 @@ or via the [UltrakULL Discord](https://discord.gg/ZB7jk6Djv5) in the #language-r
 ### Prerequisites:
 - A [Steam copy](https://store.steampowered.com/app/1229490/ULTRAKILL/) of ULTRAKILL.<br>**Demo, GOG.com and cracked versions are NOT supported.**
 - BepInEx 5 64-bit. It can be directly downloaded from [here](https://github.com/BepInEx/BepInEx/releases/download/v5.4.21/BepInEx_x64_5.4.21.0.zip).<br>**Do not download/install BepInEx 6, ULTRAKILL does not support it.**
+- ULTRAKILL Mod Manager (UMM). It can be downloaded from [here](https://github.com/Temperz87/ultra-mod-manager/releases/download/0.4.2/UMM.v0.4.2.zip).<br>**UMM 0.4.2 is the current recommended version for using mods.**
 - A release of UltrakULL. Details to obtain it are given in the [Download](#Download) section.<br>**It is highly recommended to acquire the latest version available when downloading.**
 - (Optional) Any extra language files you may wish to use. View the [Download](#Download) section for information on extra language files.
 
 ### Installation:
-- Download UltrakULL from either the [Releases page](https://github.com/ClearwaterTM/UltrakULL/releases) or the #mod-releases channel from the [UltrakULL Discord.](https://discord.gg/ZB7jk6Djv5)
-- Download BepInEx 5, and extract the contents to where your ULTRAKILL install folder is located. 
-- Launch ULTRAKILL once so BepInEx can generate the required files and folders in the install folder. Quit the game once it has loaded to the main menu.
-- Extract the contents of UltrakULL to your ULTRAKILL install folder. Overwrite any files if prompted.
-  - If you have any additional language files, place them in BepInEx/config/ultrakull .
-- Launch ULTRAKILL. If the mod has loaded correctly, you should see a new "Languages" tab in the options menu.
+
+The installation section is divided into 3 parts:
+- Installing BepInEx, the modding framework
+- Installing UMM, the mod loader used for the game
+- Installing UltrakuLL, the mod itself
+
+#### Installing BepInEx:
+
+- Download all of the required files from the Prerequisites section.
+- Extract the contents of BepInEx to where your ULTRAKILL install folder is located.
+- Launch ULTRAKILL so BepInEx can generate the required files and folders in the install folder. Quit the game once it has loaded to the main menu.
+
+#### Installing UMM:
+
+- Extract the contents of UMM. Place the "UMM Mods" folder in your BepInEx folder, and UMM.dll in BepInEx/plugins.
+- Launch ULTRAKILL. If UMM is installed correctly, you will see a modified layout of the main menu, including new buttons.
+
+#### Installing UltrakULL:
+
+- Extract the contents of UltrakULL to your BepInEx folder. Overwrite any files if prompted.
+- Launch ULTRAKILL. If the mod has loaded correctly, you should see a new "Languages" tab in the Options menu.
 <img src="https://cdn.discordapp.com/attachments/472691871806652429/1037354187341701130/unknown.png" alt="drawing" width="650"/>
 - From the Languages tab, you can select any available language based on the language files UltrakULL has found, and will load them into the game.
+  - If you have any additional language files you wish to use, click on the "OPEN LANGUAGE FOLDER" button, and place them in the folder that opens.
+  - *A game restart is required for the new languages to appear.*
+- **Optional**: Enable the BepInEx console by opening the BepInEx.cfg inside the config folder. Find the Logging.Console option and set it to true. This will activate the BepInEx console every time your game launches, and will output the status of the game there. This is very helpful for tracking down problems or errors.
 
 
 # Uninstallation:
 
 ### Removing UltrakULL:
 - Delete UltrakULL.dll from BepInEx/plugins
+
+### Removing UMM:
+- Delete UMM.dll from BepInEx/plugins.
+- (This will remove UMM, but not your actual mod files)
 
 ### Removing BepInEx:
 - Delete the winhttp.dll file from your ULTRAKILL install folder. This is the file used for BepInEx to hook into the game, and will not break your installation if it is removed.
@@ -55,28 +78,29 @@ or via the [UltrakULL Discord](https://discord.gg/ZB7jk6Djv5) in the #language-r
 | Language                                 | Contributors                                                                                            | Status         | Available?         | Notes                                  |
 |------------------------------------------|---------------------------------------------------------------------------------------------------------|----------------|--------------------|----------------------------------------|
 | English (U.S)                            | Hakita & New Blood                                                                                      | Finished       | :heavy_check_mark: | Grammatical improvements by Clearwater |
+| Russian (русский)                        | Nessie_A_WA97, D4N5T3P, Edith Bagel, lrddd, Brainy-Stormie, TwinT, towelie84, mctaylors, Solidus Cumcer | Finished       | :heavy_check_mark: |                                        |
 |                                          |                                                                                                         |                |                    |                                        |
 | Arabic                                   | riko, hamza666                                                                                          | In development | :x:                |                                        |
-| Brazilian Portuguese (Português do Brasil) | Veni, Jackie, MKaid, hebert, FNChannel, Spooky, Soulvender, Raylander                                   | In development | :x:                |                                        |
+| Brazilian Portugese (Portugês do Brasil) | Veni, Jackie, MKaid, hebert, FNChannel, Spooky, Soulvender, RAYLANDER                                   | In development | :x:                |                                        |
 | Belarusian (беларуска)                   | Kiberkotleta                                                                                            | In development | :x:                |                                        |
 | Czech (Čeština)                          | Mina                                                                                                    | In development | :x:                |                                        |
 | Dutch (Nederlands)                       | HIMkoto                                                                                                 | In development | :x:                |                                        |
 | Filipino (Pilipino)                      | mxkyle                                                                                                  | In development | :x:                |                                        |
 | French (Français)                        | Clearwater, ZedDev, Frizou, osokour                                                                     | In development | :x:                |                                        |
-| German (Deutsch)                         | Distrilul, JESTERB0T, Liquid Lest, Psychologemelone44                                                                       | In development | :x:                |                                        |
+| German (Deutsch)                         | Distrilul, JESTERB0T, Liquid Lest                                                                       | In development | :x:                |                                        |
 | Greek (Ελληνικά)                         | Mi pro                                                                                                  | In development | :x:                |                                        |
 | Hungarian (Magyar)                       | B3n, csigachad                                                                                          | In development | :x:                |                                        |
 | Italian (Italiano)                       | Dav, SimonLuck31, Paolotto Games, Cammen, snp, ImmortalChanger                                          | In development | :x:                |                                        |
 | Indonesian (Bahasa Indonesia)            | Arif “Fry” Siregar, mulfok                                                                              | In development | :x:                |                                        |
-| Portuguese (Português)                     | Toyota AE86, GamerGeb                                                                                   | In development | :x:                |                                        |
+| Japanese (日本語)                        | sc1zzla                                                                                                 | In development | :x:                |                                        |
+| Portugese (Portugês)                     | Toyota AE86, GamerGeb                                                                                   | In development | :x:                |                                        |
 | Polish (Polski)                          | SmallSeaCat, Fikou, filizanka, Patryk, Spookz, owaloid                                                  | In development | :x:                |                                        |
 | Romanian (Românesc)                      | Vampuffin                                                                                               | In development | :x:                |                                        |
-| Russian (русский)                        | Nessie_A_WA97, D4N5T3P, Edith Bagel, lrddd, Brainy-Stormie, TwinT, towelie84, mctaylors, Solidus Cumcer | In development | :x:                |                                        |
-| Simplified Chinese (简体中文)             | Hydracerynitis, ciinore, duke325, ponyweeb, Skugra, GoGoblin                                            | In development | :x:                |                                        |
+| Simplified Chinese (简体中文)           | Hydracerynitis, ciinore, duke325, ponyweeb, Skugra, GoGoblin                                            | In development | :x:                |                                        |
 | Spanish (Español)                        | Radsi, cinnamon, LambCS, Philia, Lukah, Amarok_Lc, Radripizza, j(LRC), LEVIBOT, Makaj                   | In development | :x:                |                                        |
 | Thai (ภาษาไทย)                           | Skugra, Winterman                                                                                       | In development | :x:                |                                        |
-| Turkish (Türkçe)                         | Jule Axus, Legitname1337, Mr Wheatley Ömer Talha, RTE, Ray_                                                         | In development | :x:                |                                        |
-| Traditional Chinese(繁體中文)            | GuonuoTW(SmallNo), duke325                                                                               | In development | :x:                |                                        |
+| Turkish (Türkçe)                         | Jule Axus, Legitname1337, Ömer Talha, RTE, Ray_                                                         | In development | :x:                |                                        |
+| Traditional Chinese(繁體中文)                | GuonuoTW(SmallNo), duke325                                                                              | In development | :x:                |                                        |
 | Ukrainian (Українська)                   | Rafunny, Blitzo, Keka, ArtSabs, ak11, the ukrainian war drone, CsyeCok The Soldier                      | In development | :x:                |                                        |
 | Vietnamese (Tiếng Việt)                  | TimmyThePea, honkscape, Jerry                                                                           | In development | :x:                |                                        |
 | Australian English                       | nptnk, FORTY7OUT                                                                                        | In development | :x:                |                                        |
@@ -129,6 +153,8 @@ No, this mod merely changes text in the game. It does not alter your saves in an
 
 No, for the same reason as above. It does not alter any gameplay aspects that would give an unfair advantage in any way, and as such,
 will be safe to set Cybergrind highscores with.
+If for some reason your Cybergrind highscores are not being submitted, and you are sure they should be doing so, feel free to shoot a message
+on our Discord and I will take a look at it.
 
 ### Can voice lines from characters be translated?
 
@@ -141,13 +167,13 @@ I usually like to post updates and news about development in multiple places, in
 the [New Blood Discord](https://discord.gg/newblood), and my [personal Twitter](https://twitter.com/ClearwaterHLL).
 
 ### Is UltrakULL compatible with other mods?
-[Ultrakill Mod Manager](https://github.com/Temperz87/ultra-mod-manager): Confirmed to be working, however has not been fully tested.\
-Compatability with other mods not listed here is unknown.
+[UltraTweaker](https://github.com/wafflethings/ULTRAKILLtweaker): *Confirmed* to be working, but extensive testing has not been done.
+If UltrakULL and UltraTweaker are being used at the same time, the the Language tab in the Options menu will be moved to the right side
+to avoid overlap with UltraTweaker's own Tweaker Options button.
 
 # Credits & Contributors
 UltrakULL created by **[Clearwater](https://github.com/ClearwaterTM)**\
 Additional code contributions by **[Temperz87](https://github.com/Temperz87/)**\
-GitHub repo banner by **tunacan#0110**\
 Language translations by members of the **UltrakULL Translation Team** \
 (view the [Languages](#Languages) section for full information and crediting)\
 ULTRAKILL created by **Arsi 'Hakita' Patala** and published by **New Blood Interactive**
