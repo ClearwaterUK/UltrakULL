@@ -63,7 +63,6 @@ using UMM;
  * Fix up errors and typos in English template
  * 
  * Update readme with new languages+contributors, update readme to reflect UMM port and new installation guide
- * Crosshair size should be called HUD sized - check original game text
  * Shadows on text not aligning correctly in intermissions
  * 
  * */
