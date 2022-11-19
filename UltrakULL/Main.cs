@@ -1,18 +1,10 @@
-﻿using BepInEx;
-using HarmonyLib;
+﻿using HarmonyLib;
 using System;
-using System.IO;
 using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
-using UltrakULL;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.Events;
 
-using System.Linq;
 using UltrakULL.json;
 
 using static UltrakULL.CommonFunctions;
@@ -69,22 +61,20 @@ using UMM;
 
 namespace UltrakULL
 {
-    [UKPlugin(pluginName,pluginVersion,pluginDescription,false,false)]
+    [UKPlugin("UltrakULL (Ultrakill Language Library)","1.0.1","A localization and translation plugin for ULTRAKILL. Created by Clearwater.",true,false)]
 
     public class MainPatch : UKMod
     {
-        public const string pluginGuid = "clearwater.ultrakill.ultrakULL";
-        public const string pluginName = "UltrakULL (Ultrakill Language Library)";
-        public const string pluginVersion = "1.0.1";
-        public const string pluginDescription = "A localization and translation plugin for ULTRAKILL. Created by Clearwater.";
-
-        public static bool CanSubmitCybergrindScore = true;
 
         public static MainPatch instance = null;
         private GameObject ultrakullLogo = null;
 
         private bool ready = false;
         public Font vcrFont;
+
+        public const string internalName = "clearwater.ultrakull.ultrakULL";
+        public const string internalVersion = "1.0.1";
+
 
         public MainPatch()
         {
@@ -201,7 +191,7 @@ namespace UltrakULL
 
         public void initJsonParser()
         {
-            LanguageManager.InitializeManager(pluginVersion);
+            LanguageManager.InitializeManager(internalVersion);
         }
 
         //Encapsulation function to patch the shop.
@@ -399,13 +389,13 @@ namespace UltrakULL
                         ultrakullLogo = GameObject.Instantiate(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Title"), "Text"), frontEnd.transform);
                         ultrakullLogo.transform.localPosition = new Vector3(1025, -425, 0);
                         Text ultrakullLogoText = getTextfromGameObject(ultrakullLogo);
-                        ultrakullLogoText.text = "ultrakULL loaded.\nVersion: " + pluginVersion + "\nCurrent locale: " + LanguageManager.CurrentLanguage.metadata.langName;
+                        ultrakullLogoText.text = "ultrakULL loaded.\nVersion: " + internalVersion + "\nCurrent locale: " + LanguageManager.CurrentLanguage.metadata.langName;
                         ultrakullLogoText.alignment = TextAnchor.UpperLeft;
                         ultrakullLogoText.fontSize = 16;
                         //Get the font
                         this.vcrFont = ultrakullLogoText.font;
 
-                        if (!LanguageManager.FileMatchesMinimumRequiredVersion(LanguageManager.CurrentLanguage.metadata.minimumModVersion, pluginVersion))
+                        if (!LanguageManager.FileMatchesMinimumRequiredVersion(LanguageManager.CurrentLanguage.metadata.minimumModVersion, internalVersion))
                         {
                             ultrakullLogoText.text += "\n<color=orange>WARNING - Outdated language\nloaded.</color>\nCheck console\n & use at your own risk!";
                             ultrakullLogo.transform.localPosition = new Vector3(1025, -350, 0);
@@ -572,19 +562,16 @@ namespace UltrakULL
         {
             //Debug.unityLogger.filterLogType = LogType.Exception;
             Debug.Log("UltrakULL LOADING...");
-            Debug.Log("Version: " + pluginVersion);
+            Debug.Log("Version: " + internalVersion);
             try
             {
                 Debug.Log("--- Initializing JSON parser ---");
                 initJsonParser();
                 Debug.Log("--- Patching vanilla game functions ---");
                 Debug.Log("Patching game functions...");
-                Harmony harmony = new Harmony(pluginGuid);
+                Harmony harmony = new Harmony(internalName);
                 harmony.PatchAll();
-                
-                Debug.Log(" --- Whitelisting UltrakULL for CG score submission ---");
-                UKAPI.RemoveDisableCyberGrindReason(pluginName);
-                
+
                 Debug.Log(" --- All done. Enjoy! ---");
                 
 
