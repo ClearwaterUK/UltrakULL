@@ -1,8 +1,8 @@
 {
 	"metadata": {
 		"langName": "en-GB",
-		"langAuthor": "Hakita",
-		"langVersion": "1.0",
+		"langAuthor": "New Blood & Hakita",
+		"langVersion": "1.0.1",
         "langDisplayName": "English",
 
         "minimumModVersion": "1.0.1"
@@ -148,7 +148,7 @@
         "cybergrind_waves": "WAVES",
         
         "cybergrind_themesTitle": "THEMES",
-        "cybergrind_themesDescription": "Select the visual theme for the arene",
+        "cybergrind_themesDescription": "Select the visual theme for the arena",
         "cybergrind_themesLight": "LIGHT",
         "cybergrind_themesDark": "DARK",
         "cybergrind_themesCustom": "CUSTOM",
@@ -419,7 +419,7 @@
         "visualnovel_introSecond4": "The last few barely making it.",
         "visualnovel_introSecond5": "The rest of us never stood a chance.",
         
-        "visualnovel_introSecond6": "Suddenly, from a blindspot, a figure struck me.",
+        "visualnovel_introSecond6": "Suddenly, from a blind spot, a figure struck me.",
         "visualnovel_introSecond7": "There was no time to react before I came crashing down onto the cold hard ground.",
         "visualnovel_introSecond8": "I struggled to regain my senses to at least see what fate would befall me in my final moments, but even in this abyss of endless terror, my mind could never have imagined the horror I witnessed.",
         
@@ -498,7 +498,7 @@
         "visualnovel_recklessnessResponseThird": "Everything.",
         
         "visualnovel_waitingFirst": "Wandering around like headless chickens would only get us even more lost.",
-        "visualnovel_waitingSecond": "Since we were both heading to school and ended up meeting right here, that means there's a very high likelyhood this spot is somewhere along the way.",
+        "visualnovel_waitingSecond": "Since we were both heading to school and ended up meeting right here, that means there's a very high likelihood this spot is somewhere along the way.",
         "visualnovel_waitingThird1": "Therefore, we'll be better off just staying put and waiting for someone who DOES know the way.",
         "visualnovel_waitingThird2": "It's basic logic, you should look it up sometime.",
         
@@ -654,7 +654,7 @@
 		"general_weaponPositionRight": "RIGHT",
 		"general_weaponPositionMiddle": "MIDDLE",
 		"general_weaponPositionLeft": "LEFT",
-		"general_rememberWeapon": "REMEBER LAST USED WEAPON VARIATION",
+		"general_rememberWeapon": "REMEMBER LAST USED WEAPON VARIATION",
 		"general_screenShake": "SCREENSHAKE",
         "general_screenShakeMinimum": "NONE",
         "general_screenShakeMaximum": "JUICE",
@@ -959,7 +959,7 @@
 		"challenges_wrathFourth": "REACH THE SURFACE IN UNDER 10 SECONDS",
         
         "challenges_heresyFirst": "BEAT THE SECRET ENCOUNTER",
-		"challenges_heresySecond": "HIT GABRIEL INTO THE CIELING"
+		"challenges_heresySecond": "HIT GABRIEL INTO THE CEILING"
 
 	},
 	"levelTips":{
@@ -1360,7 +1360,7 @@
         
         "enemyBios_stray_1": "While their tall stature may seem intimidating, Strays are afraid of most danger and will try to stay at a safe distance, only attacking via projectiles formed with Hell Energy. ",
         "enemyBios_stray_2": "Although controlling and manifesting this energy is a complicated task, Strays have very low intelligence and are only able to do so via pure instinct.",
-        "enemyBios_stray_3": "Nevertheless, humans were unable to replicate this level of accuracy and control, particularily the Stray's ability to cause the energy orbs to selectively ignore other Husks.",
+        "enemyBios_stray_3": "Nevertheless, humans were unable to replicate this level of accuracy and control, particularly the Stray's ability to cause the energy orbs to selectively ignore other Husks.",
         
         "enemyBios_stray_strategy1": "Most weapons will be effective against them, but a Revolver headshot is the quickest and surest way to eliminate a Stray.",
         "enemyBios_stray_strategy2": "Due to their static nature and slow rate of attacking, they are an excellent target for projectile parrying.",
@@ -1393,7 +1393,7 @@
         "enemyBios_ferryman_strategy4": "Ferrymen may attempt to cross a retreating opponent up by rolling behind them before attacking. Keep track of their position and if they roll too often, try being more aggressive.",
         
         "enemyBios_idol_1": "Although they can easily be mistaken to be of divine origin, Idols were created using the same process as other demons. Unlike their larger kin, their shells were too small to contain a useful amount of Hell Mass, creating life, but leaving it unable to move or act.",
-        "enemyBios_idol_2": "The Idols did not originally look divine, but were painstakingly carved to such shapes by Ferrymen who collected them during travels across the layers of Hell. This was done as both an act of compassion and as a tribute to angels, particularily Gabriel, whom Ferrymen believe to have similarily granted them mercy.",
+        "enemyBios_idol_2": "The Idols did not originally look divine, but were painstakingly carved to such shapes by Ferrymen who collected them during travels across the layers of Hell. This was done as both an act of compassion and as a tribute to angels, particularly Gabriel, whom Ferrymen believe to have similarly granted them mercy.",
         "enemyBios_idol_3": "Close proximity to a Ferryman's holy cloth during the long and arduous carving process caused its holy power to seep into them, allowing them to continue the chain of compassion by protecting others from physical harm.",
         "enemyBios_idol_4": "It is fortunate for them that Gabriel is the only angel of Heaven's higher order to watch over Hell, since if the Council had found out about such beings, they would have been labelled perversions of the divine form and ordered to be destroyed by the Ferrymen who so lovingly had granted them a chance at life.",
         
@@ -1411,7 +1411,7 @@
         "enemyBios_leviathan_strategy3": "The tail will either swing high or low, and the height of the swing can be determined by the direction in which the swing rotates.",
         
         "enemyBios_corpseOfKingMinos_1": "Once the great and beloved king of the Lust layer, Minos has now been reduced to a shambling corpse.",
-        "enemyBios_corpseOfKingMinos_2": "Due to his incredible power of will and status as a just ruler in life remembered even millenia after his death, the manifestation of his soul is the largest Husk to ever have been recorded.",
+        "enemyBios_corpseOfKingMinos_2": "Due to his incredible power of will and status as a just ruler in life remembered even millennia after his death, the manifestation of his soul is the largest Husk to ever have been recorded.",
         "enemyBios_corpseOfKingMinos_3": "Small traces of the original soul can still be detected in the body, but the corpse itself is animated and controlled entirely by the snakelike Parasites that he once commanded.",
         "enemyBios_corpseOfKingMinos_4": "Despite once bringing upon the renaissance of the Lust layer, his corpse now only seeks sinners to punish.",
         
@@ -1628,14 +1628,14 @@
 		"tutorial_dash1": "Press",
 		"tutorial_dash2": "to DASH. (Consumes stamina)",
 		"tutorial_dash3": "Can be used in mid-air.",
-		"tutorial_health1": "Deal close range damage to douse youself in FRESH BLOOD.",
+		"tutorial_health1": "Deal close range damage to douse yourself in FRESH BLOOD.",
 		"tutorial_health2": "THIS IS THE ONLY WAY TO REGAIN HEALTH.",
 		"tutorial_walljump": "JUMP while near a WALL to WALL JUMP. (Max 3 times)",
 		"tutorial_shockwave1": "Press",
 		"tutorial_shockwave2": "to perform a GROUND SLAM.",
 		"tutorial_shockwave3": "Hold for SHOCKWAVE. (Consumes STAMINA)",
 		"tutorial_orb1": "Most levels contain SOUL ORBS.",
-		"tutorial_orb2": "Touch them to recieve a POINT BONUS."
+		"tutorial_orb2": "Touch them to receive a POINT BONUS."
 	},
 	"prelude":{
 		"prelude_first_openingCredits1": "NEW BLOOD PRESENTS",
@@ -1693,7 +1693,7 @@
 
 		"act1_lustThird_water": "The water has been drained",
 
-		"act1_secret": "Somewhere in Limbo, a mecanism is set in motion."
+		"act1_secret": "Somewhere in Limbo, a mechanism is set in motion."
 	},
 	"act2":{
 		"act2_greedSecond_sand": "Enemies covered in sand WILL NOT BLEED.",
@@ -1744,7 +1744,7 @@
         "primeSanctum_first_secretText3": "The elevator room terminals are an advanced interconnected network built for the purpose of transferring materials and tools between different areas. They are capable of transferring physical material as information across a radio signal, which other terminals can receive and use to reconstruct the sent object. The original item is lost, as it is transformed into the energy that is used to transmit the material information, and the process is quite slow due to the amount of information that physical matter holds.",
         "primeSanctum_first_secretText4": "An early test of a matter transfer's accuracy was a mint condition 78rpm vinyl record, which was sent from the lab to all connected terminals. The vinyl was a single of Russ Morgan Orchestra's recording of the piece Were You Foolin' (a favorite of the CRO), though the label was removed to reduce the amount of matter to be transferred.",
         "primeSanctum_first_secretText5": "[note: fuck you tom im so fucking tired of this stupid song and having to listen to it every morning over your garbage intercom]",
-        "primeSanctum_first_secretText6": "Soon after, the Hell exploration and excavation project was abandoned and this vinyl record remained the only matter to have been succesfully transferred before connection between the surface and the terminals was lost.",
+        "primeSanctum_first_secretText6": "Soon after, the Hell exploration and excavation project was abandoned and this vinyl record remained the only matter to have been successfully transferred before connection between the surface and the terminals was lost.",
         "primeSanctum_first_secretText7": "The terminals now use the record to lure machines into a symbiotic relationship (For further information, see TERMINAL DATA 02: [LINK REMOVED]). However, the terminals only play short instrumental sections of the original record for undetermined reasons.",
         "primeSanctum_first_secretText8": "Some researchers have joked that perhaps the terminals are simply \"too shy to sing\", though rumors have been spreading of mechanics who, after fixing a faulty or broken terminal, said to have heard the terminal play a vocal section when only the mechanic is present with no recording equipment, making this an unverifiable claim.",
         "primeSanctum_first_secretText9": "END OF DATA 01. For more information, see [LINK REMOVED] and [LINK REMOVED]."     
@@ -1961,7 +1961,7 @@
 		"hellmap_fourth": "FOURTH",
 		"hellmap_climax": "CLIMAX",
         "hellmap_act1crescendo": "ACT I CRESCENDO",
-        "hellmap_act1climax": "ACTE I CLIMAX",
+        "hellmap_act1climax": "ACT I CLIMAX",
         "hellmap_act2crescendo": "ACT II CRESCENDO",
         "hellmap_act2climax": "ACT II CLIMAX",
         
@@ -1970,7 +1970,7 @@
         "levelstats_style": "STYLE",
         "levelstats_secrets": "SECRET",
         "levelstats_challenge": "CHALLENGE",
-        "levelstats_majorAssists": "MAJOR ASSITS",
+        "levelstats_majorAssists": "MAJOR ASSISTS",
         "levelstats_boxes": "BOXES",
         
         "state_activated": "ACTIVE",
