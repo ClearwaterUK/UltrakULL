@@ -125,11 +125,11 @@ namespace UltrakULL
             {
                 return (LanguageManager.CurrentLanguage.act2.act2_wrathSecond_jakito1);
             }
-            if (fullMessage.Contains("NO"))
+            if (fullMessage.Contains("THANK"))
             {
                 return (LanguageManager.CurrentLanguage.act2.act2_wrathSecond_jakito2);
             }
-            if (fullMessage.Contains("THANK"))
+            if (fullMessage.Contains("NO"))
             {
                 return (LanguageManager.CurrentLanguage.act2.act2_wrathSecond_jakito3);
             }

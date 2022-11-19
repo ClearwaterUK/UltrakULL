@@ -4,6 +4,7 @@
 - Added a cross-mod fix when running UltrakULL with UltraTweaker. If both are detected, UltrakULL will move its language button in the options to a different location to avoid overlap.
 - Added a button to the Language tab that opens the language folder in Windows, to help simplify the process for adding new language files.
 - Fixed the back button on arm descriptions in the shop not being translated.
+- Fixed Jakito's lines on 5-2 being incorrectly swapped when you give him a fish/skull.
 - Fixed the Leviathan name not appearing in the enemy bios section of the shop.
 - Fixed difficulty titles always displaying in English in the Discord Rich Presence.
 - Fixed the missing movement category string in the cheats menu.
