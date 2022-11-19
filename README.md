@@ -54,7 +54,8 @@ The installation section is divided into 3 parts:
 #### Installing UltrakULL:
 
 - Extract the contents of UltrakULL to your BepInEx folder. Overwrite any files if prompted.
-- Launch ULTRAKILL. If the mod has loaded correctly, you should see a new "Languages" tab in the Options menu.
+- Launch ULTRAKILL and click on the Mods button in the main menu. UltrakULL should be displayed there. Click on the square icon in the corner of it to enable auto-startup of the mod, then restart ULTRAKILL (either manually or with the new Restart button added by UMM).
+- If the mod has loaded correctly, you should see a new "Languages" tab in the Options menu.
 <img src="https://cdn.discordapp.com/attachments/472691871806652429/1037354187341701130/unknown.png" alt="drawing" width="650"/>
 - From the Languages tab, you can select any available language based on the language files UltrakULL has found, and will load them into the game.
   - If you have any additional language files you wish to use, click on the "OPEN LANGUAGE FOLDER" button, and place them in the folder that opens.
