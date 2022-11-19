@@ -1,5 +1,7 @@
 ﻿1.0.1
-- Changed mod framework to now use UMM instead of BepInEx. THIS WILL MEAN BEPINEX WILL NO LONGER WORK AS-IS. UMM IS NOW REQUIRED TO LOAD THE MOD.
+- Changed mod framework to now use UMM instead of directly using BepInEx.
+THIS WILL MEAN BepInEx ON ITS OWN WILL NO LONGER WORK AS-IS, UMM IS NOW REQUIRED AS WELL TO LOAD THE MOD. See the README on the GitHub for more details.
+- Updated the README on the GitHub to reflect new installation process, as well as new collaborators and available languages.
 - Changed the name of the default language that the mod attempts to load when starting for the first time ("en-GB"). This fixes a bug related to being unable to load a language file on first-time startup.
 - Added a cross-mod fix when running UltrakULL with UltraTweaker. If both are detected, UltrakULL will move its language button in the options to a different location to avoid overlap.
 - Added a button to the Language tab that opens the language folder in Windows, to help simplify the process for adding new language files.
@@ -10,6 +12,17 @@
 - Fixed the Leviathan name not appearing in the enemy bios section of the shop.
 - Fixed difficulty titles always displaying in English in the Discord Rich Presence.
 - Fixed the missing movement category string in the cheats menu.
+
+- Added the following lines to the JSON template:
+
+mainmenu: mainmenu_restart
+mainmenu: mainmenu_mods
+
+options: language_openLanguageFolder
+
+enemyNames: enemyname_leviathan
+
+cheats: cheats_categoryMovement (Some people have reported not having it in their files, so readding this so people know)
 
 
 1.0.0

@@ -121,9 +121,8 @@
   <!-- Create config+plugins folder for BepInEx -->
   <Target Name="MakeMyDir" AfterTargets="BeforeBuild">
     <Message Text="Creating folders..." Importance="High" />
-    <MakeDir Directories="$(TargetDir)config" Condition="!Exists('$(TargetDir)config')" />
+    <MakeDir Directories="$(TargetDir)UMM Mods/UltrakULL" Condition="!Exists('$(TargetDir)UMM Mods/UltrakULL')" />
     <MakeDir Directories="$(TargetDir)config/ultrakull" Condition="!Exists('$(TargetDir)config/ultrakull')" />
-    <MakeDir Directories="$(TargetDir)plugins" Condition="!Exists('$(TargetDir)plugins')" />
     <Message Text="Folders created." Importance="High" />
   </Target>
   <!-- Copy any .json files in the solution to config/ultrakull - normally should just be English and template -->
@@ -137,8 +136,8 @@
   </Target>
   <!-- Copy the compiled .dll to plugins folder. -->
   <Target Name="MoveDLLToFolder" AfterTargets="AfterBuild">
-    <Message Text="Moving DLL to config/ultrakull..." Importance="High" />
-    <Move SourceFiles="$(TargetDir)UltrakULL.dll" DestinationFolder="$(TargetDir)plugins">
+    <Message Text="Moving DLL to UMM Mods/ultrakULL..." Importance="High" />
+    <Move SourceFiles="$(TargetDir)UltrakULL.dll" DestinationFolder="$(TargetDir)UMM Mods/UltrakULL">
     </Move>
     <Message Text="DLL moved." Importance="High" />
   </Target>

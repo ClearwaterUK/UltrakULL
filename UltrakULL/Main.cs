@@ -62,8 +62,8 @@ using UMM;
  *  Add download buttons to Github readme for finished languages
  * Fix up errors and typos in English template
  * 
- * Update readme with new languages+contributors, update readme to reflect UMM port and new installation guide
  * Shadows on text not aligning correctly in intermissions
+ *
  * 
  * */
 
