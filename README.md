@@ -57,10 +57,9 @@ The installation section is divided into 3 parts:
 - Launch ULTRAKILL and click on the Mods button in the main menu. UltrakULL should be displayed there. Click on the square icon in the corner of it to enable auto-startup of the mod, then restart ULTRAKILL (either manually or with the new Restart button added by UMM).
 - If the mod has loaded correctly, you should see a new "Languages" tab in the Options menu.
 <img src="https://cdn.discordapp.com/attachments/472691871806652429/1037354187341701130/unknown.png" alt="drawing" width="650"/>
-- From the Languages tab, you can select any available language based on the language files UltrakULL has found, and will load them into the game.
-  - If you have any additional language files you wish to use, click on the "OPEN LANGUAGE FOLDER" button, and place them in the folder that opens.
-  - *A game restart is required for the new languages to appear.*
-- **Optional**: Enable the BepInEx console by opening the BepInEx.cfg inside the config folder. Find the Logging.Console option and set it to true. This will activate the BepInEx console every time your game launches, and will output the status of the game there. This is very helpful for tracking down problems or errors.
+- From the Languages tab, you can select any available language based on the language files UltrakULL has found, and will load them into the game. If you have any additional language files you wish to use, click on the "OPEN LANGUAGE FOLDER" button, and place them in the folder that opens. A game restart is required for the new languages to appear.
+
+- Optional: Enable the BepInEx console by opening the BepInEx.cfg inside the config folder. Find the Logging.Console option and set it to true. This will activate the BepInEx console every time your game launches, and will output the status of the game there. This is very helpful for tracking down problems or errors.
 
 
 # Uninstallation:
