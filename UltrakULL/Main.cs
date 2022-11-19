@@ -17,7 +17,7 @@ using UltrakULL.json;
 
 using static UltrakULL.CommonFunctions;
 using static UltrakULL.ModPatches;
-
+ 
 using UMM;
 
 /*
@@ -64,7 +64,6 @@ using UMM;
  * 
  * Update readme with new languages+contributors, update readme to reflect UMM port and new installation guide
  * Jakito uses duplicate/incorrectly swapped lines?
- * Shop: Arms back button not translated
  * Assists: enemySilhouettesOutlines not used, using enemySilhouettes twice
  * Crosshair size should be called HUD sized - check original game text
  * Shadows on text not aligning correctly in intermissions
@@ -81,6 +80,8 @@ namespace UltrakULL
         public const string pluginName = "UltrakULL (Ultrakill Language Library)";
         public const string pluginVersion = "1.0.1";
         public const string pluginDescription = "A localization and translation plugin for ULTRAKILL. Created by Clearwater.";
+
+        public static bool CanSubmitCybergrindScore = true;
 
         public static MainPatch instance = null;
         private GameObject ultrakullLogo = null;
@@ -344,6 +345,9 @@ namespace UltrakULL
                 + LanguageManager.CurrentLanguage.credits.credits_QA2 + "\n"
                 + LanguageManager.CurrentLanguage.credits.credits_QA3 + "\n"
                 + LanguageManager.CurrentLanguage.credits.credits_QA4 + "\n";
+            
+            Text creditsBackButton = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Credits"),"Back (1)"),"Text"));
+            creditsBackButton.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
         }
 
@@ -530,6 +534,10 @@ namespace UltrakULL
                         //Cyber Grind
                         else if (SceneManager.GetActiveScene().name.Contains("Endless"))
                         {
+                            if (!UKAPI.ShouldSubmitCyberGrindScore())
+                            {
+                                
+                            }
                             CyberGrind.PatchCG(ref coreGame);
                         }
                         //End of act intermission
@@ -565,7 +573,7 @@ namespace UltrakULL
         //Entry point for the patch.
         public void Awake()
         {
-            Debug.unityLogger.filterLogType = LogType.Exception;
+            //Debug.unityLogger.filterLogType = LogType.Exception;
             Debug.Log("UltrakULL LOADING...");
             Debug.Log("Version: " + pluginVersion);
             try
@@ -576,7 +584,13 @@ namespace UltrakULL
                 Debug.Log("Patching game functions...");
                 Harmony harmony = new Harmony(pluginGuid);
                 harmony.PatchAll();
+                
+                Debug.Log(" --- Whitelisting UltrakULL for CG score submission ---");
+                UKAPI.RemoveDisableCyberGrindReason(pluginName);
+                
                 Debug.Log(" --- All done. Enjoy! ---");
+                
+
 
                 SceneManager.sceneLoaded += onSceneLoaded;
                 

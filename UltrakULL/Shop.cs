@@ -867,6 +867,9 @@ namespace UltrakULL
             Text feedbackerWindowDescription = getTextfromGameObject(getGameObjectChild(feedbackerWindow, "Description"));
             feedbackerWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_armFeedbackerDescription1 + "\n\n" + LanguageManager.CurrentLanguage.shop.shop_armFeedbackerDescription2;
 
+            Text feedbackerWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(feedbackerWindow, "Button"), "Text"));
+            feedbackerWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
+            
             //Knuckleblaster
             GameObject knuckleblaster = getGameObjectChild(armWindow, "Variation Panel 2 (New)");
             Text knuckleblasterName = getTextfromGameObject(getGameObjectChild(knuckleblaster, "Text"));
@@ -879,6 +882,9 @@ namespace UltrakULL
             Text knuckleblasterWindowDescription = getTextfromGameObject(getGameObjectChild(knuckleblasterWindow, "Description"));
             knuckleblasterWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_armKnuckleblasterDescription1 + "\n\n" + LanguageManager.CurrentLanguage.shop.shop_armKnuckleblasterDescription2;
 
+            Text knuckleblasterWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(knuckleblasterWindow, "Button"), "Text"));
+            knuckleblasterWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
+            
             //Whiplash
             GameObject whiplash = getGameObjectChild(armWindow, "Variation Panel 3 (New)");
             Text whiplashName = getTextfromGameObject(getGameObjectChild(whiplash, "Text"));
@@ -892,6 +898,9 @@ namespace UltrakULL
             whiplashWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_armWhiplashDescription1 + "\n\n"
                 + LanguageManager.CurrentLanguage.shop.shop_armWhiplashDescription2;
             whiplashWindowDescription.fontSize = 16;
+            
+            Text whiplashWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(whiplashWindow, "Button"), "Text"));
+            whiplashWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
             //Gold arm (under construction)
             GameObject goldArm = getGameObjectChild(armWindow, "Variation Panel 1 (3)");
