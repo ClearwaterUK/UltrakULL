@@ -79,6 +79,7 @@ The installation section is divided into 3 parts:
 |------------------------------------------|---------------------------------------------------------------------------------------------------------|----------------|--------------------|----------------------------------------|
 | English (U.S)                            | Hakita & New Blood                                                                                      | Finished       | :heavy_check_mark: | Grammatical improvements by Clearwater |
 | Russian (русский)                        | Nessie_A_WA97, D4N5T3P, Edith Bagel, lrddd, Brainy-Stormie, TwinT, towelie84, mctaylors, Solidus Cumcer | Finished       | :heavy_check_mark: |                                        |
+| Spanish (Español)                        | LambCS, Philia, Lukah, Amarok_Lc, Radripizza, j(LRC), LEVIBOT                    | Finished | :heavy_check_mark:                |                                        |
 |                                          |                                                                                                         |                |                    |                                        |
 | Arabic                                   | riko, hamza666                                                                                          | In development | :x:                |                                        |
 | Brazilian Portugese (Portugês do Brasil) | Veni, Jackie, MKaid, hebert, FNChannel, Spooky, Soulvender, RAYLANDER                                   | In development | :x:                |                                        |
@@ -97,7 +98,7 @@ The installation section is divided into 3 parts:
 | Polish (Polski)                          | SmallSeaCat, Fikou, filizanka, Patryk, Spookz, owaloid                                                  | In development | :x:                |                                        |
 | Romanian (Românesc)                      | Vampuffin                                                                                               | In development | :x:                |                                        |
 | Simplified Chinese (简体中文)           | Hydracerynitis, ciinore, duke325, ponyweeb, Skugra, GoGoblin                                            | In development | :x:                |                                        |
-| Spanish (Español)                        | Radsi, cinnamon, LambCS, Philia, Lukah, Amarok_Lc, Radripizza, j(LRC), LEVIBOT, Makaj                   | In development | :x:                |                                        |
+
 | Thai (ภาษาไทย)                           | Skugra, Winterman                                                                                       | In development | :x:                |                                        |
 | Turkish (Türkçe)                         | Jule Axus, Legitname1337, Ömer Talha, RTE, Ray_                                                         | In development | :x:                |                                        |
 | Traditional Chinese(繁體中文)                | GuonuoTW(SmallNo), duke325                                                                              | In development | :x:                |                                        |
