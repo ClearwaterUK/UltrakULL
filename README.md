@@ -90,7 +90,6 @@ The installation section is divided into 3 parts:
 |   | Czech (Čeština)                          | Mina                                                                                                    | In development | :x:                |                                        |   |
 |   | Dutch (Nederlands)                       | HIMkoto                                                                                                 | In development | :x:                |                                        |   |
 |   | Filipino (Pilipino)                      | mxkyle                                                                                                  | In development | :x:                |                                        |   |
-
 |   | German (Deutsch)                         | Distrilul, JESTERB0T, Liquid Lest                                                                       | In development | :x:                |                                        |   |
 |   | Greek (Ελληνικά)                         | Mi pro                                                                                                  | In development | :x:                |                                        |   |
 |   | Hungarian (Magyar)                       | B3n, csigachad                                                                                          | In development | :x:                |                                        |   |
