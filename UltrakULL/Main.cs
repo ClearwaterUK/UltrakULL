@@ -55,7 +55,6 @@ using UMM;
  * Fix up errors and typos in English template
  * 
  * Look into why UMM is disabling CG scores again (literally works for everyone but Paoletto)
- * Slot names/numbers in save menu
  * UltraTweaker not always being detected for cross-mod fix? (can't replicate on my end)
  * Open Languages folder button not translated when language is switched, requires scene change to take effect
  * Same as above with mods button on main menu

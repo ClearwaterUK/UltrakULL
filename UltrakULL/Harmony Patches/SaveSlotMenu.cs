@@ -28,6 +28,16 @@ namespace UltrakULL.Harmony_Patches
 
             Text deleteText = child.GetComponent<Text>();
             deleteText.text = LanguageManager.CurrentLanguage.options.save_delete;
+
+            switch (targetPanel.slotNumberLabel.text)
+            {
+                case "SLOT 1": { targetPanel.slotNumberLabel.text = LanguageManager.CurrentLanguage.options.controls_slot1; break; }
+                case "SLOT 2": { targetPanel.slotNumberLabel.text = LanguageManager.CurrentLanguage.options.controls_slot2; break; }
+                case "SLOT 3": { targetPanel.slotNumberLabel.text = LanguageManager.CurrentLanguage.options.controls_slot3; break; }
+                case "SLOT 4": { targetPanel.slotNumberLabel.text = LanguageManager.CurrentLanguage.options.controls_slot4; break; }
+                case "SLOT 5": { targetPanel.slotNumberLabel.text = LanguageManager.CurrentLanguage.options.controls_slot5; break; }
+                default: { break; }
+            }
         }
 
         public static string SaveToString(bool exists, int highestLvlNumber, int highestDifficulty)
