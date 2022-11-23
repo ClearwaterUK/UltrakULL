@@ -54,13 +54,13 @@ using UMM;
  *  Add download buttons to Github readme for finished languages
  * Fix up errors and typos in English template
  * 
- * Look into why UMM is disabling CG scores again
+ * Look into why UMM is disabling CG scores again (literally works for everyone but Paoletto)
  * Slot names/numbers in save menu
- * (Re)suppress game debug messages
- * 4-4 strings missing
  * UltraTweaker not always being detected for cross-mod fix? (can't replicate on my end)
  * Open Languages folder button not translated when language is switched, requires scene change to take effect
  * Same as above with mods button on main menu
+ *
+ * Conflicts with UltraSkins due to it generating HUD messages
  *
  * 
  * */
@@ -530,9 +530,16 @@ namespace UltrakULL
                         //Cyber Grind
                         else if (SceneManager.GetActiveScene().name.Contains("Endless"))
                         {
-                            if (!UKAPI.ShouldSubmitCyberGrindScore())
+                            if (UKAPI.ShouldSubmitCyberGrindScore())
                             {
+                                Console.WriteLine("Should be able to submit CG highscores");
                                 
+                                Console.WriteLine((UKAPI.ShouldSubmitCyberGrindScore()));
+                            }
+                            else
+                            {
+                                Console.WriteLine(("UNABLE TO SUBMIT CYBERGRIND HIGHSCORE, THIS SHOULDN'T BE HAPPENING UNLESS IF ANOTHER MOD HAS DISABLED IT OR SOMETHING ELSE HAPPENED."));
+                                Console.WriteLine((UKAPI.ShouldSubmitCyberGrindScore()));
                             }
                             CyberGrind.PatchCG(ref coreGame);
                         }
@@ -563,20 +570,23 @@ namespace UltrakULL
             
             //Translate mods/restart buttons here.
             
-            GameObject titleObject = getGameObjectChild(frontEnd, "Main Menu (1)");
-            
-            foreach (Transform a in titleObject.GetComponentsInChildren<Transform>())
+            if(SceneManager.GetActiveScene().name == "Main Menu")
             {
-                if(a.name == "Continue(Clone)")
+                GameObject titleObject = getGameObjectChild(frontEnd, "Main Menu (1)");
+            
+                foreach (Transform a in titleObject.GetComponentsInChildren<Transform>())
                 {
-                    Text ummButton = getTextfromGameObject(getGameObjectChild(a.gameObject, "Text"));
-                    switch(ummButton.text)
+                    if(a.name == "Continue(Clone)")
                     {
-                        case "MODS": { ummButton.text = LanguageManager.CurrentLanguage.frontend.mainmenu_mods; break; }
-                        case "RESTART": { ummButton.text = LanguageManager.CurrentLanguage.frontend.mainmenu_restart; ; break; }
-                        default: {break; }
-                    }
+                        Text ummButton = getTextfromGameObject(getGameObjectChild(a.gameObject, "Text"));
+                        switch(ummButton.text)
+                        {
+                            case "MODS": { ummButton.text = LanguageManager.CurrentLanguage.frontend.mainmenu_mods; break; }
+                            case "RESTART": { ummButton.text = LanguageManager.CurrentLanguage.frontend.mainmenu_restart; ; break; }
+                            default: {break; }
+                        }
 
+                    }
                 }
             }
 
@@ -596,7 +606,7 @@ namespace UltrakULL
         //Entry point for the patch.
         public void Awake()
         {
-            Debug.unityLogger.filterLogType = LogType.Exception;
+            //Debug.unityLogger.filterLogType = LogType.Exception;
             Debug.Log("UltrakULL LOADING...");
             Debug.Log("Version: " + internalVersion);
             try

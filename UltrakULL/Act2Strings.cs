@@ -15,6 +15,7 @@ namespace UltrakULL
     public static class Act2Strings
     {
         private static BepInEx.Logging.ManualLogSource a2StringsLogger = BepInEx.Logging.Logger.CreateLogSource("Act 2 Strings");
+        private static string previousMessage = "";
 
         public static string level41(string message, string message2, string input)
         {
@@ -57,7 +58,17 @@ namespace UltrakULL
 
         public static string level44(string message, string message2, string input)
         {
+
             string fullMessage = message + message2;
+            Console.WriteLine(fullMessage);
+
+            //Bandaid fix for some edge cases people have been reporting.
+
+            if (fullMessage == "")
+            {
+                fullMessage = previousMessage;
+                return fullMessage;
+            }
 
             if (fullMessage.Contains("ALTERNATE"))
             {
@@ -70,14 +81,21 @@ namespace UltrakULL
             }
             if (fullMessage.Contains("Hold"))
             {
+                previousMessage = LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash1 + " <color=orange>" + input + "</color> " + LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash2;
                 return LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash1 + " <color=orange>" + input + "</color> " + LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash2;
+                
             }
             if (fullMessage.Contains("HEAVY"))
             {
+                previousMessage = LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash3;
                 return LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash3;
             }
             if (fullMessage.Contains("HARD DAMAGE"))
             {
+                previousMessage = LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplashHardDamage1 + "\n"
+                    + LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplashHardDamage2;
+                
+                
                 return LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplashHardDamage1 + "\n"
                     + LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplashHardDamage2;
             }

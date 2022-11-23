@@ -154,6 +154,7 @@
     <Compile Include="CyberGrind.cs" />
     <Compile Include="EnemyBios.cs" />
     <Compile Include="Harmony Patches\BossBarManager.cs" />
+    <Compile Include="Harmony Patches\CGSubmissionCheck.cs" />
     <Compile Include="Harmony Patches\CheatsManager.cs" />
     <Compile Include="Harmony Patches\Coin.cs" />
     <Compile Include="Harmony Patches\CrateCounter.cs" />
