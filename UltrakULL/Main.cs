@@ -54,7 +54,13 @@ using UMM;
  *  Add download buttons to Github readme for finished languages
  * Fix up errors and typos in English template
  * 
- * Shadows on text not aligning correctly in intermissions
+ * Look into why UMM is disabling CG scores again
+ * Slot names/numbers in save menu
+ * (Re)suppress game debug messages
+ * 4-4 strings missing
+ * UltraTweaker not always being detected for cross-mod fix? (can't replicate on my end)
+ * Open Languages folder button not translated when language is switched, requires scene change to take effect
+ * Same as above with mods button on main menu
  *
  * 
  * */
@@ -338,18 +344,20 @@ namespace UltrakULL
 
         }
 
-
-        public IEnumerator patchScene()
+        //Most of the hook logic and checks go in this function.
+        public void onSceneLoaded(Scene scene, LoadSceneMode mode)
         {
+            //patchScene();
+            
             //Wait a bit to allow any other loaded mods to place their GameObjects down so we can manipulate them as need be afterwards.
-            yield return new WaitForSeconds(0.10f);
+            //yield return new WaitForSeconds(0.10f);
 
             Console.WriteLine("Beginning patch");
 
             if (!this.ready || LanguageManager.CurrentLanguage == null)
             {
                 Debug.Log("Not ready for patching");
-                yield return false;
+                return;
             }
             else
             {
@@ -406,11 +414,12 @@ namespace UltrakULL
                 }
                 else if (currentLevel.name.Contains("P-"))
                 {
+                    Console.WriteLine("Hooking into prime levels");
                     //Prime sanctum level hook
                     GameObject coreGame = GameObject.Find("Prime FirstRoom");
                     if (coreGame == null)
                     {
-                        Debug.Log("Failed to hook into Prime levels.");
+                        Console.WriteLine("Failed to hook into Prime levels.");
                     }
                     else
                     {
@@ -425,8 +434,8 @@ namespace UltrakULL
                         }
                         catch (Exception e)
                         {
-                            Debug.Log("Failed to patch in-game elements (prime).");
-                            Debug.Log(e.ToString());
+                            Console.WriteLine("Failed to patch in-game elements (prime).");
+                            Console.WriteLine(e.ToString());
                         }
                         Options options = new Options(ref coreGame);
                         PrimeSanctum primeSanctumClass = new PrimeSanctum(ref coreGame);
@@ -537,30 +546,57 @@ namespace UltrakULL
             }
 
             //Check for any other mods that are loaded that might cause conflicts. If so, do some stuff.
+            CheckForMods(getInactiveRootObject("Canvas"));
+
+        }
+
+        public void CheckForMods(GameObject frontEnd)
+        {
+            StartCoroutine(ScanMods(frontEnd));
+        }
+
+        public IEnumerator ScanMods(GameObject frontEnd)
+        {
+            yield return new WaitForSeconds(0.15f);
+
+            Console.WriteLine("Scanning for mods...");
+            
+            //Translate mods/restart buttons here.
+            
+            GameObject titleObject = getGameObjectChild(frontEnd, "Main Menu (1)");
+            
+            foreach (Transform a in titleObject.GetComponentsInChildren<Transform>())
+            {
+                if(a.name == "Continue(Clone)")
+                {
+                    Text ummButton = getTextfromGameObject(getGameObjectChild(a.gameObject, "Text"));
+                    switch(ummButton.text)
+                    {
+                        case "MODS": { ummButton.text = LanguageManager.CurrentLanguage.frontend.mainmenu_mods; break; }
+                        case "RESTART": { ummButton.text = LanguageManager.CurrentLanguage.frontend.mainmenu_restart; ; break; }
+                        default: {break; }
+                    }
+
+                }
+            }
+
             ModInformation[] loadedMods = UKAPI.GetAllLoadedModInformation();
             foreach (ModInformation mod in loadedMods)
             {
-                Console.WriteLine(mod.modName);
                 if (mod.modName == "ULTRAKILLtweaker")
                 {
                     Console.WriteLine("UltraTweaker detected, doing stuff");
                     StartCoroutine(UltraTweakerPatch());
                 }
             }
+
         }
-
-
-
-        //Most of the hook logic and checks go in this function.
-        public void onSceneLoaded(Scene scene, LoadSceneMode mode)
-        {
-            StartCoroutine(patchScene());
-        }
-
+        
+        
         //Entry point for the patch.
         public void Awake()
         {
-            //Debug.unityLogger.filterLogType = LogType.Exception;
+            Debug.unityLogger.filterLogType = LogType.Exception;
             Debug.Log("UltrakULL LOADING...");
             Debug.Log("Version: " + internalVersion);
             try
