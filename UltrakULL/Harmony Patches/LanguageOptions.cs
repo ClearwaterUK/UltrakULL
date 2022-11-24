@@ -46,6 +46,7 @@ namespace UltrakULL.Harmony_Patches
             });
 
             GameObject languagePage = GameObject.Instantiate(pageToDisable, optionsParent);
+            languagePage.name = "Language Page";
             languagePage.SetActive(false);
             languageButtonTitleText = languagePage.transform.Find("Text").GetComponent<Text>();
 
@@ -100,6 +101,7 @@ namespace UltrakULL.Harmony_Patches
 
             // "Open language folder" button
             GameObject openLangFolder = GameObject.Instantiate(languageButtonPrefab, contentParent);
+            openLangFolder.name = "OpenLangFolder";
             openLangFolder.transform.localScale = new Vector3(0.2188482f, 1.123569f, 0.5088629f);
             openLangFolder.transform.Find("Select Wrapper").gameObject.SetActive(false);
             openLangFolder.transform.Find("Delete Wrapper").gameObject.SetActive(false);

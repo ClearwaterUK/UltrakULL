@@ -21,7 +21,7 @@ using UMM;
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
  * 
- *  -- MAIN TODO LIST --
+ *  -- MAIN TASK LIST --
  *  - Add ULL credits, translation credits to main menu with help of UKUIHelper library
  *  - Error and exception handling
  *  - Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
@@ -54,12 +54,8 @@ using UMM;
  *  Add download buttons to Github readme for finished languages
  * Fix up errors and typos in English template
  * 
- * Look into why UMM is disabling CG scores again (literally works for everyone but Paoletto)
  * UltraTweaker not always being detected for cross-mod fix? (can't replicate on my end)
- * Open Languages folder button not translated when language is switched, requires scene change to take effect
- * Same as above with mods button on main menu
- *
- * Conflicts with UltraSkins due to it generating HUD messages
+ * Same as above with mod/restart buttons on main menu
  *
  * 
  * */
@@ -551,21 +547,32 @@ namespace UltrakULL
                 }
             }
 
-            //Check for any other mods that are loaded that might cause conflicts. If so, do some stuff.
-            CheckForMods(getInactiveRootObject("Canvas"));
+            //Bunch of things the mod should do *after* loading to avoid problems.
+            PostInitPatches(getInactiveRootObject("Canvas"));
 
         }
 
-        public void CheckForMods(GameObject frontEnd)
+        public void PostInitPatches(GameObject frontEnd)
         {
-            StartCoroutine(ScanMods(frontEnd));
+
+            StartCoroutine(applyPostFixes(frontEnd));
         }
 
-        public IEnumerator ScanMods(GameObject frontEnd)
+        public IEnumerator applyPostFixes(GameObject frontEnd)
         {
-            yield return new WaitForSeconds(0.15f);
+            yield return new WaitForSeconds(0.05f);
 
-            Console.WriteLine("Scanning for mods...");
+            //Open Language Folder button in Options->Langauge
+            Console.WriteLine("Patching lang button");
+            Text openLangFolderText = getTextfromGameObject(getGameObjectChild
+            (getGameObjectChild
+            (getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd,"OptionsMenu"),
+            "Language Page"),"Scroll Rect (1)"),"Contents"),"OpenLangFolder"),"Slot Text"));
+            openLangFolderText.text = LanguageManager.CurrentLanguage.options
+            .language_openLanguageFolder;
+
+            Console.WriteLine("Done");
+
             
             //Translate mods/restart buttons here.
             
@@ -588,6 +595,9 @@ namespace UltrakULL
                     }
                 }
             }
+
+            //Check for any other mods that are loaded that might cause conflicts. If so, do some stuff.
+            Console.WriteLine("Scanning for mods...");
 
             ModInformation[] loadedMods = UKAPI.GetAllLoadedModInformation();
             foreach (ModInformation mod in loadedMods)
