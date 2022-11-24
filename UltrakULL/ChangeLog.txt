@@ -2,7 +2,7 @@
 - Fixed the P-1 testament screen not being translated. This was due to an oversight with the way UltrakULL waits for other mods to apply their changes before it applies theirs.
 - Fixed a rare case of 4-4 Whiplash HUD messages not displaying correctly if they are triggered without picking up the Whiplash dropped by V2.
 - Fixed save slot titles not being translated in the save selection menu.
-- Fixed "Open Language Folder" button not being translated when a different language is selected in the Language options.
+- Fixed some buttons on the main menu and options tab not being translated when a different language is selected.
 - Fixed some instances of testament titles in secret levels not being translated.
 
 

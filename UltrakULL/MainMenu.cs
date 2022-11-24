@@ -65,11 +65,20 @@ namespace UltrakULL
                 {
                     if(a.name == "Continue(Clone)")
                     {
+                    
                         Text ummButton = getTextfromGameObject(getGameObjectChild(a.gameObject, "Text"));
                         switch(ummButton.text)
                         {
-                            case "MODS": { ummButton.text = LanguageManager.CurrentLanguage.frontend.mainmenu_mods; break; }
-                            case "RESTART": { ummButton.text = LanguageManager.CurrentLanguage.frontend.mainmenu_restart; ; break; }
+                            case "MODS":
+                            {
+                                a.name = "ModsButton";
+                                ummButton.text = LanguageManager.CurrentLanguage.frontend.mainmenu_mods; break;
+                            }
+                            case "RESTART":
+                            {
+                                a.name = "RestartButton";
+                                ummButton.text = LanguageManager.CurrentLanguage.frontend.mainmenu_restart; ; break;
+                            }
                             default: {break; }
                         }
 

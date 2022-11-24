@@ -55,7 +55,6 @@ using UMM;
  * Fix up errors and typos in English template
  * 
  * UltraTweaker not always being detected for cross-mod fix? (can't replicate on my end)
- * Same as above with mod/restart buttons on main menu
  *
  * 
  * */
@@ -563,7 +562,6 @@ namespace UltrakULL
             yield return new WaitForSeconds(0.05f);
 
             //Open Language Folder button in Options->Langauge
-            Console.WriteLine("Patching lang button");
             Text openLangFolderText = getTextfromGameObject(getGameObjectChild
             (getGameObjectChild
             (getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd,"OptionsMenu"),
@@ -571,29 +569,19 @@ namespace UltrakULL
             openLangFolderText.text = LanguageManager.CurrentLanguage.options
             .language_openLanguageFolder;
 
-            Console.WriteLine("Done");
-
-            
             //Translate mods/restart buttons here.
             
             if(SceneManager.GetActiveScene().name == "Main Menu")
             {
                 GameObject titleObject = getGameObjectChild(frontEnd, "Main Menu (1)");
             
-                foreach (Transform a in titleObject.GetComponentsInChildren<Transform>())
-                {
-                    if(a.name == "Continue(Clone)")
-                    {
-                        Text ummButton = getTextfromGameObject(getGameObjectChild(a.gameObject, "Text"));
-                        switch(ummButton.text)
-                        {
-                            case "MODS": { ummButton.text = LanguageManager.CurrentLanguage.frontend.mainmenu_mods; break; }
-                            case "RESTART": { ummButton.text = LanguageManager.CurrentLanguage.frontend.mainmenu_restart; ; break; }
-                            default: {break; }
-                        }
+                //Mods button
+                Text restartButtontext = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "RestartButton"), "Text"));
+                if(restartButtontext != null){restartButtontext.text = LanguageManager.CurrentLanguage.frontend.mainmenu_restart;}
 
-                    }
-                }
+                //Restart button
+                Text modsButtontext = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "ModsButton"), "Text"));
+                if(modsButtontext != null) {modsButtontext.text = LanguageManager.CurrentLanguage.frontend.mainmenu_mods;}
             }
 
             //Check for any other mods that are loaded that might cause conflicts. If so, do some stuff.
