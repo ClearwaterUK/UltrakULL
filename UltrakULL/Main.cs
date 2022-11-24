@@ -16,7 +16,7 @@ using UMM;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater, additional code contributions by Temperz87, translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 13th November 2022
+ *	Last updated: 24th November 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
@@ -29,10 +29,8 @@ using UMM;
  *  -- LESS IMPORTANT STUFF FOR FUTURE UPDATES --
  *  - Cheat teleport menu
  *  - Terminals before bosses in levels (could copy the shop that's in the start of each level)
- *  - Organise and refactor stuff, move functions to other files to declutter Main (Factorise the act classes with an interface?)
  *  - Look into how I can do encoding for RTL languages such as Arabic
- *  - Port main class so it becomes a native UMM mod instead of BepInEx. With the way its structured, could be able to move config/lang files to same folder.
- *  - Green Rocketlauncher incoming
+ *  - Next game update scheduled for early 2023. P-2, 5-S and green rocket launcher
  *  - Could be possible to swap out rank textures in HUD for translation. Shall look into later
  *  - Attempt to replace the default font with a version that has better special char + cyrillic support
  *  
@@ -41,7 +39,6 @@ using UMM;
  * - Misc keys as strings (comma, period, etc) missing
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable a patched function by returning true if an exception happens there, will then use original game code.
- * - Intro second page not aligned correctly (dependant on length of words from translation to translation, not really something that can be fixed globally)
  * - Freshness not translated in tutorial (ridiculously minor, I personally don't see a need to patch it but will leave here anyways)
  * 
  * - Options->Sandbox icons names (Can't seem to get the dropdown data inside of the gameObject it's linked to - keeps saying 0 elements but when viewed manually in UnityExplorer it shows them)
@@ -61,7 +58,7 @@ using UMM;
 
 namespace UltrakULL
 {
-    [UKPlugin("UltrakULL (Ultrakill Language Library)","1.0.1","A localization and translation plugin for ULTRAKILL. Created by Clearwater.",true,false)]
+    [UKPlugin("UltrakULL (Ultrakill Language Library)","1.0.2","A localization and translation plugin for ULTRAKILL. Created by Clearwater.",true,false)]
 
     public class MainPatch : UKMod
     {
@@ -73,7 +70,7 @@ namespace UltrakULL
         public Font vcrFont;
 
         public const string internalName = "clearwater.ultrakull.ultrakULL";
-        public const string internalVersion = "1.0.1";
+        public const string internalVersion = "1.0.2";
 
 
         public MainPatch()

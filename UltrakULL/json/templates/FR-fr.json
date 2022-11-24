@@ -1,55 +1,53 @@
 {
 	"metadata": {
 		"langName": "FR-fr",
-		"langAuthor": "Clearwater,Frizou",
-		"langVersion": "0.6",
-        "langDisplayName": "Français",
-        
-        "minimumModVersion": "1.0.1"
+		"langAuthor": "Clearwater, ZedDev, Frizou, osokour",
+		"langVersion": "1.0",
+        "langDisplayName": "Français (France)",
+
+        "minimumModVersion": "1.0.2"
 	},
 	"body": {
-		"bodyName": "Traduction française pour ULTRAKILL. Developpé par Clearwater; contributions, relectures et corrections par Frizou."
+		"bodyName": "Traduction française pour ULTRAKILL."
 	},
-    
-        "credits":{
+
+    "credits":{
         "credits_title": "ULTRAKILL",
-        "credits_createdBy": "UN JEU CRÉÉE PAR <color=orange>ARSI \"HAKITA\" PATALA</color>",
+        "credits_createdBy": "UN JEU CRÉE PAR <color=orange>ARSI \"HAKITA\" PATALA</color>",
 
         "credits_helpedByTitle": "AVEC L'AIDE DE:",
-        "credits_helpedBy1": "<color=orange>DAVE OSHRY</color> (PRODUCTEUR DÉLÉGUÉ)",
+        "credits_helpedBy1": "<color=orange>DAVE OSHRY</color> (PRODUCTEUR EXCLUSIF)",
         "credits_helpedBy2": "<color=orange>PITR</color> (PROGRAMMEUR)",
-        "credits_helpedBy3": "<color=orange>RYANN VICTORIA</color> (ARTISTE 3D & PROGRAMMEUR SHADER)",
+        "credits_helpedBy3": "<color=orange>RYANN VICTORIA</color> (ARTISTE 3D & PROGRAMMEUR ARTISTIQUE)",
         "credits_helpedBy4": "<color=orange>SAMUEL JAMES BRYAN</color> (ARTISTE 3D)",
-        "credits_helpedBy5": "<color=orange>BIGROCKBMP</color> (ARTISTE CONCEPTE)",
-        "credits_helpedBy6": "<color=orange>JERICHO_RUS</color> (ILLUSTRATEUR, ARTISTE TEXTURE & CONCEPTE)",
-        "credits_helpedBy7": "<color=orange>FRANCIS XIE</color> (ARTISTE TEXTURE & CONCEPTE)",
+        "credits_helpedBy5": "<color=orange>BIGROCKBMP</color> (CONCEPTEUR)",
+        "credits_helpedBy6": "<color=orange>JERICHO_RUS</color> (ILLUSTRATEUR, CONCEPTEUR ET ARTISTE)",
+        "credits_helpedBy7": "<color=orange>FRANCIS XIE</color> (CONCEPTEUR ET ARTISTE)",
 
-        "credits_contributionsTitle": "CONTRIBUTIONS SUPPLÉMENTAIRES:",
+        "credits_contributionsTitle": "AVEC LA CONTRIBUTION SUPPLÉMENTAIRE DE:",
         "credits_contributions1": "<color=orange>MAXIMILIAN OVESSON</color> (ARTISTE UI)",
-        "credits_contributions2": "<color=orange>JACOB H.H.R.</color> (ÉCRIVAIN [PROSE & DIALOGUE])",
+        "credits_contributions2": "<color=orange>JACOB H.H.R.</color> (ÉCRIVAIN [DIALOGUE])",
         "credits_contributions3": "<color=orange>FLYINGDOG</color> (ARTISTE 3D)",
         "credits_contributions4": "<color=orange>TONI STIGELL</color> (ARTISTE 3D)",
         "credits_contributions5": "<color=orange>BEN MOIR</color> (PROGRAMMEUR)",
         "credits_contributions6": "<color=orange>LUCAS VARNEY</color> (PROGRAMMEUR)",
         "credits_contributions7": "<color=orange>EMANUIL \"CABALCROW\" CHIZHOV</color> (PROGRAMMEUR)",
         "credits_contributions8": "<color=orange>HECKTECK</color> (PROGRAMMEUR)",
-        "credits_contributions9": "<color=orange>MEGANEKO</color> (COMPOSITEUR MUSIQUE CYBERGRIND)",
+        "credits_contributions9": "<color=orange>MEGANEKO</color> (MUSIQUE DU CYBERGRIND)",
 
-        "credits_VATitle": "VOIX PAR:",
+        "credits_VATitle": "AVEC LES VOIX DE:",
         "credits_VA1": "<color=orange>GIANNI MATRAGRANO</color> (GABRIEL)",
-        "credits_VA2": "<color=orange>STEPHAN WEYTE</color> (MINOS PRIME)",
-        "credits_VA3": "<color=orange>MANDALORE HERRINGTON</color> (DCM)",
-        "credits_VA4": "<color=orange>JUST SHAMMY</color> (& HIBOU)",
+        "credits_VA2": "<color=orange> STEPHAN WEYTE </color> (MINOS PRIME)",
+        "credits_VA3": "<color=orange>MANDALORE HERRINGTON</color> (CHEVALIER-DRUIDE MYSTÉRIEUX)",
+        "credits_VA4": "<color=orange>JUST SHAMMY </color> (ET LE HIBOU)",
 
-        "credits_QATitle": "ASSURANCE QUALITÉ PAR:",
-        "credits_QA1": "<color=orange>CAMERON MARTIN</color> (CHEF AQ)",
-        "credits_QA2": "<color=orange>TUCKER WILKIN</color> (AQ SÉNIOR)",
-        "credits_QA3": "<color=orange>SCOTT GURNEY</color> (AQ TECHNIQUE)",
-        "credits_QA4": "<color=orange>DALIA FIGUEROA</color> (AQ & MATÈRIEL PROMOTIONEL)",
+        "credits_QATitle": "ET ASSURANCE DE LA QUALITÉE AUDIO PAR:",
+        "credits_QA1": "<color=orange>CAMERON MARTIN</color> (QA EN CHEF)",
+        "credits_QA2": "<color=orange>TUCKER WILKIN </color> (QA SENIOR)",
+        "credits_QA3": "<color=orange>SCOTT GURNEY </color> (QA TECHNIQUE)",
+        "credits_QA4": "<color=orange>DALIA FIGUEROA </color> (QA ET MATÉRIEL PROMOTIONNEL)"
     },
-
-
-
+    
     "style":{
         "style_airslam": "ÉCRASEMENT DANS L'AIR",
         "style_airshot": "TIR EN L'AIR",
@@ -57,15 +55,15 @@
         "style_arsenal": "ARSENAL",
         "style_bigheadshot": "GROSSE ÉLIMINATION DANS LA TÊTE",
         "style_bigkill": "GROSSE ÉLIMIATION",
-        "style_bigfistkill": "GROS COUP DE POIGNARD",
+        "style_bigfistkill": "GROS COUP DE POING",
         "style_bipolar": "BIPOLAIRE",
         "style_cannonballed": "BOWLING",
         "style_catapaulted": "CATAPAULTÉ",
         "style_chargeback": "FACTURATION",
         "style_compressed": "PRESSÉ",
-        "style_criticalpunch": "COUP DE POIGNARD CRITIQUE",
-        "style_disrespect": "IRESPECT",
-        "style_doublekill": "DOUBLE-ÉLIMINATION",
+        "style_criticalpunch": "COUP DE POING CRITIQUE",
+        "style_disrespect": "IRRESPECT",
+        "style_doublekill": "TUERIE",
         "style_downtosize": "RETOUR D'ENVERGURE",
         "style_enraged": "ENRAGÉ",
         "style_exploded": "EXPLOSÉ",
@@ -81,9 +79,9 @@
         "style_instakill": "ÉLIMINATION INSTATANÉ",
         "style_interruption": "INTERROMPU",
         "style_kill": "ÉLIMINATION",
-        "style_limbshot": "PERTE DE MEMBRES",
+        "style_limbshot": "PERTE DE MEMBRE",
         "style_mauriced": "MAURICE",
-        "style_multikill": "MULTI-ÉLIMINATION",
+        "style_multikill": "BOUCHERIE",
         "style_nailbombed": "CLOUÉ",
         "style_parry": "RENVOI",
         "style_projectileboost": "BOOST PROJECTILE",
@@ -91,8 +89,8 @@
         "style_ricoshot": "RICOCHET",
         "style_secret": "SECRET",
         "style_splattered": "CRÊPE",
-        "style_triplekill": "TRIPLE-ÉLIMINATION",
-        
+        "style_triplekill": "BAIN DE SANG",
+        "style_why": "pourquoi tu fait apparaitre des enemis icitte ?",
         "style_conductor": "CONDUCTEUR",
         "style_crushed": "ÉCRASÉ",
         "style_fall": "TOMBÉ",
@@ -100,12 +98,10 @@
         "style_outofbounds": "HORS LIMITES",
         "style_shredded": "EN MIETTES",
         "style_zapped": "ZAPPÉ",
-
-        "style_why": "pk tu spawn des ennemis ici",
         
         "style_d": "Destructif",
         "style_c": "Chaotique",
-        "style_b": "Brutale",
+        "style_b": "Brutal",
         "style_a": "Anarchique",
         "style_s": "Suprême",
         "style_ss": "SSadistique",
@@ -115,7 +111,7 @@
         "style_weaponFresh": "FRAIS",
         "style_weaponUsed": "NEUF",
         "style_weaponStale": "USÉ",
-        "style_weaponDull": "ENNUYANT"
+        "style_weaponDull": "ENUILLANT"
         
     },
     
@@ -132,7 +128,7 @@
           "cybergrind_previousRun": "DERNIER",
           "cybergrind_bestRun": "MEILLEUR",
           
-          "cybergrind_total": "TOTALE",
+          "cybergrind_total": "TOTAL",
           
           "cybergrind_connectingToSteam": "CONNEXION À STEAM...",
           
@@ -170,18 +166,17 @@
           "cybergrind_wavesDescription1": "SÉlECTIONNEZ LA VAGUE DE DÉPART",
           "cybergrind_wavesDescription2": "(Le meilleur score doit être au moins le double de la vague de départ choisie)",
 
-          "cybergrind_noPatternsSelected": "AUCUNE SCHÈMA SÉLECTIONNÉ."
+          "cybergrind_noPatternsSelected": "AUCUN PATTERN SÉLECTIONNÉ."
     },
     
     "books":{
         "books_scanning": "ANALYSE...",
-
         "books_pressToClose1": "APPUYER SUR",
         "books_pressToClose2": "POUR FERMER.",
 
-        "books_limboFourth1": "TEXT ANALYSÉ - SCRIPTE LISIBLE:",
+        "books_limboFourth1": "TEXT ANALYSÉ - SCRIPTE LISIBLE",
         "books_limboFourth2": "...Mon esprit est à la dérive avec les tourments éternels. Des vistas lucides dans des tons insidieux, des murs creuses qui hurle au toucher. Une chanson moquante qui joue tout le temps, même le chant des oiesaux est faux. Tout ceci, des rappels de ma malédiction permanent.",
-        "books_limboFourth3": "Gabriel, mon cher ami, dans une pétinence sans fin j'ai attendu votre embrassement dans le Paradis. J'ai resté si fidèle, acceptant mon destin, mais à quel but? Quel est cet peine, d'avoir mené moi-même à mon propre ruine sans aucun espoir du salut... Ces crânes ricanent parmi leurs sourires malicieuses, leurs voix bavardants, me tentant de descendre plus loin dans l'Enfer... Je ne le ferais pas.",
+        "books_limboFourth3": "Gabriel, mon cher ami, dans une pétinence sans fin j'ai attendu votre embrassement dans le Paradis. J'ai resté si fidèle, acceptant mon destin, mais à quel but? Quel est cet peine, d'avoir mené moi-même à mon propre ruine sans aucun espoir du salut... Ces crânes ricanent parmi leurs sourires malicieux, leurs voix bavardants, me tentant de descendre plus loin dans l'Enfer... Je ne le ferais pas.",
         "books_limboFourth4": "Je les ai cachés parmi les meubles, les livres, et les fondations de cet endroit maudit. Pardonnez-moi Gabriel, je vous attenderais...",
         "books_limboFourth5": "TEXTE RESTANT: - HORS SUJET.",
         
@@ -204,7 +199,7 @@
         "books_greedThird4": "Mais que ceux qui porte la magie <color=cyan>ÉLECTRIQUE</color> des Druides peuvent le trouver.",
         
         "books_wrathSecond1": "TEXT ANALYSÉ - SCRIPTE LISIBLE:",
-        "books_wrathSecond2": "EXTRAIT DE JOURNAL DU NOCHER:",
+        "books_wrathSecond2": "EXTRAIT DE JOURNAL DU PASSEUR:",
         "books_wrathSecond3": "Une calamité à frappé le monde mortel. Ce qui était autre fois le rivière Styx a maintenant devenu une océane immense. Un million d'âmes pleurant, venant en masse chaque journée que même les côtes ne peuvent plus contenir. Une marée de larmes débordant chaque côté, de la proue au poupe, demandant la pitié, pleurant pour un passage sûr. Mais tous les âmes ne peuvent pas payer, et mes mains agées ne peuvent seulment prendre autant de pièces.",
         "books_wrathSecond4": "Une journée, le courant a changé. Vague après vague, pour une période sans fin, des millions et milliards, comme si la gorge du monde a été tranché et la tête retenu pour les verser. Je n'avais aucun temps pour réagir. La fatigue de mon travail sans fin m'a débordé et j'ai plongé en dessous de la mer, dans la profondeur de l'Océane Styx, mon destin scellé par les masses écrasantes des corps sans fin.",
         "books_wrathSecond5": "Tout d'un soudain, il y avait une lumière tellement brillant que le Seigneur lui-même, me délivrant des ténèbres avec des bras puissants qui m'a porté avec tellement de compassion et chaleur que je n'ai jamais connu:",
@@ -237,7 +232,7 @@
         "act1_intermission_second8": "\"Votre échec ne sera pas toléré. La Lumière du Père sera rompu de vote corps comme punition.",
         "act1_intermission_second9": "Vous avez 24 heures avant que le dernier de ses embres s'éteignent.\"",
         "act1_intermission_second10": "\"Et vous parmi eux.\"",
-        "act1_intermission_second11": "\"Faits preuve de votre loyauté.\"",
+        "act1_intermission_second11": "\"Faites preuve de votre loyauté.\"",
         "act1_intermission_second12": "\"Corrigez vos erreurs.\"",
         
         "act1_intermission_third1": "Pendant que la Lumière s'arrachait de son esprit, les hurlements de Gabriel ont été réduits au silence dans les évangiles des louanges à Dieu.",
@@ -270,7 +265,7 @@
         "act2_intermission_second8": "Il a pris son épée, et l'a tenu en contraste au lumière déclinant.",
         
         "act2_intermission_second9": "Dans sa réflection, il voyait une arme renaît, n'étant plus porté par la volonté d'un autre, mais lui-même.",
-        "act2_intermission_second10": "Il savait que seulement des mots ne convainceront jamais les masses.",
+        "act2_intermission_second10": "Il savait que de simples mots ne suffiraient pas à bouger les masses.",
         "act2_intermission_second11": "Il a choisit de faire une action drastique.",
         
         "act2_intermission_third1": "La mort tâchait l'auditoire.",
@@ -317,26 +312,27 @@
     },
 	"frontend": {
 		"mainmenu_earlyAccess": "ACCÈS ANTICIPÉ",
-        "mainmenu_halloween": "JOYEAUX HALLOWEEN",
-        "mainmenu_easter": "JOYEAUX PÂQUES",
-        "mainmenu_christmas": "JOYEAUX NOËL",
+        "mainmenu_halloween": "JOYEUX HALLOWEEN",
+        "mainmenu_easter": "JOYEUSES PÂQUES",
+        "mainmenu_christmas": "JOYEUX NOËL",
 		"mainmenu_play": "JOUER",
 		"mainmenu_options": "OPTIONS",
         "mainmenu_credits": "CRÉDITS",
 		"mainmenu_quit": "QUITTER",
         "mainmenu_mods": "MODS",
-		"mainmenu_restart": "RÉDEMARRER",
+		"mainmenu_restart": "REDÉMMARER",
+
 
 		"difficulty_title": "DIFFICULTÉ",
 		"difficulty_easy": "FACILE",
 		"difficulty_normal": "MOYEN",
 		"difficulty_hard": "DIFFICILE",
 		"difficulty_harmless": "SANS DANGER",
-		"difficulty_lenient": "CLÉMENT",
+		"difficulty_lenient": "PERMISSIF",
 		"difficulty_standard": "STANDARD",
 		"difficulty_violent": "VIOLENT",
-		"difficulty_brutal": "BRUTAL",
-		"difficulty_umd": "haha funny dmc reference",
+		"difficulty_brutal": "BRUTALE",
+		"difficulty_umd": "ULTRAKILL MUST DIE",
         
         "difficulty_tweakReminder": "[ LA DIFFICULTÉ PEUT ÊTRE AJUSTÉ DANS LES OPTIONS D'ASSISTANCES ]",
         "difficulty_underConstruction": "EN CONSTRUCTION",
@@ -361,62 +357,55 @@
 		"chapter_act3": "ACTE III - ???",
 		"chapter_prime": "LES SANCTUAIRES PRIMES",
 		"chapter_cyberGrind": "LE CYBERGRIND",
-		"chapter_sandbox": "BAC Á SABLE",
-		"chapter_secretMission": "MISSION SÈCRETE",
+		"chapter_sandbox": "BAC À SABLE",
+		"chapter_secretMission": "MISSION SECRÈTE",
 
 		"layer_prelude": "OUVERTURE - LES PORTES DE L'ENFER",
-		"layer_limbo": "COUCHE 1 - LIMBES",
-		"layer_lust": "COUCHE 2 - LUXURE",
-		"layer_gluttony": "COUCHE 3 - GOURMANDISE",
-		"layer_greed": "COUCHE 4 - AVARICE",
-		"layer_wrath": "COUCHE 5 - COLÈRE",
-		"layer_heresy": "COUCHE 6 - HÉRÉSIE",
-		"layer_prime": "LES SANCTUAIRES PRIMES",
-
-        "level_challenge": "DÈFI",
-		"level_challengeCompleted": "TERMINÉ",
-
-        "level_fullIntroPrompt": "INTRO COMPLET?",
-        "level_fullIntroPromptYes": "OUI",
-        "level_fullIntroPromptNo": "NON",
-        "level_fullIntroPromptCancel": "ANNULER"
+		"layer_limbo": "NIVEAU 1 - LIMBES",
+		"layer_lust": "NIVEAU 2 - LUXURE",
+		"layer_gluttony": "NIVEAU 3 - GOURMANDISE",
+		"layer_greed": "NIVEAU 4 - AVARICE",
+		"layer_wrath": "NIVEAU 5 - COLÈRE",
+		"layer_heresy": "NIVEAU 6 - HÉRÉSIE",
+		"layer_prime": "LES SANCTUAIRES PRIMES"
 	},
     "visualnovel": {
         "visualnovel_mirageName1": "JUSTE QUELQU'UN",
-        "visualnovel_mirageName2": "LA FILLE LA PLUS JOLIE DU VILLE",
+        "visualnovel_mirageName2": "LA FILLE LA PLUS BELLE EN VILLE",
         "visualnovel_mirageName3": "MIRAGE",
 
         "visualnovel_introFirst1": "Des pas lourds, du respiration déchiré.",
         "visualnovel_introFirst2": "Il ne restait pas beaucoup de temps.",
         "visualnovel_introFirst3": "Il était peut-être déjà trop tard.",
         
-        "visualnovel_introFirst4": "Les passages labyrinthiques des virages serrés semblent devenir de plus en plus étrange, la panique effaçant toutes les mémoires profondement incrustés qui me guidait normallemennt.",
+        "visualnovel_introFirst4": "Les passages labyrinthiques des virages serrés semblent devenir de plus en plus étrange, la panique effaçant toutes les mémoires profondement incrustés qui me guidait normallement.",
         
         "visualnovel_introFirst5": "Chaque virage me semble étrange.",
         "visualnovel_introFirst6": "Chaque ligne droite trop longue.",
         
         "visualnovel_introFirst7": "La cloche sonne pour moi.",
         
-        "visualnovel_introSecond1": "J'ai avalé le dernier des mes rations, l'y tenant entre mes dents.",
-        "visualnovel_introSecond2": "Il a à peine tenu pendant que je regardais frénétiquement autour de moi, en espérant que les derniers bouts de ma mémoire arrivent à trouver une vue familiere qui me mènera au salut.",
-        "visualnovel_introSecond3": "Les portes doivent se fermer en cet instant.",
-        "visualnovel_introSecond4": "Les derniers entre nous à peines sorties.",
-        "visualnovel_introSecond5": "Le reste de nous n'avaient aucune chance.",
+        "visualnovel_introSecond1": "J'ai avalé la dernière de mes rations.",
+        "visualnovel_introSecond2": "Il y a peine tenu pendant que je regardais frénétiquement autour de moi, en espérant que les derniers bouts de ma mémoire arrivent à trouver une vue familière qui me mènera au salut.",
+        "visualnovel_introSecond3": "Les portes doivent se fermer en cet instant même.",
+        "visualnovel_introSecond4": "Les derniers d'entre nous à peines sortis.",
+        "visualnovel_introSecond5": "Le reste des notres n'avaient aucune chance.",
         
         "visualnovel_introSecond6": "Tout d'un soudain, depuis un angle mort, une figure m'a frappé.",
         "visualnovel_introSecond7": "Il n'y avait pas le temps de réagir avant que j'ai tombé au sol froid et dur.",
         "visualnovel_introSecond8": "J'ai lutté pour regagner mes sens, pour pouvoir voir quel destin m'attenderas dans mes derniers moments, mais même dans cet abîme de terreur sans fin, mon esprit n'a jamais pû imaginer l'horreur que j'ai temoigné.",
         
-        "visualnovel_fallen1": "Oof aïe ouille ça pique",
+        "visualnovel_fallen1": "Aïe ouf aïe ça fait mal",
         
-        "visualnovel_fallenPromptFirst1": "Qui êtes-vous?",
-        "visualnovel_fallenPromptFirst2": "Vous allez bien?",
+        "visualnovel_fallenPromptFirst1": "Qui est tu ?",
+        "visualnovel_fallenPromptFirst2": "Ça va?",
         "visualnovel_fallenPromptFirst3": "*Remuer nerveusement et suer abondamment*",
         
-        "visualnovel_fallenResponseFirst": "Je suis juste quelqu'un qui s'est fait renversé par un connard à demi-cerveau qui n'a même pas la politesse de me demander si ça va ou de s'excuser avant de commencer une interrogation.",
-        "visualnovel_fallenResponseSecond": "Eh bien, je me suis fait renversé par un trou de cul aveugle-par-choix qui a salé ma jupe, donc en tout, putain c'est fantastique, mais je préférais de ne pas être par terre en ce moment.",
+        "visualnovel_fallenResponseFirst": "Je suis juste quelqu'un qui s'est fait renversé par un trou du cul qui n'a même pas la politesse de me demander si ça va ou de s'excuser avant de commencer une interrogation.",
+        "visualnovel_fallenResponseSecond": "Eh bien, je me suis fait renversé par un trou du cul qui a salit ma jupe, donc en tout, c'est fantastique, mais je préférais de ne pas être par terre en ce moment.",
         "visualnovel_fallenResponseThird1": "Ah super, je me suis fait renversé par une fontaine vibrante, quelle chance.",
         "visualnovel_fallenResponseThird2": "Tu peux du moins m'aider à me remonter avant que le reste de vous se fondent en cause du soleil, ou se martellent dans la Terre.",
+        
         
         "visualnovel_fallenPromptSecond1": "*Aidez-la à se relever*",
         "visualnovel_fallenPromptSecond2": "Pas avec une telle attitude.",
@@ -427,15 +416,15 @@
        
        
         "visualnovel_kindFirst1": "*soupir*",
-        "visualnovel_kindFirst2": "Hé, desolé d'avoir été impolie comme ça, je suis vraiment frustré que non seulment je suis en retard pour l'école, j'ai aussi arrivé à me perdre en chemin.",
+        "visualnovel_kindFirst2": "Desolé d'avoir été impolie comme ça, je suis vraiment frustré que non seulment je suis en retard pour l'école, j'ai aussi arrivé à me perdre en chemin.",
         
-        "visualnovel_kindSecond": "Mais, d'après ce qu'on voit, toi aussi t'es dans le même bateau, et par un coup de chance qu'on trouve une seule fois dans la vie, t'a arrivé à croiser avec ~la fille la plus belle du ville~.",
+        "visualnovel_kindSecond": "Mais, d'après ce qu'on voit, toi aussi t'es dans le même bateau, et par un coup de chance qu'on trouve une seule fois dans la vie, t'a arrivé à croiser avec ~la fille la plus belle en ville~.",
         "visualnovel_kindThird": "Alors, si tu nous guides pour nous sortir de cette situation?",
         
-        "visualnovel_rudeFirst1": "Écoutes, tête de bite.",
-        "visualnovel_rudeFirst2": "Je ne sais pas qui t'est mais t'as du culot de mettre quelq'un par terre et de même pas les aider à les remonter, mais puisque ta mère ne t'a pas appris les bonnes manières, je vais l'excuser cet fois.",
-        "visualnovel_rudeSecond": "Mais, d'après ce qu'on voit, toi aussi t'es dans le même bateau, et par un coup de chance qu'on trouve une seule fois dans la vie, t'a arrivé à croiser avec ~la fille la plus belle du ville~.",
-        "visualnovel_rudeThird": "Donc je te pardonnes pour ton transgression extrême d'avoir mis tes mains sur cette jeune fille, si tu me dis dans quelle direction y aller, puisque je sembles m'avoir perdu en chemin.",
+        "visualnovel_rudeFirst1": "Écoute, tête de cul.",
+        "visualnovel_rudeFirst2": "Je ne sais pas qui tu est mais tu as du culot de mettre quelqu'un par terre et de même pas les aider à se redresser, mais puisque ta mère ne t'a pas appris les bonnes manières, je vais t'excuser pour cette fois.",
+        "visualnovel_rudeSecond": "Mais, d'après ce qu'on voit, toi aussi t'es dans le même bateau, et par un coup de chance qu'on trouve une seule fois dans la vie, t'a arrivé à croiser avec ~la fille la plus belle en ville~.",
+        "visualnovel_rudeThird": "Donc je te pardonnes pour ta transgression extrême d'avoir mis tes mains sur cette jeune fille, si tu me dis dans quelle direction y aller, puisque je semble m'être perdu en chemin.",
         
         "visualnovel_middlePrompt1": "En fait, je suis perdu aussi.",
         "visualnovel_middlePrompt2": "Pas envie.",
@@ -443,30 +432,30 @@
         
         "visualnovel_middleResponseFirst1": "Ugh! Quelle chance.",
         "visualnovel_middleResponseFirst2": "Mais en rétrospective, tu ne seras pas ici avec moi si tu n'étais pas perdu aussi...",
-        "visualnovel_middleResponseFirst3": "Tant pis, ça vaut pas la peine de se pleurer sur du sang renversé.",
+        "visualnovel_middleResponseFirst3": "Tant pis, ça vaut pas la peine de pleurer sur un peu de sang versé.",
         "visualnovel_middleResponseFirst4": "Je m'appelles Mirage.",
         "visualnovel_middleResponseFirst5": "Ne te donnes pas ton nom, je m'en fiches un peu.",
         
         "visualnovel_middleResponseSecond1": "QUOI ?",
-        "visualnovel_middleResponseSecond2": "MAIS BORDEL, ÇA VEUT DIRE QUOI 'PAS ENVIE'?",
+        "visualnovel_middleResponseSecond2": "MAIS PUTAIN, ÇA VEUT DIRE QUOI 'PAS ENVIE'?",
         "visualnovel_middleResponseSecond3": "Si tu NE montres PAS le chemin, TOI non plus tu vas jamais arriver!",
         "visualnovel_middleResponseSecond4": "Ou est-ce que cet pensée n'a jamais croisé ton cavité de cerveau bouffant des crayons!??",
         
         "visualnovel_middleResponseThird1": "Conneries!",
-        "visualnovel_middleResponseThird2": "Arrête de dire de la merde, je peux voir ton uniforme croûteux et aucune personne vivante osera sortir ressemblant un sac de poubelle plein par le choix!",
-        "visualnovel_middleResponseThird3": "Mais en considérant la manque d'activité qu'il se trouve dans ton crâne, je suis prêt à admettre que tu sembles jamais avoir été à l'école.",
+        "visualnovel_middleResponseThird2": "Arrête de dire de la merde, je peux voir ton uniforme croûteux et aucune personne vivante oserai sortir ressemblant un sac poubelle plein par choix!",
+        "visualnovel_middleResponseThird3": "Mais en considérant le manque d'activité qu'il se trouve dans ton crâne, je suis prêt à admettre que tu sembles jamais avoir été à l'école.",
         
-        "visualnovel_middlePromptSecondRecklessness": "Vous pouvez être plus polie avec les gens que vous avez venus de rencontrer...",
+        "visualnovel_middlePromptSecondRecklessness": "Vous pouvez être plus polie avec les gens que vous venez de rencontrer...",
         "visualnovel_middlePromptSecondWaiting": "On va nul par en attendant ici, on devrait chercher une route à l'école.",
         
-        "visualnovel_recklessnessFirst": "Ah ouais? Toi par contre tu pourras bien profiter d'un battement, donc va t'faire foutre.",
+        "visualnovel_recklessnessFirst": "Ah bon ? Toi par contre tu pourras bien profiter d'une grosse gifle, donc empresse-toi de déguerpir.",
         "visualnovel_recklessnessSecond1": "Mais oui, t'as raison.",
-        "visualnovel_recklessnessSecond2": "Je m'en fiches un peu de ce que toi ou les autres pensent de moi, donc je ne suis pas interessé en essayant d'être gentille pour que tu sois en bonne humeur.",
+        "visualnovel_recklessnessSecond2": "Je m'en fiches un peu de ce que toi ou les autres pensent de moi, donc je ne suis pas interessé en essayant d'être gentille pour que tu sois de bonne humeur.",
         
         "visualnovel_recklessnessPrompt1": "Pourquoi pas? Si on est coincé ensemble ici, à quoi sert-il de rendre les choses encore pire pour nous?",
         "visualnovel_recklessnessPrompt2": "J'ai du mal à le croire vu la façon que vous vous fâchez à cause de tout ce que je dis.",
         
-        "visualnovel_recklessnessResponseFirst1": "À quoi ça sert de l'améliorer?",
+        "visualnovel_recklessnessResponseFirst1": "À quoi ça sert de s'améliorer?",
         "visualnovel_recklessnessResponseFirst2": "À quoi ça sert de faire semblant de se soucier?",
         "visualnovel_recklessnessResponseFirst3": "Bref, quel est l'interêt de tout cela?",
         "visualnovel_recklessnessResponseFirst4": "Rien.",
@@ -485,12 +474,12 @@
         "visualnovel_waitingThird2": "C'est logique, ça sera bien si tu le cherches à un moment donné.",
         
         "visualnovel_waitingPromptFirst1": "Logique ou non, on est déjà en retard et je n'ai pas envie d'attendre ici jusqu'au lendemain.",
-        "visualnovel_waitingPromptFirst2": "Toute personne qui sait le chemin y seront déjà rendues. Il me semble que vous cherchez une excuse pour abandonner.",
+        "visualnovel_waitingPromptFirst2": "Tout le monde qui sait le chemin y seront déjà arrivés. J'ai l'impression qu'tu cherchez une excuse pour abandonner.",
         
-        "visualnovel_waitingResponseFirst1": "Faits-toi le plaisir. Je resterais ici jusqu'au mort thermique de l'univers si cela veut dire que je ne suis pas obligé de courir partout pour chercher un caillou permettant de retrouver mes mèmoires au sol.",
-        "visualnovel_waitingResponseFirst2": "Je m'en fiches totalement d'être en retard pour l'école.",
+        "visualnovel_waitingResponseFirst1": "Prépare-toi. Je resterais ici jusqu'à la mort thermique de l'univers si cela veut dire que je ne suis pas obligé de courir partout pour chercher un caillou permettant de retrouver mes mèmoires au sol.",
+        "visualnovel_waitingResponseFirst2": "J'm'en fiches totalement d'être en retard pour l'école.",
         "visualnovel_waitingResponseFirst3": "L'école n'a pas d'importance.",
-        "visualnovel_waitingResponseFirst4": "Rien n'a d'importance.",
+        "visualnovel_waitingResponseFirst4": "Rien est important.",
         
         "visualnovel_waitingResponseSecond1": "Ha!",
         "visualnovel_waitingResponseSecond2": "Je peux pas abandonner si je n'ai jamais essayé au début, et de ne pas prendre l'habitude d'essayer.",
@@ -564,34 +553,33 @@
         "visualnovel_nihilism36": "Mais de même, dans ce cas, l'insignificance de nos actions portent jusqu'au même conclusion -- Il n'y a aucun raison pour agir, puisque tout action n'est simplement un fluctuation temporaire qui, néanmoins, mènera jusqu'au même conclusion.",
         "visualnovel_nihilism37": "Je comprends bien ce que tu veux dire.",
         "visualnovel_nihilism38": "Cependant, ça ne réduit pas ma peur du fin.", 
-        "visualnovel_nihilism39": "Même si je tentais à retrouver un objectif, je serais toujours paralysé par le pensée de ne rien devenir.",
+        "visualnovel_nihilism39": "Même si je tentais à retrouver un objectif, je serais toujours paralysé par la pensée de ne rien devenir.",
         "visualnovel_nihilism40": "Je vois.",
-        "visualnovel_nihilism41": "Bien que je veux l'accepter, je suis néanmoins frappé avec cette panique existentielle.",
+        "visualnovel_nihilism41": "Bien que je veux l'accepter, je suis néanmoins frappé avec cette crise existentielle.",
         "visualnovel_nihilism42": "Je le comprends logiquement, et je sais qu'il n'y a aucune raison de vivre avec du apathie, mais mon côté emotionel refuse de m'écouter.",
         "visualnovel_nihilism43": "La peur persiste, et je ne peux pas me motiver pour rechercher un objectif, malgré la connaissance que je dois le faire.",
         
-        "visualnovel_conclusion1": "Quel surprise.",
-        "visualnovel_conclusion2": "On dirait que t'as bien une bonne tête sur tes épaules.",
-        "visualnovel_conclusion3": "Bon sang, je suis impressioné.",
-        "visualnovel_conclusion4": "Ouf...",
-        "visualnovel_conclusion5": "Je me sens comme j'ai perdu tout le poids du monde entier.",
-        "visualnovel_conclusion6": "Ou plutôt, tu me l'avais fait pour moi.",
-        "visualnovel_conclusion7": "Honnêtement, du fond de mon cœur...",
-        "visualnovel_conclusion8": "Merci.",
-        "visualnovel_conclusion9": "Tu m'as beaucoup donné auquel je dois rèflechir, et même si je sais que j'ai une chemin longue et difficile devant moi, je suis optimistique.",
-        "visualnovel_conclusion10": "Pour la première fois dans ce qu'il me semble être une éternité, je suis optimistique.",
-        "visualnovel_conclusion11": "Hé... On est déjà trop en retard pour l'école et il est devenu assez claire que personne va nous chercher, donc ça te dit de nous débarasser ce prison qui  bouffe notre énergie et aller chercher quelque chose à manger, hein?",
+        "visualnovel_conclusion1": "Quelle surprise.",
+        "visualnovel_conclusion2": "On dirait que t'as bien une bonne tête sur tes épaules. Bon sang, je suis impressioné.",
+        "visualnovel_conclusion3": "Ouf...",
+        "visualnovel_conclusion4": "Je me sens comme j'ai perdu tout le poids du monde entier.",
+        "visualnovel_conclusion5": "Ou plutôt, tu me l'avais fait pour moi.",
+        "visualnovel_conclusion6": "Honnêtement, du fond de mon cœur...",
+        "visualnovel_conclusion7": "Merci.",
+        "visualnovel_conclusion8": "Tu m'as beaucoup donné auquel je dois réfléchir, et même si je sais que j'ai une chemin longue et difficile devant moi, je suis optimistique.",
+        "visualnovel_conclusion9": "Pour la première fois dans ce qu'il me semble être une éternité, je suis optimistique.",
+        "visualnovel_conclusion10": "Hé... On est déjà trop en retard pour l'école et il est devenu assez claire que personne va nous chercher, donc ça te dit de nous débarasser de cette prison qui bouffe notre énergie et aller chercher quelque chose à manger, n'est ce pas?",
         
-        "visualnovel_conclusionPrompt1": "Ouais, pourquoi pas. J'ai rien de mieux à faire aujourd'hui. Par contre, c'est vous qui payez.",
+        "visualnovel_conclusionPrompt1": "Oui, pourquoi pas. J'ai rien de mieux à faire aujourd'hui. Par contre, c'est vous qui payez.",
         "visualnovel_conclusionPrompt2": "Non, desolé. Pour être honnête je suis toujours un peu agacé à quel point vous étiez impolie vers moi.",
       
-        "visualnovel_conclusionResponseFirst1": "Ah, espece de bâtard malin!",
+        "visualnovel_conclusionResponseFirst1": "Ah bon, encore cette attitude !",
         "visualnovel_conclusionResponseFirst2": "Mais bon, d'accord.",
-        "visualnovel_conclusionResponseFirst3":"Je t'en doit comme-même, donc c'est un bon moment d'encaisser ton ticket 'a fait une bonne chose pour une dame hors de mon niveau', hein?",
+        "visualnovel_conclusionResponseFirst3": "Je t'en doit comme-même, donc c'est un bon moment d'encaisser ton tiquet. T'a fait une bonne chose pour une dame hors de mon niveau, n'est ce pas?",
         
         "visualnovel_conclusionResponseSecond1": "Bon, comme tu veux.",
-        "visualnovel_conclusionResponseSecond2": "L'offre reste ouvert par contre, dans le cas où tu changes d'avis.",
-        "visualnovel_conclusionResponseSecond3": "A plus, p'tit amoureux."
+        "visualnovel_conclusionResponseSecond2": "L'offre reste ouverte par contre, dans le cas où tu changes d'avis.",
+        "visualnovel_conclusionResponseSecond3": "À plus, mon amour."
     },
 	"options": {
 		"options_title": "OPTIONS",
@@ -616,9 +604,9 @@
 		"general_rememberWeapon": "SOUVENIR DERNIÈRE ARME UTILISÉ",
 		"general_screenShake": "TREMBLEMENT D'ÉCRAN",
         "general_screenShakeMinimum": "AUCUN",
-        "general_screenShakeMaximum": "TROP",
+        "general_screenShakeMaximum": "T R O P",
 		"general_cameraTilt": "INCLINAISON DU CAMÉRA",
-        "general_restartWarning": "AVERTISSEMENT RÉDEMARRAGE/QUITTER",
+        "general_restartWarning": "AVERTISSEMENT REDÉMARRAGE/QUITTER",
 		"general_discordRpc": "INTÉGRATION DISCORD",
 		"general_seasonalEvent": "ÉVENEMENTS SAISONNIERS",
 
@@ -669,7 +657,7 @@
 		"graphics_pixelisation240p": "240P (HAUT)",
 		"graphics_pixelisation144p": "144P (TRÈS HAUT)",
 		"graphics_pixelisation36p": "36P (ABSURDE)",
-		"graphics_dithering": "DIFFUSION D'ERREURS",
+		"graphics_dithering": "GRIBOUILLAGE",
         "graphics_ditheringMinimum": "AUCUN",
 		"graphics_textureWarping": "DÉFORMATION DES TEXTURES",
 		"graphics_vertexWarping": "DÉFORMATION DES SOMMETS",
@@ -714,7 +702,7 @@
 		"hud_typeClassicWhite": "CLASSIQUE - BLANC",
 		"hud_hudElements": "ÉLÉMENTS D'AFFICHAGE",
 		"hud_backgroundOpacity": "OPACITÉ D'ARRIÈRE-PLAN",
-        "hud_backgroundOpacityMinimum": "ÂUCUN",
+        "hud_backgroundOpacityMinimum": "AUCUN",
         "hud_backgroundOpacityMaximum": "100% NOIR",
 		"hud_alwaysOnTop": "TOUJOURS VISIBLE",
 		"hud_icons": "ICÔNES",
@@ -723,6 +711,11 @@
 		"hud_railcannonMeter": "CANON-ÉLECTRIQUE",
 		"hud_styleMeter": "STYLE-O-MÈTRE",
 		"hud_styleInfo": "INFOS DE STYLE",
+
+        "spawner_sandboxTools": "OBJETS DU BAC À SABLE :^)",
+        "spawner_sandbox": "BAC À SABLE",
+        "spawner_enemies": "ENEMIS",
+        "spawner_items": "OBJETS",
 
 		"crosshair_title": "PARAMÈTRES VISEUR",
 		"crosshair_type": "TYPE DE VISEUR",
@@ -740,7 +733,7 @@
 		"crosshair_colorCyan": "CYAN",
 		"crosshair_colorYellow": "JAUNE",
 		"crosshair_colorMagenta": "MAGENTA",
-		"crosshair_size": "TAILLE DU HUD",
+		"crosshair_size": "TAILLE DU VISEUR",
 		"crosshair_sizeNone": "AUCUN",
 		"crosshair_sizeThin": "MINCE",
 		"crosshair_sizeMedium": "MOYEN",
@@ -758,22 +751,22 @@
 		"assists_majorAssistsDisclaimerConfirmNo": "NON",
 		"assists_minorAssistsTitle": "ASSISTANCES MINEURES",
 		"assists_minor": "ASSISTANCES MINEURES",
-		"assists_autoAim": "VISÉE AUTOMATIQUE",
-		"assists_autoAimPercent": "POURCENTAGE DE VISÉE",
-        "assists_autoAimPercentMinimum": "AUCUN",
-        "assists_autoAimPercentMaximum": "PLEIN-ECRAN",
+		"assists_autoAim": "VISÉE ASSISTÉE",
+		"assists_autoAimPercent": "POURCENTAGE DE VISÉE ASSISTÉE",
+        "assists_autoAimPercentMinimum": "DÉSACTIVÉ",
+        "assists_autoAimPercentMaximum": "TOUT L'ÉCRAN",
 		"assists_enemySilhouettes": "CONTOURS DES ENNEMIS",
 		"assists_enemySilhouettesOutlines": "SILHOUETTES DES ENNEMIS",
 		"assists_enemySilhouettesDistance": "DISTANCE D'ACTIVATION",
-        "assists_enemySilhouettesDistanceMinimum": "TOUJOURS ACTIVE",
 		"assists_enemySilhouettesOutlinesOnly": "CONTOURS SEULEMENT",
+        "assists_enemySilhouettesDistanceMinimum": "ALWAYS ON",
 		"assists_major": "ASSISTANCES MAJEURES",
-		"assists_majorActivate": "ACTIVER",
+		"assists_majorActivate": "ACTIVÉES",
 		"assists_gameSpeed": "VITESSE DU JEU",
 		"assists_damageTaken": "DÊGATS PRISES",
-		"assists_bossOverride": "DIFFICULTÉ DU BOSS",
-		"assists_bossOverrideNone": "AUCUNE",
-		"assists_bossRestartRequired": "(Rédemarrage du combat contre le boss requis)",
+		"assists_bossOverride": "DIFFICULTÉ DES BOSS",
+		"assists_bossOverrideNone": "DÉSACTIVÉ",
+		"assists_bossRestartRequired": "(Redémarrage du boss requis)",
 		"assists_infiniteEnergy": "ÉNERGIE INFINIE",
         "assists_disableHardDamage": "DÉSACTIVER DÊGATS DU GRAPPIN",
 		"assists_disableWhiplashHardDamage": "DÉSACTIVER LES DÊGATS DURS",
@@ -792,14 +785,14 @@
 		"colors_hudEnergyEmpty": "ÉNERGIE (VIDE)",
 		"colors_railcannonFull": "CANON-ÉLECTRIQUE (PRÊT)",
 		"colors_railcannonPartial": "CANON-ÉLECTRIQUE (RECHARGE)",
-		"colors_variationBlue": "VARIATION BLEU",
-		"colors_variationGreen": "VARIATION VERT",
+		"colors_variationBlue": "VARIATION BLEUE",
+		"colors_variationGreen": "VARIATION VERTE",
 		"colors_variationRed": "VARIATION ROUGE",
-		"colors_variationGold": "VARIATION OR",
-		"colors_enemies": "CONTOURS ENNEMIS",
+		"colors_variationGold": "VARIATION DORÉE",
+		"colors_enemies": "CONTOURS D'ENNEMIS",
 
 		"save_warning1": "<color=red>Le jeu va recharger</color>.",
-		"save_warning2": "Si vous êtes dans un mission, tout progrès actuel sera perdu.",
+		"save_warning2": "Si vous êtes dans une mission, tout progrès actuel sera perdu.",
 		"save_reloadYes": "JE COMPRENDS",
 		"save_reloadNo": "ANNULER",
 		"save_select": "SÉLECTIONNER",
@@ -812,23 +805,23 @@
 		"save_close": "FERMER",
 		"save_slotEmpty": "VIDE",
 
-        "language_title": "LANGUE",
-        "language_languages": "LANGUES",
-        "language_openLanguageFolder": "OUVRIR DOSSIER LANGUAGES"
+        "language_title": "LANGUAGE",
+        "language_languages": "LANGUAGES",
+        "language_openLanguageFolder": "OUVRIR LE FICHIER DE LANGUES"
 	},
 	"pauseMenu": {
 		"pause_title": "PAUSE",
 		"pause_resume": "RÉSUMER",
-		"pause_respawn": "REAPPAÎTRE",
-		"pause_restart": "RÉDEMARRER",
+		"pause_respawn": "RÉAPPAÎTRE",
+		"pause_restart": "REDÉMARRER",
 		"pause_options": "OPTIONS",
 		"pause_quit": "QUITTER",
         
-        "pause_restartConfirm": "Êtes-vous sûr de vouloir <color=orange>RÉDEMARRER</color> ce mission?",
-        "pause_quitConfirm": "Êtes-vous sûr de vouloir <color=orange>QUITTER</color> ce mission?",
+        "pause_restartConfirm": "Êtes-vous sûr de vouloir <color=orange>REDÉMARRER</color> cette mission?",
+        "pause_quitConfirm": "Êtes-vous sûr de vouloir <color=orange>QUITTER</color> cette mission?",
         "pause_quitConfirmYes": "QUITTER",
         "pause_quitConfirmNo": "ANNULER",
-        "pause_restartConfirmYes": "RÉDEMARRER",
+        "pause_restartConfirmYes": "REDÉMARRER",
         "pause_restartConfirmNo": "ANNULER",
         
         "pause_disableWindow": "Cette fenêtre peut être désactivé dans les options"
@@ -836,16 +829,16 @@
 	},
 	"levelNames": {
         "levelName_mainMenu": "MENU PRINCIPAL",
+        "levelName_cybergrind": "LE CYBER GRIND",
+		"levelName_sandbox": "uk_construct",
         "levelName_tutorial": "TUTORIEL",
-        "levelName_cybergrind": "LE CYBERGRIND",
-		"levelName_sandbox": "BOÎTE À SABLE",
         
 		"levelName_preludeFirst": "DU MAUVAIS AU PIRE",
 		"levelName_preludeSecond": "L'ABBATOIR",
-		"levelName_preludeThird": "DOUBLE OU QUITTE",
-		"levelName_preludeFourth": "ARMÉE D'UNE UNIQUE MACHINE",
+		"levelName_preludeThird": "QUITTE OU DOUBLE",
+		"levelName_preludeFourth": "MACHINE DE GUERRE",
 		"levelName_preludeFifth": "CERBÈRE",
-		"levelName_preludeSecret": "QUELQUE-CHOSE DE MAUDIT",
+		"levelName_preludeSecret": "CRÉATURE MAUDITE",
 
 		"levelName_limboFirst": "LE CŒUR DE L'AUBE",
 		"levelName_limboSecond": "LE MONDE BRÛLANT",
@@ -856,44 +849,42 @@
 		"levelName_lustFirst": "BRÛLEUR DE PONTS",
 		"levelName_lustSecond": "DÉCÈS À 20.000 VOLTS",
 		"levelName_lustThird": "CRISE CARDIAQUE EXTRÊME",
-		"levelName_lustFourth": "LA COUR DU CADAVRE DU ROI MINOS",
-		"levelName_lustSecret": "UNE CHANSON D'AMOUR IMPARFAITE",
+		"levelName_lustFourth": "LA COUR DU CADAVRE DU ROI",
+		"levelName_lustSecret": "UNE MÉLODIE D'AMOUR IMPARFAITE",
 
-		"levelName_gluttonyFirst": "LE VENTRE DE LA BÊTE",
+		"levelName_gluttonyFirst": "DANS LA GUEULE DE LA BÊTE",
 		"levelName_gluttonySecond": "DANS LA CHAIR",
 
-		"levelName_greedFirst": "ESCLAVES AU POUVOIR",
-		"levelName_greedSecond": "LE SOLEIL MAUDIT",
-		"levelName_greedThird": "UNE TIR À L'AVEUGLE",
+		"levelName_greedFirst": "ESCLAVES DU POUVOIR",
+		"levelName_greedSecond": "MAUDIT SOIT LE SOLEIL",
+		"levelName_greedThird": "UN TIR À L'AVEUGLE",
 		"levelName_greedFourth": "CLAIR DE SOLEIL",
 		"levelName_greedSecret": "LE CLASH DU BRANDICOOT",
 
-		"levelName_wrathFirst": "À LA POURSUITE DE POSÉIDON",
+		"levelName_wrathFirst": "LE REPAIRE DE POSÉIDON",
 		"levelName_wrathSecond": "LA MER SANS ÉTOILES",
 		"levelName_wrathThird": "NAVIRE DES FOUS",
 		"levelName_wrathFourth": "LÉVIATHAN",
 		"levelName_wrathSecret": "?",
         
         "levelName_heresyFirst": "LARMES DE SANG",
-		"levelName_heresySecond": "ESTHÉTIQUES DE LA HAINE",
+		"levelName_heresySecond": "ESTHÉTIQUES DE HAINE",
 
 		"levelName_primeFirst": "L'ÂME SURVIVANTE",
 		"levelName_primeSecond": "?",
 		"levelName_primeThird": "?"
-
-
 	},
 	"levelChallenges": {
 		"challenges_preludeFirst": "ÉLIMINE 5 ENNEMIS AVEC UNE PANNEAU VITRÉ",
-		"challenges_preludeSecond": "BATTEZ LE L'AFFRONTEMENT SECRET",
+		"challenges_preludeSecond": "GAGNEZ L'AFFRONTEMENT SECRET",
 		"challenges_preludeThird": "NE TUER QU'UN SEUL ENNEMI",
 		"challenges_preludeFourth": "GLISSER PENDANT 17 SECONDES SANS INTERRUPTION",
 		"challenges_preludeFifth": "N'INFLIGEZ AUCUN DOMMAGE FATAL À UN ENNEMI",
 
 		"challenges_limboFirst": "TERMINEZ LE NIVEAU EN MOINS DE 10 SECONDES",
-		"challenges_limboSecond": "NE RAMASSEZ AUCUNE CRÂNE",
-		"challenges_limboThird": "BATTEZ LE L'AFFRONTEMENT SECRET",
-		"challenges_limboFourth": "NE RAMASSEZ AUCUNE CRÂNE",
+		"challenges_limboSecond": "NE RAMASSEZ AUCUN CRÂNE",
+		"challenges_limboThird": "GAGNEZ L'AFFRONTEMENT SECRET",
+		"challenges_limboFourth": "NE RAMASSEZ AUCUN CRÂNE",
 
 		"challenges_lustFirst": "N'OUVREZ AUCUNE PORTE",
 		"challenges_lustSecond": "TERMINEZ LE NIVEAU EN MOINS DE 60 SECONDES",
@@ -909,12 +900,12 @@
 		"challenges_greedFourth": "ATTEIGNEZ LA PORTE DU BOSS EN MOINS DE 18 SECONDES",
         
         "challenges_wrathFirst": "NE TOUCHEZ PAS D'EAU",
-		"challenges_wrathSecond": "N'ATTAQUEZ PAS LE NOCHER",
+		"challenges_wrathSecond": "N'ENGAGER PAS LE PASSEUR",
 		"challenges_wrathThird": "NE TOUCHEZ PAS D'EAU",
 		"challenges_wrathFourth": "ATTEIGNEZ LA SURFACE EN MOINS DE 10 SECONDES",
         
-        "challenges_heresyFirst": "BATTEZ L'AFFRONTEMENT SECRET",
-		"challenges_heresySecond": "LANCEZ GABRIEL DANS LE PLAFOND"
+        "challenges_heresyFirst": "GAGNEZ L'AFFRONTEMENT SECRET",
+		"challenges_heresySecond": "LANCEZ GABRIEL AU PLAFOND"
 
 	},
 	"levelTips": {
@@ -972,7 +963,7 @@
         "leveltips_heresySecond1": "<color=orange>NE GASPILLEZ PAS</color> VOTRE ÉNERGIE!",
         "leveltips_heresySecond2": "Les esquives <color=orange>inutiles</color> lors des combats avec des <color=orange>adversaires aggressives</color> supprimera votre pouvoir de les utiliser quand vous en avez besoin.",
 
-		"leveltips_cybergrind": "Si vous vous faites envoyé trop loin de l'arène, le surpompement du <color=lime>SURCHARGEMENT</color> est une bonne façon d'y revenir.",
+		"leveltips_cybergrind": "Si vous vous faites envoyer trop loin de l'arène, le surpompement du <color=lime>SURCHARGEMENT</color> est une bonne façon d'y revenir.",
         "leveltips_sandbox1": "<color=orange>LES CODES DE TRICHE</color> peuvent être activés dans les autres niveaux en entrant les touches suivantes:",
         "leveltips_sandbox2": "L'activation des codes de triches désactiveras les rangs de fin de niveau."
 	},
@@ -982,23 +973,23 @@
         "shop_weapons": "ARMES",
         "shop_monsters": "MONSTRES",
         "shop_cybergrind": "LE CYBERGRIND",
-        "shop_sandbox": "BOÎTE À SABLE",
-        "shop_returnToMission": "RETOURNER AU MISSION",
-        "shop_soulOrbs": "GLOBES D'ÂME",
+        "shop_sandbox": "BAC À SABLE",
+        "shop_returnToMission": "RETOURNER À LA MISSION",
+        "shop_soulOrbs": "ORBES D'ÂMES",
         
         "shop_cybergrindDescription1": "<color=red>Le Cybergrind est un mode de survie sans fin</color>.",
         "shop_cybergrindDescription2": "Une bonne performance donnera beaucoup de <color=red>points</color>.",
-        "shop_cybergrindDescription3": "<color=red>Tout progrès dans le mission actuel sera perdu</color>.",
-        "shop_cybergrindEnterTitle": "LE CYBERGRIND",
+        "shop_cybergrindDescription3": "<color=red>Tout progrès dans la mission actuelle sera perdu</color>.",
+        "shop_cybergrindEnterTitle": "LE CYBER GRIND",
         "shop_cybergrindEnter": "ENTRER LE CYBERGRIND",
         "shop_cybergrindReturningTo": "Retourner à:",
         "shop_cybergrindExitTitle": "RETOURNER AU MISSION",
         "shop_cybergrindExit": "QUITTER LE CYBERGRIND",
 
         "shop_sandboxTitle": "BAC À SABLE",
-        "shop_sandboxDescription1": "Le <color=#4C99E6>Bac à sable</color> est un niveau vide qui peut être utilisé pour l'entraînement.",
-        "shop_sandboxDescription2": "<color=red>Tout progrès dans le mission actuel sera perdu</color>.",
-        "shop_sandboxEnter": "ENTREZ LE BAC À SABLE",
+        "shop_sandboxDescription1": "Le bac à sable est une zone vide que vous pouvez utiliser pour vous pratiquer.",
+        "shop_sandboxDescription2": "Tout progrès dans la mission actuelle sera perdu.",
+        "shop_sandboxEnter": "ENTRER LE BAC À SABLE",
         
         "shop_back": "RETOUR",
         "shop_weaponInfo": "INFO",
@@ -1007,17 +998,17 @@
         "shop_weaponsRevolver": "REVOLVER",
         "shop_weaponsShotgun": "FUSIL À POMPE",
         "shop_weaponsNailgun": "CLOUEUR",
-        "shop_weaponsRailcannon": "CANON-ÉLECTRIQUE",
+        "shop_weaponsRailcannon": "CANON ÉLECTRIQUE",
         "shop_weaponsRocketLauncher": "LANCE-ROQUETTES",
         "shop_weaponsArms": "BRAS",
         
-        "shop_revolverPiercer": "PERCEUSE",
+        "shop_revolverPiercer": "PERCEUR",
         "shop_revolverPiercerDescription1": "<color=orange>Maintenir</color> le Tir Alternatif pour charger un <color=orange>laser qui frappe 3 fois</color>.",
         "shop_revolverPiercerDescription2": "Nécessite un <color=orange>temps de rechargement</color>.",
         
         "shop_revolverMarksman": "TIREUR D'ÉLITE",
         "shop_revolverMarksmanDescription1": "Appuyer sur le tir alternatif pour <color=orange>lancer une pièce</color>.",
-        "shop_revolverMarksmanDescription2": "Frappez-le <color=orange>dans l'air</color> pour <color=orange>déflecter</color> votre tir dans le <color=orange>point faible</color> de l'ennemi le plus proche.",
+        "shop_revolverMarksmanDescription2": "Tirer-la <color=orange>dans l'air</color> pour <color=orange>déflecter</color> votre tir dans le <color=orange>point faible</color> de l'ennemi le plus proche.",
         "shop_revolverMarksmanDescription3": "Les pièces peuvent être enchaînées.",
         
         "shop_shotgunCoreEject": "ÉJECTEUR",
@@ -1025,21 +1016,21 @@
         "shop_shotgunCoreEjectDescription2": "<color=orange>Maintenir</color> pour augmenter la <color=orange>distance</color>.",
         "shop_shotgunCoreEjectDescription3": "<color=orange>Explosion sur impact.</color>",
         
-        "shop_shotgunPumpCharge": "SURCHARGEMENT",
+        "shop_shotgunPumpCharge": "SURCHARGE",
         "shop_shotgunPumpChargeDescription1": "Appuyer sur le tir alternatif pour <color=orange>pomper</color> votre fusil, augmentant la <color=orange>puissance</color> et <color=orange>diminuant</color> la précision de votre <color=orange>prochain tir</color>.",
-        "shop_shotgunPumpChargeDescription2": "Trop de pompes résultera dans une <color=orange>explosion</color> lorsque l'arme est tirée.",
+        "shop_shotgunPumpChargeDescription2": "Trop de pompes résultera en une <color=orange>explosion</color> lorsque l'arme est tirée.",
         
         "shop_nailgunMagnet": "AIMANT",
         "shop_nailgunMagnetDescription1": "Le tir alternatif lance un <color=orange>aimant</color> qui attire les <color=orange>clous</color> à proximité.",
         "shop_nailgunMagnetDescription2": "Les aimants se collent aux <color=orange>surfaces et aux ennemies</color>, et peuvent être cassés avec des armes '<color=orange>hitscan</color>'.",
         
-        "shop_nailgunOverheat": "SURCHAUFFEMENT",
-        "shop_nailgunOverheatDescription1": "Appuyer sur le tir alternatif <color=orange>pendant le tir</color> pour une coup vite de dêgàts en utilisant un <color=orange>dissipateur thermique</color>.",
+        "shop_nailgunOverheat": "SURCHAUFFE",
+        "shop_nailgunOverheatDescription1": "Appuyer sur le tir alternatif <color=orange>pendant le tir</color> pour créer un mur de clous en utilisant un <color=orange>dissipateur thermique</color>.",
         "shop_nailgunOverheatDescription2": "Les dissipateurs se rechargent lorsque vous ne tirez pas.",
         
         "shop_railcannonElectric": "ÉLECTRIQUE",
         "shop_railcannonElectricDescription1": "Un tir puissant et pénétrant.",
-        "shop_railcannonElectricDescription2": "<color=orange>Pénétre</color> à travers <color=orange>tout</color> les ennemies. Soyez attentif à votre <color=orange>positionnement</color> pour maximiser la destruction.",
+        "shop_railcannonElectricDescription2": "<color=orange>Pénétre</color> à travers <color=orange>tout</color> les ennemis. Soyez attentif à votre <color=orange>positionnement</color> pour maximiser la destruction.",
         "shop_railcannonElectricDescription3": "Ne pas utiliser dans l'eau.",
         
         "shop_railcannonScrewdriver": "TOURNEVIS",
@@ -1047,20 +1038,20 @@
         "shop_railcannonScrewdriverDescription2": "La perceuse fait saigner les ennemies avec <color=orange>une distance de soignage augmenté</color>.",
         
         "shop_railcannonMalicious": "MALICIEUX",
-        "shop_railcannonMaliciousDescription1": "Tirez un laser instatané qui entraîne une <color=orange>explosion large</color> sur l'impact, un peu comme un certain tête familiaire.",
-        "shop_railcannonMaliciousDescription2": "Efface des groupes d'enemmies faibles avec facilité.",
+        "shop_railcannonMaliciousDescription1": "Tirez un laser instatané qui entraîne une <color=orange>explosion large</color> sur l'impact, un peu comme une certaine tête familiaire.",
+        "shop_railcannonMaliciousDescription2": "Atomise des groupes d'enemmies faibles avec facilité.",
         
-        "shop_rocketLauncherFreeze": "ARRÊT",
-        "shop_rocketLauncherFreezeDescription1": "Appuyer sur le tir alternative pour <color=orange>gèler</color> les roquettes.",
-        "shop_rocketLauncherFreezeDescription2": "Les roquettes gèlees ont une distance d'explosion augmenté, et <color=orange>resteront gèlees</color> entre les changement d'armes.",
+        "shop_rocketLauncherFreeze": "MINUTEUR",
+        "shop_rocketLauncherFreezeDescription1": "Appuyer sur le tir alternative pour <color=orange>geler</color> les roquettes.",
+        "shop_rocketLauncherFreezeDescription2": "Les roquettes gelées ont une distance d'explosion augmenté, et <color=orange>resteront gelées</color> entre les changement d'armes.",
         
         "shop_armFeedbacker": "RENVOYEUR",
-        "shop_armFeedbackerDescription1": "Coup de poing rapide avec des dêgàts moyens.",
+        "shop_armFeedbackerDescription1": "Coup de poing rapide avec des dégâts moyens.",
         "shop_armFeedbackerDescription2": "Peut <color=orange>renvoyer</color> les projectiles, <color=orange>tirs de fusil à pompe</color> et les <color=orange>pièces</color>.",
         
         "shop_armKnuckleblaster": "BOMBARDIER",
         "shop_armKnuckleblasterDescription1": "Coup de poing lourd avec des dégâts élevés.",
-        "shop_armKnuckleblasterDescription2": "<color=orange>Maintenir</color> pour tirer les cartouches dans le bras, résultant dans un <color=orange>choc</color> qui repousse les ennemies.",
+        "shop_armKnuckleblasterDescription2": "<color=orange>Maintenir</color> pour tirer les cartouches dans le bras, résultant en une <color=orange>explosion</color> qui repousse les ennemis.",
         
         "shop_armWhiplash": "GRAPPIN",
         "shop_armWhiplashDescription1": "Une pointe avec une lance. <color=orange>Maintenir</color> pour lancer, <color=orange>lâcher</color> pour tirer.",
@@ -1071,46 +1062,46 @@
         "shop_advancedStrategy": "<color=orange>STRATÉGIES AVANCÉES:</color>",
         
         
-        "shop_loreRevolver1": "Une arme créée lors de la Guerre Finale pour le combat à distance moyen/long. Utilise des pulses électriques pour tirer des pièces microscopiques de métaux à des vitesses extrêmement vites.",
-        "shop_loreRevolver2": "Les armes utilisant cet technologie ont été surnommé des \"armes électriques\", et ont vite devenu la nouvelle norme, y remplacant les armes à balles. Puisqu'il a toujours besoin d'un projectile microscopiques, ses munitions ne sont pas vraiment infinies, mais prendra plusieurs semaines de tirage sans arrêt, et le rechargement est aussi facile que de gratter quelques flocons de feraille, ou même la surface de l'arme.",
+        "shop_loreRevolver1": "Une arme créée lors de la Guerre Finale pour le combat à distance moyenne/longue. Utilise des pulses électriques pour tirer des pièces microscopiques de métaux à des vitesses extrêmement vites.",
+        "shop_loreRevolver2": "Les armes utilisant cet technologie ont été surnommé des \"armes électriques\", et sont vite devenu la nouvelle norme, y remplacant les armes à balles. Puisqu'il a toujours besoin d'un projectile microscopiques, ses munitions ne sont pas vraiment infinies, mais prendra plusieurs semaines de tirage sans arrêt, et le rechargement est aussi facile que de gratter quelques flocons de feraille, ou même la surface de l'arme.",
         "shop_loreRevolver3": "En effet, une surface rude et irrégulière pour gratter des flocons est considéré une source de fierté pour les porteurs des armes électriques, puisqu'elle montre que l'arme a été fiable et utilisé pour une longue durée. La majorité des utilisateurs grattent des flacons pour ce raison exacte, plutôt que de l'utiliser comme munitions, rendant les armes électriques \"non grattés\" des aberrations.",
         "shop_loreRevolver4": "Bien que les armes électriques ont besoin du temps pour recharger son batterie entre les tirs, la conception du revolver élimine ce problème en incluant une cylindre portant plusieurs batteries qui tournent après chaque tir, permettant chaque batterie à se recharger sans diminuant la vitesse de tir.",
         "shop_loreRevolver5": "Une modification commune est de permettre toutes les charges des batteries a être déchargées simultanément pour une puissance augmenté, mais ceci nécessite un temps de rechargement plus long.",
-        "shop_loreRevolver6": "- Bien qu'il semble faible d'après un premier vue, sa puissance vient de sa fiabilité et simplicité. Le revolver est facile à utiliser tout en se concentrant sur le mouvement et l'esquivage des attaques, grâce à son temps de voyage instantané de ses tirs, et de son bon fonctionnement à toute portée.",
-        "shop_loreRevolver7": "- Les tirs en plein tête font 2x de dégâts, les tirs en membres 1.5x",
-        "shop_loreRevolver8": "- Lorsqu'il est tiré avec un bon timing lors de son éclair, la pièce du Tireur d'Élite peut diviser un tir en deux, l'amènant à frapper deux cibles au lieu qu'un seul. Malgré le timing serré, il y a un deuxième oppurtunité beaucoup plus longue si le pièce reste dans l'air pour une période de temps, qui peut être reconnu par un bruit de sifflement.",
-        "shop_loreRevolver9": "- La pièce du Tireur d'Elite peut être frappe avec un coup de poing après son éclair, le lançant dans l'ennemi le plus proche sans casser le pièce, augmentant ses dégâts pour les prochains coups de poings ou tirs.",
-        "shop_loreRevolver10": "- Le tir chargé du Perceuse peut aussi se ricocher sur les pièces du Tireur d'Élite.",
+        "shop_loreRevolver6": "Bien qu'il semble faible d'après un premier vue, sa puissance vient de sa fiabilité et simplicité. Le revolver est facile à utiliser tout en se concentrant sur le mouvement et l'esquivage des attaques, grâce à son temps de voyage instantané de ses tirs, et de son bon fonctionnement à toute portée.",
+        "shop_loreRevolver7": "Les tirs en plein tête font 2x de dégâts, les tirs en membres 1.5x",
+        "shop_loreRevolver8": "Lorsqu'il est tiré avec un bon timing lors de son éclair, la pièce du Tireur d'Élite peut diviser un tir en deux, l'amènant à frapper deux cibles au lieu qu'un seul. Malgré le timing serré, il y a un deuxième oppurtunité beaucoup plus longue si le pièce reste dans l'air pour une période de temps, qui peut être reconnu par un bruit de sifflement.",
+        "shop_loreRevolver9": "La pièce du Tireur d'Elite peut être frappe avec un coup de poing après son éclair, le lançant dans l'ennemi le plus proche sans casser le pièce, augmentant ses dégâts pour les prochains coups de poings ou tirs.",
+        "shop_loreRevolver10": "Le tir chargé du Perceuse peut aussi se ricocher sur les pièces du Tireur d'Élite.",
         
         "shop_loreShotgun1": "Une arme à courte portée experimentale qui utilise la chaleur hyperconcentré comme projectile.",
         "shop_loreShotgun2": "Après chaque tir, le fusil doit être ouvert pour permettre ses noyeaux à ventiler la chaleur excessive, les êmpechant de fondre ou exploser. Ce processus est largement automatique, nécessitant qu'un simple mouvement du poignet de l'utilisateur.",
         "shop_loreShotgun3": "Dans le cas d'une panne des noyeaux, la pompe peut aussi être utilisé comme production de chaleur. Ce processus a aussi été simplifié avec un petit bouton à côté du poignée du pistolet, qui fait pomper le fusil sans besoin d'une force physique auprès de l'utilisateur, mais son facilité d'usage à produit un nombre augmentant d'incidents de tir en cause des utilisateurs tentant de pomper trop de chaleur dans un tir.",
         "shop_loreShotgun4": "Les armes à chaleur ne sont pas aussi populaires que les armes électriques en cause de leur nature volatile et demandes de ventilation strictes, mais comparé aux armes électriques, ils n'ont pas besoin d'un projectile distinct, rendant ses munitions vraiment infinies au lieu de pratiquement infinies.",
-        "shop_loreShotgun5": "- Le fusil à pompe n'est efficace qu'a des distances extrêmement courtes, le rendant une arme risqué mais dévastant. Ceci le rend utile pour le soignage.",
-        "shop_loreShotgun6": "- Les attaques à mêlées peuvent être renvoyés avec un tir au poitrine au point mort. Plus risqué que d'utiliser le bras Renvoyeur, mais inflige plus de dégâts pour vous récompenser.",
-        "shop_loreShotgun7": "- Les changesments d'armes rapides vous permettre de passer le temps de rechargement après chaque tir, permettant des coups en continu, avec le danger de rester proche pour une période de temps.",
-        "shop_loreShotgun8": "- Le noyeau du ÉJECTION peut être tiré dans l'air avec une arme hitscan, tel que le Revolver, pour augmenter son portée et dégâts de l'explosion. Une arme hitscan déjà explosif l'augmentera encore plus.",
-        "shop_loreShotgun9": "- Le lenteur des projectiles semble être un négatif, mais ceci permet que ses projectiles peuvent être frappé avec un coup de poing du Renvoyeur, pour augmenter leur précision, vitesse et dégâts.",
+        "shop_loreShotgun5": "Le fusil à pompe n'est efficace qu'a des distances extrêmement courtes, le rendant une arme risqué mais dévastant. Ceci le rend utile pour le soignage.",
+        "shop_loreShotgun6": "Les attaques à mêlées peuvent être renvoyés avec un tir au poitrine au point mort. Plus risqué que d'utiliser le bras Renvoyeur, mais inflige plus de dégâts pour vous récompenser.",
+        "shop_loreShotgun7": "Les changesments d'armes rapides vous permettre de passer le temps de rechargement après chaque tir, permettant des coups en continu, avec le danger de rester proche pour une période de temps.",
+        "shop_loreShotgun8": "Le noyeau du ÉJECTION peut être tiré dans l'air avec une arme hitscan, tel que le Revolver, pour augmenter son portée et dégâts de l'explosion. Une arme hitscan déjà explosif l'augmentera encore plus.",
+        "shop_loreShotgun9": "Le lenteur des projectiles semble être un négatif, mais ceci permet que ses projectiles peuvent être frappé avec un coup de poing du Renvoyeur, pour augmenter leur précision, vitesse et dégâts.",
         
         "shop_loreNailgun1": "Une combinaison de pièces provenant d'un cloueur industriel et d'un ancien arme de service. Il est probablement conçu par une machine qui a été construit pour le travail en construction, puisque tous les machines, même ceux non construits pour la guerre, ont avait besoin d'apprendre à se défendre après l'extinction de l'humanité.",
         "shop_loreNailgun2": "Les armes à balles ont été abandonnées aprés l'invention des systèmes de munitions infinies, tel que les armes électriques et les armes à chaleur, principalement en cause du coût nettement inférieur de ne pas avoir besoin d'acheter les munitions pour les armées à grande échelle.",
         "shop_loreNailgun3": "Même si le système de munition originale est obsolete et abandonné, cet arme a été toujours bien conçu et construit, donc avec quelques réamènagements à partir d'un cloueur industriel, il a devenu une arme qui peut rapidement tirer des projectiles avec des munitions quasiments infinis.",
         "shop_loreNailgun4": "Comme il fallait s'y attendre d'une arme improvisé, son conception est loin de parfait. Le système de régénération des clous n'était pas conçu pour tourner à une vitesse élevée, donc il est susceptible de surchauffer si une limite de vitesse n'est pas établie, mais certains variantes ont choisi d'utiliser des dissipateurs thermiques.",
-        "shop_loreNailgun5": "- En cause de ses munitions limités, le cloueur est mieux utilisé pour des coups rapides au lieux des périodes de temps augmenté.",
-        "shop_loreNailgun6": "- Les aiments du variation Aimant attirera les clous des autres variations du cloueur, permettant de contourner les facteurs limitants, tel que le Surchauffement ayant une précision réduite.",
-        "shop_loreNailgun7": "- Certains ennemies, tels que les Têtes Malicieux, sont faibles contres les clous. En particulier, les clous de meilleur qualité chez la variation Aimant décimera la plupart des ennemies.",
-        "shop_loreNailgun8": "- Les clous se coincent dans les ennemies, causant certains effets spéciaux. Les armes électriques reçeveront un bonus de dégâts quand ils sont tirés versun ennemi qui porte des clous, et avec assez de clous, les ennemis lègers deviennent surmagnétisées et tirés par les aimants, permettant de virer les ennemis lègers temporairement.",
-        "shop_loreNailgun9": "- La vitesse des canons sont gardés entre les variations, donc un tir singulier avec la variation Aimant donne la chaleur maximum pour la variation Surchauffement, permettant un coup instatané de surchauffement.",
+        "shop_loreNailgun5": "En cause de ses munitions limités, le cloueur est mieux utilisé pour des coups rapides au lieux des périodes de temps augmenté.",
+        "shop_loreNailgun6": "Les aiments du variation Aimant attirera les clous des autres variations du cloueur, permettant de contourner les facteurs limitants, tel que le Surchauffement ayant une précision réduite.",
+        "shop_loreNailgun7": "Certains ennemies, tels que les Têtes Malicieuses, sont faibles contres les clous. En particulier, les clous de meilleur qualité chez la variation Aimant décimera la plupart des ennemies.",
+        "shop_loreNailgun8": "Les clous se coincent dans les ennemies, causant certains effets spéciaux. Les armes électriques reçeveront un bonus de dégâts quand ils sont tirés versun ennemi qui porte des clous, et avec assez de clous, les ennemis lègers deviennent surmagnétisées et tirés par les aimants, permettant de virer les ennemis lègers temporairement.",
+        "shop_loreNailgun9": "La vitesse des canons sont gardés entre les variations, donc un tir singulier avec la variation Aimant donne la chaleur maximum pour la variation Surchauffement, permettant un coup instatané de surchauffement.",
         
         "shop_loreRailcannon1": "Cet outil industriel a été une des premieres utilisation des technologies qui a donné suite aux armes électriques.",
         "shop_loreRailcannon2": "Initiallement conçu comme un générateur portable, permettant un moyen facile de générer d'électricité pour la réinstallation temporaire, tels que les campements pendant la guerre ou les expéditions.",
         "shop_loreRailcannon3": "Comme la plupart des outils industriels, une fois l'humanité a été éteint, il a été reconvertit vers un arme par le machine qui l'a porté transformant sa tension constante vers un coup d'énergie extrêmement élevée, nécessitant un temps de rechargement longue entre les tirs.",
         "shop_loreRailcannon4": "Bien que cet arme est risqué à utiliser en cause de son temps de rechargement, la puissance du canon-électrique le rend à un outil digne d'intêret à porter, en particulier puisque la portée de plusieurs armes permet de continuer se de lutter pendant que la batterie du canon-électrique se recharge.",
-        "shop_loreRailcannon5": "- Chaque variation porte une utilisation differente, et puisqu'ils partagent tous le même temps de rechargement, il est important de savoir quel variation à utiliser pour chaque situation donné.",
-        "shop_loreRailcannon6": "- Temps de rechargement: 15 secondes. La charge actuelle est indiqué avec une icône sur l'écran.",
-        "shop_loreRailcannon7": "- La variation Électrique peut frapper les pièces du Tireur d'Elite. Puisqu'il peut pénétrer infiniment, avec le bon timing et un bon positionnement, il est possible de tirer à travers un ennemi pour frapper une pièce, qui ricochera ensuite dans l'ennemi de nouveau, augmentant les dégâts infligés.",
-        "shop_loreRailcannon8": "- En utilisant le bras Renvoyeur pour frapper un ennemi auquel le Tournevis est rattaché, il peut être relancé, infligant un nouveau coup de dégâts à l'ennemi. Si le Tournevis frappe un nouveau ennemi, son temps d'utilisation sera réinitialisé, signifiant qu'une Tournevis peut être jonglé entre les ennemis infiniement avec le bon timing et positionnement, mais il se cassera si l'ennemi auquel il est rattaché se meurt.",
-        "shop_loreRailcannon9": "- La portée et les dégâts du variation Malicieux peut être augmentés fortement en frappant un noyeau du variation Éjection du fusil à pompe. Cet technique est très risqué, puisque un tir manqué sera gaspillé et vous obligera à reattendre le temps de rechargement, mais les recomponses sont généreuses.",
+        "shop_loreRailcannon5": "Chaque variation porte une utilisation differente, et puisqu'ils partagent tous le même temps de rechargement, il est important de savoir quel variation à utiliser pour chaque situation donné.",
+        "shop_loreRailcannon6": "Temps de rechargement: 15 secondes. La charge actuelle est indiqué avec une icône sur l'écran.",
+        "shop_loreRailcannon7": "La variation Électrique peut frapper les pièces du Tireur d'Elite. Puisqu'il peut pénétrer infiniment, avec le bon timing et un bon positionnement, il est possible de tirer à travers un ennemi pour frapper une pièce, qui ricochera ensuite dans l'ennemi de nouveau, augmentant les dégâts infligés.",
+        "shop_loreRailcannon8": "En utilisant le bras Renvoyeur pour frapper un ennemi auquel le Tournevis est rattaché, il peut être relancé, infligant un nouveau coup de dégâts à l'ennemi. Si le Tournevis frappe un nouveau ennemi, son temps d'utilisation sera réinitialisé, signifiant qu'une Tournevis peut être jonglé entre les ennemis infiniement avec le bon timing et positionnement, mais il se cassera si l'ennemi auquel il est rattaché se meurt.",
+        "shop_loreRailcannon9": "La portée et les dégâts de sa variation Malicieuse peut être augmentés fortement en frappant un noyeau du variation Éjection du fusil à pompe. Cet technique est très risqué, puisque un tir manqué sera gaspillé et vous obligera à reattendre le temps de rechargement, mais les recomponses sont généreuses.",
         
         "shop_loreRocketLauncher1": "Une autre arme originallement utilisé comme outil industriel, tel que ceci est visible grâce à son schéma de couleur plus vibrants et de celle du canon-électrique comparés aux autres armes tel que le revolver, fusil à pompe et le cloueur, qui utilisent des armes à balles comme base.",
         "shop_loreRocketLauncher2": "Avec la plupart des technologies avancés, il a été initiallement conçu pour l'utilisation dans la guerre, pusique son sysème de géneration d'explosifs est extrêmement vite pour creuser des tranchées, détruire des obstacles, ou ravitailler les armes explosifs.",
@@ -1119,49 +1110,49 @@
         "shop_loreRocketLauncher5": "Puisque les machines ont rarement la luxure de coopération en cause de la partage de sang étant vu comme de la gaspillage, le machine qui a créée cet arme à modifié le processus de génération pour marcher avec qu'un seul utilisateur, et a reconverti des pièces à partir d'un marteau-piqueur pour lancer le projectile.",
         "shop_loreRocketLauncher6": "Au lieu d'utiliser un mécanisme de déclenchement d'explosion normale, les roquettes utilisent le sang d'un cible pour provoquer la réaction chimique, rendant le processus de génération sans danger, mais l'arme est plus difficile à utiliser puisqu'elle nécessite des tirs directes pour infliger des dégâts.",
         "shop_loreRocketLauncher7": "Les compétences requises pour une utilisation efficace de cet arme le rend intimidant, mais sa puissance y compense, et la plupart de ses porteurs ont choisi spécifiquement de le porter comme symbole de compétence comme tireur de précision.",
-        "shop_loreRocketLauncher8": "- Les roquettes ne causent une explosion de dégâts que lors d'un tir directe sur une cible vivante, mais les ratements délibéres peuvent être faits pour lancer un ennemi dans l'air, puisq'un tir directe sur un ennemi tombant provoque une explosion plus large, infligant plus de dégâts.",
-        "shop_loreRocketLauncher9": "- La lance-roquettes a besoin de très peu de préparation pour être utilisé, veuillant dire qu'il peut être retiré, tiré et rangé pour ajouter un coup rapide de dégâts supplémentaires en plein milieu d'un combo.",
-        "shop_loreRocketLauncher10": "- Les roquettes sont attirés pour les Aimants du cloueur, mais pas autant que les clous. La précision du traquage peut être augmenté en gelant les roquettes avec la variation Arrêt-Image.",
-        "shop_loreRocketLauncher11": "- Une roquette sera attaché au Fouet sans annuler le coup si elle est frappé avec. Si le Fouet ne rentre pas en collision avec autre chose, la roquette y sera attiré avec, causant une explosion sur collision avec l'utilisateur.",
-        "shop_loreRocketLauncher12": "- Les ennemis lègers attirés par le Fouet se trouverent dans l'air, les rendant comme cibles faciles à frapper pour le bonus d'explosion. Cependant, ceci nécessite beaucoup de distance si l'utilisateur souhaite esquiver la portée augmenté de l'explosion.",
-        "shop_loreRocketLauncher13": "- Certains machines, V1 inclus, sont assez lègers pour monter sur une roquette. Ceci peut être realisé en gelant une roquette avec la variation Arrêt-Image, et y sautant dessus. Même avec le poids lèger, la roquette perdera sa puissance éventuellement, le causant à descendre au fur et à mesure, mais dans l'eau, V1 est assez lèger pour empêcher cette descente.",
+        "shop_loreRocketLauncher8": "Les roquettes ne causent une explosion de dégâts que lors d'un tir directe sur une cible vivante, mais les ratements délibéres peuvent être faits pour lancer un ennemi dans l'air, puisq'un tir directe sur un ennemi tombant provoque une explosion plus large, infligant plus de dégâts.",
+        "shop_loreRocketLauncher9": "La lance-roquettes a besoin de très peu de préparation pour être utilisé, veuillant dire qu'il peut être retiré, tiré et rangé pour ajouter un coup rapide de dégâts supplémentaires en plein milieu d'un combo.",
+        "shop_loreRocketLauncher10": "Les roquettes sont attirés pour les Aimants du cloueur, mais pas autant que les clous. La précision du traquage peut être augmenté en gelant les roquettes avec la variation Arrêt-Image.",
+        "shop_loreRocketLauncher11": "Une roquette sera attaché au Fouet sans annuler le coup si elle est frappé avec. Si le Fouet ne rentre pas en collision avec autre chose, la roquette y sera attiré avec, causant une explosion sur collision avec l'utilisateur.",
+        "shop_loreRocketLauncher12": "Les ennemis lègers attirés par le Fouet se trouverent dans l'air, les rendant comme cibles faciles à frapper pour le bonus d'explosion. Cependant, ceci nécessite beaucoup de distance si l'utilisateur souhaite esquiver la portée augmenté de l'explosion.",
+        "shop_loreRocketLauncher13": "Certains machines, V1 inclus, sont assez lègers pour monter sur une roquette. Ceci peut être realisé en gelant une roquette avec la variation Arrêt-Image, et y sautant dessus. Même avec le poids lèger, la roquette perdera sa puissance éventuellement, le causant à descendre au fur et à mesure, mais dans l'eau, V1 est assez lèger pour empêcher cette descente.",
 
         "shop_revolverPreset1": "STANDARD",
         "shop_revolverPreset2": "MAGNUM",
         "shop_revolverPreset3": "BRISE-GLACE",
-        "shop_revolverPreset4": "CHAUD & PRÊT",
-        "shop_revolverPreset5": "SANGUINE",
+        "shop_revolverPreset4": "CHAUD BOULLANT",
+        "shop_revolverPreset5": "SANGUIN",
 
         "shop_shotgunPreset1": "STANDARD",
         "shop_shotgunPreset2": "CLASSIQUE",
         "shop_shotgunPreset3": "PALAIS",
         "shop_shotgunPreset4": "CARAMEL",
-        "shop_shotgunPreset5": "LUXE",
+        "shop_shotgunPreset5": "LUXUEUX",
 
         "shop_nailgunPreset1": "STANDARD",
         "shop_nailgunPreset2": "ACIDIQUE",
         "shop_nailgunPreset3": "CIEL CLAIR",
-        "shop_nailgunPreset4": "PANTHÈRE DES NEIGES",
+        "shop_nailgunPreset4": "LÉOPARD DES NEIGES",
         "shop_nailgunPreset5": "VAMPIRE",
 
         "shop_railcannonPreset1": "STANDARD",
         "shop_railcannonPreset2": "INVERSÉ",
-        "shop_railcannonPreset3": "AMOUR & RÉGLISSE",
+        "shop_railcannonPreset3": "AMOUR ET ARC-EN-CIEL",
         "shop_railcannonPreset4": "STATUE VEIN",
         "shop_railcannonPreset5": "INDUSTRIEL",
 
         "shop_rocketlauncherPreset1": "STANDARD",
         "shop_rocketlauncherPreset2": "RUSTIQUE",
         "shop_rocketlauncherPreset3": "ROUGE À LÈVRE",
-        "shop_rocketlauncherPreset4": "AUBERGINE",
-        "shop_rocketlauncherPreset5": "AMÉTHYSTE DE NUIT",
+        "shop_rocketlauncherPreset4": "COURGE",
+        "shop_rocketlauncherPreset5": "AMÉTHYSTE NOCTURNE",
 
-        "shop_colorsPreset": "THÈMES",
+        "shop_colorsPreset": "PRÉSET",
         "shop_colorsCustom": "PERSONNALISÉ",
         "shop_colorsAlternative": "ALTERNATIF",
         "shop_colorsDone": "FINI",
         "shop_colorsCustomUnlockPrompt": "DÉBLOQUER LES COULEURS PERSONNALISÉ POUR:"
-	},
+    },
 	"enemyNames": {
 		"enemyname_filth": "SALETÉ",
 		"enemyname_stray": "ERRANT",
@@ -1170,19 +1161,19 @@
 		"enemyname_minos": "MINOS",
         "enemyname_sentry": "MITRAILLEUSE",
         "enemyname_idol": "IDÔLE",
-        "enemyname_ferryman": "NOCHER",
+        "enemyname_ferryman": "PASSEUR",
 		"enemyname_stalker": "TRAQUEUR",
 		"enemyname_insurrectionist": "INSURRECTONISTE",
-		"enemyname_swordsmachine": "MACHINE À EPÉE",
+		"enemyname_swordsmachine": "MACHINE ÉPÉISTE",
 		"enemyname_drone": "DRONE",
 		"enemyname_streetCleaner": "NETTOYEUR",
 		"enemyname_v2": "V2",
         "enemyname_v2Second": "V2",
-        "enemyname_leviathan": "LÉVIATHAN",
 		"enemyname_mindFlayer": "ILLITHID",
-		"enemyname_malFace": "TÊTE MALICIEUX",
+		"enemyname_malFace": "TÊTE MALICIEUSE",
 		"enemyname_cerberus": "CERBÈRE",
 		"enemyname_hideousMass": "MASSE HIDEUSE",
+        "enemyname_leviathan": "LÉVIATHAN",
 		"enemyname_gabriel": "GABRIEL",
 		"enemyname_virtue": "VERTU",
 		"enemyname_somethingWicked": "QUELQUE MAUDIT",
@@ -1198,10 +1189,10 @@
         "enemyname_boss_corpseOfKingMinos": "CADAVRE DU ROI MINOS",
         "enemyname_boss_gabriel": "GABRIEL, JUGE D'ENFER",
         "enemyname_boss_insurrectionist": "INSURRECTIONNALISTE SISYPHEANE",
-        "enemyname_boss_mandalore": "CHEVALIER-DRUIDE MYSTÉRIEUX (& HIBOU)",
+        "enemyname_boss_mandalore": "CHEVALIER-DRUIDE MYSTÉRIEUX (& LE HIBOU)",
         "enemyname_boss_v2": "V2",
         "enemyname_boss_v2Second": "V2 (2nde)",
-        "enemyname_boss_ferryman": "NOCHER",
+        "enemyname_boss_ferryman": "PASSEUR",
         "enemyname_boss_leviathan": "LÉVIATHAN",
         "enemyname_boss_insurrectionistAngry": "INSURRECTIONNALISTE \"FRUSTRÉ\"",
         "enemyname_boss_insurrectionistRude": "INSURRECTIONNALISTE \"MALPOLI\"",
@@ -1242,8 +1233,8 @@
           "cheats_fullBright": "LUMINOSITÉ MAXIMUM",
           "cheats_noclip": "NOCLIP",
           "cheats_flight": "VOL",
-          "cheats_infiniteWallJumps": "SAUTS MURS INFINIS",
-          "cheats_noWeaponCooldown": "AUCUNE TEMPS DE RECHARGEMENT",
+          "cheats_infiniteWallJumps": "SAUTS AU MURS INFINIS",
+          "cheats_noWeaponCooldown": "AUCUN TEMPS DE RECHARGEMENT",
           "cheats_infinitePowerUps": "BONUS INFINIS",
           "cheats_blindEnemies": "ENNEMIS AVEUGLES",
           "cheats_disableEnemySpawns": "DÉSACTIVER LES ENNEMIS",
@@ -1259,14 +1250,14 @@
           "cheats_crashMode": "MODE CLASH",
           
           "cheats_stayActive": "GARDER ACTIVÉ",
-          "cheats_disableOnReload": "DÉSACTIVER SUR RECHARGEMENT",
+          "cheats_disableOnReload": "DÉSACTIVER AU RECHARGEMENT",
           "cheats_equip": "ÉQUIPPER",
           "cheats_remove": "SUPPRIMER",
           "cheats_open": "OUVRIR",
           "cheats_killAll": "TUER TOUS",
           "cheats_static": "STATIQUE",
           "cheats_dynamic": "DYNAMIQUE",
-          "cheats_rebuild": "RECONSTRUIRE",
+          "cheats_rebuild": "REDÉMARER",
           "cheats_rebuilding": "EN COURS...",
           
           "cheats_activated": "ACTIVÉE",
@@ -1279,39 +1270,35 @@
           
           "cheats_spawnerArmSlot": "<color=#C2D7FF>Bras de spawn dans endroit N°6\n</color>",
 
-          "cheats_dupesTitle": "SAUVEGARDES BOÎTE À SABLE",
+          "cheats_dupesTitle": "SAUVEGARDES DE BAC À SABLE",
           "cheats_dupesSaveNamePrompt": "ENTREZ UN NOM ICI",
-          "cheats_dupesNewSave": "SAUVEGARDER",
-          "cheats_dupesOpenFolder": "OUVRIR DOSSIER",
+          "cheats_dupesNewSave": "NOUVELLE SAUVEGARDE",
+          "cheats_dupesOpenFolder": "OUVRIR LE FICHIER",
           "cheats_dupesSave": "SAUVEGARDER",
           "cheats_dupesLoad": "CHARGER",
           "cheats_dupesDelete": "SUPPRIMER",
 
-          "cheats_categoryMeta": "META",
-          "cheats_categorySandbox": "BOÎTE À SABLE",
-          "cheats_categoryGeneral": "GÉNERAL",
+          "cheats_categoryMeta": "MÉTA",
+          "cheats_categorySandbox": "BAC À SABLE",
+          "cheats_categoryGeneral": "GÉNÉRAL",
           "cheats_categoryMovement": "MOUVEMENT",
-          "cheats_categoryEnemies": "ENNEMIES",
+          "cheats_categoryEnemies": "ENEMIS",
           "cheats_categoryWeapons": "ARMES",
           "cheats_categoryItems": "OBJETS",
-          "cheats_categorySpecial": "SPÉCIAUX"
+          "cheats_categorySpecial": "SPÉCIAL"
     },
     
     "enemybios":
     {
-          "enemyBios_type": "TYPE",
-          "enemyBios_data": "DONNÉES",
-          "enemyBios_strategy": "STRATÈGIES",
-
           "enemyBios_filth_1": "Les invocations sont des manifestations physiques âmes des maudits.",
           "enemyBios_filth_2": "La forme physique est basé sur la valeur de l'âme originale, qui est determiné par la force de son volonté, et son prévalence dans la connaissance publique: les âmes vivantes qui lui en souvient.",
           "enemyBios_filth_3": "Les Saletés sont la forme le plus bas d'une Coque, dont les âmes sont trop faibles et sans importance pour même pouvoir former un corps physique complet.",
-          "enemyBios_filith_4": "Même parmi les Salétes, ils ont une intelligence trés bas, motivé purement par la famine.",
+          "enemyBios_filth_4": "Même parmi les Saletés, ils ont une intelligence trés bas, motivé purement par la famine.",
           
-          "enemyBios_filth_strategy1": "La plupart des armes sont facilement capables d'abattre les Salétes, mais leurs mâchoires puissants et leurs chiffres grands peuvent écraser s'ils sont sous-estimés.",
+          "enemyBios_filth_strategy1": "La plupart des armes sont facilement capables d'abattre les Saletées, mais leurs mâchoires puissantes et leurs chiffres grands peuvent écraser s'ils sont sous-estimés.",
           "enemyBios_filth_strategy2": "Les explosions sont le moyen le plus efficace de battre des groupes, mais toute arme qui peut frapper plus qu'un cible sera efficace.",
           
-          "enemyBios_stray_1": "Même si leur grande stature semble être intimidant, les Errants ont peur de pleins de dangers et tenteront de rester à une distance suffisante, attaquant seulment avec des projectiles formés avec de l'Énergie d'Enfer.",
+          "enemyBios_stray_1": "Même si leur grande stature semble être intimidant, les Errants ont peur de bien des dangers et tenteront de rester à une distance suffisante, attaquant seulment avec des projectiles formés avec de l'Énergie d'Enfer.",
           "enemyBios_stray_2": "Pendant que la réalisation et le côntrole de cet énergie est une tâche complexe, les Errants portent une intellecte très pauvre, et ne peuvent faire ceci que par l'instinct pur.",
           "enemyBios_stray_3": "Néanmoins, les humains n'ont pas pu repliquer ce niveau de précision et côntrole, en particulier, la capacité d'un Errant de faire en sorte que les orbes d'énergie ignorent des autres Errants.",
           
@@ -1331,24 +1318,22 @@
           
           "enemyBios_soldier_strategy1": "Le fusil de pompe est une arme excellente contre les Soldats, tant que son utilisation est aussi vite pour leur empêcher de se proteger avec des attaques à mêlée.",
           "enemyBios_soldier_strategy2": "Les Soldats chargent leurs tirs devant eux, au lieu de en-dessus d'eux. La charge est alors plus facile à interrompre avec un tir de Revolver, pour les exploser.",
-          "enemyBios_soldier_strategy3": "Grâce à leurs augmentations, les Soldats peuvent survivre les explosions normaux avec quasiment aucun dégât. Cependant, les explosions rouges plus puissants briseront leur garde, et ils ne sont pas capables de bloquer s'ils ne sont pas au sol.",
           
-          "enemyBios_ferryman_1": "Les Nochers sont des invocations rares auquel leur corps puissants, compétences formées et foi aveugle les ont permis la chance de devenir un transporteur des âmes entre les couches de l'Enfer.",
+          "enemyBios_ferryman_1": "Les Passeurs sont des invocations rares auquel leur corps puissants, compétences formées et foi aveugle les ont permis la chance de devenir un transporteur des âmes entre les couches de l'Enfer.",
           "enemyBios_ferryman_2": "Ils ont été donné un tissu sacré par le Paradis comme symbole de leur dévotion à l'ordre de Dieu, qu'ils portent sur leur corps pour cacher la forme humaine qu'ils détestent comme souvenir de leur pêchés qui les êmpechent de devenir des anges.",
           "enemyBios_ferryman_3": "Grâce au puissance sacré émanant du tissu, les corps squelettiques ont été colorés de façon vibrante et radiante, et leurs crânes portent assez d'énergie latente pour ouvrir des portes qui êmpechent autrement les invocations de quitter leurs milieux de torment.",
-          "enemyBios_ferryman_4": "Chaque bateau ne peut avoir qu'un seul Nocher à la fois, donc à la suite de la formation d'un nouveau Nocher, ils se lutteront à la mort pour prendre la place et hériter leur tissu. La crâne du perdant est pris comme trophée, et est utilisé pour permette au vainqueur de passer à travers les couches pour transporter les âmes des condamnés à leurs destinations.",
-          "enemyBios_ferryman_5": "Les Nochers utiliseront les connaissances de leurs vies précédents pour améliorer leurs bateaux, passant la besoin des rames, qui ne sont utilisés que pour des armes.",
-          "enemyBios_ferryman_6": "Puisque l'influx d'âmes a terminé avec l'extinction de l'humanité, les Nochers ont perdu leur but, et se baladent sans objectif, en espérant que les anges leur donnerent passage dans le Paradis, malgré Gabriel étant le seul qui prend soin de leurs efforts.",
+          "enemyBios_ferryman_4": "Chaque bateau ne peut avoir qu'un seul passeur à la fois, donc à la suite de la formation d'un nouveau Passeur, ils se lutteront à la mort pour prendre la place et hériter leur tissu. La crâne du perdant est pris comme trophée, et est utilisé pour permette au vainqueur de passer à travers les couches pour transporter les âmes des condamnés à leurs destinations.",
+          "enemyBios_ferryman_5": "Les Passeurs utiliseront les connaissances de leurs vies précédents pour améliorer leurs bateaux, passant la besoin des rames, qui ne sont utilisés que pour des armes.",
+          "enemyBios_ferryman_6": "Puisque l'influx d'âmes a terminé avec l'extinction de l'humanité, les Passeurs ont perdu leur but, et se baladent sans objectif, en espérant que les anges leur donnerent passage dans le Paradis, malgré Gabriel étant le seul qui prend soin de leurs efforts.",
           
-          "enemyBios_ferryman_strategy1": "Les Nochers choisissent leurs attaques en fonction des actions de son adversaire. Quand il est approché, il se recule vers une distance sûr, et quand on lui recule, ils appliqueront la pression avec des attaques à portée augmenté.",
+          "enemyBios_ferryman_strategy1": "Les Passeurs choisissent leurs attaques en fonction des actions de son adversaire. Quand il est approché, il se recule vers une distance sûr, et quand on lui recule, ils appliqueront la pression avec des attaques à portée augmenté.",
           "enemyBios_ferryman_strategy2": "Malgré son apparence, leur coup de poing remontant est assez dangereux et peut être difficule à esquiver. Il est conseillé de ne pas rester dans l'air pour longtemps.",
           "enemyBios_ferryman_strategy3": "Certains de ses attaques peuvent être renvoyés, d'autres non. Soyez attentif au couleur de l'attaque pour comprendre si elle peut être renvoyé.",
-          "enemyBios_ferryman_strategy4": "Les Nochers tenteront de dépasser un adversaire reculant en roulant derrière lui avant d'attaquer. Traquez leur position et s'ils roulent trop de fois, tentez de monter l'aggression.",
+          "enemyBios_ferryman_strategy4": "Les Passeurs tenteront de dépasser un adversaire reculant en roulant derrière lui avant d'attaquer. Traquez leur position et s'ils roulent trop de fois, tentez de monter l'aggression.",
           
           "enemyBios_idol_1": "Malgré la facilité d'être confondu d'être d'origine divin, les Idoles ont été crées avec le même processus que les autres demons. Contrairement à leur proche plus grand, leurs coques sont trop petits pour porter une quantité utile de Masse d'Enfer, qui les rend à créer la vie, mais n'étant pas capable de se déplacer ou d'agir.",
-          "enemyBios_idol_2": "Les Idoles n'avait originallement aucun air divin, mais ont été sculptés attentivement pour ressembler de tels figures comme les Nochers, qui les ont collectées lors de leurs voyages à travers les couches d'Enfer. Ceci a été fait comme acte de compassion et tribut envers les anges, Gabriel en particulier, les Nochers croyant qu'ils les ont pitié.",
-          "enemyBios_idol_3": "La proximité immédiate du chiffon sacré d'un Nocher lors du processus de création ont causé la puissance sacré à rentrer dans leurs corps, leur permettant de continuer la chaîne de compassion en protegeant les autres de la préjudice physique.",
-          "enemyBios_idol_4": "Ils sont chanceux que Gabriel est le seul ange du Paradise à surveiller l'Enfer, pusique si le Conseil ont appris des tels êtres, ils auront été déclarés comme perversions du forme divin, et commandé a être détruit par les Nochers qui les ont donné une chance à la vie.",
+          "enemyBios_idol_2": "Les Idoles n'avait originallement aucun air divin, mais ont été sculptés attentivement pour ressembler de tels figures comme les Passeurs, qui les ont collectées lors de leurs voyages à travers les couches d'Enfer. Ceci a été fait comme acte de compassion et tribut envers les anges, Gabriel en particulier, les Passeurs croyant qu'ils les ont pitié.",
+          "enemyBios_idol_3": "La proximité immédiate du chiffon sacré d'un Passeur lors du processus de création ont causé la puissance sacré à rentrer dans leurs corps, leur permettant de continuer la chaîne de compassion en protegeant les autres de la préjudice physique.",
           
           "enemyBios_idol_strategy1": "Malgré leur immunité aux projectiles, ils peuvent toujours être détruits par un coup de poing ou un lancement au sol.",
           "enemyBios_idol_strategy2": "Les ennemies benedits sont immunisé contre les dégâts, mais peuvent toujours êtres lancés par des foces physiques, et tués par des dangers environnmentaux, tel  que les écrasements ou chutes.",
@@ -1378,10 +1363,8 @@
           "enemyBios_stalker_4": "Cependant, un force sentient non-identifié ont remplacé les rochers qu'ils portent normallement avec des bombes qui, lors de son detonation, transformera tout sang en proximité en poussière d'or qui couvre la surface du couche.",
           "enemyBios_stalker_5": "La recherche ont demontré que cette technologie est très similaire aux augmentations des Soldats, dont il est possible que les deux modifications viennent de la même source.",
           
-          "enemyBios_stalker_strategy1": "Les lumières sur son bidon donne l'information sur l'état du Traqueur. Son couleur montre l'état de leur explosif, et l'intensité du couleur signale la santé du Traqueur.",
-          "enemyBios_stalker_strategy2": "Il est conseillé de exploser un Traqueur au lieu de le laisser exploser tout-seul, puisque l'explosion de ce dernier aura une portée élargie.",
-          "enemyBios_stalker_strategy3": "Si un Traqueur s'approche de son cible, et ne peux plus être repoussé, un lancement au sol peux les lancer hors de portée, pour qu'ils soient explosé en toute securité, puisque l'explosion est principalement horizontal.",
-          "enemyBios_stalker_strategy4": "",
+          "enemyBios_stalker_strategy1": "Il est conseillé de exploser un Traqueur au lieu de le laisser exploser tout-seul, puisque l'explosion de ce dernier aura une portée élargie.",
+          "enemyBios_stalker_strategy2": "Si un Traqueur s'approche de son cible, et ne peux plus être repoussé, un lancement au sol peux les lancer hors de portée, pour qu'ils soient explosé en toute securité, puisque l'explosion est principalement horizontal.",
           
           "enemyBios_insurrectionist_1": "Les Insurrectionistes Sisypheanes sont une armée de invocations rassemblées et entraînées par le Roi Sisyphe pour renverser le côntrole du Paradis sur l'Enfer, liberant les pêcheurs de leur torment éternel.",
           "enemyBios_insurrectionist_2": "Durant une ère de chaos dans le Paradis, où la veille des Anges étaient absent, Sisyphe à mis son plan en motion, ses forces recrutant toutes les invocations ayant assez d'intelligence pour être utile à leur cause, et ont commencé à attaquer les démons se promenant sur les dunes d'Avarice.",
@@ -1393,14 +1376,14 @@
           "enemyBios_insurrectionist_strategy1": "Même s'ils ont une portée d'attaque illimité, chacun des coups de l'insurrectioniste ont ses forces et faiblesses. Il est essentiel d'apprendre les directions auquel il faut esquiver chaque attaque.",
           "enemyBios_insurrectionist_strategy2": "Le coup de pied du Insurrectioniste est vite et destructif, donc il est mal conseillé de rester proche pendant trop longtemps.",
           "enemyBios_insurrectionist_strategy3": "Les Insurrectionistes Sisypheanes baignent leurs pieds dans le sang de leurs ennemies pour leur protéger du chaleur des dunes d'Avarice, mais le reste de leurs corps est toujours de chair et os, qui peut être enflammés pour infliger des dégâts au fur et à mesure.",
-          "enemyBios_insurrectionist_strategy4": "La Tête Malicieux qu'ils portent comme arme ne fais pas partie de leurs corps, donc les coups dessus n'infligeront aucun dégât à l'Insurrectioniste, mais ceci veut aussi dire qu'il est possible de vous soigner dessus, même si le sang de son porteur a été transformé en sable.",
+          "enemyBios_insurrectionist_strategy4": "La Tête Malicieuse qu'ils portent comme arme ne fais pas partie de leurs corps, donc les coups dessus n'infligeront aucun dégât à l'Insurrectioniste, mais ceci veut aussi dire qu'il est possible de vous soigner dessus, même si le sang de son porteur a été transformé en sable.",
           
           "enemyBios_swordsmachine_1": "Sa forme originale n'est pas reconnaisable après des années de récupération de feraille pour sa propre reconstruction, mais parmi les amateurs de robot, la Machine à Epée est réputée grâce à sa prouesse au combat et sa forme autodictate; Laid pour la plupart mais belle pour les enthousiastes, qui donnent suite à plein d'imitateurs.",
           "enemyBios_swordsmachine_2": "Elle porte une épée créé par elle-même avec un moteur y rattaché dessus, qui chauffera la lame lorsque qu'il est tourné, permettant de couper à travers la plupart de matière organique sans difficulté.",
           "enemyBios_swordsmachine_3": "En raison de son comportement obssesif de ramassage, c'est une des machines restant capable de la vocalisation - une capacité que la plupart ont abandonné pour économiser leurs resources.",
           
           "enemyBios_swordsmachine_strategy1": "Malgré sa performance excellente contre les citoyens d'Enfer, sa conception ne prend pas en compte les adversaires très mobiles, donc la meilleure façon d'esquiver sa lame est de sauter hors de sa portée verticale.",
-          "enemyBios_swordsmachine_strategy2": "Son épée motorisé permet des attaques prévisibles, ce qui rend la Machine à Épée un cible excellent pour le renvoi des attaques.",
+          "enemyBios_swordsmachine_strategy2": "Son épée motorisé permet des attaques prévisibles, ce qui rend la Machine Épéiste un cible excellent pour le renvoi des attaques.",
           "enemyBios_swordsmachine_strategy3": "Bien que son utilisation des attaques à distance sont primitives, ses lancement d'épées portent une précision inattendue grâce à son maîtrissage de l'arme.",
           
           "enemyBios_drone_1": "Un appareil de securité produit en masse, agissant comme caméra de surveillance et agent de sécurité.",
@@ -1461,7 +1444,7 @@
           
           "enemyBios_maliciousFace_1": "Les démons sont des créatures nées dans la masse de l'Enfer. Ils sont facilement reconnaisables par leur extérieur dur et en forme de pierre, et leur déplacement ralenti.",
           "enemyBios_maliciousFace_2": "Les démons portent une intelligence supérieur que les invocations, mais ils sont toujours incapables des pensées rationelles et la communication. Aucun démon a pu passer le test du miroir, mais les études sont limités en cause de leur hostilité.",
-          "enemyBios_maliciousFace_3": "Les Têtes Malicieux sont le type de démon le plus commun, mais sont incroyablement dangereux, surtout dans des essaims, grâce à leur maîtrissage d'Énergie d'Enfer comme arme.",
+          "enemyBios_maliciousFace_3": "Les Têtes Malicieuses sont le type de démon le plus commun, mais sont incroyablement dangereux, surtout dans des essaims, grâce à leur maîtrissage d'Énergie d'Enfer comme arme.",
           
           "enemyBios_maliciousFace_strategy1": "En raison de leur tir en rafale, il peut être difficile de les approcher. Malgré l'efficacité d'un tir de fusil de pompe à bout pourtant, les clous sont le meilleur plan d'action, avec les aimants qui permettent le combat à longue distance.",
           "enemyBios_maliciousFace_strategy2": "Grâce à leur résistance totale aux explosions, ils n'ont pas besoin de se retenir avec leur attaques de faisceau, il est donc conseillé d'éviter les murs et d'autres surfaces lorsqu'ils commencent à charger un faisceau d'énergie.",
@@ -1482,7 +1465,7 @@
           "enemyBios_hideousMass_strategy4": "Si l'harpon vous attrape, il est conseillé soit de frapper de le frapper, soit d'attaquer la queue pour l'enlever.",
           
           "enemyBios_gabriel_1": "Un des archanges le plus respectés et redoutés, Gabriel a gagné sa reputation par le pouvoir et l'éfficacité.",
-          "enemyBios_gabriel_2": "Peu importe la tâche donné, Gabriel le réalisera vitement et décisivement, ce qui lui a gagné le titre de Juge d'Enfer après avoir détrôné Minos, et mis fin au renaissance du couche de Luxure.",
+          "enemyBios_gabriel_2": "Peu importe la tâche donné, Gabriel le réalisera vitement et décisivement, ce qui lui a gagné le titre de Juge d'Enfer après avoir détrôné Minos, et mis fin au renaissance du royaume de Luxure.",
           "enemyBios_gabriel_3": "Malgré son loyauté au Conseil, il est beaucoup plus populaire et aimé parmu les anges, grâce au son personalité radiant et nature actif, surtout par rapport au Conseil, qui suit et maintient de manière stricte le dogme du Foi.",
           
           "enemyBios_gabriel_strategy1": "Les mouvements de Gabriel sont vites, et ses attaques mortelles, mais en observant l'arme qu'il brandit, ses attaques peuvent être prévus même avant qu'il ne les fasse.",
@@ -1499,9 +1482,7 @@
           
           "enemyBios_virtue_1": "La base du formation d'un ange inférieur est assez similaire de celle des invocations, où la manifestation physique de l'âme est dépendant de son valeur, mais contrairement aux invocations, la virtuosité s'agit aussi comme facteur pour les anges.",
           "enemyBios_virtue_2": "Les anges inférieurs viennent des âmes humaines, qui prennent des formes abstraits ou animales, qui les rend distinct des corps humanoïdes des anges supérieurs et suprêmes, qui ont été créés comme tels, et sont considérés plus purs et sont placés plus haut sur l'hierarchie sociale du Paradis.",
-          "enemyBios_virtue_3": "Grâce à leurs vies précedents en tant qu'humains, les Vertus sont souvent envoyés pour accomplir des tâches que les anges supérieurs les jugent indignes, tel qu'agir comme gardien d'Enfer. Ces Vertus utilisent du feu céleste pour punir les pêcheurs qui ne réalisent pas leur punition, pour ne pas gaspiller le temps de Gabriel avec des infractions mineurs.",
-          "enemyBios_virtue_4": "Les Vertus sont connus pour porter une multitude dœils, mais pour des raisons non connus, ces œils sont cachés ou supprimés pour ceux qui deviennent des gardiens d'Enfer. Certains ont speculé que ceci est en relation avec le fait que tous les Coques manquent des yeux, le seul exception étant l'ancien Juge d'Enfer, le Roi Minos.",
-          "enemyBios_virtue_5": "On ne sait peu sur les spécifiques des anges, puisque le Paradis est excluante et ségrégé en raison de ne pas voulant de contact avec l'expérience humain de Dieu.",
+          "enemyBios_virtue_3": "On ne sait peu sur les spécifiques des anges, puisque le Paradis est excluante et ségrégé en raison de ne pas voulant de contact avec l'expérience humain de Dieu.",
           
           "enemyBios_virtue_strategy1": "La verticalité et le couvert donne peu de sécurité contre les rayons de lumière des Vertus, donc le mouvement horizontal est encouragé, mais se revenir en arrière est dangereux, pusique les rayons restent pendant un période de temps.",
           "enemyBios_virtue_strategy2": "Si on l'ignore pour trop longtemps, les Vertus s'enragent, ce qui fait que les rayons suivent leur cible. Bien qu'il soit facile d'esquiver leurs attaques avec assez d'espace, les laisser sans surveillance peut très vite leur donner un avantage.",
@@ -1524,12 +1505,9 @@
           "enemyBios_minosPrime_2": "En tant que des manifestations du volonté pur, les âmes primes sont incroyablement puissants, jusqu'au point que même les anges les plus fiers les voient comme menace, et utilisera tout les moyens nécessaires pour les empêcher de prendre forme.",
           "enemyBios_minosPrime_3": "Le Roi Minos a estimé que la souffrance éternelle était une punition injuste et déraisonnable pour ceux dont le seul pêché était l'amour d'un autre. Après la Disparition de Dieu, les anges se sont perdus et le Paradis se trouvait dans le chaos, Minos a commencé ses efforts à reformer la couche de Luxure.",
           "enemyBios_minosPrime_4": "La renaissance de Luxure était prospère, avec le Roi Minos guidant ses citoyens à se réunir et bâtir une nouvelle civilisation. Les efforts combinés des innombrables qui ont été damnés au seconde couche a apporté des grandes résultats, avec la cité de Luxure se grandissant de plus en plus.",
-          
-          "enemyBios_minosPrime_5": "Cependant, après la prise de côntrole du Paradis par le Conseil, apportant la stabilité grace à leur poignée de fer, ils ont remarqué que Minos a opposé la volonté de Dieu en ayant liberé les pêcheurs de la punition que Dieu Lui ont designé.",
-          
-          "enemyBios_minosPrime_6": "Gabriel, le plus intelligent des anges, a été envoyé pour tuer Minos. Le roi, au lieu de se battre, a tenté de le raisonner avec, mais Gabriel l'a battu sans merci et sans l'écouter.",
-          "enemyBios_minosPrime_7": "Puisque la volonté de Minos a été assez fort pour tenter de faire face au règne du Paradis, les anges ont choisi d'imprisonner son âme comme tentatif de l'empêcher de devenir un âme prime, et ont nommé Gabriel comme nouveau Juge d'Enfer.",
-          "enemyBios_minosPrime_8": "À partir du prison dans son propre corps, Minos a regardé en toute impuissance, son corps maintenant côntrolé par des parasites, détruisant tout ce pour lequel il a travaillé si dur.En maudissant soi - même pour avoir échoué de proteger son peuple, il fait vŒu de vengeance...",
+          "enemyBios_minosPrime_5": "Gabriel, le plus intelligent des anges, a été envoyé pour tuer Minos. Le roi, au lieu de se battre, a tenté de le raisonner avec, mais Gabriel l'a battu sans merci et sans l'écouter.",
+          "enemyBios_minosPrime_6": "Puisque la volonté de Minos a été assez fort pour tenter de faire face au règne du Paradis, les anges ont choisi d'imprisonner son âme comme tentatif de l'empêcher de devenir un âme prime, et ont nommé Gabriel comme nouveau Juge d'Enfer.",
+          "enemyBios_minosPrime_7": "À partir du prison dans son propre corps, Minos a regardé en toute impuissance, son corps maintenant côntrolé par des parasites, détruisant tout ce pour lequel il a travaillé si dur.En maudissant soi - même pour avoir échoué de proteger son peuple, il fait vŒu de vengeance...",
           
           "enemyBios_minosPrime_strategy1": "Il est rare que Minos Prime donne un période de temps pour pouvoir vous soigner, donc il est vitale d'aprendre lequels de ses attaques lui laissent vulnérable pendant un court moment, et comment les esquiver dans un tel façon qui permet de vous donner une position d'avantage lors de ces moments.",
           "enemyBios_minosPrime_strategy2": "Ses projectiles en forme de serpent peuvent être reflectés avec le Renvoyeur pour vous soigner au plein, même si le projectile ne frappe pas Minos Prime."
@@ -1539,34 +1517,17 @@
 		"tutorial_introStartup1": "DÉMARRAGE",
 		"tutorial_introStartup2": "PRÊT",
 		"tutorial_introVersion1": "VERSION",
-		"tutorial_introVersion2": "VERSION À JOUR (2112.08.06)",
+		"tutorial_introVersion2": "À JOUR (2112.08.06)",
 		"tutorial_introCalibration1": "CALIBRATION",
 		"tutorial_introCalibration2": "RÉCEMMENT MIS À JOUR",
-        "tutorial_recalibrationPrompt": "RÉCALIBRER?",
-        "tutorial_calibrationAudio": "SON",
+        "tutorial_recalibrationPrompt": "RECALIBRER ?",
+        "tutorial_calibrationAudio": "AUDIO",
         "tutorial_calibrationVideo": "VIDÉO",
-        "tutorial_calibrationMechanics": "MÉCANIQUES",
-        "tutorial_calibrationComplete1": "CALIBRATION TERMINÉ",
-        "tutorial_calibrationComplete2": "PARAMÈTRES MISES À JOUR",
+        "tutorial_calibrationMechanics": "MÉCHANIQUES",
+        "tutorial_calibrationComplete1": "CALIBRATION COMPLETÉE",
+        "tutorial_calibrationComplete2": "OPTIONS PRINCIPALES MISE À JOUR",
 		"tutorial_introReminder": "ASSISTANCES DISPONIBLES DANS LA MENU DE PAUSE",
-        "tutorial_systemsOperational": "TOUS SYSTÈMES OPÉRATIONELS",
 		"tutorial_introLoadStatus": "CHARGEMENT DE STATUT",
-
-        "tutorial_audioCalibrationTitle": "CALIBRATION SON MANUEL",
-        "tutorial_audioCalibrationWarning1": "LA VOLUME GLOBALE EST DÉSACTIVÉE.",
-        "tutorial_audioCalibrationWarning2": "VOUS N'AUREZ AUCUN SON.",
-        "tutorial_audioCalibrationWarning3": "ÊTES-VOUS D'ACCORD?",
-        "tutorial_audioCalibrationWarningPromptYes": "CONTINUER SANS SON",
-        "tutorial_audioCalibrationWarningPromptNo": "ANNULER",
-
-        "tutorial_videoCalibrationTitle": "CALIBRATION VIDÉO MANUEL",
-        "tutorial_videoCalibrationPcDescription": "FLUIDE, CLAIRE, FACILE À LIRE",
-        "tutorial_videoCalibrationPsxDescription": "RUDE, PIXELISÉ, DÉFORMÉ",
-
-        "tutorial_controllerCalibrationTitle": "MANETTE DETECTÉ",
-        "tutorial_controllerCalibrationSubtitle": "<color=#4C99E6>VISÉE AUTOMATIQUE</color> CONSEILLÉ",
-        "tutorial_controllerCalibrationTooltip": "LA VISÉE AUTOMATIQUE PEUT AUSSI ÊTRE AJUSTÉ DANS LA MENU <color=#4C99E6>D'ASSISTANCES</color>",
-
 		"tutorial_introID1": "IDENTIFIANT",
 		"tutorial_introID2": "V1",
 		"tutorial_introLocation1": "POSITION",
@@ -1574,8 +1535,23 @@
 		"tutorial_introObjective1": "OBJECTIF ACTUEL",
 		"tutorial_introObjective2": "TROUVER UNE ARME",
 		"tutorial_introRed1": "L'HUMANITÉ EST MORTE.",
-		"tutorial_introRed2": "LE SANG EST DE L'ESSENCE.",
+		"tutorial_introRed2": "LE SANG EST L'ESSENCE.",
 		"tutorial_introRed3": "L'ENFER EST PLEIN.",
+
+        "tutorial_audioCalibrationTitle": "CALIBRATION SONORE MANUELLE",
+        "tutorial_audioCalibrationWarning1": "L'AUDIO PRINCIPAL EST DÉSACTIVÉ.",
+        "tutorial_audioCalibrationWarning2": "VOUS N'AUREZ PAS D'AUDIO.",
+        "tutorial_audioCalibrationWarning3": "ÊTES-VOUS SUR ?",
+        "tutorial_audioCalibrationWarningPromptYes": "CONTINUER SANS AUDIO ?",
+        "tutorial_audioCalibrationWarningPromptNo": "ANNULER",
+
+        "tutorial_videoCalibrationTitle": "CALIBRATION VIDÉO MANUELLE",
+        "tutorial_videoCalibrationPcDescription": "NET, PRÉCIS, FACILE À COMPRENDRE",
+        "tutorial_videoCalibrationPsxDescription": "PIXELISÉ, DÉFORMÉ, RÉTRO",
+
+        "tutorial_controllerCalibrationTitle": "MANETTE DÉTECTÉ",
+        "tutorial_controllerCalibrationSubtitle": "<color=#4C99E6>VISÉE ASSISTÉE</color> RECOMMENDÉE",
+        "tutorial_controllerCalibrationTooltip": "LA VISÉE ASSISTÉE PEUT ENCORE ÊTRE AJUSTÉE DANS LES OPTIONS D'<color=#4C99E6>ASSITANCE</color>.",
 
 		"tutorial_punch1": "Appuyer sur",
 		"tutorial_punch2": "pour lancer un <color=orange>COUP DE POING.</color>",
@@ -1583,7 +1559,7 @@
 		"tutorial_slide2": "pour <color=orange>GLISSER.</color>",
 		"tutorial_dash1": "Appuyer sur ",
 		"tutorial_dash2": "pour <color=cyan>ESQUIVER</color>. (Utilise d'<color=cyan>ÉNERGIE</color>.)",
-		"tutorial_dash3": "Peut étre utilisé dans l'air.",
+		"tutorial_dash3": "Peut être utilisé dans l'air.",
 		"tutorial_health1": "Infligir des dégâts sur des ennemis à courte distance pour <color=red>VOUS BAIGNER DANS DU SANG FRAIS.",
 		"tutorial_health2": "CECI EST LA SEULE FAÇON POUR RÉCUPÉRER VOTRE SANTÉ</color>.",
 		"tutorial_walljump": "<color=orange>SAUTER</color> prés d'un <color=orange>MUR</color> pour y <color=orange>SAUTER DESSUS</color>. (Max. 3 fois)",
@@ -1596,7 +1572,7 @@
 	"prelude": {
 		"prelude_first_openingCredits1": "<color=orange>NEW BLOOD</color> PRÉSENTE",
 		"prelude_first_openingCredits2": "UN JEU DE ARSI '<color=orange>HAKITA</color>' PATALA",
-        "prelude_first_pipeClip": "\"LE CLIP DU TUYEAU VIT.\"$T. HAKITA",
+        "prelude_first_pipeClip": "\"LE CLIP DU TUILEAU RESTE.\"$T.HAKITA",
 		"prelude_first_revolverPierce1": "<color=cyan>REVOLVER</color>: Maintenir",
 		"prelude_first_revolverPierce2": "pour tirer un coup <color=orange>PERÇANT</color>.",
 		"prelude_first_parry": "Frapper un projectile au bon moment pour le <color=red>renvoyer</color> à un ennemi.",
@@ -1608,8 +1584,8 @@
 		"prelude_first_groundSlam2": "</color>) inflige des dégâts lors d'un coup direct.",
 
 		"prelude_second_shop": "Utilisez vos <color=orange>POINTS</color> au </color=orange>MAGASIN</color> au début de chaque niveau pour achèter du nouveau équipement.",
-        "prelude_second_doorClip": "\"C'EST QUOI UPDOOR?\"$T. HAKITA",
-		"prelude_second_changeEquipped": "Changez de variation d'arme <color=orange>ÉQUIPÉ</color> avec",
+        "prelude_second_doorClip": "\"Y'A QUOI EN HAUT ?\"$T. HAKITA",
+        "prelude_second_changeEquipped": "Changez de variation d'arme <color=orange>ÉQUIPÉ</color> avec",
 
 		"prelude_third_needShotgun": "<color=red>PUISSANCE DE FEU INSUFFISANTE</color>",
 		"prelude_third_shotgun1": "<color=cyan>FUSIL À POMPE</color>: Appuyer sur",
@@ -1632,12 +1608,12 @@
 		"act1_limboThird_splitDoor2": "Restez à l'intérieur si vous ne cherchez pas la douleur.",
 
 		"act1_limboFourth_book": "<color=orange>RAMASSER</color> POUR LIRE.",
-		"act1_limboFourth_hank1": "Rien ne se produit, mais vous vous resentez une satisfaction bizarre.",
+		"act1_limboFourth_hank1": "Rien ne se produit, mais vous ressentez une satisfaction bizarre.",
 		"act1_limboFourth_hank2": "Vous décidez de l'appeler 'Hank'.",
 		"act1_limboFourth_alternateRevolver": "Les versions <color=orange>ALTERNATIFS</color> changera le comportement de base d'une arme. Ils sont changables au <color=ORANGE>MAGASIN</color>.",
 		"act1_limboFourth_newArm": "Changer de <color=orange>BRAS</color> équipés avec",
 
-        "act1_limboSecret_noclipSkip": "\"ON DIRAIT TU NE SAIT PLUS QUOI FAIRE\"$T.HAKITA",
+        "act1_limboSecret_noclipSkip": "\"IL SEMBLE QUE VOUS ÊTES À COURT DE SOLUTION\"$T.HAKITA",
 
 		"act1_lustFirst_knuckleblaster1": "<color=red>BOMBARDIER</color>: <color=orange>MAINTENIR</color>",
 		"act1_lustFirst_knuckleblaster2": "pour lancer un <color=orange>CHOC</color> qui repoussent les ennemies.",
@@ -1647,14 +1623,14 @@
 		"act1_lustSecond_feedbacker2": "Changez d'armes avec ",
 		"act1_lustSecond_railcannon": "<color=cyan>CANON ÉLECTRIQUE</color>: <color=orange>SE RECHARGE</color> même quand il est <color=orange>NON ÉQUIPÉ</color>. Changez d'armes pour continuer à lutter entre les tirs.",
 
-		"act1_lustThird_water": "L'eau a été drainée.",
+		"act1_lustThird_water": "L'eau a été vidé.",
 
 		"act1_secret": "Quelque part dans les Limbes, une mécanisme a été activée."
 	},
 	"act2": {
 		"act2_greedSecond_sand": "LES ENNEMIS COUVERTS DANS LE SABLE <color=red>NE SAIGNERONT PAS</color>.",
 
-        "act2_greedThird_wallClip": "\"LES SALETÉS SONT PARTIS, MAIS LA MEMOIRE Y RESTe.\"$T. HAKITA",
+        "act2_greedThird_wallClip": "\"LA SALETÉ N'EST PLUS, MAIS LE SOUVENIR RESTE.\"$T. HAKITA",
 		"act2_greedThird_troll1": "Quelque chose de maudit arrive.",
 		"act2_greedThird_troll2": "Je plaisante :)",
         "act2_greedThird_tombOfKings": "TOMBE DES ROIS",
@@ -1667,9 +1643,9 @@
         "act2_greedFourth_whiplashHardDamage1": "<color=lime>COUP DE FOUET</color>: Accumule des <color=grey>DÉGÂTS DURS</color> lorsque son utilisation.",
 		"act2_greedFourth_whiplashHardDamage2": "<color=orange>NE RÉDUIT PAS LA SANTÉ</color>, mais risqué quand la santé est bas.",
 
-		"act2_greedSecret_holdToJump1": "MAINTENIR",
-        "act2_greedSecret_holdToJump2": "pour augmenter la distance de rebond.",
-        "act2_greedSecret_transactionComplete1": "TRANSACTION TERMINÉ",
+		"act2_greedSecret_holdToJump1": "Maintient",
+        "act2_greedSecret_holdToJump2": "pour sauter plus haut",
+        "act2_greedSecret_transactionComplete1": "TRANSACTION COMPLÉTÉE",
         "act2_greedSecret_transactionComplete2": "PIÈCES",
         
         "act2_greed_secretDoor": "Une porte a été ouverte.",
@@ -1677,7 +1653,7 @@
         "act2_wrathFirst_slingshot": "Les <color=cyan>POINTS DE GRAPPIN BLEUS</color> servent comme points de lancement.",
         "act2_wrathFirst_whiplashUnderwater": "<color=lime>COUP DE FOUET</color>: N'accumles <color=orange>PAS</color> des <color=grey>DÉGÂTS DURS</color> quand vous êtes SOUS L'EAU.$ Amusez-vous bien.",
         "act2_wrathFirst_waterDrained": "L'eau a été vidée.",
-        "act2_wrathFirst_sentry": "<color=lime>POUR INTERROMPRE UNE MITRAILLEUSE:</color>$Bombardier (Bras rouge) <color=orange>//</color> Canon-électrique <color=orange>//</color> Choc du lancement au sol <color=orange>//</color> Revolver à l'antenne",
+        "act2_wrathFirst_sentry": "POUR INTERROMPRE UNE MITRAILLEUSE:$Bombardier (Bras rouge) <color=orange>//</color> Canon-électrique <color=orange>//</color> Choc du lancement au sol <color=orange>//</color> Revolver à l'antenne",
         
         "act2_wrathSecond_idol": "Les <color=cyan>IDOLES</color> ne peuvent seulment être cassés avec un <color=orange>COUP DE POING</color>.",
         "act2_wrathSecond_neptune": "Hark! Neptune les ont abattu à la mort.",
@@ -1689,9 +1665,9 @@
         "act2_wrathThird_rocketLauncherMidair": "<color=cyan>LANCE-ROQUETTES</color>: Les coups directes sur les ennemies <color=orange>TOMBANTS</color> causeront une explosion <color=orange>PLUS FORT</color>.",
         "act2_wrathThird_soldierBlock": "Les Soldats ne <color=orange>PEUVENT PAS</color> bloquer les explosions dans <color=orange>L'AIR</color>.$ Tirez une roquette <color=orange>A CÔTÉ</color> d'eux pour les lancer.",
         "act2_wrathThird_hank": "Rien ne se passe, mais vous êtes sûr que Hank Jr. et ses Hankcêtres l'apprécieraient... S'ils n'étaient pas morts.",
-
-        "act2_heresyFirst_armboy": "A R M B O Y !!!",
         
+        "act2_heresyFirst_armboy": "A R M B O Y !!!",
+
         "act2_secretNotReady": "VOUS N'ÊTES PAS CENSÉ ÊTRE ICI."
 	},
     "primeSanctum": {
@@ -1709,8 +1685,8 @@
         "secretLevels_prelude_somethingWicked": "Quelque chose de maudit arrive.",
         
         "secretLevels_prelude_testamentTitle": "TESTAMENT I",
-        "secretLevels_prelude_testament1": "L'Humanité à échoué",
-        "secretLevels_prelude_testament2": "Le libre arbitre est un défaut.",
+        "secretLevels_prelude_testament1": "L'Humanité à échoué.",
+        "secretLevels_prelude_testament2": "La pensé individuelle est un défaut.",
         "secretLevels_prelude_testament3": "Que le mal de leurs propres paroles les consomment.",
         "secretLevels_prelude_testament4": "Alors, je recommencerais à nouveau, avec ma parole faisant la loi.",
         
@@ -1721,7 +1697,7 @@
         "secretLevels_first_testament4": "MA FOI COMMENCE A SE FAIBLIR",
         
         "secretLevels_fourth_testamentTitle": "TESTAMENT III",
-        "secretLevels_fourth_testament1": "DES CYCLES DE CRÉATION DÉNOMBRABLES DE GASPILLÉ",
+        "secretLevels_fourth_testament1": "DES CYCLES DE CRÉATION DÉNOMBRABLES GASPILLÉ",
         "secretLevels_fourth_testament2": "DES FORMULES DÉNOMBRABLES POUR UN ESPRIT SANS CHOIX LIBRE GASPILLÉ",
         "secretLevels_fourth_testament3": "CONDAMNÉ SOIT L'HOMME D'AVOIR ÉCHOUÉ DE SUIVRE MA RÈGNE, MA PAROLE, MA LOI",
         "secretLevels_fourth_testament4": "CONDAMNÉ À UNE ÉTERNITÉ DE TORTURE ET SOUFFRANCE",
@@ -1737,12 +1713,12 @@
         
         "subtitles_gabriel_intro1": "Machine,",
         "subtitles_gabriel_intro2": "fait demi-tour maintenant.",
-        "subtitles_gabriel_intro3": "Ton n'est pas permis à rentrer dans les couches de ce palais.",
+        "subtitles_gabriel_intro3": "Les êtres de ton type n'est pas permit entre les murs de ce palais.",
         "subtitles_gabriel_intro4": "Fait demi-tour tout de suite, sinon tu franchiras la volonté de Dieu!",
-        "subtitles_gabriel_intro5": "Ton choix est fait...",
+        "subtitles_gabriel_intro5": "Très bien. Ton choix est fait...",
         "subtitles_gabriel_intro6": "Étant la main droite du Père,",
-        "subtitles_gabriel_intro7": "je vais te déchirer en morceaux!",
-        "subtitles_gabriel_intro8": "Tu deviendras inanimé à nouveau...",
+        "subtitles_gabriel_intro7": "je vais te broyer en morceaux!",
+        "subtitles_gabriel_intro8": "Et tu deviendras inanimé à nouveau...",
         "subtitles_gabriel_fightStart": "VOICI! LA PUISSANCE D'UN ANGE!",
         
         "subtitles_gabriel_taunt1": "La lumière est la perfection!",
@@ -1751,7 +1727,7 @@
         "subtitles_gabriel_taunt4": "Même, pas, mortel.",
         "subtitles_gabriel_taunt5": "Tu est moins de rien!",
         "subtitles_gabriel_taunt6": "Des bêtises, machine. Que des bêtises.",
-        "subtitles_gabriel_taunt7": "Tu es une erreur à être corrigé!",
+        "subtitles_gabriel_taunt7": "Tu es une erreur à être corrigée !",
         "subtitles_gabriel_taunt8": "Il ne peut n'y avoir que la Lumière!",
         "subtitles_gabriel_taunt9": "Une imperfection à être corrigée.",
         "subtitles_gabriel_taunt10": "Ton crime est ton existence!",
@@ -1770,9 +1746,9 @@
         "subtitles_gabriel_defeated8": "...et tes jours peu...",
         
         "subtitles_mandalore_intro1": "Enfin, notre casse-tête de patience est terminé!",
-        "subtitles_mandalore_intro2": "Hein?",
+        "subtitles_mandalore_intro2": "Quoi?",
         
-        "subtitles_mandalore_taunt1": "Je vais t'empoisoner, sale merde!",
+        "subtitles_mandalore_taunt1": "Je vais t'empoisoner, putain!",
         "subtitles_mandalore_taunt2": "Je vais les tirer dessus avec une arme!",
         "subtitles_mandalore_taunt3": "Tu ne peux pas imaginer ce que tu va rencontrer ici!",
         "subtitles_mandalore_taunt4": "Arrêtes de bouger!",
@@ -1781,14 +1757,14 @@
         "subtitles_mandalore_attack1": "Automatique.",
         "subtitles_mandalore_attack2": "Encore plus automatique!",
         
-        "subtitles_mandalore_phaseChangeFirst1": "J'augmentes ma vitesse grâce au magique des Druides!",
-        "subtitles_mandalore_phaseChangeFirst2": "Mais bordel, frappes-le déjà!",
+        "subtitles_mandalore_phaseChangeFirst1": "J'augmentes ma vitesse grâce à la magie des Druides!",
+        "subtitles_mandalore_phaseChangeFirst2": "Allez, frappes-le déjà!",
         "subtitles_mandalore_phaseChangeSecond1": "Témoignes ma vitesse maximum!",
         "subtitles_mandalore_phaseChangeSecond2": "C'est trop vite!",
         "subtitles_mandalore_phaseChangeThird1": "Utilises du sel!",
         "subtitles_mandalore_phaseChangeThird2": "J'essaies!",
         
-        "subtitles_mandalore_defeated": "Bah chouette, on a perdu, excellent.",
+        "subtitles_mandalore_defeated": "Bah super, on a perdu, excellent.",
         
         "subtitles_minosPrime_intro1": "Ahh...",
         "subtitles_minosPrime_intro2": "Enfin libéré.",
@@ -1805,35 +1781,35 @@
         "subtitles_minosPrime_attack1": "Préparez-vous!",
         "subtitles_minosPrime_attack2": "Votre fin approche!",
         "subtitles_minosPrime_attack3": "MOUREZ!",
-        "subtitles_minosPrime_attack4": "Ècrasement!",
+        "subtitles_minosPrime_attack4": "Écrasement!",
         "subtitles_minosPrime_attack5": "Jugement!",
         
-        "subtitles_minosPrime_taunt1": "Vous êtes INUTILE!",
-        "subtitles_minosPrime_phaseChange": "Vous êtes FAIBLE!",
+        "subtitles_minosPrime_taunt1": "INUTILE!",
+        "subtitles_minosPrime_phaseChange": "FAIBLE.",
 
         
         "subtitles_minosPrime_defeated1": "Aagh!",
         "subtitles_minosPrime_defeated2": "Mes enfants... Je vous prie de me pardonner...",
         "subtitles_minosPrime_defeated3": "J'ai échoué de vous délivrer le salut...",
-        "subtitles_minosPrime_defeated4": "...de cette monde sombre et froide.",
+        "subtitles_minosPrime_defeated4": "...de ce monde sombre et froide.",
         
         "subtitles_gabrielBoat1": "N'ayez pas peur, pêcheur.",
-        "subtitles_gabrielBoat2": "Votre dévotion au Dieu montre le bonté dans vous-même;",
-        "subtitles_gabrielBoat3": "Bien abondant.",
+        "subtitles_gabrielBoat2": "Votre dévotion au bon Dieu montre la bonté dans vous-même;",
+        "subtitles_gabrielBoat3": "Bien abondante.",
         "subtitles_gabrielBoat4": "Le cœur est prêt, mais le corps doit se reposer,",
-        "subtitles_gabrielBoat5": "Sinon vous gaspillierez un des créations de Dieu.",
+        "subtitles_gabrielBoat5": "Sinon vous gaspillierez l'une des créations de Dieu.",
         
         "subtitles_gabrielHeresy1": "Machine, je sais tu est ici.",
-        "subtitles_gabrielHeresy2": "Je peux ressentir l'odeur insolent de tes mains sanglants.",
+        "subtitles_gabrielHeresy2": "Je peux ressentir l'odeur insolente de tes mains sanglantes.",
         "subtitles_gabrielHeresy3": "Je t'attends en bas...",
         "subtitles_gabrielHeresy4": "Viens à moi!",
         
         "subtitles_gabrielSecondIntro1": "Limbes.",
         "subtitles_gabrielSecondIntro2": "Luxure.",
-        "subtitles_gabrielSecondIntro3": "Tout parti...",
-        "subtitles_gabrielSecondIntro4": "Avec la Gourmandise à bientôt suivre.",
+        "subtitles_gabrielSecondIntro3": "Tous parti...",
+        "subtitles_gabrielSecondIntro4": "Avec Gourmandise à bientôt suivre.",
         "subtitles_gabrielSecondIntro5": "Ton type ne connaît que l'acte de ravager,",
-        "subtitles_gabrielSecondIntro6": "Effacer toute vie sur les couches supérieurs,",
+        "subtitles_gabrielSecondIntro6": "Effacer toute vie sur les couches supérieures,",
         "subtitles_gabrielSecondIntro7": "mais ils restent insatiables...",
         "subtitles_gabrielSecondIntro8": "Comme toi-même.",
         "subtitles_gabrielSecondIntro9": "Tu m'as tout pris, machine.",
@@ -1842,30 +1818,30 @@
         "subtitles_gabrielSecondIntro12": "...PARFAITE!",
         
         "subtitles_gabrielSecondFight1": "Machine.",
-        "subtitles_gabrielSecondFight2": "Je vais t'abattre en morceaux,",
-        "subtitles_gabrielSecondFight3": "Te désassembler en pièces,",
+        "subtitles_gabrielSecondFight2": "Je vais te réduire en miettes,",
+        "subtitles_gabrielSecondFight3": "Te désassembler en mille morceaux,",
         "subtitles_gabrielSecondFight4": "Verser le sang de ta forme profane à travers LES ÉTOILES!",
-        "subtitles_gabrielSecondFight5": "Je vais te broyer jusqu'au même les ÉTINCELLES CRIENT LA PITIÉ!",
-        "subtitles_gabrielSecondFight6": "Mes mains vont SAVOURER TE DÉLIVRER LA MORT...",
-        "subtitles_gabrielSecondFight7": "ICI,",
-        "subtitles_gabrielSecondFight8": "ET,",
-        "subtitles_gabrielSecondFight9": "MAINTENANT!",
+        "subtitles_gabrielSecondFight5": "Je vais te broyer jusqu'à même les ÉTINCELLES CRIENT PITIÉ!",
+        "subtitles_gabrielSecondFight6": "Mes mains vont SAVOURER TE DÉLIVRER TA MORT...",
+        "subtitles_gabrielSecondFight7": "TOUT,",
+        "subtitles_gabrielSecondFight8": "DE,",
+        "subtitles_gabrielSecondFight9": "SUITE!",
         
-        "subtitles_gabrielSecondPhaseChange": "C'EST TOUT QUE TU SAIS FAIRE!?",
+        "subtitles_gabrielSecondPhaseChange": "C'EST TOUT CE QUE TU AS !?",
         
-        "subtitles_gabrielSecondTaunt1": "IL TE FAUT. PLUS. DE PUISSANCE!",
+        "subtitles_gabrielSecondTaunt1": "IL TE FAUT. PLUS. DE. PUISSANCE!",
         "subtitles_gabrielSecondTaunt2": "VIENS CHERCHER MON SANG!",
-        "subtitles_gabrielSecondTaunt3": "Mais qu'est-ce que... cette SENSATION?",
+        "subtitles_gabrielSecondTaunt3": "Mais qu'est ce que... cette SENSATION?",
         "subtitles_gabrielSecondTaunt4": "TU N'EST QU'UN TAS DE FERAILLE!",
-        "subtitles_gabrielSecondTaunt5": "Tu rouilles un peu, machine?!",
+        "subtitles_gabrielSecondTaunt5": "Tu rouilles, machine?!",
         "subtitles_gabrielSecondTaunt6": "J'AI VRAIMENT PERDU CONTRE ÇA?!",
         "subtitles_gabrielSecondTaunt7": "IL EST TEMPS DE CORRIGER MON ERREUR!",
         "subtitles_gabrielSecondTaunt8": "FINISSONS-EN!",
         "subtitles_gabrielSecondTaunt9": "JE TE MONTRERAI LA JUSTICE DIVINE!",
         "subtitles_gabrielSecondTaunt10": "Aller, machine! Bats-moi comme un animal!",
-        "subtitles_gabrielSecondTaunt11": "Je n'ai jamais eu une telle bataille comme celle ci!",
+        "subtitles_gabrielSecondTaunt11": "Je n'ai jamais eu une telle bataille!",
         "subtitles_gabrielSecondTaunt12": "Montre moi à quoi tu serts!",
-        "subtitles_gabrielSecondTaunt13": "Ceci EST un bataille digne du volonté de Dieu!",
+        "subtitles_gabrielSecondTaunt13": "Ceci EST un bataille digne de la volonté de Dieu!",
         
         "subtitles_gabrielSecondDefeated1": "Deux fois?!",
         "subtitles_gabrielSecondDefeated2": "Battu par un objet... DEUX FOIS?!",
@@ -1882,12 +1858,12 @@
     },
     
     "misc": {
-        "hud_noArm1": "<color=red>PAS DE COUPS DE POING SANS BRAS, PAUVRE CON</color>",
+        "hud_noArm1": "<color=red>PAS DE COUPS DE POING SANS BRAS, GROS NONO!</color>",
         "hud_noArm2": "Les bras peuvent être rééquipés au magasin.",
         "hud_majorAssists": "LES ASSISTANCES MAJEURES SONT ACTIVÉES.",
         "hud_overhealOrb1": "Les <color=red>ORBES D'ÂMES ROUGES</color> donnent <color=lime>200 points de vie</color>.",
         "hud_overhealOrb2": "Les points de vie bonus ne peuvent pas être récuperées avec du sang.",
-        "hud_itemGrabError": "ERREUR: LA PORTE BLOQUANT SE FERMERA",
+        "hud_itemGrabError": "ERREUR: LA PORTE SE FERMERA",
         "hud_levelStats1": "Maintenir <color=orange>TAB</color> pour voir les statistiques actuelles lors du <color=orange>REPASSAGE</color> d'un niveau.",
         "hud_levelStats2": "<color=orange>APPUYEZ DEUX FOIS</color> pour le garder ouvert.",
         "hud_outOfBounds": "Oups, désolé de ça.",
@@ -1916,10 +1892,6 @@
 		"hellmap_third": "TROISIÈME",
 		"hellmap_fourth": "QUATRIÈME",
 		"hellmap_climax": "CLIMAXE",
-        "hellmap_act1crescendo": "ACTE I CRESCENDO",
-        "hellmap_act1climax": "ACTE I CLIMAXE",
-        "hellmap_act2crescendo": "ACTE II CRESCENDO",
-        "hellmap_act2climax": "ACTE II CLIMAXE",
         
         "levelstats_time": "TEMPS",
         "levelstats_kills": "ÉLIMINATION",
@@ -1939,34 +1911,20 @@
         "controls_rightClick": "Clic droit",
         
         "endStats_cheatsUsed": "CODES DE TRICHES UTILISÉS",
-        "endStats_assistsUsed": "ASSISTANCES MAJEURS UTILISÉS",
-        "endStats_noRestarts": "AUCUN RÉDEMARRAGE",
-        "endStats_restarts": "RÉDEMARRAGES",
+        "endStats_assistsUsed": "ASSISTANCES MAJEURES UTILISÉS",
+        "endStats_noRestarts": "AUCUN REDÉMARRAGE",
+        "endStats_restarts": "REDÉMARRAGES",
         "endstats_noDamage": "AUCUN DÉGAT",
         
         "weapons_unavailable": "NON DISPONIBLE",
         "weapons_alreadyBought": "DÉJÀ ACHETÉ",
-        "weapons_underConstruction": "EN CONSTRUCTION",
+        "weapons_underConstruction": "SOUS CONSTRUCTION",
+
+        "earlyAccessEnd1": "MERCI D'AVOIR JOUÉ",
+        "earlyAccessEnd2": "ACTE III: SUICIDE DIVIN est encore en développement.",
+        "earlyAccessEnd3": "Pour avoir des nouvelles sur le développement, suivez-nous sur:"
         
-        "pressToSkip": "Appuyer sur ECH pour passer",
-
-        "youDied1": "[VOUS ÊTES MORT]",
-        "youDied2": "[R] POUR RECOMMENCER",
         
-        "classicHud_health": "SANTÉ",
-        "classicHud_stamina": "ÉNERGIE",
-        "classicHud_weapon": "ARME",
-        "classicHud_arm": "BRAS",
-        "classicHud_railcannonMeter": "CHARGE",
-
-        "spawner_sandboxTools": "OUTILS DU BOITE A SABLE :^)",
-        "spawner_sandbox": "BOITE A SABLE",
-        "spawner_enemies": "ENNEMIES",
-        "spawner_items": "OBJETS",
-
-        "earlyAccessEnd1": "MERCI D'AVOIR JOUÉ!",
-        "earlyAccessEnd2": "ACTE III: SUICIDE DIVIN est toujours en développément.",
-        "earlyAccessEnd3": "Pour les actus sur son progrès, suivez-nous sur:"
         
 	}
 }

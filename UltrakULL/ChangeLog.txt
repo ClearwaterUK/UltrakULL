@@ -4,6 +4,7 @@
 - Fixed save slot titles not being translated in the save selection menu.
 - Fixed some buttons on the main menu and options tab not being translated when a different language is selected.
 - Fixed some instances of testament titles in secret levels not being translated.
+- Updated the README.
 
 
 1.0.1
