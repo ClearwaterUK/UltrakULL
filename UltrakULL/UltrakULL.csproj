@@ -172,6 +172,7 @@
     <Compile Include="Harmony Patches\DiscordController.cs" />
     <Compile Include="Harmony Patches\EnemyInfoPage.cs" />
     <Compile Include="Harmony Patches\FinalRank.cs" />
+    <Compile Include="Harmony Patches\GabrielAudioSwap.cs" />
     <Compile Include="Harmony Patches\LevelNameFinder.cs" />
     <Compile Include="Harmony Patches\LevelSelectPanel.cs" />
     <Compile Include="Harmony Patches\GunColorTypeGetter.cs" />

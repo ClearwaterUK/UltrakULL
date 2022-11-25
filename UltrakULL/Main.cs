@@ -57,7 +57,6 @@ using UMM;
  * Currently working on audio swapper for 1.1
  *
  * Dialogue lines to swap:
- * Gabe intro, 3-2
  * MDK intro, 4-3
  * Gabe boat, 5-3
  * Gabe Heresy, 6-1
@@ -65,7 +64,6 @@ using UMM;
  * Minos Prime intro, P-1
  *
  * Object patching:
- * Gabe first
  * MDK+Owl
  * Gabe Second
  * Minos Prime
