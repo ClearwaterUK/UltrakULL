@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
+using UltrakULL.audio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -50,6 +51,7 @@ namespace UltrakULL
 
             patchHellmap();
             patchResultsScreen(levelName, levelChallenge);
+            AudioSwapper.audioSwap(SceneManager.GetActiveScene().name);
 
         }
     }

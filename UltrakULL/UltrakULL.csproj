@@ -104,6 +104,14 @@
       <HintPath>$(ManagedDir)\UnityEngine.UIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>$(ManagedDir)\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>$(ManagedDir)\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <PropertyGroup>
     <ManagedDir>$(ULTRAKILLPath)\ULTRAKILL_Data\Managed\</ManagedDir>
@@ -147,6 +155,7 @@
     <Compile Include="Act1VN.cs" />
     <Compile Include="Act2.cs" />
     <Compile Include="Act2Strings.cs" />
+    <Compile Include="audio\AudioSwapper.cs" />
     <Compile Include="Books.cs" />
     <Compile Include="BossStrings.cs" />
     <Compile Include="Cheats.cs" />
