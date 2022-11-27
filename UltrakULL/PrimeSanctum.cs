@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
+using UltrakULL.audio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -47,6 +48,7 @@ namespace UltrakULL
 
                 Debug.Log("Patching secret text...");
                 this.patchSecretText(PrimeSanctumChallengeStrings);
+                AudioSwapper.audioSwap(SceneManager.GetActiveScene().name);
             }
         }
     }
