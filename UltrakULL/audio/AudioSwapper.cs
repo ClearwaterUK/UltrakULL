@@ -22,7 +22,6 @@ namespace UltrakULL.audio
             fileRequest.SendWebRequest();
             try
             {
-                //while (!fileRequest.isDone) await Task.Delay(1);
                 while (!fileRequest.isDone) {}
  
                 if (fileRequest.isNetworkError || fileRequest.isHttpError) Debug.Log(fileRequest.error + "\n Expected path: " + audioFilePath);
@@ -157,6 +156,59 @@ namespace UltrakULL.audio
                 
                 AudioSource mandaloreIntroSource = mandaloreIntro.GetComponentInChildren<AudioSource>();
                 mandaloreIntroSource.clip = swapClipWithFile(mandaloreIntroSource.clip, mandaloreIntroString);
+            }
+            else if (levelName == "Level 6-2")
+            {
+                string gabeSecondFolder = speechFolder + "gabrielBossSecond\\";
+                
+                //Intro lines
+                GameObject gabeSecondSpeechObject = getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("IntroSounds"),"Filler"),
+                "Speech and Music"),"Speech");
+                
+                AudioSource gabeSecondSpeech = gabeSecondSpeechObject.GetComponentInChildren<AudioSource>();
+                string gabeSecondSpeechString = gabeSecondFolder + "gabrielSecondIntro.wav";
+                
+                gabeSecondSpeech.clip = swapClipWithFile(gabeSecondSpeech.clip,gabeSecondSpeechString);
+                
+                //Fight start lines
+                GameObject gabeSecondFightStartObject = getGameObjectChild(getGameObjectChild(getInactiveRootObject("2 - Organ Hall"),"2 Stuff(Clone)"),"Intro");
+                
+                AudioSource gabeSecondFightStart = gabeSecondFightStartObject.GetComponentInChildren<AudioSource>();
+                string gabeSecondFightStartString = gabeSecondFolder + "gabrielSecondFightStart.wav";
+                
+                gabeSecondFightStart.clip = swapClipWithFile(gabeSecondFightStart.clip,gabeSecondFightStartString);
+                
+                //Defeated lines
+                GameObject gabeSecondDefeated = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("2 - Organ Hall"),"2 Stuff(Clone)"), "GabrielOutroParent"),"GabrielOutro"),"OutroVoice");
+                
+                AudioSource gabeSecondDefeatedSource = gabeSecondDefeated.GetComponentInChildren<AudioSource>();
+                string gabeSecondDefeatedString = gabeSecondFolder + "gabrielSecondDefeated.wav";
+                
+                gabeSecondDefeatedSource.clip = swapClipWithFile(gabeSecondDefeatedSource.clip,gabeSecondDefeatedString);
+                
+                GameObject gabeSecondDefeatedOrig = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("2 - Organ Hall"),"2 Stuff"), "GabrielOutroParent"),"GabrielOutro"),"OutroVoice");
+                
+                AudioSource gabeSecondDefeatedSourceOrig = gabeSecondDefeatedOrig.GetComponentInChildren<AudioSource>();
+                string gabeSecondDefeatedStringOrig = gabeSecondFolder + "gabrielSecondDefeated.wav";
+                
+                gabeSecondDefeatedSourceOrig.clip = swapClipWithFile(gabeSecondDefeatedSourceOrig.clip,gabeSecondDefeatedStringOrig);
+                
+                
+                
+                //Outro lines
+                GameObject gabeSecondOutro =  getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("2 - Organ Hall"),"2 Stuff(Clone)"), "GabrielOutroParent"),"EndShatter"),"gab_Intro5");
+                
+                AudioSource gabeSecondOutroSource = gabeSecondOutro.GetComponentInChildren<AudioSource>();
+                string gabeSecondOutroString = gabeSecondFolder + "gabrielSecondOutro.wav";
+                
+                gabeSecondOutroSource.clip = swapClipWithFile(gabeSecondOutroSource.clip,gabeSecondOutroString);
+                
+                GameObject gabeSecondOutroOrig =  getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("2 - Organ Hall"),"2 Stuff(Clone)"), "GabrielOutroParent"),"EndShatter"),"gab_Intro5");
+                
+                AudioSource gabeSecondOutroSourceOrig = gabeSecondOutroOrig.GetComponentInChildren<AudioSource>();
+                string gabeSecondOutroStringOrig = gabeSecondFolder + "gabrielSecondOutro.wav";
+                
+                gabeSecondOutroSourceOrig.clip = swapClipWithFile(gabeSecondOutroSourceOrig.clip,gabeSecondOutroStringOrig);
             }
         }
         

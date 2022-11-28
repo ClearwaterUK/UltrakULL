@@ -60,10 +60,8 @@ using UMM;
  * MDK intro, 4-3
  * Gabe boat, 5-3
  * Gabe Heresy, 6-1
- * Gabe intro, 6-2
  *
  * Object patching:
- * Gabe Second
  * 
  * */
 
