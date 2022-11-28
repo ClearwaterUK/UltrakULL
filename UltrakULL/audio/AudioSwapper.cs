@@ -86,7 +86,7 @@ namespace UltrakULL.audio
                 gabeOutroSource.clip =  swapClipWithFile(gabeOutroSource.clip, gabeOutroString);
 
             }
-            if(levelName == "Level P-1")
+            else if(levelName == "Level P-1")
             {
                 string minosPrimeFolder = speechFolder + "minosPrime\\";
                 
@@ -142,6 +142,21 @@ namespace UltrakULL.audio
                 
                 AudioSource minosPrimeScreamSourceOrig = minosPrimeScreamOrig.GetComponentInChildren<AudioSource>();
                 minosPrimeScreamSourceOrig.clip = swapClipWithFile(minosPrimeScreamSourceOrig.clip, minosPrimeScreamStringOrig);
+            }
+            else if (levelName == "Level 4-3")
+            {
+                //There are two used clips for intro, one for Mandalore, the other for the owl.
+                //I can't find where the owl clip is though...
+
+                string mandaloreFolder = speechFolder + "mandalore\\";
+                
+                GameObject mandaloreArena = getGameObjectChild(getInactiveRootObject("3 - Traitor Hallway"),"3B - Tomb of Kings");
+
+                GameObject mandaloreIntro = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(mandaloreArena,"3B Stuff"),"Hall"),"FakeMandalore"),"IntroLine");
+                string mandaloreIntroString = mandaloreFolder + "mandaloreIntro.wav";
+                
+                AudioSource mandaloreIntroSource = mandaloreIntro.GetComponentInChildren<AudioSource>();
+                mandaloreIntroSource.clip = swapClipWithFile(mandaloreIntroSource.clip, mandaloreIntroString);
             }
         }
         

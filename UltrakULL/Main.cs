@@ -61,12 +61,9 @@ using UMM;
  * Gabe boat, 5-3
  * Gabe Heresy, 6-1
  * Gabe intro, 6-2
- * Minos Prime intro, P-1
  *
  * Object patching:
- * MDK+Owl
  * Gabe Second
- * Minos Prime
  * 
  * */
 

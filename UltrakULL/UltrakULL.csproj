@@ -163,6 +163,7 @@
     <Compile Include="CyberGrind.cs" />
     <Compile Include="EnemyBios.cs" />
     <Compile Include="Harmony Patches\AudioSwaps\GabrielAudioSwap.cs" />
+    <Compile Include="Harmony Patches\AudioSwaps\MandaloreAudioSwap.cs" />
     <Compile Include="Harmony Patches\AudioSwaps\MinosPrimeAudioSwap.cs" />
     <Compile Include="Harmony Patches\BossBarManager.cs" />
     <Compile Include="Harmony Patches\CGSubmissionCheck.cs" />
