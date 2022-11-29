@@ -58,10 +58,7 @@ using UMM;
  *
  * Dialogue lines to swap:
  * MDK intro, 4-3
- * Gabe boat, 5-3
- * Gabe Heresy, 6-1
  *
- * Object patching:
  * 
  * */
 

@@ -157,6 +157,35 @@ namespace UltrakULL.audio
                 AudioSource mandaloreIntroSource = mandaloreIntro.GetComponentInChildren<AudioSource>();
                 mandaloreIntroSource.clip = swapClipWithFile(mandaloreIntroSource.clip, mandaloreIntroString);
             }
+            
+            else if (levelName == "Level 5-3")
+            {
+                string gabeBoatFolder = speechFolder + "gabrielBoat\\";
+                
+                GameObject gabeBoatSpeechObject = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("Unrotated"),"5 - Hologram Rooms"),"5 Nonstuff"),"Decorations"), "Hologram");
+                
+                AudioSource gabeBoat = gabeBoatSpeechObject.GetComponentInChildren<AudioSource>();
+                
+                string gabeBoatString = gabeBoatFolder + "gabrielBoat.wav";
+                
+                gabeBoat.clip = swapClipWithFile(gabeBoat.clip, gabeBoatString);
+            }
+            else if (levelName == "Level 6-1")
+            {
+                string gabeHeresyFolder = speechFolder + "gabrielHeresy\\";
+                
+                GameObject gabeHeresyFirst = getInactiveRootObject("GabrielVoice1");
+                GameObject gabeHeresySecond = getInactiveRootObject("GabrielVoice2");
+                
+                AudioSource gabeHeresyFirstSource = gabeHeresyFirst.GetComponentInChildren<AudioSource>();
+                AudioSource gabeHeresySecondSource = gabeHeresySecond.GetComponentInChildren<AudioSource>();
+                
+                string gabeHeresyFirstString = speechFolder + "gabrielHeresyFirst.wav";
+                string gabeHeresySecondString = speechFolder + "gabrielHeresySecond.wav";
+                
+                gabeHeresyFirstSource.clip = swapClipWithFile(gabeHeresyFirstSource.clip,gabeHeresyFirstString);
+                gabeHeresySecondSource.clip = swapClipWithFile(gabeHeresySecondSource.clip,gabeHeresySecondString);
+            }
             else if (levelName == "Level 6-2")
             {
                 string gabeSecondFolder = speechFolder + "gabrielBossSecond\\";
@@ -192,9 +221,7 @@ namespace UltrakULL.audio
                 string gabeSecondDefeatedStringOrig = gabeSecondFolder + "gabrielSecondDefeated.wav";
                 
                 gabeSecondDefeatedSourceOrig.clip = swapClipWithFile(gabeSecondDefeatedSourceOrig.clip,gabeSecondDefeatedStringOrig);
-                
-                
-                
+
                 //Outro lines
                 GameObject gabeSecondOutro =  getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("2 - Organ Hall"),"2 Stuff(Clone)"), "GabrielOutroParent"),"EndShatter"),"gab_Intro5");
                 
