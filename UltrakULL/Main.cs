@@ -56,6 +56,8 @@ using UMM;
  *
  * Currently working on audio swapper for 1.1
  *
+ * Add button to enable/disable audio swaps in Language tab
+ *
  * Dialogue lines to swap:
  * MDK intro, 4-3
  *
