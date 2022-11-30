@@ -725,6 +725,7 @@
 		"audio_subtitles": "",
 		"audio_globalVolume": "",
 		"audio_musicVolume": "",
+		"audio_dubbing": "",
 
 		"hud_title": "",
 		"hud_type": "",

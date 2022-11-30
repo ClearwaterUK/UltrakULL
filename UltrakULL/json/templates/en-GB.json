@@ -746,6 +746,7 @@
 		"audio_subtitles": "SUBTITLES",
 		"audio_globalVolume": "MASTER VOLUME",
 		"audio_musicVolume": "MUSIC VOLUME",
+		"audio_dubbing": "AUDIO DUBBING",
 
 		"hud_title": "HUD",
 		"hud_type": "HUD TYPE",
@@ -1604,7 +1605,7 @@
 		"tutorial_introObjective2": "FIND A WEAPON",
 		"tutorial_introRed1": "MANKIND IS DEAD.",
 		"tutorial_introRed2": "BLOOD IS FUEL.",
-		"tutorial_introRed3": "HELL IS FUEL.",
+		"tutorial_introRed3": "HELL IS FULL.",
 
         "tutorial_audioCalibrationTitle": "MANUAL SOUND CALIBRATION",
         "tutorial_audioCalibrationWarning1": "MASTER VOLUME IS OFF.",

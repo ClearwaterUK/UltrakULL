@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
+using BepInEx.Configuration;
 using UnityEngine;
 using UnityEngine.Networking;
 using UltrakULL.json;
@@ -41,7 +42,10 @@ namespace UltrakULL.audio
 
         public static async void audioSwap(string levelName)
         {
- 
+            if(LanguageManager.configFile.Bind("General","activeDubbing","False").Value == "False")
+            {
+                return;
+            }
             //Since the makes a clone of the arena gameObject which is used, wait a small period of time for the new gameObject to be accessible before accessing it.
             Console.WriteLine("Waiting before audioSwapper");
             await Task.Delay(250);

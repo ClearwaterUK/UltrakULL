@@ -1,4 +1,12 @@
-﻿1.0.2
+﻿1.1.0
+- **Added dialogue language support for spoken characters.**
+- Added a button to the audio options, which enables or disables dubbing of spoken characters. If disabled, characters will use the original English dialog.
+
+- Added the following lines to the JSON template:
+
+options: audio_dubbing
+
+1.0.2
 - Fixed the P-1 testament screen not being translated. This was due to an oversight with the way UltrakULL waits for other mods to apply their changes before it applies theirs.
 - Fixed a rare case of 4-4 Whiplash HUD messages not displaying correctly if they are triggered without picking up the Whiplash dropped by V2.
 - Fixed save slot titles not being translated in the save selection menu.

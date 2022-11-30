@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using UltrakULL.audio;
+using UltrakULL.json;
 using UnityEngine;
 
 namespace UltrakULL.Harmony_Patches
@@ -11,6 +12,11 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void Gabriel_VoiceSwap(ref Gabriel __instance, ref GabrielVoice ___voice)
         {
+            if(LanguageManager.configFile.Bind("General","activeDubbing","False").Value == "False")
+            {
+                return;
+            }
+        
             string gabeFirstFolder =  AudioSwapper.speechFolder + "gabrielBossFirst\\";
 
 

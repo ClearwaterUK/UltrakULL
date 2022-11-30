@@ -1618,6 +1618,7 @@ namespace UltrakULL.json
         public string audio_subtitles;
         public string audio_globalVolume;
         public string audio_musicVolume;
+        public string audio_dubbing;
 
         public string hud_title;
         public string hud_type;
