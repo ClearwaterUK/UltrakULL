@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UltrakULL.json;
 using UnityEngine.SceneManagement;
+
+using static UltrakULL.CommonFunctions;
+
 using System.IO;
 
 namespace UltrakULL.Harmony_Patches
@@ -149,6 +152,31 @@ namespace UltrakULL.Harmony_Patches
                 languageButtonTitleText.text = "--" + "LANGUAGES" + "--";
             }
             
+            //Add toggle to the audio tab that allows for enabling/disabling of swapping for spoken dialogue.
+            GameObject originalSlider = optionsParent.Find("Audio Options/Image/Subtitles Checkbox").gameObject;
+            
+            GameObject dubSlider = GameObject.Instantiate(originalSlider, optionsParent.Find("Audio Options/Image"));
+            dubSlider.GetComponent<RectTransform>().anchoredPosition = new Vector2(300f, -225f);
+            dubSlider.name = "Dialogue Dub";
+
+            Toggle dubToggle = getGameObjectChild(dubSlider,"Toggle").GetComponentInChildren<Toggle>();
+            dubToggle.isOn = Convert.ToBoolean(LanguageManager.configFile.Bind("General", "activeDubbing", "False").Value);
+            dubToggle.onValueChanged.RemoveAllListeners();
+            dubToggle.onValueChanged.AddListener(delegate
+            {
+                LanguageManager.configFile.Bind("General", "activeDubbing", "False").Value = dubToggle.isOn.ToString();
+            });
+            try
+            {
+                getTextfromGameObject(getGameObjectChild(dubSlider,"Text")).text = LanguageManager.CurrentLanguage.options.audio_dubbing;
+            }
+            catch (Exception e)
+            {
+                getTextfromGameObject(getGameObjectChild(dubSlider,"Text")).text = "DUBBED AUDIO";
+            }
+
+
+
 
             return true;
         }

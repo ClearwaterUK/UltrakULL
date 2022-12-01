@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using UltrakULL.audio;
+using UltrakULL.json;
 using UnityEngine;
 
 namespace UltrakULL.Harmony_Patches
@@ -10,9 +11,12 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void MinosPrime_VoiceSwap(ref MinosPrime __instance)
         {
+            if(LanguageManager.configFile.Bind("General","activeDubbing","False").Value == "False")
+            {
+                return;
+            }
             string minosPrimeFolder =  AudioSwapper.speechFolder + "minosPrime\\";
             
-            //Defeated lines aren't patched
             
             //Overhead (Prepare thyself)
             AudioClip[] minosPrimeKick = __instance.riderKickVoice;

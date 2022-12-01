@@ -14,14 +14,17 @@ namespace UltrakULL.json
         public static Dictionary<string, JsonFormat> AllLanguagesDisplayNames = new Dictionary<string, JsonFormat>();
         public static JsonFormat CurrentLanguage { get; private set; } = null;
         private static BepInEx.Logging.ManualLogSource JsonLogger = BepInEx.Logging.Logger.CreateLogSource("LanguageManager");
+        public static ConfigFile configFile;
 
         public static void InitializeManager(string modVersion)
         {
             LoadLanguages(modVersion);
 
-            ConfigFile cfg = new ConfigFile("BepInEx\\config\\ultrakull\\lastLang.cfg", true);
+            configFile = new ConfigFile("BepInEx\\config\\ultrakull\\lastLang.cfg", true);
 
-            string value = cfg.Bind("General", "LastLanguage", "en-GB").Value;
+            string value = configFile.Bind("General", "LastLanguage", "en-GB").Value;
+            string dubValue = configFile.Bind("General","activeDubbing","False").Value;
+
             if (AllLanguages.ContainsKey(value))
             {
                 JsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Setting language to " + value);
@@ -33,8 +36,7 @@ namespace UltrakULL.json
 
         public static void DumpLastLanguage()
         {
-            ConfigFile cfg = new ConfigFile("BepInEx\\config\\ultrakull\\lastLang.cfg", true);
-            cfg.Bind("General", "LastLanguage", "en-GB").Value = CurrentLanguage.metadata.langName; // Thank you copilot
+            configFile.Bind("General", "LastLanguage", "en-GB").Value = CurrentLanguage.metadata.langName; // Thank you copilot
         }
 
         public static void LoadLanguages(string modVersion)

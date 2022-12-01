@@ -1,6 +1,7 @@
 ﻿using System;
 using HarmonyLib;
 using UltrakULL.audio;
+using UltrakULL.json;
 using UnityEngine;
 
 namespace UltrakULL.Harmony_Patches
@@ -11,6 +12,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void Mandalore_AudioSwap(Mandalore __instance)
         {
+            if(LanguageManager.configFile.Bind("General","activeDubbing","False").Value == "False")
+            {
+                return;
+            }
             Console.WriteLine("MandaVoicePatch starting");
         
             //Mandalore uses an array for MandaloreVoice.

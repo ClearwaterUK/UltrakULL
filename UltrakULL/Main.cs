@@ -54,12 +54,9 @@ using UMM;
  * UltraTweaker not always being detected for cross-mod fix? (can't replicate on my end)
  * Main menu problem with button patching
  *
- * Currently working on audio swapper for 1.1
+ * Audio dubbing documentation
  *
- * Add button to enable/disable audio swaps in Language tab
  *
- * Dialogue lines to swap:
- * MDK intro, 4-3
  *
  * 
  * */
