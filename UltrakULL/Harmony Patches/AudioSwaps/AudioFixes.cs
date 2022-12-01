@@ -20,17 +20,4 @@ namespace UltrakULL.Harmony_Patches
         }
         
     }
-    
-    //Fix for subtitle toggle always being affected by dubbing toggle.
-    [HarmonyPatch(typeof(OptionsMenuToManager),"SetSubtitles")]
-    public class OptionsSubtitleFixer
-    {
-        [HarmonyPrefix]
-        public static bool Options_SubtitleFix(ref bool state)
-        {
-            state = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("Canvas"),
-            "OptionsMenu"),"Audio Options"),"Image"),"Subtitles Checkbox").GetComponentInChildren<Toggle>().isOn;
-            return true;
-        }
-    }
 }

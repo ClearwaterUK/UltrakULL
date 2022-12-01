@@ -1,6 +1,7 @@
 ﻿1.1.0
 - **Added dialogue language support for spoken characters.**
 - Added a button to the audio options, which enables or disables dubbing of spoken characters. If disabled, characters will use the original English dialog.
+- Fixed an issue where mod/restart buttons on the main menu would require a language change to be translated.
 
 - Added the following lines to the JSON template:
 

@@ -61,27 +61,18 @@ namespace UltrakULL
                 quitButtontext.text = LanguageManager.CurrentLanguage.frontend.mainmenu_quit;
 
                 //UMM buttons
+
                 foreach (Transform a in titleObject.GetComponentsInChildren<Transform>())
                 {
-                    if(a.name == "Continue(Clone)")
+                    if(a.name == "ModsButton")
                     {
-                    
-                        Text ummButton = getTextfromGameObject(getGameObjectChild(a.gameObject, "Text"));
-                        switch(ummButton.text)
-                        {
-                            case "MODS":
-                            {
-                                a.name = "ModsButton";
-                                ummButton.text = LanguageManager.CurrentLanguage.frontend.mainmenu_mods; break;
-                            }
-                            case "RESTART":
-                            {
-                                a.name = "RestartButton";
-                                ummButton.text = LanguageManager.CurrentLanguage.frontend.mainmenu_restart; ; break;
-                            }
-                            default: {break; }
-                        }
-
+                        Text modsButtonText = getTextfromGameObject(getGameObjectChild(a.gameObject,"Text"));
+                        modsButtonText.text = LanguageManager.CurrentLanguage.frontend.mainmenu_mods;
+                    }
+                    if(a.name == "RestartButton")
+                    {
+                        Text restartButtonText = getTextfromGameObject(getGameObjectChild(a.gameObject,"Text"));
+                        restartButtonText.text = LanguageManager.CurrentLanguage.frontend.mainmenu_restart;
                     }
                 }
             }

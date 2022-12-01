@@ -153,19 +153,35 @@ namespace UltrakULL.Harmony_Patches
             }
             
             //Add toggle to the audio tab that allows for enabling/disabling of swapping for spoken dialogue.
+            //Instantiate from the original subtitles panel, but the toggle will need to be swapped for a new one, otherwise it will also toggle subtitles.
+            
             GameObject originalSlider = optionsParent.Find("Audio Options/Image/Subtitles Checkbox").gameObject;
+            Toggle originalToggle = getGameObjectChild(originalSlider,"Toggle").GetComponentInChildren<Toggle>();
             
             GameObject dubSlider = GameObject.Instantiate(originalSlider, optionsParent.Find("Audio Options/Image"));
             dubSlider.GetComponent<RectTransform>().anchoredPosition = new Vector2(300f, -225f);
             dubSlider.name = "Dialogue Dub";
+            
+            Toggle oldToggle = getGameObjectChild(dubSlider,"Toggle").GetComponentInChildren<Toggle>();
+            oldToggle.enabled = false;
+            
+            Toggle dubToggle = dubSlider.AddComponent<Toggle>();
+            dubToggle.enabled = true;
+            dubToggle.transform.localPosition = oldToggle.transform.localPosition;
 
-            Toggle dubToggle = getGameObjectChild(dubSlider,"Toggle").GetComponentInChildren<Toggle>();
             dubToggle.isOn = Convert.ToBoolean(LanguageManager.configFile.Bind("General", "activeDubbing", "False").Value);
-            dubToggle.onValueChanged.RemoveAllListeners();
+            GameObject toggleCheckmark = getGameObjectChild(getGameObjectChild(dubSlider,"Toggle"),"Background");
+            
+            if(dubToggle.isOn) { toggleCheckmark.SetActive(true); }
+            else { toggleCheckmark.SetActive(false); }
+            
             dubToggle.onValueChanged.AddListener(delegate
             {
                 LanguageManager.configFile.Bind("General", "activeDubbing", "False").Value = dubToggle.isOn.ToString();
+                if(dubToggle.isOn) { toggleCheckmark.SetActive(true); }
+                else { toggleCheckmark.SetActive(false); }
             });
+            
             try
             {
                 getTextfromGameObject(getGameObjectChild(dubSlider,"Text")).text = LanguageManager.CurrentLanguage.options.audio_dubbing;

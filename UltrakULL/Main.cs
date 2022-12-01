@@ -52,7 +52,6 @@ using UMM;
  * Fix up errors and typos in English template
  * 
  * UltraTweaker not always being detected for cross-mod fix? (can't replicate on my end)
- * Main menu problem with button patching
  *
  * Audio dubbing documentation
  *
@@ -555,7 +554,6 @@ namespace UltrakULL
 
         public void PostInitPatches(GameObject frontEnd)
         {
-
             StartCoroutine(applyPostFixes(frontEnd));
         }
 
@@ -571,22 +569,49 @@ namespace UltrakULL
             openLangFolderText.text = LanguageManager.CurrentLanguage.options
             .language_openLanguageFolder;
 
-            //Translate mods/restart buttons here.
-            
+            //Get the mods/restart buttons...
+            GameObject ummModsButton = null;
+            GameObject ummRestartButton = null;
+
             if(SceneManager.GetActiveScene().name == "Main Menu")
             {
                 GameObject titleObject = getGameObjectChild(frontEnd, "Main Menu (1)");
-            
-                //Mods button
-                Text restartButtontext = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "RestartButton"), "Text"));
-                if(restartButtontext != null){restartButtontext.text = LanguageManager.CurrentLanguage.frontend.mainmenu_restart;}
 
-                //Restart button
-                Text modsButtontext = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "ModsButton"), "Text"));
-                if(modsButtontext != null) {modsButtontext.text = LanguageManager.CurrentLanguage.frontend.mainmenu_mods;}
+                foreach (Transform a in titleObject.GetComponentsInChildren<Transform>())
+                {
+                    if(a.name == "Continue(Clone)")
+                    {
+                        Text ummButton = getTextfromGameObject(getGameObjectChild(a.gameObject, "Text"));
+                        switch(ummButton.text)
+                        {
+                            case "MODS":
+                            {
+                                a.name = "ModsButton";
+                                ummModsButton = a.gameObject;
+                                break;
+                            }
+                            case "RESTART":
+                            {
+                                a.name = "RestartButton";
+                                ummRestartButton = a.gameObject;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            //...and from here we can translate the UMM buttons.
+            if(ummModsButton && ummRestartButton)
+            {
+                Text ummModsText = getTextfromGameObject(getGameObjectChild(ummModsButton,"Text"));
+                ummModsText.text = LanguageManager.CurrentLanguage.frontend.mainmenu_mods;
+                
+                Text ummRestartText = getTextfromGameObject(getGameObjectChild(ummRestartButton,"Text"));
+                ummRestartText.text = LanguageManager.CurrentLanguage.frontend.mainmenu_restart;
             }
 
-            //Check for any other mods that are loaded that might cause conflicts. If so, do some stuff.
+            //Check for any other mods that are loaded that might cause conflicts. If so, apply cross-mod patches and changes.
             Console.WriteLine("Scanning for mods...");
 
             ModInformation[] loadedMods = UKAPI.GetAllLoadedModInformation();
@@ -594,15 +619,13 @@ namespace UltrakULL
             {
                 if (mod.modName == "ULTRAKILLtweaker")
                 {
-                    Console.WriteLine("UltraTweaker detected, doing stuff");
+                    Console.WriteLine("UltraTweaker detected, applying options patch");
                     StartCoroutine(UltraTweakerPatch());
                 }
             }
-
         }
-        
-        
-        //Entry point for the patch.
+
+        //Entry point for the mod.
         public void Awake()
         {
             //Debug.unityLogger.filterLogType = LogType.Exception;
@@ -618,8 +641,6 @@ namespace UltrakULL
                 harmony.PatchAll();
 
                 Debug.Log(" --- All done. Enjoy! ---");
-                
-
 
                 SceneManager.sceneLoaded += onSceneLoaded;
                 
@@ -629,7 +650,6 @@ namespace UltrakULL
             {
                 Debug.Log("An error occured while initialising.");
                 Console.WriteLine(e.ToString());
-                return;
             }
         }
     }
