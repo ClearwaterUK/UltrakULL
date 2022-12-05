@@ -44,19 +44,21 @@ using UMM;
  * - Options->Sandbox icons names (Can't seem to get the dropdown data inside of the gameObject it's linked to - keeps saying 0 elements but when viewed manually in UnityExplorer it shows them)
  * 
  *  -- STUFF REPORTED BY ULL TEAM --
+ *
+ * Done button on audio calibration in tutorial not translated
+ * Challenge panels for locked + unlocked&not completed levels not translating
  * 
  *  -- FOR NEXT HOTFIX --
  *  
- *  Add Russian translation to default languages
  *  Add download buttons to Github readme for finished languages
  * Fix up errors and typos in English template
  * 
  * UltraTweaker not always being detected for cross-mod fix? (can't replicate on my end)
  *
  * Audio dubbing documentation
+ * Subtitle data - each subtitle has a value in seconds - represents how long to wait before displaying that subtitle
  *
- *
- *
+ * Update checker - GET request to GitHub API with username and name of repo, JSON will contain latest release version
  * 
  * */
 
