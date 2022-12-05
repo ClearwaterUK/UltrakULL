@@ -194,6 +194,7 @@
     <Compile Include="Harmony Patches\VariationInfo.cs" />
     <Compile Include="json\LanguageManager.cs" />
     <Compile Include="Harmony Patches\LanguageOptions.cs" />
+    <Compile Include="json\UpdateInfo.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="HUDMessages.cs" />
     <Compile Include="Intermission.cs" />

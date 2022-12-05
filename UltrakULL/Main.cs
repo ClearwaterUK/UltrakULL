@@ -4,7 +4,9 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using System.Net.Http;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 using UltrakULL.json;
 
 using static UltrakULL.CommonFunctions;
@@ -54,8 +56,6 @@ using UMM;
  * UltraTweaker not always being detected for cross-mod fix? (can't replicate on my end)
  *
  * Audio dubbing documentation
- *
- * Update checker - GET request to GitHub API with username and name of repo, JSON will contain latest release version
  * 
  * */
 
@@ -70,11 +70,14 @@ namespace UltrakULL
         private GameObject ultrakullLogo = null;
 
         private bool ready = false;
+        private bool updateAvailable = false;
+        
         public Font vcrFont;
 
         public const string internalName = "clearwater.ultrakull.ultrakULL";
-        public const string internalVersion = "1.0.2";
-
+        public const string internalVersion = "1.0.1";
+        
+        private static readonly HttpClient client = new HttpClient();
 
         public MainPatch()
         {
@@ -389,18 +392,22 @@ namespace UltrakULL
                         if (ultrakullLogo != null)
                             GameObject.Destroy(ultrakullLogo);
                         ultrakullLogo = GameObject.Instantiate(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Title"), "Text"), frontEnd.transform);
-                        ultrakullLogo.transform.localPosition = new Vector3(1025, -425, 0);
+                        ultrakullLogo.transform.localPosition = new Vector3(1075, 210, 0);
                         Text ultrakullLogoText = getTextfromGameObject(ultrakullLogo);
                         ultrakullLogoText.text = "ultrakULL loaded.\nVersion: " + internalVersion + "\nCurrent locale: " + LanguageManager.CurrentLanguage.metadata.langName;
                         ultrakullLogoText.alignment = TextAnchor.UpperLeft;
                         ultrakullLogoText.fontSize = 16;
+                        
                         //Get the font
                         this.vcrFont = ultrakullLogoText.font;
 
+                        if(updateAvailable)
+                        {
+                            ultrakullLogoText.text += "\n<color=lime>UPDATE AVAILABLE!</color>";
+                        }
                         if (!LanguageManager.FileMatchesMinimumRequiredVersion(LanguageManager.CurrentLanguage.metadata.minimumModVersion, internalVersion))
                         {
-                            ultrakullLogoText.text += "\n<color=orange>WARNING - Outdated language\nloaded.</color>\nCheck console\n & use at your own risk!";
-                            ultrakullLogo.transform.localPosition = new Vector3(1025, -350, 0);
+                            ultrakullLogoText.text += "\n<color=orange>Outdated language\nloaded.\nCheck console and\nuse at your own risk!</color>";
                         }
 
                         this.addModCredits(frontEnd);
@@ -623,6 +630,37 @@ namespace UltrakULL
                 }
             }
         }
+        
+        public async Task checkForUpdates()
+        {
+            client.DefaultRequestHeaders.Accept.Add( new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.UserAgent.TryParseAdd("request");
+            client.Timeout = TimeSpan.FromSeconds(5);
+            string updateUrl = "https://api.github.com/repos/clearwatertm/ultrakull/releases/latest";
+            try
+            {
+                string responseJsonRaw = await client.GetStringAsync(updateUrl);
+                
+                UpdateInfo responseJson = JsonConvert.DeserializeObject<UpdateInfo>(responseJsonRaw);
+                Console.WriteLine("Latest version on GitHub: " + responseJson.tag_name.Substring(1));
+                Console.WriteLine("Current local version: " + internalVersion);
+                
+                Version onlineVersion = new Version(responseJson.tag_name.Substring(1));
+                Version localVersion = new Version(internalVersion);
+                
+                switch(localVersion.CompareTo(onlineVersion))
+                {
+                    case -1: {Console.WriteLine("NEWER VERSION AVAILABLE ON GITHUB!");this.updateAvailable = true; break;}
+                    default: {Console.WriteLine("No newer version detected. Assuming current version is up to date."); this.updateAvailable = false;break;}
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString()); 
+            }
+
+            
+        }
 
         //Entry point for the mod.
         public void Awake()
@@ -632,6 +670,11 @@ namespace UltrakULL
             Debug.Log("Version: " + internalVersion);
             try
             {
+            
+            
+                Debug.Log("--- Checking for updates ---");
+                checkForUpdates();
+            
                 Debug.Log("--- Initializing JSON parser ---");
                 initJsonParser();
                 Debug.Log("--- Patching vanilla game functions ---");
