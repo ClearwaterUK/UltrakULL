@@ -4,6 +4,15 @@ This document serves to record and categorize technical information and data reg
 
 # Original dialog
 
+Information about lines that use multiple subtitles, or work in a certain way, have their information noted in below tables to assist with audio assembly.
+
+| Voice line                 | Subtitle delay (in seconds)                                                                                                                                                                                                                                                                               | Other notes                                                 |
+|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
+| The name of the voice line | The amount of time seconds that passes before the next subtitle relevant to the line is played. Timestamps are relative to the beginning of the file. Example: (0.5;2.0) means the first subtitle will display 0.5 seconds after the start; the second subtitle will display 2.0 seconds after the start. | Any other particular notes relevant to the line in question |
+
+
+
+
 ## 3-2: "IN THE FLESH"
 
 | Voice line       | Subtitle delay (in seconds) | Other notes                                                    |
@@ -56,6 +65,25 @@ For example, 2 lines may have the same linked subtitles, but one line may have a
 | minosPrime_deathScream |                                                      | This line plays *immediately* after minosPrime_defeated, instead of waiting for the relevant point in his death animation. |
 
 
+___
+
+
 # Dubbed dialog
 
-Audio format used: WAV, 352kHz
+## Adding your own audio files
+
+Audio files should be in .wav format, 352kHz. Depending on compatability, feedback and future updates, the audio format used may change in future.
+
+
+# Where to place audio files
+
+UltrakULL expects audio files for characters to be found in: <br>
+BepInEx/config/ultrakull/audio/[languageName] .
+
+**Example** for French/Français (uses FR-fr):
+
+<img src="https://cdn.discordapp.com/attachments/472691871806652429/1049359697985163335/image.png" alt="drawing" width="650"/>
+
+
+If UltrakULL is unable to load these files for any reason, the spoken language will default back to English.
+

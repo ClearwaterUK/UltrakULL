@@ -53,6 +53,13 @@ namespace UltrakULL.Harmony_Patches
                     }
                 }
             }
+            else
+            {
+
+                Text componentInChildren3 = __instance.challengeIcon.GetComponentInChildren<Text>();
+                componentInChildren3.text = String.Join(" ", LanguageManager.CurrentLanguage.frontend.level_challenge.ToList()); //Challenge not completed
+                componentInChildren3.color = Color.white;
+            }
             return;
         }
     }

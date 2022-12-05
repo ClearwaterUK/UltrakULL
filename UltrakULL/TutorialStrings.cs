@@ -111,6 +111,9 @@ namespace UltrakULL
 
                 Text calibrationAudioDone = getTextfromGameObject(getGameObjectChild(getGameObjectChild(calibrationAudioWindow, "Bone (1)"), "Text"));
                 calibrationAudioDone.text = LanguageManager.CurrentLanguage.shop.shop_colorsDone;
+                
+                Text calibrationAudioDoneAlt = getTextfromGameObject(getGameObjectChild(getGameObjectChild(calibrationAudioWindow, "Done"), "Text"));
+                calibrationAudioDoneAlt.text = LanguageManager.CurrentLanguage.shop.shop_colorsDone;
 
                 //Audio warning
                 Text calibrationAudioWarningPrompt = getTextfromGameObject(getGameObjectChild(calibrationAudioWindowWarning, "Text"));

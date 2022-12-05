@@ -3,6 +3,9 @@
 - Added a button to the audio options, which enables or disables dubbing of spoken characters. If disabled, characters will use the original English dialog.
 - Fixed an issue where mod/restart buttons on the main menu would require a language change to be translated.
 
+- Fixed the "Done" button not being translated in the audio calibration prompt on the tutorial.
+- Fixed challenge buttons of unlocked+not completed & locked levels not being translated.
+
 - Added the following lines to the JSON template:
 
 options: audio_dubbing
