@@ -31,7 +31,7 @@ using UMM;
  *  -- LESS IMPORTANT STUFF FOR FUTURE UPDATES --
  *  - Cheat teleport menu
  *  - Terminals before bosses in levels (could copy the shop that's in the start of each level)
- *  - Look into how I can do encoding for RTL languages such as Arabic
+ *  - Look into how I can do encoding for RTL languages such as Arabic (https://github.com/Konash/arabic-support-unity/ - could be useful)
  *  - Next game update scheduled for early 2023. P-2, 5-S and green rocket launcher
  *  - Could be possible to swap out rank textures in HUD for translation. Shall look into later
  *  - Attempt to replace the default font with a version that has better special char + cyrillic support
@@ -56,6 +56,7 @@ using UMM;
  * UltraTweaker not always being detected for cross-mod fix? (can't replicate on my end)
  *
  * Audio dubbing documentation
+ * Add original English files to English folder
  * 
  * */
 
@@ -71,6 +72,7 @@ namespace UltrakULL
 
         private bool ready = false;
         private bool updateAvailable = false;
+        private bool updateFailed = false;
         
         public Font vcrFont;
 
@@ -344,10 +346,6 @@ namespace UltrakULL
         //Most of the hook logic and checks go in this function.
         public void onSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            //patchScene();
-            
-            //Wait a bit to allow any other loaded mods to place their GameObjects down so we can manipulate them as need be afterwards.
-            //yield return new WaitForSeconds(0.10f);
 
             Console.WriteLine("Beginning patch");
 
@@ -404,10 +402,24 @@ namespace UltrakULL
                         if(updateAvailable)
                         {
                             ultrakullLogoText.text += "\n<color=lime>UPDATE AVAILABLE!</color>";
+                            
+                            //Make an update button
+                            GameObject buttonBase= getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd,"Main Menu (1)"),"Panel"),"Youtube");
+                            
+                            GameObject ultrakullUpdateButton = GameObject.Instantiate(buttonBase,buttonBase.transform.parent);
+                            ultrakullUpdateButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(185, 0f);
+                            ultrakullUpdateButton.GetComponentInChildren<Image>().color = new Color(0,1,0,1);
+                            ultrakullUpdateButton.GetComponentInChildren<Text>().text = "VIEW UPDATE";
+                            ultrakullUpdateButton.GetComponentInChildren<WebButton>().url = "https://github.com/ClearwaterTM/UltrakULL/releases/latest";
+
                         }
                         if (!LanguageManager.FileMatchesMinimumRequiredVersion(LanguageManager.CurrentLanguage.metadata.minimumModVersion, internalVersion))
                         {
                             ultrakullLogoText.text += "\n<color=orange>Outdated language\nloaded.\nCheck console and\nuse at your own risk!</color>";
+                        }
+                        else if (!(updateAvailable) && updateFailed)
+                        {
+                            ultrakullLogoText.text += "\n<color=red>Unable to check for updates. Check console for info.</color>";
                         }
 
                         this.addModCredits(frontEnd);
@@ -656,7 +668,10 @@ namespace UltrakULL
             }
             catch (Exception e)
             {
+                Console.WriteLine("Unable to acquire version info from GitHub.");
                 Console.WriteLine(e.ToString()); 
+                updateAvailable = false;
+                updateFailed = true;
             }
 
             
