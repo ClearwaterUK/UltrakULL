@@ -345,9 +345,6 @@ namespace UltrakULL
         //Most of the hook logic and checks go in this function.
         public void onSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-
-            Console.WriteLine("Beginning patch");
-
             if (!this.ready || LanguageManager.CurrentLanguage == null)
             {
                 Debug.Log("Not ready for patching");
@@ -546,7 +543,6 @@ namespace UltrakULL
                             {
                                 Console.WriteLine("Should be able to submit CG highscores");
                                 
-                                Console.WriteLine((UKAPI.ShouldSubmitCyberGrindScore()));
                             }
                             else
                             {

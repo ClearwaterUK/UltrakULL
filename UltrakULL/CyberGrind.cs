@@ -172,11 +172,8 @@ namespace UltrakULL
 
             //Customize theme
             GameObject cgCustomTheme = getGameObjectChild(getGameObjectChild(cgTerminal, "Custom"),"Panel");
-            Console.WriteLine("cgCustomThemeTitle");
             Text cgCustomThemeTitle = getTextfromGameObject(getGameObjectChild(cgCustomTheme, "Title"));
             cgCustomThemeTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesModify;
-
-
 
 
             Text cgCustomGrid = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(cgCustomTheme, "ModeButtonWrapper"),"BlockTopButton"),"Text"));

@@ -1,5 +1,5 @@
 ﻿1.1.0
-- **Added dialogue language support for spoken characters.**
+- **Added dialogue language support for spoken characters.** Documentation on how to add your own lines can be found on the GitHub. https://github.com/ClearwaterTM/UltrakULL/blob/1.1.0/UltrakULL/docs/Dubbing.md
 - Added a button to the audio options, which enables or disables dubbing of spoken characters. If disabled, characters will use the original English dialog.
 - Added a basic update checker. If a newer version of UltrakULL is detected on the GitHub, a message will display on the main menu, as well as a button to 
 obtain the update.

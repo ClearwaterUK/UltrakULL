@@ -32,8 +32,6 @@ namespace UltrakULL
             }
             else
             {
-                Console.WriteLine("Normal level");
-
                 shopObject = getGameObjectChild(getGameObjectChild(getGameObjectChild(coreGame, "Room"), "Shop"), "Canvas");
             }
 
