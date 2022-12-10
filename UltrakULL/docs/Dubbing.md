@@ -15,12 +15,12 @@ Information about lines that use multiple subtitles, or work in a certain way, h
 
 ## 3-2: "IN THE FLESH"
 
-| Voice line       | Subtitle delay (in seconds) | Other notes                                                    |
-|------------------|-----------------------------|----------------------------------------------------------------|
-| gabriel_intro1   | 1.2;2.4;5.1;10;7            | 1.2 seconds of echo fade-in at start                           |
-| gabriel_intro2   | 0.1;2.8;5.85;10.15          |                                                                |
-| gabriel_defeated | 0.1;1.4;4.15;6.4;9.2;13     |                                                                |
-| gabriel_outro    | 0.3,3.3                     | Reverb effect is done by the ggame, no need to add it in clips |
+| Voice line       | Subtitle delay (in seconds) | Other notes                                                   |
+|------------------|-----------------------------|---------------------------------------------------------------|
+| gabriel_intro1   | 1.2;2.4;5.1;10;7            | 1.2 seconds of echo fade-in at start                          |
+| gabriel_intro2   | 0.1;2.8;5.85;10.15          |                                                               |
+| gabriel_defeated | 0.1;1.4;4.15;6.4;9.2;13     |                                                               |
+| gabriel_outro    | 0.3,3.3                     | Reverb effect is done by the game, no need to add it in clips |
 
 ## 4-3: "A SHOT IN THE DARK"
 
@@ -38,9 +38,9 @@ For example, 2 lines may have the same linked subtitles, but one line may have a
 
 ### 5-3: "SHIP OF FOOLS"
 
-| Voice line       | Subtitle delay (in seconds) | Other notes                    |
-|------------------|-----------------------------|--------------------------------|
-| gabriel_hologram | 0.0;2.0;5.0;6.5;9.5         | Rewinds and repeats at the end |
+| Voice line       | Subtitle delay (in seconds) | Other notes                                                       |
+|------------------|-----------------------------|-------------------------------------------------------------------|
+| gabriel_hologram | 0.0;2.0;5.0;6.5;9.5         | Rewinds and repeats at the end, file contains rewind sound effect |
 
 ### 6-1: "CRY FOR THE WEEPER"
 
@@ -72,18 +72,18 @@ ___
 
 ## Adding your own audio files
 
-Audio files should be in .wav format, 352kHz. Depending on compatability, feedback and future updates, the audio format used may change in future.
+Audio files should be in .wav format. Depending on compatability, feedback and future updates, the audio format used may change in future.
 
 
 # Where to place audio files
 
 UltrakULL expects audio files for characters to be found in: <br>
-BepInEx/config/ultrakull/audio/[languageName] .
+**BepInEx/config/ultrakull/audio/[languageName]**.
 
 **Example** for French/Français (uses FR-fr):
 
 <img src="https://cdn.discordapp.com/attachments/472691871806652429/1049359697985163335/image.png" alt="drawing" width="650"/>
 
 
-If UltrakULL is unable to load these files for any reason, the spoken language will default back to English.
+If UltrakULL is unable to load a specific file for any reason, the spoken language for that line will default back to English.
 

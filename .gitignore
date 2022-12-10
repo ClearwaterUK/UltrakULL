@@ -373,3 +373,4 @@ FodyWeavers.xsd
 /Sprites/Checkmark.png
 /Build Directory.lnk
 /.gitattributes
+/audio/templates/*

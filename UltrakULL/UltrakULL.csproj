@@ -149,6 +149,15 @@
     </Move>
     <Message Text="DLL moved." Importance="High" />
   </Target>
+  <!-- Attempt to copy audio files from the templates to config/ultrakull/audio. Skip if fail. -->
+  <Target Name="MoveAudioFiles" AfterTargets="AfterBuild">
+    <ItemGroup>
+      <_CopyAudio Include="$(TargetDir)/../../audio/templates/**/*.*" />
+    </ItemGroup>
+    <Message Text="Moving audio files/folders to config/ultrakull/audio..." Importance="High" />
+    <Copy SourceFiles="@(_CopyAudio)" DestinationFolder="$(TargetDir)config/ultrakull/audio/%(RecursiveDir)"/>
+    <Message Text="Audio files/folders moved." Importance="High" />
+  </Target>
   <ItemGroup>
     <Compile Include="Act1.cs" />
     <Compile Include="Act1Strings.cs" />

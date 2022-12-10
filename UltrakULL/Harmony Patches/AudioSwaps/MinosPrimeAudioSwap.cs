@@ -18,7 +18,7 @@ namespace UltrakULL.Harmony_Patches
             string minosPrimeFolder =  AudioSwapper.speechFolder + "minosPrime\\";
             
             
-            //Overhead (Prepare thyself)
+            //Kicks (Prepare thyself)
             AudioClip[] minosPrimeKick = __instance.riderKickVoice;
             for(int x = 0; x < minosPrimeKick.Length; x++)
             {
@@ -32,7 +32,6 @@ namespace UltrakULL.Harmony_Patches
             {
                 string minosPrimeJudgementString = minosPrimeFolder + "minosPrimeJudgement" + (x+1).ToString() + ".wav";
                 minosPrimeJudgement[x] =  AudioSwapper.swapClipWithFile(minosPrimeJudgement[x], minosPrimeJudgementString);
-                
                 
             }
             

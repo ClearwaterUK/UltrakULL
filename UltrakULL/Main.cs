@@ -56,7 +56,6 @@ using UMM;
  * UltraTweaker not always being detected for cross-mod fix? (can't replicate on my end)
  *
  * Audio dubbing documentation
- * Add original English files to English folder
  * 
  * */
 
