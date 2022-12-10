@@ -61,7 +61,7 @@ using UMM;
 
 namespace UltrakULL
 {
-    [UKPlugin("UltrakULL (Ultrakill Language Library)","1.0.2","A localization and translation plugin for ULTRAKILL. Created by Clearwater.",true,false)]
+    [UKPlugin("UltrakULL (Ultrakill Language Library)","1.1.0","A localization and translation plugin for ULTRAKILL. Created by Clearwater.",true,false)]
 
     public class MainPatch : UKMod
     {
@@ -76,7 +76,7 @@ namespace UltrakULL
         public Font vcrFont;
 
         public const string internalName = "clearwater.ultrakull.ultrakULL";
-        public const string internalVersion = "1.0.1";
+        public const string internalVersion = "1.1.0";
         
         private static readonly HttpClient client = new HttpClient();
 
@@ -679,7 +679,7 @@ namespace UltrakULL
         //Entry point for the mod.
         public void Awake()
         {
-            //Debug.unityLogger.filterLogType = LogType.Exception;
+            Debug.unityLogger.filterLogType = LogType.Exception;
             Debug.Log("UltrakULL LOADING...");
             Debug.Log("Version: " + internalVersion);
             try
