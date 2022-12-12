@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using UltrakULL.audio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -146,7 +147,10 @@ namespace UltrakULL.json
             {
                 CurrentLanguage = AllLanguages[langName];
                 JsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Setting language to " + langName);
-                MainPatch.instance.onSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single); 
+                MainPatch.instance.onSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
+                LanguageManager.DumpLastLanguage();
+                AudioSwapper.speechFolder = Directory.GetCurrentDirectory() + "\\BepInEx\\config\\ultrakull\\audio\\" + LanguageManager.CurrentLanguage.metadata
+                    .langName + "\\";
             }
             else
                 JsonLogger.Log(BepInEx.Logging.LogLevel.Message, "No language found with name " + langName);

@@ -18,7 +18,7 @@ namespace UltrakULL.audio
         public static AudioClip swapClipWithFile(AudioClip sourceClip, string audioFilePath)
         {
             string file = "file://" + audioFilePath;
-            
+
             UnityWebRequest fileRequest = UnityWebRequestMultimedia.GetAudioClip(file,AudioType.WAV);
             fileRequest.SendWebRequest();
             try
@@ -47,6 +47,11 @@ namespace UltrakULL.audio
                 return;
             }
             //Since the makes a clone of the arena gameObject which is used, wait a small period of time for the new gameObject to be accessible before accessing it.
+            speechFolder = Directory.GetCurrentDirectory() + "\\BepInEx\\config\\ultrakull\\audio\\" + LanguageManager.CurrentLanguage.metadata
+                .langName + "\\";
+                        
+            Console.WriteLine("Current lang: " + LanguageManager.CurrentLanguage.metadata.langName);
+            Console.WriteLine(speechFolder);
             Console.WriteLine("Waiting before audioSwapper");
             await Task.Delay(250);
         

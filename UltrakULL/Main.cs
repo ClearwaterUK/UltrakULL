@@ -56,6 +56,8 @@ using UMM;
  * UltraTweaker not always being detected for cross-mod fix? (can't replicate on my end)
  *
  * Audio dubbing documentation
+ * Update templates to 1.1.0
+ * 
  * 
  * */
 

@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using System;
+using HarmonyLib;
 using UltrakULL.audio;
 using UltrakULL.json;
 using UnityEngine;
@@ -16,8 +17,8 @@ namespace UltrakULL.Harmony_Patches
                 return;
             }
             string minosPrimeFolder =  AudioSwapper.speechFolder + "minosPrime\\";
-            
-            
+
+
             //Kicks (Prepare thyself)
             AudioClip[] minosPrimeKick = __instance.riderKickVoice;
             for(int x = 0; x < minosPrimeKick.Length; x++)
