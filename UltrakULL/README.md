@@ -8,7 +8,7 @@
 
 **UltrakULL** (ULTRAKILL Language Library) is a modification (mod) for ULTRAKILL that allows for modification of the game's text strings,
 effectively allowing for translation and localization into various languages.\
-This mod's primary purpose is to bridge the gap for localization and translation until ULTRAKILL recieves official translations.
+This mod's primary purpose is to bridge the gap for localization and translation until ULTRAKILL receives official translations.
 
 # Features
 
@@ -17,6 +17,7 @@ This mod's primary purpose is to bridge the gap for localization and translation
 - JSON formatting of language files allows for easy-to-understand, simple-to-do modification of strings
 - Change languages directly in-game without having to restart
 - Languages are consistently developed and updated for a faithful localization and translation of the original game text
+- Dubbing support allows for translated spoken dialogue
 
 
 # Download
@@ -77,45 +78,48 @@ The installation section is divided into 3 parts:
 - Delete the winhttp.dll file from your ULTRAKILL install folder. This is the file used for BepInEx to hook into the game, and will not break your installation if it is removed.
 
 # Languages
-|   | Language                                 | Contributors                                                                                            | Status         | Available?         | Notes                                  |   |
-|---|------------------------------------------|---------------------------------------------------------------------------------------------------------|----------------|--------------------|----------------------------------------|---|
-|   | English (U.S)                            | Hakita & New Blood                                                                                      | Finished       | :heavy_check_mark: | Grammatical improvements by Clearwater |   |
-|   | French (Français)                        | Clearwater, ZedDev, Frizou, osokour                                                                     | Finished       | :heavy_check_mark: | French and Quebec variants available   |   |
-|   | Russian (русский)                        | Nessie_A_WA97, D4N5T3P, Edith Bagel, lrddd, Brainy-Stormie, TwinT, towelie84, mctaylors, Solidus Cumcer | Finished       | :heavy_check_mark: |                                        |   |
-|   | Spanish (Español)                        | LambCS, Philia, Lukah, Amarok_Lc, Radripizza, j(LRC), LEVIBOT                                           | Finished       | :heavy_check_mark: |                                        |   |
-|   |                                          |                                                                                                         |                |                    |                                        |   |
-|   | Arabic                                   | riko, hamza666                                                                                          | In development | :x:                |                                        |   |
-|   | Brazilian Portugese (Portugês do Brasil) | Veni, Jackie, MKaid, hebert, FNChannel, Spooky, Soulvender, RAYLANDER                                   | In development | :x:                |                                        |   |
-|   | Belarusian (беларуска)                   | Kiberkotleta                                                                                            | In development | :x:                |                                        |   |
-|   | Czech (Čeština)                          | Mina                                                                                                    | In development | :x:                |                                        |   |
-|   | Dutch (Nederlands)                       | HIMkoto                                                                                                 | In development | :x:                |                                        |   |
-|   | Filipino (Pilipino)                      | mxkyle                                                                                                  | In development | :x:                |                                        |   |
-|   | German (Deutsch)                         | Distrilul, JESTERB0T, Liquid Lest                                                                       | In development | :x:                |                                        |   |
-|   | Greek (Ελληνικά)                         | Mi pro                                                                                                  | In development | :x:                |                                        |   |
-|   | Hungarian (Magyar)                       | B3n, csigachad                                                                                          | In development | :x:                |                                        |   |
-|   | Italian (Italiano)                       | Dav, SimonLuck31, Paolotto Games, Cammen, snp, ImmortalChanger                                          | In development | :x:                |                                        |   |
-|   | Indonesian (Bahasa Indonesia)            | Arif “Fry” Siregar, mulfok                                                                              | In development | :x:                |                                        |   |
-|   | Japanese (日本語)                        | sc1zzla                                                                                                 | In development | :x:                |                                        |   |
-|   | Portugese (Portugês)                     | Toyota AE86, GamerGeb                                                                                   | In development | :x:                |                                        |   |
-|   | Polish (Polski)                          | SmallSeaCat, Fikou, filizanka, Patryk, Spookz, owaloid                                                  | In development | :x:                |                                        |   |
-|   | Romanian (Românesc)                      | Vampuffin                                                                                               | In development | :x:                |                                        |   |
-|   | Simplified Chinese (简体中文)            | Hydracerynitis, ciinore, duke325, ponyweeb, Skugra, GoGoblin                                            | In development | :x:                |                                        |   |
-|   | Thai (ภาษาไทย)                           | Skugra, Winterman                                                                                       | In development | :x:                |                                        |   |
-|   | Turkish (Türkçe)                         | Jule Axus, Legitname1337, Ömer Talha, RTE, Ray_                                                         | In development | :x:                |                                        |   |
-|   | Traditional Chinese(繁體中文)            | GuonuoTW(SmallNo), duke325                                                                              | In development | :x:                |                                        |   |
-|   | Ukrainian (Українська)                   | Rafunny, Blitzo, Keka, ArtSabs, ak11, the ukrainian war drone, CsyeCok The Soldier                      | In development | :x:                |                                        |   |
-|   | Vietnamese (Tiếng Việt)                  | TimmyThePea, honkscape, Jerry                                                                           | In development | :x:                |                                        |   |
-|   | Australian English                       | nptnk, FORTY7OUT                                                                                        | In development | :x:                |                                        |   |
-
+| Language                                 | Contributors                                                                                            | Status         | Available?         | Notes                                  |
+|------------------------------------------|---------------------------------------------------------------------------------------------------------|----------------|--------------------|----------------------------------------|
+| English (U.S)                            | Hakita & New Blood                                                                                      | Finished       | :heavy_check_mark: | Grammatical improvements by Clearwater |
+| French (Français)                        | Clearwater, ZedDev, Frizou, osokour                                                                     | Finished       | :heavy_check_mark: | French and Quebec variants available   |
+| Russian (русский)                        | Nessie_A_WA97, D4N5T3P, Edith Bagel, lrddd, Brainy-Stormie, TwinT, towelie84, mctaylors, Solidus Cumcer | Finished       | :heavy_check_mark: |                                        |
+| Spanish (Español)                        | LambCS, Philia, Lukah, Amarok_Lc, Radripizza, j(LRC), LEVIBOT                                           | Finished       | :heavy_check_mark: |                                        |
+| Turkish (Türkçe)                         | Legitname1337, Ömer Talha, RTE, Ray_, legio, Scape                                                      | Finished       | :heavy_check_mark: |                                        |
+|                                          |                                                                                                         |                |                    |                                        |
+| Arabic                                   | riko, hamza666                                                                                          | In development | :x:                |                                        |
+| Brazilian Portugese (Portugês do Brasil) | Veni, Jackie, MKaid, hebert, FNChannel, Spooky, Soulvender, RAYLANDER                                   | In development | :x:                |                                        |
+| Bulgarian (Bălgarski)                    | Dan                                                                                                     | In development | :x:                |                                        |
+| Belarusian (беларуска)                   | Kiberkotleta                                                                                            | In development | :x:                |                                        |
+| Czech (Čeština)                          | Mina,Term                                                                                               | In development | :x:                |                                        |
+| Danish (Dansk)                           | OrangeField                                                                                             | In development | :x:                |                                        |
+| Dutch (Nederlands)                       | HIMkoto                                                                                                 | In development | :x:                |                                        |
+| Finnish (Suomi)                          | GoreDemon, FracturedStar, troingle                                                                      | In development | :x:                |                                        |
+| Filipino (Pilipino)                      | mxkyle                                                                                                  | In development | :x:                |                                        |
+| German (Deutsch)                         | Distrilul, JESTERB0T, Liquid Lest, Psychologemelone44, Termi2, Fabidelune                               | In development | :x:                |                                        |
+| Greek (Ελληνικά)                         | Mi pro, Flaps, NICKOLAS78GR                                                                             | In development | :x:                |                                        |
+| Hungarian (Magyar)                       | csigachad                                                                                               | In development | :x:                |                                        |
+| Italian (Italiano)                       | Dav, SimonLuck31, Paolotto Games, Cammen, snp, ImmortalChanger                                          | In development | :x:                |                                        |
+| Indonesian (Bahasa Indonesia)            | Arif “Fry” Siregar, mulfok, Yume                                                                        | In development | :x:                |                                        |
+| Korean (한국어)                          | ARSE™                                                                                                   | In development | :x:                |                                        |
+| Japanese (日本語)                        | sc1zzla                                                                                                 | In development | :x:                |                                        |
+| Portugese (Portugês)                     | Toyota AE86, GamerGeb                                                                                   | In development | :x:                |                                        |
+| Polish (Polski)                          | SmallSeaCat, Fikou, filizanka, Patryk, Spookz, owaloid                                                  | In development | :x:                |                                        |
+| Romanian (Românesc)                      | Vampuffin, Rokon                                                                                        | In development | :x:                |                                        |
+| Simplified Chinese (简体中文)            | Hydracerynitis, ciinore, duke325, ponyweeb, Skugra, GoGoblin                                            | In development | :x:                |                                        |
+| Thai (ภาษาไทย)                           | Skugra, Winterman, SAPAIDER                                                                             | In development | :x:                |                                        |
+| Traditional Chinese(繁體中文)            | GuonuoTW(SmallNo), duke325                                                                              | In development | :x:                |                                        |
+| Ukrainian (Українська)                   | Rafunny, Blitzo, Keka, ArtSabs, ak11, the ukrainian war drone, CsyeCok The Soldier, twrp                | In development | :x:                |                                        |
+| Vietnamese (Tiếng Việt)                  | TimmyThePea, honkscape, Jerry, null                                                                     | In development | :x:                |                                        |
+| Australian English                       | nptnk, FORTY7OUT                                                                                        | In development | :x:                |                                        |
 
 # Documentation
 
-GitHub documentation coming soon. Until then, documentation on how to create your own language
+GitHub documentation coming in future. Until then, documentation on how to create your own language
 can be found in the [UltrakULL Discord.](https://discord.gg/ZB7jk6Djv5)
 
 # Building
 
-Build instructions coming soon.
+Build instructions coming in future.
 
 # Troubleshooting
 
@@ -179,6 +183,7 @@ displaying HUD messages that UltrakULL does not correctly show.
 # Credits & Contributors
 UltrakULL created by **[Clearwater](https://github.com/ClearwaterTM)**\
 Additional code contributions by **[Temperz87](https://github.com/Temperz87/)**\
+Documentation contributions by Frizou.
 Language translations by members of the **UltrakULL Translation Team** \
 (view the [Languages](#Languages) section for full information and crediting)\
 ULTRAKILL created by **Arsi 'Hakita' Patala** and published by **New Blood Interactive**
