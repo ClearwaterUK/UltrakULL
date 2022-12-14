@@ -47,8 +47,6 @@ namespace UltrakULL
 
             todShopLoadingText.text = LanguageManager.CurrentLanguage.misc.loading;
 
-
-
         }
 
         public Sandbox()

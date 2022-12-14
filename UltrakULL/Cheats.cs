@@ -60,6 +60,10 @@ namespace UltrakULL
 
             //Text cheatsEnabledConfirmationButtonsText = CommonFunctions.getTextfromGameObject(CommonFunctions.getGameObjectChild(cheatsEnabledConfirmationObject, "Details Tip"));
             //cheatsEnabledConfirmationButtonsText.text = "HOME ou ~";
+            
+            //Teleport menu title
+            Text cheatsTeleportMenuTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas,"Cheat Menu"),"Cheats Teleport"),"Title"));
+            cheatsTeleportMenuTitle.text = LanguageManager.CurrentLanguage.cheats.cheats_teleportMenu;
         }
 
         public static string getCheatStatus(string cheatStatus)

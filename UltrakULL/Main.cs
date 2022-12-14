@@ -18,7 +18,7 @@ using UMM;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater, additional code contributions by Temperz87, translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 24th November 2022
+ *	Last updated: 14th December 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
@@ -29,10 +29,9 @@ using UMM;
  *  - Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
  * 
  *  -- LESS IMPORTANT STUFF FOR FUTURE UPDATES --
- *  - Cheat teleport menu
  *  - Terminals before bosses in levels (could copy the shop that's in the start of each level)
  *  - Look into how I can do encoding for RTL languages such as Arabic (https://github.com/Konash/arabic-support-unity/ - could be useful)
- *  - Next game update scheduled for early 2023. P-2, 5-S and green rocket launcher
+ *  - Next game update scheduled for early 2023. P-2, 5-S, radient enemies and green rocket launcher
  *  - Could be possible to swap out rank textures in HUD for translation. Shall look into later
  *  - Attempt to replace the default font with a version that has better special char + cyrillic support
  *  
@@ -56,7 +55,8 @@ using UMM;
  * UltraTweaker not always being detected for cross-mod fix? (can't replicate on my end)
  *
  * Audio dubbing documentation
- * Update templates to 1.1.0
+ *
+ * Async exception that occasionally happens, need to track down and fix
  * 
  * 
  * */
