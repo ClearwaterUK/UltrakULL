@@ -18,7 +18,7 @@ using UMM;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater, additional code contributions by Temperz87, translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 14th December 2022
+ *	Last updated: 15th December 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
@@ -28,34 +28,24 @@ using UMM;
  *  - Error and exception handling
  *  - Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
  * 
- *  -- LESS IMPORTANT STUFF FOR FUTURE UPDATES --
- *  - Look into how I can do encoding for RTL languages such as Arabic (https://github.com/Konash/arabic-support-unity/ - could be useful)
+ *  -- STUFF FOR FUTURE UPDATES --
  *  - Next game update scheduled for early 2023. P-2, 5-S, radient enemies and green rocket launcher
- *  - Could be possible to swap out rank textures in HUD for translation. Shall look into later
- *  - Attempt to replace the default font with a version that has better special char + cyrillic support
- *  
+ *  - Look into how I can do encoding for RTL languages such as Arabic (https://github.com/Konash/arabic-support-unity/ - could be useful)
+ *  - Swap out rank textures in HUD for translation
+ *  - Replace the default font with a version that has better special char + cyrillic support
  *  
  *  -- BUGS AND QUIRKS TO FIX --
  * - Misc keys as strings (comma, period, etc) missing
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable a patched function by returning true if an exception happens there, will then use original game code.
- * 
  * - Options->Sandbox icons names (Can't seem to get the dropdown data inside of the gameObject it's linked to - keeps saying 0 elements but when viewed manually in UnityExplorer it shows them)
  * 
  *  -- STUFF REPORTED BY ULL TEAM --
- *
  * 
  *  -- FOR NEXT HOTFIX --
- *  
  * Fix up errors and typos in English template that are reported
- * 
- * UltraTweaker not always being detected for cross-mod fix? (can't replicate on my end)
- *
- * Audio dubbing documentation
- *
- * Async exception that occasionally happens, need to track down and fix
- * 
- * 
+ * UltraTweaker not always being detected for cross-mod fix? (tentative fix, shall need to monitor)
+ * Finish audio dubbing documentation
  * 
  * */
 
