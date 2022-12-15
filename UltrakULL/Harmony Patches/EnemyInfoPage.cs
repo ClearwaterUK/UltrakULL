@@ -19,7 +19,7 @@ namespace UltrakULL.Harmony_Patches
             string enemyStrategy = EnemyBios.getStrategy(source.objectName);
 
             ___enemyPageTitle.text = enemyName;
-            string text = "<color=orange>" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_type + ": " + enemyType + "\n\n" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_data + "</color>\n";
+            string text = "<color=orange>" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_type + ": " + enemyType + "\n\n" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_data + ":</color>\n";
             if (MonoSingleton<BestiaryData>.Instance.GetEnemy(source.enemyType) > 1)
             {
                 text += enemyDescription;
