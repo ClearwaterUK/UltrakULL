@@ -39,7 +39,6 @@ using UMM;
  * - Misc keys as strings (comma, period, etc) missing
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable a patched function by returning true if an exception happens there, will then use original game code.
- * - Freshness not translated in tutorial (ridiculously minor, I personally don't see a need to patch it but will leave here anyways)
  * 
  * - Options->Sandbox icons names (Can't seem to get the dropdown data inside of the gameObject it's linked to - keeps saying 0 elements but when viewed manually in UnityExplorer it shows them)
  * 
@@ -453,8 +452,6 @@ namespace UltrakULL
                 }
                 else if (currentLevel.name.Contains("-S"))
                 {
-                    //In secret level hook
-
                     //Potential problem here - we're hooking via Secret FirstRoom, but the words are swapped between secret levels...
                     GameObject coreGame = getInactiveRootObject("Canvas");
                     if (coreGame == null)
