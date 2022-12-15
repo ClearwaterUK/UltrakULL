@@ -48,7 +48,6 @@ using UMM;
  * 
  *  -- FOR NEXT HOTFIX --
  *  
- * Add download buttons to Github readme for finished languages
  * Fix up errors and typos in English template that are reported
  * 
  * UltraTweaker not always being detected for cross-mod fix? (can't replicate on my end)
@@ -632,7 +631,7 @@ namespace UltrakULL
             ModInformation[] loadedMods = UKAPI.GetAllLoadedModInformation();
             foreach (ModInformation mod in loadedMods)
             {
-                if (mod.modName == "ULTRAKILLtweaker")
+                if (mod.modName.ToLower() == "ultrakilltweaker" || mod.modName == "ULTRAKILLtweaker") //Experimental to see if it helps with reports of it not working for some people
                 {
                     Console.WriteLine("UltraTweaker detected, applying options patch");
                     StartCoroutine(UltraTweakerPatch());

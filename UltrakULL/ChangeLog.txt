@@ -9,7 +9,7 @@ obtain the update.
 - Fixed terminals outside of boss rooms not being translated.
 - Fixed the "Done" button not being translated in the audio calibration prompt on the tutorial.
 - Fixed challenge buttons of unlocked+not completed & locked levels not being translated.
-
+- Added an extra check that should hopefully help reports of the UltraTweaker cross-mod patch not being applied.
 - Added the following lines to the JSON template:
 
 options: audio_dubbing
