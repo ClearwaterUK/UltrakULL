@@ -26,7 +26,7 @@ namespace UltrakULL
             yield return new WaitForSeconds(0.5f);
 
             GameObject languageButton = getGameObjectChild(getGameObjectChild(getInactiveRootObject("Canvas"), "OptionsMenu"),"Language");
-            languageButton.transform.localPosition = new Vector3(450, 200, 0);
+            languageButton.transform.localPosition = new Vector3(450, 310, 0);
         }
 
     }
