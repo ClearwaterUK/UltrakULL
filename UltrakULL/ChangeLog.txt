@@ -3,10 +3,10 @@
 - Added a button to the audio options, which enables or disables dubbing of spoken characters. If disabled, characters will use the original English dialog.
 - Added a basic update checker. If a newer version of UltrakULL is detected on the GitHub, a message will display on the main menu, as well as a button to 
 obtain the update.
-- Fixed the teleport menu panel not using a translated string.
 (**NOTE**: Due to file and security limitations, it is not possible for the mod to auto-update itself. Updates must be manually downloaded and installed.)
+- Fixed the teleport menu panel not using a translated string.
 - Fixed an issue where mod/restart buttons on the main menu would require a language change to be translated.
-
+- Fixed terminals outside of boss rooms not being translated.
 - Fixed the "Done" button not being translated in the audio calibration prompt on the tutorial.
 - Fixed challenge buttons of unlocked+not completed & locked levels not being translated.
 

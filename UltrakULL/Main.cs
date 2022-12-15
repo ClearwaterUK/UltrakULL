@@ -29,7 +29,6 @@ using UMM;
  *  - Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
  * 
  *  -- LESS IMPORTANT STUFF FOR FUTURE UPDATES --
- *  - Terminals before bosses in levels (could copy the shop that's in the start of each level)
  *  - Look into how I can do encoding for RTL languages such as Arabic (https://github.com/Konash/arabic-support-unity/ - could be useful)
  *  - Next game update scheduled for early 2023. P-2, 5-S, radient enemies and green rocket launcher
  *  - Could be possible to swap out rank textures in HUD for translation. Shall look into later
@@ -57,6 +56,7 @@ using UMM;
  * Audio dubbing documentation
  *
  * Async exception that occasionally happens, need to track down and fix
+ * 
  * 
  * 
  * */
