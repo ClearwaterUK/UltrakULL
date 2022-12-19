@@ -1,8 +1,9 @@
-﻿[![Discord](https://img.shields.io/discord/1017473804592754778?label=UltrakULL%20Discord)](https://discord.gg/ZB7jk6Djv5 "Discord Invite")
-![Version](https://img.shields.io/github/v/release/ClearwaterTM/UltrakULL)
+﻿﻿[![Discord](https://img.shields.io/discord/1017473804592754778?label=UltrakULL%20Discord)](https://discord.gg/ZB7jk6Djv5 "Discord Invite")
+![Version](https://img.shields.io/github/v/release/clearwatertm/ultrakull)
 ![Licence](https://img.shields.io/github/license/ClearwaterTM/UltrakULL)
 
 <img src="https://cdn.discordapp.com/attachments/472691871806652429/1041615546514427984/unknown.png" height="400">
+
 
 # UltrakULL
 
@@ -31,7 +32,7 @@ or via the [UltrakULL Discord](https://discord.gg/ZB7jk6Djv5) in the #language-r
 ### Prerequisites:
 - A [Steam copy](https://store.steampowered.com/app/1229490/ULTRAKILL/) of ULTRAKILL.<br>**Demo, GOG.com and cracked versions are NOT supported.**
 - BepInEx 5 64-bit. It can be directly downloaded from [here](https://github.com/BepInEx/BepInEx/releases/download/v5.4.21/BepInEx_x64_5.4.21.0.zip).<br>**Do not download/install BepInEx 6, ULTRAKILL does not support it.**
-- ULTRAKILL Mod Manager (UMM). It can be downloaded from [here](https://github.com/Temperz87/ultra-mod-manager).<br>**UMM 0.4.3 is the minimum version required for using mods.**
+- ULTRAKILL Mod Manager (UMM). It can be downloaded from [here](https://github.com/Temperz87/ultra-mod-manager/tags).<br>**UMM 0.4.3 is the minimum version required to use UltrakULL.**
 - A release of UltrakULL. Details to obtain it are given in the [Download](#Download) section.<br>**It is highly recommended to acquire the latest version available when downloading.**
 - (Optional) Any extra language files you may wish to use. View the [Download](#Download) section for information on extra language files.
 
@@ -58,7 +59,7 @@ The installation section is divided into 3 parts:
 - Extract the contents of UltrakULL to your BepInEx folder. Overwrite any files if prompted.
 - Launch ULTRAKILL and click on the Mods button in the main menu. UltrakULL should be displayed there. Click on the square icon in the corner of it to enable auto-startup of the mod, then restart ULTRAKILL (either manually or with the new Restart button added by UMM).
 - If the mod has loaded correctly, you should see a new "Languages" tab in the Options menu.
-<img src="https://cdn.discordapp.com/attachments/472691871806652429/1037354187341701130/unknown.png" alt="drawing" width="650"/>
+  <img src="https://cdn.discordapp.com/attachments/472691871806652429/1037354187341701130/unknown.png" alt="drawing" width="650"/>
 - From the Languages tab, you can select any available language based on the language files UltrakULL has found, and will load them into the game. If you have any additional language files you wish to use, click on the "OPEN LANGUAGE FOLDER" button, and place them in the folder that opens. A game restart is required for the new languages to appear.
 
 - Optional: Enable the BepInEx console by opening the BepInEx.cfg inside the config folder. Find the Logging.Console option and set it to true. This will activate the BepInEx console every time your game launches, and will output the status of the game there. This is very helpful for tracking down problems or errors.
@@ -170,8 +171,11 @@ the [New Blood Discord](https://discord.gg/newblood), and my [personal Twitter](
 
 ### Is UltrakULL compatible with other mods?
 [UltraTweaker](https://github.com/wafflethings/ULTRAKILLtweaker): *Confirmed* to be working, but extensive testing has not been done.
-If UltrakULL and UltraTweaker are being used at the same time, the the Language tab in the Options menu will be moved to the right side
+If UltrakULL and UltraTweaker are being used at the same time, the Language tab in the Options menu will be moved to the right side
 to avoid overlap with UltraTweaker's own Tweaker Options button.
+
+[UltraSkins](https://github.com/The-DoomMan/ULTRASKINS): Loads, but *not fully compatible* due to UltraSkins
+displaying HUD messages that UltrakULL does not correctly show.
 
 # Credits & Contributors
 UltrakULL created by **[Clearwater](https://github.com/ClearwaterTM)**\
