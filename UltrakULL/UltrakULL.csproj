@@ -155,7 +155,7 @@
       <_CopyAudio Include="$(TargetDir)/../../audio/templates/**/*.*" />
     </ItemGroup>
     <Message Text="Moving audio files/folders to config/ultrakull/audio..." Importance="High" />
-    <Copy SourceFiles="@(_CopyAudio)" DestinationFolder="$(TargetDir)config/ultrakull/audio/%(RecursiveDir)"/>
+    <Copy SourceFiles="@(_CopyAudio)" DestinationFolder="$(TargetDir)config/ultrakull/audio/%(RecursiveDir)" />
     <Message Text="Audio files/folders moved." Importance="High" />
   </Target>
   <ItemGroup>
@@ -177,7 +177,6 @@
     <Compile Include="Harmony Patches\AudioSwaps\MinosPrimeAudioSwap.cs" />
     <Compile Include="Harmony Patches\AudioSwaps\AudioFixes.cs" />
     <Compile Include="Harmony Patches\BossBarManager.cs" />
-    <Compile Include="Harmony Patches\CGSubmissionCheck.cs" />
     <Compile Include="Harmony Patches\CheatsManager.cs" />
     <Compile Include="Harmony Patches\Coin.cs" />
     <Compile Include="Harmony Patches\CrateCounter.cs" />

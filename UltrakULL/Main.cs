@@ -563,10 +563,7 @@ namespace UltrakULL
             yield return new WaitForSeconds(0.05f);
 
             //Open Language Folder button in Options->Langauge
-            Text openLangFolderText = getTextfromGameObject(getGameObjectChild
-            (getGameObjectChild
-            (getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd,"OptionsMenu"),
-            "Language Page"),"Scroll Rect (1)"),"Contents"),"OpenLangFolder"),"Slot Text"));
+            Text openLangFolderText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd,"OptionsMenu"), "Language Page"),"Scroll Rect (1)"),"Contents"),"OpenLangFolder"),"Slot Text"));
             openLangFolderText.text = LanguageManager.CurrentLanguage.options
             .language_openLanguageFolder;
 
