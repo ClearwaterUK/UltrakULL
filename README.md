@@ -32,7 +32,7 @@ or via the [UltrakULL Discord](https://discord.gg/ZB7jk6Djv5) in the #language-r
 ### Prerequisites:
 - A [Steam copy](https://store.steampowered.com/app/1229490/ULTRAKILL/) of ULTRAKILL.<br>**Demo, GOG.com and cracked versions are NOT supported.**
 - BepInEx 5 64-bit. It can be directly downloaded from [here](https://github.com/BepInEx/BepInEx/releases/download/v5.4.21/BepInEx_x64_5.4.21.0.zip).<br>**Do not download/install BepInEx 6, ULTRAKILL does not support it.**
-- ULTRAKILL Mod Manager (UMM). It can be downloaded from [here](https://github.com/Temperz87/ultra-mod-manager/tags).<br>**UMM 0.4.3 is the minimum version required to use UltrakULL.**
+- ULTRAKILL Mod Manager (UMM). It can be downloaded from [here](https://github.com/Temperz87/ultra-mod-manager/tags).<br>**UMM 0.5.0 is the minimum version required to use UltrakULL.**
 - A release of UltrakULL. Details to obtain it are given in the [Download](#Download) section.<br>**It is highly recommended to acquire the latest version available when downloading.**
 - (Optional) Any extra language files you may wish to use. View the [Download](#Download) section for information on extra language files.
 
