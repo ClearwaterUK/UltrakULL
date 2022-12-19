@@ -909,7 +909,7 @@ namespace UltrakULL
                 }
                 case "Level 0-5":
                 {
-                    shopsToPatch.Add(getGameObjectChild(getGameObjectChild(getInactiveRootObject("S - Smallway"),"Shop"),"Canvas"));
+                    shopsToPatch.Add(getGameObjectChild(getGameObjectChild(getInactiveRootObject("3 - Smallway"),"Shop"),"Canvas"));
                     break;
                 }
                 case "Level 1-3":
