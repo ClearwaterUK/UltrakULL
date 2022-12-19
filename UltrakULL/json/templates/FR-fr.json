@@ -693,6 +693,7 @@
 		"audio_subtitles": "SOUS-TITRES",
 		"audio_globalVolume": "VOLUME GLOBAL",
 		"audio_musicVolume": "VOLUME DE LA MUSIQUE",
+		"audio_dubbing": "DOUBLAGE",
 
 		"hud_title": "AFFICHAGE",
 		"hud_type": "TYPE D'AFFICHAGE",
@@ -805,9 +806,9 @@
 		"save_close": "FERMER",
 		"save_slotEmpty": "VIDE",
 
-        "language_title": "LANGUAGE",
-        "language_languages": "LANGUAGES",
-        "language_openLanguageFolder": "OUVRIR LE FICHIER DE LANGUES"
+        "language_title": "LANGUES",
+        "language_languages": "LANGUES",
+        "language_openLanguageFolder": "OUVRIR DOSSIER LANGUES"
 	},
 	"pauseMenu": {
 		"pause_title": "PAUSE",

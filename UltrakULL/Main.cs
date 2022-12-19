@@ -528,15 +528,6 @@ namespace UltrakULL
                         //Cyber Grind
                         else if (SceneManager.GetActiveScene().name.Contains("Endless"))
                         {
-                            //if (UKAPI.CanSubmitCybergrindScore)
-                            //{
-                            //    Console.WriteLine("Should be able to submit CG highscores");
-                            //}
-                            //else
-                            //{
-                            //    Console.WriteLine(("UNABLE TO SUBMIT CYBERGRIND HIGHSCORE, THIS SHOULDN'T BE HAPPENING UNLESS IF ANOTHER MOD HAS DISABLED IT OR SOMETHING ELSE HAPPENED."));
-                            //    Console.WriteLine(UKAPI.CanSubmitCybergrindScore);    
-                            //}
                             CyberGrind.PatchCG(ref coreGame);
                         }
                         //End of act intermission
