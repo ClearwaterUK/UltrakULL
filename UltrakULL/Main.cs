@@ -13,6 +13,7 @@ using static UltrakULL.CommonFunctions;
 using static UltrakULL.ModPatches;
  
 using UMM;
+using System.Linq;
 
 /*
  *	UltrakULL (Ultrakill Language Library)
@@ -51,14 +52,14 @@ using UMM;
 
 namespace UltrakULL
 {
-    [UKPlugin("UltrakULL (Ultrakill Language Library)","1.1.0","A localization and translation plugin for ULTRAKILL. Created by Clearwater.",true,false)]
+    [UKPlugin(internalName, "UltrakULL (Ultrakill Language Library)", internalVersion,"A localization and translation plugin for ULTRAKILL. Created by Clearwater.", true,false)]
 
     public class MainPatch : UKMod
     {
 
         public static MainPatch instance = null;
         private GameObject ultrakullLogo = null;
-
+        
         private bool ready = false;
         private bool updateAvailable = false;
         private bool updateFailed = false;
@@ -527,16 +528,15 @@ namespace UltrakULL
                         //Cyber Grind
                         else if (SceneManager.GetActiveScene().name.Contains("Endless"))
                         {
-                            if (UKAPI.ShouldSubmitCyberGrindScore())
-                            {
-                                Console.WriteLine("Should be able to submit CG highscores");
-                                
-                            }
-                            else
-                            {
-                                Console.WriteLine(("UNABLE TO SUBMIT CYBERGRIND HIGHSCORE, THIS SHOULDN'T BE HAPPENING UNLESS IF ANOTHER MOD HAS DISABLED IT OR SOMETHING ELSE HAPPENED."));
-                                Console.WriteLine((UKAPI.ShouldSubmitCyberGrindScore()));
-                            }
+                            //if (UKAPI.CanSubmitCybergrindScore)
+                            //{
+                            //    Console.WriteLine("Should be able to submit CG highscores");
+                            //}
+                            //else
+                            //{
+                            //    Console.WriteLine(("UNABLE TO SUBMIT CYBERGRIND HIGHSCORE, THIS SHOULDN'T BE HAPPENING UNLESS IF ANOTHER MOD HAS DISABLED IT OR SOMETHING ELSE HAPPENED."));
+                            //    Console.WriteLine(UKAPI.CanSubmitCybergrindScore);    
+                            //}
                             CyberGrind.PatchCG(ref coreGame);
                         }
                         //End of act intermission
@@ -615,7 +615,7 @@ namespace UltrakULL
             //Check for any other mods that are loaded that might cause conflicts. If so, apply cross-mod patches and changes.
             Console.WriteLine("Scanning for mods...");
 
-            ModInformation[] loadedMods = UKAPI.GetAllLoadedModInformation();
+            ModInformation[] loadedMods = UKAPI.AllLoadedModInfoClone.Values.ToArray();
             foreach (ModInformation mod in loadedMods)
             {
                 if (mod.modName.ToLower() == "ultrakilltweaker" || mod.modName == "ULTRAKILLtweaker") //Experimental to see if it helps with reports of it not working for some people
