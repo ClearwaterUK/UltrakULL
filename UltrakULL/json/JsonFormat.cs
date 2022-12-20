@@ -10,30 +10,36 @@ namespace UltrakULL.json
     {
         public Metadata metadata;
         public Body body;
+        
         public FrontEnd frontend;
-        public PauseMenu pauseMenu;
-        public Option options;
-        public Levels levelNames;
-        public Challenges levelChallenges;
-        public EnemyNames enemyNames;
+        
         public Tutorial tutorial;
         public Overture prelude;
         public a1 act1;
         public a2 act2;
-        public Misc misc;
-        public LevelTips levelTips;
-        public ShopStrings shop;
+        public CG cyberGrind;
         public Prime primeSanctum;
         public Secret secretLevels;
         public IntermissionStrings intermission;
+        
+        public PauseMenu pauseMenu;
+        public Option options;
+        
+        public Levels levelNames;
+        public Challenges levelChallenges;
+        public EnemyNames enemyNames;
+        public EnemyBioStrings enemyBios;
+        public ShopStrings shop;
+        public LevelTips levelTips;
+
         public Book books;
         public VisualNovel visualnovel;
         public Subtitles subtitles;
+        
         public Style style;
-        public EnemyBioStrings enemyBios;
         public CheatStrings cheats;
-        public CG cyberGrind;
         public Credits credits;
+        public Misc misc;
         
     }
 
@@ -884,8 +890,10 @@ namespace UltrakULL.json
         public string langAuthor;
         public string langVersion;
         public string langDisplayName;
+        public string langRTL;
 
         public string minimumModVersion;
+
     }
 
     public class IntermissionStrings

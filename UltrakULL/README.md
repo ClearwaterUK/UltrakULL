@@ -18,6 +18,7 @@ This mod's primary purpose is to bridge the gap for localization and translation
 - Change languages directly in-game without having to restart
 - Languages are consistently developed and updated for a faithful localization and translation of the original game text
 - Dubbing support allows for translated spoken dialogue
+- Fully supports right-to-left languages such as Arabic and Persian
 
 
 # Download
@@ -32,7 +33,7 @@ or via the [UltrakULL Discord](https://discord.gg/ZB7jk6Djv5) in the #language-r
 ### Prerequisites:
 - A [Steam copy](https://store.steampowered.com/app/1229490/ULTRAKILL/) of ULTRAKILL.<br>**Demo, GOG.com and cracked versions are NOT supported.**
 - BepInEx 5 64-bit. It can be directly downloaded from [here](https://github.com/BepInEx/BepInEx/releases/download/v5.4.21/BepInEx_x64_5.4.21.0.zip).<br>**Do not download/install BepInEx 6, ULTRAKILL does not support it.**
-- ULTRAKILL Mod Manager (UMM). It can be downloaded from [here](https://github.com/Temperz87/ultra-mod-manager/tags).<br>**UMM 0.4.3 is the minimum version required to use UltrakULL.**
+- ULTRAKILL Mod Manager (UMM). It can be downloaded from [here](https://github.com/Temperz87/ultra-mod-manager/tags).<br>**UMM 0.5.0 is the minimum version required to use UltrakULL.**
 - A release of UltrakULL. Details to obtain it are given in the [Download](#Download) section.<br>**It is highly recommended to acquire the latest version available when downloading.**
 - (Optional) Any extra language files you may wish to use. View the [Download](#Download) section for information on extra language files.
 
@@ -41,7 +42,7 @@ or via the [UltrakULL Discord](https://discord.gg/ZB7jk6Djv5) in the #language-r
 The installation section is divided into 3 parts:
 - Installing BepInEx, the modding framework
 - Installing UMM, the mod loader used for the game
-- Installing UltrakuLL, the mod itself
+- Installing UltrakULL, the mod itself
 
 #### Installing BepInEx:
 
@@ -164,9 +165,7 @@ on our Discord and I will take a look at it.
 
 ### Can voice lines from characters be translated?
 
-It's indeed possible to swap out audio clips as other mods have already accomplished this,
-so it should also be able to be applied to speaking characters. UltrakULL does not currently support this, but it
-is a feature that I would like to implement in future.
+As of UltrakULL v1.1.0, dubbing support is available for speaking characters! To learn more about how to add your own lines, check the [dubbing documentation](https://github.com/ClearwaterTM/UltrakULL/blob/master/UltrakULL/docs/Dubbing.md).
 
 ### Where can I follow UltrakULL's development?
 I usually like to post updates and news about development in multiple places, including the [UltrakULL Discord](https://discord.gg/ZB7jk6Djv5) itself,
@@ -188,7 +187,9 @@ Language translations by members of the **UltrakULL Translation Team** \
 (view the [Languages](#Languages) section for full information and crediting)\
 ULTRAKILL created by **Arsi 'Hakita' Patala** and published by **New Blood Interactive**
 
-UltrakULL uses [JSON.Net](https://github.com/JamesNK/Newtonsoft.Json) by [NewtonSoft](https://www.newtonsoft.com/json), licenced under the MIT Licence.
+UltrakULL uses the following libraries:
+- [JSON.Net](https://github.com/JamesNK/Newtonsoft.Json) by [NewtonSoft](https://www.newtonsoft.com/json), licenced under the MIT Licence.
+- [arabic-support-unity](https://github.com/Konash/arabic-support-unity) by [Konash](https://github.com/Konash), licenced under the MIT licence.
 
 # Links
 

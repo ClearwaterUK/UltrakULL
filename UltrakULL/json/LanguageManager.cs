@@ -3,9 +3,12 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
+using ArabicSupportUnity;
 using UltrakULL.audio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 
 namespace UltrakULL.json
 {
@@ -30,9 +33,17 @@ namespace UltrakULL.json
             {
                 JsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Setting language to " + value);
                 CurrentLanguage = AllLanguages[value];
+                if(CurrentLanguage.metadata.langRTL == "true")
+                {
+                    Console.WriteLine("Language is an RTL - applying fix!");
+                    CurrentLanguage = applyRTL(CurrentLanguage);
+                }
             }
             else
+            {
                 JsonLogger.Log(BepInEx.Logging.LogLevel.Message, "No last language found, value was " + value);
+            }
+            
         }
 
         public static void DumpLastLanguage()
@@ -136,6 +147,61 @@ namespace UltrakULL.json
             }
         }
 
+        public static JsonFormat applyRTL(JsonFormat language)
+        {
+            List<object> translationComponents = new List<object>
+            {
+                language.frontend,
+                language.tutorial,
+                language.prelude,
+                language.act1,
+                language.act2,
+                language.cyberGrind,
+                language.primeSanctum,
+                language.secretLevels,
+                language.intermission,
+                language.pauseMenu,
+                language.options,
+                language.levelNames,
+                language.levelChallenges,
+                language.enemyNames,
+                language.enemyBios,
+                language.shop,
+                language.levelTips,
+                language.books,
+                language.visualnovel,
+                language.subtitles,
+                language.style,
+                language.cheats,
+                language.credits,
+                language.misc
+            };
+
+    
+            foreach(object component in translationComponents)
+            {
+                Type type = component.GetType();
+                FieldInfo[] fields = type.GetFields();
+                foreach (FieldInfo field in fields)
+                {
+                    string originalString = (string)field.GetValue(component); 
+                    string translatedString = null;
+                    
+                    if(originalString != null)
+                    {
+                        //Apply the RTL fix here
+                        translatedString = ArabicFixer.Fix(originalString);
+                    }
+                    if(translatedString != null)
+                    {
+                        field.SetValue(component,translatedString);
+                    }
+                }
+            }
+            
+            return language;
+        }
+
         public static void SetCurrentLanguage(string langName)
         {
             if (CurrentLanguage != null && CurrentLanguage.metadata.langName == langName)
@@ -147,6 +213,13 @@ namespace UltrakULL.json
             {
                 CurrentLanguage = AllLanguages[langName];
                 JsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Setting language to " + langName);
+                
+                if(CurrentLanguage.metadata.langRTL == "true")
+                {
+                    Console.WriteLine("Language is an RTL - applying fix!");
+                    CurrentLanguage = applyRTL(CurrentLanguage);
+                }
+                
                 MainPatch.instance.onSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
                 LanguageManager.DumpLastLanguage();
                 AudioSwapper.speechFolder = Directory.GetCurrentDirectory() + "\\BepInEx\\config\\ultrakull\\audio\\" + LanguageManager.CurrentLanguage.metadata

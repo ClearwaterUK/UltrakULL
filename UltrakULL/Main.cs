@@ -11,6 +11,7 @@ using UltrakULL.json;
 
 using static UltrakULL.CommonFunctions;
 using static UltrakULL.ModPatches;
+
  
 using UMM;
 using System.Linq;
@@ -30,8 +31,7 @@ using System.Linq;
  *  - Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
  * 
  *  -- STUFF FOR FUTURE UPDATES --
- *  - Next game update scheduled for early 2023. P-2, 5-S, radient enemies and green rocket launcher
- *  - Look into how I can do encoding for RTL languages such as Arabic (https://github.com/Konash/arabic-support-unity/ - could be useful)
+ *  - Next game update scheduled for early 2023. P-2, 5-S, radient enemies, rumble support and green rocket launcher
  *  - Swap out rank textures in HUD for translation
  *  - Replace the default font with a version that has better special char + cyrillic support
  *  
@@ -45,8 +45,8 @@ using System.Linq;
  * 
  *  -- FOR NEXT HOTFIX --
  * Fix up errors and typos in English template that are reported
- * UltraTweaker not always being detected for cross-mod fix? (tentative fix, shall need to monitor)
  * Finish audio dubbing documentation
+ * Look into how I can do encoding for RTL languages such as Arabic
  * 
  * */
 
@@ -67,7 +67,7 @@ namespace UltrakULL
         public Font vcrFont;
 
         public const string internalName = "clearwater.ultrakull.ultrakULL";
-        public const string internalVersion = "1.1.0";
+        public const string internalVersion = "1.1.1";
         
         private static readonly HttpClient client = new HttpClient();
 
