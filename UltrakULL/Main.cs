@@ -20,7 +20,7 @@ using System.Linq;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater, additional code contributions by Temperz87, translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 15th December 2022
+ *	Last updated: 21st December 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
@@ -28,12 +28,13 @@ using System.Linq;
  *  -- MAIN TASK LIST --
  *  - Add ULL credits, translation credits to main menu with help of UKUIHelper library
  *  - Error and exception handling
- *  - Divide up more stuff in try/catch functions (especially the shop and options), that way less stuff breaks if something bad happens
+ *  - Divide up more stuff in try/catch functions (especially the shop), that way less stuff breaks if something bad happens
  * 
  *  -- STUFF FOR FUTURE UPDATES --
  *  - Next game update scheduled for early 2023. P-2, 5-S, radient enemies, rumble support and green rocket launcher
  *  - Swap out rank textures in HUD for translation
  *  - Replace the default font with a version that has better special char + cyrillic support
+ *  - Finish audio dubbing documentation
  *  
  *  -- BUGS AND QUIRKS TO FIX --
  * - Misc keys as strings (comma, period, etc) missing
@@ -44,8 +45,7 @@ using System.Linq;
  *  -- STUFF REPORTED BY ULL TEAM --
  * 
  *  -- FOR NEXT HOTFIX --
- * Fix up errors and typos in English template that are reported
- * Finish audio dubbing documentation
+ * 
  * 
  * */
 
@@ -55,7 +55,6 @@ namespace UltrakULL
 
     public class MainPatch : UKMod
     {
-
         public static MainPatch instance;
         public GameObject ultrakullLogo;
         
@@ -655,9 +654,8 @@ namespace UltrakULL
             Debug.Log("Version: " + InternalVersion);
             try
             {
-            
-            
                 Debug.Log("--- Checking for updates ---");
+                #pragma warning disable 4014
                 CheckForUpdates();
             
                 Debug.Log("--- Initializing JSON parser ---");

@@ -2,7 +2,7 @@
 - **Added basic support for Right-to-left languages, such as Arabic and Hebrew.**
 (**Note**: To set RTL encoding for your language, set langRTL in your JSON metadata to "true". See JSON changes below.)
 - A big backend cleanup and refactor effort has been done. This should not affect any functionality of the mod though, but if any problems arise, please report them.
-- Further fixes in the English template.
+- More fixes in the English template.
 - Fixed Gabriel's lines in 6-1 not working correctly when dubbing is enabled.
 
 - Added the following lines to the JSON template:

@@ -145,6 +145,7 @@ namespace UltrakULL.Harmony_Patches
                 languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
                 languageButtonTitleText.text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
             }
+            #pragma warning disable 0168
             catch (Exception e)
             {
                 languageButtonText.text = "LANGUAGES";
@@ -184,6 +185,7 @@ namespace UltrakULL.Harmony_Patches
             {
                 GetTextfromGameObject(GetGameObjectChild(dubSlider,"Text")).text = LanguageManager.CurrentLanguage.options.audio_dubbing;
             }
+            #pragma warning disable 0168
             catch (Exception e)
             {
                 GetTextfromGameObject(GetGameObjectChild(dubSlider,"Text")).text = "DUBBED AUDIO";

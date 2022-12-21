@@ -10,7 +10,6 @@ using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
 {
-    //NEEDTO - Split stuff in here down into seperate functions, so less stuff breaks if there's an error
     class Options
     {
         private GameObject optionsMenu;
@@ -37,8 +36,7 @@ namespace UltrakULL
 
             Text weaponPosText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Weapon Position"), "Text"));
             weaponPosText.text = LanguageManager.CurrentLanguage.options.general_weaponPosition;
-
-
+            
             //Have to patch directly from the Dropdown.OptionData list.
             GameObject weaponPosList = GetGameObjectChild(GetGameObjectChild(generalContent, "Weapon Position"), "Dropdown");
             Dropdown weaponPosDropdown = weaponPosList.GetComponent<Dropdown>();
@@ -71,103 +69,12 @@ namespace UltrakULL
         }
         private void PatchControlOptions(GameObject optionsMenu)
         {
-
-        }
-        private void PatchGraphicsOptions(GameObject optionsMenu)
-        {
-
-        }
-        private void PatchAudioOptions(GameObject optionsMenu)
-        {
-
-        }
-        private void PatchHUDOptions(GameObject optionsMenu)
-        {
-
-        }
-        private void PatchAssistOptions(GameObject optionsMenu)
-        {
-
-        }
-        private void PatchColorsOptions(GameObject optionsMenu)
-        {
-
-        }
-        private void PatchSavesOptions(GameObject optionsMenu)
-        {
-
-        }
-
-        private void PatchOptions(GameObject optionsMenu)
-        {
-            //Best to divide each section into it's own function.
-            //Makes it easier to maintain as well as make it easier to narrow down error-causing lines of code.
-
-            if (optionsMenu != null)
-            {
-                GameObject generalOptions = GetGameObjectChild(optionsMenu, "Gameplay Options");
-                GameObject controlOptions = GetGameObjectChild(optionsMenu, "Controls Options");
-                GameObject graphicsOptions = GetGameObjectChild(optionsMenu, "Video Options");
-                GameObject audioOptions = GetGameObjectChild(optionsMenu, "Audio Options");
-                GameObject hudOptions = GetGameObjectChild(optionsMenu, "HUD Options");
-                GameObject assistOptions = GetGameObjectChild(optionsMenu, "Assist Options");
-                GameObject colorsOptions = GetGameObjectChild(optionsMenu, "ColorBlindness Options");
-                GameObject savesOptions = GetGameObjectChild(optionsMenu, "Save Slots");
-
-                //Main buttons and text
-                Text optionsText = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text"));
-                //optionsText.text = "--OPTIONS--";
-                optionsText.text = LanguageManager.CurrentLanguage.options.options_title;
-
-                Text backText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Back"),"Text"));
-                backText.text = LanguageManager.CurrentLanguage.options.options_back;
-
-                Text generalButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Gameplay"), "Text"));
-                generalButton.text = LanguageManager.CurrentLanguage.options.category_general;
-
-                Text controlButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Controls"), "Text"));
-                controlButton.text = LanguageManager.CurrentLanguage.options.category_controls;
-
-                Text graphicsButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Video"), "Text"));
-                graphicsButton.text = LanguageManager.CurrentLanguage.options.category_graphics;
-
-                Text audioButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Audio"), "Text"));
-                audioButton.text = LanguageManager.CurrentLanguage.options.category_sound;
-
-                Text hudButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "HUD"), "Text"));
-                hudButton.text = LanguageManager.CurrentLanguage.options.category_display;
-
-                Text assistButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Assist"), "Text"));
-                assistButton.text = LanguageManager.CurrentLanguage.options.category_assists;
-
-                Text colorsButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Colors"), "Text"));
-                colorsButton.text = LanguageManager.CurrentLanguage.options.category_colors;
-
-                Text savesButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Saves"), "Text"));
-                savesButton.text = LanguageManager.CurrentLanguage.options.category_saves;
-
-                try
-                {
-                    this.PatchGeneralOptions(generalOptions);
-                    this.PatchControlOptions(controlOptions);
-                    this.PatchGraphicsOptions(graphicsOptions);
-                    this.PatchAudioOptions(audioOptions);
-                    this.PatchHUDOptions(hudOptions);
-                    this.PatchAssistOptions(assistOptions);
-                    this.PatchColorsOptions(colorsOptions);
-                    this.PatchSavesOptions(savesOptions);
-                }
-                catch(Exception e)
-                {
-                    Console.WriteLine(e.ToString());
-                }
-                
                 //Control options
 
-                Text controlText = GetTextfromGameObject(GetGameObjectChild(controlOptions, "Text (1)"));
+                Text controlText = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text (1)"));
                 controlText.text = "--"+ LanguageManager.CurrentLanguage.options.category_controls + "--";
 
-                GameObject controlContent = GetGameObjectChild(GetGameObjectChild(controlOptions, "Scroll Rect"), "Contents");
+                GameObject controlContent = GetGameObjectChild(GetGameObjectChild(optionsMenu, "Scroll Rect"), "Contents");
 
                 Text resetToDefaultText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(controlContent, "Default"), "Text"));
                 resetToDefaultText.text = LanguageManager.CurrentLanguage.options.controls_resetDefault;
@@ -267,13 +174,15 @@ namespace UltrakULL
 
                 Text reverseScrollText = GetTextfromGameObject(GetGameObjectChild(mouseWheelSettings, "Text"));
                 reverseScrollText.text = LanguageManager.CurrentLanguage.options.controls_reverseScroll;
-
+        }
+        private void PatchGraphicsOptions(GameObject optionsMenu)
+        {
                 //Graphics options
 
-                Text graphicsText = GetTextfromGameObject(GetGameObjectChild(graphicsOptions, "Text (1)"));
+                Text graphicsText = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text (1)"));
                 graphicsText.text = "--"+ LanguageManager.CurrentLanguage.options.category_graphics+ "--";
 
-                GameObject graphicsContent = GetGameObjectChild(GetGameObjectChild(graphicsOptions, "Scroll Rect"), "Contents");
+                GameObject graphicsContent = GetGameObjectChild(GetGameObjectChild(optionsMenu, "Scroll Rect"), "Contents");
 
                 Text resolutionText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Resolution"), "Text"));
                 resolutionText.text = LanguageManager.CurrentLanguage.options.graphics_resolution;
@@ -322,11 +231,8 @@ namespace UltrakULL
                 SliderValueToText ditheringSlider = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Dithering (1)"), "Button"),"Slider (2)"),"Text (3)").GetComponentInChildren<SliderValueToText>();
                 ditheringSlider.ifMin = LanguageManager.CurrentLanguage.options.graphics_ditheringMinimum;
 
-
-
                 Text textureWarpingText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Texture Warping (1)"), "Text"));
                 textureWarpingText.text = LanguageManager.CurrentLanguage.options.graphics_textureWarping;
-
 
                 Text vertexWarpingText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Vertex Warping"), "Text"));
                 vertexWarpingText.text = LanguageManager.CurrentLanguage.options.graphics_vertexWarping;
@@ -347,7 +253,6 @@ namespace UltrakULL
 
                 Text customColorPaletteSelect = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Custom Color Palette"), "Select"),"Text"));
                 customColorPaletteSelect.text = LanguageManager.CurrentLanguage.options.graphics_customColorPaletteSelect;
-
 
                 Text colorCompressionText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Color Compression"), "Text"));
                 colorCompressionText.text = LanguageManager.CurrentLanguage.options.graphics_colorCompression;
@@ -398,28 +303,31 @@ namespace UltrakULL
 
                 Text maxBloodText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Max Gore"), "Text"));
                 maxBloodText.text = LanguageManager.CurrentLanguage.options.graphics_goreMaxGore;
+        }
+        private void PatchAudioOptions(GameObject optionsMenu)
+        {
+            //Audio options
+            Text audioTitle = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text (2)"));
+            audioTitle.text = "--" + LanguageManager.CurrentLanguage.options.audio_title + "--";
 
+            GameObject audioContent = GetGameObjectChild(optionsMenu, "Image");
 
-                //Audio options
-                Text audioTitle = GetTextfromGameObject(GetGameObjectChild(audioOptions, "Text (2)"));
-                audioTitle.text = "--" + LanguageManager.CurrentLanguage.options.audio_title + "--";
+            Text subtitlesText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(audioContent, "Subtitles Checkbox"), "Text"));
+            subtitlesText.text = LanguageManager.CurrentLanguage.options.audio_subtitles;
 
-                GameObject audioContent = GetGameObjectChild(audioOptions, "Image");
+            Text masterVolumeText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(audioContent, "Master Volume"), "Text"));
+            masterVolumeText.text = LanguageManager.CurrentLanguage.options.audio_globalVolume;
 
-                Text subtitlesText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(audioContent, "Subtitles Checkbox"), "Text"));
-                subtitlesText.text = LanguageManager.CurrentLanguage.options.audio_subtitles;
-
-                Text masterVolumeText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(audioContent, "Master Volume"), "Text"));
-                masterVolumeText.text = LanguageManager.CurrentLanguage.options.audio_globalVolume;
-
-                Text musicVolumeText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(audioContent, "Music Volume"), "Text"));
-                musicVolumeText.text = LanguageManager.CurrentLanguage.options.audio_musicVolume;
-
-                //HUD options
-                Text hudTitle = GetTextfromGameObject(GetGameObjectChild(hudOptions, "Text"));
+            Text musicVolumeText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(audioContent, "Music Volume"), "Text"));
+            musicVolumeText.text = LanguageManager.CurrentLanguage.options.audio_musicVolume;
+        }
+        private void PatchHUDOptions(GameObject optionsMenu)
+        {
+        //HUD options
+                Text hudTitle = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text"));
                 hudTitle.text = "--"+ LanguageManager.CurrentLanguage.options.hud_title + "--";
 
-                GameObject hudContent = GetGameObjectChild(GetGameObjectChild(hudOptions, "Scroll Rect (1)"), "Contents");
+                GameObject hudContent = GetGameObjectChild(GetGameObjectChild(optionsMenu, "Scroll Rect (1)"), "Contents");
 
                 Text hudTypeText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(hudContent, "HUD Type"), "Text"));
                 hudTypeText.text = LanguageManager.CurrentLanguage.options.hud_type;
@@ -520,12 +428,15 @@ namespace UltrakULL
                 Text crosshairPowerupText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(hudContent, "Crosshair PowerUp Meter"), "Text"));
                 crosshairPowerupText.text = LanguageManager.CurrentLanguage.options.crosshair_powerupBar;
 
-                //Assist options
+        }
+        private void PatchAssistOptions(GameObject optionsMenu)
+        {
+//Assist options
 
-                Text assistTitle = GetTextfromGameObject(GetGameObjectChild(assistOptions, "Text (1)"));
+                Text assistTitle = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text (1)"));
                 assistTitle.text = "--"+ LanguageManager.CurrentLanguage.options.assists_title + "--";
 
-                GameObject assistMajorAssistPanel = GetGameObjectChild(GetGameObjectChild(assistOptions, "Panel"),"Panel");
+                GameObject assistMajorAssistPanel = GetGameObjectChild(GetGameObjectChild(optionsMenu, "Panel"),"Panel");
 
                 Text assistDisclaimerText = GetTextfromGameObject(GetGameObjectChild(assistMajorAssistPanel, "Text (2)"));
                 assistDisclaimerText.text =
@@ -548,7 +459,7 @@ namespace UltrakULL
                 Text assistDisclaimerNoText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistMajorAssistPanel, "No"), "Text"));
                 assistDisclaimerNoText.text = LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimerConfirmNo;
 
-                GameObject assistContent = GetGameObjectChild(GetGameObjectChild(assistOptions, "Scroll Rect"), "Contents");
+                GameObject assistContent = GetGameObjectChild(GetGameObjectChild(optionsMenu, "Scroll Rect"), "Contents");
 
                 Text assistMinorAssistText = GetTextfromGameObject(GetGameObjectChild(assistContent, "Text (5)"));
                 assistMinorAssistText.text = "--"+ LanguageManager.CurrentLanguage.options.assists_minor +"--";
@@ -628,15 +539,18 @@ namespace UltrakULL
                 Text assistsDisablePopupText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Disable Popup"), "Text (1)"));
                 assistsDisablePopupText.text = LanguageManager.CurrentLanguage.options.assists_disablePopupHints;
 
+        }
+        private void PatchColorsOptions(GameObject optionsMenu)
+        {
                 //Colors options
-                Text colorsPanel = GetTextfromGameObject(GetGameObjectChild(colorsOptions, "Text (1)"));
-                colorsPanel.text = "--" + colorsButton.text + "--";
+                Text colorsPanel = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text (1)"));
+                colorsPanel.text = "--" + LanguageManager.CurrentLanguage.options.colors_title + "--";
 
-                Text colorsResetDefaultText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(colorsOptions,"Scroll Rect"),"Contents"),"Default"),"Text"));
+                Text colorsResetDefaultText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu,"Scroll Rect"),"Contents"),"Default"),"Text"));
                 colorsResetDefaultText.text = LanguageManager.CurrentLanguage.options.colors_reset;
 
                 //HUD Text
-                GameObject colorsHudObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(colorsOptions, "Scroll Rect"),"Contents"),"HUD");
+                GameObject colorsHudObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Scroll Rect"),"Contents"),"HUD");
 
                 Text colorsHudHealthText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsHudObject,"Health"),"Text"));
                 colorsHudHealthText.text = LanguageManager.CurrentLanguage.options.colors_hudHealth;
@@ -682,7 +596,7 @@ namespace UltrakULL
 
                 //Enemy names text
                 //Later down the line, could be better to get the names from EnemyBios.
-                GameObject colorsEnemiesObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(colorsOptions, "Scroll Rect"), "Contents"), "Enemies");
+                GameObject colorsEnemiesObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Scroll Rect"), "Contents"), "Enemies");
 
                 Text colorsEnemiesText = GetTextfromGameObject(colorsEnemiesObject);
 
@@ -739,31 +653,99 @@ namespace UltrakULL
                 Text colorsEnemiesFerrymanText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Ferryman"), "Text"));
                 colorsEnemiesFerrymanText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_ferryman;
 
-                //Save options
+        }
+        private void PatchSavesOptions(GameObject optionsMenu)
+        {
+            //Save options
 
-                GameObject saveReloadPanel = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(savesOptions, "Reload Consent Blocker"),"Consent"),"Panel");
+            GameObject saveReloadPanel = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Reload Consent Blocker"),"Consent"),"Panel");
 
-                Text saveReloadText = GetTextfromGameObject(GetGameObjectChild(saveReloadPanel, "Text"));
-                Text saveReloadYes = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(saveReloadPanel, "Yes"),"Text"));
-                Text saveReloadNo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(saveReloadPanel, "No"), "Text"));
+            Text saveReloadText = GetTextfromGameObject(GetGameObjectChild(saveReloadPanel, "Text"));
+            Text saveReloadYes = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(saveReloadPanel, "Yes"),"Text"));
+            Text saveReloadNo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(saveReloadPanel, "No"), "Text"));
 
-                saveReloadText.text =
-                    "<color=red>" + LanguageManager.CurrentLanguage.options.save_warning1 + "</color>\n\n" +
-                    LanguageManager.CurrentLanguage.options.save_warning2;
+            saveReloadText.text =
+                "<color=red>" + LanguageManager.CurrentLanguage.options.save_warning1 + "</color>\n\n" +
+                LanguageManager.CurrentLanguage.options.save_warning2;
 
-                saveReloadYes.text = LanguageManager.CurrentLanguage.options.save_reloadYes;
-                saveReloadNo.text = LanguageManager.CurrentLanguage.options.save_reloadNo;
+            saveReloadYes.text = LanguageManager.CurrentLanguage.options.save_reloadYes;
+            saveReloadNo.text = LanguageManager.CurrentLanguage.options.save_reloadNo;
 
-                GameObject saveDeletePanel = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(savesOptions, "Wipe Consent Blocker"), "Consent"), "Panel");
+            GameObject saveDeletePanel = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Wipe Consent Blocker"), "Consent"), "Panel");
 
-                Text saveDeleteYes = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(saveDeletePanel, "Yes"), "Text"));
-                saveDeleteYes.text = "<color=red>"+ LanguageManager.CurrentLanguage.options.save_deleteYes +"</color>";
+            Text saveDeleteYes = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(saveDeletePanel, "Yes"), "Text"));
+            saveDeleteYes.text = "<color=red>"+ LanguageManager.CurrentLanguage.options.save_deleteYes +"</color>";
 
-                Text saveDeleteNo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(saveDeletePanel, "No"), "Text"));
-                saveDeleteNo.text = LanguageManager.CurrentLanguage.options.save_deleteNo;
+            Text saveDeleteNo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(saveDeletePanel, "No"), "Text"));
+            saveDeleteNo.text = LanguageManager.CurrentLanguage.options.save_deleteNo;
 
-                Text saveSlotsClose = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(savesOptions, "Close"),"Text"));
-                saveSlotsClose.text = LanguageManager.CurrentLanguage.options.save_close;
+            Text saveSlotsClose = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Close"),"Text"));
+            saveSlotsClose.text = LanguageManager.CurrentLanguage.options.save_close;
+        }
+
+        private void PatchOptions(GameObject optionsMenu)
+        {
+            //Best to divide each section into it's own function.
+            //Makes it easier to maintain as well as make it easier to narrow down error-causing lines of code.
+
+            if (optionsMenu != null)
+            {
+                GameObject generalOptions = GetGameObjectChild(optionsMenu, "Gameplay Options");
+                GameObject controlOptions = GetGameObjectChild(optionsMenu, "Controls Options");
+                GameObject graphicsOptions = GetGameObjectChild(optionsMenu, "Video Options");
+                GameObject audioOptions = GetGameObjectChild(optionsMenu, "Audio Options");
+                GameObject hudOptions = GetGameObjectChild(optionsMenu, "HUD Options");
+                GameObject assistOptions = GetGameObjectChild(optionsMenu, "Assist Options");
+                GameObject colorsOptions = GetGameObjectChild(optionsMenu, "ColorBlindness Options");
+                GameObject savesOptions = GetGameObjectChild(optionsMenu, "Save Slots");
+
+                //Main buttons and text
+                Text optionsText = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text"));
+                optionsText.text = LanguageManager.CurrentLanguage.options.options_title;
+
+                Text backText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Back"),"Text"));
+                backText.text = LanguageManager.CurrentLanguage.options.options_back;
+
+                Text generalButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Gameplay"), "Text"));
+                generalButton.text = LanguageManager.CurrentLanguage.options.category_general;
+
+                Text controlButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Controls"), "Text"));
+                controlButton.text = LanguageManager.CurrentLanguage.options.category_controls;
+
+                Text graphicsButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Video"), "Text"));
+                graphicsButton.text = LanguageManager.CurrentLanguage.options.category_graphics;
+
+                Text audioButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Audio"), "Text"));
+                audioButton.text = LanguageManager.CurrentLanguage.options.category_sound;
+
+                Text hudButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "HUD"), "Text"));
+                hudButton.text = LanguageManager.CurrentLanguage.options.category_display;
+
+                Text assistButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Assist"), "Text"));
+                assistButton.text = LanguageManager.CurrentLanguage.options.category_assists;
+
+                Text colorsButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Colors"), "Text"));
+                colorsButton.text = LanguageManager.CurrentLanguage.options.category_colors;
+
+                Text savesButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Saves"), "Text"));
+                savesButton.text = LanguageManager.CurrentLanguage.options.category_saves;
+
+                try
+                {
+                    this.PatchGeneralOptions(generalOptions);
+                    this.PatchControlOptions(controlOptions);
+                    this.PatchGraphicsOptions(graphicsOptions);
+                    this.PatchAudioOptions(audioOptions);
+                    this.PatchHUDOptions(hudOptions);
+                    this.PatchAssistOptions(assistOptions);
+                    this.PatchColorsOptions(colorsOptions);
+                    this.PatchSavesOptions(savesOptions);
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+
             }
         }
 

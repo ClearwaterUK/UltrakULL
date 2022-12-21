@@ -32,7 +32,9 @@ namespace UltrakULL.Harmony_Patches
                         ___cachedActivity.Details = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_wave + ": " + splitDetails[1];
                     }
                 }
-                catch (Exception splitException)
+                //To shut up the compiler warning that the exception was declared but never used :D
+                #pragma warning disable 0168
+                catch (Exception discordException)
                 {
                     Console.WriteLine("Exception occured in SendActivity, should be harmless unless if the console gets spammed with this");
                 }

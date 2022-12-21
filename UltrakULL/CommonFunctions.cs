@@ -31,7 +31,7 @@ namespace UltrakULL
 
         public static void HandleError(Exception e, string missingID = "")
         {  
-            //NEEDTO Actually fill this function
+            Console.WriteLine(e.ToString());
         }
 
         public static GameObject GetInactiveRootObject(string objectName)
