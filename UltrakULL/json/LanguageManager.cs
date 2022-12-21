@@ -14,10 +14,10 @@ namespace UltrakULL.json
 {
     public static class LanguageManager
     {
-        public static Dictionary<string, JsonFormat> AllLanguages = new Dictionary<string, JsonFormat>();
-        public static Dictionary<string, JsonFormat> AllLanguagesDisplayNames = new Dictionary<string, JsonFormat>();
-        public static JsonFormat CurrentLanguage { get; private set; } = null;
-        private static BepInEx.Logging.ManualLogSource JsonLogger = BepInEx.Logging.Logger.CreateLogSource("LanguageManager");
+        public static Dictionary<string, JsonFormat> allLanguages = new Dictionary<string, JsonFormat>();
+        private static Dictionary<string, JsonFormat> allLanguagesDisplayNames = new Dictionary<string, JsonFormat>();
+        public static JsonFormat CurrentLanguage { get; private set; }
+        private static BepInEx.Logging.ManualLogSource jsonLogger = BepInEx.Logging.Logger.CreateLogSource("LanguageManager");
         public static ConfigFile configFile;
 
         public static void InitializeManager(string modVersion)
@@ -29,19 +29,19 @@ namespace UltrakULL.json
             string value = configFile.Bind("General", "LastLanguage", "en-GB").Value;
             string dubValue = configFile.Bind("General","activeDubbing","False").Value;
 
-            if (AllLanguages.ContainsKey(value))
+            if (allLanguages.ContainsKey(value))
             {
-                JsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Setting language to " + value);
-                CurrentLanguage = AllLanguages[value];
+                jsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Setting language to " + value);
+                CurrentLanguage = allLanguages[value];
                 if(CurrentLanguage.metadata.langRTL == "true")
                 {
                     Console.WriteLine("Language is an RTL - applying fix!");
-                    CurrentLanguage = applyRTL(CurrentLanguage);
+                    CurrentLanguage = ApplyRtl(CurrentLanguage);
                 }
             }
             else
             {
-                JsonLogger.Log(BepInEx.Logging.LogLevel.Message, "No last language found, value was " + value);
+                jsonLogger.Log(BepInEx.Logging.LogLevel.Message, "No last language found, value was " + value);
             }
             
         }
@@ -53,16 +53,16 @@ namespace UltrakULL.json
 
         public static void LoadLanguages(string modVersion)
         {
-            AllLanguages = new Dictionary<string, JsonFormat>();
+            allLanguages = new Dictionary<string, JsonFormat>();
             string[] files = Directory.GetFiles(Path.Combine(Directory.GetCurrentDirectory() + "\\BepInEx\\config\\", "UltrakULL"), "*.json");
             foreach (string file in files)
             {
-                if (TryLoadLang(file, out JsonFormat lang) && !AllLanguages.ContainsKey(lang.metadata.langName) && lang.metadata.langName != "te-mp")
+                if (TryLoadLang(file, out JsonFormat lang) && !allLanguages.ContainsKey(lang.metadata.langName) && lang.metadata.langName != "te-mp")
                 {
-                    AllLanguages.Add(lang.metadata.langName, lang);
-                    AllLanguagesDisplayNames.Add(lang.metadata.langDisplayName, lang);
+                    allLanguages.Add(lang.metadata.langName, lang);
+                    allLanguagesDisplayNames.Add(lang.metadata.langDisplayName, lang);
                     if (!ValidateFile(lang, modVersion))
-                        JsonLogger.Log(BepInEx.Logging.LogLevel.Debug ,"Failed to validate " + lang.metadata.langName + " however I don't really care");
+                        jsonLogger.Log(BepInEx.Logging.LogLevel.Debug ,"Failed to validate " + lang.metadata.langName + " however I don't really care");
                 }
             }
         }
@@ -147,7 +147,7 @@ namespace UltrakULL.json
             }
         }
 
-        public static JsonFormat applyRTL(JsonFormat language)
+        private static JsonFormat ApplyRtl(JsonFormat language)
         {
             List<object> translationComponents = new List<object>
             {
@@ -206,18 +206,18 @@ namespace UltrakULL.json
         {
             if (CurrentLanguage != null && CurrentLanguage.metadata.langName == langName)
             {
-                JsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Tried to switch language to " + langName + " but it was already set as that!");
+                jsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Tried to switch language to " + langName + " but it was already set as that!");
                 return;
             }
-            if (AllLanguages.ContainsKey(langName))
+            if (allLanguages.ContainsKey(langName))
             {
-                CurrentLanguage = AllLanguages[langName];
-                JsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Setting language to " + langName);
+                CurrentLanguage = allLanguages[langName];
+                jsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Setting language to " + langName);
                 
                 if(CurrentLanguage.metadata.langRTL == "true")
                 {
                     Console.WriteLine("Language is an RTL - applying fix!");
-                    CurrentLanguage = applyRTL(CurrentLanguage);
+                    CurrentLanguage = ApplyRtl(CurrentLanguage);
                 }
                 
                 MainPatch.instance.onSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
@@ -226,7 +226,7 @@ namespace UltrakULL.json
                     .langName + "\\";
             }
             else
-                JsonLogger.Log(BepInEx.Logging.LogLevel.Message, "No language found with name " + langName);
+                jsonLogger.Log(BepInEx.Logging.LogLevel.Message, "No language found with name " + langName);
         }
     }
 }

@@ -12,95 +12,95 @@ namespace UltrakULL
         public static GameObject originalShop = null;
         public static GameObject bossShop = null;
         
-        public static void patchShopFrontEnd(ref List<GameObject> shopsToPatch)
+        private static void PatchShopFrontEnd(ref List<GameObject> shopsToPatch)
         {
             foreach(GameObject shopObject in shopsToPatch)
             {
                 //Tip panel
-                GameObject tipPanel = getGameObjectChild(getGameObjectChild(shopObject, "TipBox"), "Panel");
-                Text tipTitle = getTextfromGameObject(getGameObjectChild(tipPanel, "Title"));
+                GameObject tipPanel = GetGameObjectChild(GetGameObjectChild(shopObject, "TipBox"), "Panel");
+                Text tipTitle = GetTextfromGameObject(GetGameObjectChild(tipPanel, "Title"));
                 tipTitle.text = LanguageManager.CurrentLanguage.shop.shop_tipofthedayTitle;
 
-                Text tipDescription = getTextfromGameObject(getGameObjectChild(tipPanel, "TipText"));
-                tipDescription.text = StringsParent.getLevelTip();
+                Text tipDescription = GetTextfromGameObject(GetGameObjectChild(tipPanel, "TipText"));
+                tipDescription.text = StringsParent.GetLevelTip();
 
                 //Weapons button
-                GameObject mainButtons = getGameObjectChild(shopObject, "Main Menu");
+                GameObject mainButtons = GetGameObjectChild(shopObject, "Main Menu");
 
-                Text weaponsButtonTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(mainButtons, "WeaponsButton"), "Text"));
+                Text weaponsButtonTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(mainButtons, "WeaponsButton"), "Text"));
                 weaponsButtonTitle.text = LanguageManager.CurrentLanguage.shop.shop_weapons;
 
                 //Enemies button
-                Text enemiesButtonTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(mainButtons, "EnemiesButton"), "Text"));
+                Text enemiesButtonTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(mainButtons, "EnemiesButton"), "Text"));
                 enemiesButtonTitle.text = LanguageManager.CurrentLanguage.shop.shop_monsters;
 
                 //CG buttons
-                Text cgButtonTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(mainButtons, "CyberGrindButton"), "Text"));
+                Text cgButtonTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(mainButtons, "CyberGrindButton"), "Text"));
                 cgButtonTitle.text = LanguageManager.CurrentLanguage.shop.shop_cybergrind;
 
-                Text cgReturnButtonTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(mainButtons, "ReturnButton"), "Text"));
+                Text cgReturnButtonTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(mainButtons, "ReturnButton"), "Text"));
                 cgReturnButtonTitle.text = LanguageManager.CurrentLanguage.shop.shop_returnToMission;
 
                 //Sandbox button
-                Text sandboxButtonTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(mainButtons, "SandboxButton"), "Text"));
+                Text sandboxButtonTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(mainButtons, "SandboxButton"), "Text"));
                 sandboxButtonTitle.text = LanguageManager.CurrentLanguage.shop.shop_sandbox;
 
                 //Enemies title
-                Text enemiesTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Enemies"), "Panel"),"Title"));
+                Text enemiesTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shopObject, "Enemies"), "Panel"),"Title"));
                 enemiesTitle.text = LanguageManager.CurrentLanguage.shop.shop_monsters;
 
                 //Enemies back button
-                Text enemiesBackButtonText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Enemies"),"BackButton (2)"),"Text"));
+                Text enemiesBackButtonText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shopObject, "Enemies"),"BackButton (2)"),"Text"));
 
                 //Sandbox enter description
-                GameObject sandboxEnter = getGameObjectChild(getGameObjectChild(shopObject, "Sandbox"), "Panel");
+                GameObject sandboxEnter = GetGameObjectChild(GetGameObjectChild(shopObject, "Sandbox"), "Panel");
 
-                Text sandboxTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Sandbox"), "Panel"),"Title"));
+                Text sandboxTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shopObject, "Sandbox"), "Panel"),"Title"));
                 sandboxTitle.text = LanguageManager.CurrentLanguage.shop.shop_sandbox;
 
-                Text sandboxEnterTitle = getTextfromGameObject(getGameObjectChild(sandboxEnter, "Title"));
-                sandboxButtonTitle.text = sandboxButtonTitle.text;
+                Text sandboxEnterTitle = GetTextfromGameObject(GetGameObjectChild(sandboxEnter, "Title"));
+                sandboxEnterTitle.text = sandboxButtonTitle.text;
 
-                Text sandboxEnterDescription = getTextfromGameObject(getGameObjectChild(sandboxEnter, "Text"));
+                Text sandboxEnterDescription = GetTextfromGameObject(GetGameObjectChild(sandboxEnter, "Text"));
 
                 sandboxEnterDescription.text = LanguageManager.CurrentLanguage.shop.shop_sandboxDescription1 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_sandboxDescription2;
 
-                Text sandboxEnterButton = getTextfromGameObject(getGameObjectChild(getGameObjectChild(sandboxEnter, "SandboxButton (1)"), "Text"));
+                Text sandboxEnterButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(sandboxEnter, "SandboxButton (1)"), "Text"));
                 sandboxEnterButton.text = LanguageManager.CurrentLanguage.shop.shop_sandboxEnter;
 
 
                 //CG enter description
 
-                GameObject cgEnter = getGameObjectChild(getGameObjectChild(shopObject, "The Cyber Grind"), "Panel");
+                GameObject cgEnter = GetGameObjectChild(GetGameObjectChild(shopObject, "The Cyber Grind"), "Panel");
 
-                Text cgEnterTitle = getTextfromGameObject(getGameObjectChild(cgEnter, "Title"));
+                Text cgEnterTitle = GetTextfromGameObject(GetGameObjectChild(cgEnter, "Title"));
                 cgEnterTitle.text = LanguageManager.CurrentLanguage.shop.shop_cybergrindEnterTitle;
 
-                Text cgEnterDescription = getTextfromGameObject(getGameObjectChild(cgEnter, "Text"));
+                Text cgEnterDescription = GetTextfromGameObject(GetGameObjectChild(cgEnter, "Text"));
 
                 cgEnterDescription.text = LanguageManager.CurrentLanguage.shop.shop_cybergrindDescription1 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_cybergrindDescription2 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_cybergrindDescription3;
 
-                Text cgEnterButton = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgEnter, "CyberGrindButton (1)"), "Text"));
+                Text cgEnterButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgEnter, "CyberGrindButton (1)"), "Text"));
                 cgEnterButton.text = LanguageManager.CurrentLanguage.shop.shop_cybergrindEnter;
 
                 
                 
                 //CG exit description
-                GameObject cgExit = getGameObjectChild(getGameObjectChild(shopObject, "Return from Cyber Grind"), "Panel");
+                GameObject cgExit = GetGameObjectChild(GetGameObjectChild(shopObject, "Return from Cyber Grind"), "Panel");
 
-                Text cgExitTitle = getTextfromGameObject(getGameObjectChild(cgExit, "Title"));
+                Text cgExitTitle = GetTextfromGameObject(GetGameObjectChild(cgExit, "Title"));
                 cgExitTitle.text = LanguageManager.CurrentLanguage.shop.shop_cybergrindExitTitle;
 
 
                 //Disable the LevelNameFinder component so it doesn't remove the translated string!
-                GameObject levelText = getGameObjectChild(cgExit, "Text");
+                GameObject levelText = GetGameObjectChild(cgExit, "Text");
 
-                Text cgExitDescriptionText = getTextfromGameObject(getGameObjectChild(cgExit, "Text"));
+                Text cgExitDescriptionText = GetTextfromGameObject(GetGameObjectChild(cgExit, "Text"));
 
-                Text cgExitDescription = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cgExit, "CyberGrindButton (1)"), "Text"));
+                Text cgExitDescription = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgExit, "CyberGrindButton (1)"), "Text"));
                 if (SceneManager.GetActiveScene().name == "uk_construct")
                 {
                     cgExitDescription.text = LanguageManager.CurrentLanguage.frontend.mainmenu_quit;
@@ -110,121 +110,119 @@ namespace UltrakULL
                     cgExitDescription.text = LanguageManager.CurrentLanguage.shop.shop_cybergrindExit;
                 }
 
-            //Enemies back button 
-            Text enemiesBackText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Enemies"), "BackButton (2)"), "Text"));
+                //Enemies back button 
+                Text enemiesBackText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shopObject, "Enemies"), "BackButton (2)"), "Text"));
                 enemiesBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
                 //Sandbox back button
-                Text sandboxBackText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Sandbox"), "BackButton (2)"), "Text"));
+                Text sandboxBackText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shopObject, "Sandbox"), "BackButton (2)"), "Text"));
                 sandboxBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
                 //EnemyInfo back button
-                Text enemyInfoBackText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "EnemyInfo"),"Button"),"Text"));
+                Text enemyInfoBackText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shopObject, "EnemyInfo"),"Button"),"Text"));
                 enemyInfoBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
                 //Enter CG back text
-                Text CGEnterBackButtonText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "The Cyber Grind"), "BackButton (2)"), "Text"));
-                CGEnterBackButtonText.text = LanguageManager.CurrentLanguage.shop.shop_back;
+                Text cgEnterBackButtonText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shopObject, "The Cyber Grind"), "BackButton (2)"), "Text"));
+                cgEnterBackButtonText.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
                 //Exit CG back text
-                Text CGExitBackButtonText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shopObject, "Return from Cyber Grind"), "BackButton (2)"), "Text"));
-                CGExitBackButtonText.text = LanguageManager.CurrentLanguage.shop.shop_back;
-                }
- 
- 
+                Text cgExitBackButtonText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shopObject, "Return from Cyber Grind"), "BackButton (2)"), "Text"));
+                cgExitBackButtonText.text = LanguageManager.CurrentLanguage.shop.shop_back;
+            }
         }
 
-        public static void patchWeapons(ref List<GameObject> shopsToPatch)
+        private static void PatchWeapons(ref List<GameObject> shopsToPatch)
         {
             foreach(GameObject shopObject in shopsToPatch)
             {
-                GameObject shopWeaponsObject  = getGameObjectChild(shopObject,"Weapons");
+                GameObject shopWeaponsObject  = GetGameObjectChild(shopObject,"Weapons");
 
-                Text weaponBackText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "BackButton (1)"), "Text"));
+                Text weaponBackText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "BackButton (1)"), "Text"));
                 weaponBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
-                Text weaponRevolverText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "RevolverButton"), "Text"));
+                Text weaponRevolverText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "RevolverButton"), "Text"));
                 weaponRevolverText.text = LanguageManager.CurrentLanguage.shop.shop_weaponsRevolver;
 
-                Text weaponShotgunText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "ShotgunButton"), "Text"));
+                Text weaponShotgunText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "ShotgunButton"), "Text"));
                 weaponShotgunText.text = LanguageManager.CurrentLanguage.shop.shop_weaponsShotgun;
 
-                Text weaponNailgunText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "NailgunButton"), "Text"));
+                Text weaponNailgunText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "NailgunButton"), "Text"));
                 weaponNailgunText.text = LanguageManager.CurrentLanguage.shop.shop_weaponsNailgun;
 
                 //Slight problem - not all the text fits in the box.
                 //The longer text is, the more we'll need to reduce the font size to compensate.
-                Text weaponRailcannonText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "RailcannonButton"), "Text"));
+                Text weaponRailcannonText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "RailcannonButton"), "Text"));
                 weaponRailcannonText.text = LanguageManager.CurrentLanguage.shop.shop_weaponsRailcannon;
                 weaponRailcannonText.fontSize = 16;
 
-                Text rocketLauncherText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "RocketLauncherButton"), "Text"));
+                Text rocketLauncherText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "RocketLauncherButton"), "Text"));
                 rocketLauncherText.text = LanguageManager.CurrentLanguage.shop.shop_weaponsRocketLauncher;
                 rocketLauncherText.fontSize = 16;
 
-                Text weaponArmText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shopWeaponsObject, "ArmButton"), "Text"));
+                Text weaponArmText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "ArmButton"), "Text"));
                 weaponArmText.text = LanguageManager.CurrentLanguage.shop.shop_weaponsArms;
 
                 //Revolver window and descriptions
-                GameObject revolverWindow = getGameObjectChild(shopWeaponsObject, "RevolverWindow");
+                GameObject revolverWindow = GetGameObjectChild(shopWeaponsObject, "RevolverWindow");
 
                 //Piercer
-                GameObject piercer = getGameObjectChild(revolverWindow, "Variation Panel (Blue)");
-                Text piercerName = getTextfromGameObject(getGameObjectChild(piercer, "Text"));
+                GameObject piercer = GetGameObjectChild(revolverWindow, "Variation Panel (Blue)");
+                Text piercerName = GetTextfromGameObject(GetGameObjectChild(piercer, "Text"));
                 piercerName.text = LanguageManager.CurrentLanguage.shop.shop_revolverPiercer;
 
-                GameObject piercerWindow = getGameObjectChild(revolverWindow, "Variation Info (Blue)");
-                Text piercerWindowName = getTextfromGameObject(getGameObjectChild(piercerWindow, "Name"));
+                GameObject piercerWindow = GetGameObjectChild(revolverWindow, "Variation Info (Blue)");
+                Text piercerWindowName = GetTextfromGameObject(GetGameObjectChild(piercerWindow, "Name"));
                 piercerWindowName.text = piercerName.text;
 
-                Text piercerWindowDescription = getTextfromGameObject(getGameObjectChild(piercerWindow, "Description"));
+                Text piercerWindowDescription = GetTextfromGameObject(GetGameObjectChild(piercerWindow, "Description"));
                 piercerWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_revolverPiercerDescription1 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_revolverPiercerDescription2;
 
-                Text piercerWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(piercerWindow, "Button"),"Text"));
+                Text piercerWindowDescriptionBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(piercerWindow, "Button"),"Text"));
                 piercerWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Marksman
-                GameObject marksman = getGameObjectChild(revolverWindow, "Variation Panel (Green)");
-                Text marksmanName = getTextfromGameObject(getGameObjectChild(marksman, "Text"));
+                GameObject marksman = GetGameObjectChild(revolverWindow, "Variation Panel (Green)");
+                Text marksmanName = GetTextfromGameObject(GetGameObjectChild(marksman, "Text"));
                 marksmanName.text = LanguageManager.CurrentLanguage.shop.shop_revolverMarksman;
                 marksmanName.fontSize = 14;
 
-                GameObject marksmanWindow = getGameObjectChild(revolverWindow, "Variation Info (Green)");
-                Text marksmanWindowName = getTextfromGameObject(getGameObjectChild(marksmanWindow, "Name"));
+                GameObject marksmanWindow = GetGameObjectChild(revolverWindow, "Variation Info (Green)");
+                Text marksmanWindowName = GetTextfromGameObject(GetGameObjectChild(marksmanWindow, "Name"));
                 marksmanWindowName.text = marksmanName.text;
 
-                Text marksmanWindowDescription = getTextfromGameObject(getGameObjectChild(marksmanWindow, "Description"));
+                Text marksmanWindowDescription = GetTextfromGameObject(GetGameObjectChild(marksmanWindow, "Description"));
                 marksmanWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_revolverMarksmanDescription1 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_revolverMarksmanDescription2 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_revolverMarksmanDescription3;
                 marksmanWindowDescription.fontSize = 14;
 
-                Text marksmanWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(marksmanWindow, "Button"), "Text"));
+                Text marksmanWindowDescriptionBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(marksmanWindow, "Button"), "Text"));
                 marksmanWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Revolver red variation (under construction)
-                GameObject revolverRedVariation = getGameObjectChild(revolverWindow, "Variation Panel (Red)");
-                Text revolverRedUnderConstruction = getTextfromGameObject(getGameObjectChild(revolverRedVariation, "Text (1)"));
+                GameObject revolverRedVariation = GetGameObjectChild(revolverWindow, "Variation Panel (Red)");
+                Text revolverRedUnderConstruction = GetTextfromGameObject(GetGameObjectChild(revolverRedVariation, "Text (1)"));
                 revolverRedUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
 
                 //Revolver info & color tabs
-                GameObject revolverExtra = getGameObjectChild(revolverWindow, "Info and Color Panel");
-                GameObject revolverExtraInfo = getGameObjectChild(revolverExtra, "InfoButton");
-                GameObject revolverExtraColor = getGameObjectChild(revolverExtra, "ColorButton");
+                GameObject revolverExtra = GetGameObjectChild(revolverWindow, "Info and Color Panel");
+                GameObject revolverExtraInfo = GetGameObjectChild(revolverExtra, "InfoButton");
+                GameObject revolverExtraColor = GetGameObjectChild(revolverExtra, "ColorButton");
 
-                Text revolverExtraInfoText = getTextfromGameObject(getGameObjectChild(revolverExtraInfo, "Text"));
+                Text revolverExtraInfoText = GetTextfromGameObject(GetGameObjectChild(revolverExtraInfo, "Text"));
                 revolverExtraInfoText.text = LanguageManager.CurrentLanguage.shop.shop_weaponInfo;
 
-                Text revolverExtraInfoColors = getTextfromGameObject(getGameObjectChild(revolverExtraColor, "Text"));
+                Text revolverExtraInfoColors = GetTextfromGameObject(GetGameObjectChild(revolverExtraColor, "Text"));
                 revolverExtraInfoColors.text = LanguageManager.CurrentLanguage.shop.shop_weaponColors;
 
                 //Revolver lore
-                GameObject revolverLore = getGameObjectChild(revolverWindow, "Info Screen");
-                Text revolverLoreName = getTextfromGameObject(getGameObjectChild(revolverLore, "Name"));
+                GameObject revolverLore = GetGameObjectChild(revolverWindow, "Info Screen");
+                Text revolverLoreName = GetTextfromGameObject(GetGameObjectChild(revolverLore, "Name"));
                 revolverLoreName.text = LanguageManager.CurrentLanguage.shop.shop_weaponsRevolver;
 
-                Text revolverLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverLore,"Scroll View"),"Viewport"),"Text"));
+                Text revolverLoreInfo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(revolverLore,"Scroll View"),"Viewport"),"Text"));
 
                 revolverLoreInfo.text =
                     LanguageManager.CurrentLanguage.shop.shop_data + "\n\n"
@@ -241,21 +239,21 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.shop.shop_loreRevolver9 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_loreRevolver10;
 
-                Text revolverLoreBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverLore, "Button"), "Text"));
+                Text revolverLoreBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(revolverLore, "Button"), "Text"));
                 revolverLoreBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Revolver preset colors
-                GameObject revolverColorWindow = getGameObjectChild(revolverWindow, "Color Screen");
+                GameObject revolverColorWindow = GetGameObjectChild(revolverWindow, "Color Screen");
 
-                Text revolverColorWindowTitle = getTextfromGameObject(getGameObjectChild(revolverColorWindow,"Title"));
+                Text revolverColorWindowTitle = GetTextfromGameObject(GetGameObjectChild(revolverColorWindow,"Title"));
                 revolverColorWindowTitle.text = "--" + LanguageManager.CurrentLanguage.shop.shop_weaponsRevolver + "--";
 
-                GameObject revolverStandardTemplates = getGameObjectChild(getGameObjectChild(revolverColorWindow, "Standard"),"Template");
-                Text revolverStandardTemplate1 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverStandardTemplates, "Template 1"),"Button (Selectable)"),"Text"));
-                Text revolverStandardTemplate2 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverStandardTemplates, "Template 2"), "Button (Selectable)"), "Text"));
-                Text revolverStandardTemplate3 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverStandardTemplates, "Template 3"), "Button (Selectable)"), "Text"));
-                Text revolverStandardTemplate4 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverStandardTemplates, "Template 4"), "Button (Selectable)"), "Text"));
-                Text revolverStandardTemplate5 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverStandardTemplates, "Template 5"), "Button (Selectable)"), "Text"));
+                GameObject revolverStandardTemplates = GetGameObjectChild(GetGameObjectChild(revolverColorWindow, "Standard"),"Template");
+                Text revolverStandardTemplate1 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(revolverStandardTemplates, "Template 1"),"Button (Selectable)"),"Text"));
+                Text revolverStandardTemplate2 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(revolverStandardTemplates, "Template 2"), "Button (Selectable)"), "Text"));
+                Text revolverStandardTemplate3 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(revolverStandardTemplates, "Template 3"), "Button (Selectable)"), "Text"));
+                Text revolverStandardTemplate4 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(revolverStandardTemplates, "Template 4"), "Button (Selectable)"), "Text"));
+                Text revolverStandardTemplate5 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(revolverStandardTemplates, "Template 5"), "Button (Selectable)"), "Text"));
 
                 revolverStandardTemplate1.text = LanguageManager.CurrentLanguage.shop.shop_revolverPreset1;
                 revolverStandardTemplate2.text = LanguageManager.CurrentLanguage.shop.shop_revolverPreset2;
@@ -263,18 +261,18 @@ namespace UltrakULL
                 revolverStandardTemplate4.text = LanguageManager.CurrentLanguage.shop.shop_revolverPreset4;
                 revolverStandardTemplate5.text = LanguageManager.CurrentLanguage.shop.shop_revolverPreset5;
 
-                Text revolverColorSwitchToAlternative = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverColorWindow, "Standard"),"AlternateButton"),"Text"));
+                Text revolverColorSwitchToAlternative = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(revolverColorWindow, "Standard"),"AlternateButton"),"Text"));
                 revolverColorSwitchToAlternative.text = LanguageManager.CurrentLanguage.shop.shop_colorsAlternative;
 
-                Text revolverColorSwitchToStandard = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverColorWindow, "Alternate"), "AlternateButton"), "Text"));
+                Text revolverColorSwitchToStandard = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(revolverColorWindow, "Alternate"), "AlternateButton"), "Text"));
                 revolverColorSwitchToStandard.text = LanguageManager.CurrentLanguage.shop.shop_colorsAlternative;
 
-                GameObject revolverAlternateTemplates = getGameObjectChild(getGameObjectChild(revolverColorWindow, "Alternate"), "Template");
-                Text revolverAlternateTemplate1 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverAlternateTemplates, "Template 1"), "Button (Selectable)"), "Text"));
-                Text revolverAlternateTemplate2 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverAlternateTemplates, "Template 2"), "Button (Selectable)"), "Text"));
-                Text revolverAlternateTemplate3 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverAlternateTemplates, "Template 3"), "Button (Selectable)"), "Text"));
-                Text revolverAlternateTemplate4 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverAlternateTemplates, "Template 4"), "Button (Selectable)"), "Text"));
-                Text revolverAlternateTemplate5 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverAlternateTemplates, "Template 5"), "Button (Selectable)"), "Text"));
+                GameObject revolverAlternateTemplates = GetGameObjectChild(GetGameObjectChild(revolverColorWindow, "Alternate"), "Template");
+                Text revolverAlternateTemplate1 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(revolverAlternateTemplates, "Template 1"), "Button (Selectable)"), "Text"));
+                Text revolverAlternateTemplate2 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(revolverAlternateTemplates, "Template 2"), "Button (Selectable)"), "Text"));
+                Text revolverAlternateTemplate3 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(revolverAlternateTemplates, "Template 3"), "Button (Selectable)"), "Text"));
+                Text revolverAlternateTemplate4 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(revolverAlternateTemplates, "Template 4"), "Button (Selectable)"), "Text"));
+                Text revolverAlternateTemplate5 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(revolverAlternateTemplates, "Template 5"), "Button (Selectable)"), "Text"));
 
                 revolverAlternateTemplate1.text = LanguageManager.CurrentLanguage.shop.shop_revolverPreset1;
                 revolverAlternateTemplate2.text = LanguageManager.CurrentLanguage.shop.shop_revolverPreset2;
@@ -282,99 +280,99 @@ namespace UltrakULL
                 revolverAlternateTemplate4.text = LanguageManager.CurrentLanguage.shop.shop_revolverPreset4;
                 revolverAlternateTemplate5.text = LanguageManager.CurrentLanguage.shop.shop_revolverPreset5;
 
-                Text revolverColorStandardPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverStandardTemplates, "TemplateButton"),"Text"));
+                Text revolverColorStandardPreset = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(revolverStandardTemplates, "TemplateButton"),"Text"));
                 revolverColorStandardPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
 
-                Text revolverColorStandardCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverStandardTemplates, "CustomButton"),"Text"));
+                Text revolverColorStandardCustom = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(revolverStandardTemplates, "CustomButton"),"Text"));
                 revolverColorStandardCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
-                Text revolverColorAlternatePreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverAlternateTemplates, "TemplateButton"), "Text"));
+                Text revolverColorAlternatePreset = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(revolverAlternateTemplates, "TemplateButton"), "Text"));
                 revolverColorAlternatePreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
 
-                Text revolverColorAlternateCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverAlternateTemplates, "CustomButton"), "Text"));
+                Text revolverColorAlternateCustom = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(revolverAlternateTemplates, "CustomButton"), "Text"));
                 revolverColorAlternateCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
-                Text revolverColorDone = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverColorWindow, "Done"),"Text"));
+                Text revolverColorDone = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(revolverColorWindow, "Done"),"Text"));
                 revolverColorDone.text = LanguageManager.CurrentLanguage.shop.shop_colorsDone;
 
                 //Revolver custom colors
-                GameObject revolverStandardCustom = getGameObjectChild(getGameObjectChild(revolverColorWindow, "Standard"),"Custom");
-                Text revolverStandardCustomPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverStandardCustom, "TemplateButton"), "Text"));
+                GameObject revolverStandardCustom = GetGameObjectChild(GetGameObjectChild(revolverColorWindow, "Standard"),"Custom");
+                Text revolverStandardCustomPreset = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(revolverStandardCustom, "TemplateButton"), "Text"));
                 revolverStandardCustomPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
-                Text revolverStandardCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverStandardCustom, "CustomButton"), "Text"));
+                Text revolverStandardCustomCustom = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(revolverStandardCustom, "CustomButton"), "Text"));
                 revolverStandardCustomCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
-                GameObject revolverAlternateCustom = getGameObjectChild(getGameObjectChild(revolverColorWindow, "Alternate"), "Custom");
-                Text revolverAlternateCustomPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverAlternateCustom, "TemplateButton"), "Text"));
+                GameObject revolverAlternateCustom = GetGameObjectChild(GetGameObjectChild(revolverColorWindow, "Alternate"), "Custom");
+                Text revolverAlternateCustomPreset = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(revolverAlternateCustom, "TemplateButton"), "Text"));
                 revolverAlternateCustomPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
-                Text revolverAlternateCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(revolverAlternateCustom, "CustomButton"), "Text"));
+                Text revolverAlternateCustomCustom = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(revolverAlternateCustom, "CustomButton"), "Text"));
                 revolverAlternateCustomCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
                 //Revolver custom color unlock prompt
-                Text revolverCustomColorPrompt = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(revolverWindow, "Color Screen"),"Standard"),"Custom"),"Locked"),"Blocker"),"Text"));
+                Text revolverCustomColorPrompt = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(revolverWindow, "Color Screen"),"Standard"),"Custom"),"Locked"),"Blocker"),"Text"));
 
                 revolverCustomColorPrompt.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustomUnlockPrompt + " " + LanguageManager.CurrentLanguage.shop.shop_weaponsRevolver;
 
                 //Shotgun window and descriptions
-                GameObject shotgunWindow = getGameObjectChild(shopWeaponsObject, "ShotgunWindow");
+                GameObject shotgunWindow = GetGameObjectChild(shopWeaponsObject, "ShotgunWindow");
 
                 //Core Eject
-                GameObject coreEject = getGameObjectChild(shotgunWindow, "Variation Panel (Blue)");
-                Text coreEjectName = getTextfromGameObject(getGameObjectChild(coreEject, "Text"));
+                GameObject coreEject = GetGameObjectChild(shotgunWindow, "Variation Panel (Blue)");
+                Text coreEjectName = GetTextfromGameObject(GetGameObjectChild(coreEject, "Text"));
                 coreEjectName.text = LanguageManager.CurrentLanguage.shop.shop_shotgunCoreEject;
 
-                GameObject coreEjectWindow = getGameObjectChild(shotgunWindow, "Variation Info (Blue)");
-                Text coreEjectWindowName = getTextfromGameObject(getGameObjectChild(coreEjectWindow, "Name"));
+                GameObject coreEjectWindow = GetGameObjectChild(shotgunWindow, "Variation Info (Blue)");
+                Text coreEjectWindowName = GetTextfromGameObject(GetGameObjectChild(coreEjectWindow, "Name"));
                 coreEjectWindowName.text = LanguageManager.CurrentLanguage.shop.shop_shotgunCoreEject;
 
-                Text coreEjectWindowDescription = getTextfromGameObject(getGameObjectChild(coreEjectWindow, "Description"));
+                Text coreEjectWindowDescription = GetTextfromGameObject(GetGameObjectChild(coreEjectWindow, "Description"));
                 coreEjectWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_shotgunCoreEjectDescription1 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_shotgunCoreEjectDescription2 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_shotgunCoreEjectDescription3;
 
-                Text coreEjectWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(coreEjectWindow, "Button"), "Text"));
+                Text coreEjectWindowDescriptionBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(coreEjectWindow, "Button"), "Text"));
                 coreEjectWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Pump Charge
-                GameObject pumpCharge = getGameObjectChild(shotgunWindow, "Variation Panel (Green)");
-                Text pumpChargeName = getTextfromGameObject(getGameObjectChild(pumpCharge, "Text"));
+                GameObject pumpCharge = GetGameObjectChild(shotgunWindow, "Variation Panel (Green)");
+                Text pumpChargeName = GetTextfromGameObject(GetGameObjectChild(pumpCharge, "Text"));
                 pumpChargeName.text = LanguageManager.CurrentLanguage.shop.shop_shotgunPumpCharge;
                 pumpChargeName.fontSize = 16;
 
-                GameObject pumpChargeWindow = getGameObjectChild(shotgunWindow, "Variation Info (Green)");
-                Text pumpChargeWindowName = getTextfromGameObject(getGameObjectChild(pumpChargeWindow, "Name"));
+                GameObject pumpChargeWindow = GetGameObjectChild(shotgunWindow, "Variation Info (Green)");
+                Text pumpChargeWindowName = GetTextfromGameObject(GetGameObjectChild(pumpChargeWindow, "Name"));
                 pumpChargeWindowName.text = LanguageManager.CurrentLanguage.shop.shop_shotgunPumpCharge;
 
-                Text pumpChargeWindowDescription = getTextfromGameObject(getGameObjectChild(pumpChargeWindow, "Description"));
+                Text pumpChargeWindowDescription = GetTextfromGameObject(GetGameObjectChild(pumpChargeWindow, "Description"));
                 pumpChargeWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_shotgunPumpChargeDescription1 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_shotgunPumpChargeDescription2;
                 pumpChargeWindowDescription.fontSize = 14;
 
-                Text pumpChargeWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(pumpChargeWindow, "Button"), "Text"));
+                Text pumpChargeWindowDescriptionBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(pumpChargeWindow, "Button"), "Text"));
                 pumpChargeWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Shotgun red variation (under construction)
-                GameObject shotgunRedVariation = getGameObjectChild(shotgunWindow, "Variation Panel (Red)");
-                Text shotgunRedUnderConstruction = getTextfromGameObject(getGameObjectChild(shotgunRedVariation, "Text (1)"));
+                GameObject shotgunRedVariation = GetGameObjectChild(shotgunWindow, "Variation Panel (Red)");
+                Text shotgunRedUnderConstruction = GetTextfromGameObject(GetGameObjectChild(shotgunRedVariation, "Text (1)"));
                 shotgunRedUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
 
                 //Shotgun info & color tabs
-                GameObject shotgunExtra = getGameObjectChild(shotgunWindow, "Info and Color Panel");
-                GameObject shotgunExtraInfo = getGameObjectChild(shotgunExtra, "InfoButton");
-                GameObject shotgunExtraColor = getGameObjectChild(shotgunExtra, "ColorButton");
+                GameObject shotgunExtra = GetGameObjectChild(shotgunWindow, "Info and Color Panel");
+                GameObject shotgunExtraInfo = GetGameObjectChild(shotgunExtra, "InfoButton");
+                GameObject shotgunExtraColor = GetGameObjectChild(shotgunExtra, "ColorButton");
 
-                Text shotgunExtraInfoText = getTextfromGameObject(getGameObjectChild(shotgunExtraInfo, "Text"));
+                Text shotgunExtraInfoText = GetTextfromGameObject(GetGameObjectChild(shotgunExtraInfo, "Text"));
                 shotgunExtraInfoText.text = LanguageManager.CurrentLanguage.shop.shop_weaponInfo;
 
-                Text shotgunExtraInfoColors = getTextfromGameObject(getGameObjectChild(shotgunExtraColor, "Text"));
+                Text shotgunExtraInfoColors = GetTextfromGameObject(GetGameObjectChild(shotgunExtraColor, "Text"));
                 shotgunExtraInfoColors.text = LanguageManager.CurrentLanguage.shop.shop_weaponColors;
 
                 //Shotgun lore
-                GameObject shotgunLore = getGameObjectChild(shotgunWindow, "Info Screen");
-                Text shotgunLoreName = getTextfromGameObject(getGameObjectChild(shotgunLore, "Name"));
+                GameObject shotgunLore = GetGameObjectChild(shotgunWindow, "Info Screen");
+                Text shotgunLoreName = GetTextfromGameObject(GetGameObjectChild(shotgunLore, "Name"));
                 shotgunLoreName.text = LanguageManager.CurrentLanguage.shop.shop_weaponsShotgun;
 
-                Text shotgunLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shotgunLore, "Scroll View"), "Viewport"), "Text"));
+                Text shotgunLoreInfo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shotgunLore, "Scroll View"), "Viewport"), "Text"));
 
                 shotgunLoreInfo.text =
                     LanguageManager.CurrentLanguage.shop.shop_data + "\n\n"
@@ -390,21 +388,21 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.shop.shop_loreShotgun8 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_loreShotgun9;
 
-                Text shotgunLoreBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shotgunLore, "Button"), "Text"));
+                Text shotgunLoreBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shotgunLore, "Button"), "Text"));
                 shotgunLoreBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Shotgun preset colors
-                GameObject shotgunColorWindow = getGameObjectChild(shotgunWindow, "Color Screen");
+                GameObject shotgunColorWindow = GetGameObjectChild(shotgunWindow, "Color Screen");
 
-                Text shotgunColorWindowTitle = getTextfromGameObject(getGameObjectChild(shotgunColorWindow, "Title"));
+                Text shotgunColorWindowTitle = GetTextfromGameObject(GetGameObjectChild(shotgunColorWindow, "Title"));
                 shotgunColorWindowTitle.text = "--" + LanguageManager.CurrentLanguage.shop.shop_weaponsShotgun + "--";
 
-                GameObject shotgunStandardTemplates = getGameObjectChild(getGameObjectChild(shotgunColorWindow, "Standard"), "Template");
-                Text shotgunStandardTemplate1 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shotgunStandardTemplates, "Template 1"), "Button (Selectable)"), "Text"));
-                Text shotgunStandardTemplate2 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shotgunStandardTemplates, "Template 2"), "Button (Selectable)"), "Text"));
-                Text shotgunStandardTemplate3 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shotgunStandardTemplates, "Template 3"), "Button (Selectable)"), "Text"));
-                Text shotgunStandardTemplate4 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shotgunStandardTemplates, "Template 4"), "Button (Selectable)"), "Text"));
-                Text shotgunStandardTemplate5 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(shotgunStandardTemplates, "Template 5"), "Button (Selectable)"), "Text"));
+                GameObject shotgunStandardTemplates = GetGameObjectChild(GetGameObjectChild(shotgunColorWindow, "Standard"), "Template");
+                Text shotgunStandardTemplate1 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shotgunStandardTemplates, "Template 1"), "Button (Selectable)"), "Text"));
+                Text shotgunStandardTemplate2 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shotgunStandardTemplates, "Template 2"), "Button (Selectable)"), "Text"));
+                Text shotgunStandardTemplate3 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shotgunStandardTemplates, "Template 3"), "Button (Selectable)"), "Text"));
+                Text shotgunStandardTemplate4 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shotgunStandardTemplates, "Template 4"), "Button (Selectable)"), "Text"));
+                Text shotgunStandardTemplate5 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shotgunStandardTemplates, "Template 5"), "Button (Selectable)"), "Text"));
 
                 shotgunStandardTemplate1.text = LanguageManager.CurrentLanguage.shop.shop_shotgunPreset1;
                 shotgunStandardTemplate2.text = LanguageManager.CurrentLanguage.shop.shop_shotgunPreset2;
@@ -412,87 +410,87 @@ namespace UltrakULL
                 shotgunStandardTemplate4.text = LanguageManager.CurrentLanguage.shop.shop_shotgunPreset4;
                 shotgunStandardTemplate5.text = LanguageManager.CurrentLanguage.shop.shop_shotgunPreset5;
 
-                Text shotgunColorStandardPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shotgunStandardTemplates, "TemplateButton"), "Text"));
+                Text shotgunColorStandardPreset = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shotgunStandardTemplates, "TemplateButton"), "Text"));
                 shotgunColorStandardPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
 
-                Text shotgunColorStandardCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shotgunStandardTemplates, "CustomButton"), "Text"));
+                Text shotgunColorStandardCustom = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shotgunStandardTemplates, "CustomButton"), "Text"));
                 shotgunColorStandardCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
-                Text shotgunColorDone = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shotgunColorWindow, "Done"), "Text"));
+                Text shotgunColorDone = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shotgunColorWindow, "Done"), "Text"));
                 shotgunColorDone.text = LanguageManager.CurrentLanguage.shop.shop_colorsDone;
 
                 //Shotgun custom colors
-                GameObject shotgunStandardCustom = getGameObjectChild(getGameObjectChild(shotgunColorWindow, "Standard"), "Custom");
-                Text shotgunStandardCustomPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shotgunStandardCustom, "TemplateButton"), "Text"));
+                GameObject shotgunStandardCustom = GetGameObjectChild(GetGameObjectChild(shotgunColorWindow, "Standard"), "Custom");
+                Text shotgunStandardCustomPreset = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shotgunStandardCustom, "TemplateButton"), "Text"));
                 shotgunStandardCustomPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
-                Text shotgunStandardCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(shotgunStandardCustom, "CustomButton"), "Text"));
+                Text shotgunStandardCustomCustom = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shotgunStandardCustom, "CustomButton"), "Text"));
                 shotgunStandardCustomCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
                 //Shotgun custom color unlock prompt
-                Text shotgunCustomColorPrompt = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(shotgunWindow, "Color Screen"), "Standard"), "Custom"), "Locked"), "Blocker"), "Text"));
+                Text shotgunCustomColorPrompt = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shotgunWindow, "Color Screen"), "Standard"), "Custom"), "Locked"), "Blocker"), "Text"));
 
                 shotgunCustomColorPrompt.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustomUnlockPrompt + " " + LanguageManager.CurrentLanguage.shop.shop_weaponsRevolver;
 
                 //Nailgun window and descriptions
-                GameObject nailgunWindow = getGameObjectChild(shopWeaponsObject, "NailgunWindow");
+                GameObject nailgunWindow = GetGameObjectChild(shopWeaponsObject, "NailgunWindow");
 
                 //Attractor
-                GameObject attractor = getGameObjectChild(nailgunWindow, "Variation Panel (Blue)");
-                Text attractorName = getTextfromGameObject(getGameObjectChild(attractor, "Text"));
+                GameObject attractor = GetGameObjectChild(nailgunWindow, "Variation Panel (Blue)");
+                Text attractorName = GetTextfromGameObject(GetGameObjectChild(attractor, "Text"));
                 attractorName.text = LanguageManager.CurrentLanguage.shop.shop_nailgunMagnet;
 
-                GameObject attractorWindow = getGameObjectChild(nailgunWindow, "Variation Info (Blue)");
-                Text attractorWindowName = getTextfromGameObject(getGameObjectChild(attractorWindow, "Name"));
+                GameObject attractorWindow = GetGameObjectChild(nailgunWindow, "Variation Info (Blue)");
+                Text attractorWindowName = GetTextfromGameObject(GetGameObjectChild(attractorWindow, "Name"));
                 attractorWindowName.text = LanguageManager.CurrentLanguage.shop.shop_nailgunMagnet;
 
-                Text attractorWindowDescription = getTextfromGameObject(getGameObjectChild(attractorWindow, "Description"));
+                Text attractorWindowDescription = GetTextfromGameObject(GetGameObjectChild(attractorWindow, "Description"));
                 attractorWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_nailgunMagnetDescription1 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_nailgunMagnetDescription2;
                 attractorWindowDescription.fontSize = 16;
 
-                Text attractorWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(attractorWindow, "Button"), "Text"));
+                Text attractorWindowDescriptionBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(attractorWindow, "Button"), "Text"));
                 attractorWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Overheat
-                GameObject overheat = getGameObjectChild(nailgunWindow, "Variation Panel (Green)");
-                Text overheatName = getTextfromGameObject(getGameObjectChild(overheat, "Text"));
+                GameObject overheat = GetGameObjectChild(nailgunWindow, "Variation Panel (Green)");
+                Text overheatName = GetTextfromGameObject(GetGameObjectChild(overheat, "Text"));
                 overheatName.text = LanguageManager.CurrentLanguage.shop.shop_nailgunOverheat;
                 overheatName.fontSize = 16;
 
-                GameObject overheatWindow = getGameObjectChild(nailgunWindow, "Variation Info (Green)");
-                Text overheatWindowName = getTextfromGameObject(getGameObjectChild(overheatWindow, "Name"));
+                GameObject overheatWindow = GetGameObjectChild(nailgunWindow, "Variation Info (Green)");
+                Text overheatWindowName = GetTextfromGameObject(GetGameObjectChild(overheatWindow, "Name"));
                 overheatWindowName.text = LanguageManager.CurrentLanguage.shop.shop_nailgunOverheat;
 
-                Text overheatWindowDescription = getTextfromGameObject(getGameObjectChild(overheatWindow, "Description"));
+                Text overheatWindowDescription = GetTextfromGameObject(GetGameObjectChild(overheatWindow, "Description"));
                 overheatWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_nailgunOverheatDescription1 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_nailgunOverheatDescription2;
                 overheatWindowDescription.fontSize = 14;
 
-                Text overheatWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(overheatWindow, "Button"), "Text"));
+                Text overheatWindowDescriptionBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(overheatWindow, "Button"), "Text"));
                 overheatWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Nailgun red variation (under construction)
-                GameObject nailgunRedVariation = getGameObjectChild(nailgunWindow, "Variation Panel (Red)");
-                Text nailgunRedUnderConstruction = getTextfromGameObject(getGameObjectChild(nailgunRedVariation, "Text (1)"));
+                GameObject nailgunRedVariation = GetGameObjectChild(nailgunWindow, "Variation Panel (Red)");
+                Text nailgunRedUnderConstruction = GetTextfromGameObject(GetGameObjectChild(nailgunRedVariation, "Text (1)"));
                 nailgunRedUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
 
                 //Nailgun info & color tabs
-                GameObject nailgunExtra = getGameObjectChild(nailgunWindow, "Info and Color Panel");
-                GameObject nailgunExtraInfo = getGameObjectChild(nailgunExtra, "InfoButton");
-                GameObject nailgunExtraColor = getGameObjectChild(nailgunExtra, "ColorButton");
+                GameObject nailgunExtra = GetGameObjectChild(nailgunWindow, "Info and Color Panel");
+                GameObject nailgunExtraInfo = GetGameObjectChild(nailgunExtra, "InfoButton");
+                GameObject nailgunExtraColor = GetGameObjectChild(nailgunExtra, "ColorButton");
 
-                Text nailgunExtraInfoText = getTextfromGameObject(getGameObjectChild(nailgunExtraInfo, "Text"));
+                Text nailgunExtraInfoText = GetTextfromGameObject(GetGameObjectChild(nailgunExtraInfo, "Text"));
                 nailgunExtraInfoText.text = LanguageManager.CurrentLanguage.shop.shop_weaponInfo;
 
-                Text nailgunExtraInfoColors = getTextfromGameObject(getGameObjectChild(nailgunExtraColor, "Text"));
+                Text nailgunExtraInfoColors = GetTextfromGameObject(GetGameObjectChild(nailgunExtraColor, "Text"));
                 nailgunExtraInfoColors.text = LanguageManager.CurrentLanguage.shop.shop_weaponColors;
 
                 //Nailgun lore
-                GameObject nailgunLore = getGameObjectChild(nailgunWindow, "Info Screen");
-                Text nailgunLoreName = getTextfromGameObject(getGameObjectChild(nailgunLore, "Name"));
+                GameObject nailgunLore = GetGameObjectChild(nailgunWindow, "Info Screen");
+                Text nailgunLoreName = GetTextfromGameObject(GetGameObjectChild(nailgunLore, "Name"));
                 nailgunLoreName.text = LanguageManager.CurrentLanguage.shop.shop_weaponsNailgun;
 
-                Text nailgunLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunLore, "Scroll View"), "Viewport"), "Text"));
+                Text nailgunLoreInfo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(nailgunLore, "Scroll View"), "Viewport"), "Text"));
                 nailgunLoreInfo.text =
                     LanguageManager.CurrentLanguage.shop.shop_data + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_loreNailgun1 + "\n\n"
@@ -507,22 +505,22 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.shop.shop_loreNailgun8 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_loreNailgun9;
 
-                Text nailgunLoreBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunLore, "Button"), "Text"));
+                Text nailgunLoreBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(nailgunLore, "Button"), "Text"));
                 nailgunLoreBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
 
                 //Nailgun preset colors
-                GameObject nailgunColorWindow = getGameObjectChild(nailgunWindow, "Color Screen");
+                GameObject nailgunColorWindow = GetGameObjectChild(nailgunWindow, "Color Screen");
 
-                Text nailgunColorWindowTitle = getTextfromGameObject(getGameObjectChild(nailgunColorWindow, "Title"));
+                Text nailgunColorWindowTitle = GetTextfromGameObject(GetGameObjectChild(nailgunColorWindow, "Title"));
                 nailgunColorWindowTitle.text = "--" + LanguageManager.CurrentLanguage.shop.shop_weaponsNailgun + "--";
 
-                GameObject nailgunStandardTemplates = getGameObjectChild(getGameObjectChild(nailgunColorWindow, "Standard"), "Template");
-                Text nailgunStandardTemplate1 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunStandardTemplates, "Template 1"), "Button (Selectable)"), "Text"));
-                Text nailgunStandardTemplate2 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunStandardTemplates, "Template 2"), "Button (Selectable)"), "Text"));
-                Text nailgunStandardTemplate3 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunStandardTemplates, "Template 3"), "Button (Selectable)"), "Text"));
-                Text nailgunStandardTemplate4 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunStandardTemplates, "Template 4"), "Button (Selectable)"), "Text"));
-                Text nailgunStandardTemplate5 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunStandardTemplates, "Template 5"), "Button (Selectable)"), "Text"));
+                GameObject nailgunStandardTemplates = GetGameObjectChild(GetGameObjectChild(nailgunColorWindow, "Standard"), "Template");
+                Text nailgunStandardTemplate1 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(nailgunStandardTemplates, "Template 1"), "Button (Selectable)"), "Text"));
+                Text nailgunStandardTemplate2 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(nailgunStandardTemplates, "Template 2"), "Button (Selectable)"), "Text"));
+                Text nailgunStandardTemplate3 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(nailgunStandardTemplates, "Template 3"), "Button (Selectable)"), "Text"));
+                Text nailgunStandardTemplate4 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(nailgunStandardTemplates, "Template 4"), "Button (Selectable)"), "Text"));
+                Text nailgunStandardTemplate5 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(nailgunStandardTemplates, "Template 5"), "Button (Selectable)"), "Text"));
 
                 nailgunStandardTemplate1.text = LanguageManager.CurrentLanguage.shop.shop_nailgunPreset1;
                 nailgunStandardTemplate2.text = LanguageManager.CurrentLanguage.shop.shop_nailgunPreset2;
@@ -530,18 +528,18 @@ namespace UltrakULL
                 nailgunStandardTemplate4.text = LanguageManager.CurrentLanguage.shop.shop_nailgunPreset4;
                 nailgunStandardTemplate5.text = LanguageManager.CurrentLanguage.shop.shop_nailgunPreset5;
 
-                Text nailgunColorSwitchToAlternative = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunColorWindow, "Standard"), "AlternateButton"), "Text"));
+                Text nailgunColorSwitchToAlternative = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(nailgunColorWindow, "Standard"), "AlternateButton"), "Text"));
                 nailgunColorSwitchToAlternative.text = LanguageManager.CurrentLanguage.shop.shop_colorsAlternative;
 
-                Text nailgunColorSwitchToStandard = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunColorWindow, "Alternate"), "AlternateButton"), "Text"));
+                Text nailgunColorSwitchToStandard = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(nailgunColorWindow, "Alternate"), "AlternateButton"), "Text"));
                 nailgunColorSwitchToStandard.text = LanguageManager.CurrentLanguage.shop.shop_colorsAlternative;
 
-                GameObject nailgunAlternateTemplates = getGameObjectChild(getGameObjectChild(nailgunColorWindow, "Alternate"), "Template");
-                Text nailgunAlternateTemplate1 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunAlternateTemplates, "Template 1"), "Button (Selectable)"), "Text"));
-                Text nailgunAlternateTemplate2 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunAlternateTemplates, "Template 2"), "Button (Selectable)"), "Text"));
-                Text nailgunAlternateTemplate3 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunAlternateTemplates, "Template 3"), "Button (Selectable)"), "Text"));
-                Text nailgunAlternateTemplate4 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunAlternateTemplates, "Template 4"), "Button (Selectable)"), "Text"));
-                Text nailgunAlternateTemplate5 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunAlternateTemplates, "Template 5"), "Button (Selectable)"), "Text"));
+                GameObject nailgunAlternateTemplates = GetGameObjectChild(GetGameObjectChild(nailgunColorWindow, "Alternate"), "Template");
+                Text nailgunAlternateTemplate1 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(nailgunAlternateTemplates, "Template 1"), "Button (Selectable)"), "Text"));
+                Text nailgunAlternateTemplate2 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(nailgunAlternateTemplates, "Template 2"), "Button (Selectable)"), "Text"));
+                Text nailgunAlternateTemplate3 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(nailgunAlternateTemplates, "Template 3"), "Button (Selectable)"), "Text"));
+                Text nailgunAlternateTemplate4 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(nailgunAlternateTemplates, "Template 4"), "Button (Selectable)"), "Text"));
+                Text nailgunAlternateTemplate5 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(nailgunAlternateTemplates, "Template 5"), "Button (Selectable)"), "Text"));
 
                 nailgunAlternateTemplate1.text = LanguageManager.CurrentLanguage.shop.shop_nailgunPreset1;
                 nailgunAlternateTemplate2.text = LanguageManager.CurrentLanguage.shop.shop_nailgunPreset2;
@@ -549,111 +547,111 @@ namespace UltrakULL
                 nailgunAlternateTemplate4.text = LanguageManager.CurrentLanguage.shop.shop_nailgunPreset4;
                 nailgunAlternateTemplate5.text = LanguageManager.CurrentLanguage.shop.shop_nailgunPreset5;
 
-                Text nailgunColorStandardPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunStandardTemplates, "TemplateButton"), "Text"));
+                Text nailgunColorStandardPreset = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(nailgunStandardTemplates, "TemplateButton"), "Text"));
                 nailgunColorStandardPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
 
-                Text nailgunColorStandardCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunStandardTemplates, "CustomButton"), "Text"));
+                Text nailgunColorStandardCustom = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(nailgunStandardTemplates, "CustomButton"), "Text"));
                 nailgunColorStandardCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
-                Text nailgunColorAlternatePreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunAlternateTemplates, "TemplateButton"), "Text"));
+                Text nailgunColorAlternatePreset = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(nailgunAlternateTemplates, "TemplateButton"), "Text"));
                 nailgunColorAlternatePreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
 
-                Text nailgunColorAlternateCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunAlternateTemplates, "CustomButton"), "Text"));
+                Text nailgunColorAlternateCustom = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(nailgunAlternateTemplates, "CustomButton"), "Text"));
                 nailgunColorAlternateCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
-                Text nailgunColorDone = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunColorWindow, "Done"), "Text"));
+                Text nailgunColorDone = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(nailgunColorWindow, "Done"), "Text"));
                 nailgunColorDone.text = LanguageManager.CurrentLanguage.shop.shop_colorsDone;
 
                 //Nailgun custom colors
-                GameObject nailgunStandardCustom = getGameObjectChild(getGameObjectChild(nailgunColorWindow, "Standard"), "Custom");
-                Text nailgunStandardCustomPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunStandardCustom, "TemplateButton"), "Text"));
+                GameObject nailgunStandardCustom = GetGameObjectChild(GetGameObjectChild(nailgunColorWindow, "Standard"), "Custom");
+                Text nailgunStandardCustomPreset = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(nailgunStandardCustom, "TemplateButton"), "Text"));
                 nailgunStandardCustomPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
-                Text nailgunStandardCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunStandardCustom, "CustomButton"), "Text"));
+                Text nailgunStandardCustomCustom = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(nailgunStandardCustom, "CustomButton"), "Text"));
                 nailgunStandardCustomCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
-                GameObject nailgunAlternateCustom = getGameObjectChild(getGameObjectChild(nailgunColorWindow, "Alternate"), "Custom");
-                Text nailgunAlternateCustomPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunAlternateCustom, "TemplateButton"), "Text"));
+                GameObject nailgunAlternateCustom = GetGameObjectChild(GetGameObjectChild(nailgunColorWindow, "Alternate"), "Custom");
+                Text nailgunAlternateCustomPreset = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(nailgunAlternateCustom, "TemplateButton"), "Text"));
                 nailgunAlternateCustomPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
-                Text nailgunAlternateCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(nailgunAlternateCustom, "CustomButton"), "Text"));
+                Text nailgunAlternateCustomCustom = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(nailgunAlternateCustom, "CustomButton"), "Text"));
                 nailgunAlternateCustomCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
                 //Nailgun custom color unlock prompt
-                Text nailgunCustomColorPrompt = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(nailgunWindow, "Color Screen"), "Standard"), "Custom"), "Locked"), "Blocker"), "Text"));
+                Text nailgunCustomColorPrompt = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(nailgunWindow, "Color Screen"), "Standard"), "Custom"), "Locked"), "Blocker"), "Text"));
 
                 nailgunCustomColorPrompt.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustomUnlockPrompt + ": " + LanguageManager.CurrentLanguage.shop.shop_weaponsNailgun;
 
                 //Railcannon window and descriptions
-                GameObject railcannonWindow = getGameObjectChild(shopWeaponsObject, "RailcannonWindow");
+                GameObject railcannonWindow = GetGameObjectChild(shopWeaponsObject, "RailcannonWindow");
 
                 //Electric
-                GameObject electric = getGameObjectChild(railcannonWindow, "Variation Panel (Blue)");
-                Text electricName = getTextfromGameObject(getGameObjectChild(electric, "Text"));
+                GameObject electric = GetGameObjectChild(railcannonWindow, "Variation Panel (Blue)");
+                Text electricName = GetTextfromGameObject(GetGameObjectChild(electric, "Text"));
                 electricName.text = LanguageManager.CurrentLanguage.shop.shop_railcannonElectric;
 
-                GameObject electricWindow = getGameObjectChild(railcannonWindow, "Variation Info (Blue)");
-                Text electricWindowName = getTextfromGameObject(getGameObjectChild(electricWindow, "Name"));
+                GameObject electricWindow = GetGameObjectChild(railcannonWindow, "Variation Info (Blue)");
+                Text electricWindowName = GetTextfromGameObject(GetGameObjectChild(electricWindow, "Name"));
                 electricWindowName.text = LanguageManager.CurrentLanguage.shop.shop_railcannonElectric;
 
-                Text electricWindowDescription = getTextfromGameObject(getGameObjectChild(electricWindow, "Description"));
+                Text electricWindowDescription = GetTextfromGameObject(GetGameObjectChild(electricWindow, "Description"));
                 electricWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_railcannonElectricDescription1 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_railcannonElectricDescription2 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_railcannonElectricDescription3;
                 electricWindowDescription.fontSize = 16;
 
-                Text electricWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(electricWindow, "Button"), "Text"));
+                Text electricWindowDescriptionBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(electricWindow, "Button"), "Text"));
                 electricWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Screwdriver
-                GameObject screwdriver = getGameObjectChild(railcannonWindow, "Variation Panel (Green)");
-                Text screwdriverName = getTextfromGameObject(getGameObjectChild(screwdriver, "Text"));
+                GameObject screwdriver = GetGameObjectChild(railcannonWindow, "Variation Panel (Green)");
+                Text screwdriverName = GetTextfromGameObject(GetGameObjectChild(screwdriver, "Text"));
                 screwdriverName.text = LanguageManager.CurrentLanguage.shop.shop_railcannonScrewdriver;
 
-                GameObject screwdriverWindow = getGameObjectChild(railcannonWindow, "Variation Info (Green)");
-                Text screwdriverWindowName = getTextfromGameObject(getGameObjectChild(screwdriverWindow, "Name"));
+                GameObject screwdriverWindow = GetGameObjectChild(railcannonWindow, "Variation Info (Green)");
+                Text screwdriverWindowName = GetTextfromGameObject(GetGameObjectChild(screwdriverWindow, "Name"));
                 screwdriverWindowName.text = LanguageManager.CurrentLanguage.shop.shop_railcannonScrewdriver;
 
-                Text screwdriverWindowDescription = getTextfromGameObject(getGameObjectChild(screwdriverWindow, "Description"));
+                Text screwdriverWindowDescription = GetTextfromGameObject(GetGameObjectChild(screwdriverWindow, "Description"));
                 screwdriverWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_railcannonScrewdriverDescription1 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_railcannonScrewdriverDescription2;
                 screwdriverWindowDescription.fontSize = 16;
 
-                Text screwdriverWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(screwdriverWindow, "Button"), "Text"));
+                Text screwdriverWindowDescriptionBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(screwdriverWindow, "Button"), "Text"));
                 screwdriverWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Malicious
-                GameObject malicious = getGameObjectChild(railcannonWindow, "Variation Panel (Red)");
-                Text maliciousName = getTextfromGameObject(getGameObjectChild(malicious, "Text"));
+                GameObject malicious = GetGameObjectChild(railcannonWindow, "Variation Panel (Red)");
+                Text maliciousName = GetTextfromGameObject(GetGameObjectChild(malicious, "Text"));
                 maliciousName.text = LanguageManager.CurrentLanguage.shop.shop_railcannonMalicious;
 
-                GameObject maliciousWindow = getGameObjectChild(railcannonWindow, "Variation Info (Red)");
-                Text maliciousWindowName = getTextfromGameObject(getGameObjectChild(maliciousWindow, "Name"));
+                GameObject maliciousWindow = GetGameObjectChild(railcannonWindow, "Variation Info (Red)");
+                Text maliciousWindowName = GetTextfromGameObject(GetGameObjectChild(maliciousWindow, "Name"));
                 maliciousWindowName.text = LanguageManager.CurrentLanguage.shop.shop_railcannonMalicious;
 
-                Text maliciousWindowDescription = getTextfromGameObject(getGameObjectChild(maliciousWindow, "Description"));
+                Text maliciousWindowDescription = GetTextfromGameObject(GetGameObjectChild(maliciousWindow, "Description"));
                 maliciousWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_railcannonMaliciousDescription1 + "\n\n"
                     +  LanguageManager.CurrentLanguage.shop.shop_railcannonMaliciousDescription2;
                 maliciousWindowDescription.fontSize = 16;
 
-                Text maliciousWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(maliciousWindow, "Button"), "Text"));
+                Text maliciousWindowDescriptionBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(maliciousWindow, "Button"), "Text"));
                 maliciousWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Railcannon info & color tabs
-                GameObject railcannonExtra = getGameObjectChild(railcannonWindow, "Info and Color Panel");
-                GameObject railcannonExtraInfo = getGameObjectChild(railcannonExtra, "InfoButton");
-                GameObject railcannonExtraColor = getGameObjectChild(railcannonExtra, "ColorButton");
+                GameObject railcannonExtra = GetGameObjectChild(railcannonWindow, "Info and Color Panel");
+                GameObject railcannonExtraInfo = GetGameObjectChild(railcannonExtra, "InfoButton");
+                GameObject railcannonExtraColor = GetGameObjectChild(railcannonExtra, "ColorButton");
 
-                Text railcannonExtraInfoText = getTextfromGameObject(getGameObjectChild(railcannonExtraInfo, "Text"));
+                Text railcannonExtraInfoText = GetTextfromGameObject(GetGameObjectChild(railcannonExtraInfo, "Text"));
                 railcannonExtraInfoText.text = LanguageManager.CurrentLanguage.shop.shop_weaponInfo;
 
-                Text railcannonExtraInfoColors = getTextfromGameObject(getGameObjectChild(railcannonExtraColor, "Text"));
+                Text railcannonExtraInfoColors = GetTextfromGameObject(GetGameObjectChild(railcannonExtraColor, "Text"));
                 railcannonExtraInfoColors.text = LanguageManager.CurrentLanguage.shop.shop_weaponColors;
 
                 //Railcannon lore
-                GameObject railcannonLore = getGameObjectChild(railcannonWindow, "Info Screen");
-                Text railcannonLoreName = getTextfromGameObject(getGameObjectChild(railcannonLore, "Name"));
+                GameObject railcannonLore = GetGameObjectChild(railcannonWindow, "Info Screen");
+                Text railcannonLoreName = GetTextfromGameObject(GetGameObjectChild(railcannonLore, "Name"));
                 railcannonLoreName.text = LanguageManager.CurrentLanguage.shop.shop_weaponsRailcannon;
 
-                Text railcannonLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(railcannonLore, "Scroll View"), "Viewport"), "Text"));
+                Text railcannonLoreInfo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(railcannonLore, "Scroll View"), "Viewport"), "Text"));
                 railcannonLoreInfo.text =
                      LanguageManager.CurrentLanguage.shop.shop_data + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_loreRailcannon1 + "\n\n"
@@ -668,22 +666,22 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.shop.shop_loreRailcannon8 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_loreRailcannon9;
 
-                Text railcannonLoreBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(railcannonLore, "Button"), "Text"));
+                Text railcannonLoreBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(railcannonLore, "Button"), "Text"));
                 railcannonLoreBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
 
                 //Railcannon preset colors
-                GameObject railcannonColorWindow = getGameObjectChild(railcannonWindow, "Color Screen");
+                GameObject railcannonColorWindow = GetGameObjectChild(railcannonWindow, "Color Screen");
 
-                Text railcannonColorWindowTitle = getTextfromGameObject(getGameObjectChild(railcannonColorWindow, "Title"));
+                Text railcannonColorWindowTitle = GetTextfromGameObject(GetGameObjectChild(railcannonColorWindow, "Title"));
                 railcannonColorWindowTitle.text = "--" + LanguageManager.CurrentLanguage.shop.shop_weaponsRailcannon + "--";
 
-                GameObject railcannonStandardTemplates = getGameObjectChild(getGameObjectChild(railcannonColorWindow, "Standard"), "Template");
-                Text railcannonStandardTemplate1 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(railcannonStandardTemplates, "Template 1"), "Button (Selectable)"), "Text"));
-                Text railcannonStandardTemplate2 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(railcannonStandardTemplates, "Template 2"), "Button (Selectable)"), "Text"));
-                Text railcannonStandardTemplate3 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(railcannonStandardTemplates, "Template 3"), "Button (Selectable)"), "Text"));
-                Text railcannonStandardTemplate4 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(railcannonStandardTemplates, "Template 4"), "Button (Selectable)"), "Text"));
-                Text railcannonStandardTemplate5 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(railcannonStandardTemplates, "Template 5"), "Button (Selectable)"), "Text"));
+                GameObject railcannonStandardTemplates = GetGameObjectChild(GetGameObjectChild(railcannonColorWindow, "Standard"), "Template");
+                Text railcannonStandardTemplate1 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(railcannonStandardTemplates, "Template 1"), "Button (Selectable)"), "Text"));
+                Text railcannonStandardTemplate2 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(railcannonStandardTemplates, "Template 2"), "Button (Selectable)"), "Text"));
+                Text railcannonStandardTemplate3 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(railcannonStandardTemplates, "Template 3"), "Button (Selectable)"), "Text"));
+                Text railcannonStandardTemplate4 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(railcannonStandardTemplates, "Template 4"), "Button (Selectable)"), "Text"));
+                Text railcannonStandardTemplate5 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(railcannonStandardTemplates, "Template 5"), "Button (Selectable)"), "Text"));
 
                 railcannonStandardTemplate1.text = LanguageManager.CurrentLanguage.shop.shop_railcannonPreset1;
                 railcannonStandardTemplate2.text = LanguageManager.CurrentLanguage.shop.shop_railcannonPreset2;
@@ -691,74 +689,74 @@ namespace UltrakULL
                 railcannonStandardTemplate4.text = LanguageManager.CurrentLanguage.shop.shop_railcannonPreset4;
                 railcannonStandardTemplate5.text = LanguageManager.CurrentLanguage.shop.shop_railcannonPreset5;
 
-                Text railcannonColorStandardPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(railcannonStandardTemplates, "TemplateButton"), "Text"));
+                Text railcannonColorStandardPreset = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(railcannonStandardTemplates, "TemplateButton"), "Text"));
                 railcannonColorStandardPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
 
-                Text railcannonColorStandardCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(railcannonStandardTemplates, "CustomButton"), "Text"));
+                Text railcannonColorStandardCustom = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(railcannonStandardTemplates, "CustomButton"), "Text"));
                 railcannonColorStandardCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
-                Text railcannonColorDone = getTextfromGameObject(getGameObjectChild(getGameObjectChild(railcannonColorWindow, "Done"), "Text"));
+                Text railcannonColorDone = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(railcannonColorWindow, "Done"), "Text"));
                 railcannonColorDone.text = LanguageManager.CurrentLanguage.shop.shop_colorsDone;
 
                 //Railcannon custom colors
-                GameObject railcannonStandardCustom = getGameObjectChild(getGameObjectChild(railcannonColorWindow, "Standard"), "Custom");
-                Text railcannonStandardCustomPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(railcannonStandardCustom, "TemplateButton"), "Text"));
+                GameObject railcannonStandardCustom = GetGameObjectChild(GetGameObjectChild(railcannonColorWindow, "Standard"), "Custom");
+                Text railcannonStandardCustomPreset = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(railcannonStandardCustom, "TemplateButton"), "Text"));
                 railcannonStandardCustomPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
-                Text railcannonStandardCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(railcannonStandardCustom, "CustomButton"), "Text"));
+                Text railcannonStandardCustomCustom = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(railcannonStandardCustom, "CustomButton"), "Text"));
                 railcannonStandardCustomCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
                 //Railcannon custom color unlock prompt
-                Text railcannonCustomColorPrompt = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(railcannonWindow, "Color Screen"), "Standard"), "Custom"), "Locked"), "Blocker"), "Text"));
+                Text railcannonCustomColorPrompt = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(railcannonWindow, "Color Screen"), "Standard"), "Custom"), "Locked"), "Blocker"), "Text"));
 
                 railcannonCustomColorPrompt.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustomUnlockPrompt + ": " + LanguageManager.CurrentLanguage.shop.shop_weaponsRailcannon;
 
 
                 //Rocket launcher window & descriptions
-                GameObject rocketlauncherWindow = getGameObjectChild(shopWeaponsObject, "RocketLauncherWindow");
+                GameObject rocketlauncherWindow = GetGameObjectChild(shopWeaponsObject, "RocketLauncherWindow");
 
                 //Freezeframe
-                GameObject freezeframe = getGameObjectChild(rocketlauncherWindow, "Variation Panel (Blue)");
-                Text freezeframeName = getTextfromGameObject(getGameObjectChild(freezeframe, "Text"));
+                GameObject freezeframe = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Blue)");
+                Text freezeframeName = GetTextfromGameObject(GetGameObjectChild(freezeframe, "Text"));
                 freezeframeName.text = LanguageManager.CurrentLanguage.shop.shop_rocketLauncherFreeze;
 
-                GameObject freezeframeInfo = getGameObjectChild(rocketlauncherWindow, "Variation Info (Blue)");
-                Text freezeframeInfoName = getTextfromGameObject(getGameObjectChild(freezeframeInfo, "Name"));
+                GameObject freezeframeInfo = GetGameObjectChild(rocketlauncherWindow, "Variation Info (Blue)");
+                Text freezeframeInfoName = GetTextfromGameObject(GetGameObjectChild(freezeframeInfo, "Name"));
                 freezeframeInfoName.text = LanguageManager.CurrentLanguage.shop.shop_rocketLauncherFreeze;
-                Text freezeframeDescription = getTextfromGameObject(getGameObjectChild(freezeframeInfo, "Description"));
+                Text freezeframeDescription = GetTextfromGameObject(GetGameObjectChild(freezeframeInfo, "Description"));
                 freezeframeDescription.text = LanguageManager.CurrentLanguage.shop.shop_rocketLauncherFreezeDescription1 + "\n\n" + 
                 LanguageManager.CurrentLanguage.shop.shop_rocketLauncherFreezeDescription2;
                 freezeframeDescription.fontSize = 16;
 
-                Text freezeframeDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(freezeframeInfo, "Button"), "Text"));
+                Text freezeframeDescriptionBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(freezeframeInfo, "Button"), "Text"));
                 freezeframeDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Rocket Launcher green variation (under construction)
-                GameObject rlGreenVariation = getGameObjectChild(rocketlauncherWindow, "Variation Panel (Green) (Off)");
-                Text rlGreenUnderConstruction = getTextfromGameObject(getGameObjectChild(rlGreenVariation, "Text (1)"));
+                GameObject rlGreenVariation = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Green) (Off)");
+                Text rlGreenUnderConstruction = GetTextfromGameObject(GetGameObjectChild(rlGreenVariation, "Text (1)"));
                 rlGreenUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
 
                 //Rocket Launcher red variation (under construction)
-                GameObject rlRedVariation = getGameObjectChild(rocketlauncherWindow, "Variation Panel (Red)");
-                Text rlRedUnderConstruction = getTextfromGameObject(getGameObjectChild(rlRedVariation, "Text (1)"));
+                GameObject rlRedVariation = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Red)");
+                Text rlRedUnderConstruction = GetTextfromGameObject(GetGameObjectChild(rlRedVariation, "Text (1)"));
                 rlRedUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
 
                 //Rocket launcher info & color tabs
-                GameObject rocketlauncherExtra = getGameObjectChild(rocketlauncherWindow, "Info and Color Panel");
-                GameObject rocketlauncherExtraInfo = getGameObjectChild(rocketlauncherExtra, "InfoButton");
-                GameObject rocketlauncherExtraColor = getGameObjectChild(rocketlauncherExtra, "ColorButton");
+                GameObject rocketlauncherExtra = GetGameObjectChild(rocketlauncherWindow, "Info and Color Panel");
+                GameObject rocketlauncherExtraInfo = GetGameObjectChild(rocketlauncherExtra, "InfoButton");
+                GameObject rocketlauncherExtraColor = GetGameObjectChild(rocketlauncherExtra, "ColorButton");
 
-                Text rocketlauncherExtraInfoText = getTextfromGameObject(getGameObjectChild(rocketlauncherExtraInfo, "Text"));
+                Text rocketlauncherExtraInfoText = GetTextfromGameObject(GetGameObjectChild(rocketlauncherExtraInfo, "Text"));
                 rocketlauncherExtraInfoText.text = LanguageManager.CurrentLanguage.shop.shop_weaponInfo;
 
-                Text rocketlauncherExtraInfoColors = getTextfromGameObject(getGameObjectChild(rocketlauncherExtraColor, "Text"));
+                Text rocketlauncherExtraInfoColors = GetTextfromGameObject(GetGameObjectChild(rocketlauncherExtraColor, "Text"));
                 rocketlauncherExtraInfoColors.text = LanguageManager.CurrentLanguage.shop.shop_weaponColors;
 
                 //Rocket launcher lore
-                GameObject rocketlauncherLore = getGameObjectChild(rocketlauncherWindow, "Info Screen");
-                Text rocketlauncherLoreName = getTextfromGameObject(getGameObjectChild(rocketlauncherLore, "Name"));
+                GameObject rocketlauncherLore = GetGameObjectChild(rocketlauncherWindow, "Info Screen");
+                Text rocketlauncherLoreName = GetTextfromGameObject(GetGameObjectChild(rocketlauncherLore, "Name"));
                 rocketlauncherLoreName.text = LanguageManager.CurrentLanguage.shop.shop_weaponsRocketLauncher;
 
-                Text rocketlauncherLoreInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(rocketlauncherLore, "Scroll View"), "Viewport"), "Text"));
+                Text rocketlauncherLoreInfo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(rocketlauncherLore, "Scroll View"), "Viewport"), "Text"));
                 rocketlauncherLoreInfo.text =
                       LanguageManager.CurrentLanguage.shop.shop_data + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher1 + "\n\n"
@@ -778,21 +776,21 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher13;
 
 
-                Text rocketlauncherLoreBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(rocketlauncherLore, "Button"), "Text"));
+                Text rocketlauncherLoreBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(rocketlauncherLore, "Button"), "Text"));
                 rocketlauncherLoreBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Rocket launcher preset colors
-                GameObject RLColorWindow = getGameObjectChild(rocketlauncherWindow, "Color Screen");
+                GameObject RLColorWindow = GetGameObjectChild(rocketlauncherWindow, "Color Screen");
 
-                Text RLColorWindowTitle = getTextfromGameObject(getGameObjectChild(RLColorWindow, "Title"));
+                Text RLColorWindowTitle = GetTextfromGameObject(GetGameObjectChild(RLColorWindow, "Title"));
                 RLColorWindowTitle.text = "--" + LanguageManager.CurrentLanguage.shop.shop_weaponsRocketLauncher + "--";
 
-                GameObject RLStandardTemplates = getGameObjectChild(getGameObjectChild(RLColorWindow, "Standard"), "Template");
-                Text RLStandardTemplate1 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(RLStandardTemplates, "Template 1"), "Button (Selectable)"), "Text"));
-                Text RLStandardTemplate2 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(RLStandardTemplates, "Template 2"), "Button (Selectable)"), "Text"));
-                Text RLStandardTemplate3 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(RLStandardTemplates, "Template 3"), "Button (Selectable)"), "Text"));
-                Text RLStandardTemplate4 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(RLStandardTemplates, "Template 4"), "Button (Selectable)"), "Text"));
-                Text RLStandardTemplate5 = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(RLStandardTemplates, "Template 5"), "Button (Selectable)"), "Text"));
+                GameObject RLStandardTemplates = GetGameObjectChild(GetGameObjectChild(RLColorWindow, "Standard"), "Template");
+                Text RLStandardTemplate1 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(RLStandardTemplates, "Template 1"), "Button (Selectable)"), "Text"));
+                Text RLStandardTemplate2 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(RLStandardTemplates, "Template 2"), "Button (Selectable)"), "Text"));
+                Text RLStandardTemplate3 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(RLStandardTemplates, "Template 3"), "Button (Selectable)"), "Text"));
+                Text RLStandardTemplate4 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(RLStandardTemplates, "Template 4"), "Button (Selectable)"), "Text"));
+                Text RLStandardTemplate5 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(RLStandardTemplates, "Template 5"), "Button (Selectable)"), "Text"));
 
                 RLStandardTemplate1.text = LanguageManager.CurrentLanguage.shop.shop_rocketlauncherPreset1;
                 RLStandardTemplate2.text = LanguageManager.CurrentLanguage.shop.shop_rocketlauncherPreset2;
@@ -800,80 +798,80 @@ namespace UltrakULL
                 RLStandardTemplate4.text = LanguageManager.CurrentLanguage.shop.shop_rocketlauncherPreset4;
                 RLStandardTemplate5.text = LanguageManager.CurrentLanguage.shop.shop_rocketlauncherPreset5;
 
-                Text RLColorStandardPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(RLStandardTemplates, "TemplateButton"), "Text"));
+                Text RLColorStandardPreset = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(RLStandardTemplates, "TemplateButton"), "Text"));
                 RLColorStandardPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
 
-                Text RLColorStandardCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(RLStandardTemplates, "CustomButton"), "Text"));
+                Text RLColorStandardCustom = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(RLStandardTemplates, "CustomButton"), "Text"));
                 RLColorStandardCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
-                Text RLColorDone = getTextfromGameObject(getGameObjectChild(getGameObjectChild(RLColorWindow, "Done"), "Text"));
+                Text RLColorDone = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(RLColorWindow, "Done"), "Text"));
                 RLColorDone.text = LanguageManager.CurrentLanguage.shop.shop_colorsDone;
 
                 //Rocket launcher custom colors
-                GameObject RLStandardCustom = getGameObjectChild(getGameObjectChild(RLColorWindow, "Standard"), "Custom");
-                Text RLStandardCustomPreset = getTextfromGameObject(getGameObjectChild(getGameObjectChild(RLStandardCustom, "TemplateButton"), "Text"));
+                GameObject RLStandardCustom = GetGameObjectChild(GetGameObjectChild(RLColorWindow, "Standard"), "Custom");
+                Text RLStandardCustomPreset = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(RLStandardCustom, "TemplateButton"), "Text"));
                 RLStandardCustomPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
-                Text RLStandardCustomCustom = getTextfromGameObject(getGameObjectChild(getGameObjectChild(RLStandardCustom, "CustomButton"), "Text"));
+                Text RLStandardCustomCustom = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(RLStandardCustom, "CustomButton"), "Text"));
                 RLStandardCustomCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
                 //Rocket launcher custom color unlock prompt
-                Text RLCustomColorPrompt = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(rocketlauncherWindow, "Color Screen"), "Standard"), "Custom"), "Locked"), "Blocker"), "Text"));
+                Text RLCustomColorPrompt = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(rocketlauncherWindow, "Color Screen"), "Standard"), "Custom"), "Locked"), "Blocker"), "Text"));
 
                 RLCustomColorPrompt.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustomUnlockPrompt + ": " + LanguageManager.CurrentLanguage.shop.shop_weaponsRocketLauncher;
 
                 //Arm window and descriptions
-                GameObject armWindow = getGameObjectChild(shopWeaponsObject, "ArmWindow");
+                GameObject armWindow = GetGameObjectChild(shopWeaponsObject, "ArmWindow");
 
                 //Feedbacker
-                GameObject feedbacker = getGameObjectChild(armWindow, "Variation Panel 1 (New)");
-                Text feedbackerName = getTextfromGameObject(getGameObjectChild(feedbacker, "Text"));
+                GameObject feedbacker = GetGameObjectChild(armWindow, "Variation Panel 1 (New)");
+                Text feedbackerName = GetTextfromGameObject(GetGameObjectChild(feedbacker, "Text"));
                 feedbackerName.text = LanguageManager.CurrentLanguage.shop.shop_armFeedbacker;
 
-                GameObject feedbackerWindow = getGameObjectChild(armWindow, "Variation 1 Info (New)");
-                Text feedbackerWindowName = getTextfromGameObject(getGameObjectChild(feedbackerWindow, "Name"));
+                GameObject feedbackerWindow = GetGameObjectChild(armWindow, "Variation 1 Info (New)");
+                Text feedbackerWindowName = GetTextfromGameObject(GetGameObjectChild(feedbackerWindow, "Name"));
                 feedbackerWindowName.text = LanguageManager.CurrentLanguage.shop.shop_armFeedbacker;
 
-                Text feedbackerWindowDescription = getTextfromGameObject(getGameObjectChild(feedbackerWindow, "Description"));
+                Text feedbackerWindowDescription = GetTextfromGameObject(GetGameObjectChild(feedbackerWindow, "Description"));
                 feedbackerWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_armFeedbackerDescription1 + "\n\n" + LanguageManager.CurrentLanguage.shop.shop_armFeedbackerDescription2;
 
-                Text feedbackerWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(feedbackerWindow, "Button"), "Text"));
+                Text feedbackerWindowDescriptionBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(feedbackerWindow, "Button"), "Text"));
                 feedbackerWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
                 
                 //Knuckleblaster
-                GameObject knuckleblaster = getGameObjectChild(armWindow, "Variation Panel 2 (New)");
-                Text knuckleblasterName = getTextfromGameObject(getGameObjectChild(knuckleblaster, "Text"));
+                GameObject knuckleblaster = GetGameObjectChild(armWindow, "Variation Panel 2 (New)");
+                Text knuckleblasterName = GetTextfromGameObject(GetGameObjectChild(knuckleblaster, "Text"));
                 knuckleblasterName.text = LanguageManager.CurrentLanguage.shop.shop_armKnuckleblaster;
 
-                GameObject knuckleblasterWindow = getGameObjectChild(armWindow, "Variation 2 Info (New)");
-                Text knuckleblasterWindowName = getTextfromGameObject(getGameObjectChild(knuckleblasterWindow, "Name"));
+                GameObject knuckleblasterWindow = GetGameObjectChild(armWindow, "Variation 2 Info (New)");
+                Text knuckleblasterWindowName = GetTextfromGameObject(GetGameObjectChild(knuckleblasterWindow, "Name"));
                 knuckleblasterWindowName.text = LanguageManager.CurrentLanguage.shop.shop_armKnuckleblaster;
 
-                Text knuckleblasterWindowDescription = getTextfromGameObject(getGameObjectChild(knuckleblasterWindow, "Description"));
+                Text knuckleblasterWindowDescription = GetTextfromGameObject(GetGameObjectChild(knuckleblasterWindow, "Description"));
                 knuckleblasterWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_armKnuckleblasterDescription1 + "\n\n" + LanguageManager.CurrentLanguage.shop.shop_armKnuckleblasterDescription2;
 
-                Text knuckleblasterWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(knuckleblasterWindow, "Button"), "Text"));
+                Text knuckleblasterWindowDescriptionBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(knuckleblasterWindow, "Button"), "Text"));
                 knuckleblasterWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
                 
                 //Whiplash
-                GameObject whiplash = getGameObjectChild(armWindow, "Variation Panel 3 (New)");
-                Text whiplashName = getTextfromGameObject(getGameObjectChild(whiplash, "Text"));
+                GameObject whiplash = GetGameObjectChild(armWindow, "Variation Panel 3 (New)");
+                Text whiplashName = GetTextfromGameObject(GetGameObjectChild(whiplash, "Text"));
                 whiplashName.text = LanguageManager.CurrentLanguage.shop.shop_armWhiplash;
 
-                GameObject whiplashWindow = getGameObjectChild(armWindow, "Variation 3 Info (New)");
-                Text whiplashWindowName = getTextfromGameObject(getGameObjectChild(whiplashWindow, "Name"));
+                GameObject whiplashWindow = GetGameObjectChild(armWindow, "Variation 3 Info (New)");
+                Text whiplashWindowName = GetTextfromGameObject(GetGameObjectChild(whiplashWindow, "Name"));
                 whiplashWindowName.text = LanguageManager.CurrentLanguage.shop.shop_armWhiplash;
 
-                Text whiplashWindowDescription = getTextfromGameObject(getGameObjectChild(whiplashWindow, "Description"));
+                Text whiplashWindowDescription = GetTextfromGameObject(GetGameObjectChild(whiplashWindow, "Description"));
                 whiplashWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_armWhiplashDescription1 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_armWhiplashDescription2;
                 whiplashWindowDescription.fontSize = 16;
                 
-                Text whiplashWindowDescriptionBack = getTextfromGameObject(getGameObjectChild(getGameObjectChild(whiplashWindow, "Button"), "Text"));
+                Text whiplashWindowDescriptionBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(whiplashWindow, "Button"), "Text"));
                 whiplashWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Gold arm (under construction)
-                GameObject goldArm = getGameObjectChild(armWindow, "Variation Panel 1 (3)");
-                Text goldArmUnderConstruction = getTextfromGameObject(getGameObjectChild(goldArm, "Text (1)"));
+                GameObject goldArm = GetGameObjectChild(armWindow, "Variation Panel 1 (3)");
+                Text goldArmUnderConstruction = GetTextfromGameObject(GetGameObjectChild(goldArm, "Text (1)"));
                 goldArmUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
             }
         
@@ -888,75 +886,75 @@ namespace UltrakULL
             //Start by finding what level we're on and what shopObjects need patching.
             if (SceneManager.GetActiveScene().name == "uk_construct")
             {
-                shopsToPatch.Add(getGameObjectChild(GameObject.Find("Shop"),"Canvas"));
+                shopsToPatch.Add(GetGameObjectChild(GameObject.Find("Shop"),"Canvas"));
             }
             else if(SceneManager.GetActiveScene().name.Contains("P-"))
             {
-                shopsToPatch.Add(getGameObjectChild(getGameObjectChild(getGameObjectChild(GameObject.Find("Prime FirstRoom"),"Room"),"Shop"),"Canvas"));
+                shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Prime FirstRoom"),"Room"),"Shop"),"Canvas"));
             }
             else
             {
-                shopsToPatch.Add(getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("FirstRoom"), "Room"), "Shop"), "Canvas"));
+                shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("FirstRoom"), "Room"), "Shop"), "Canvas"));
             } 
             
             switch(SceneManager.GetActiveScene().name)
             {
                 case "Level 0-3":
                 {
-                    shopsToPatch.Add(getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("5 - Path 1 - Hallway"),"5 Nonstuff"),"Shop"),"Canvas"));
-                    shopsToPatch.Add(getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("10B - Boss Staircase"),"5 Nonstuff"),"Shop"),"Canvas"));
+                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("5 - Path 1 - Hallway"),"5 Nonstuff"),"Shop"),"Canvas"));
+                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("10B - Boss Staircase"),"5 Nonstuff"),"Shop"),"Canvas"));
                     break;
                 }
                 case "Level 0-5":
                 {
-                    shopsToPatch.Add(getGameObjectChild(getGameObjectChild(getInactiveRootObject("3 - Smallway"),"Shop"),"Canvas"));
+                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("3 - Smallway"),"Shop"),"Canvas"));
                     break;
                 }
                 case "Level 1-3":
                 {
-                    shopsToPatch.Add(getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("R1 - Courtyard"),"R1 Nonstuff"),"Shop"),"Canvas"));
+                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("R1 - Courtyard"),"R1 Nonstuff"),"Shop"),"Canvas"));
                     break;
                 }
                 case "Level 1-4":
                 {
-                    shopsToPatch.Add(getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("V2 - Arena"),"V2 Nonstuff"),"Shop"),"Canvas"));
+                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("V2 - Arena"),"V2 Nonstuff"),"Shop"),"Canvas"));
                     break;
                 }
                 case "Level 2-4":
                 {
-                    shopsToPatch.Add(getGameObjectChild(getInactiveRootObject("Shop"),"Canvas"));
+                    shopsToPatch.Add(GetGameObjectChild(GetInactiveRootObject("Shop"),"Canvas"));
                     break;
                 }
                 case "Level 3-2":
                 {
-                    shopsToPatch.Add(getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("4 - Heart Chamber"),"4 Nonstuff"),"Shop"),"Canvas"));
+                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("4 - Heart Chamber"),"4 Nonstuff"),"Shop"),"Canvas"));
                     break;
                 }
                 case "Level 4-4":
                 {
-                    shopsToPatch.Add(getGameObjectChild(getGameObjectChild(getInactiveRootObject("6 - Boss Entrance"),"Shop"),"Canvas"));
+                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("6 - Boss Entrance"),"Shop"),"Canvas"));
                     break;
                 }
                 case "Level 5-2":
                 {
-                    shopsToPatch.Add(getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("8 - Ship"),"Ship Nonstuff"),"Shop"),"Canvas"));
+                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("8 - Ship"),"Ship Nonstuff"),"Shop"),"Canvas"));
                     break;
                 }
                 case "Level 5-4":
                 {                    
-                    shopsToPatch.Add(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("Surface"),"Nonstuff"),"SpawnRock"),"Shop"),"Canvas"));
+                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Surface"),"Nonstuff"),"SpawnRock"),"Shop"),"Canvas"));
                     break;
                 }
                 case "Level 6-2":
                 {
-                    shopsToPatch.Add(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getInactiveRootObject("1 - Entryway"),"Grand Hall"),"Boss Room Tunnel"),"Shop"),"Canvas"));
+                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("1 - Entryway"),"Grand Hall"),"Boss Room Tunnel"),"Shop"),"Canvas"));
                     break;
                 }
             }
             
             
-            patchShopFrontEnd(ref shopsToPatch);
-            patchWeapons(ref shopsToPatch);
+            PatchShopFrontEnd(ref shopsToPatch);
+            PatchWeapons(ref shopsToPatch);
         }
     }
 }

@@ -4,21 +4,22 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
+
 using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
-using System.Linq;
 
 namespace UltrakULL.Harmony_Patches
 {
     [HarmonyPatch(typeof(CheatsManager), "RebuildMenu")]
-    public static class RebuildMenu_Patch
+    public static class RebuildMenuPatch
     {
         [HarmonyPostfix]
         public static void RebuildMenu_Postfix()
         {
-            GameObject canvas = getInactiveRootObject("Canvas");
+            GameObject canvas = GetInactiveRootObject("Canvas");
 
-            GameObject cheatMenu = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas, "Cheat Menu"), "Cheats Manager"), "Scroll View"), "Viewport");
+            GameObject cheatMenu = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas, "Cheat Menu"), "Cheats Manager"), "Scroll View"), "Viewport");
 
             CheatMenuItem[] cheatList = cheatMenu.GetComponentsInChildren<CheatMenuItem>();
             foreach (CheatMenuItem category in cheatList)
@@ -32,7 +33,6 @@ namespace UltrakULL.Harmony_Patches
                     case "WEAPONS": { category.longName.text = LanguageManager.CurrentLanguage.cheats.cheats_categoryWeapons; break; }
                     case "ENEMIES": { category.longName.text = LanguageManager.CurrentLanguage.cheats.cheats_categoryEnemies; break; }
                     case "SPECIAL": { category.longName.text = LanguageManager.CurrentLanguage.cheats.cheats_categorySpecial; break; }
-                    default: { break; }
                 }
             }
         }
@@ -43,18 +43,18 @@ namespace UltrakULL.Harmony_Patches
     //@Override
     //Overrides the *private* UpdateCheatState function from the CheatsManager class for translating the cheat menu.
     [HarmonyPatch(typeof(CheatsManager), "UpdateCheatState", new Type[] { typeof(CheatMenuItem), typeof(ICheat) })]
-    public static class Localize_CheatState
+    public static class LocalizeCheatState
     {
         [HarmonyPrefix]
         public static bool UpdateCheatState_MyPatch(CheatMenuItem item, ICheat cheat, CheatsManager __instance, Color ___enabledColor, Color ___disabledColor)
         {
             try
             {
-                item.longName.text = Cheats.getCheatName(cheat.Identifier);
+                item.longName.text = Cheats.GetCheatName(cheat.Identifier);
                 item.stateBackground.color = (cheat.IsActive ? ___enabledColor : ___disabledColor);
 
-                string cheatDisabledStatus = Cheats.getCheatStatus(cheat.ButtonDisabledOverride);
-                string cheatEnabledStatus = Cheats.getCheatStatus(cheat.ButtonEnabledOverride);
+                string cheatDisabledStatus = Cheats.GetCheatStatus(cheat.ButtonDisabledOverride);
+                string cheatEnabledStatus = Cheats.GetCheatStatus(cheat.ButtonEnabledOverride);
 
                 item.stateText.text = (cheat.IsActive ? (cheatEnabledStatus ?? LanguageManager.CurrentLanguage.cheats.cheats_activated) : (cheatDisabledStatus ?? LanguageManager.CurrentLanguage.cheats.cheats_deactivated)); //Cheat status
                 item.bindButtonBack.gameObject.SetActive(false);
@@ -68,14 +68,14 @@ namespace UltrakULL.Harmony_Patches
                     item.bindButtonText.text = text.ToUpper();
                 }
                 GameObject parentResetButton = item.resetBindButton.gameObject;
-                Text parentResetText = CommonFunctions.getTextfromGameObject(CommonFunctions.getGameObjectChild(parentResetButton, "Text"));
+                Text parentResetText = CommonFunctions.GetTextfromGameObject(CommonFunctions.GetGameObjectChild(parentResetButton, "Text"));
                 parentResetText.text = LanguageManager.CurrentLanguage.cheats.cheats_delete;
                 __instance.RenderCheatsInfo();
                 return false;
             }
             catch (Exception e)
             {
-                handleError(e);
+                HandleError(e);
                 return true;
             }
         }
@@ -84,7 +84,7 @@ namespace UltrakULL.Harmony_Patches
     //@Override
     //Overrides the RenderCheatsInfo function from the CheatsManager class for displaying the active cheats on the HUD.
     [HarmonyPatch(typeof(CheatsManager), "RenderCheatsInfo")]
-    public static class Localize_CheatInfo
+    public static class LocalizeCheatInfo
     {
         [HarmonyPrefix]
         public static bool RenderCheatsInfo_MyPatch(CheatsManager __instance, Dictionary<string, List<ICheat>> ___allRegisteredCheats)
@@ -113,7 +113,7 @@ namespace UltrakULL.Harmony_Patches
                     {
                         stringBuilder.Append("[ ] ");
                     }
-                    stringBuilder.Append("<color=white>" + Cheats.getCheatName(cheat2.Identifier) + "</color>\n");
+                    stringBuilder.Append("<color=white>" + Cheats.GetCheatName(cheat2.Identifier) + "</color>\n");
                 }
             }
             MonoSingleton<CheatsController>.Instance.cheatsInfo.text = stringBuilder.ToString();

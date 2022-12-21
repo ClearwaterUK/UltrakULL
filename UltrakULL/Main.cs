@@ -46,30 +46,29 @@ using System.Linq;
  *  -- FOR NEXT HOTFIX --
  * Fix up errors and typos in English template that are reported
  * Finish audio dubbing documentation
- * Look into how I can do encoding for RTL languages such as Arabic
  * 
  * */
 
 namespace UltrakULL
 {
-    [UKPlugin(internalName, "UltrakULL (Ultrakill Language Library)", internalVersion,"A localization and translation plugin for ULTRAKILL. Created by Clearwater.", true,false)]
+    [UKPlugin(InternalName, "UltrakULL (Ultrakill Language Library)", InternalVersion,"A localization and translation plugin for ULTRAKILL. Created by Clearwater.", true,false)]
 
     public class MainPatch : UKMod
     {
 
-        public static MainPatch instance = null;
-        private GameObject ultrakullLogo = null;
+        public static MainPatch instance;
+        public GameObject ultrakullLogo;
         
-        private bool ready = false;
-        private bool updateAvailable = false;
-        private bool updateFailed = false;
+        public bool ready;
+        public bool updateAvailable;
+        public bool updateFailed;
         
         public Font vcrFont;
 
-        public const string internalName = "clearwater.ultrakull.ultrakULL";
-        public const string internalVersion = "1.1.1";
+        private const string InternalName = "clearwater.ultrakull.ultrakULL";
+        private const string InternalVersion = "1.1.1";
         
-        private static readonly HttpClient client = new HttpClient();
+        private static readonly HttpClient Client = new HttpClient();
 
         public MainPatch()
         {
@@ -81,73 +80,73 @@ namespace UltrakULL
             LanguageManager.DumpLastLanguage();
         }
 
-        public void disableMod()
+        public void DisableMod()
         {
             this.ready = false;
         }
 
         //Patches all text strings in the pause menu.
-        public void patchPauseMenu(ref GameObject level)
+        public void PatchPauseMenu(ref GameObject level)
         {
             try
             {
-                GameObject pauseObject = getInactiveRootObject("Canvas");
-                GameObject pauseMenu = getGameObjectChild(pauseObject, "PauseMenu");
+                GameObject pauseObject = GetInactiveRootObject("Canvas");
+                GameObject pauseMenu = GetGameObjectChild(pauseObject, "PauseMenu");
 
                 //Title
-                Text pauseText = getTextfromGameObject(getGameObjectChild(pauseMenu, "Text"));
+                Text pauseText = GetTextfromGameObject(GetGameObjectChild(pauseMenu, "Text"));
                 pauseText.text = "-- " + LanguageManager.CurrentLanguage.pauseMenu.pause_title + " --";
 
                 //Resume
-                Text continueText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(pauseMenu, "Resume"), "Text"));
+                Text continueText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Resume"), "Text"));
                 continueText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_resume;
 
                 //Checkpoint
-                Text checkpointText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(pauseMenu, "Restart Checkpoint"), "Text"));
+                Text checkpointText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Restart Checkpoint"), "Text"));
                 checkpointText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_respawn;
 
                 //Restart mission
-                Text restartText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(pauseMenu, "Restart Mission"), "Text"));
+                Text restartText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Restart Mission"), "Text"));
                 restartText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_restart;
 
                 //Options
-                Text optionsText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(pauseMenu, "Options"), "Text"));
+                Text optionsText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Options"), "Text"));
                 optionsText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_options;
 
                 //Quit
-                Text quitText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(pauseMenu, "Quit Mission"), "Text"));
+                Text quitText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Quit Mission"), "Text"));
                 quitText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_quit;
 
                 //Quit+Restart windows
-                GameObject pauseDialogs = getGameObjectChild(pauseObject, "PauseMenuDialogs");
+                GameObject pauseDialogs = GetGameObjectChild(pauseObject, "PauseMenuDialogs");
 
                 //Quit
-                GameObject quitDialog = getGameObjectChild(getGameObjectChild(pauseDialogs, "Quit Confirm"), "Panel");
-                Text quitDialogText = getTextfromGameObject(getGameObjectChild(quitDialog, "Text"));
+                GameObject quitDialog = GetGameObjectChild(GetGameObjectChild(pauseDialogs, "Quit Confirm"), "Panel");
+                Text quitDialogText = GetTextfromGameObject(GetGameObjectChild(quitDialog, "Text"));
                 quitDialogText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_quitConfirm;
 
-                Text quitDialogTooltip = getTextfromGameObject(getGameObjectChild(quitDialog, "Text (1)"));
+                Text quitDialogTooltip = GetTextfromGameObject(GetGameObjectChild(quitDialog, "Text (1)"));
                 quitDialogTooltip.text = LanguageManager.CurrentLanguage.pauseMenu.pause_disableWindow;
 
-                Text quitDialogYes = getTextfromGameObject(getGameObjectChild(getGameObjectChild(quitDialog, "Confirm"), "Text"));
+                Text quitDialogYes = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(quitDialog, "Confirm"), "Text"));
                 quitDialogYes.text = LanguageManager.CurrentLanguage.pauseMenu.pause_quitConfirmYes;
 
-                Text quitDialogNo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(quitDialog, "Cancel"), "Text"));
+                Text quitDialogNo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(quitDialog, "Cancel"), "Text"));
                 quitDialogNo.text = LanguageManager.CurrentLanguage.pauseMenu.pause_quitConfirmNo;
 
                 //Restart
-                GameObject restartDialog = getGameObjectChild(getGameObjectChild(pauseDialogs, "Restart Confirm"), "Panel");
+                GameObject restartDialog = GetGameObjectChild(GetGameObjectChild(pauseDialogs, "Restart Confirm"), "Panel");
 
-                Text restartDialogText = getTextfromGameObject(getGameObjectChild(restartDialog, "Text"));
+                Text restartDialogText = GetTextfromGameObject(GetGameObjectChild(restartDialog, "Text"));
                 restartDialogText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_restartConfirm;
 
-                Text restartDialogTooltip = getTextfromGameObject(getGameObjectChild(restartDialog, "Text (1)"));
+                Text restartDialogTooltip = GetTextfromGameObject(GetGameObjectChild(restartDialog, "Text (1)"));
                 restartDialogTooltip.text = LanguageManager.CurrentLanguage.pauseMenu.pause_disableWindow;
 
-                Text restartDialogYes = getTextfromGameObject(getGameObjectChild(getGameObjectChild(restartDialog, "Confirm"), "Text"));
+                Text restartDialogYes = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(restartDialog, "Confirm"), "Text"));
                 restartDialogYes.text = LanguageManager.CurrentLanguage.pauseMenu.pause_restartConfirmYes;
 
-                Text restartDialogNo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(restartDialog, "Cancel"), "Text"));
+                Text restartDialogNo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(restartDialog, "Cancel"), "Text"));
                 restartDialogNo.text = LanguageManager.CurrentLanguage.pauseMenu.pause_restartConfirmNo;
             }
             catch (Exception e)
@@ -156,25 +155,25 @@ namespace UltrakULL
             }
         }
 
-        public void patchCheats(ref GameObject coreGame)
+        public void PatchCheats(ref GameObject coreGame)
         {
             coreGame = GameObject.Find("Canvas");
-            Cheats.patchCheatConsentPanel(ref coreGame);
+            Cheats.PatchCheatConsentPanel(ref coreGame);
         }
 
-        public void patchDeathScreen(ref GameObject coreGame)
+        public void PatchDeathScreen(ref GameObject coreGame)
         {
-            coreGame = getInactiveRootObject("Canvas");
+            coreGame = GetInactiveRootObject("Canvas");
 
             try
             {
-                GameObject deathScreen = getGameObjectChild(getGameObjectChild(coreGame, "BlackScreen"), "YouDiedText");
+                GameObject deathScreen = GetGameObjectChild(GetGameObjectChild(coreGame, "BlackScreen"), "YouDiedText");
                 //Need to disable the TextOverride component.
                 Component[] test = deathScreen.GetComponents(typeof(Component));
                 Behaviour bhvr = (Behaviour)test[3];
                 bhvr.enabled = false;
 
-                Text youDiedText = getTextfromGameObject(deathScreen);
+                Text youDiedText = GetTextfromGameObject(deathScreen);
                 youDiedText.text = LanguageManager.CurrentLanguage.misc.youDied1 + "\n\n\n\n\n" + LanguageManager.CurrentLanguage.misc.youDied2;
             }
             catch (Exception e)
@@ -184,98 +183,98 @@ namespace UltrakULL
             }
         }
 
-        public void initJsonParser()
+        public void InitJsonParser()
         {
-            LanguageManager.InitializeManager(internalVersion);
+            LanguageManager.InitializeManager(InternalVersion);
         }
 
         //Encapsulation function to patch the shop.
-        public void patchShop(ref GameObject coreGame)
+        public void PatchShop(ref GameObject coreGame)
         {
             Shop.PatchShop(ref coreGame);
         }
 
-        public void patchLevelStats(ref GameObject coreGame)
+        public void PatchLevelStats(ref GameObject coreGame)
         {
-            LevelStatWindow.patchStats();
+            LevelStatWindow.PatchStats();
         }
 
         //Encapsulation function to patch all of the front end.
-        public void patchFrontEnd(GameObject frontEnd)
+        public void PatchFrontEnd(GameObject frontEnd)
         {
             MainMenu.Patch(frontEnd);
             Options options = new Options(ref frontEnd);
         }
 
-        public void patchMisc(ref GameObject coreGame)
+        public void PatchMisc(ref GameObject coreGame)
         {
             GameObject player = GameObject.Find("Player");
-            GameObject styleMeter = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(player, "Main Camera"), "HUD Camera"), "HUD"), "StyleCanvas"), "Panel (1)"), "Panel"), "Text (1)"), "Text");
-            Text styleMeterMultiplierText = getTextfromGameObject(styleMeter);
+            GameObject styleMeter = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(player, "Main Camera"), "HUD Camera"), "HUD"), "StyleCanvas"), "Panel (1)"), "Panel"), "Text (1)"), "Text");
+            Text styleMeterMultiplierText = GetTextfromGameObject(styleMeter);
             styleMeterMultiplierText.text = LanguageManager.CurrentLanguage.style.stylemeter_multiplier;
 
-            GameObject canvas = getInactiveRootObject("Canvas");
-            GameObject pressToSkip = getGameObjectChild(canvas, "CutsceneSkipText");
+            GameObject canvas = GetInactiveRootObject("Canvas");
+            GameObject pressToSkip = GetGameObjectChild(canvas, "CutsceneSkipText");
 
             //Need to disable the TextOverride component.
             Component[] test = pressToSkip.GetComponents(typeof(Component));
             Behaviour bhvr = (Behaviour)test[4];
             bhvr.enabled = false;
 
-            Text pressToSkipText = getTextfromGameObject(pressToSkip);
+            Text pressToSkipText = GetTextfromGameObject(pressToSkip);
             pressToSkipText.text = LanguageManager.CurrentLanguage.misc.pressToSkip;
 
             //Classic HUD
-            GameObject classicHudBW = getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas, "Crosshair Filler"), "AltHud"), "Filler");
-            GameObject classicHudColor = getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas, "Crosshair Filler"), "AltHud (2)"), "Filler");
+            GameObject classicHudBW = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas, "Crosshair Filler"), "AltHud"), "Filler");
+            GameObject classicHudColor = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas, "Crosshair Filler"), "AltHud (2)"), "Filler");
 
-            Text classicHudBWHealth = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Health"), "Title"));
-            Text classicHudBWHealthShow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Health"), "Title (1)"));
-            Text classicHudColorHealth = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "Health"), "Title"));
-            Text classicHudColorHealthShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "Health"), "Title (1)"));
+            Text classicHudBWHealth = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Health"), "Title"));
+            Text classicHudBWHealthShow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Health"), "Title (1)"));
+            Text classicHudColorHealth = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Health"), "Title"));
+            Text classicHudColorHealthShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Health"), "Title (1)"));
             classicHudBWHealth.text = LanguageManager.CurrentLanguage.misc.classicHud_health;
             classicHudColorHealth.text = LanguageManager.CurrentLanguage.misc.classicHud_health;
             classicHudBWHealthShow.text = LanguageManager.CurrentLanguage.misc.classicHud_health;
             classicHudColorHealthShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_health;
 
-            Text classicHudBWStamina = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Stamina"), "Title"));
-            Text classicHudColorStamina = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "Stamina"), "Title"));
-            Text classicHudBWStaminaShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Stamina"), "Title (1)"));
-            Text classicHudColorStaminaShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "Stamina"), "Title (1)"));
+            Text classicHudBWStamina = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Stamina"), "Title"));
+            Text classicHudColorStamina = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Stamina"), "Title"));
+            Text classicHudBWStaminaShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Stamina"), "Title (1)"));
+            Text classicHudColorStaminaShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Stamina"), "Title (1)"));
             classicHudBWStamina.text = LanguageManager.CurrentLanguage.misc.classicHud_stamina;
             classicHudColorStamina.text = LanguageManager.CurrentLanguage.misc.classicHud_stamina;
             classicHudBWStaminaShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_stamina;
             classicHudColorStaminaShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_stamina;
 
-            Text classicHudBWWeapon = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Weapon"), "Title"));
-            Text classicHudColorWeapon = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "Weapon"), "Title"));
-            Text classicHudBWWeaponShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Weapon"), "Title (1)"));
-            Text classicHudColorWeaponShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "Weapon"), "Title (1)"));
+            Text classicHudBWWeapon = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Weapon"), "Title"));
+            Text classicHudColorWeapon = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Weapon"), "Title"));
+            Text classicHudBWWeaponShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Weapon"), "Title (1)"));
+            Text classicHudColorWeaponShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Weapon"), "Title (1)"));
             classicHudBWWeapon.text = LanguageManager.CurrentLanguage.misc.classicHud_weapon;
             classicHudColorWeapon.text = LanguageManager.CurrentLanguage.misc.classicHud_weapon;
             classicHudBWWeaponShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_weapon;
             classicHudColorWeaponShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_weapon;
 
-            Text classicHudBWArm = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Arm"), "Title"));
-            Text classicHudColorArm = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "Arm"), "Title"));
-            Text classicHudBWArmShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "Arm"), "Title (1)"));
-            Text classicHudColorArmShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "Arm"), "Title (1)"));
+            Text classicHudBWArm = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Arm"), "Title"));
+            Text classicHudColorArm = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Arm"), "Title"));
+            Text classicHudBWArmShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Arm"), "Title (1)"));
+            Text classicHudColorArmShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Arm"), "Title (1)"));
             classicHudBWArm.text = LanguageManager.CurrentLanguage.misc.classicHud_arm;
             classicHudColorArm.text = LanguageManager.CurrentLanguage.misc.classicHud_arm;
             classicHudBWArmShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_arm;
             classicHudColorArmShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_arm;
 
-            Text classicHudBWRailcannon = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "RailcannonMeter (1)"), "Title"));
-            Text classicHudColorRailcannon = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "RailcannonMeter"), "Title"));
-            Text classicHudBWRailcannonShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudBW, "RailcannonMeter (1)"), "Title (1)"));
-            Text classicHudColorRailcannonShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(classicHudColor, "RailcannonMeter"), "Title (1)"));
+            Text classicHudBWRailcannon = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "RailcannonMeter (1)"), "Title"));
+            Text classicHudColorRailcannon = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "RailcannonMeter"), "Title"));
+            Text classicHudBWRailcannonShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "RailcannonMeter (1)"), "Title (1)"));
+            Text classicHudColorRailcannonShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "RailcannonMeter"), "Title (1)"));
             classicHudBWRailcannon.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
             classicHudColorRailcannon.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
             classicHudBWRailcannonShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
             classicHudColorRailcannonShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
 
             //Close prompt when reading book
-            TextBinds bookPanelBinds = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas, "ScanningStuff"), "ReadingScanned"), "Panel"), "Text (1)").GetComponent<TextBinds>();
+            TextBinds bookPanelBinds = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas, "ScanningStuff"), "ReadingScanned"), "Panel"), "Text (1)").GetComponent<TextBinds>();
             bookPanelBinds.text1 = LanguageManager.CurrentLanguage.books.books_pressToClose1 + " <color=orange>";
             bookPanelBinds.text2 = "</color> " + LanguageManager.CurrentLanguage.books.books_pressToClose2;
 
@@ -286,8 +285,8 @@ namespace UltrakULL
 
         public void addModCredits(GameObject frontEnd)
         {
-            Text creditsFirst = getTextfromGameObject(getGameObjectChild(getGameObjectChild(frontEnd, "Credits"), "Text (1)"));
-            Text creditsSecond = getTextfromGameObject(getGameObjectChild(getGameObjectChild(frontEnd, "Credits"), "Text (2)"));
+            Text creditsFirst = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(frontEnd, "Credits"), "Text (1)"));
+            Text creditsSecond = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(frontEnd, "Credits"), "Text (2)"));
 
             creditsFirst.text =
                 LanguageManager.CurrentLanguage.credits.credits_title + "\n\n"
@@ -328,7 +327,7 @@ namespace UltrakULL
                 + LanguageManager.CurrentLanguage.credits.credits_QA3 + "\n"
                 + LanguageManager.CurrentLanguage.credits.credits_QA4 + "\n";
             
-            Text creditsBackButton = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Credits"),"Back (1)"),"Text"));
+            Text creditsBackButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd, "Credits"),"Back (1)"),"Text"));
             creditsBackButton.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
         }
@@ -346,25 +345,25 @@ namespace UltrakULL
                 Scene currentLevel = SceneManager.GetActiveScene();
                 string levelName = currentLevel.name;
 
-                if (Harmony_Patches.Inject_LanguageButton.languageButtonText != null)
+                if (Harmony_Patches.InjectLanguageButton.languageButtonText != null)
                 {
-                    Harmony_Patches.Inject_LanguageButton.languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
-                    Harmony_Patches.Inject_LanguageButton.languageButtonTitleText.text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
+                    Harmony_Patches.InjectLanguageButton.languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
+                    Harmony_Patches.InjectLanguageButton.languageButtonTitleText.text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
                 }
                 //Each scene (level) has an object called Canvas. Most game objects are there.
                 if (currentLevel.name == "Intro")
                 {
-                    GameObject frontEnd = getInactiveRootObject("Canvas");
+                    GameObject frontEnd = GetInactiveRootObject("Canvas");
                     if (frontEnd != null)
                     {
-                        Text loadingText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "LoadingScreen"), "Intro"), "Text"));
+                        Text loadingText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd, "LoadingScreen"), "Intro"), "Text"));
                         loadingText.text = LanguageManager.CurrentLanguage.misc.loading;
                     }
                 }
                 //Main menu hook
                 else if (currentLevel.name == "Main Menu")
                 {
-                    GameObject frontEnd = getInactiveRootObject("Canvas");
+                    GameObject frontEnd = GetInactiveRootObject("Canvas");
 
                     if (frontEnd == null)
                     {
@@ -372,14 +371,14 @@ namespace UltrakULL
                     }
                     else
                     {
-                        patchFrontEnd(frontEnd);
+                        PatchFrontEnd(frontEnd);
 
                         if (ultrakullLogo != null)
                             GameObject.Destroy(ultrakullLogo);
-                        ultrakullLogo = GameObject.Instantiate(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Main Menu (1)"), "Title"), "Text"), frontEnd.transform);
+                        ultrakullLogo = GameObject.Instantiate(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd, "Main Menu (1)"), "Title"), "Text"), frontEnd.transform);
                         ultrakullLogo.transform.localPosition = new Vector3(1075, 210, 0);
-                        Text ultrakullLogoText = getTextfromGameObject(ultrakullLogo);
-                        ultrakullLogoText.text = "ultrakULL loaded.\nVersion: " + internalVersion + "\nCurrent locale: " + LanguageManager.CurrentLanguage.metadata.langName;
+                        Text ultrakullLogoText = GetTextfromGameObject(ultrakullLogo);
+                        ultrakullLogoText.text = "ultrakULL loaded.\nVersion: " + InternalVersion + "\nCurrent locale: " + LanguageManager.CurrentLanguage.metadata.langName;
                         ultrakullLogoText.alignment = TextAnchor.UpperLeft;
                         ultrakullLogoText.fontSize = 16;
                         
@@ -391,7 +390,7 @@ namespace UltrakULL
                             ultrakullLogoText.text += "\n<color=lime>UPDATE AVAILABLE!</color>";
                             
                             //Make an update button
-                            GameObject buttonBase= getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd,"Main Menu (1)"),"Panel"),"Youtube");
+                            GameObject buttonBase= GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd,"Main Menu (1)"),"Panel"),"Youtube");
                             
                             GameObject ultrakullUpdateButton = GameObject.Instantiate(buttonBase,buttonBase.transform.parent);
                             ultrakullUpdateButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(185, 0f);
@@ -400,7 +399,7 @@ namespace UltrakULL
                             ultrakullUpdateButton.GetComponentInChildren<WebButton>().url = "https://github.com/ClearwaterTM/UltrakULL/releases/latest";
 
                         }
-                        if (!LanguageManager.FileMatchesMinimumRequiredVersion(LanguageManager.CurrentLanguage.metadata.minimumModVersion, internalVersion))
+                        if (!LanguageManager.FileMatchesMinimumRequiredVersion(LanguageManager.CurrentLanguage.metadata.minimumModVersion, InternalVersion))
                         {
                             ultrakullLogoText.text += "\n<color=orange>Outdated language\nloaded.\nCheck console and\nuse at your own risk!</color>";
                         }
@@ -425,12 +424,12 @@ namespace UltrakULL
                     {
                         try
                         {
-                            patchPauseMenu(ref coreGame);
-                            patchCheats(ref coreGame);
-                            patchDeathScreen(ref coreGame);
-                            patchLevelStats(ref coreGame);
-                            patchMisc(ref coreGame);
-                            patchShop(ref coreGame);
+                            PatchPauseMenu(ref coreGame);
+                            PatchCheats(ref coreGame);
+                            PatchDeathScreen(ref coreGame);
+                            PatchLevelStats(ref coreGame);
+                            PatchMisc(ref coreGame);
+                            PatchShop(ref coreGame);
                         }
                         catch (Exception e)
                         {
@@ -444,16 +443,16 @@ namespace UltrakULL
                 else if (currentLevel.name.Contains("-S"))
                 {
                     //Potential problem here - we're hooking via Secret FirstRoom, but the words are swapped between secret levels...
-                    GameObject coreGame = getInactiveRootObject("Canvas");
+                    GameObject coreGame = GetInactiveRootObject("Canvas");
                     if (coreGame == null)
                     {
                         Debug.Log("Failed to hook into secret level.");
                     }
                     else
                     {
-                        patchPauseMenu(ref coreGame);
-                        patchCheats(ref coreGame);
-                        patchLevelStats(ref coreGame);
+                        PatchPauseMenu(ref coreGame);
+                        PatchCheats(ref coreGame);
+                        PatchLevelStats(ref coreGame);
                         Options options = new Options(ref coreGame);
                         SecretLevels secretLevels = new SecretLevels(ref coreGame);
                     }
@@ -461,18 +460,18 @@ namespace UltrakULL
                 else if (currentLevel.name == "uk_construct")
                 //Sandbox hook
                 {
-                    GameObject coreGame = getInactiveRootObject("Canvas");
+                    GameObject coreGame = GetInactiveRootObject("Canvas");
                     if (coreGame == null)
                     {
                         Debug.Log("Failed to hook into sandbox.");
                     }
                     else
                     {
-                        patchPauseMenu(ref coreGame);
-                        patchCheats(ref coreGame);
-                        patchShop(ref coreGame);
-                        patchDeathScreen(ref coreGame);
-                        patchMisc(ref coreGame);
+                        PatchPauseMenu(ref coreGame);
+                        PatchCheats(ref coreGame);
+                        PatchShop(ref coreGame);
+                        PatchDeathScreen(ref coreGame);
+                        PatchMisc(ref coreGame);
                         Options options = new Options(ref coreGame);
                         Sandbox sandbox = new Sandbox();
                     }
@@ -489,12 +488,12 @@ namespace UltrakULL
                     {
                         try
                         {
-                            patchPauseMenu(ref coreGame);
-                            patchShop(ref coreGame);
-                            patchCheats(ref coreGame);
-                            patchDeathScreen(ref coreGame);
-                            patchLevelStats(ref coreGame);
-                            patchMisc(ref coreGame);
+                            PatchPauseMenu(ref coreGame);
+                            PatchShop(ref coreGame);
+                            PatchCheats(ref coreGame);
+                            PatchDeathScreen(ref coreGame);
+                            PatchLevelStats(ref coreGame);
+                            PatchMisc(ref coreGame);
 
                             Options options = new Options(ref coreGame);
                         }
@@ -528,33 +527,33 @@ namespace UltrakULL
                         //Cyber Grind
                         else if (SceneManager.GetActiveScene().name.Contains("Endless"))
                         {
-                            CyberGrind.PatchCG(ref coreGame);
+                            CyberGrind.PatchCg(ref coreGame);
                         }
                         //End of act intermission
                         else if (SceneManager.GetActiveScene().name.Contains("Intermission"))
                         {
-                            Intermission intermission = new Intermission(ref coreGame);
+                            Intermission intermission = new Intermission();
                         }
                     }
                 }
             }
 
             //Bunch of things the mod should do *after* loading to avoid problems.
-            PostInitPatches(getInactiveRootObject("Canvas"));
+            PostInitPatches(GetInactiveRootObject("Canvas"));
 
         }
 
         public void PostInitPatches(GameObject frontEnd)
         {
-            StartCoroutine(applyPostFixes(frontEnd));
+            StartCoroutine(ApplyPostFixes(frontEnd));
         }
 
-        public IEnumerator applyPostFixes(GameObject frontEnd)
+        private IEnumerator ApplyPostFixes(GameObject frontEnd)
         {
             yield return new WaitForSeconds(0.05f);
 
             //Open Language Folder button in Options->Langauge
-            Text openLangFolderText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd,"OptionsMenu"), "Language Page"),"Scroll Rect (1)"),"Contents"),"OpenLangFolder"),"Slot Text"));
+            Text openLangFolderText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd,"OptionsMenu"), "Language Page"),"Scroll Rect (1)"),"Contents"),"OpenLangFolder"),"Slot Text"));
             openLangFolderText.text = LanguageManager.CurrentLanguage.options
             .language_openLanguageFolder;
 
@@ -564,25 +563,25 @@ namespace UltrakULL
 
             if(SceneManager.GetActiveScene().name == "Main Menu")
             {
-                GameObject titleObject = getGameObjectChild(frontEnd, "Main Menu (1)");
+                GameObject titleObject = GetGameObjectChild(frontEnd, "Main Menu (1)");
 
-                foreach (Transform a in titleObject.GetComponentsInChildren<Transform>())
+                foreach (Transform button in titleObject.GetComponentsInChildren<Transform>())
                 {
-                    if(a.name == "Continue(Clone)")
+                    if(button.name == "Continue(Clone)")
                     {
-                        Text ummButton = getTextfromGameObject(getGameObjectChild(a.gameObject, "Text"));
+                        Text ummButton = GetTextfromGameObject(GetGameObjectChild(button.gameObject, "Text"));
                         switch(ummButton.text)
                         {
                             case "MODS":
                             {
-                                a.name = "ModsButton";
-                                ummModsButton = a.gameObject;
+                                button.name = "ModsButton";
+                                ummModsButton = button.gameObject;
                                 break;
                             }
                             case "RESTART":
                             {
-                                a.name = "RestartButton";
-                                ummRestartButton = a.gameObject;
+                                button.name = "RestartButton";
+                                ummRestartButton = button.gameObject;
                                 break;
                             }
                         }
@@ -593,10 +592,10 @@ namespace UltrakULL
             //...and from here we can translate the UMM buttons.
             if(ummModsButton && ummRestartButton)
             {
-                Text ummModsText = getTextfromGameObject(getGameObjectChild(ummModsButton,"Text"));
+                Text ummModsText = GetTextfromGameObject(GetGameObjectChild(ummModsButton,"Text"));
                 ummModsText.text = LanguageManager.CurrentLanguage.frontend.mainmenu_mods;
                 
-                Text ummRestartText = getTextfromGameObject(getGameObjectChild(ummRestartButton,"Text"));
+                Text ummRestartText = GetTextfromGameObject(GetGameObjectChild(ummRestartButton,"Text"));
                 ummRestartText.text = LanguageManager.CurrentLanguage.frontend.mainmenu_restart;
             }
 
@@ -614,22 +613,22 @@ namespace UltrakULL
             }
         }
         
-        public async Task checkForUpdates()
+        private async Task CheckForUpdates()
         {
-            client.DefaultRequestHeaders.Accept.Add( new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.UserAgent.TryParseAdd("request");
-            client.Timeout = TimeSpan.FromSeconds(5);
+            Client.DefaultRequestHeaders.Accept.Add( new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+            Client.DefaultRequestHeaders.UserAgent.TryParseAdd("request");
+            Client.Timeout = TimeSpan.FromSeconds(5);
             string updateUrl = "https://api.github.com/repos/clearwatertm/ultrakull/releases/latest";
             try
             {
-                string responseJsonRaw = await client.GetStringAsync(updateUrl);
+                string responseJsonRaw = await Client.GetStringAsync(updateUrl);
                 
                 UpdateInfo responseJson = JsonConvert.DeserializeObject<UpdateInfo>(responseJsonRaw);
                 Console.WriteLine("Latest version on GitHub: " + responseJson.tag_name.Substring(1));
-                Console.WriteLine("Current local version: " + internalVersion);
+                Console.WriteLine("Current local version: " + InternalVersion);
                 
                 Version onlineVersion = new Version(responseJson.tag_name.Substring(1));
-                Version localVersion = new Version(internalVersion);
+                Version localVersion = new Version(InternalVersion);
                 
                 switch(localVersion.CompareTo(onlineVersion))
                 {
@@ -653,19 +652,19 @@ namespace UltrakULL
         {
             Debug.unityLogger.filterLogType = LogType.Exception;
             Debug.Log("UltrakULL LOADING...");
-            Debug.Log("Version: " + internalVersion);
+            Debug.Log("Version: " + InternalVersion);
             try
             {
             
             
                 Debug.Log("--- Checking for updates ---");
-                checkForUpdates();
+                CheckForUpdates();
             
                 Debug.Log("--- Initializing JSON parser ---");
-                initJsonParser();
+                InitJsonParser();
                 Debug.Log("--- Patching vanilla game functions ---");
                 Debug.Log("Patching game functions...");
-                Harmony harmony = new Harmony(internalName);
+                Harmony harmony = new Harmony(InternalName);
                 harmony.PatchAll();
 
                 Debug.Log(" --- All done. Enjoy! ---");

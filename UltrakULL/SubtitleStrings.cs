@@ -1,25 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine.SceneManagement;
 using UltrakULL.json;
 
 namespace UltrakULL
 {
     public static class SubtitleStrings
     {
-        private static BepInEx.Logging.ManualLogSource subtitleStringsLogger = BepInEx.Logging.Logger.CreateLogSource("Subtitle Strings");
 
         private static string mandaColor = "<color=#FFC49E>";
         private static string owlColor = "<color=#9EE6FF>";
         private static string endColor = "</color>";
 
         //3-2 Gabriel fight
-        public static string gabesubtitles(string input)
+        private static string Gabesubtitles(string input)
         {
             //Pre-arena lines
             if (input.Contains("Machine"))
@@ -99,7 +91,7 @@ namespace UltrakULL
             return ("Unimplemented Gabe fight string");
         }
 
-        public static string druidsubtitles(string input)
+        private static string Druidsubtitles(string input)
         {
             //Intro
             if (input.Contains("Finally"))
@@ -114,7 +106,7 @@ namespace UltrakULL
             return "Unimplemented Druid fight string";
         }
 
-        public static string minossubtitles(string input)
+        private static string Minossubtitles(string input)
         {
             //Intro
             if (input.Contains("Ahh..."))
@@ -181,7 +173,7 @@ namespace UltrakULL
             return "Unimplemented Minos Prime string";
         }
         
-        public static string gabeBoatSubtitles(string input)
+        private static string GabeBoatSubtitles(string input)
         {
             //Intro
             if (input.Contains("Be not afraid"))
@@ -207,7 +199,7 @@ namespace UltrakULL
             return "Unimplemented 5-3 subtitle";
         }
 
-        public static string gabeSecondSubtitles(string input)
+        private static string GabeSecondSubtitles(string input)
         {
 
             if (input.Contains("Machine"))
@@ -230,7 +222,7 @@ namespace UltrakULL
             return "Unimplemented 6-1 subtitle";
         }
 
-        public static string gabeSecondBossSubtitles(string input)
+        private static string GabeSecondBossSubtitles(string input)
         {
             //Level intro
             if (input.Contains("Limbo"))
@@ -369,7 +361,7 @@ namespace UltrakULL
             return "Unimplemented 6-2 subtitle";
         }
 
-        public static string getFightLine(string input)
+        private static string GetFightLine(string input)
         {
 
             //-- Gabriel 1st
@@ -605,45 +597,43 @@ namespace UltrakULL
             return null;
         }
 
-        public static string getSubtitle(string input)
+        public static string GetSubtitle(string input)
         {
-            //Lines to move to before the level checks: Taunts, phase changes
-
-            if(getFightLine(input) != null)
+            if(GetFightLine(input) != null)
             {
-                return getFightLine(input);
+                return GetFightLine(input);
             }
             string currentLevel = SceneManager.GetActiveScene().name;
             //3-2
             if (currentLevel.Contains("3-2"))
             {
-               return gabesubtitles(input);
+               return Gabesubtitles(input);
             }
             //4-3 secret boss
             if (currentLevel.Contains("4-3"))
-                {
-                return druidsubtitles(input);
+            {
+                return Druidsubtitles(input);
             }
             //5-3
             if (currentLevel.Contains("5-3"))
             {
-                return gabeBoatSubtitles(input);
+                return GabeBoatSubtitles(input);
             }
             //6-1
             if (currentLevel.Contains("6-1"))
             {
-                return gabeSecondSubtitles(input);
+                return GabeSecondSubtitles(input);
             }
             //6-2
             if (currentLevel.Contains("6-2"))
             {
-                return gabeSecondBossSubtitles(input);
+                return GabeSecondBossSubtitles(input);
             }
 
             //Prime sanctum, P-1 boss
             if (currentLevel.Contains("P-1"))
             {
-                return minossubtitles(input);
+                return Minossubtitles(input);
             }
             return "Uninplemented subtitle string";
         }

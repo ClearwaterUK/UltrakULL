@@ -11,7 +11,7 @@ namespace UltrakULL.Harmony_Patches
     //@Override
     //Overrides checkScore function from the vanilla game. This translates level names, as well as if challenges have been completed or not. POSTFIX.
     [HarmonyPatch(typeof(LevelSelectPanel), "CheckScore")]
-    public static class Localize_GameProgressChallenges
+    public static class LocalizeGameProgressChallenges
     {
         [HarmonyPostfix]
         public static void CheckScore_MyPatchPostFix(LevelSelectPanel __instance)
@@ -30,7 +30,7 @@ namespace UltrakULL.Harmony_Patches
             }
             else
             {
-                __instance.transform.Find("Name").GetComponent<Text>().text = LevelNames.getLevelName(num); //Level Name
+                __instance.transform.Find("Name").GetComponent<Text>().text = LevelNames.GetLevelName(num); //Level Name
             }
             if (rank.levelNumber == __instance.levelNumber || (__instance.levelNumber == 666 && rank.levelNumber == __instance.levelNumber + __instance.levelNumberInLayer - 1))
             {
@@ -60,7 +60,6 @@ namespace UltrakULL.Harmony_Patches
                 componentInChildren3.text = String.Join(" ", LanguageManager.CurrentLanguage.frontend.level_challenge.ToList()); //Challenge not completed
                 componentInChildren3.color = Color.white;
             }
-            return;
         }
     }
 }

@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UltrakULL.json;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace UltrakULL
 {
     public static class HUDMessages
     {
-        public static string getHUDToolTip(string message)
+        public static string GetHUDToolTip(string message)
         {
-            
             if (message.Contains("PUNCH"))
             {
                 return "<color=red>" + LanguageManager.CurrentLanguage.misc.hud_noArm1 + "</color>\n"
@@ -61,7 +55,6 @@ namespace UltrakULL
                 {
                     return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_noPatternsSelected;
                 }
-
                 return message;
             }
 

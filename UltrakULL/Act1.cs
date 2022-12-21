@@ -1,10 +1,4 @@
-﻿using BepInEx;
-using HarmonyLib;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
+﻿using System;
 using UltrakULL.audio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,24 +10,22 @@ namespace UltrakULL
 {
     public static class Act1
     {
-        private static BepInEx.Logging.ManualLogSource a1Logger = BepInEx.Logging.Logger.CreateLogSource("Act1Patcher");
-
-        private static void patchHellmap()
+        private static void PatchHellmap()
         {
             Debug.Log("Patching Act 1 hellmap");
             try
             {
-                GameObject canvas = getInactiveRootObject("Canvas");
+                GameObject canvas = GetInactiveRootObject("Canvas");
 
-                GameObject hellMapObject = getGameObjectChild(canvas, "Hellmap");
+                GameObject hellMapObject = GetGameObjectChild(canvas, "Hellmap");
 
-                Text hellmapLimbo = getTextfromGameObject(getGameObjectChild(hellMapObject, "Text"));
+                Text hellmapLimbo = GetTextfromGameObject(GetGameObjectChild(hellMapObject, "Text"));
                 hellmapLimbo.text = LanguageManager.CurrentLanguage.misc.hellmap_limbo;
 
-                Text hellmapLust = getTextfromGameObject(getGameObjectChild(hellMapObject, "Text (1)"));
+                Text hellmapLust = GetTextfromGameObject(GetGameObjectChild(hellMapObject, "Text (1)"));
                 hellmapLust.text = LanguageManager.CurrentLanguage.misc.hellmap_lust;
 
-                Text hellmapGluttony = getTextfromGameObject(getGameObjectChild(hellMapObject, "Text (2)"));
+                Text hellmapGluttony = GetTextfromGameObject(GetGameObjectChild(hellMapObject, "Text (2)"));
                 hellmapGluttony.text = LanguageManager.CurrentLanguage.misc.hellmap_gluttony;
             }
             catch(Exception e)
@@ -46,12 +38,12 @@ namespace UltrakULL
         public static void PatchAct1(ref GameObject level) // I've never seen the level argument used, is this meant to do something?
         {
             string currentLevel = SceneManager.GetActiveScene().name;
-            string levelName = Act1Strings.getLevelName();
-            string levelChallenge = Act1Strings.getLevelChallenge(currentLevel);
+            string levelName = Act1Strings.GetLevelName();
+            string levelChallenge = Act1Strings.GetLevelChallenge(currentLevel);
 
-            patchHellmap();
-            patchResultsScreen(levelName, levelChallenge);
-            AudioSwapper.audioSwap(SceneManager.GetActiveScene().name);
+            PatchHellmap();
+            PatchResultsScreen(levelName, levelChallenge);
+            AudioSwapper.AudioSwap(SceneManager.GetActiveScene().name);
 
         }
     }

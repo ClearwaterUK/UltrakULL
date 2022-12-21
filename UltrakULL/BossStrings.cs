@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UltrakULL.json;
+﻿using UltrakULL.json;
 
 namespace UltrakULL
 {
     public static class BossStrings
     {
-        public static string getBossName(string originalBossName)
+        public static string GetBossName(string originalBossName)
         {
             switch (originalBossName)
             {

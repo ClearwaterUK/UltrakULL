@@ -1,42 +1,30 @@
-﻿using BepInEx;
-using HarmonyLib;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+﻿using UnityEngine.SceneManagement;
 using UltrakULL.json;
 
 namespace UltrakULL
 {
     public static class Act2Strings
     {
-        private static BepInEx.Logging.ManualLogSource a2StringsLogger = BepInEx.Logging.Logger.CreateLogSource("Act 2 Strings");
         private static string previousMessage = "";
 
-        public static string level41(string message, string message2, string input)
+        private static string Level41()
         {
             return "Unknown 4-1 string";
         }
-
-        public static string level42(string message, string message2, string input)
+        
+        private static string Level42(string message, string message2)
         {
             string fullMessage = message + message2;
-            Debug.Log(fullMessage);
             if (fullMessage.Contains("BLEED"))
             {
                 return (LanguageManager.CurrentLanguage.act2.act2_greedSecond_sand);
             }
             return "Unknown 4-2 string";
         }
-
-        public static string level43(string message, string message2, string input)
+        
+        private static string Level43(string message, string message2)
         {
             string fullMessage = message + message2;
-            Debug.Log(fullMessage);
             if (fullMessage.Contains("FILTH"))
             {
                 return (LanguageManager.CurrentLanguage.act2.act2_greedThird_wallClip);
@@ -56,14 +44,11 @@ namespace UltrakULL
             return "Unknown 4-3 string";
         }
 
-        public static string level44(string message, string message2, string input)
+        private static string Level44(string message, string message2, string input)
         {
-
             string fullMessage = message + message2;
-            Console.WriteLine(fullMessage);
 
             //Bandaid fix for some edge cases people have been reporting.
-
             if (fullMessage == "")
             {
                 fullMessage = previousMessage;
@@ -83,7 +68,6 @@ namespace UltrakULL
             {
                 previousMessage = LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash1 + " <color=orange>" + input + "</color> " + LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash2;
                 return LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash1 + " <color=orange>" + input + "</color> " + LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash2;
-                
             }
             if (fullMessage.Contains("HEAVY"))
             {
@@ -94,15 +78,14 @@ namespace UltrakULL
             {
                 previousMessage = LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplashHardDamage1 + "\n"
                     + LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplashHardDamage2;
-                
-                
+
                 return LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplashHardDamage1 + "\n"
-                    + LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplashHardDamage2;
+                + LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplashHardDamage2;
             }
             return "Unknown 4-4 string";
         }
 
-        public static string level4secret(string message, string message2, string input)
+        private static string Level4Secret(string message, string message2, string input)
         {
             string fullMessage = message + message2;
             if (fullMessage.Contains("HOLD"))
@@ -113,7 +96,7 @@ namespace UltrakULL
             return (LanguageManager.CurrentLanguage.act2.act2_greedSecret_holdToJump1 + "<color=orange> " + input + " </color>" + LanguageManager.CurrentLanguage.act2.act2_greedSecret_holdToJump2);
         }
 
-        public static string level51(string message, string message2, string input)
+        private static string Level51(string message, string message2)
         {
             string fullMessage = message + message2;
             if (fullMessage.Contains("HOOKPOINT"))
@@ -136,7 +119,7 @@ namespace UltrakULL
             return "Unknown 5-1 string";
         }
 
-        public static string level52(string message, string message2, string input)
+        private static string Level52(string message, string message2)
         {
             string fullMessage = message + message2;
             if (fullMessage.Contains("JAKITO"))
@@ -162,7 +145,7 @@ namespace UltrakULL
             return "Unknown 5-2 string";
         }
 
-        public static string level53(string message, string message2, string input)
+        private static string Level53(string message, string message2)
         {
             string fullMessage = message + message2;
 
@@ -186,19 +169,17 @@ namespace UltrakULL
             return "Unknown 5-3 string";
         }
 
-        public static string level54(string message, string message2, string input)
+        private static string Level54()
         {
-            string fullMessage = message + message2;
-
             return "Unknown 5-4 string";
         }
 
-        public static string level5secret(string message, string message2, string input)
+        private static string Level5Secret()
         {
             return "Unknown 5-S string";
         }
 
-        public static string level61(string message, string message2, string input)
+        private static string Level61(string message, string message2)
         {
             string fullMessage = message + message2;
 
@@ -209,12 +190,12 @@ namespace UltrakULL
             return "Unknown 6-1 string";
         }
 
-        public static string level62(string message, string message2, string input)
+        private static string Level62()
         {
             return "Unknown 6-2 string";
         }
 
-        public static string getMessage(string message, string message2, string input)
+        public static string GetMessage(string message, string message2, string input)
         {
             string currentLevel = SceneManager.GetActiveScene().name;
             string fullMessage = message + message2;
@@ -232,58 +213,57 @@ namespace UltrakULL
             {
                 case "Level 4-1":
                     {
-                        return level41(message, message2, input);
+                        return Level41();
                     }
                 case "Level 4-2":
                     {
-                        return level42(message, message2, input);
+                        return Level42(message, message2);
                     }
                 case "Level 4-3":
                     {
-                        return level43(message, message2, input);
+                        return Level43(message, message2);
                     }
                 case "Level 4-4":
                     {
-                        return level44(message, message2, input);
+                        return Level44(message, message2, input);
                     }
                 case "Level 4-S":
                     {
-                        return level4secret(message, message2, input);
+                        return Level4Secret(message, message2, input);
                     }
                 case "Level 5-1":
                     {
-                        return level51(message, message2, input);
+                        return Level51(message, message2);
                     }
                 case "Level 5-2":
                     {
-                        return level52(message, message2, input);
+                        return Level52(message, message2);
                     }
                 case "Level 5-3":
                     {
-                        return level53(message, message2, input);
+                        return Level53(message, message2);
                     }
                 case "Level 5-4":
                     {
-                        return level54(message, message2, input);
+                        return Level54();
                     }
                 case "Level 5-S":
                     {
-                        return level5secret(message, message2, input);
+                        return Level5Secret();
                     }
                 case "Level 6-1":
                     {
-                        return level61(message, message2, input);
+                        return Level61(message, message2);
                     }
                 case "Level 6-2":
                     {
-                        return level62(message, message2, input);
+                        return Level62();
                     }
                 default: return "Unimplemented Act 2 string";
             }
-
         }
 
-        public static string getLevelChallenge(string currentLevel)
+        public static string GetLevelChallenge(string currentLevel)
         {
             switch (currentLevel)
             {
@@ -304,7 +284,7 @@ namespace UltrakULL
             }
         }
 
-        public static string getLevelName()
+        public static string GetLevelName()
         {
             string currentLevel = SceneManager.GetActiveScene().name;
 
@@ -322,7 +302,6 @@ namespace UltrakULL
 
                 case "Level 6-1": { return "6-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_heresyFirst; }
                 case "Level 6-2": { return "6-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_heresySecond; }
-
 
                 default: { return "Unknown level name"; }
             }

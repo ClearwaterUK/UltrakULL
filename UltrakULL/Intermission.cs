@@ -1,7 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
 
@@ -9,65 +9,61 @@ namespace UltrakULL
 {
     public class Intermission
     {
-        public void act1Int(ref GameObject level, GameObject intermissionObject)
+        private void Act1Int(GameObject intermissionObject)
         {
             //ACT 1
-            //Two I need to patch: Foreground and background shadow.
-            Text toBeContinued = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(intermissionObject, "Panel (1)"), "Text"), "Text (1)"));
+            //Two text elements to patch: Foreground and background shadow.
+            Text toBeContinued = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(intermissionObject, "Panel (1)"), "Text"), "Text (1)"));
             toBeContinued.text = LanguageManager.CurrentLanguage.intermission.act1_intermission_tobecontinued;
 
-            Text tobeContinuedShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(intermissionObject, "Panel (1)"), "Text"));
+            Text tobeContinuedShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(intermissionObject, "Panel (1)"), "Text"));
             tobeContinuedShadow.text = LanguageManager.CurrentLanguage.intermission.act1_intermission_tobecontinuedshadow;
 
-            GameObject Act1EndObject = getGameObjectChild(getGameObjectChild(intermissionObject, "Act End Message"), "Sound 1");
+            GameObject act1EndObject = GetGameObjectChild(GetGameObjectChild(intermissionObject, "Act End Message"), "Sound 1");
 
-            Text Act1EndText = getTextfromGameObject(getGameObjectChild(Act1EndObject, "Text"));
-            Act1EndText.text = LanguageManager.CurrentLanguage.intermission.act1_intermission_endof + "\n\n" + LanguageManager.CurrentLanguage.intermission.act1_intermission_insertAct2;
+            Text act1EndText = GetTextfromGameObject(GetGameObjectChild(act1EndObject, "Text"));
+            act1EndText.text = LanguageManager.CurrentLanguage.intermission.act1_intermission_endof + "\n\n" + LanguageManager.CurrentLanguage.intermission.act1_intermission_insertAct2;
+            
+            Text act1EndMenu = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(act1EndObject, "Menu"), "Text"));
+            act1EndMenu.text = LanguageManager.CurrentLanguage.intermission.act1_intermission_returnToMenu;
 
-            //here
-            Text Act1EndMenu = getTextfromGameObject(getGameObjectChild(getGameObjectChild(Act1EndObject, "Menu"), "Text"));
-            Act1EndMenu.text = LanguageManager.CurrentLanguage.intermission.act1_intermission_returnToMenu;
-
-            Text Act1EndInsert = getTextfromGameObject(getGameObjectChild(getGameObjectChild(Act1EndObject, "Insert"), "Text"));
-            Act1EndInsert.text = LanguageManager.CurrentLanguage.intermission.act1_intermission_insert;
+            Text act1EndInsert = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(act1EndObject, "Insert"), "Text"));
+            act1EndInsert.text = LanguageManager.CurrentLanguage.intermission.act1_intermission_insert;
         }
 
-        public void act2Int(ref GameObject level, GameObject intermissionObject)
+        private void Act2Int(GameObject intermissionObject)
         {
-            Text toBeContinued = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(intermissionObject, "Panel (1)"), "Text"), "Text (1)"));
+            Text toBeContinued = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(intermissionObject, "Panel (1)"), "Text"), "Text (1)"));
             toBeContinued.text = LanguageManager.CurrentLanguage.intermission.act2_intermission_tobecontinued;
 
-            Text tobeContinuedShadow = getTextfromGameObject(getGameObjectChild(getGameObjectChild(intermissionObject, "Panel (1)"), "Text"));
+            Text tobeContinuedShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(intermissionObject, "Panel (1)"), "Text"));
             tobeContinuedShadow.text = LanguageManager.CurrentLanguage.intermission.act2_intermission_tobecontinuedshadow;
 
-            GameObject earlyAccessEnd = getGameObjectChild(intermissionObject, "Early Access End Screen");
+            GameObject earlyAccessEnd = GetGameObjectChild(intermissionObject, "Early Access End Screen");
             if(earlyAccessEnd != null)
             {
-                Text earlyAccessEndText = getTextfromGameObject(getGameObjectChild(earlyAccessEnd, "Text"));
+                Text earlyAccessEndText = GetTextfromGameObject(GetGameObjectChild(earlyAccessEnd, "Text"));
 
                 earlyAccessEndText.text =
                     "<size=48><b>" + LanguageManager.CurrentLanguage.misc.earlyAccessEnd1 + "</b></size>" + "\n\n"
                     + LanguageManager.CurrentLanguage.misc.earlyAccessEnd2 + "\n\n"
                     + LanguageManager.CurrentLanguage.misc.earlyAccessEnd3;
 
-                Text earlyAccessQuitToMenu = getTextfromGameObject(getGameObjectChild(getGameObjectChild(earlyAccessEnd, "Quit Mission"),"Text"));
+                Text earlyAccessQuitToMenu = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(earlyAccessEnd, "Quit Mission"),"Text"));
                 earlyAccessQuitToMenu.text = LanguageManager.CurrentLanguage.intermission.act1_intermission_returnToMenu;
 
             }
         }
 
-        public Intermission(ref GameObject level)
+        public Intermission()
         {
-            level = getInactiveRootObject("Canvas");
-            GameObject intermissionObject = getGameObjectChild(getGameObjectChild(level, "PowerUpVignette"), "Panel");
+            GameObject level = GetInactiveRootObject("Canvas");
+            GameObject intermissionObject = GetGameObjectChild(GetGameObjectChild(level, "PowerUpVignette"), "Panel");
 
-            string levelName = SceneManager.GetActiveScene().name;
-
-            switch (levelName)
+            switch (SceneManager.GetActiveScene().name)
             {
-                case "Intermission1": { act1Int(ref level,intermissionObject);  break; }
-                case "Intermission2": { act2Int(ref level, intermissionObject);  break; }
-                default: { break; }
+                case "Intermission1": { Act1Int(intermissionObject);  break; }
+                case "Intermission2": { Act2Int(intermissionObject);  break; }
             }
         }
     }

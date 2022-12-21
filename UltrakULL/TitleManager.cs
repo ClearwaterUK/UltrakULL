@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 
 using UltrakULL.json;
 
@@ -11,7 +10,7 @@ namespace UltrakULL
 {
     public static class TitleManager
     {
-        public static string getName(string inputName)
+        public static string GetName(string inputName)
         {
             //Prelude titles
             if (inputName.Contains("INTO THE FIRE")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_preludeFirst); }
@@ -60,7 +59,7 @@ namespace UltrakULL
             return "";
         }
 
-        public static string getLayer(string inputTitle)
+        public static string GetLayer(string inputTitle)
         {
             StringBuilder titleToReturn = new StringBuilder();
 

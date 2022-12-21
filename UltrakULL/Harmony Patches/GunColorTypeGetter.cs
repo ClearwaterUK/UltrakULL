@@ -6,7 +6,7 @@ namespace UltrakULL.Harmony_Patches
     //@Override
     //Overrides OnEnable from the GunColorTypeGetter class. Used for the Soul Orb checker.
     [HarmonyPatch(typeof(GunColorTypeGetter), "OnEnable")]
-    public static class Localize_GunColorTypeShop
+    public static class LocalizeGunColorTypeShop
     {
         [HarmonyPostfix]
         public static void OnEnablePostFix_MyPatch(GunColorTypeGetter __instance)

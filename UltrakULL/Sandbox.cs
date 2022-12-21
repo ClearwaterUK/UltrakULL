@@ -1,58 +1,46 @@
-﻿using BepInEx;
-using HarmonyLib;
-using System;
-using System.IO;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
-using UltrakULL;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
+
 using static UltrakULL.CommonFunctions;
-using System.Linq;
 using UltrakULL.json;
 
 namespace UltrakULL
 {
     class Sandbox
     {
-        public void patchSandboxDupeMenu()
+        private void PatchSandboxDupeMenu()
         {
-            GameObject canvas = getInactiveRootObject("Canvas");
+            GameObject canvas = GetInactiveRootObject("Canvas");
 
-            GameObject dupeMenu = getGameObjectChild(getGameObjectChild(canvas, "Cheat Menu"), "Sandbox Saves");
+            GameObject dupeMenu = GetGameObjectChild(GetGameObjectChild(canvas, "Cheat Menu"), "Sandbox Saves");
 
-            Text dupeMenuTitle = getTextfromGameObject(getGameObjectChild(dupeMenu, "Title"));
+            Text dupeMenuTitle = GetTextfromGameObject(GetGameObjectChild(dupeMenu, "Title"));
             dupeMenuTitle.text = LanguageManager.CurrentLanguage.cheats.cheats_dupesTitle;
 
-            Text dupeMenuOpenFolder = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(dupeMenu, "Directory Button Wrapper"),"Directory Button"),"Text"));
+            Text dupeMenuOpenFolder = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(dupeMenu, "Directory Button Wrapper"),"Directory Button"),"Text"));
             dupeMenuOpenFolder.text = LanguageManager.CurrentLanguage.cheats.cheats_dupesOpenFolder;
 
-            Text dupeMenuPlaceholder = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(dupeMenu, "Button"), "InputField"), "Placeholder"));
+            Text dupeMenuPlaceholder = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(dupeMenu, "Button"), "InputField"), "Placeholder"));
             dupeMenuPlaceholder.text = LanguageManager.CurrentLanguage.cheats.cheats_dupesSaveNamePrompt;
 
-            Text dupeMenuSave = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(dupeMenu, "New Save Wrapper"), "Save Button"), "Text"));
+            Text dupeMenuSave = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(dupeMenu, "New Save Wrapper"), "Save Button"), "Text"));
             dupeMenuSave.text = LanguageManager.CurrentLanguage.cheats.cheats_dupesNewSave;
         }
 
-        public void patchMisc()
+        private void PatchMisc()
         {
             GameObject todShop = GameObject.Find("Time of day Shop");
 
             //Time of day loading message
-            Text todShopLoadingText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(todShop,"Canvas"),"Border"), "TipBox"),"Panel"),"Blocker"),"Panel"),"Text"));
+            Text todShopLoadingText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(todShop,"Canvas"),"Border"), "TipBox"),"Panel"),"Blocker"),"Panel"),"Text"));
 
             todShopLoadingText.text = LanguageManager.CurrentLanguage.misc.loading;
-
         }
 
         public Sandbox()
         {
-            patchSandboxDupeMenu();
-            patchMisc();
+            PatchSandboxDupeMenu();
+            PatchMisc();
         }
 
     }

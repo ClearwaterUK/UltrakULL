@@ -1,63 +1,51 @@
-﻿using BepInEx;
-using HarmonyLib;
-using System;
-using System.IO;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
-using UltrakULL;
+﻿using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.Events;
 using static UltrakULL.CommonFunctions;
-using System.Linq;
 using UltrakULL.json;
 
 namespace UltrakULL
 {
     public static class MainMenu
     {
-        private static BepInEx.Logging.ManualLogSource MainMenuLogger = BepInEx.Logging.Logger.CreateLogSource("FrontEndPatcher");
 
         //Patches all text strings in the title menu.
-        public static void patchMainMenu(GameObject mainMenu)
+        private static void PatchMainMenu(GameObject mainMenu)
         {
             try
             {
-                GameObject titleObject = getGameObjectChild(mainMenu, "Main Menu (1)");
+                GameObject titleObject = GetGameObjectChild(mainMenu, "Main Menu (1)");
 
                 //Early access tag
-                Text earlyAccessText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Title"), "Text"));
+                Text earlyAccessText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(titleObject, "Title"), "Text"));
                 earlyAccessText.text = "--" + LanguageManager.CurrentLanguage.frontend.mainmenu_earlyAccess + "--";
 
                 //Halloween
-                Text halloweenText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Title"), "Text (Halloween)"));
+                Text halloweenText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(titleObject, "Title"), "Text (Halloween)"));
                 halloweenText.text = "<color=orange>--" + LanguageManager.CurrentLanguage.frontend.mainmenu_halloween + "--</color>";
 
                 //Easter
-                Text easterText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Title"), "Text (Easter)"));
+                Text easterText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(titleObject, "Title"), "Text (Easter)"));
                 easterText.text = "<color=magenta>--" + LanguageManager.CurrentLanguage.frontend.mainmenu_easter + "--</color>";
 
                 //Christmas
-                Text christmasText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Title"), "Text (Christmas)"));
+                Text christmasText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(titleObject, "Title"), "Text (Christmas)"));
                 christmasText.text = "<color=red>--" + LanguageManager.CurrentLanguage.frontend.mainmenu_christmas + "--</color>";
 
                 //Play button
-                Text playButtonText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Continue"), "Text"));
+                Text playButtonText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(titleObject, "Continue"), "Text"));
                 playButtonText.text = LanguageManager.CurrentLanguage.frontend.mainmenu_play;
 
                 //Options button
-                Text optionsButtontext = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Options"), "Text"));
+                Text optionsButtontext = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(titleObject, "Options"), "Text"));
                 optionsButtontext.text = LanguageManager.CurrentLanguage.frontend.mainmenu_options;
 
                 //Credits button
-                Text creditsButtontext = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Credits"), "Text"));
+                Text creditsButtontext = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(titleObject, "Credits"), "Text"));
                 creditsButtontext.text = LanguageManager.CurrentLanguage.frontend.mainmenu_credits;
 
                 //Quit button
-                Text quitButtontext = getTextfromGameObject(getGameObjectChild(getGameObjectChild(titleObject, "Quit"), "Text"));
+                Text quitButtontext = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(titleObject, "Quit"), "Text"));
                 quitButtontext.text = LanguageManager.CurrentLanguage.frontend.mainmenu_quit;
 
                 //UMM buttons
@@ -66,12 +54,12 @@ namespace UltrakULL
                 {
                     if(a.name == "ModsButton")
                     {
-                        Text modsButtonText = getTextfromGameObject(getGameObjectChild(a.gameObject,"Text"));
+                        Text modsButtonText = GetTextfromGameObject(GetGameObjectChild(a.gameObject,"Text"));
                         modsButtonText.text = LanguageManager.CurrentLanguage.frontend.mainmenu_mods;
                     }
                     if(a.name == "RestartButton")
                     {
-                        Text restartButtonText = getTextfromGameObject(getGameObjectChild(a.gameObject,"Text"));
+                        Text restartButtonText = GetTextfromGameObject(GetGameObjectChild(a.gameObject,"Text"));
                         restartButtonText.text = LanguageManager.CurrentLanguage.frontend.mainmenu_restart;
                     }
                 }
@@ -84,58 +72,58 @@ namespace UltrakULL
         }
 
         //Patches all text strings in the difficulty selection menu.
-        public static void patchDifficultyMenu(GameObject frontEnd)
+        private static void PatchDifficultyMenu(GameObject frontEnd)
         {
             try
             {
-                GameObject difficultyObject = getGameObjectChild(frontEnd, "Difficulty Select (1)");
+                GameObject difficultyObject = GetGameObjectChild(frontEnd, "Difficulty Select (1)");
 
                 //Difficulty header text (note: this can't fit much without reducing the default font size.)
-                Text difficultyText = getTextfromGameObject(difficultyObject.transform.Find("Title").gameObject);
+                Text difficultyText = GetTextfromGameObject(difficultyObject.transform.Find("Title").gameObject);
                 difficultyText.text = LanguageManager.CurrentLanguage.frontend.difficulty_title;
 
                 //Easy header text
-                Text easyText = getTextfromGameObject(difficultyObject.transform.Find("Easy").gameObject);
+                Text easyText = GetTextfromGameObject(difficultyObject.transform.Find("Easy").gameObject);
                 easyText.text =LanguageManager.CurrentLanguage.frontend.difficulty_easy;
 
                 //Normal header text
-                Text normalText = getTextfromGameObject(difficultyObject.transform.Find("Normal").gameObject);
+                Text normalText = GetTextfromGameObject(difficultyObject.transform.Find("Normal").gameObject);
                 normalText.text = LanguageManager.CurrentLanguage.frontend.difficulty_normal;
 
                 //Hard header text
-                Text hardText = getTextfromGameObject(difficultyObject.transform.Find("Hard").gameObject);
+                Text hardText = GetTextfromGameObject(difficultyObject.transform.Find("Hard").gameObject);
                 hardText.text = LanguageManager.CurrentLanguage.frontend.difficulty_hard;
 
                 //Harmless header
-                GameObject harmlessTextObject = getGameObjectChild(difficultyObject, "Casual Easy");
-                Text harmlessText = getTextfromGameObject(harmlessTextObject.transform.Find("Name").gameObject);
+                GameObject harmlessTextObject = GetGameObjectChild(difficultyObject, "Casual Easy");
+                Text harmlessText = GetTextfromGameObject(harmlessTextObject.transform.Find("Name").gameObject);
                 harmlessText.text = LanguageManager.CurrentLanguage.frontend.difficulty_harmless;
 
                 //Lenient header
-                GameObject lenientTextObject = getGameObjectChild(difficultyObject, "Casual Hard");
-                Text lenientText = getTextfromGameObject(lenientTextObject.transform.Find("Name").gameObject);
+                GameObject lenientTextObject = GetGameObjectChild(difficultyObject, "Casual Hard");
+                Text lenientText = GetTextfromGameObject(lenientTextObject.transform.Find("Name").gameObject);
                 lenientText.text = LanguageManager.CurrentLanguage.frontend.difficulty_lenient;
 
                 //Standard header
-                GameObject standardTextObject = getGameObjectChild(difficultyObject, "Standard");
-                Text standardText = getTextfromGameObject(standardTextObject.transform.Find("Name").gameObject);
+                GameObject standardTextObject = GetGameObjectChild(difficultyObject, "Standard");
+                Text standardText = GetTextfromGameObject(standardTextObject.transform.Find("Name").gameObject);
                 standardText.text = LanguageManager.CurrentLanguage.frontend.difficulty_standard;
 
                 //Violent header
-                GameObject violentTextObject = getGameObjectChild(difficultyObject, "Violent");
-                Text violentText = getTextfromGameObject(violentTextObject.transform.Find("Name").gameObject);
+                GameObject violentTextObject = GetGameObjectChild(difficultyObject, "Violent");
+                Text violentText = GetTextfromGameObject(violentTextObject.transform.Find("Name").gameObject);
                 violentText.text = LanguageManager.CurrentLanguage.frontend.difficulty_violent;
 
                 //Brutal header
-                GameObject brutalTextObject = getGameObjectChild(difficultyObject, "Brutal");
-                Text brutalText = getTextfromGameObject(brutalTextObject.transform.Find("Name").gameObject);
+                GameObject brutalTextObject = GetGameObjectChild(difficultyObject, "Brutal");
+                Text brutalText = GetTextfromGameObject(brutalTextObject.transform.Find("Name").gameObject);
                 brutalText.text = LanguageManager.CurrentLanguage.frontend.difficulty_brutal;
 
                 //No need for Brutal/UMD header yet as it's not in-game
 
                 //Tooltip
-                GameObject assistTip = getGameObjectChild(difficultyObject, "Assist Tip");
-                Text assistTipText = getTextfromGameObject(assistTip);
+                GameObject assistTip = GetGameObjectChild(difficultyObject, "Assist Tip");
+                Text assistTipText = GetTextfromGameObject(assistTip);
                 assistTipText.text = LanguageManager.CurrentLanguage.frontend.difficulty_tweakReminder;
             }
             catch (Exception e)
@@ -146,19 +134,19 @@ namespace UltrakULL
         }
 
         //Same as above.
-        public static void patchDifficultyDescriptors(GameObject frontEnd)
+        private static void PatchDifficultyDescriptors(GameObject frontEnd)
         {
             try
             {
-                GameObject difficultyObject = getGameObjectChild(frontEnd, "Difficulty Select (1)");
+                GameObject difficultyObject = GetGameObjectChild(frontEnd, "Difficulty Select (1)");
 
                 //Harmless title
-                GameObject harmlessObject = getGameObjectChild(difficultyObject, "Harmless Info");
-                Text harmlessTitle = getTextfromGameObject(harmlessObject.transform.Find("Title (1)").gameObject);
+                GameObject harmlessObject = GetGameObjectChild(difficultyObject, "Harmless Info");
+                Text harmlessTitle = GetTextfromGameObject(harmlessObject.transform.Find("Title (1)").gameObject);
                 harmlessTitle.text = LanguageManager.CurrentLanguage.frontend.difficulty_harmless;
 
                 //Harmless descriptor
-                Text harmlessDescriptor = getTextfromGameObject(harmlessObject.transform.Find("Text").gameObject);
+                Text harmlessDescriptor = GetTextfromGameObject(harmlessObject.transform.Find("Text").gameObject);
                 harmlessDescriptor.text =
                     LanguageManager.CurrentLanguage.frontend.difficulty_harmlessDescription1
                     + "\n\n"
@@ -167,12 +155,12 @@ namespace UltrakULL
                     + "<color=lime>" + LanguageManager.CurrentLanguage.frontend.difficulty_harmlessDescription3 + "</color>";
 
                 //Lenient title
-                GameObject lenientObject = getGameObjectChild(difficultyObject, "Lenient Info");
-                Text lenientTitle = getTextfromGameObject(lenientObject.transform.Find("Title (1)").gameObject);
+                GameObject lenientObject = GetGameObjectChild(difficultyObject, "Lenient Info");
+                Text lenientTitle = GetTextfromGameObject(lenientObject.transform.Find("Title (1)").gameObject);
                 lenientTitle.text = LanguageManager.CurrentLanguage.frontend.difficulty_lenient;
                 
                 //Lenient descriptor
-                Text lenientDescriptor = getTextfromGameObject(lenientObject.transform.Find("Text").gameObject);
+                Text lenientDescriptor = GetTextfromGameObject(lenientObject.transform.Find("Text").gameObject);
                 lenientDescriptor.text =
                     LanguageManager.CurrentLanguage.frontend.difficulty_lenientDescription1
                     + "\n\n"
@@ -181,12 +169,12 @@ namespace UltrakULL
                     + "<color=yellow>" + LanguageManager.CurrentLanguage.frontend.difficulty_lenientDescription3 + "</color>";
 
                 //Standard title
-                GameObject standardObject = getGameObjectChild(difficultyObject, "Standard Info");
-                Text standardTitle = getTextfromGameObject(standardObject.transform.Find("Title (1)").gameObject);
+                GameObject standardObject = GetGameObjectChild(difficultyObject, "Standard Info");
+                Text standardTitle = GetTextfromGameObject(standardObject.transform.Find("Title (1)").gameObject);
                 standardTitle.text = LanguageManager.CurrentLanguage.frontend.difficulty_standard;
 
                 //Standard descriptor
-                Text standardDescriptor = getTextfromGameObject(standardObject.transform.Find("Text").gameObject);
+                Text standardDescriptor = GetTextfromGameObject(standardObject.transform.Find("Text").gameObject);
                 standardDescriptor.text =
                     LanguageManager.CurrentLanguage.frontend.difficulty_standardDescription1
                     + "\n\n"
@@ -195,12 +183,12 @@ namespace UltrakULL
                     + "<color=orange>" + LanguageManager.CurrentLanguage.frontend.difficulty_standardDescription3 + "</color>";
 
                 //Violent title
-                GameObject violentObject = getGameObjectChild(difficultyObject, "Violent Info");
-                Text violentTitle = getTextfromGameObject(violentObject.transform.Find("Title (1)").gameObject);
+                GameObject violentObject = GetGameObjectChild(difficultyObject, "Violent Info");
+                Text violentTitle = GetTextfromGameObject(violentObject.transform.Find("Title (1)").gameObject);
                 violentTitle.text = LanguageManager.CurrentLanguage.frontend.difficulty_violent;
 
                 //Violent descriptor
-                Text violentDescriptor = getTextfromGameObject(violentObject.transform.Find("Text").gameObject);
+                Text violentDescriptor = GetTextfromGameObject(violentObject.transform.Find("Text").gameObject);
                 violentDescriptor.text =
                     LanguageManager.CurrentLanguage.frontend.difficulty_violentDescription1
                     + "\n\n"
@@ -208,7 +196,7 @@ namespace UltrakULL
                     + "\n\n"
                     + "<color=red>" + LanguageManager.CurrentLanguage.frontend.difficulty_violentDescription3 + "</color>";
 
-                Text underConstructionText = getTextfromGameObject(getGameObjectChild(difficultyObject, "Under Construction"));
+                Text underConstructionText = GetTextfromGameObject(GetGameObjectChild(difficultyObject, "Under Construction"));
                 underConstructionText.text = LanguageManager.CurrentLanguage.frontend.difficulty_underConstruction;
 
 
@@ -236,243 +224,243 @@ namespace UltrakULL
 
         }
 
-        public static void patchChapterSelect(GameObject frontEnd)
+        private static void PatchChapterSelect(GameObject frontEnd)
         {
-            GameObject chapterObject = getGameObjectChild(frontEnd, "Chapter Select");
-            Text chapterText = getTextfromGameObject(chapterObject.transform.Find("Title (1)").gameObject);
+            GameObject chapterObject = GetGameObjectChild(frontEnd, "Chapter Select");
+            Text chapterText = GetTextfromGameObject(chapterObject.transform.Find("Title (1)").gameObject);
             chapterText.text = LanguageManager.CurrentLanguage.frontend.chapter_title;
 
-            GameObject preludeObject = getGameObjectChild(chapterObject, "Prelude");
-            Text preludeText = getTextfromGameObject(preludeObject.transform.Find("Name").gameObject);
+            GameObject preludeObject = GetGameObjectChild(chapterObject, "Prelude");
+            Text preludeText = GetTextfromGameObject(preludeObject.transform.Find("Name").gameObject);
             preludeText.text = LanguageManager.CurrentLanguage.frontend.chapter_prelude;
 
-            GameObject act1Object = getGameObjectChild(chapterObject, "Act I");
-            Text act1Text = getTextfromGameObject(act1Object.transform.Find("Name").gameObject);
+            GameObject act1Object = GetGameObjectChild(chapterObject, "Act I");
+            Text act1Text = GetTextfromGameObject(act1Object.transform.Find("Name").gameObject);
             act1Text.text = LanguageManager.CurrentLanguage.frontend.chapter_act1;
 
-            GameObject act2Object = getGameObjectChild(chapterObject, "Act II");
-            Text act2Text = getTextfromGameObject(act2Object.transform.Find("Name").gameObject);
+            GameObject act2Object = GetGameObjectChild(chapterObject, "Act II");
+            Text act2Text = GetTextfromGameObject(act2Object.transform.Find("Name").gameObject);
             act2Text.text = LanguageManager.CurrentLanguage.frontend.chapter_act2;
 
-            GameObject act3Object = getGameObjectChild(chapterObject, "Act III");
-            Text act3Text = getTextfromGameObject(act3Object.transform.Find("Name").gameObject);
+            GameObject act3Object = GetGameObjectChild(chapterObject, "Act III");
+            Text act3Text = GetTextfromGameObject(act3Object.transform.Find("Name").gameObject);
             act3Text.text = LanguageManager.CurrentLanguage.frontend.chapter_act3;
 
-            GameObject primeObject = getGameObjectChild(chapterObject, "Prime");
-            Text primeText = getTextfromGameObject(primeObject.transform.Find("Name").gameObject);
+            GameObject primeObject = GetGameObjectChild(chapterObject, "Prime");
+            Text primeText = GetTextfromGameObject(primeObject.transform.Find("Name").gameObject);
             primeText.text = LanguageManager.CurrentLanguage.frontend.chapter_prime;
 
-            GameObject cgObject = getGameObjectChild(chapterObject, "The Cyber Grind");
-            Text cgText = getTextfromGameObject(cgObject.transform.Find("Name").gameObject);
+            GameObject cgObject = GetGameObjectChild(chapterObject, "The Cyber Grind");
+            Text cgText = GetTextfromGameObject(cgObject.transform.Find("Name").gameObject);
             cgText.text = LanguageManager.CurrentLanguage.frontend.chapter_cyberGrind;
 
-            GameObject sandboxObject = getGameObjectChild(chapterObject, "Sandbox");
-            Text sandboxText = getTextfromGameObject(sandboxObject.transform.Find("Name").gameObject);
+            GameObject sandboxObject = GetGameObjectChild(chapterObject, "Sandbox");
+            Text sandboxText = GetTextfromGameObject(sandboxObject.transform.Find("Name").gameObject);
             sandboxText.text = LanguageManager.CurrentLanguage.frontend.chapter_sandbox;
         }
 
-        public static void patchLevelSelectPrelude(GameObject frontEnd)
+        private static void PatchLevelSelectPrelude(GameObject frontEnd)
         {
-            GameObject lsPreludeObject = getGameObjectChild(frontEnd, "Level Select (Prelude)");
-            GameObject preludeObject = getGameObjectChild(lsPreludeObject, "Overture");
+            GameObject lsPreludeObject = GetGameObjectChild(frontEnd, "Level Select (Prelude)");
+            GameObject preludeObject = GetGameObjectChild(lsPreludeObject, "Overture");
 
             //Prelude title
-            Text preludeTitleText = getTextfromGameObject(preludeObject.transform.Find("Text").gameObject);
+            Text preludeTitleText = GetTextfromGameObject(preludeObject.transform.Find("Text").gameObject);
             preludeTitleText.text = LanguageManager.CurrentLanguage.frontend.layer_prelude;
             preludeTitleText.fontSize = 36;
 
             //0-1 challenge
-            GameObject firstObject = getGameObjectChild(preludeObject, "0-1 Panel");
+            GameObject firstObject = GetGameObjectChild(preludeObject, "0-1 Panel");
 
-            Text firstChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(firstObject, "Stats"), "Challenge"), "Panel"), "Text"));
-            firstChallenge.text = PreludeStrings.getLevelChallenge("Level 0-1");
+            Text firstChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(firstObject, "Stats"), "Challenge"), "Panel"), "Text"));
+            firstChallenge.text = PreludeStrings.GetLevelChallenge("Level 0-1");
 
             //0-2 challenge
 
-            GameObject secondObject = getGameObjectChild(preludeObject, "0-2 Panel");
-            Text secondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(secondObject, "Stats"), "Challenge"), "Panel (2)"), "Text"));
-            secondChallenge.text = PreludeStrings.getLevelChallenge("Level 0-2");
+            GameObject secondObject = GetGameObjectChild(preludeObject, "0-2 Panel");
+            Text secondChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(secondObject, "Stats"), "Challenge"), "Panel (2)"), "Text"));
+            secondChallenge.text = PreludeStrings.GetLevelChallenge("Level 0-2");
 
             //0-3 challenge
-            GameObject thirdObject = getGameObjectChild(preludeObject, "0-3 Panel");
-            Text thirdChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(thirdObject, "Stats"), "Challenge"), "Panel (4)"), "Text"));
-            thirdChallenge.text = PreludeStrings.getLevelChallenge("Level 0-3");
+            GameObject thirdObject = GetGameObjectChild(preludeObject, "0-3 Panel");
+            Text thirdChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(thirdObject, "Stats"), "Challenge"), "Panel (4)"), "Text"));
+            thirdChallenge.text = PreludeStrings.GetLevelChallenge("Level 0-3");
 
             //0-4 challenge
-            GameObject fourthObject = getGameObjectChild(preludeObject, "0-4 Panel");
-            Text fourthChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(fourthObject, "Stats"), "Challenge"), "Panel (6)"), "Text"));
-            fourthChallenge.text = PreludeStrings.getLevelChallenge("Level 0-4");
+            GameObject fourthObject = GetGameObjectChild(preludeObject, "0-4 Panel");
+            Text fourthChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(fourthObject, "Stats"), "Challenge"), "Panel (6)"), "Text"));
+            fourthChallenge.text = PreludeStrings.GetLevelChallenge("Level 0-4");
 
             //0-5 challenge
-            GameObject fifthObject = getGameObjectChild(preludeObject, "0-5 Panel");
+            GameObject fifthObject = GetGameObjectChild(preludeObject, "0-5 Panel");
 
-            Text fifthChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(fifthObject, "Stats"), "Challenge"), "Panel (6)"), "Text"));
-            fifthChallenge.text = PreludeStrings.getLevelChallenge("Level 0-5");
+            Text fifthChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(fifthObject, "Stats"), "Challenge"), "Panel (6)"), "Text"));
+            fifthChallenge.text = PreludeStrings.GetLevelChallenge("Level 0-5");
 
             //Secret title
-            Text secretText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(preludeObject, "Secret Mission"), "Text").gameObject);
+            Text secretText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(preludeObject, "Secret Mission"), "Text").gameObject);
             secretText.text = LanguageManager.CurrentLanguage.frontend.chapter_secretMission;
 
             //Full intro panel
-            GameObject fullIntroObject = getGameObjectChild(getGameObjectChild(lsPreludeObject, "FullIntroPopup"), "Panel");
+            GameObject fullIntroObject = GetGameObjectChild(GetGameObjectChild(lsPreludeObject, "FullIntroPopup"), "Panel");
 
-            Text fullIntroText = getTextfromGameObject(fullIntroObject.transform.Find("Text").gameObject);
+            Text fullIntroText = GetTextfromGameObject(fullIntroObject.transform.Find("Text").gameObject);
             fullIntroText.text = LanguageManager.CurrentLanguage.frontend.level_fullIntroPrompt;
 
-            Text fullIntroYesText = getTextfromGameObject(getGameObjectChild(fullIntroObject, "Button (1)").transform.Find("Text").gameObject);
+            Text fullIntroYesText = GetTextfromGameObject(GetGameObjectChild(fullIntroObject, "Button (1)").transform.Find("Text").gameObject);
             fullIntroYesText.text = LanguageManager.CurrentLanguage.frontend.level_fullIntroPromptYes;
 
-            Text fullIntroNoText = getTextfromGameObject(getGameObjectChild(fullIntroObject, "Button").transform.Find("Text").gameObject);
+            Text fullIntroNoText = GetTextfromGameObject(GetGameObjectChild(fullIntroObject, "Button").transform.Find("Text").gameObject);
             fullIntroNoText.text = LanguageManager.CurrentLanguage.frontend.level_fullIntroPromptNo;
 
-            Text fullIntroCancelText = getTextfromGameObject(getGameObjectChild(fullIntroObject, "Button (2)").transform.Find("Text").gameObject);
+            Text fullIntroCancelText = GetTextfromGameObject(GetGameObjectChild(fullIntroObject, "Button (2)").transform.Find("Text").gameObject);
             fullIntroCancelText.text = LanguageManager.CurrentLanguage.frontend.level_fullIntroPromptCancel;
         }
 
         //Patches all text strings in the Act 1 menu.
-        public static void patchLevelSelectAct1(GameObject frontEnd)
+        private static void PatchLevelSelectAct1(GameObject frontEnd)
         {
-            GameObject Act1Object = getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Level Select (Act I)"), "Scroll Rect"), "Contents");
+            GameObject act1Object = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd, "Level Select (Act I)"), "Scroll Rect"), "Contents");
 
-            GameObject limboObject = getGameObjectChild(Act1Object, "Layer 1 Limbo");
-            GameObject lustObject = getGameObjectChild(Act1Object, "Layer 2 Lust");
-            GameObject gluttonyObject = getGameObjectChild(Act1Object, "Layer 3 Gluttony");
+            GameObject limboObject = GetGameObjectChild(act1Object, "Layer 1 Limbo");
+            GameObject lustObject = GetGameObjectChild(act1Object, "Layer 2 Lust");
+            GameObject gluttonyObject = GetGameObjectChild(act1Object, "Layer 3 Gluttony");
 
             //Layer 1 - Limbo
-            Text limboTitle = getTextfromGameObject(getGameObjectChild(limboObject, "Text"));
+            Text limboTitle = GetTextfromGameObject(GetGameObjectChild(limboObject, "Text"));
             limboTitle.text = LanguageManager.CurrentLanguage.frontend.layer_limbo;
 
-            Text limboSecretMissionText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(limboObject, "Secret Mission"), "Text"));
+            Text limboSecretMissionText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(limboObject, "Secret Mission"), "Text"));
             limboSecretMissionText.text = LanguageManager.CurrentLanguage.frontend.chapter_secretMission;
 
-            Text limboFirstChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(limboObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
-            limboFirstChallenge.text = Act1Strings.getLevelChallenge("Level 1-1");
+            Text limboFirstChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(limboObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
+            limboFirstChallenge.text = Act1Strings.GetLevelChallenge("Level 1-1");
 
-            Text limboSecondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(limboObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
-            limboSecondChallenge.text = Act1Strings.getLevelChallenge("Level 1-2");
+            Text limboSecondChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(limboObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
+            limboSecondChallenge.text = Act1Strings.GetLevelChallenge("Level 1-2");
 
-            Text limboThirdChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(limboObject, "1-3 Panel"), "Stats"), "Challenge"), "Panel (4)"), "Text"));
-            limboThirdChallenge.text = Act1Strings.getLevelChallenge("Level 1-3");
+            Text limboThirdChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(limboObject, "1-3 Panel"), "Stats"), "Challenge"), "Panel (4)"), "Text"));
+            limboThirdChallenge.text = Act1Strings.GetLevelChallenge("Level 1-3");
 
-            Text limboClimaxChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(limboObject, "1-4 Panel"), "Stats"), "Challenge"), "Panel (6)"), "Text"));
-            limboClimaxChallenge.text = Act1Strings.getLevelChallenge("Level 1-4");
+            Text limboClimaxChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(limboObject, "1-4 Panel"), "Stats"), "Challenge"), "Panel (6)"), "Text"));
+            limboClimaxChallenge.text = Act1Strings.GetLevelChallenge("Level 1-4");
 
             //Layer 2 - Lust
-            Text lustTitle = getTextfromGameObject(getGameObjectChild(lustObject, "Text"));
+            Text lustTitle = GetTextfromGameObject(GetGameObjectChild(lustObject, "Text"));
             lustTitle.text = LanguageManager.CurrentLanguage.frontend.layer_lust;
 
-            Text lustSecretMissionText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(lustObject, "Secret Mission"), "Text"));
+            Text lustSecretMissionText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(lustObject, "Secret Mission"), "Text"));
             lustSecretMissionText.text = LanguageManager.CurrentLanguage.frontend.chapter_secretMission;
 
-            Text lustFirstChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(lustObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
-            lustFirstChallenge.text = Act1Strings.getLevelChallenge("Level 2-1");
+            Text lustFirstChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(lustObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
+            lustFirstChallenge.text = Act1Strings.GetLevelChallenge("Level 2-1");
 
-            Text lustSecondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(lustObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
-            lustSecondChallenge.text = Act1Strings.getLevelChallenge("Level 2-2");
+            Text lustSecondChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(lustObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
+            lustSecondChallenge.text = Act1Strings.GetLevelChallenge("Level 2-2");
 
-            Text lustThirdChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(lustObject, "1-3 Panel"), "Stats"), "Challenge"), "Panel (4)"), "Text"));
-            lustThirdChallenge.text = Act1Strings.getLevelChallenge("Level 2-3");
+            Text lustThirdChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(lustObject, "1-3 Panel"), "Stats"), "Challenge"), "Panel (4)"), "Text"));
+            lustThirdChallenge.text = Act1Strings.GetLevelChallenge("Level 2-3");
 
-            Text lustClimaxChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(lustObject, "1-4 Panel"), "Stats"), "Challenge"), "Panel (6)"), "Text"));
-            lustClimaxChallenge.text = Act1Strings.getLevelChallenge("Level 2-4");
+            Text lustClimaxChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(lustObject, "1-4 Panel"), "Stats"), "Challenge"), "Panel (6)"), "Text"));
+            lustClimaxChallenge.text = Act1Strings.GetLevelChallenge("Level 2-4");
 
             //Layer 3 - Gluttony
-            Text gluttonyTitle = getTextfromGameObject(getGameObjectChild(gluttonyObject, "Text"));
+            Text gluttonyTitle = GetTextfromGameObject(GetGameObjectChild(gluttonyObject, "Text"));
             gluttonyTitle.text = LanguageManager.CurrentLanguage.frontend.layer_gluttony;
 
-            Text gluttonyFirstChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(gluttonyObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
-            gluttonyFirstChallenge.text = Act1Strings.getLevelChallenge("Level 3-1");
+            Text gluttonyFirstChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(gluttonyObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
+            gluttonyFirstChallenge.text = Act1Strings.GetLevelChallenge("Level 3-1");
 
-            Text gluttonySecondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(gluttonyObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
-            gluttonySecondChallenge.text = Act1Strings.getLevelChallenge("Level 3-2");
+            Text gluttonySecondChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(gluttonyObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
+            gluttonySecondChallenge.text = Act1Strings.GetLevelChallenge("Level 3-2");
 
         }
 
-        public static void patchLevelSelectAct2(GameObject frontEnd)
+        private static void PatchLevelSelectAct2(GameObject frontEnd)
         {
-            GameObject Act2Object = getGameObjectChild(getGameObjectChild(getGameObjectChild(frontEnd, "Level Select (Act II)"), "Scroll Rect"), "Contents");
+            GameObject act2Object = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd, "Level Select (Act II)"), "Scroll Rect"), "Contents");
 
-            GameObject greedObject = getGameObjectChild(Act2Object, "Layer 4 Greed");
-            GameObject wrathObject = getGameObjectChild(Act2Object, "Layer 5 Wrath");
-            GameObject heresyObject = getGameObjectChild(Act2Object, "Layer 6 Heresy");
+            GameObject greedObject = GetGameObjectChild(act2Object, "Layer 4 Greed");
+            GameObject wrathObject = GetGameObjectChild(act2Object, "Layer 5 Wrath");
+            GameObject heresyObject = GetGameObjectChild(act2Object, "Layer 6 Heresy");
 
             //Layer 4 - Greed
-            Text greedTitle = getTextfromGameObject(getGameObjectChild(greedObject, "Text"));
+            Text greedTitle = GetTextfromGameObject(GetGameObjectChild(greedObject, "Text"));
             greedTitle.text = LanguageManager.CurrentLanguage.frontend.layer_greed;
 
 
-            Text greedFirstChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(greedObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
-            greedFirstChallenge.text = Act2Strings.getLevelChallenge("Level 4-1");
+            Text greedFirstChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(greedObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
+            greedFirstChallenge.text = Act2Strings.GetLevelChallenge("Level 4-1");
 
-            Text greedSecondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(greedObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
-            greedSecondChallenge.text = Act2Strings.getLevelChallenge("Level 4-2");
+            Text greedSecondChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(greedObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
+            greedSecondChallenge.text = Act2Strings.GetLevelChallenge("Level 4-2");
 
-            Text greedThirdChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(greedObject, "1-3 Panel"), "Stats"), "Challenge"), "Panel (4)"), "Text"));
-            greedThirdChallenge.text = Act2Strings.getLevelChallenge("Level 4-3");
+            Text greedThirdChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(greedObject, "1-3 Panel"), "Stats"), "Challenge"), "Panel (4)"), "Text"));
+            greedThirdChallenge.text = Act2Strings.GetLevelChallenge("Level 4-3");
 
-            Text greedClimaxChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(greedObject, "1-4 Panel"), "Stats"), "Challenge"), "Panel (6)"), "Text"));
-            greedClimaxChallenge.text = Act2Strings.getLevelChallenge("Level 4-4");
+            Text greedClimaxChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(greedObject, "1-4 Panel"), "Stats"), "Challenge"), "Panel (6)"), "Text"));
+            greedClimaxChallenge.text = Act2Strings.GetLevelChallenge("Level 4-4");
 
-            Text greedSecretMissionText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(greedObject, "Secret Mission"), "Text"));
+            Text greedSecretMissionText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(greedObject, "Secret Mission"), "Text"));
             greedSecretMissionText.text = LanguageManager.CurrentLanguage.frontend.chapter_secretMission;
 
             //Layer 5 - Wrath
-            Text wrathTitle = getTextfromGameObject(getGameObjectChild(wrathObject, "Text"));
+            Text wrathTitle = GetTextfromGameObject(GetGameObjectChild(wrathObject, "Text"));
             wrathTitle.text = LanguageManager.CurrentLanguage.frontend.layer_wrath;
 
-            Text wrathFirstChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(wrathObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
-            wrathFirstChallenge.text = Act2Strings.getLevelChallenge("Level 5-1");
+            Text wrathFirstChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(wrathObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
+            wrathFirstChallenge.text = Act2Strings.GetLevelChallenge("Level 5-1");
 
-            Text wrathSecondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(wrathObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
-            wrathSecondChallenge.text = Act2Strings.getLevelChallenge("Level 5-2");
+            Text wrathSecondChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(wrathObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
+            wrathSecondChallenge.text = Act2Strings.GetLevelChallenge("Level 5-2");
 
-            Text wrathThirdChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(wrathObject, "1-3 Panel"), "Stats"), "Challenge"), "Panel (4)"), "Text"));
-            wrathThirdChallenge.text = Act2Strings.getLevelChallenge("Level 5-3");
+            Text wrathThirdChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(wrathObject, "1-3 Panel"), "Stats"), "Challenge"), "Panel (4)"), "Text"));
+            wrathThirdChallenge.text = Act2Strings.GetLevelChallenge("Level 5-3");
 
-            Text wrathFourthChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(wrathObject, "1-4 Panel"), "Stats"), "Challenge"), "Panel (6)"), "Text"));
-            wrathFourthChallenge.text = Act2Strings.getLevelChallenge("Level 5-4");
+            Text wrathFourthChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(wrathObject, "1-4 Panel"), "Stats"), "Challenge"), "Panel (6)"), "Text"));
+            wrathFourthChallenge.text = Act2Strings.GetLevelChallenge("Level 5-4");
 
-            Text wrathSecretMissionText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(wrathObject, "Secret Mission"), "Text"));
+            Text wrathSecretMissionText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(wrathObject, "Secret Mission"), "Text"));
             wrathSecretMissionText.text = LanguageManager.CurrentLanguage.frontend.chapter_secretMission;
 
             //Layer 6 - Heresy
-            Text heresyTitle = getTextfromGameObject(getGameObjectChild(heresyObject, "Text"));
+            Text heresyTitle = GetTextfromGameObject(GetGameObjectChild(heresyObject, "Text"));
             heresyTitle.text = LanguageManager.CurrentLanguage.frontend.layer_heresy;
 
-            Text heresyFirstChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(heresyObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
-            heresyFirstChallenge.text = Act2Strings.getLevelChallenge("Level 6-1");
+            Text heresyFirstChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(heresyObject, "1-1 Panel"), "Stats"), "Challenge"), "Panel"), "Text"));
+            heresyFirstChallenge.text = Act2Strings.GetLevelChallenge("Level 6-1");
 
-            Text heresySecondChallenge = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(heresyObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
-            heresySecondChallenge.text = Act2Strings.getLevelChallenge("Level 6-2");
+            Text heresySecondChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(heresyObject, "1-2 Panel"), "Stats"), "Challenge"), "Panel (2)"), "Text"));
+            heresySecondChallenge.text = Act2Strings.GetLevelChallenge("Level 6-2");
         }
 
-        public static void patchLevelSelectPrime(GameObject frontEnd)
+        private static void PatchLevelSelectPrime(GameObject frontEnd)
         {
-            GameObject primeObject = getGameObjectChild(getGameObjectChild(frontEnd, "Level Select (Prime)"), "Prime Sanctums");
-            Text primeTitle = getTextfromGameObject(getGameObjectChild(primeObject, "Text"));
+            GameObject primeObject = GetGameObjectChild(GetGameObjectChild(frontEnd, "Level Select (Prime)"), "Prime Sanctums");
+            Text primeTitle = GetTextfromGameObject(GetGameObjectChild(primeObject, "Text"));
             primeTitle.text = LanguageManager.CurrentLanguage.frontend.layer_prime;
         }
 
 
-        public static void patchLoadingWindow(GameObject frontEnd)
+        private static void PatchLoadingWindow(GameObject frontEnd)
         {
-            GameObject loadingObject = getGameObjectChild(getGameObjectChild(frontEnd, "LoadingScreen"),"Text");
-            Text loadingText = getTextfromGameObject(loadingObject);
+            GameObject loadingObject = GetGameObjectChild(GetGameObjectChild(frontEnd, "LoadingScreen"),"Text");
+            Text loadingText = GetTextfromGameObject(loadingObject);
             loadingText.text = LanguageManager.CurrentLanguage.misc.loading;
         }
 
         public static void Patch(GameObject frontEnd)
         {
-            patchMainMenu(frontEnd);
-            patchDifficultyMenu(frontEnd);
-            patchDifficultyDescriptors(frontEnd);
+            PatchMainMenu(frontEnd);
+            PatchDifficultyMenu(frontEnd);
+            PatchDifficultyDescriptors(frontEnd);
 
-            patchChapterSelect(frontEnd);
-            patchLevelSelectPrelude(frontEnd);
-            patchLevelSelectAct1(frontEnd);
-            patchLevelSelectAct2(frontEnd);
-            patchLevelSelectPrime(frontEnd);
-            patchLoadingWindow(frontEnd);
+            PatchChapterSelect(frontEnd);
+            PatchLevelSelectPrelude(frontEnd);
+            PatchLevelSelectAct1(frontEnd);
+            PatchLevelSelectAct2(frontEnd);
+            PatchLevelSelectPrime(frontEnd);
+            PatchLoadingWindow(frontEnd);
         }
 
     }

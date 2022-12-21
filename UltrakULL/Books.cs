@@ -1,20 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UltrakULL;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine.Events;
+﻿using UnityEngine.SceneManagement;
 using UltrakULL.json;
 
 namespace UltrakULL
 {
     public static class Books
     {
-        public static string getBookText()
+        public static string GetBookText()
         {
             string currentLevel = SceneManager.GetActiveScene().name;
 
@@ -26,7 +17,6 @@ namespace UltrakULL
                         + LanguageManager.CurrentLanguage.books.books_limboFourth3 + "\n\n"
                         + LanguageManager.CurrentLanguage.books.books_limboFourth4 + "</i>\n\n"
                         + "<b>" + LanguageManager.CurrentLanguage.books.books_limboFourth5 + "</b>";
-
                     }
                 case "Level 2-2":
                     {
@@ -65,10 +55,8 @@ namespace UltrakULL
                             + LanguageManager.CurrentLanguage.books.books_wrathSecond8 + "\n\n"
                             + "<b>" + LanguageManager.CurrentLanguage.books.books_wrathSecond9 + "</b>";
                     }
-
                 default: { return "Unknown book"; }
             }
         }
-
     }
 }

@@ -7,7 +7,7 @@ namespace UltrakULL.Harmony_Patches
     //@Override
     //Overrides the SetInfo method from the FinalRank class. This is needed to swap text in the extra into box on the results screen.
     [HarmonyPatch(typeof(FinalRank), "SetInfo")]
-    public static class Localize_FinalRankInfo
+    public static class LocalizeFinalRankInfo
     {
         [HarmonyPrefix]
         public static bool SetInfo_MyPatch(int restarts, bool damage, bool majorUsed, bool cheatsUsed, FinalRank __instance, bool ___noRestarts, bool ___majorAssists, bool ___noDamage)

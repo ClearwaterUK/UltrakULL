@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
 using UltrakULL.json;
@@ -11,7 +7,7 @@ namespace UltrakULL
 {
     public static class StyleBonusStrings
     {
-        public static string getBonusColor(string inputBonus)
+        private static string GetBonusColor(string inputBonus)
         {
             if (inputBonus.Contains("blue")) { return "<color=blue>"; }
             if (inputBonus.Contains("green")) { return "<color=green>"; }
@@ -24,11 +20,8 @@ namespace UltrakULL
             return ("");
         }
 
-        public static string getStyleBonusDictionary(string inputBonus)
+        public static string GetStyleBonusDictionary(string inputBonus)
         {
-
-            string regexinput = Regex.Replace(inputBonus, @"<[^>]*>", "");
-            
             switch(inputBonus)
             {
                 case "ultrakill.airslam": { return "<color=cyan>" + LanguageManager.CurrentLanguage.style.style_airslam + "</color>"; }
@@ -80,9 +73,8 @@ namespace UltrakULL
             }
         }
 
-        public static string getStyleBonus(bool isColor, string inputBonus)
+        private static string GetStyleBonus(bool isColor, string inputBonus)
         {
-
             string regexinput = Regex.Replace(inputBonus, @"<[^>]*>", "");
 
             //Try and keep this alphabetical as it gets bigger over time.
@@ -103,7 +95,7 @@ namespace UltrakULL
              }
         }
 
-        public static string getTranslatedRankString(string inputString)
+        public static string GetTranslatedRankString(string inputString)
         {
             switch (inputString)
             {
@@ -119,7 +111,7 @@ namespace UltrakULL
             }
         }
 
-        public static string getTranslatedStyleBonus(string inputBonus)
+        public static string GetTranslatedStyleBonus(string inputBonus)
         {
             //Bonus string is split up into 3 parts: the opening color tag if there is one, the bonus name, and the closing color tag if there is one.
 
@@ -127,11 +119,11 @@ namespace UltrakULL
             bool hasColorTag = (inputBonus.Contains("<color="));
             string openingColorTag;
             string closingColorTag = "</color>";
-            string styleBonus = getStyleBonus(hasColorTag, inputBonus);
+            string styleBonus = GetStyleBonus(hasColorTag, inputBonus);
 
             if (hasColorTag)
             {
-                openingColorTag = getBonusColor(inputBonus);
+                openingColorTag = GetBonusColor(inputBonus);
                 return (openingColorTag + styleBonus + closingColorTag);
             }
             else
@@ -141,7 +133,7 @@ namespace UltrakULL
             
         }
         
-        public static string getWeaponFreshness(StyleFreshnessState weaponState)
+        public static string GetWeaponFreshness(StyleFreshnessState weaponState)
         {
             switch(weaponState)
             {

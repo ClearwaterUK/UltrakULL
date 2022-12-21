@@ -1,24 +1,14 @@
-﻿
-using BepInEx;
-using HarmonyLib;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
-using UnityEngine.UI;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UltrakULL;
+
 using UltrakULL.json;
 
 namespace UltrakULL
 {
     public static class StringsParent
     {
-        private static BepInEx.Logging.ManualLogSource parentStringsLogger = BepInEx.Logging.Logger.CreateLogSource("ParentStrings");
 
-        public static string getMessage(string message, string message2, string input)
+        public static string GetMessage(string message, string message2, string input)
         {
             Debug.Log("Getting message...");
             Scene currentLevel = SceneManager.GetActiveScene();
@@ -27,22 +17,22 @@ namespace UltrakULL
             {
                 Debug.Log("Current scene: Tutorial");
                 TutorialStrings tutStrings = new TutorialStrings();
-                return tutStrings.getMessage(message, message2, input);
+                return TutorialStrings.GetMessage(message, message2, input);
             }
             else if (currentLevel.name.Contains("0-"))
             {
                 Debug.Log("Current scene: Prelude");
-                return PreludeStrings.getMessage(message, message2, input);
+                return PreludeStrings.GetMessage(message, message2, input);
             }
             else if (currentLevel.name.Contains("1-") || (currentLevel.name.Contains("2-") || (currentLevel.name.Contains("3-"))))
             {
                 Debug.Log("Current scene: Act 1");
-                return Act1Strings.getMessage(message, message2, input);
+                return Act1Strings.GetMessage(message, message2, input);
             }
             else if (currentLevel.name.Contains("4-") || (currentLevel.name.Contains("5-") || (currentLevel.name.Contains("6-"))))
             {
                 Debug.Log("Current scene: Act 2");
-                return Act2Strings.getMessage(message, message2, input);
+                return Act2Strings.GetMessage(message, message2, input);
             }
             else if (currentLevel.name.Contains("7-") || (currentLevel.name.Contains("8-") || (currentLevel.name.Contains("9-"))))
             {
@@ -55,7 +45,7 @@ namespace UltrakULL
             }
         }
 
-        public static string getReturningLevelName(string input)
+        public static string GetReturningLevelName(string input)
         {
             PreviousMissionSaver instance = MonoSingleton<PreviousMissionSaver>.Instance;
 
@@ -105,7 +95,7 @@ namespace UltrakULL
         }
 
         //Tips for each level
-        public static string getLevelTip()
+        public static string GetLevelTip()
         {
             string currentLevel = SceneManager.GetActiveScene().name;
 

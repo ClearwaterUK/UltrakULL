@@ -11,7 +11,7 @@ namespace UltrakULL.Harmony_Patches
     //@Override
     //Overrides the Toggle function from the CustomPatterns class for the toggle text.
     [HarmonyPatch(typeof(CustomPatterns), "Toggle")]
-    public static class Localize_CustomPatternToggle
+    public static class LocalizeCustomPatternToggle
     {
         [HarmonyPrefix]
         public static bool Toggle_MyPatch(CustomPatterns __instance, Text ___stateButtonText)
@@ -33,7 +33,7 @@ namespace UltrakULL.Harmony_Patches
             }
             catch (Exception e)
             {
-                handleError(e);
+                HandleError(e);
                 return true;
             }
         }

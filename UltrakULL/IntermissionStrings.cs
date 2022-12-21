@@ -1,15 +1,5 @@
-﻿using BepInEx;
-using HarmonyLib;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+﻿using UnityEngine.SceneManagement;
 using UltrakULL.json;
-
 
 namespace UltrakULL
 {
@@ -18,18 +8,18 @@ namespace UltrakULL
         //In the intermission, the ▼ symbol in strings is used to denote pauses.
         //The } symbol fades in the background panel used.
 
-        public string act1IntermissionFirst;
-        public string act1IntermissionSecond;
-        public string act1IntermissionThird;
+        private string act1IntermissionFirst;
+        private string act1IntermissionSecond;
+        private string act1IntermissionThird;
 
-        public string act2IntermissionFirst;
-        public string act2IntermissionSecond;
-        public string act2IntermissionThird;
-        public string act2IntermissionFourth;
-        public string act2IntermissionFifth;
-        public string act2IntermissionSixth;
+        private string act2IntermissionFirst;
+        private string act2IntermissionSecond;
+        private string act2IntermissionThird;
+        private string act2IntermissionFourth;
+        private string act2IntermissionFifth;
+        private string act2IntermissionSixth;
 
-        public string getIntermissionString(string inputString)
+        public string GetIntermissionString(string inputString)
         {
             string currentLevel = SceneManager.GetActiveScene().name;
 
@@ -37,7 +27,7 @@ namespace UltrakULL
             //file for organisation's sake, at least for the time being.
             if (currentLevel == "Level 2-S")
             {
-                return Act1VN.getNextString(inputString);
+                return Act1Vn.GetNextString(inputString);
             }
 
             //Act 1 intermission

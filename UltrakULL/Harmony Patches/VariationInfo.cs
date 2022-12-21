@@ -1,19 +1,19 @@
 ﻿using HarmonyLib;
-using System;
-using UltrakULL.json;
 using UnityEngine.UI;
+
+using UltrakULL.json;
+
 
 namespace UltrakULL.Harmony_Patches
 {
     //@Override
     //Overrides the UpdateMoney method from the VariationInfo class. This is needed to patch the "ALREADY OWNED" string, and will save having to change every single seperate button containing this string in the shop.
     [HarmonyPatch(typeof(VariationInfo), "UpdateMoney")]
-    public static class Localize_VariationOwnership
+    public static class LocalizeVariationOwnership
     {
         [HarmonyPostfix]
         public static void UpdateMoney_Postfix(VariationInfo __instance, int ___money, bool ___alreadyOwned, Text ___buttonText)
         {
-
             if (!___alreadyOwned)
             {
                 if (__instance.cost < 0)

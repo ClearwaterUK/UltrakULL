@@ -1,20 +1,16 @@
 ﻿using HarmonyLib;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using static UltrakULL.CommonFunctions;
+
 using UltrakULL.json;
-using System.Linq;
+
 
 namespace UltrakULL.Harmony_Patches
 {
     //@Override
     //Overrides the *private* UpdateSlotState method from the SaveSlotMenu class. This is to allow save menu strings to be swapped out.
     [HarmonyPatch(typeof(SaveSlotMenu), "UpdateSlotState")]
-    public static class Localize_SaveSlots
+    public static class LocalizeSaveSlots
     {
         [HarmonyPostfix]
         public static void UpdateSlotState_Postfix(SlotRowPanel targetPanel, SaveSlotMenu.SlotData data)
@@ -36,7 +32,6 @@ namespace UltrakULL.Harmony_Patches
                 case "SLOT 3": { targetPanel.slotNumberLabel.text = LanguageManager.CurrentLanguage.options.controls_slot3; break; }
                 case "SLOT 4": { targetPanel.slotNumberLabel.text = LanguageManager.CurrentLanguage.options.controls_slot4; break; }
                 case "SLOT 5": { targetPanel.slotNumberLabel.text = LanguageManager.CurrentLanguage.options.controls_slot5; break; }
-                default: { break; }
             }
         }
 
@@ -60,20 +55,19 @@ namespace UltrakULL.Harmony_Patches
                 default: { highestDiff = "UNKNOWN DIFFICULTY"; break; }
             }
 
-            return LevelNames.getLevelName(highestLvlNumber) + " " + ((highestLvlNumber <= 0) ? string.Empty : ("(" + highestDiff + ")"));
+            return LevelNames.GetLevelName(highestLvlNumber) + " " + ((highestLvlNumber <= 0) ? string.Empty : ("(" + highestDiff + ")"));
         }
     }
 
     //@Override
     //Overrides the *private* ClearSlot method from the SaveSlotMenu class. This is to swap out the delete confirmation string.
     [HarmonyPatch(typeof(SaveSlotMenu), "ClearSlot")]
-    public static class Localize_SaveSlotDeleteConsent
+    public static class LocalizeSaveSlotDeleteConsent
     {
         [HarmonyPostfix]
         public static void ClearSlotPostfix_MyPatch(int slot, Text ___wipeConsentContent)
         {
             ___wipeConsentContent.text = string.Format(LanguageManager.CurrentLanguage.options.save_deleteWarning1 + " <color=red>" + LanguageManager.CurrentLanguage.options.save_deleteWarning2 + " {0}</color>?", slot + 1);
-            return;
         }
     }
 }

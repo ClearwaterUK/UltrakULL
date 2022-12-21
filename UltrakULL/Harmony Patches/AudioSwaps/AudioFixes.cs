@@ -1,13 +1,8 @@
-﻿using System;
-using HarmonyLib;
+﻿using HarmonyLib;
 using UltrakULL.audio;
-using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using static UltrakULL.CommonFunctions;
 
-
-namespace UltrakULL.Harmony_Patches
+namespace UltrakULL.Harmony_Patches.AudioSwaps
 {
     //Fix for audio being unswapped when respawning. Needs testing.
     [HarmonyPatch(typeof(NewMovement),"Respawn")]
@@ -16,7 +11,7 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void Respawn_SwapperFix()
         {
-            AudioSwapper.audioSwap(SceneManager.GetActiveScene().name);
+            AudioSwapper.AudioSwap(SceneManager.GetActiveScene().name);
         }
         
     }

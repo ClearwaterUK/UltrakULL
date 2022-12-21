@@ -2,14 +2,13 @@
 using System;
 using UnityEngine.SceneManagement;
 using UltrakULL.json;
-using UnityEngine;
 
 namespace UltrakULL.Harmony_Patches
 {
     //@Override
     //Overrides the SendActivity method from the DiscordController class to localize strings
     [HarmonyPatch(typeof(DiscordController), "SendActivity")]
-    public static class Patch_DiscordActivity
+    public static class PatchDiscordActivity
     {
         [HarmonyPrefix]
         public static bool SendActivity_MyPatch(DiscordController __instance, Discord.Activity ___cachedActivity, RankIcon[] ___rankIcons, Discord.ActivityManager ___activityManager)
@@ -74,11 +73,10 @@ namespace UltrakULL.Harmony_Patches
                 case "SSadistic": { ___cachedActivity.Assets.SmallText = LanguageManager.CurrentLanguage.style.style_ss; break; }
                 case "SSShitstorm": { ___cachedActivity.Assets.SmallText = LanguageManager.CurrentLanguage.style.style_sss; break; }
                 case "ULTRAKILL": { ___cachedActivity.Assets.SmallText = LanguageManager.CurrentLanguage.style.style_ultrakill; break; }
-                default: { break; }
             }
 
             //Assets.LargeText = Level name
-            ___cachedActivity.Assets.LargeText = LevelNames.getDiscordLevelName(SceneManager.GetActiveScene().name);
+            ___cachedActivity.Assets.LargeText = LevelNames.GetDiscordLevelName(SceneManager.GetActiveScene().name);
 
             //Shoot the data off to Discord RPC.
             ___activityManager.UpdateActivity(___cachedActivity, delegate (Discord.Result result)

@@ -2,20 +2,19 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-using UltrakULL.json;
 using UnityEngine.SceneManagement;
-
-using static UltrakULL.CommonFunctions;
-
 using System.IO;
+
+using UltrakULL.json;
+using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL.Harmony_Patches
 {
     [HarmonyPatch(typeof(OptionsMenuToManager), "Start")]
-    public static class Inject_LanguageButton
+    public static class InjectLanguageButton
     {
-        public static Text languageButtonText = null;
-        public static Text languageButtonTitleText = null;
+        public static Text languageButtonText;
+        public static Text languageButtonTitleText;
 
         public static bool Prefix(OptionsMenuToManager __instance)
         {
@@ -62,7 +61,7 @@ namespace UltrakULL.Harmony_Patches
 
             GameObject languageButtonPrefab = optionsParent.Find("Save Slots").Find("Grid").Find("Slot Row").gameObject;
 
-            foreach (string language in LanguageManager.AllLanguages.Keys)
+            foreach (string language in LanguageManager.allLanguages.Keys)
             {
                 GameObject languageButtonInstance = GameObject.Instantiate(languageButtonPrefab, contentParent);
                 languageButtonInstance.transform.localScale = new Vector3(0.2188482f, 1.123569f, 0.5088629f);
@@ -75,7 +74,7 @@ namespace UltrakULL.Harmony_Patches
                 slotTextTf.localScale = new Vector3(4.983107f, 0.970607f, 2.1431f);
                 slotTextTf.localPosition = new Vector3(0f, 0f, 0f);
                 Text slotText = slotTextTf.GetComponent<Text>();
-                slotText.text = LanguageManager.AllLanguages[language].metadata.langDisplayName;
+                slotText.text = LanguageManager.allLanguages[language].metadata.langDisplayName;
                 slotText.alignment = TextAnchor.MiddleCenter;
                 slotText.fontSize = 27;
 
@@ -130,7 +129,7 @@ namespace UltrakULL.Harmony_Patches
 
 
             RectTransform cRect = languagePage.transform.Find("Scroll Rect (1)").Find("Contents").GetComponent<RectTransform>();
-            cRect.sizeDelta = new Vector2(600f, LanguageManager.AllLanguages.Keys.Count * 100);
+            cRect.sizeDelta = new Vector2(600f, LanguageManager.allLanguages.Keys.Count * 100);
 
             optionsParent.Find("Gameplay").GetComponent<Button>().onClick.AddListener(delegate { languagePage.SetActive(false); });
             optionsParent.Find("Controls").GetComponent<Button>().onClick.AddListener(delegate { languagePage.SetActive(false); });
@@ -156,13 +155,12 @@ namespace UltrakULL.Harmony_Patches
             //Instantiate from the original subtitles panel, but the toggle will need to be swapped for a new one, otherwise it will also toggle subtitles.
             
             GameObject originalSlider = optionsParent.Find("Audio Options/Image/Subtitles Checkbox").gameObject;
-            Toggle originalToggle = getGameObjectChild(originalSlider,"Toggle").GetComponentInChildren<Toggle>();
-            
+
             GameObject dubSlider = GameObject.Instantiate(originalSlider, optionsParent.Find("Audio Options/Image"));
             dubSlider.GetComponent<RectTransform>().anchoredPosition = new Vector2(300f, -225f);
             dubSlider.name = "Dialogue Dub";
             
-            Toggle oldToggle = getGameObjectChild(dubSlider,"Toggle").GetComponentInChildren<Toggle>();
+            Toggle oldToggle = GetGameObjectChild(dubSlider,"Toggle").GetComponentInChildren<Toggle>();
             oldToggle.enabled = false;
             
             Toggle dubToggle = dubSlider.AddComponent<Toggle>();
@@ -170,7 +168,7 @@ namespace UltrakULL.Harmony_Patches
             dubToggle.transform.localPosition = oldToggle.transform.localPosition;
 
             dubToggle.isOn = Convert.ToBoolean(LanguageManager.configFile.Bind("General", "activeDubbing", "False").Value);
-            GameObject toggleCheckmark = getGameObjectChild(getGameObjectChild(dubSlider,"Toggle"),"Background");
+            GameObject toggleCheckmark = GetGameObjectChild(GetGameObjectChild(dubSlider,"Toggle"),"Background");
             
             if(dubToggle.isOn) { toggleCheckmark.SetActive(true); }
             else { toggleCheckmark.SetActive(false); }
@@ -184,16 +182,13 @@ namespace UltrakULL.Harmony_Patches
             
             try
             {
-                getTextfromGameObject(getGameObjectChild(dubSlider,"Text")).text = LanguageManager.CurrentLanguage.options.audio_dubbing;
+                GetTextfromGameObject(GetGameObjectChild(dubSlider,"Text")).text = LanguageManager.CurrentLanguage.options.audio_dubbing;
             }
             catch (Exception e)
             {
-                getTextfromGameObject(getGameObjectChild(dubSlider,"Text")).text = "DUBBED AUDIO";
+                GetTextfromGameObject(GetGameObjectChild(dubSlider,"Text")).text = "DUBBED AUDIO";
             }
-
-
-
-
+            
             return true;
         }
     }

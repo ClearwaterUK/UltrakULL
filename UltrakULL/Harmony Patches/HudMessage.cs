@@ -1,16 +1,15 @@
 ﻿using HarmonyLib;
-using UltrakULL.json;
 using UnityEngine;
-using static UltrakULL.CommonFunctions;
 using UnityEngine.UI;
-using System.Collections;
 using System;
+
+using UltrakULL.json;
 
 namespace UltrakULL.Harmony_Patches
 {
 
     [HarmonyPatch(typeof(HudMessage), "Update")]
-    public static class Update_Patch
+    public static class HudMessageUpdatePatch
     {
         [HarmonyPrefix]
         public static bool Update_MyPatch(HudMessage __instance, Image ___img, Text ___text)
@@ -24,14 +23,14 @@ namespace UltrakULL.Harmony_Patches
     }
 
     [HarmonyPatch(typeof(HudMessageReceiver),"SendHudMessage")]
-    public static class SendHudMessage_Patch
+    public static class SendHudMessagePatch
     {
         [HarmonyPrefix]
         public static bool SendHudMessage_Prefix(ref string newmessage, string newinput = "", string newmessage2 = "", int delay = 0, bool silent = false)
         {
             Console.WriteLine(newmessage);
 
-            newmessage = HUDMessages.getHUDToolTip(newmessage);
+            newmessage = HUDMessages.GetHUDToolTip(newmessage);
 
             return true;
         }
@@ -41,9 +40,8 @@ namespace UltrakULL.Harmony_Patches
     //@Override
     //Overrides the PlayMessage method from the HudMessage class. This is needed for swapping text in message boxes.
     [HarmonyPatch(typeof(HudMessage), "PlayMessage")]
-    public static class Localize_HudMessage
+    public static class LocalizeHudMessage
     {
-
         [HarmonyPostfix]
         public static void PlayMessage_MyPatch(HudMessage __instance, bool ___activated, HudMessageReceiver ___messageHud, Text ___text, Image ___img)
         {
@@ -55,7 +53,7 @@ namespace UltrakULL.Harmony_Patches
             ___text = ___messageHud.text;
             if (__instance.input == "")
             {
-                string newMessage = StringsParent.getMessage(__instance.message, __instance.message2, "");
+                string newMessage = StringsParent.GetMessage(__instance.message, __instance.message2, "");
                 ___text.text = newMessage;
             }
             else
@@ -83,7 +81,7 @@ namespace UltrakULL.Harmony_Patches
                 //Console.Write("Input message: " + __instance.message + controlButton + __instance.message2);
 
                 //Compare the start of the first message with the string table.
-                __instance.message = StringsParent.getMessage(__instance.message, __instance.message2, controlButton.ToString());
+                __instance.message = StringsParent.GetMessage(__instance.message, __instance.message2, controlButton);
 
                 ___text.text = __instance.message;
             }

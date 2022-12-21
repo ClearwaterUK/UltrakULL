@@ -11,23 +11,22 @@ namespace UltrakULL
     {
         public GameObject baseLevelObject;
 
-        public void patchOpeningCredits()
+        public void PatchOpeningCredits()
         {
-            GameObject level = getInactiveRootObject("Canvas");
+            GameObject level = GetInactiveRootObject("Canvas");
 
-            GameObject openingCredsParent = getGameObjectChild(level, "HurtScreen");
+            GameObject openingCredsParent = GetGameObjectChild(level, "HurtScreen");
 
-            Text openingCredsFirst = getTextfromGameObject(getGameObjectChild(getGameObjectChild(openingCredsParent, "Text 1 Sound"), "Text (1)"));
+            Text openingCredsFirst = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(openingCredsParent, "Text 1 Sound"), "Text (1)"));
             openingCredsFirst.text = LanguageManager.CurrentLanguage.prelude.prelude_first_openingCredits1;
 
-            Text openingCredsSecond = getTextfromGameObject(getGameObjectChild(getGameObjectChild(openingCredsParent, "Text 2 Sound"), "Text (2)"));
+            Text openingCredsSecond = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(openingCredsParent, "Text 2 Sound"), "Text (2)"));
             openingCredsSecond.text = LanguageManager.CurrentLanguage.prelude.prelude_first_openingCredits2;
         }
 
 
         public Prelude(ref GameObject level)
         {
-            BepInEx.Logging.ManualLogSource preludeLogger = BepInEx.Logging.Logger.CreateLogSource("PreludePatcher");
             this.baseLevelObject = level;
             string currentLevel = SceneManager.GetActiveScene().name;
 
@@ -36,7 +35,7 @@ namespace UltrakULL
                 Debug.Log("In 0-1");
                 try
                 {
-                    this.patchOpeningCredits();
+                    this.PatchOpeningCredits();
                 }
                 catch(Exception e)
                 {
@@ -46,10 +45,10 @@ namespace UltrakULL
             }
 
             Debug.Log("Patching results screen...");
-            string levelName = PreludeStrings.getLevelName();
-            string levelChallenge = PreludeStrings.getLevelChallenge(currentLevel);
+            string levelName = PreludeStrings.GetLevelName();
+            string levelChallenge = PreludeStrings.GetLevelChallenge(currentLevel);
 
-            patchResultsScreen(levelName,levelChallenge);
+            PatchResultsScreen(levelName,levelChallenge);
 
         }
     }

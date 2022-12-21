@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UltrakULL.json;
+﻿using UltrakULL.json;
 
 namespace UltrakULL
 {
     public static class EnemyBios
     {
-        public static string getName(string originalName)
+        public static string GetName(string originalName)
         {
             switch (originalName)
             {
@@ -69,7 +64,7 @@ namespace UltrakULL
             }
         }
 
-        public static string getDescription(string originalenemy)
+        public static string GetDescription(string originalenemy)
         { 
             switch(originalenemy)
             {
@@ -122,7 +117,6 @@ namespace UltrakULL
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_idol_2 + "\n\n" +
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_idol_3 + "\n\n" +
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_idol_4;
-
                     }
 
                 case "LEVIATHAN":
@@ -294,7 +288,7 @@ namespace UltrakULL
             }
         }
 
-        public static string getStrategy(string originalenemy)
+        public static string GetStrategy(string originalenemy)
         {
             switch (originalenemy)
             {
@@ -363,8 +357,7 @@ namespace UltrakULL
                           + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_corpseOfKingMinos_strategy2 + "\n\n"
                           + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_corpseOfKingMinos_strategy3;
                     }
-
-
+                
                 case "LEVIATHAN":
                     {
                         return

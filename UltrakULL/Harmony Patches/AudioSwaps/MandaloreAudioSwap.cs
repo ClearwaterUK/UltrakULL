@@ -4,7 +4,7 @@ using UltrakULL.audio;
 using UltrakULL.json;
 using UnityEngine;
 
-namespace UltrakULL.Harmony_Patches
+namespace UltrakULL.Harmony_Patches.AudioSwaps
 {
     [HarmonyPatch(typeof(Mandalore),"Start")]
     public static class MandaloreAudioSwap
@@ -29,13 +29,13 @@ namespace UltrakULL.Harmony_Patches
             //Attack 1 (Full auto)
             ref AudioClip mandaloreAttack1 = ref __instance.voiceFull;
             string mandaloreAttack1String = mandaloreFolder + "mandaloreAttack1.wav";
-            mandaloreAttack1 = AudioSwapper.swapClipWithFile(mandaloreAttack1, mandaloreAttack1String);
+            mandaloreAttack1 = AudioSwapper.SwapClipWithFile(mandaloreAttack1, mandaloreAttack1String);
             
             
              //Attack 2 (Fuller auto)
             ref AudioClip mandaloreAttack2 = ref __instance.voiceFuller;
             string mandaloreAttack2String = mandaloreFolder + "mandaloreAttack2.wav";
-            mandaloreAttack2 = AudioSwapper.swapClipWithFile(mandaloreAttack2, mandaloreAttack2String);
+            mandaloreAttack2 = AudioSwapper.SwapClipWithFile(mandaloreAttack2, mandaloreAttack2String);
             
             
             //Phase change 1 (speed increase)
@@ -45,8 +45,8 @@ namespace UltrakULL.Harmony_Patches
             string mandalorePhaseChange1MandaString = mandaloreFolder + "mandalorePhaseChange1Manda.wav";
             string mandalorePhaseChange1OwlString = mandaloreFolder + "mandalorePhaseChange1Owl.wav";
             
-            mandalorePhaseChange1Manda = AudioSwapper.swapClipWithFile(mandalorePhaseChange1Manda, mandalorePhaseChange1MandaString);
-            mandalorePhaseChange1Owl = AudioSwapper.swapClipWithFile(mandalorePhaseChange1Owl, mandalorePhaseChange1OwlString);
+            mandalorePhaseChange1Manda = AudioSwapper.SwapClipWithFile(mandalorePhaseChange1Manda, mandalorePhaseChange1MandaString);
+            mandalorePhaseChange1Owl = AudioSwapper.SwapClipWithFile(mandalorePhaseChange1Owl, mandalorePhaseChange1OwlString);
             
             
             //Phase change 2 (max speed)
@@ -56,8 +56,8 @@ namespace UltrakULL.Harmony_Patches
             string mandalorePhaseChange2MandaString = mandaloreFolder + "mandalorePhaseChange2Manda.wav";
             string mandalorePhaseChange2OwlString = mandaloreFolder + "mandalorePhaseChange2Owl.wav";
             
-            mandalorePhaseChange2Manda = AudioSwapper.swapClipWithFile(mandalorePhaseChange2Manda, mandalorePhaseChange2MandaString);
-            mandalorePhaseChange2Owl = AudioSwapper.swapClipWithFile(mandalorePhaseChange2Owl, mandalorePhaseChange2OwlString);
+            mandalorePhaseChange2Manda = AudioSwapper.SwapClipWithFile(mandalorePhaseChange2Manda, mandalorePhaseChange2MandaString);
+            mandalorePhaseChange2Owl = AudioSwapper.SwapClipWithFile(mandalorePhaseChange2Owl, mandalorePhaseChange2OwlString);
             
             //Phase change 3 (sanded)
             ref AudioClip mandalorePhaseChange3Manda = ref __instance.voices[0].finalPhase;
@@ -66,8 +66,8 @@ namespace UltrakULL.Harmony_Patches
             string mandalorePhaseChange3MandaString = mandaloreFolder + "mandalorePhaseChangeFinalManda.wav";
             string mandalorePhaseChange3OwlString = mandaloreFolder + "mandalorePhaseChangeFinalOwl.wav";
             
-            mandalorePhaseChange3Manda = AudioSwapper.swapClipWithFile(mandalorePhaseChange3Manda, mandalorePhaseChange3MandaString);
-            mandalorePhaseChange3Owl = AudioSwapper.swapClipWithFile(mandalorePhaseChange3Owl, mandalorePhaseChange3OwlString);
+            mandalorePhaseChange3Manda = AudioSwapper.SwapClipWithFile(mandalorePhaseChange3Manda, mandalorePhaseChange3MandaString);
+            mandalorePhaseChange3Owl = AudioSwapper.SwapClipWithFile(mandalorePhaseChange3Owl, mandalorePhaseChange3OwlString);
             
             //Defeated
             ref AudioClip mandaloreDefeatedManda = ref __instance.voices[0].death;
@@ -76,8 +76,8 @@ namespace UltrakULL.Harmony_Patches
             string mandaloreDefeatedMandaString = mandaloreFolder + "mandaloreDefeatedManda.wav";
             string mandaloreDefeatedOwlString = mandaloreFolder + "mandaloreDefeatedOwl.wav";
             
-            mandaloreDefeatedManda = AudioSwapper.swapClipWithFile(mandaloreDefeatedManda, mandaloreDefeatedMandaString);
-            mandaloreDefeatedOwl = AudioSwapper.swapClipWithFile(mandaloreDefeatedOwl, mandaloreDefeatedOwlString);
+            mandaloreDefeatedManda = AudioSwapper.SwapClipWithFile(mandaloreDefeatedManda, mandaloreDefeatedMandaString);
+            mandaloreDefeatedOwl = AudioSwapper.SwapClipWithFile(mandaloreDefeatedOwl, mandaloreDefeatedOwlString);
             
             //Respawn taunts
             ref AudioClip[] mandaloreTauntManda = ref __instance.voices[0].taunts;
@@ -87,8 +87,8 @@ namespace UltrakULL.Harmony_Patches
             {
                 string mandaloreTauntMandaString = mandaloreFolder + "mandaloreTaunt" + (x+1).ToString() + "Manda.wav";
                 string mandaloreTauntOwlString = mandaloreFolder + "mandaloreTaunt" + (x+1).ToString() + "Owl.wav";
-                mandaloreTauntManda[x] =  AudioSwapper.swapClipWithFile(mandaloreTauntManda[x], mandaloreTauntMandaString);
-                mandaloreTauntOwl[x] =  AudioSwapper.swapClipWithFile(mandaloreTauntOwl[x], mandaloreTauntOwlString);
+                mandaloreTauntManda[x] =  AudioSwapper.SwapClipWithFile(mandaloreTauntManda[x], mandaloreTauntMandaString);
+                mandaloreTauntOwl[x] =  AudioSwapper.SwapClipWithFile(mandaloreTauntOwl[x], mandaloreTauntOwlString);
             }
         }
     }

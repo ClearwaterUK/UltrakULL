@@ -1,20 +1,17 @@
-﻿using BepInEx;
-using HarmonyLib;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 using UltrakULL.json;
 
 namespace UltrakULL
 {
     public static class CommonFunctions
     {
-        public static ColorBlock UKButtonColors = new ColorBlock()
+        public static ColorBlock ukButtonColors = new ColorBlock()
         {
             normalColor = new Color(0, 0, 0, 0.512f),
             highlightedColor = new Color(1, 1, 1, 0.502f),
@@ -24,22 +21,20 @@ namespace UltrakULL
             colorMultiplier = 1f,
             fadeDuration = 0.1f
         };
-
-        public static IEnumerator waitforSeconds(float seconds)
+        
+        public static string previousHudMessage;
+        
+        public static IEnumerator WaitforSeconds(float seconds)
         {
             yield return new WaitForSeconds(seconds);
         }
 
-        public static BepInEx.Logging.ManualLogSource modLogger = BepInEx.Logging.Logger.CreateLogSource("modLogger");
-
-        public static string previousHudMessage;
-
-        public static void handleError(Exception e, string missingID = "")
-        {
-
+        public static void HandleError(Exception e, string missingID = "")
+        {  
+            //NEEDTO Actually fill this function
         }
 
-        public static GameObject getInactiveRootObject(string objectName)
+        public static GameObject GetInactiveRootObject(string objectName)
         {
             List<GameObject> rootList = new List<GameObject>();
             SceneManager.GetActiveScene().GetRootGameObjects(rootList);
@@ -53,18 +48,18 @@ namespace UltrakULL
             return null;
         }
 
-        public static void patchResultsScreen(string name, string challenge)
+        public static void PatchResultsScreen(string name, string challenge)
         {
             string levelName = name;
             string levelChallenge = challenge;
 
             GameObject coreGame = GameObject.Find("Player");
 
-            GameObject resultsPanel = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(coreGame, "Main Camera"), "HUD Camera"), "HUD"), "FinishCanvas"), "Panel"); // What happened here?
+            GameObject resultsPanel = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(coreGame, "Main Camera"), "HUD Camera"), "HUD"), "FinishCanvas"), "Panel"); // What happened here?
 
             //Level title
-            GameObject resultsTitle = getGameObjectChild(resultsPanel, "Title");
-            Text resultsTitleLevelName = getTextfromGameObject(getGameObjectChild(resultsTitle, "Text"));
+            GameObject resultsTitle = GetGameObjectChild(resultsPanel, "Title");
+            Text resultsTitleLevelName = GetTextfromGameObject(GetGameObjectChild(resultsTitle, "Text"));
             resultsTitleLevelName.text = levelName;
 
             //Disable the levelFinderComponent, so the level name doesn't get reverted when the results panel appears.
@@ -77,47 +72,47 @@ namespace UltrakULL
 
             //Time
             //For some bizzare reason, the timer is labelled as "ff". Hakita were you cutting corners? :D
-            GameObject timeTitle = getGameObjectChild(resultsPanel, "ff");
-            Text timeTitleText = getTextfromGameObject(getGameObjectChild(timeTitle, "Text"));
+            GameObject timeTitle = GetGameObjectChild(resultsPanel, "ff");
+            Text timeTitleText = GetTextfromGameObject(GetGameObjectChild(timeTitle, "Text"));
             timeTitleText.text = LanguageManager.CurrentLanguage.misc.stats_time;
 
             //Kills
-            GameObject killsTitle = getGameObjectChild(resultsPanel, "Kills - Info");
-            Text killsTitleText = getTextfromGameObject(getGameObjectChild(killsTitle, "Text"));
+            GameObject killsTitle = GetGameObjectChild(resultsPanel, "Kills - Info");
+            Text killsTitleText = GetTextfromGameObject(GetGameObjectChild(killsTitle, "Text"));
             killsTitleText.text = LanguageManager.CurrentLanguage.misc.stats_kills;
 
             //Style
-            GameObject styleTitle = getGameObjectChild(resultsPanel, "Style - Info");
-            Text styleTitleText = getTextfromGameObject(getGameObjectChild(styleTitle, "Text"));
+            GameObject styleTitle = GetGameObjectChild(resultsPanel, "Style - Info");
+            Text styleTitleText = GetTextfromGameObject(GetGameObjectChild(styleTitle, "Text"));
             styleTitleText.text = LanguageManager.CurrentLanguage.misc.stats_style;
 
             //Secrets
-            GameObject secretsTitle = getGameObjectChild(resultsPanel, "Secrets -  Title");
-            Text secretsTitleText = getTextfromGameObject(getGameObjectChild(secretsTitle, "Text"));
+            GameObject secretsTitle = GetGameObjectChild(resultsPanel, "Secrets -  Title");
+            Text secretsTitleText = GetTextfromGameObject(GetGameObjectChild(secretsTitle, "Text"));
             secretsTitleText.text = LanguageManager.CurrentLanguage.misc.stats_secrets;
 
             //Challenge title
-            GameObject challengeTitle = getGameObjectChild(resultsPanel, "Challenge - Title");
-            Text challengeTitleText = getTextfromGameObject(getGameObjectChild(challengeTitle, "Text"));
+            GameObject challengeTitle = GetGameObjectChild(resultsPanel, "Challenge - Title");
+            Text challengeTitleText = GetTextfromGameObject(GetGameObjectChild(challengeTitle, "Text"));
             challengeTitleText.text = LanguageManager.CurrentLanguage.misc.stats_challenge;
 
             //Challenge description
-            GameObject challengeDescription = getGameObjectChild(resultsPanel, "Challenge");
-            Text challengeDescriptionText = getTextfromGameObject(getGameObjectChild(challengeDescription, "Text"));
+            GameObject challengeDescription = GetGameObjectChild(resultsPanel, "Challenge");
+            Text challengeDescriptionText = GetTextfromGameObject(GetGameObjectChild(challengeDescription, "Text"));
             challengeDescriptionText.text = levelChallenge;
 
             //Total points
-            Text totalPointsText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(resultsPanel, "Total Points"),"Text (1)"));
+            Text totalPointsText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(resultsPanel, "Total Points"),"Text (1)"));
             totalPointsText.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_total + ":";
         }
 
 
-        public static GameObject getGameObjectChild(GameObject parentObject, string childToFind) // Why does this exist if we're just doing a single function call? 
+        public static GameObject GetGameObjectChild(GameObject parentObject, string childToFind) // Why does this exist if we're just doing a single function call? 
         {
             GameObject childToReturn = parentObject.transform.Find(childToFind).gameObject;
             return childToReturn;
         }
-        public static Text getTextfromGameObject(GameObject objectToUse)
+        public static Text GetTextfromGameObject(GameObject objectToUse)
         {
             return objectToUse.GetComponent<Text>();
         }

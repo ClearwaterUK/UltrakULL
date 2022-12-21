@@ -1,10 +1,4 @@
-﻿using BepInEx;
-using HarmonyLib;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,13 +9,12 @@ namespace UltrakULL
 {
     class SecretLevels
     {
-        string currentLevel;
+        private string currentLevel;
 
-        public void patchTestament(ref GameObject testamentRoom)
+        private void PatchTestament(ref GameObject testamentRoom)
         {
             Text testamentPanelText = null;
             Text testamentPanelTitle = null;
-
 
             //0-S
             if (SceneManager.GetActiveScene().name == "Level 0-S")
@@ -29,9 +22,9 @@ namespace UltrakULL
                 GameObject finalRoom = GameObject.Find("FinalRoom 2");
                 
                 
-                testamentPanelTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(finalRoom, "Room"),"Testament Shop"), "Canvas"),"Border"),"TipBox"),"Panel"),"Title"));
+                testamentPanelTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "Room"),"Testament Shop"), "Canvas"),"Border"),"TipBox"),"Panel"),"Title"));
                 
-                testamentPanelText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(finalRoom, "Room"),"Testament Shop"), "Canvas"),"Border"),"TipBox"),"Panel"),"Text"));
+                testamentPanelText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "Room"),"Testament Shop"), "Canvas"),"Border"),"TipBox"),"Panel"),"Text"));
 
                 testamentPanelTitle.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_prelude_testamentTitle;
             }
@@ -41,9 +34,9 @@ namespace UltrakULL
                 GameObject finalRoom = GameObject.Find("5 - Finale");
                 
                 
-                testamentPanelTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(finalRoom, "FinalRoom 2 (1)"),"Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"), "Panel"), "Title"));
+                testamentPanelTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "FinalRoom 2 (1)"),"Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"), "Panel"), "Title"));
                 
-                testamentPanelText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(finalRoom, "FinalRoom 2 (1)"),"Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"), "Panel"), "Text"));
+                testamentPanelText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "FinalRoom 2 (1)"),"Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"), "Panel"), "Text"));
 
                 testamentPanelTitle.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_first_testamentTitle;
                 
@@ -51,14 +44,12 @@ namespace UltrakULL
             //4-S
             else if (SceneManager.GetActiveScene().name == "Level 4-S")
             {
-                testamentPanelTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(testamentRoom, "4 Stuff"), "FinalRoom 2"), "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"),"Panel"),"Title"));
+                testamentPanelTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(testamentRoom, "4 Stuff"), "FinalRoom 2"), "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"),"Panel"),"Title"));
             
-                testamentPanelText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(testamentRoom, "4 Stuff"), "FinalRoom 2"), "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"),"Panel"),"Text"));
+                testamentPanelText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(testamentRoom, "4 Stuff"), "FinalRoom 2"), "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"),"Panel"),"Text"));
 
 
             }
-
-            
 
             switch (this.currentLevel)
                 {
@@ -82,8 +73,7 @@ namespace UltrakULL
                         testamentPanelTitle.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_first_testamentTitle;
                         break;
                     }
-
-
+                
                 case "Level 4-S":
                     {
                         testamentPanelText.text =
@@ -99,15 +89,10 @@ namespace UltrakULL
                             LanguageManager.CurrentLanguage.secretLevels.secretLevels_fourth_testament7;
                             
                         testamentPanelTitle.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_fourth_testamentTitle;
-
                         break;
-                        
-                        
                     }
-                default: { break; }
-            }
+                }
         }
-
         // SecretFirstRoom/Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text
         // Note - it uses a seperate panel that has the same name as the normal result panel.
         public SecretLevels(ref GameObject coreGame)
@@ -118,48 +103,39 @@ namespace UltrakULL
 
             switch (this.currentLevel)
             {
-                case "Level 0-S": {testamentRoom = GameObject.Find("FinalRoom 2"); patchTestament(ref testamentRoom); break; }
-                case "Level 1-S": {testamentRoom = GameObject.Find("5 - Finale"); patchTestament(ref testamentRoom); break; }
-                case "Level 2-S": {Act1VN.patchPrompts(ref coreGame); break; }
-                case "Level 4-S": {
-                        //I have absolutely no idea why I have to do it like this but I have to, for some reason the required GameObject can't be found by searching.
-                        //THIS HAPPENS BECAUSE THE GAMEOBJECT ISN'T ACTIVE ON SCENE LOAD AND GameObject.Find() CANNOT DETECT INACTIVE OBJECTS.
-                        testamentRoom = getInactiveRootObject("4 - Boulder Run");
-
-                        patchTestament(ref testamentRoom);
-                        break;
-                    }
-
-                default: { break; }
+                case "Level 0-S": {testamentRoom = GameObject.Find("FinalRoom 2"); PatchTestament(ref testamentRoom); break; }
+                case "Level 1-S": {testamentRoom = GameObject.Find("5 - Finale"); PatchTestament(ref testamentRoom); break; }
+                case "Level 2-S": {Act1Vn.PatchPrompts(ref coreGame); break; }
+                case "Level 4-S": {testamentRoom = GetInactiveRootObject("4 - Boulder Run");PatchTestament(ref testamentRoom); break; }
             }
-            GameObject secretLevelResults = getGameObjectChild(getGameObjectChild(getGameObjectChild(getGameObjectChild(GameObject.Find("Player"), "Main Camera"), "HUD Camera"), "HUD"), "FinishCanvas");
+            GameObject secretLevelResults = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Player"), "Main Camera"), "HUD Camera"), "HUD"), "FinishCanvas");
 
-            List<GameObject> FinishCanvasChildren = new List<GameObject>();
+            List<GameObject> finishCanvasChildren = new List<GameObject>();
             foreach (Transform child in secretLevelResults.transform)
             {
-                FinishCanvasChildren.Add(child.gameObject);
+                finishCanvasChildren.Add(child.gameObject);
             }
-            GameObject secretLevelResultsPanel = FinishCanvasChildren[1];
+            GameObject secretLevelResultsPanel = finishCanvasChildren[1];
 
-            Text secretLevelResultsName = getTextfromGameObject(getGameObjectChild(getGameObjectChild(secretLevelResultsPanel, "Title"), "Text"));
-            secretLevelResultsName.text = getSecretLevelName();
+            Text secretLevelResultsName = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(secretLevelResultsPanel, "Title"), "Text"));
+            secretLevelResultsName.text = GetSecretLevelName();
 
-            Text secretLevelResultsInfo = getTextfromGameObject(getGameObjectChild(getGameObjectChild(secretLevelResultsPanel, "Time - Info"), "Text"));
+            Text secretLevelResultsInfo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(secretLevelResultsPanel, "Time - Info"), "Text"));
             secretLevelResultsInfo.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_complete1;
 
-            Text secretLevelComplete = getTextfromGameObject(getGameObjectChild(getGameObjectChild(secretLevelResultsPanel, "Time - Rank"), "Text"));
+            Text secretLevelComplete = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(secretLevelResultsPanel, "Time - Rank"), "Text"));
             secretLevelComplete.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_complete2;
 
         }
 
-        public string getSecretLevelName()
+        public string GetSecretLevelName()
         {
             switch(this.currentLevel)
             {
                 case ("Level 0-S"): { return "0-S:" + LanguageManager.CurrentLanguage.levelNames.levelName_preludeSecret; }
                 case ("Level 1-S"): { return "1-S:" + LanguageManager.CurrentLanguage.levelNames.levelName_limboSecret; }
                 case ("Level 2-S"): { return "2-S:" + LanguageManager.CurrentLanguage.levelNames.levelName_lustSecret; }
-                case ("Level 4-S"): { return "4-S:" + LanguageManager.CurrentLanguage.levelNames.levelName_greedSecret; ; }
+                case ("Level 4-S"): { return "4-S:" + LanguageManager.CurrentLanguage.levelNames.levelName_greedSecret;}
                 default: { return "UNKNOWN"; }
             }
         }

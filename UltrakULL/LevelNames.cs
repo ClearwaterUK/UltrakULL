@@ -1,24 +1,11 @@
-﻿using BepInEx;
-using HarmonyLib;
-using System;
-using System.IO;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
-using UltrakULL;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine.Events;
-using UltrakULL.json;
+﻿using UltrakULL.json;
 
 namespace UltrakULL
 {
 	public static class LevelNames
 	{
 
-		public static string getDiscordLevelName(string missionName)
+		public static string GetDiscordLevelName(string missionName)
         {
 			if (missionName.Contains("Main Menu")) { return LanguageManager.CurrentLanguage.levelNames.levelName_mainMenu; }
 			if (missionName.Contains("Endless")) { return LanguageManager.CurrentLanguage.levelNames.levelName_cybergrind; }
@@ -69,10 +56,9 @@ namespace UltrakULL
 			return ("Unknown level - " + missionName);
         }
 
-        public static string getLevelName(int missionNum)
+        public static string GetLevelName(int missionNum)
         {
-			
-			if (MonoSingleton<MapLoader>.Instance && MonoSingleton<MapLoader>.Instance.isCustomLoaded)
+	        if (MonoSingleton<MapLoader>.Instance && MonoSingleton<MapLoader>.Instance.isCustomLoaded)
 			{
 				return MapInfoBase.InstanceAnyType.levelName;
 			}

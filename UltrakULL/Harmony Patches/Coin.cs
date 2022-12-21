@@ -7,7 +7,7 @@ namespace UltrakULL.Harmony_Patches
     //@Override
     //Overrides the RicoshotPointsCheck from the Coin class. Used for translating additional style strings that come from ricochets.
     [HarmonyPatch(typeof(Coin), "RicoshotPointsCheck")]
-    public static class Localize_TranslateStyleStrings
+    public static class LocalizeTranslateStyleStrings
     {
         [HarmonyPrefix]
         public static bool RicoshotPointsCheck_MyPatch(Coin __instance, GameObject ___altBeam, bool ___wasShotByEnemy, StyleHUD ___shud, EnemyIdentifier ___eid)

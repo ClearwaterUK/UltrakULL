@@ -1,13 +1,4 @@
-﻿using BepInEx;
-using HarmonyLib;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+﻿using UnityEngine.SceneManagement;
 using UltrakULL.json;
 
 namespace UltrakULL
@@ -18,7 +9,7 @@ namespace UltrakULL
         //private string p2SecretText;
         //private string p3SecretText;
 
-        public string getSecretText()
+        public string GetSecretText()
         {
             string currentLevel = SceneManager.GetActiveScene().name;
 
@@ -30,7 +21,7 @@ namespace UltrakULL
             }
         }
 
-        public string getLevelName()
+        public string GetLevelName()
         {
             string currentLevel = SceneManager.GetActiveScene().name;
 

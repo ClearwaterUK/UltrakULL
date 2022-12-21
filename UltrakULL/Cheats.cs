@@ -1,16 +1,6 @@
-﻿using BepInEx;
-using HarmonyLib;
-using System;
-using System.IO;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
-using UltrakULL;
+﻿using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.Events;
 using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
 
@@ -18,33 +8,31 @@ namespace UltrakULL
 {
     public static class Cheats
     {
-        public static void patchCheatConsentPanel(ref GameObject coreGame)
+        public static void PatchCheatConsentPanel(ref GameObject coreGame)
         {
 
-            GameObject canvas = getInactiveRootObject("Canvas");
+            GameObject canvas = GetInactiveRootObject("Canvas");
 
-            GameObject cheatsConsentObject = getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas, "Cheat Menu"), "Cheats Consent"), "Panel");
+            GameObject cheatsConsentObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas, "Cheat Menu"), "Cheats Consent"), "Panel");
 
-            GameObject cheatsConsentTextObject = getGameObjectChild(cheatsConsentObject, "Text");
+            GameObject cheatsConsentTextObject = GetGameObjectChild(cheatsConsentObject, "Text");
 
             //Consent window
-            Text cheatsConsentText = getTextfromGameObject(getGameObjectChild(cheatsConsentObject, "Text"));
+            Text cheatsConsentText = GetTextfromGameObject(GetGameObjectChild(cheatsConsentObject, "Text"));
             cheatsConsentText.text =
                 LanguageManager.CurrentLanguage.cheats.cheats_disclaimer1 + "\n\n"
                 + LanguageManager.CurrentLanguage.cheats.cheats_disclaimer2;
 
-
-
-            Text cheatsConsentYesText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cheatsConsentObject, "Yes"), "Text"));
+            Text cheatsConsentYesText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cheatsConsentObject, "Yes"), "Text"));
             cheatsConsentYesText.text = LanguageManager.CurrentLanguage.cheats.cheats_disclaimerYes;
             cheatsConsentYesText.fontSize = 22;
 
-            Text cheatsConsentNoText = getTextfromGameObject(getGameObjectChild(getGameObjectChild(cheatsConsentObject, "No"), "Text"));
+            Text cheatsConsentNoText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cheatsConsentObject, "No"), "Text"));
             cheatsConsentNoText.text = LanguageManager.CurrentLanguage.cheats.cheats_disclaimerNo;
 
-            GameObject cheatsPanelObject = getGameObjectChild(getGameObjectChild(canvas, "Cheat Menu"), "Cheats Manager");
+            GameObject cheatsPanelObject = GetGameObjectChild(GetGameObjectChild(canvas, "Cheat Menu"), "Cheats Manager");
 
-            Text cheatsPanelObjectTitle = getTextfromGameObject(getGameObjectChild(cheatsPanelObject, "Title"));
+            Text cheatsPanelObjectTitle = GetTextfromGameObject(GetGameObjectChild(cheatsPanelObject, "Title"));
             cheatsPanelObjectTitle.text = LanguageManager.CurrentLanguage.cheats.cheats_panelTitle;
 
             //Need to disable the TextOverride component.
@@ -53,20 +41,20 @@ namespace UltrakULL
             bhvr.enabled = false;
 
             //Cheat confirmation panel
-            GameObject cheatsEnabledConfirmationObject = CommonFunctions.getGameObjectChild(CommonFunctions.getGameObjectChild(CommonFunctions.getGameObjectChild(canvas, "Cheat Menu"), "Cheats Overlay"),"Cheats Enabled");
+            GameObject cheatsEnabledConfirmationObject = CommonFunctions.GetGameObjectChild(CommonFunctions.GetGameObjectChild(CommonFunctions.GetGameObjectChild(canvas, "Cheat Menu"), "Cheats Overlay"),"Cheats Enabled");
 
-            Text cheatsEnabledConfirmationTitleText = CommonFunctions.getTextfromGameObject(CommonFunctions.getGameObjectChild(cheatsEnabledConfirmationObject, "Title"));
+            Text cheatsEnabledConfirmationTitleText = CommonFunctions.GetTextfromGameObject(CommonFunctions.GetGameObjectChild(cheatsEnabledConfirmationObject, "Title"));
             cheatsEnabledConfirmationTitleText.text = LanguageManager.CurrentLanguage.cheats.cheats_cheatsEnabled;
 
             //Text cheatsEnabledConfirmationButtonsText = CommonFunctions.getTextfromGameObject(CommonFunctions.getGameObjectChild(cheatsEnabledConfirmationObject, "Details Tip"));
             //cheatsEnabledConfirmationButtonsText.text = "HOME ou ~";
             
             //Teleport menu title
-            Text cheatsTeleportMenuTitle = getTextfromGameObject(getGameObjectChild(getGameObjectChild(getGameObjectChild(canvas,"Cheat Menu"),"Cheats Teleport"),"Title"));
+            Text cheatsTeleportMenuTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas,"Cheat Menu"),"Cheats Teleport"),"Title"));
             cheatsTeleportMenuTitle.text = LanguageManager.CurrentLanguage.cheats.cheats_teleportMenu;
         }
 
-        public static string getCheatStatus(string cheatStatus)
+        public static string GetCheatStatus(string cheatStatus)
         {
             if(cheatStatus == null) { return null; }
             else
@@ -90,13 +78,13 @@ namespace UltrakULL
                 }
                 catch(Exception e)
                 {
-                    handleError(e, cheatStatus);
+                    HandleError(e, cheatStatus);
                     return ("");
                 }
             }
         }
 
-        public static string getCheatName(string cheatIdentifier)
+        public static string GetCheatName(string cheatIdentifier)
         {
             try
             {
@@ -128,14 +116,12 @@ namespace UltrakULL
                     case "ultrakill.sandbox.snapping": { return LanguageManager.CurrentLanguage.cheats.cheats_snapping; }
                     case "ultrakill.sandbox.physics": { return LanguageManager.CurrentLanguage.cheats.cheats_physics; }
                     case "ultrakill.sandbox.crash-mode": { return LanguageManager.CurrentLanguage.cheats.cheats_crashMode; }
-
                 }
-
                 return cheatIdentifier;
             }
             catch(Exception e)
             {
-                handleError(e,cheatIdentifier) ;
+                HandleError(e,cheatIdentifier) ;
                 return "";
             }
         }

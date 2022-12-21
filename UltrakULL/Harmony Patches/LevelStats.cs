@@ -1,13 +1,8 @@
 ﻿using HarmonyLib;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using static UltrakULL.CommonFunctions;
+
 using UltrakULL.json;
-using System.Linq;
 
 namespace UltrakULL.Harmony_Patches
 {
@@ -15,7 +10,7 @@ namespace UltrakULL.Harmony_Patches
     //@Override
     //Overrides the Start method from LevelStats class to localize level names
     [HarmonyPatch(typeof(LevelStats), "Start")]
-    public static class Localize_LevelStatNames
+    public static class LocalizeLevelStatNames
     {
         [HarmonyPostfix]
         public static void LevelStatsStart_Postfix(LevelStats __instance, StatsManager ___sman)
@@ -39,7 +34,7 @@ namespace UltrakULL.Harmony_Patches
                 StockMapInfo instance2 = StockMapInfo.Instance;
                 if (instance2 != null)
                 {
-                    __instance.levelName.text = LevelNames.getDiscordLevelName(SceneManager.GetActiveScene().name);
+                    __instance.levelName.text = LevelNames.GetDiscordLevelName(SceneManager.GetActiveScene().name);
                 }
             }
         }
@@ -48,7 +43,7 @@ namespace UltrakULL.Harmony_Patches
     //@Override
     //Overrides the CheckStats method from the LevelStats class to localize the stats screen
     [HarmonyPatch(typeof(LevelStats), "CheckStats")]
-    public static class Localize_StatsScreen
+    public static class LocalizeStatsScreen
     {
         [HarmonyPostfix]
         public static void CheckStats_Postfix(LevelStats __instance, StatsManager ___sman)

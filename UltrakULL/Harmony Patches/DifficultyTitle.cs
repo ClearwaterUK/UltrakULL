@@ -8,7 +8,7 @@ namespace UltrakULL.Harmony_Patches
     //@Override
     //Overrides Check from the vanilla game. Used for persistant difficulty strings across all scenes.
     [HarmonyPatch(typeof(DifficultyTitle), "Check")]
-    public static class Localize_GameprogressCheck
+    public static class LocalizeGameProgressCheck
     {
         [HarmonyPrefix]
         public static bool Check_MyPatch(DifficultyTitle __instance, Text ___txt)
@@ -76,6 +76,7 @@ namespace UltrakULL.Harmony_Patches
             }
             catch(Exception e)
             {
+                Console.WriteLine(e.ToString());
                 return true;
             }
         }

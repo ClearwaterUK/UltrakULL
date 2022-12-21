@@ -1,9 +1,4 @@
 ﻿using HarmonyLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UltrakULL.json;
 using UnityEngine.SceneManagement;
 
@@ -13,7 +8,7 @@ namespace UltrakULL.Harmony_Patches
     //@Override
     //Overrides the private CoinsToPoints function in the CrateCounter class
     [HarmonyPatch(typeof(CrateCounter), "CoinsToPoints")]
-    public static class Localize_CoinTranslation
+    public static class LocalizeCoinTranslation
     {
         [HarmonyPrefix]
         public static bool CoinsToPoints_MyPatch(CrateCounter __instance, int ___savedCoins)
