@@ -18,7 +18,7 @@ This mod's primary purpose is to bridge the gap for localization and translation
 - Change languages directly in-game without having to restart
 - Languages are consistently developed and updated for a faithful localization and translation of the original game text
 - Dubbing support allows for translated spoken dialogue
-- Fully supports right-to-left languages such as Arabic and Persian
+- Supports right-to-left languages such as Arabic and Persian
 
 
 # Download

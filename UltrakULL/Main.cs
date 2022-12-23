@@ -185,14 +185,14 @@ namespace UltrakULL
         }
 
         //Encapsulation function to patch the shop.
-        public void PatchShop(ref GameObject coreGame)
+        public void PatchShop(ref GameObject canvasObj)
         {
-            Shop.PatchShop(ref coreGame);
+            Shop.PatchShop(ref canvasObj);
         }
 
-        public void PatchLevelStats(ref GameObject coreGame)
+        public void PatchLevelStats(ref GameObject canvasObj)
         {
-            LevelStatWindow.PatchStats();
+            LevelStatWindow.PatchStats(ref canvasObj);
         }
 
         //Encapsulation function to patch all of the front end.

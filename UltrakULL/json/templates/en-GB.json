@@ -4,6 +4,7 @@
 		"langAuthor": "New Blood & Hakita",
 		"langVersion": "1.0.1",
         "langDisplayName": "English",
+        "langRTL": "false",
 
         "minimumModVersion": "1.1.0"
 	},

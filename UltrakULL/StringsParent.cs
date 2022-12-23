@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
 
 namespace UltrakULL
@@ -13,7 +14,8 @@ namespace UltrakULL
 
             if (currentLevel.name.Contains("Tutorial"))
             {
-                TutorialStrings tutStrings = new TutorialStrings();
+                GameObject canvasObj = GetInactiveRootObject("Canvas");
+                TutorialStrings tutStrings = new TutorialStrings(ref canvasObj);
                 return TutorialStrings.GetMessage(message, message2, input);
             }
             else if (currentLevel.name.Contains("0-"))
