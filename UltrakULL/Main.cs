@@ -478,14 +478,16 @@ namespace UltrakULL
                                     Logging.Message("Intermission");
                                     Intermission intermission = new Intermission(ref canvasObj);
                                 }
-                                //Bunch of things the mod should do *after* loading to avoid problems.
-                                PostInitPatches(canvasObj);
+
                             }
                             break;
                         }
                     }
                 }
+                //Bunch of things the mod should do *after* loading to avoid problems.
+                PostInitPatches(canvasObj);
             }
+
         }
 
         public void PostInitPatches(GameObject frontEnd)
