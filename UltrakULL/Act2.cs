@@ -10,11 +10,9 @@ namespace UltrakULL
 {
     public static class Act2
     {
-        public static void PatchAct2(ref GameObject level)
+        private static void PatchHellmap(ref GameObject canvasObj)
         {
-            GameObject canvas = GetInactiveRootObject("Canvas");
-
-            GameObject hellMapObject = GetGameObjectChild(canvas, "Hellmap");
+            GameObject hellMapObject = GetGameObjectChild(canvasObj, "Hellmap");
             Text hellmapGreed = GetTextfromGameObject(GetGameObjectChild(hellMapObject, "Text"));
             hellmapGreed.text = LanguageManager.CurrentLanguage.misc.hellmap_greed;
 
@@ -23,14 +21,17 @@ namespace UltrakULL
 
             Text hellmapHeresy = GetTextfromGameObject(GetGameObjectChild(hellMapObject, "Text (2)"));
             hellmapHeresy.text = LanguageManager.CurrentLanguage.misc.hellmap_heresy;
-            
+        }
+    
+        public static void PatchAct2(ref GameObject canvasObj)
+        {
             string currentLevel = SceneManager.GetActiveScene().name;
-
-            Debug.Log("Patching results screen...");
             string levelName = Act2Strings.GetLevelName();
             string levelChallenge = Act2Strings.GetLevelChallenge(currentLevel);
+            
             PatchResultsScreen(levelName, levelChallenge);
-            AudioSwapper.AudioSwap(SceneManager.GetActiveScene().name);
+            PatchHellmap(ref canvasObj);
+            AudioSwapper.AudioSwap(currentLevel);
         }
     }
 }

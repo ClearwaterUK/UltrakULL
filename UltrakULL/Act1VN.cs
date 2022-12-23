@@ -15,11 +15,10 @@ namespace UltrakULL
         //
         //Intro strings
 
-        public static void PatchPrompts(ref GameObject currentLevel)
+        public static void PatchPrompts(ref GameObject canvasObj)
         {
-            GameObject canvasObject = GetInactiveRootObject("Canvas");
-            
-            GameObject choicesBaseObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObject, "PowerUpVignette"),"Panel"),"Aspect Ratio Mask");
+
+            GameObject choicesBaseObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "PowerUpVignette"),"Panel"),"Aspect Ratio Mask");
 
             GameObject fallenChoices = GetGameObjectChild(choicesBaseObject, "Fallen");
 

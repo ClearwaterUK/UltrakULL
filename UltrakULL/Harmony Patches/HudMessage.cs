@@ -28,13 +28,9 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool SendHudMessage_Prefix(ref string newmessage, string newinput = "", string newmessage2 = "", int delay = 0, bool silent = false)
         {
-            Console.WriteLine(newmessage);
-
             newmessage = HUDMessages.GetHUDToolTip(newmessage);
-
             return true;
         }
-
     }
 
     //@Override
@@ -76,9 +72,7 @@ namespace UltrakULL.Harmony_Patches
                 {
                     controlButton = keyCode.ToString();
                 }
-
                 //Messages that get input.
-                //Console.Write("Input message: " + __instance.message + controlButton + __instance.message2);
 
                 //Compare the start of the first message with the string table.
                 __instance.message = StringsParent.GetMessage(__instance.message, __instance.message2, controlButton);
@@ -88,5 +82,4 @@ namespace UltrakULL.Harmony_Patches
             ___text.text = ___text.text.Replace('$', '\n');
         }
     }
-
 }

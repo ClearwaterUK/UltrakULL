@@ -58,7 +58,7 @@ namespace UltrakULL
                 return message;
             }
 
-            Console.WriteLine(message);
+            Logging.Warn("Couldn't find string for message: " + message);
             return ("Unimplemented HUD string, check the console");
         }
     }

@@ -9,7 +9,6 @@ using UltrakULL.audio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 namespace UltrakULL.json
 {
     public static class LanguageManager
@@ -35,7 +34,7 @@ namespace UltrakULL.json
                 CurrentLanguage = allLanguages[value];
                 if(CurrentLanguage.metadata.langRTL == "true")
                 {
-                    Console.WriteLine("Language is an RTL - applying fix!");
+                    Logging.Message("Language is set as RTL - applying fix!");
                     CurrentLanguage = ApplyRtl(CurrentLanguage);
                 }
             }
@@ -43,7 +42,6 @@ namespace UltrakULL.json
             {
                 jsonLogger.Log(BepInEx.Logging.LogLevel.Message, "No last language found, value was " + value);
             }
-            
         }
 
         public static void DumpLastLanguage()
@@ -78,14 +76,14 @@ namespace UltrakULL.json
             }
             catch (Exception e)
             {
-                Debug.Log("Failed to load language file " + pathName + ": " + e.Message);
+                Logging.Error("Failed to load language file " + pathName + ": " + e.Message);
                 return false;
             }
         }
 
         private static bool ValidateFile(JsonFormat language, string modVersion)
         {
-            Debug.Log("Opening file: " + language.metadata.langName + "...");
+            Logging.Message("Opening file: " + language.metadata.langName + "...");
             try
             {
                 //Following conditions to validate a file:
@@ -93,19 +91,19 @@ namespace UltrakULL.json
                 //Must have a metadata attribute and a body attribute
                 //Version logged in the JSON file must match or be newer than the current mod version
                 //Will need to implement further sanity checks.
-                Debug.Log("Checking version...");
+                Logging.Message("Checking version...");
 
                 if (!FileMatchesMinimumRequiredVersion(language.metadata.minimumModVersion, modVersion))
                 {
-                    Debug.Log(language.metadata.langName + " does not match the version required by the mod. Skipping.");
-                    Debug.Log("(If you wish to force load this file, you may do so via manually editing lastLang.cfg and setting the language to this filename. Expect in-game errors if you do this, you have been warned.)");
+                    Logging.Warn(language.metadata.langName + " does not match the version required by the mod. Please check for an update to this file.");
+                    Logging.Warn("You can still use this file, but expect errors and weirdness related to missing strings. Consider yourself warned.");
                     return false;
                 }
 
-                Debug.Log("Checking contents...");
+                Logging.Message("Checking contents...");
                 if (language.metadata != null && language.body != null)
                 {
-                    Debug.Log("File " + language.metadata.langName + " validated.");
+                    Logging.Message("File " + language.metadata.langName + " validated.");
                     return true;
                 }
                 else
@@ -115,9 +113,9 @@ namespace UltrakULL.json
             }
             catch (Exception e)
             {
-                Debug.Log("An error occured while validating. It's possible the language file is not correctly formatted in .json.\n"
+                Logging.Error("An error occured while validating. It's possible the language file is not correctly formatted in .json.\n"
                     + "Please use https://jsonlint.com/ to make sure your .json file is correctly formatted!");
-                Console.WriteLine(e.ToString());
+                Logging.Error(e.ToString());
                 return false;
             }
         }
@@ -126,7 +124,7 @@ namespace UltrakULL.json
         {
             if (requiredModVersion == "")
             {
-                Debug.Log("Language file has not defined the minimum mod version required!");
+                Logging.Error("Language file has not defined the minimum mod version required!");
                 return false;
             }
 
@@ -137,12 +135,12 @@ namespace UltrakULL.json
             //JSON version is greater or matches mod version
             if (jsonVersion == ultrakullVersion || isCompatible > 0)
             {
-                Debug.Log("Matches current mod version.");
                 return true;
             }
             //JSON version is lower than mod version
             else
             {
+                Logging.Warn("File does not current mod version.");
                 return false;
             }
         }
@@ -176,8 +174,7 @@ namespace UltrakULL.json
                 language.credits,
                 language.misc
             };
-
-    
+            
             foreach(object component in translationComponents)
             {
                 Type type = component.GetType();
@@ -198,7 +195,6 @@ namespace UltrakULL.json
                     }
                 }
             }
-            
             return language;
         }
 
@@ -206,17 +202,17 @@ namespace UltrakULL.json
         {
             if (CurrentLanguage != null && CurrentLanguage.metadata.langName == langName)
             {
-                jsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Tried to switch language to " + langName + " but it was already set as that!");
+                Logging.Warn("Tried to switch language to " + langName + " but it was already set as that!");
                 return;
             }
             if (allLanguages.ContainsKey(langName))
             {
                 CurrentLanguage = allLanguages[langName];
-                jsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Setting language to " + langName);
+                Logging.Message( "Setting language to " + langName);
                 
                 if(CurrentLanguage.metadata.langRTL == "true")
                 {
-                    Console.WriteLine("Language is an RTL - applying fix!");
+                    Logging.Message("Language is an RTL - applying fix!");
                     CurrentLanguage = ApplyRtl(CurrentLanguage);
                 }
                 
@@ -226,7 +222,7 @@ namespace UltrakULL.json
                     .langName + "\\";
             }
             else
-                jsonLogger.Log(BepInEx.Logging.LogLevel.Message, "No language found with name " + langName);
+                Logging.Warn("No language found with name " + langName);
         }
     }
 }

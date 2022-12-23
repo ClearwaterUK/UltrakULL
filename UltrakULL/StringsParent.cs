@@ -7,36 +7,29 @@ namespace UltrakULL
 {
     public static class StringsParent
     {
-
         public static string GetMessage(string message, string message2, string input)
         {
-            Debug.Log("Getting message...");
             Scene currentLevel = SceneManager.GetActiveScene();
 
             if (currentLevel.name.Contains("Tutorial"))
             {
-                Debug.Log("Current scene: Tutorial");
                 TutorialStrings tutStrings = new TutorialStrings();
                 return TutorialStrings.GetMessage(message, message2, input);
             }
             else if (currentLevel.name.Contains("0-"))
             {
-                Debug.Log("Current scene: Prelude");
                 return PreludeStrings.GetMessage(message, message2, input);
             }
             else if (currentLevel.name.Contains("1-") || (currentLevel.name.Contains("2-") || (currentLevel.name.Contains("3-"))))
             {
-                Debug.Log("Current scene: Act 1");
                 return Act1Strings.GetMessage(message, message2, input);
             }
             else if (currentLevel.name.Contains("4-") || (currentLevel.name.Contains("5-") || (currentLevel.name.Contains("6-"))))
             {
-                Debug.Log("Current scene: Act 2");
                 return Act2Strings.GetMessage(message, message2, input);
             }
             else if (currentLevel.name.Contains("7-") || (currentLevel.name.Contains("8-") || (currentLevel.name.Contains("9-"))))
             {
-                Debug.Log("Current scene: Act 3");
                 return "Unimplemented Act 3 function";
             }
             else

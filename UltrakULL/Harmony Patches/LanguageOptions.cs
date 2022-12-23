@@ -30,15 +30,13 @@ namespace UltrakULL.Harmony_Patches
                 ultrakullDiscordButton.GetComponentInChildren<WebButton>().url = "https://discord.gg/ZB7jk6Djv5";
             }
 
-
-            Console.WriteLine("Adding language option to options menu...");
+            Logging.Message("Adding language option to options menu...");
 
             Transform optionsParent = __instance.optionsMenu.transform;
             GameObject languageButton = GameObject.Instantiate(optionsParent.Find("Gameplay").gameObject, optionsParent);
             languageButton.name = "Language";
             languageButton.transform.localPosition += new Vector3(0f, 60f, 0f);
             languageButtonText = languageButton.transform.GetChild(0).gameObject.GetComponent<Text>();
-
 
             Button button = languageButton.GetComponent<Button>();
             GameObject pageToDisable = optionsParent.Find("Gameplay Options").gameObject;

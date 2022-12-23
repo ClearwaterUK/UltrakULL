@@ -208,9 +208,7 @@ namespace UltrakULL
 
             Text cgTerminalPatternsTitle = GetTextfromGameObject(GetGameObjectChild(cgTerminalPatterns, "Title"));
             cgTerminalPatternsTitle.text = "--" + LanguageManager.CurrentLanguage.cyberGrind.cybergrind_patternsTitle + "--";
-
-            //Note - Will need to patch Toggle() in CustomPatterns for the "enabled"/"disabled" button.
-
+            
             Text cgTerminalPatternsRefresh = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(cgTerminalPatterns, "CustomStuff"), "RefreshButton"),"Text"));
             cgTerminalPatternsRefresh.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_patternsRefresh;
             cgTerminalPatternsRefresh.fontSize = 14;
@@ -231,7 +229,7 @@ namespace UltrakULL
                 LanguageManager.CurrentLanguage.cyberGrind.cybergrind_wavesDescription2;
             cgTerminalWavesText.fontSize = 16;
         }
-        public static void PatchCg(ref GameObject level)
+        public static void PatchCg()
         {
             PatchWaveBoard();
             PatchResults();

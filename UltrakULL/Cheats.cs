@@ -8,12 +8,10 @@ namespace UltrakULL
 {
     public static class Cheats
     {
-        public static void PatchCheatConsentPanel(ref GameObject coreGame)
+        public static void PatchCheatConsentPanel(ref GameObject canvasObj)
         {
 
-            GameObject canvas = GetInactiveRootObject("Canvas");
-
-            GameObject cheatsConsentObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas, "Cheat Menu"), "Cheats Consent"), "Panel");
+            GameObject cheatsConsentObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "Cheat Menu"), "Cheats Consent"), "Panel");
 
             GameObject cheatsConsentTextObject = GetGameObjectChild(cheatsConsentObject, "Text");
 
@@ -30,7 +28,7 @@ namespace UltrakULL
             Text cheatsConsentNoText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cheatsConsentObject, "No"), "Text"));
             cheatsConsentNoText.text = LanguageManager.CurrentLanguage.cheats.cheats_disclaimerNo;
 
-            GameObject cheatsPanelObject = GetGameObjectChild(GetGameObjectChild(canvas, "Cheat Menu"), "Cheats Manager");
+            GameObject cheatsPanelObject = GetGameObjectChild(GetGameObjectChild(canvasObj, "Cheat Menu"), "Cheats Manager");
 
             Text cheatsPanelObjectTitle = GetTextfromGameObject(GetGameObjectChild(cheatsPanelObject, "Title"));
             cheatsPanelObjectTitle.text = LanguageManager.CurrentLanguage.cheats.cheats_panelTitle;
@@ -41,7 +39,7 @@ namespace UltrakULL
             bhvr.enabled = false;
 
             //Cheat confirmation panel
-            GameObject cheatsEnabledConfirmationObject = CommonFunctions.GetGameObjectChild(CommonFunctions.GetGameObjectChild(CommonFunctions.GetGameObjectChild(canvas, "Cheat Menu"), "Cheats Overlay"),"Cheats Enabled");
+            GameObject cheatsEnabledConfirmationObject = CommonFunctions.GetGameObjectChild(CommonFunctions.GetGameObjectChild(CommonFunctions.GetGameObjectChild(canvasObj, "Cheat Menu"), "Cheats Overlay"),"Cheats Enabled");
 
             Text cheatsEnabledConfirmationTitleText = CommonFunctions.GetTextfromGameObject(CommonFunctions.GetGameObjectChild(cheatsEnabledConfirmationObject, "Title"));
             cheatsEnabledConfirmationTitleText.text = LanguageManager.CurrentLanguage.cheats.cheats_cheatsEnabled;
@@ -50,7 +48,7 @@ namespace UltrakULL
             //cheatsEnabledConfirmationButtonsText.text = "HOME ou ~";
             
             //Teleport menu title
-            Text cheatsTeleportMenuTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas,"Cheat Menu"),"Cheats Teleport"),"Title"));
+            Text cheatsTeleportMenuTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj,"Cheat Menu"),"Cheats Teleport"),"Title"));
             cheatsTeleportMenuTitle.text = LanguageManager.CurrentLanguage.cheats.cheats_teleportMenu;
         }
 

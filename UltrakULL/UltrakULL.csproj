@@ -204,6 +204,7 @@
     <Compile Include="Harmony Patches\LanguageOptions.cs" />
     <Compile Include="json\UpdateInfo.cs" />
     <Compile Include="libs\ArabicSupportUnity\ArabicSupportUnity.cs" />
+    <Compile Include="Logging.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="HUDMessages.cs" />
     <Compile Include="Intermission.cs" />

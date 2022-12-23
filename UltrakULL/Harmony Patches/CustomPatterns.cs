@@ -18,7 +18,6 @@ namespace UltrakULL.Harmony_Patches
         {
             try
             {
-                Debug.Log("Toggling custom patterns");
                 bool customPatternMode = MonoSingleton<EndlessGrid>.Instance.customPatternMode;
                 MonoSingleton<EndlessGrid>.Instance.customPatternMode = !customPatternMode;
                 ___stateButtonText.text = (customPatternMode ? LanguageManager.CurrentLanguage.misc.state_deactivated : LanguageManager.CurrentLanguage.misc.state_activated);

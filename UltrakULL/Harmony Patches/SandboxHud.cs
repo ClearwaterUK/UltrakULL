@@ -14,9 +14,6 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void BuildSavesMenu_Postfix(ref SandboxHud __instance, ref SandboxSaveItem ___sandboxSaveTemplate)
         {
-            Console.WriteLine("BuildSavesMenu Postfix");
-
-            //This is ugly af but I can't do it the optimal way, so f it, let's try this
             GameObject canvas = GetInactiveRootObject("Canvas");
             
             GameObject dupeSaveList = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas,"Cheat Menu"),"Sandbox Saves"),"Scroll View"),"Viewport"),"Content");

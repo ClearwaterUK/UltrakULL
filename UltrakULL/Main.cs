@@ -8,19 +8,17 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using UltrakULL.json;
+using System.Linq;
 
 using static UltrakULL.CommonFunctions;
 using static UltrakULL.ModPatches;
-
- 
 using UMM;
-using System.Linq;
 
 /*
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater, additional code contributions by Temperz87, translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 21st December 2022
+ *	Last updated: 23rd December 2022
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
@@ -68,10 +66,12 @@ namespace UltrakULL
         private const string InternalVersion = "1.1.1";
         
         private static readonly HttpClient Client = new HttpClient();
+        
 
         public MainPatch()
         {
             instance = this;
+
         }
 
         public void OnApplicationQuit()
@@ -85,12 +85,11 @@ namespace UltrakULL
         }
 
         //Patches all text strings in the pause menu.
-        public void PatchPauseMenu(ref GameObject level)
+        public void PatchPauseMenu(ref GameObject canvasObj)
         {
             try
             {
-                GameObject pauseObject = GetInactiveRootObject("Canvas");
-                GameObject pauseMenu = GetGameObjectChild(pauseObject, "PauseMenu");
+                GameObject pauseMenu = GetGameObjectChild(canvasObj, "PauseMenu");
 
                 //Title
                 Text pauseText = GetTextfromGameObject(GetGameObjectChild(pauseMenu, "Text"));
@@ -117,7 +116,7 @@ namespace UltrakULL
                 quitText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_quit;
 
                 //Quit+Restart windows
-                GameObject pauseDialogs = GetGameObjectChild(pauseObject, "PauseMenuDialogs");
+                GameObject pauseDialogs = GetGameObjectChild(canvasObj, "PauseMenuDialogs");
 
                 //Quit
                 GameObject quitDialog = GetGameObjectChild(GetGameObjectChild(pauseDialogs, "Quit Confirm"), "Panel");
@@ -150,23 +149,21 @@ namespace UltrakULL
             }
             catch (Exception e)
             {
-                Debug.Log(e.ToString());
+                Logging.Error("Failed to patch pause menu.");
+                Logging.Error(e.ToString());
             }
         }
 
-        public void PatchCheats(ref GameObject coreGame)
+        public void PatchCheats(ref GameObject canvasObj)
         {
-            coreGame = GameObject.Find("Canvas");
-            Cheats.PatchCheatConsentPanel(ref coreGame);
+            Cheats.PatchCheatConsentPanel(ref canvasObj);
         }
 
-        public void PatchDeathScreen(ref GameObject coreGame)
+        public void PatchDeathScreen(ref GameObject canvasObj)
         {
-            coreGame = GetInactiveRootObject("Canvas");
-
             try
             {
-                GameObject deathScreen = GetGameObjectChild(GetGameObjectChild(coreGame, "BlackScreen"), "YouDiedText");
+                GameObject deathScreen = GetGameObjectChild(GetGameObjectChild(canvasObj, "BlackScreen"), "YouDiedText");
                 //Need to disable the TextOverride component.
                 Component[] test = deathScreen.GetComponents(typeof(Component));
                 Behaviour bhvr = (Behaviour)test[3];
@@ -177,8 +174,8 @@ namespace UltrakULL
             }
             catch (Exception e)
             {
-                Debug.Log("Failed to patch death screen");
-                Console.WriteLine(e.ToString());
+                Logging.Error("Failed to patch death screen");
+                Logging.Error(e.ToString());
             }
         }
 
@@ -205,15 +202,14 @@ namespace UltrakULL
             Options options = new Options(ref frontEnd);
         }
 
-        public void PatchMisc(ref GameObject coreGame)
+        public void PatchMisc(ref GameObject canvasObj)
         {
             GameObject player = GameObject.Find("Player");
             GameObject styleMeter = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(player, "Main Camera"), "HUD Camera"), "HUD"), "StyleCanvas"), "Panel (1)"), "Panel"), "Text (1)"), "Text");
             Text styleMeterMultiplierText = GetTextfromGameObject(styleMeter);
             styleMeterMultiplierText.text = LanguageManager.CurrentLanguage.style.stylemeter_multiplier;
-
-            GameObject canvas = GetInactiveRootObject("Canvas");
-            GameObject pressToSkip = GetGameObjectChild(canvas, "CutsceneSkipText");
+            
+            GameObject pressToSkip = GetGameObjectChild(canvasObj, "CutsceneSkipText");
 
             //Need to disable the TextOverride component.
             Component[] test = pressToSkip.GetComponents(typeof(Component));
@@ -224,8 +220,8 @@ namespace UltrakULL
             pressToSkipText.text = LanguageManager.CurrentLanguage.misc.pressToSkip;
 
             //Classic HUD
-            GameObject classicHudBW = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas, "Crosshair Filler"), "AltHud"), "Filler");
-            GameObject classicHudColor = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas, "Crosshair Filler"), "AltHud (2)"), "Filler");
+            GameObject classicHudBW = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "Crosshair Filler"), "AltHud"), "Filler");
+            GameObject classicHudColor = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "Crosshair Filler"), "AltHud (2)"), "Filler");
 
             Text classicHudBWHealth = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Health"), "Title"));
             Text classicHudBWHealthShow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Health"), "Title (1)"));
@@ -273,7 +269,7 @@ namespace UltrakULL
             classicHudColorRailcannonShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
 
             //Close prompt when reading book
-            TextBinds bookPanelBinds = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas, "ScanningStuff"), "ReadingScanned"), "Panel"), "Text (1)").GetComponent<TextBinds>();
+            TextBinds bookPanelBinds = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "ScanningStuff"), "ReadingScanned"), "Panel"), "Text (1)").GetComponent<TextBinds>();
             bookPanelBinds.text1 = LanguageManager.CurrentLanguage.books.books_pressToClose1 + " <color=orange>";
             bookPanelBinds.text2 = "</color> " + LanguageManager.CurrentLanguage.books.books_pressToClose2;
 
@@ -336,11 +332,12 @@ namespace UltrakULL
         {
             if (!this.ready || LanguageManager.CurrentLanguage == null)
             {
-                Debug.Log("Not ready for patching");
+                Logging.Error("UltrakULL has been deactivated to prevent crashing. Check the console for any errors!");
                 return;
             }
             else
             {
+                Logging.Message("Switching scenes...");
                 Scene currentLevel = SceneManager.GetActiveScene();
                 string levelName = currentLevel.name;
 
@@ -350,196 +347,145 @@ namespace UltrakULL
                     Harmony_Patches.InjectLanguageButton.languageButtonTitleText.text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
                 }
                 //Each scene (level) has an object called Canvas. Most game objects are there.
-                if (currentLevel.name == "Intro")
+                GameObject canvasObj = GetInactiveRootObject("Canvas");
+                if (!canvasObj)
                 {
-                    GameObject frontEnd = GetInactiveRootObject("Canvas");
-                    if (frontEnd != null)
-                    {
-                        Text loadingText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd, "LoadingScreen"), "Intro"), "Text"));
-                        loadingText.text = LanguageManager.CurrentLanguage.misc.loading;
-                    }
-                }
-                //Main menu hook
-                else if (currentLevel.name == "Main Menu")
-                {
-                    GameObject frontEnd = GetInactiveRootObject("Canvas");
-
-                    if (frontEnd == null)
-                    {
-                        Debug.Log("Failed to hook into main menu.");
-                    }
-                    else
-                    {
-                        PatchFrontEnd(frontEnd);
-
-                        if (ultrakullLogo != null)
-                            GameObject.Destroy(ultrakullLogo);
-                        ultrakullLogo = GameObject.Instantiate(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd, "Main Menu (1)"), "Title"), "Text"), frontEnd.transform);
-                        ultrakullLogo.transform.localPosition = new Vector3(1075, 210, 0);
-                        Text ultrakullLogoText = GetTextfromGameObject(ultrakullLogo);
-                        ultrakullLogoText.text = "ultrakULL loaded.\nVersion: " + InternalVersion + "\nCurrent locale: " + LanguageManager.CurrentLanguage.metadata.langName;
-                        ultrakullLogoText.alignment = TextAnchor.UpperLeft;
-                        ultrakullLogoText.fontSize = 16;
-                        
-                        //Get the font
-                        this.vcrFont = ultrakullLogoText.font;
-
-                        if(updateAvailable)
-                        {
-                            ultrakullLogoText.text += "\n<color=lime>UPDATE AVAILABLE!</color>";
-                            
-                            //Make an update button
-                            GameObject buttonBase= GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd,"Main Menu (1)"),"Panel"),"Youtube");
-                            
-                            GameObject ultrakullUpdateButton = GameObject.Instantiate(buttonBase,buttonBase.transform.parent);
-                            ultrakullUpdateButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(185, 0f);
-                            ultrakullUpdateButton.GetComponentInChildren<Image>().color = new Color(0,1,0,1);
-                            ultrakullUpdateButton.GetComponentInChildren<Text>().text = "VIEW UPDATE";
-                            ultrakullUpdateButton.GetComponentInChildren<WebButton>().url = "https://github.com/ClearwaterTM/UltrakULL/releases/latest";
-
-                        }
-                        if (!LanguageManager.FileMatchesMinimumRequiredVersion(LanguageManager.CurrentLanguage.metadata.minimumModVersion, InternalVersion))
-                        {
-                            ultrakullLogoText.text += "\n<color=orange>Outdated language\nloaded.\nCheck console and\nuse at your own risk!</color>";
-                        }
-                        else if (!(updateAvailable) && updateFailed)
-                        {
-                            ultrakullLogoText.text += "\n<color=red>Unable to check for updates. Check console for info.</color>";
-                        }
-
-                        this.addModCredits(frontEnd);
-                    }
-                }
-                else if (currentLevel.name.Contains("P-"))
-                {
-                    Console.WriteLine("Hooking into prime levels");
-                    //Prime sanctum level hook
-                    GameObject coreGame = GameObject.Find("Prime FirstRoom");
-                    if (coreGame == null)
-                    {
-                        Console.WriteLine("Failed to hook into Prime levels.");
-                    }
-                    else
-                    {
-                        try
-                        {
-                            PatchPauseMenu(ref coreGame);
-                            PatchCheats(ref coreGame);
-                            PatchDeathScreen(ref coreGame);
-                            PatchLevelStats(ref coreGame);
-                            PatchMisc(ref coreGame);
-                            PatchShop(ref coreGame);
-                        }
-                        catch (Exception e)
-                        {
-                            Console.WriteLine("Failed to patch in-game elements (prime).");
-                            Console.WriteLine(e.ToString());
-                        }
-                        Options options = new Options(ref coreGame);
-                        PrimeSanctum primeSanctumClass = new PrimeSanctum(ref coreGame);
-                    }
-                }
-                else if (currentLevel.name.Contains("-S"))
-                {
-                    //Potential problem here - we're hooking via Secret FirstRoom, but the words are swapped between secret levels...
-                    GameObject coreGame = GetInactiveRootObject("Canvas");
-                    if (coreGame == null)
-                    {
-                        Debug.Log("Failed to hook into secret level.");
-                    }
-                    else
-                    {
-                        PatchPauseMenu(ref coreGame);
-                        PatchCheats(ref coreGame);
-                        PatchLevelStats(ref coreGame);
-                        Options options = new Options(ref coreGame);
-                        SecretLevels secretLevels = new SecretLevels(ref coreGame);
-                    }
-                }
-                else if (currentLevel.name == "uk_construct")
-                //Sandbox hook
-                {
-                    GameObject coreGame = GetInactiveRootObject("Canvas");
-                    if (coreGame == null)
-                    {
-                        Debug.Log("Failed to hook into sandbox.");
-                    }
-                    else
-                    {
-                        PatchPauseMenu(ref coreGame);
-                        PatchCheats(ref coreGame);
-                        PatchShop(ref coreGame);
-                        PatchDeathScreen(ref coreGame);
-                        PatchMisc(ref coreGame);
-                        Options options = new Options(ref coreGame);
-                        Sandbox sandbox = new Sandbox();
-                    }
+                    Logging.Fatal("UNABLE TO FIND CANVAS IN CURRENT SCENE");
+                    return;
                 }
                 else
-                //General in-level hook
                 {
-                    GameObject coreGame = GameObject.Find("FirstRoom");
-                    if (coreGame == null)
+                    switch(levelName)
                     {
-                        Debug.Log("Failed to hook into in-game elements.");
-                    }
-                    else
-                    {
-                        try
+                        case "Intro":
                         {
-                            PatchPauseMenu(ref coreGame);
-                            PatchShop(ref coreGame);
-                            PatchCheats(ref coreGame);
-                            PatchDeathScreen(ref coreGame);
-                            PatchLevelStats(ref coreGame);
-                            PatchMisc(ref coreGame);
+                            Text loadingText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "LoadingScreen"), "Intro"), "Text"));
+                        
+                            //NEEDTO - teeny tiny issue with the initial loading text not being translated with UMM
+                            Logging.Warn(loadingText.text);
+                            loadingText.text = LanguageManager.CurrentLanguage.misc.loading;
+                            Logging.Warn(loadingText.text);
+                            break;
+                        }
+                        case "Main Menu":
+                        {
+                            PatchFrontEnd(canvasObj);
+                            
+                            //(Re)render the UltrakULL status on screen when a language has been (re)loaded.
+                            if (ultrakullLogo != null) {GameObject.Destroy(ultrakullLogo);}
+                            ultrakullLogo = GameObject.Instantiate(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "Main Menu (1)"), "Title"), "Text"), canvasObj.transform);
+                            ultrakullLogo.transform.localPosition = new Vector3(1075, 210, 0);
+                            Text ultrakullLogoText = GetTextfromGameObject(ultrakullLogo);
+                            ultrakullLogoText.text = "ultrakULL loaded.\nVersion: " + InternalVersion + "\nCurrent locale: " + LanguageManager.CurrentLanguage.metadata.langName;
+                            ultrakullLogoText.alignment = TextAnchor.UpperLeft;
+                            ultrakullLogoText.fontSize = 16;
+                            
+                            //Get the font so it can applied to any generated buttons
+                            this.vcrFont = ultrakullLogoText.font;
 
-                            Options options = new Options(ref coreGame);
-                        }
-                        catch (Exception e)
-                        {
-                            Debug.Log("Failed to patch in-game elements.");
-                            Console.WriteLine(e.ToString());
+                            //Add notif if there's a mod update available
+                            if(updateAvailable)
+                            {
+                                ultrakullLogoText.text += "\n<color=lime>UPDATE AVAILABLE!</color>";
+                                
+                                //Make an update button
+                                GameObject buttonBase= GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj,"Main Menu (1)"),"Panel"),"Youtube");
+                                
+                                GameObject ultrakullUpdateButton = GameObject.Instantiate(buttonBase,buttonBase.transform.parent);
+                                ultrakullUpdateButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(185, 0f);
+                                ultrakullUpdateButton.GetComponentInChildren<Image>().color = new Color(0,1,0,1);
+                                ultrakullUpdateButton.GetComponentInChildren<Text>().text = "VIEW UPDATE";
+                                ultrakullUpdateButton.GetComponentInChildren<WebButton>().url = "https://github.com/ClearwaterTM/UltrakULL/releases/latest";
+                            }
+                            //Warn of a language that doesn't match the mod version
+                            if (!LanguageManager.FileMatchesMinimumRequiredVersion(LanguageManager.CurrentLanguage.metadata.minimumModVersion, InternalVersion))
+                            {
+                                ultrakullLogoText.text += "\n<color=orange>Outdated language\nloaded.\nCheck console and\nuse at your own risk!</color>";
+                            }
+                            //Warn of a failed updated check
+                            else if (!(updateAvailable) && updateFailed)
+                            {
+                                ultrakullLogoText.text += "\n<color=red>Unable to check for updates. Check console for info.</color>";
+                            }
+
+                            this.addModCredits(canvasObj);
+                            break;
                         }
 
-                        //Tutorial
-                        if (levelName.Contains("Tutorial"))
+                        default:
                         {
-                            TutorialStrings tutorialPatchClass = new TutorialStrings();
-                        }
-
-                        //Prelude
-                        else if (levelName.Contains("0-"))
-                        {
-                            Prelude preludePatchClass = new Prelude(ref coreGame);
-                        }
-                        //Act 1
-                        else if (levelName.Contains("1-") || levelName.Contains("2-") || levelName.Contains("3-"))
-                        {
-                            Act1.PatchAct1(ref coreGame);
-                        }
-                        //Act 2
-                        else if (levelName.Contains("4-") || levelName.Contains("5-") || levelName.Contains("6-"))
-                        {
-                            Act2.PatchAct2(ref coreGame);
-                        }
-                        //Cyber Grind
-                        else if (SceneManager.GetActiveScene().name.Contains("Endless"))
-                        {
-                            CyberGrind.PatchCg(ref coreGame);
-                        }
-                        //End of act intermission
-                        else if (SceneManager.GetActiveScene().name.Contains("Intermission"))
-                        {
-                            Intermission intermission = new Intermission();
+                            Logging.Message("Regular scene");
+                            try
+                            {
+                                Logging.Message("Attempting to patch base elements");
+                                PatchPauseMenu(ref canvasObj);
+                                PatchCheats(ref canvasObj);
+                                PatchDeathScreen(ref canvasObj);
+                                PatchLevelStats(ref canvasObj);
+                                PatchMisc(ref canvasObj);
+                                PatchShop(ref canvasObj);
+                                Options options = new Options(ref canvasObj);
+                                Logging.Message("Base elements patched");
+                            }
+                            catch (Exception e)
+                            {
+                               Logging.Error("Something went wrong while patching base elements.");
+                               Logging.Error(e.ToString());
+                            }
+                            finally
+                            {
+                                if (levelName.Contains("Tutorial"))
+                                {
+                                    Logging.Message("Tutorial");
+                                }
+                                if(levelName.Contains("0-"))
+                                {
+                                    Logging.Message("Prelude");
+                                    Prelude preludePatchClass = new Prelude(ref canvasObj);
+                                }
+                                else if(levelName.Contains("1-") || levelName.Contains("2-") || levelName.Contains("3-"))
+                                {
+                                    Logging.Message("Act 1");
+                                    Act1.PatchAct1(ref canvasObj);
+                                }
+                                else if(levelName.Contains("4-") || levelName.Contains("5-") || levelName.Contains("6-"))
+                                {
+                                    Logging.Message("Act 2");
+                                    Act2.PatchAct2(ref canvasObj);
+                                }
+                                else if (levelName.Contains("P-"))
+                                {
+                                    Logging.Message("Prime");
+                                    PrimeSanctum primeSanctumClass = new PrimeSanctum(ref canvasObj);
+                                }
+                                else if (levelName.Contains("-S"))
+                                {
+                                    Logging.Message("Secret");
+                                    SecretLevels secretLevels = new SecretLevels(ref canvasObj);
+                                }
+                                else if (levelName == "uk_construct")
+                                {
+                                    Logging.Message("Sandbox");
+                                    Sandbox sandbox = new Sandbox(ref canvasObj);
+                                }
+                                else if (levelName == "Endless")
+                                {
+                                    Logging.Message("CyberGrind");
+                                    CyberGrind.PatchCg();
+                                }
+                                else if (levelName.Contains("Intermission"))
+                                {
+                                    Logging.Message("Intermission");
+                                    Intermission intermission = new Intermission(ref canvasObj);
+                                }
+                                //Bunch of things the mod should do *after* loading to avoid problems.
+                                PostInitPatches(canvasObj);
+                            }
+                            break;
                         }
                     }
                 }
             }
-
-            //Bunch of things the mod should do *after* loading to avoid problems.
-            PostInitPatches(GetInactiveRootObject("Canvas"));
-
         }
 
         public void PostInitPatches(GameObject frontEnd)
@@ -599,14 +545,14 @@ namespace UltrakULL
             }
 
             //Check for any other mods that are loaded that might cause conflicts. If so, apply cross-mod patches and changes.
-            Console.WriteLine("Scanning for mods...");
+            Logging.Info("Scanning for mods...");
 
             ModInformation[] loadedMods = UKAPI.AllLoadedModInfoClone.Values.ToArray();
             foreach (ModInformation mod in loadedMods)
             {
                 if (mod.modName.ToLower() == "ultrakilltweaker" || mod.modName == "ULTRAKILLtweaker") //Experimental to see if it helps with reports of it not working for some people
                 {
-                    Console.WriteLine("UltraTweaker detected, applying options patch");
+                    Logging.Info("UltraTweaker detected, applying options patch");
                     StartCoroutine(UltraTweakerPatch());
                 }
             }
@@ -614,67 +560,65 @@ namespace UltrakULL
         
         private async Task CheckForUpdates()
         {
+            string updateUrl = "https://api.github.com/repos/clearwatertm/ultrakull/releases/latest";
             Client.DefaultRequestHeaders.Accept.Add( new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
             Client.DefaultRequestHeaders.UserAgent.TryParseAdd("request");
             Client.Timeout = TimeSpan.FromSeconds(5);
-            string updateUrl = "https://api.github.com/repos/clearwatertm/ultrakull/releases/latest";
+            
             try
             {
                 string responseJsonRaw = await Client.GetStringAsync(updateUrl);
-                
                 UpdateInfo responseJson = JsonConvert.DeserializeObject<UpdateInfo>(responseJsonRaw);
-                Console.WriteLine("Latest version on GitHub: " + responseJson.tag_name.Substring(1));
-                Console.WriteLine("Current local version: " + InternalVersion);
+                
+                Logging.Message("Latest version on GitHub: " + responseJson.tag_name.Substring(1));
+                Logging.Message("Current local version: " + InternalVersion);
                 
                 Version onlineVersion = new Version(responseJson.tag_name.Substring(1));
                 Version localVersion = new Version(InternalVersion);
                 
                 switch(localVersion.CompareTo(onlineVersion))
                 {
-                    case -1: {Console.WriteLine("NEWER VERSION AVAILABLE ON GITHUB!");this.updateAvailable = true; break;}
-                    default: {Console.WriteLine("No newer version detected. Assuming current version is up to date."); this.updateAvailable = false;break;}
+                    case -1: { Logging.Message("NEWER VERSION AVAILABLE ON GITHUB!");this.updateAvailable = true; break;}
+                    default: { Logging.Message("No newer version detected. Assuming current version is up to date."); this.updateAvailable = false;break;}
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine("Unable to acquire version info from GitHub.");
-                Console.WriteLine(e.ToString()); 
+                Logging.Error("Unable to acquire version info from GitHub.");
+                Logging.Error(e.ToString()); 
                 updateAvailable = false;
                 updateFailed = true;
             }
-
-            
         }
 
         //Entry point for the mod.
         public void Awake()
         {
             Debug.unityLogger.filterLogType = LogType.Exception;
-            Debug.Log("UltrakULL LOADING...");
-            Debug.Log("Version: " + InternalVersion);
+
+            Logging.Warn("UltrakULL Loading... | Version v." + InternalVersion);
             try
             {
-                Debug.Log("--- Checking for updates ---");
+                Logging.Warn("--- Checking for updates ---");
                 #pragma warning disable 4014
                 CheckForUpdates();
             
-                Debug.Log("--- Initializing JSON parser ---");
+                Logging.Warn("--- Initializing JSON parser ---");
                 InitJsonParser();
-                Debug.Log("--- Patching vanilla game functions ---");
-                Debug.Log("Patching game functions...");
+                
+                Logging.Warn("--- Patching vanilla game functions ---");
                 Harmony harmony = new Harmony(InternalName);
                 harmony.PatchAll();
 
-                Debug.Log(" --- All done. Enjoy! ---");
-
+                Logging.Warn(" --- All done. Enjoy! ---");
                 SceneManager.sceneLoaded += onSceneLoaded;
-                
                 this.ready = true;
             }
             catch (Exception e)
             {
-                Debug.Log("An error occured while initialising.");
-                Console.WriteLine(e.ToString());
+                Logging.Fatal("An error occured while initialising!");
+                Logging.Fatal(e.ToString());
+                this.ready = false;
             }
         }
     }

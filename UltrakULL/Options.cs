@@ -743,7 +743,8 @@ namespace UltrakULL
                 }
                 catch(Exception e)
                 {
-                    Console.WriteLine(e.ToString());
+                    Logging.Error("Something went wrong while patching options.");
+                    Logging.Error(e.ToString());
                 }
 
             }

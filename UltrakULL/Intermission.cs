@@ -51,14 +51,12 @@ namespace UltrakULL
 
                 Text earlyAccessQuitToMenu = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(earlyAccessEnd, "Quit Mission"),"Text"));
                 earlyAccessQuitToMenu.text = LanguageManager.CurrentLanguage.intermission.act1_intermission_returnToMenu;
-
             }
         }
 
-        public Intermission()
+        public Intermission(ref GameObject canvasObj)
         {
-            GameObject level = GetInactiveRootObject("Canvas");
-            GameObject intermissionObject = GetGameObjectChild(GetGameObjectChild(level, "PowerUpVignette"), "Panel");
+            GameObject intermissionObject = GetGameObjectChild(GetGameObjectChild(canvasObj, "PowerUpVignette"), "Panel");
 
             switch (SceneManager.GetActiveScene().name)
             {

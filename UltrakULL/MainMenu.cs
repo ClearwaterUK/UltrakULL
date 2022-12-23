@@ -66,8 +66,8 @@ namespace UltrakULL
             }
             catch (Exception e)
             {
-                Debug.Log("An error occured while patching main menu. Check the console for details.");
-                Debug.Log(e.ToString());
+                Logging.Error("An error occured while patching main menu. Check the console for details.");
+                Logging.Error(e.ToString());
             }
         }
 
@@ -128,8 +128,8 @@ namespace UltrakULL
             }
             catch (Exception e)
             {
-                Debug.Log("Failed to patch difficulty menu.");
-                Debug.Log(e.ToString());
+                Logging.Error("Failed to patch difficulty menu.");
+                Logging.Error(e.ToString());
             }
         }
 
@@ -218,8 +218,8 @@ namespace UltrakULL
             }
             catch (Exception e)
             {
-                Debug.Log("Failed to patch difficulty text.");
-                Console.WriteLine(e.ToString());
+                Logging.Error("Failed to patch difficulty text.");
+                Logging.Error(e.ToString());
             }
 
         }

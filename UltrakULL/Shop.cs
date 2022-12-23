@@ -874,8 +874,6 @@ namespace UltrakULL
                 Text goldArmUnderConstruction = GetTextfromGameObject(GetGameObjectChild(goldArm, "Text (1)"));
                 goldArmUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
             }
-        
-            
 
         }
 

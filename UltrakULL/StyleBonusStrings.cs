@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 using UltrakULL.json;
 
@@ -91,24 +90,8 @@ namespace UltrakULL
                     case "ZAPPED": { return LanguageManager.CurrentLanguage.style.style_zapped; }
                     case "why are you even spawning enemies here": { return LanguageManager.CurrentLanguage.style.style_why; }
                     case "": { return ""; }
-                    default: { Console.WriteLine("Missing style translation: " + regexinput); return regexinput; }
+                    default: { Logging.Warn("Missing style translation: " + regexinput); return regexinput; }
              }
-        }
-
-        public static string GetTranslatedRankString(string inputString)
-        {
-            switch (inputString)
-            {
-                case "Destructive": { return LanguageManager.CurrentLanguage.style.style_d; }
-                case "Chaotic": { return LanguageManager.CurrentLanguage.style.style_c; }
-                case "Brutal": { return LanguageManager.CurrentLanguage.style.style_b; }
-                case "Anarchic": { return LanguageManager.CurrentLanguage.style.style_a; }
-                case "Supreme": { return LanguageManager.CurrentLanguage.style.style_s; }
-                case "SSadistic": { return LanguageManager.CurrentLanguage.style.style_ss; }
-                case "SSShitstorm": { return LanguageManager.CurrentLanguage.style.style_sss; }
-                case "ULTRAKILL": { return LanguageManager.CurrentLanguage.style.style_ultrakill; }
-                default: { return "Unknown"; }
-            }
         }
 
         public static string GetTranslatedStyleBonus(string inputBonus)
@@ -130,7 +113,6 @@ namespace UltrakULL
             {
                 return(styleBonus);
             }
-            
         }
         
         public static string GetWeaponFreshness(StyleFreshnessState weaponState)
@@ -141,7 +123,7 @@ namespace UltrakULL
                 case StyleFreshnessState.Used: { return LanguageManager.CurrentLanguage.style.style_weaponUsed + ": 1.00X"; }
                 case StyleFreshnessState.Stale: { return LanguageManager.CurrentLanguage.style.style_weaponStale + ": 0.50X"; }
                 case StyleFreshnessState.Dull: { return LanguageManager.CurrentLanguage.style.style_weaponDull + ": 0.00X"; }
-                default: { return "Unknown state"; }
+                default: { Logging.Warn("Missing weapon states detected"); return "Unknown state"; }
             }
         }
     }

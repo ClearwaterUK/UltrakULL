@@ -17,6 +17,7 @@ namespace UltrakULL.audio
         public static AudioClip SwapClipWithFile(AudioClip sourceClip, string audioFilePath)
         {
             string file = "file://" + audioFilePath;
+            Logging.Message("Swapping: " + file);
 
             UnityWebRequest fileRequest = UnityWebRequestMultimedia.GetAudioClip(file,AudioType.WAV);
             fileRequest.SendWebRequest();
@@ -24,17 +25,16 @@ namespace UltrakULL.audio
             {
                 while (!fileRequest.isDone) {}
  
-                if (fileRequest.isNetworkError || fileRequest.isHttpError) Debug.Log(fileRequest.error + "\n Expected path: " + audioFilePath);
+                if (fileRequest.isNetworkError || fileRequest.isHttpError) Logging.Warn(fileRequest.error + "\n Expected path: " + audioFilePath);
                 else
                 {
                     sourceClip = DownloadHandlerAudioClip.GetContent(fileRequest);
-                    //Console.WriteLine("Audio swap done");
                 }
             }
             catch (Exception err)
             {
-                Debug.Log("Failed to swap " + audioFilePath);
-                Debug.Log($"{err.Message}, {err.StackTrace}");
+                Logging.Warn("Failed to swap " + audioFilePath);
+                Logging.Warn($"{err.Message}, {err.StackTrace}");
             }
             return sourceClip;
         }

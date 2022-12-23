@@ -11,7 +11,6 @@ namespace UltrakULL
         private static string Level11(string message, string message2, string input)
         {
             string fullMessage = message + message2;
-            Debug.Log(fullMessage);
             if (fullMessage.Contains("ITEMS"))
             {
                 previousHudMessage = LanguageManager.CurrentLanguage.act1.act1_limboFirst_items1 + " '<color=orange>" + input + "'</color> " + LanguageManager.CurrentLanguage.act1.act1_limboFirst_items2;
@@ -30,7 +29,6 @@ namespace UltrakULL
         private static string Level12(string message, string message2)
         {
             string fullMessage = message + message2;
-            Debug.Log(fullMessage);
             if (fullMessage.Contains("BLUE"))
             {
                 return LanguageManager.CurrentLanguage.act1.act1_limboSecond_blueAttack;
@@ -41,7 +39,6 @@ namespace UltrakULL
         private static string Level13(string message, string message2)
         {
             string fullMessage = message + message2;
-            Debug.Log(fullMessage);
             if (fullMessage.Contains("SPLIT"))
             {
                 return LanguageManager.CurrentLanguage.act1.act1_limboThird_splitDoor1 + "\n" + LanguageManager.CurrentLanguage.act1.act1_limboThird_splitDoor2;
@@ -52,7 +49,6 @@ namespace UltrakULL
             private static string Level14(string message, string message2, string input)
             {
             string fullMessage = message + message2;
-            Debug.Log(fullMessage);
             if (fullMessage.Contains("PICK"))
             {
                 return LanguageManager.CurrentLanguage.act1.act1_limboFourth_book;

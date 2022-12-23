@@ -10,14 +10,11 @@ namespace UltrakULL
 {
     public static class Act1
     {
-        private static void PatchHellmap()
+        private static void PatchHellmap(ref GameObject canvasObj)
         {
-            Debug.Log("Patching Act 1 hellmap");
             try
             {
-                GameObject canvas = GetInactiveRootObject("Canvas");
-
-                GameObject hellMapObject = GetGameObjectChild(canvas, "Hellmap");
+                GameObject hellMapObject = GetGameObjectChild(canvasObj, "Hellmap");
 
                 Text hellmapLimbo = GetTextfromGameObject(GetGameObjectChild(hellMapObject, "Text"));
                 hellmapLimbo.text = LanguageManager.CurrentLanguage.misc.hellmap_limbo;
@@ -30,21 +27,20 @@ namespace UltrakULL
             }
             catch(Exception e)
             {
-                Debug.Log("Failed to patch Act 1 hellmap.");
-                Console.WriteLine(e.ToString());
+                Logging.Warn("Failed to patch Act 1 hellmap.");
+                Logging.Warn(e.ToString());
             }
         }
 
-        public static void PatchAct1(ref GameObject level) // I've never seen the level argument used, is this meant to do something?
+        public static void PatchAct1(ref GameObject canvasObj)
         {
             string currentLevel = SceneManager.GetActiveScene().name;
             string levelName = Act1Strings.GetLevelName();
             string levelChallenge = Act1Strings.GetLevelChallenge(currentLevel);
 
-            PatchHellmap();
+            PatchHellmap(ref canvasObj);
             PatchResultsScreen(levelName, levelChallenge);
             AudioSwapper.AudioSwap(SceneManager.GetActiveScene().name);
-
         }
     }
 }

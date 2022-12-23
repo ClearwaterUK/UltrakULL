@@ -11,7 +11,6 @@ namespace UltrakULL
         private static string Level1(string message, string message2, string input)
         {
             string fullMessage = message + message2;
-            Debug.Log(fullMessage);
 
             if (fullMessage.Contains("PIPE CLIP"))
             {
@@ -41,7 +40,6 @@ namespace UltrakULL
         private static string Level2(string message, string message2, string input)
         {
             string fullMessage = message + message2;
-            Debug.Log(fullMessage);
 
             if (fullMessage.Contains("POINTS"))
             {
@@ -62,7 +60,6 @@ namespace UltrakULL
         private static string Level3(string message, string message2, string input)
         {
             string fullMessage = message + message2;
-            Debug.Log(fullMessage);
 
             if (fullMessage.Contains("FIREPOWER"))
             {
@@ -98,7 +95,6 @@ namespace UltrakULL
         private static string LevelSecret(string message, string message2)
         {
             string fullMessage = message + message2;
-            Debug.Log(fullMessage);
 
             if (fullMessage.Contains("wicked"))
             {
@@ -111,7 +107,6 @@ namespace UltrakULL
         public static string GetMessage(string message, string message2, string input)
         {
             string currentLevel = SceneManager.GetActiveScene().name;
-
             switch (currentLevel)
             {
                 case "Level 0-1":
@@ -145,7 +140,6 @@ namespace UltrakULL
 
         public static string GetLevelChallenge(string currentLevel)
         {
-
             switch (currentLevel)
             {
                 case "Level 0-1": { return LanguageManager.CurrentLanguage.levelChallenges.challenges_preludeFirst; }

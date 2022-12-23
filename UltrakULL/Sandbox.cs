@@ -8,11 +8,9 @@ namespace UltrakULL
 {
     class Sandbox
     {
-        private void PatchSandboxDupeMenu()
+        private void PatchSandboxDupeMenu(ref GameObject canvasObj)
         {
-            GameObject canvas = GetInactiveRootObject("Canvas");
-
-            GameObject dupeMenu = GetGameObjectChild(GetGameObjectChild(canvas, "Cheat Menu"), "Sandbox Saves");
+            GameObject dupeMenu = GetGameObjectChild(GetGameObjectChild(canvasObj, "Cheat Menu"), "Sandbox Saves");
 
             Text dupeMenuTitle = GetTextfromGameObject(GetGameObjectChild(dupeMenu, "Title"));
             dupeMenuTitle.text = LanguageManager.CurrentLanguage.cheats.cheats_dupesTitle;
@@ -37,9 +35,9 @@ namespace UltrakULL
             todShopLoadingText.text = LanguageManager.CurrentLanguage.misc.loading;
         }
 
-        public Sandbox()
+        public Sandbox(ref GameObject canvasObj)
         {
-            PatchSandboxDupeMenu();
+            PatchSandboxDupeMenu(ref canvasObj);
             PatchMisc();
         }
 

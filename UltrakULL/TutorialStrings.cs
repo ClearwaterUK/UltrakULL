@@ -249,7 +249,8 @@ namespace UltrakULL
             }
             catch(Exception e)
             {
-                Console.WriteLine(e.ToString());
+                Logging.Error("Failed to patch tutorial panels");
+                Logging.Error(e.ToString());
             }
 
         }

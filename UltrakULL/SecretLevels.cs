@@ -95,9 +95,9 @@ namespace UltrakULL
         }
         // SecretFirstRoom/Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text
         // Note - it uses a seperate panel that has the same name as the normal result panel.
-        public SecretLevels(ref GameObject coreGame)
+        public SecretLevels(ref GameObject canvasObj)
         {
-            coreGame = GameObject.Find("Player");
+            GameObject player = GameObject.Find("Player");
             this.currentLevel = SceneManager.GetActiveScene().name;
             GameObject testamentRoom = null;
 
@@ -105,10 +105,10 @@ namespace UltrakULL
             {
                 case "Level 0-S": {testamentRoom = GameObject.Find("FinalRoom 2"); PatchTestament(ref testamentRoom); break; }
                 case "Level 1-S": {testamentRoom = GameObject.Find("5 - Finale"); PatchTestament(ref testamentRoom); break; }
-                case "Level 2-S": {Act1Vn.PatchPrompts(ref coreGame); break; }
+                case "Level 2-S": {Act1Vn.PatchPrompts(ref canvasObj); break; }
                 case "Level 4-S": {testamentRoom = GetInactiveRootObject("4 - Boulder Run");PatchTestament(ref testamentRoom); break; }
             }
-            GameObject secretLevelResults = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Player"), "Main Camera"), "HUD Camera"), "HUD"), "FinishCanvas");
+            GameObject secretLevelResults = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(player, "Main Camera"), "HUD Camera"), "HUD"), "FinishCanvas");
 
             List<GameObject> finishCanvasChildren = new List<GameObject>();
             foreach (Transform child in secretLevelResults.transform)

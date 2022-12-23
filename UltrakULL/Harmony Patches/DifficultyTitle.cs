@@ -76,7 +76,8 @@ namespace UltrakULL.Harmony_Patches
             }
             catch(Exception e)
             {
-                Console.WriteLine(e.ToString());
+                Logging.Error("Failed to get difficulty strings.");
+                Logging.Error(e.ToString());
                 return true;
             }
         }

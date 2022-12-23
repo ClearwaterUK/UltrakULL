@@ -16,8 +16,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             {
                 return;
             }
-            Console.WriteLine("MandaVoicePatch starting");
-        
+
             //Mandalore uses an array for MandaloreVoice.
             //voices[0] - Mandalore, voices[1] = Owl.
             

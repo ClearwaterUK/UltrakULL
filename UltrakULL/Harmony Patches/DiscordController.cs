@@ -36,7 +36,7 @@ namespace UltrakULL.Harmony_Patches
                 #pragma warning disable 0168
                 catch (Exception discordException)
                 {
-                    Console.WriteLine("Exception occured in SendActivity, should be harmless unless if the console gets spammed with this");
+                    Logging.Warn("Exception occured in SendActivity, should be harmless unless if the console gets spammed with this");
                 }
             }
             else
