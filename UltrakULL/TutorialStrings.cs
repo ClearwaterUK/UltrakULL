@@ -85,17 +85,16 @@ namespace UltrakULL
         // β - Recalibration yes (automatically shows keyboard or controller button depending on what the player is using)
         // δ - Recalibration no (automatically shows keyboard or controller button depending on what the player is using)
 
-        public void PatchCalibrationWindows()
+        public void PatchCalibrationWindows(ref GameObject canvasObj)
         {
             try
             {
-                GameObject canvas = GetInactiveRootObject("Canvas");
 
-                GameObject calibrationAudioWindow = GetGameObjectChild(GetGameObjectChild(canvas, "Intro"), "Audio Calibration");
+                GameObject calibrationAudioWindow = GetGameObjectChild(GetGameObjectChild(canvasObj, "Intro"), "Audio Calibration");
                 GameObject calibrationAudioWindowWarning = GetGameObjectChild(calibrationAudioWindow, "Warning");
-                GameObject calibrationVideoWindow = GetGameObjectChild(GetGameObjectChild(canvas, "Intro"), "Video Calibration");
-                GameObject calibrationMechanicsWindow = GetGameObjectChild(GetGameObjectChild(canvas, "Intro"), "Difficulty Select");
-                GameObject calibrationControllerWindow = GetGameObjectChild(GetGameObjectChild(canvas, "Intro"), "Auto-Aim Settings");
+                GameObject calibrationVideoWindow = GetGameObjectChild(GetGameObjectChild(canvasObj, "Intro"), "Video Calibration");
+                GameObject calibrationMechanicsWindow = GetGameObjectChild(GetGameObjectChild(canvasObj, "Intro"), "Difficulty Select");
+                GameObject calibrationControllerWindow = GetGameObjectChild(GetGameObjectChild(canvasObj, "Intro"), "Auto-Aim Settings");
 
                 //Audio
                 Text calibrationAudioTitle = GetTextfromGameObject(GetGameObjectChild(calibrationAudioWindow, "Text"));
@@ -252,10 +251,9 @@ namespace UltrakULL
                 Logging.Error("Failed to patch tutorial panels");
                 Logging.Error(e.ToString());
             }
-
         }
 
-        public TutorialStrings()
+        public TutorialStrings(ref GameObject canvasObj)
         {
             this.introFirstPage =
                 LanguageManager.CurrentLanguage.tutorial.tutorial_introStartup1 + "#" + LanguageManager.CurrentLanguage.tutorial.tutorial_introStartup2 + "½ \n\n"
@@ -287,8 +285,7 @@ namespace UltrakULL
             + "*" + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed2 + "_½½ \n"
             + "*" + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed3 + "_½½&";
 
-
-            PatchCalibrationWindows();
+            PatchCalibrationWindows(ref canvasObj);
 
         }
     }

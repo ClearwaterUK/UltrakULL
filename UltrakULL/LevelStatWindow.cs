@@ -9,11 +9,9 @@ namespace UltrakULL
 {
     public static class LevelStatWindow
     {
-        public static void PatchStats()
+        public static void PatchStats(ref GameObject canvasObj)
         {
-            GameObject canvas = GetInactiveRootObject("Canvas");
-
-            GameObject levelStatsWindow = GetGameObjectChild(GetGameObjectChild(canvas, "Level Stats Controller"), "Level Stats (1)");
+            GameObject levelStatsWindow = GetGameObjectChild(GetGameObjectChild(canvasObj, "Level Stats Controller"), "Level Stats (1)");
             
             //Secret levels will only have a timer, or something else.
             Text timeName = GetTextfromGameObject(GetGameObjectChild(levelStatsWindow, "Time Title"));
