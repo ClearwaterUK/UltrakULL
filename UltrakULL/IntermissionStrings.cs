@@ -77,6 +77,7 @@ namespace UltrakULL
 
             this.act1IntermissionSecond =
                 LanguageManager.CurrentLanguage.intermission.act1_intermission_second1 + " ▼\n\n"
+                + LanguageManager.CurrentLanguage.intermission.act1_intermission_second2 + " ▼\n\n"
                 + LanguageManager.CurrentLanguage.intermission.act1_intermission_second3 + " ▼\n\n"
                 + LanguageManager.CurrentLanguage.intermission.act1_intermission_second4 + " ▼" + LanguageManager.CurrentLanguage.intermission.act1_intermission_second5 + " ▼"
                 + LanguageManager.CurrentLanguage.intermission.act1_intermission_second6 + " ▼" + LanguageManager.CurrentLanguage.intermission.act1_intermission_second5 + " ▼"
