@@ -1,4 +1,6 @@
-﻿# Audio documentation
+# IMPORTANT: THIS DOCUMENTATION IS A WORK IN PROGRESS AND NOT FULLY COMPLETE. Contributions, feedback or suggestions are appreciated.
+ 
+ # Audio documentation
 
 This document serves to record and categorize technical information and data regarding audio files for spoken character dialogue.
 
