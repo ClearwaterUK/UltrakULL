@@ -884,12 +884,19 @@ namespace UltrakULL
             //Start by finding what level we're on and what shopObjects need patching.
             if (SceneManager.GetActiveScene().name == "uk_construct")
             {
+                
                 shopsToPatch.Add(GetGameObjectChild(GameObject.Find("Shop"),"Canvas"));
             }
             else if(SceneManager.GetActiveScene().name.Contains("P-"))
             {
                 shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Prime FirstRoom"),"Room"),"Shop"),"Canvas"));
             }
+            //Specific fix for 6-1
+            else if(SceneManager.GetActiveScene().name == "Level 6-1")
+            {
+                shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Interiors"),"FirstRoom"),"Room"),"Shop"),"Canvas"));
+            }
+            
             else
             {
                 shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("FirstRoom"), "Room"), "Shop"), "Canvas"));
