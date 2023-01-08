@@ -86,7 +86,7 @@ The installation section is divided into 3 parts:
 | French (Français)                        | Clearwater, ZedDev, Frizou, osokour                                                                     | Finished       | :heavy_check_mark: | French and Quebec variants available   |
 | German (Deutsch)                         | Distrilul, JESTERB0T, Liquid Lest, Psychologemelone44, Termi2, Fabidelune                               | Finished       | :heavy_check_mark: |                                        |
 | Russian (русский)                        | Nessie_A_WA97, D4N5T3P, Edith Bagel, lrddd, Brainy-Stormie, TwinT, towelie84, mctaylors, Solidus Cumcer | Finished       | :heavy_check_mark: |                                        |
-| Simplified Chinese (简体中文)            | Hydracerynitis, ciinore, duke325, ponyweeb, Skugra, GoGoblin                                             | Finished       | :heavy_check_mark:                |                                        |
+| Simplified Chinese (简体中文)            | Hydracerynitis, ciinore, duke325, ponyweeb, Skugra, GoGoblin                                            | Finished       | :heavy_check_mark: |                                        |
 | Spanish (Español)                        | LambCS, Philia, Lukah, Amarok_Lc, Radripizza, j(LRC), LEVIBOT                                           | Finished       | :heavy_check_mark: |                                        |
 | Turkish (Türkçe)                         | Legitname1337, Ömer Talha, RTE, Ray_, legio, Scape                                                      | Finished       | :heavy_check_mark: |                                        |
 |                                          |                                                                                                         |                |                    |                                        |
@@ -110,7 +110,6 @@ The installation section is divided into 3 parts:
 | Persian (Farsi)                          | Intruder                                                                                                | In development | :x:                |                                        |
 | Polish (Polski)                          | SmallSeaCat, Fikou, filizanka, Patryk, Spookz, owaloid                                                  | In development | :x:                |                                        |
 | Romanian (Românesc)                      | Vampuffin, Rokon                                                                                        | In development | :x:                |                                        |
-
 | Thai (ภาษาไทย)                           | Skugra, Winterman, SAPAIDER                                                                             | In development | :x:                |                                        |
 | Traditional Chinese(繁體中文)            | GuonuoTW(SmallNo), duke325                                                                              | In development | :x:                |                                        |
 | Ukrainian (Українська)                   | Rafunny, Blitzo, Keka, ArtSabs, ak11, the ukrainian war drone, CsyeCok The Soldier, twrp                | In development | :x:                |                                        |
