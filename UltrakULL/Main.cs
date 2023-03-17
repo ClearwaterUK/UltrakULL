@@ -43,7 +43,16 @@ using UMM;
  *  -- STUFF REPORTED BY ULL TEAM --
  * 
  *  -- FOR NEXT HOTFIX --
- * 
+ *
+ *
+ * P-2 UPDATE DAMAGE REPORT
+ *
+ * ALL MODS ARE BROKEN. WILL NEED TO WAIT FOR UMM FIXES.
+ * Credits shuffled to actual leveL. Current credits stuff on main menu will need to be moved to a new class.
+ * P-2 stuff, 5-S stuff.
+ * Rumble support and other new options.
+ * New sandbox settings.
+ * Green R.
  * 
  * */
 

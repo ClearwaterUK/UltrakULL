@@ -19,7 +19,7 @@ namespace UltrakULL.Harmony_Patches
             {
                 __instance.levelName.text = LanguageManager.CurrentLanguage.frontend.chapter_secretMission;
             }
-            if (MonoSingleton<MapLoader>.Instance && MonoSingleton<MapLoader>.Instance.isCustomLoaded)
+            if (SceneHelper.IsPlayingCustom)
             {
                 MapInfo instance = MapInfo.Instance;
                 __instance.levelName.text = ((instance != null) ? instance.levelName : "???");

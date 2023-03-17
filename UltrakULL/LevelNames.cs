@@ -58,7 +58,7 @@ namespace UltrakULL
 
         public static string GetLevelName(int missionNum)
         {
-	        if (MonoSingleton<MapLoader>.Instance && MonoSingleton<MapLoader>.Instance.isCustomLoaded)
+	        if (SceneHelper.IsPlayingCustom)
 			{
 				return MapInfoBase.InstanceAnyType.levelName;
 			}
