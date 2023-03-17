@@ -444,23 +444,31 @@ namespace UltrakULL
 
         private static void PatchLoadingWindow(GameObject frontEnd)
         {
-            GameObject loadingObject = GetGameObjectChild(GetGameObjectChild(frontEnd, "LoadingScreen"),"Text");
+            GameObject loadingObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("MapLoader"), "Loading Blocker"),"Panel"),"Text");
             Text loadingText = GetTextfromGameObject(loadingObject);
             loadingText.text = LanguageManager.CurrentLanguage.misc.loading;
         }
 
         public static void Patch(GameObject frontEnd)
         {
-            PatchMainMenu(frontEnd);
-            PatchDifficultyMenu(frontEnd);
-            PatchDifficultyDescriptors(frontEnd);
+            try
+            {
+                PatchMainMenu(frontEnd);
+                PatchDifficultyMenu(frontEnd);
+                PatchDifficultyDescriptors(frontEnd);
 
-            PatchChapterSelect(frontEnd);
-            PatchLevelSelectPrelude(frontEnd);
-            PatchLevelSelectAct1(frontEnd);
-            PatchLevelSelectAct2(frontEnd);
-            PatchLevelSelectPrime(frontEnd);
-            PatchLoadingWindow(frontEnd);
+                PatchChapterSelect(frontEnd);
+                PatchLevelSelectPrelude(frontEnd);
+                PatchLevelSelectAct1(frontEnd);
+                PatchLevelSelectAct2(frontEnd);
+                PatchLevelSelectPrime(frontEnd);
+                PatchLoadingWindow(frontEnd);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
         }
 
     }

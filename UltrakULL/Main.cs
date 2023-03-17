@@ -53,6 +53,14 @@ using UMM;
  * Rumble support and other new options.
  * New sandbox settings.
  * Green R.
+ *
+ *
+ *Intro:
+ * Loading message no longer appears, get rid of that
+ * 
+ * Main menu:
+ * ApplyPostFixes error
+ * PatchLoadingWindow error
  * 
  * */
 
@@ -366,16 +374,7 @@ namespace UltrakULL
                 {
                     switch(levelName)
                     {
-                        case "Intro":
-                        {
-                            Text loadingText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "LoadingScreen"), "Intro"), "Text"));
-                        
-                            //NEEDTO - teeny tiny issue with the initial loading text not being translated with UMM
-                            Logging.Warn(loadingText.text);
-                            loadingText.text = LanguageManager.CurrentLanguage.misc.loading;
-                            Logging.Warn(loadingText.text);
-                            break;
-                        }
+                        case "Intro:": { break; }
                         case "Main Menu":
                         {
                             PatchFrontEnd(canvasObj);
@@ -487,6 +486,11 @@ namespace UltrakULL
                                     Logging.Message("Intermission");
                                     Intermission intermission = new Intermission(ref canvasObj);
                                 }
+                                else if (levelName == "CreditsMuseum2")
+                                {
+                                    Logging.Message("DevMuseum");
+                                    DevMuseum devMuseum = new DevMuseum(ref canvasObj);
+                                }
 
                             }
                             break;
@@ -506,10 +510,18 @@ namespace UltrakULL
 
         private IEnumerator ApplyPostFixes(GameObject frontEnd)
         {
-            yield return new WaitForSeconds(0.05f);
+            Console.WriteLine(SceneManager.GetActiveScene().name);
+            Console.WriteLine(SceneManager.GetActiveScene().name == "Main Menu");
+            if (SceneManager.GetActiveScene().name == "Main Menu")
+            {
+                 yield return new WaitForSeconds(0.50f);
 
+            Console.WriteLine("init");
+            Console.WriteLine(frontEnd.name);
             //Open Language Folder button in Options->Langauge
+            
             Text openLangFolderText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd,"OptionsMenu"), "Language Page"),"Scroll Rect (1)"),"Contents"),"OpenLangFolder"),"Slot Text"));
+            Console.WriteLine("slot text");
             openLangFolderText.text = LanguageManager.CurrentLanguage.options
             .language_openLanguageFolder;
 
@@ -517,6 +529,7 @@ namespace UltrakULL
             GameObject ummModsButton = null;
             GameObject ummRestartButton = null;
 
+            
             if(SceneManager.GetActiveScene().name == "Main Menu")
             {
                 GameObject titleObject = GetGameObjectChild(frontEnd, "Main Menu (1)");
@@ -567,6 +580,8 @@ namespace UltrakULL
                     StartCoroutine(UltraTweakerPatch());
                 }
             }
+            }
+           
         }
         
         private async Task CheckForUpdates()
