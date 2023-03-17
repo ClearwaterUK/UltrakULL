@@ -374,7 +374,7 @@ namespace UltrakULL
                 {
                     switch(levelName)
                     {
-                        case "Intro:": { break; }
+                        case "Intro": { break; }
                         case "Main Menu":
                         {
                             PatchFrontEnd(canvasObj);

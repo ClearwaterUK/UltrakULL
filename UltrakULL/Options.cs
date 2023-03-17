@@ -431,7 +431,7 @@ namespace UltrakULL
         }
         private void PatchAssistOptions(GameObject optionsMenu)
         {
-//Assist options
+                //Assist options
 
                 Text assistTitle = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text (1)"));
                 assistTitle.text = "--"+ LanguageManager.CurrentLanguage.options.assists_title + "--";
@@ -477,17 +477,17 @@ namespace UltrakULL
                 Text assistEnemySilhouettesTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistContent, "Enemy Simplifier (1)"), "Text (1)"));
                 assistEnemySilhouettesTitle.text = LanguageManager.CurrentLanguage.options.assists_enemySilhouettesOutlines;
 
-                GameObject assistEnemySilhouettes = GetGameObjectChild(assistContent, "Enemy Simplifier (1)");
+                GameObject assistEnemySilhouettes = GetGameObjectChild(assistContent, "Enemy Simplifier (1)"); //
 
                 Text assistEnemySilhouettesOutlineText = GetTextfromGameObject(GetGameObjectChild(assistEnemySilhouettes, "Text (1)"));
                 assistEnemySilhouettesOutlineText.text =  LanguageManager.CurrentLanguage.options.assists_enemySilhouettes;
 
-                GameObject assistEnemySilhouettesExtra = GetGameObjectChild(assistContent, "Enemy Simplifier");
+                GameObject assistEnemySilhouettesExtra = GetGameObjectChild(assistContent, "Activation Distance");
 
                 Text assistEnemySilhouettesDistance = GetTextfromGameObject(GetGameObjectChild(assistEnemySilhouettesExtra, "Text (1)"));
                 assistEnemySilhouettesDistance.text = LanguageManager.CurrentLanguage.options.assists_enemySilhouettesDistance;
 
-                SliderValueToText assistEnemySilhouettesDistanceSlider = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(assistContent, "Enemy Simplifier"),"Button"),"Slider"),"Text (2)").GetComponentInChildren<SliderValueToText>();
+                SliderValueToText assistEnemySilhouettesDistanceSlider = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(assistContent, "Activation Distance"),"Button"),"Slider"),"Text (2)").GetComponentInChildren<SliderValueToText>();
                 assistEnemySilhouettesDistanceSlider.ifMin = LanguageManager.CurrentLanguage.options.assists_enemySilhouettesDistanceMinimum;
 
                 Text assistEnemySilhouettesOutlinesOnlyText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistEnemySilhouettesExtra, "Extra"),"Text (2)"));
