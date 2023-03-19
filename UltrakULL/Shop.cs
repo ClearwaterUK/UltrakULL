@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -730,10 +731,8 @@ namespace UltrakULL
                 Text freezeframeDescriptionBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(freezeframeInfo, "Button"), "Text"));
                 freezeframeDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
-                //Rocket Launcher green variation (under construction)
-                GameObject rlGreenVariation = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Green) (Off)");
-                Text rlGreenUnderConstruction = GetTextfromGameObject(GetGameObjectChild(rlGreenVariation, "Text (1)"));
-                rlGreenUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
+                //Rocket Launcher green variation (to do)
+                GameObject rlGreenVariation = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Green)");
 
                 //Rocket Launcher red variation (under construction)
                 GameObject rlRedVariation = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Red)");
@@ -854,7 +853,9 @@ namespace UltrakULL
                 
                 //Whiplash
                 GameObject whiplash = GetGameObjectChild(armWindow, "Variation Panel 3 (New)");
+                Console.WriteLine(whiplash.name);
                 Text whiplashName = GetTextfromGameObject(GetGameObjectChild(whiplash, "Text"));
+                Console.WriteLine(whiplashName.name);
                 whiplashName.text = LanguageManager.CurrentLanguage.shop.shop_armWhiplash;
 
                 GameObject whiplashWindow = GetGameObjectChild(armWindow, "Variation 3 Info (New)");
@@ -880,11 +881,14 @@ namespace UltrakULL
 
         public static void PatchShop(ref GameObject level)
         {
+            if (SceneManager.GetActiveScene().name == "Level 2-S")
+            {
+                return;
+            }
             List<GameObject> shopsToPatch = new List<GameObject>();
             //Start by finding what level we're on and what shopObjects need patching.
             if (SceneManager.GetActiveScene().name == "uk_construct")
             {
-                
                 shopsToPatch.Add(GetGameObjectChild(GameObject.Find("Shop"),"Canvas"));
             }
             else if(SceneManager.GetActiveScene().name.Contains("P-"))
@@ -957,9 +961,13 @@ namespace UltrakULL
                 }
             }
             
-            
-            PatchShopFrontEnd(ref shopsToPatch);
-            PatchWeapons(ref shopsToPatch);
+            Console.WriteLine(shopsToPatch.Count);
+            if (shopsToPatch.Count > 0)
+            {
+                PatchShopFrontEnd(ref shopsToPatch);
+                PatchWeapons(ref shopsToPatch);
+            }
+           
         }
     }
 }

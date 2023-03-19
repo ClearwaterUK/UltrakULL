@@ -56,11 +56,7 @@ using UMM;
  *
  *
  *Intro:
- * Loading message no longer appears, get rid of that
  * 
- * Main menu:
- * ApplyPostFixes error
- * PatchLoadingWindow error
  * 
  * */
 
@@ -80,7 +76,7 @@ namespace UltrakULL
         public Font vcrFont;
 
         private const string InternalName = "clearwater.ultrakull.ultrakULL";
-        private const string InternalVersion = "1.1.1";
+        private const string InternalVersion = "1.1.2";
         
         private static readonly HttpClient Client = new HttpClient();
         
