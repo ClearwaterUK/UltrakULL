@@ -1,4 +1,4 @@
-﻿﻿[![Discord](https://img.shields.io/discord/1017473804592754778?label=UltrakULL%20Discord)](https://discord.gg/ZB7jk6Djv5 "Discord Invite")
+[![Discord](https://img.shields.io/discord/1017473804592754778?label=UltrakULL%20Discord)](https://discord.gg/ZB7jk6Djv5 "Discord Invite")
 ![Version](https://img.shields.io/github/v/release/ClearwaterTM/UltrakULL)
 ![Licence](https://img.shields.io/github/license/ClearwaterTM/UltrakULL)
 
@@ -33,7 +33,7 @@ or via the [UltrakULL Discord](https://discord.gg/ZB7jk6Djv5) in the #language-r
 ### Prerequisites:
 - A [Steam copy](https://store.steampowered.com/app/1229490/ULTRAKILL/) of ULTRAKILL.<br>**Demo, GOG.com and cracked versions are NOT supported.**
 - BepInEx 5 64-bit. It can be directly downloaded from [here](https://github.com/BepInEx/BepInEx/releases/download/v5.4.21/BepInEx_x64_5.4.21.0.zip).<br>**Do not download/install BepInEx 6, ULTRAKILL does not support it.**
-- ULTRAKILL Mod Manager (UMM). It can be downloaded from [here](https://github.com/Temperz87/ultra-mod-manager/tags).<br>**UMM 0.5.0 is the minimum version required to use UltrakULL.**
+- ULTRAKILL Mod Manager (UMM). It can be downloaded from [here](https://github.com/Temperz87/ultra-mod-manager/tags).<br>**UMM 0.5.3 is the minimum version required to use UltrakULL.**
 - A release of UltrakULL. Details to obtain it are given in the [Download](#Download) section.<br>**It is highly recommended to acquire the latest version available when downloading.**
 - (Optional) Any extra language files you may wish to use. View the [Download](#Download) section for information on extra language files.
 
@@ -82,34 +82,35 @@ The installation section is divided into 3 parts:
 | Language                                 | Contributors                                                                                            | Status         | Available?         | Notes                                  |
 |------------------------------------------|---------------------------------------------------------------------------------------------------------|----------------|--------------------|----------------------------------------|
 | English (U.S)                            | Hakita & New Blood                                                                                      | Finished       | :heavy_check_mark: | Grammatical improvements by Clearwater |
-| Brazilian Portugese (Portugês do Brasil) | Veni, Jackie, MKaid, hebert, FNChannel, Spooky, Soulvender, RAYLANDER                                   | Finished       | :heavy_check_mark: |                                        |
+| Czech (Čeština)                          | Mina                                                                                                    | Finished       | :heavy_check_mark: |                                        |
 | French (Français)                        | Clearwater, ZedDev, Frizou, osokour                                                                     | Finished       | :heavy_check_mark: | French and Quebec variants available   |
 | German (Deutsch)                         | Distrilul, JESTERB0T, Liquid Lest, Psychologemelone44, Termi2, Fabidelune                               | Finished       | :heavy_check_mark: |                                        |
 | Russian (русский)                        | Nessie_A_WA97, D4N5T3P, Edith Bagel, lrddd, Brainy-Stormie, TwinT, towelie84, mctaylors, Solidus Cumcer | Finished       | :heavy_check_mark: |                                        |
-| Simplified Chinese (简体中文)            | Hydracerynitis, ciinore, duke325, ponyweeb, Skugra, GoGoblin                                            | Finished       | :heavy_check_mark: |                                        |
 | Spanish (Español)                        | LambCS, Philia, Lukah, Amarok_Lc, Radripizza, j(LRC), LEVIBOT                                           | Finished       | :heavy_check_mark: |                                        |
 | Turkish (Türkçe)                         | Legitname1337, Ömer Talha, RTE, Ray_, legio, Scape                                                      | Finished       | :heavy_check_mark: |                                        |
 |                                          |                                                                                                         |                |                    |                                        |
-| Arabic                                   | riko, hamza666, KIMOZORIS, maria, m7mdd                                                                 | In development | :x:                |                                        |
+| Arabic                                   | riko, hamza666, KIMOZORIS, maria, m7mdd, Malek                                                          | In development | :x:                |                                        |
+| Brazilian Portugese (Portugês do Brasil) | Veni, Jackie, MKaid, hebert, FNChannel, Spooky, Soulvender, RAYLANDER                                   | In development | :x:                |                                        |
 | Belarusian (беларуская)                  | Kiberkotleta, TopVovanplay                                                                              | In development | :x:                |                                        |
 | Bulgarian (Bălgarski)                    | Dan                                                                                                     | In development | :x:                |                                        |
 | Belarusian (беларуска)                   | Kiberkotleta                                                                                            | In development | :x:                |                                        |
-| Czech (Čeština)                          | Mina                                                                                                    | In development | :x:                |                                        |
 | Danish (Dansk)                           | OrangeField,rillebille                                                                                  | In development | :x:                |                                        |
-| Dutch (Nederlands)                       | HIMkoto, Foxo, troingle                                                                                 | In development | :x:                |                                        |
+| Dutch (Nederlands)                       | HIMkoto, Foxo, troingle, The Kneecap Collector                                                          | In development | :x:                |                                        |
 | Finnish (Suomi)                          | GoreDemon, FracturedStar, troingle                                                                      | In development | :x:                |                                        |
-| Filipino (Pilipino)                      | mxkyle                                                                                                  | In development | :x:                |                                        |
+| Filipino (Pilipino)                      | mxkyle, MecanicWithAPistol                                                                              | In development | :x:                |                                        |
 | Georgian (ქართული)                       | GooseNeck                                                                                               | In development | :x:                |                                        |
 | Greek (Ελληνικά)                         | Mi pro, NICKOLAS78GR                                                                                    | In development | :x:                |                                        |
 | Hungarian (Magyar)                       | csigachad                                                                                               | In development | :x:                |                                        |
 | Italian (Italiano)                       | Dav, SimonLuck31, Paolotto Games, Cammen, snp, ImmortalChanger                                          | In development | :x:                |                                        |
 | Indonesian (Bahasa Indonesia)            | Arif “Fry” Siregar, mulfok, Yume                                                                        | In development | :x:                |                                        |
 | Korean (한국어)                          | ARSE™                                                                                                   | In development | :x:                |                                        |
-| Japanese (日本語)                        | sc1zzla                                                                                                 | In development | :x:                |                                        |
+| Japanese (日本語)                        | sc1zzla                                                                                                 | On hold        | :x:                |                                        |
+| Latvian (Latviešu)                       | Хомос Арасака, сонорный                                                                                 | In development | :x:                |                                        |
 | Portugese (Portugês)                     | Toyota AE86                                                                                             | In development | :x:                |                                        |
 | Persian (Farsi)                          | Intruder                                                                                                | In development | :x:                |                                        |
 | Polish (Polski)                          | SmallSeaCat, Fikou, filizanka, Patryk, Spookz, owaloid                                                  | In development | :x:                |                                        |
 | Romanian (Românesc)                      | Vampuffin, Rokon                                                                                        | In development | :x:                |                                        |
+| Simplified Chinese (简体中文)            | Hydracerynitis, ciinore, duke325, ponyweeb, Skugra, GoGoblin                                            | In development | :x:                |                                        |
 | Thai (ภาษาไทย)                           | Skugra, Winterman, SAPAIDER                                                                             | In development | :x:                |                                        |
 | Traditional Chinese(繁體中文)            | GuonuoTW(SmallNo), duke325                                                                              | In development | :x:                |                                        |
 | Ukrainian (Українська)                   | Rafunny, Blitzo, Keka, ArtSabs, ak11, the ukrainian war drone, CsyeCok The Soldier, twrp                | In development | :x:                |                                        |
