@@ -1,4 +1,8 @@
-﻿1.1.1
+﻿1.2.0
+- **Added content related to Wait Of The World.**
+- Added subtitles and strings for P-2 and Sisyphus Prime.
+
+1.1.1
 - **Added basic support for Right-to-left languages, such as Arabic and Hebrew.**
 (**Note**: To set RTL encoding for your language, set langRTL in your JSON metadata to "true" (all lowercase). See JSON changes below.)
 - A big backend cleanup and refactor effort has been done. This should not affect any functionality of the mod, but if any problems arise, please report them.

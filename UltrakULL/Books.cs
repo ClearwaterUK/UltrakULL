@@ -11,6 +11,10 @@ namespace UltrakULL
 
             switch(currentLevel)
             {
+                case "CreditsMuseum2":
+                {
+                    return DevMuseum.getMuseumBook();
+                }
                 case "Level 1-4": {
                         return "<b>" + LanguageManager.CurrentLanguage.books.books_limboFourth1 + "</b>\n\n"
                         + "<i>" + LanguageManager.CurrentLanguage.books.books_limboFourth2 + "\n\n"

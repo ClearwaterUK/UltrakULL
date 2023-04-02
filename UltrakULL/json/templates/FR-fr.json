@@ -5,7 +5,7 @@
 		"langVersion": "1.0",
         "langDisplayName": "Français (France)",
 
-        "minimumModVersion": "1.1.1"
+        "minimumModVersion": "1.1.2"
 	},
 	"body": {
 		"bodyName": "Traduction française pour ULTRAKILL."
@@ -866,13 +866,13 @@
 		"levelName_wrathSecond": "LA MER SANS ÉTOILES",
 		"levelName_wrathThird": "NAVIRE DES FOUS",
 		"levelName_wrathFourth": "LÉVIATHAN",
-		"levelName_wrathSecret": "?",
+		"levelName_wrathSecret": "UNE JOURNÉE AU PÊCHE",
         
         "levelName_heresyFirst": "LARMES DE SANG",
 		"levelName_heresySecond": "ESTHÉTIQUES DE HAINE",
 
 		"levelName_primeFirst": "L'ÂME SURVIVANTE",
-		"levelName_primeSecond": "?",
+		"levelName_primeSecond": "LA DOULEUR DU MONDE",
 		"levelName_primeThird": "?"
 	},
 	"levelChallenges": {
@@ -952,6 +952,8 @@
 
 		"leveltips_primeFirst1": "Les <color=orange>renvois</color> peuvent être utilisés comme outil de soin puissant.",
 		"leveltips_primeFirst2": "La renvoyage de tout attaque ou projectile ennemi <color=red>vous remplira votre santé</color> jusqu'au limite dur.",
+
+        "leveltips_primeSecond": "Amusez-vous bien.",
         
         "leveltips_wrathFirst": "Les chutes <color=orange>sous l'eau</color> sont lentes, mais un <color=orange>lancement au sol</color> permet de se retourner rapidement sur le sol.",
         "leveltips_wrathSecond": "Les <color=orange>glissements</color> sur l'eau vous permettera d'y <color=orange>rebondir</color> sur son surface.",
@@ -1180,6 +1182,8 @@
 		"enemyname_somethingWicked": "QUELQUE MAUDIT",
 		"enemyname_fleshPrison": "PRISON DE CHAIR",
 		"enemyname_minosPrime": "MINOS PRIME",
+        "enemyname_boss_fleshPanopticon": "PANOPTIQUE DE CHAIR",
+        "enemyname_boss_sisyphusPrime": "SISYPHE PRIME",
         
         "enemyname_boss_cerberus": "CERBÈRE - GARDIEN D'ENFER",
         "enemyname_boss_cancerousRodent": "RONGEUR CANCÉREUX",
@@ -1680,7 +1684,39 @@
         "primeSanctum_first_secretText6": "Juste après, l'exploration et excavation de l'Enfer a été abandonné, et cet vinyle à devenu le seul objet à avoir été envoyé avec succès avant que la connexion entre la surface et les terminaux a été coupé.",
         "primeSanctum_first_secretText7": "Les terminaux utilisent le vinyle pour attirer des machines dans une relation symbiose (Pour des informations supplémentaires, voir DONNÉES DU TERMINAL 01: <color=red>[LIEN SUPPRIMÉ]</color>). Cependant, les terminaux ne jouent que des sections instrumentaux du chanson originale pour des raisons inconnus.",
         "primeSanctum_first_secretText8": "Certains chercheurs ont plaisanté à ce sujet, disant que les terminaux sont \"trop timides pour chanter\", mais des rumeurs ont propagé concernant des réparateurs qui, après avoir réparé un terminal cassé ou défectueux, ont entendu le terminal jouer une section vocale quand le réparateur est le seul présent, sans aucune équipement d'enregistrement, rendant cet affirmation invérifiable",
-        "primeSanctum_first_secretText9": "FIN DES DONNÉES 01. Pour des informations supplémentaires, voir <color=red>[LIEN SUPPRIMÉ]</color> et <color=red>[LIEN SUPPRIMÉ]</color>."
+        "primeSanctum_first_secretText9": "FIN DES DONNÉES 01. Pour des informations supplémentaires, voir <color=red>[LIEN SUPPRIMÉ]</color> et <color=red>[LIEN SUPPRIMÉ]</color>.",
+
+        "primeSanctum_second_lockFirstLocked": "VERROU [A]",
+        "primeSanctum_second_lockSecondLocked": "VERROU [B]",
+        "primeSanctum_second_lockThirdLocked": "VERROU [C]",
+        "primeSanctum_second_lockUnlocked": "OUVERT",
+
+        "primeSanctum_second_lockOpen": "OUVRIR",
+        "primeSanctum_second_lockAreYouSure": "ÊTES-VOUS SÛR?",
+        "primeSanctum_second_lockYes1": "SUIVRE TOUT PROTOCOL",
+        "primeSanctum_second_lockYes2": "NE <color=red>PAS</color> RAPPROCHER",
+        "primeSanctum_second_lockYes3": "NE VOUS FAITS <color=red>PAS</color> REGARDER",
+        "primeSanctum_second_lockYes4": "RESTER VIGILENT, ET N'OUBLIEZ PAS",
+        "primeSanctum_second_lockYes5": "a m u s e z - v o u s !",
+        "primeSanctum_second_lockNo1": "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA",
+        "primeSanctum_second_lockNo2": "c o m m e s i t ' a l a c h o i x",
+
+        "primeSanctum_second_secretText1": "DONNÉES DU TERMINAL 02 <color=red>[CHIFFRÉ]</color>",
+        "primeSanctum_second_secretText2": "UNE MISE À JOUR SUR LES TERMINAUX",
+        "primeSanctum_second_secretText3": "<color=grey>(NOTE: CECI EST TOUJOURS SOUS INVESTIGATION!!! Ne pas partager tant que nous n'avons vérifié tous les affirmations et A TERMINÉ LE BROUILLON!!!! Si ceci ce fuit comme le dernier brouillon il n'y aura pas assez d'argent sur ce fichu planète pour payer vos frais.)</color>",
+        "primeSanctum_second_secretText4": "Depuis le dernier rapport, nous avons conçu et construit plus d'équipement de communication plus puissant, grâce aux dons de <color=grey>[INSÈRER LE BOÎTE AUQUEL ON L'Y PRESENTE]</color> auquel nous tenons en haute estime. Avec cet nouveau équipment, nous avons pu réétablir une connexion avec certains des machines plus puissants qui ont été abandonnés après le projet d'exploration et excavation d'Enfer a été soudainement annulé en cause de <color=red>[ERREUR: sAmsGS3JTIU]</color>.\n",
+        "primeSanctum_second_secretText5": "Ce que nous avons découvert est vraiment remarquable, et, SI VERIFIÉ AU-DELÀ DE TOUT DOUTE RAISONNABLE, révolutionnaire au communauté robotique entier:",
+        "primeSanctum_second_secretText6": "L'ennuie.",
+        "primeSanctum_second_secretText7": "Les terminaux, incapables de se déplacer, se sont devenus ennuyés. Tant qu'ils sont connectés entre eux et sont capables de se communiquer entre eux, une fois la connexion au surface a été coupé, ils n'ont reçu aucun nouveau donnée, effectivement arrêtant toute nouvelle information.",
+        "primeSanctum_second_secretText8": "Il est inconnu si cet \"ennuie\" est similaire à l'émotion légitime ou ce qui l'a causé, mais ceci a entraîné une relation symbiotique avec les autres machines. Essentiellement, les terminaux fouillent ce qui peuvent trouver grâce à leurs systèmes de téléportation, et échanger les resources et fournitures avec les machines qui ont été abandonnés dans l'Enfer, en échange pour le divertissement.",
+        "primeSanctum_second_secretText9": "Spécifiquement, les machines enregistrent leurs batailles pour la survie dans l'Enfer, et leurs performances sont notés en fonction de leur valeur de divertiseement, et est utilisé comme des \"points\" pour échanger avec des services et produits, tels que des nouveaux armes.",
+        "primeSanctum_second_secretText10": "Il semble que cet relation a devenu si profondement enraciné dans l'existence de ses terminaux qu'ils ont dévélopé une hierarchie sociale, auquel ceux qui collectionné le plus de données de bataille divertissant sont considérés en haute estime que ceux avec des données inférieurs.",
+        "primeSanctum_second_secretText11": "Plus récennement, les terminaux ont aussi recolté assez de données pour créer une espace de simulation auquel les machines peuvent se connecter, appelé \"Le Cybergrind\", permettant aux machines de simuler des batailles dans une environnement côntrolé sans crainte de destruction, auquel les terminaux peuvent regarder en directe comme divertissement.",
+        "primeSanctum_second_secretText12": "Ces résultats sont vraiments extraordinaires, et bien que nous le trouvons trop difficile à croire, tous l'information que nous avons pu récolter permet de valider nos propoisitions. Si nous pouvons le prouver avec certitude<color=grey>[ET SI CET PUTAIN DE BROUILLON NE SORT PAS ENCORE]</color>, ceci provoquera un changement de paradigme qui réévaluera tout ce que nous sachons initialement sur les machines alimentés par le sang.",
+        "primeSanctum_second_secretText13": "FIN DES DONNÉES 02. Pour des informations supplémentaires sur l'annulation du projet d'exploration et excavation d'Enfer, voir DONNÉES 00: <color=red>[LIEN SUPPRIMÉ]</color>."
+        
+        
+        
     },
     "secretLevels":{
         "secretLevels_prelude_somethingWicked": "Quelque chose de maudit arrive.",
@@ -1854,7 +1890,38 @@
         "subtitles_gabrielSecondDefeated8": "J-... J'ai besoin de temps pour réfléchir...",
         "subtitles_gabrielSecondDefeated9": "Nous allons se rencontrer encore, machine.",
         "subtitles_gabrielSecondDefeated10": "Que tes malheurs soit nombreux...",
-        "subtitles_gabrielSecondDefeated11": "...et tes jours peu..."
+        "subtitles_gabrielSecondDefeated11": "...et tes jours peu...",
+
+        "subtitles_sisyphusPrime_preIntro1": "Cet prison..",
+        "subtitles_sisyphusPrime_preIntro2": "Pour contenir...",
+        "subtitles_sisyphusPrime_preIntro3": "MOI?",
+
+        "subtitles_sisyphusPrime_intro1": "Un visiteur?",
+        "subtitles_sisyphusPrime_intro2": "Hmm... Il est vrai, j'ai assez dormi.",
+        "subtitles_sisyphusPrime_intro3": "Le royaume du Paradis a depuis longtemps oublié mon nom.",
+        "subtitles_sisyphusPrime_intro4": "Et je suis AVIDE de leur faire rappeler.",
+        "subtitles_sisyphusPrime_intro5": "Mais,",
+        "subtitles_sisyphusPrime_intro6": "Le sang de Minos se trouve sur vos mains, et je dois avouer...",
+        "subtitles_sisyphusPrime_intro7": "Je suis curieux de voir vos compétences, Arme.",
+        "subtitles_sisyphusPrime_intro8": "Ainsi, avant d'arracher les cités et d'ECRASER les armées du Paradis,",
+        "subtitles_sisyphusPrime_intro9": "Vous me serverez comme de l'entraînement.",
+        "subtitles_sisyphusPrime_intro10": "Venez, Fils de l'Homme...",
+        "subtitles_sisyphusPrime_intro11": "Et MOUREZ.",
+
+        "subtitles_sisyphusPrime_attack1": "Bien essayé!",
+        "subtitles_sisyphusPrime_attack2": "DISPARAISSEZ!",
+        "subtitles_sisyphusPrime_attack3": "Vous ne pouvez échapper!",
+        "subtitles_sisyphusPrime_attack4": "DESTRUCTION!",
+        "subtitles_sisyphusPrime_attack5": "Ceci fera mal.",
+
+        "subtitles_sisyphusPrime_phaseChange": "OUI! C'est ça!",
+        "subtitles_sisyphusPrime_respawnIntro": "Faits-les venir!",
+
+        "subtitles_sisyphusPrime_defeated1": "Ahh...",
+        "subtitles_sisyphusPrime_defeated2": "Ainsi se termine la vie et les temps du Roi Sisyphe.",
+        "subtitles_sisyphusPrime_defeated3": "Une fin digne à une existence définie par une lutte futile,",
+        "subtitles_sisyphusPrime_defeated4": "Voué à l'échec depuis le début...",
+        "subtitles_sisyphusPrime_defeated5": "Et je n'y regrettes AUCUN moment!"
         
     },
     

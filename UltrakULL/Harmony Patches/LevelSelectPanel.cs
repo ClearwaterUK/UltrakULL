@@ -7,7 +7,6 @@ using System.Linq;
 
 namespace UltrakULL.Harmony_Patches
 {
-
     //@Override
     //Overrides checkScore function from the vanilla game. This translates level names, as well as if challenges have been completed or not. POSTFIX.
     [HarmonyPatch(typeof(LevelSelectPanel), "CheckScore")]
@@ -22,7 +21,8 @@ namespace UltrakULL.Harmony_Patches
             //Bandaid fix for P-2 and P-3 for now since they share the same level id as P-1 for some reason. Shall need to change/remove when they release.
             if (__instance.transform.Find("Name").GetComponent<Text>().text.Contains("P-2"))
             {
-                __instance.transform.Find("Name").GetComponent<Text>().text = "P-2: ???";
+                __instance.transform.Find("Name").GetComponent<Text>().text =
+                    "P-2:" + (LanguageManager.CurrentLanguage.levelNames.levelName_primeSecond);
             }
             else if (__instance.transform.Find("Name").GetComponent<Text>().text.Contains("P-3"))
             {

@@ -6,7 +6,7 @@
         "langDisplayName": "English",
         "langRTL": "false",
 
-        "minimumModVersion": "1.1.1"
+        "minimumModVersion": "1.1.2"
 	},
     
 	"body": {
@@ -918,13 +918,13 @@
 		"levelName_wrathSecond": "WAVES OF THE STARLESS SEA",
 		"levelName_wrathThird": "SHIP OF FOOLS",
 		"levelName_wrathFourth": "LEVIATHAN",
-		"levelName_wrathSecret": "",
+		"levelName_wrathSecret": "I ONLY SAY MORNING",
         
         "levelName_heresyFirst": "CRY FOR THE WEEPER",
 		"levelName_heresySecond": "AESTHETICS OF HATE",
 
 		"levelName_primeFirst": "SOUL SURVIVOR",
-		"levelName_primeSecond": "",
+		"levelName_primeSecond": "WAIT OF THE WORLD",
 		"levelName_primeThird": ""
 
 
@@ -1019,6 +1019,7 @@
 
 		"leveltips_primeFirst1": "Parries can be used as a powerful healing tool.",
 		"leveltips_primeFirst2": "Parrying any enemy projectile or melee attack will fully replenish your health up to the hard damage limit.",
+        "leveltips_primeSecond": "Have fun.",
 
 		"leveltips_cybergrind": "If blown too far off the arena, PUMP CHARGE's overcharge is a good way to get back.",
         "leveltips_sandbox1": "CHEATS can be enabled in other levels by inputting:",
@@ -1236,6 +1237,8 @@
 		"enemyname_somethingWicked": "SOMETHING WICKED",
 		"enemyname_fleshPrison": "FLESH PRISON",
 		"enemyname_minosPrime": "MINOS PRIME",
+        "enemyname_boss_fleshPanopticon": "FLESH PANOPTICON",
+        "enemyname_boss_sisyphusPrime": "SISYPHUS PRIME",
         
         "enemyname_boss_cerberus": "CERBERUS, GUARDIAN OF HELL",
         "enemyname_boss_cancerousRodent": "CANCEROUS RODENT",
@@ -1748,7 +1751,36 @@
         "primeSanctum_first_secretText6": "Soon after, the Hell exploration and excavation project was abandoned and this vinyl record remained the only matter to have been successfully transferred before connection between the surface and the terminals was lost.",
         "primeSanctum_first_secretText7": "The terminals now use the record to lure machines into a symbiotic relationship (For further information, see TERMINAL DATA 02: [LINK REMOVED]). However, the terminals only play short instrumental sections of the original record for undetermined reasons.",
         "primeSanctum_first_secretText8": "Some researchers have joked that perhaps the terminals are simply \"too shy to sing\", though rumors have been spreading of mechanics who, after fixing a faulty or broken terminal, said to have heard the terminal play a vocal section when only the mechanic is present with no recording equipment, making this an unverifiable claim.",
-        "primeSanctum_first_secretText9": "END OF DATA 01. For more information, see [LINK REMOVED] and [LINK REMOVED]."     
+        "primeSanctum_first_secretText9": "END OF DATA 01. For more information, see [LINK REMOVED] and [LINK REMOVED].",
+
+        "primeSanctum_second_lockFirstLocked": "LOCK [A]",
+        "primeSanctum_second_lockSecondLocked": "LOCK [B]",
+        "primeSanctum_second_lockThirdLocked": "LOCK [C]",
+        "primeSanctum_second_lockUnlocked": "UNLOCKED",
+
+        "primeSanctum_second_lockOpen": "OPEN",
+        "primeSanctum_second_lockAreYouSure": "ARE YOU SURE?",
+        "primeSanctum_second_lockYes1": "FOLLOW PROTOCOL",
+        "primeSanctum_second_lockYes2": "DO NOT APPROACH IT",
+        "primeSanctum_second_lockYes3": "DO NOT LET IT LOOK AT YOU",
+        "primeSanctum_second_lockYes4": "STAY VIGILENT, AND MOST IMPORTANTLY",
+        "primeSanctum_second_lockYes5": "h a v e  f u n !",
+        "primeSanctum_second_lockNo1": "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA",
+        "primeSanctum_second_lockNo2": "a s i f y o u h a d a c h o i c e",
+
+        "primeSanctum_second_secretText1": "TERMINAL DATA 02 <color=red>[ENCRYPTED]</color>",
+        "primeSanctum_second_secretText2": "AN UPDATE ON TERMINALS ",
+        "primeSanctum_second_secretText3": "<color=grey>(NOTE: THIS IS ALL STILL UNDER INVESTIGATION!!! Do not share until we have verified all claims AND FINISHED THE DRAFT!!!! If this leaks like the last draft there won't be enough money on the entire damn planet to pay your legal fees.) </color>",
+        "primeSanctum_second_secretText4": "Since the previous report, more powerful communication equipment has been succesfully designed and built, made possible thanks to the generous donations of <color=grey>[INSERT COMPANY BEING PRESENTED TO]</color> whom we hold in high regard. With this new equipment, we have managed to re-establish a connection with some of the higher end machines that were left behind after the Hell exploration and excavation project was abruptly cancelled due to <color=red>[ERROR:sAmsGS3JTIU]</color>.\n",
+        "primeSanctum_second_secretText5": "What we have discovered is truly remarkable and, IF PROVEN TRUE BEYOND REASONABLE DOUBT, revolutionary to the entire robotics community: ",
+        "primeSanctum_second_secretText6": "Boredom.",
+        "primeSanctum_second_secretText7": "The terminals, unable to move, have grown bored. While they are connected to each other and able to communicate amongst themselves, once the connection to the surface was cut, they were getting no new input, therefore stalling all communication to repetitions of already known information.",
+        "primeSanctum_second_secretText8": "It is unknown how similar this \"boredom\" is to actual emotion or what has caused it, but it has lead to a symbiotic relationship with other machines. Essentially, the terminals scavenge whatever they can via their teleportation systems and trade those supplies and resources with the machines that were left behind in Hell, in exchange for entertainment.",
+        "primeSanctum_second_secretText9": "That is, the machines record their battles for survival in Hell and the footage is graded based on its entertainment value and used as \"points\" in exchange for goods and services such as new weaponry.",
+        "primeSanctum_second_secretText10": "It seems that this relationship has become so deeply ingrained into the existence of the terminals that they have developed a social hierarchy, wherein those who collect the most entertaining battle data are considered in higher regard than those whose findings are of poorer quality.",
+        "primeSanctum_second_secretText11": "More recently, the terminals have also collected enough data to create a simulation space which they let machines plug into called \"The Cyber Grind\", which allows the machines to simulate battles in a safe environment without the threat of being destroyed, which the terminals watch in real time as a kind of live entertainment.",
+        "primeSanctum_second_secretText12": "These findings are truly extraordinary, and though we too find it hard to believe, all the information we can manage to gather validates these claims. If we can prove it with certainty <color=grey>[AND IF THIS DRAFT DOESN'T FUCKING LEAK AGAIN]</color>, this will cause a paradigm shift that will require re-evaluation of everything we thought we knew about blood-fuelled machinery.",
+        "primeSanctum_second_secretText13": "END OF DATA 02. For more information on the cancelled Hell exploration and excavation project, see DATA 00: <color=red>[LINK REMOVED]</color>."
     },
     "secretLevels":{
         "secretLevels_prelude_somethingWicked": "Something wicked this way comes.",
@@ -1922,7 +1954,38 @@
         "subtitles_gabrielSecondDefeated8": "I-I need some time to think...",
         "subtitles_gabrielSecondDefeated9": "We will meet again, machine.",
         "subtitles_gabrielSecondDefeated10": "May your woes be many...",
-        "subtitles_gabrielSecondDefeated11": "...and your days few."
+        "subtitles_gabrielSecondDefeated11": "...and your days few.",
+
+        "subtitles_sisyphusPrime_preIntro1": "This prison...",
+        "subtitles_sisyphusPrime_preIntro2": "To hold",
+        "subtitles_sisyphusPrime_preIntro3": "ME?",
+
+        "subtitles_sisyphusPrime_intro1": "A visitor?",
+        "subtitles_sisyphusPrime_intro2": "Hmm... Indeed, I have slept long enough.",
+        "subtitles_sisyphusPrime_intro3": "The kingdom of Heaven has long since forgotten my name.",
+        "subtitles_sisyphusPrime_intro4": "And I am EAGER to make them remember.",
+        "subtitles_sisyphusPrime_intro5": "However,",
+        "subtitles_sisyphusPrime_intro6": "The blood of Minos stains your hands, and I must admit...",
+        "subtitles_sisyphusPrime_intro7": "I'm curious about your skills, Weapon.",
+        "subtitles_sisyphusPrime_intro8": "And so, before I tear down the cities and CRUSH the armies of Heaven,",
+        "subtitles_sisyphusPrime_intro9": "You shall do as an appetizer.",
+        "subtitles_sisyphusPrime_intro10": "Come forth, Child of Man...",
+        "subtitles_sisyphusPrime_intro11": "And DIE.",
+
+        "subtitles_sisyphusPrime_attack1": "Nice try!",
+        "subtitles_sisyphusPrime_attack2": "BE GONE!",
+        "subtitles_sisyphusPrime_attack3": "You can't escape!",
+        "subtitles_sisyphusPrime_attack4": "DESTROY!",
+        "subtitles_sisyphusPrime_attack5": "This will hurt.",
+
+        "subtitles_sisyphusPrime_phaseChange": "YES! That's it!",
+        "subtitles_sisyphusPrime_respawnIntro": "Keep them coming!",
+
+        "subtitles_sisyphusPrime_defeated1": "Ahh...",
+        "subtitles_sisyphusPrime_defeated2": "So concludes the life and times of King Sisyphus.",
+        "subtitles_sisyphusPrime_defeated3": "A fitting end to an existence defined by futile struggle,",
+        "subtitles_sisyphusPrime_defeated4": "Doomed from the very start...",
+        "subtitles_sisyphusPrime_defeated5": "And I don't regret a SECOND of it!"
         
     },
     

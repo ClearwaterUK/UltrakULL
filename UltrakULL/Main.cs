@@ -47,16 +47,14 @@ using UMM;
  *
  * P-2 UPDATE DAMAGE REPORT
  *
- * ALL MODS ARE BROKEN. WILL NEED TO WAIT FOR UMM FIXES.
- * Credits shuffled to actual leveL. Current credits stuff on main menu will need to be moved to a new class.
- * P-2 stuff, 5-S stuff.
+ * Credits shuffled to actual level. Current credits stuff on main menu will need to be moved to a new class.
+ * PissyFace+Panopticon descriptions in shop
  * Rumble support and other new options.
- * New sandbox settings.
- * Green R.
+ * New sandbox settings (radient enemies, new brushes, enemy customizer)
+ * Green RL
+ * Something not working in in-game options
  *
  *
- *Intro:
- * 
  * 
  * */
 

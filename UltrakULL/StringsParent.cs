@@ -229,7 +229,10 @@ namespace UltrakULL
             if (currentLevel.Contains("P-1"))
             {
                 return LanguageManager.CurrentLanguage.levelTips.leveltips_primeFirst1 + "\n\n" + LanguageManager.CurrentLanguage.levelTips.leveltips_primeFirst2;
-
+            }
+            if (currentLevel.Contains("P-2"))
+            {
+                return LanguageManager.CurrentLanguage.levelTips.leveltips_primeSecond;
             }
 
             //Cybergrind

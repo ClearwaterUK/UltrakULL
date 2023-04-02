@@ -172,6 +172,93 @@ namespace UltrakULL
             }
             return "Unimplemented Minos Prime string";
         }
+
+        private static string SisyphusSubtitles(string input)
+        {
+            //Pre-Intro
+            if (input.Contains("This prison"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_preIntro1);
+            }
+            if (input.Contains("To hold"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_preIntro2);
+            }
+            if (input.Contains("ME?"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_preIntro3);
+            }
+            
+            //Intro
+            if (input.Contains("A visitor?"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_intro1);
+            }
+            if (input.Contains("Hmm..."))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_intro2);
+            }
+            if (input.Contains("The kingdom"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_intro3);
+            }
+            if (input.Contains("And I am EAGER"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_intro4);
+            }
+            if (input.Contains("However"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_intro5);
+            }
+            if (input.Contains("The blood of Minos"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_intro6);
+            }
+            if (input.Contains("I'm curious"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_intro7);
+            }
+            if (input.Contains("And so,"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_intro8);
+            }
+            if (input.Contains("You shall do"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_intro9);
+            }
+            if (input.Contains("Come forth"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_intro10);
+            }
+            if (input.Contains("And DIE"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_intro11);
+            }
+            
+            //Outro
+            if (input.Contains("Ahh..."))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_defeated1);
+            }
+            if (input.Contains("So concludes the"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_defeated2);
+            }
+            if (input.Contains("A fitting end"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_defeated3);
+            }
+            if (input.Contains("Doomed from the"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_defeated4);
+            }
+            if (input.Contains("And I don't"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_defeated5);
+            }
+            
+            return "Unimplemented P-2 subtitle";
+        }
         
         private static string GabeBoatSubtitles(string input)
         {
@@ -594,6 +681,47 @@ namespace UltrakULL
                 return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_phaseChange);
             }
 
+            // --Sisyphus Prime
+            //Attacks
+            if (input.Contains("Keep them coming!"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_respawnIntro);
+            }
+            //Attacks
+            if (input.Contains("Nice try!"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_attack1);
+            }
+            if (input.Contains("BE GONE!"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_attack2);
+            }
+            if (input.Contains("You can't escape!"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_attack3);
+            }
+            if (input.Contains("DESTROY!"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_attack4);
+            }
+            if (input.Contains("This will hurt"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_attack5);
+            }
+            //Phase 2
+            if (input.Contains("YES! That's it"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_sisyphusPrime_phaseChange);
+            }
+            
+            //Respawn
+            if (input.Contains("Keep them"))
+            {
+                return (LanguageManager.CurrentLanguage.subtitles.subtitles_minosPrime_phaseChange);
+            }
+            
+
+            
             return null;
         }
 
@@ -634,6 +762,11 @@ namespace UltrakULL
             if (currentLevel.Contains("P-1"))
             {
                 return Minossubtitles(input);
+            }
+
+            if (currentLevel.Contains("P-2"))
+            {
+                return SisyphusSubtitles(input);
             }
             return "Uninplemented subtitle string";
         }

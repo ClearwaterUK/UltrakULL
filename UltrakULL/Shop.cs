@@ -893,6 +893,7 @@ namespace UltrakULL
             }
             else if(SceneManager.GetActiveScene().name.Contains("P-"))
             {
+
                 shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Prime FirstRoom"),"Room"),"Shop"),"Canvas"));
             }
             //Specific fix for 6-1

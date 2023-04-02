@@ -6,11 +6,15 @@
 		"langDisplayName": "Template",
 		"langRTL": "false",
 
-		"minimumModVersion": "1.1.1"
+		"minimumModVersion": "1.1.2"
 	},
 
 	"body": {
 		"bodyName": "A template file for translating. NOT MEANT TO BE USED AS-IS WITH UltrakULL. Make sure you edit the metadata to reflect the author and language changes!"
+	},
+	
+	"devMuseum": {
+		
 	},
 
 	"credits": {
@@ -985,6 +989,8 @@
 		"leveltips_primeFirst1": "",
 		"leveltips_primeFirst2": "",
 
+		"leveltips_primeSecond": "",
+
 		"leveltips_wrathFirst": "",
 		"leveltips_wrathSecond": "",
 		"leveltips_wrathThird": "",
@@ -1230,6 +1236,8 @@
 		"enemyname_boss_insurrectionistAngry": "",
 		"enemyname_boss_insurrectionistRude": "",
 		"enemyname_boss_gabrielSecond": "",
+		"enemyname_boss_fleshPanopticon": "",
+		"enemyname_boss_sisyphusPrime": "",
 
 		"enemyname_type_lesserHusk": "",
 		"enemyname_type_greaterHusk": "",
@@ -1723,7 +1731,36 @@
 		"primeSanctum_first_secretText6": "",
 		"primeSanctum_first_secretText7": "",
 		"primeSanctum_first_secretText8": "",
-		"primeSanctum_first_secretText9": ""
+		"primeSanctum_first_secretText9": "",
+
+		"primeSanctum_second_lockFirstLocked": "",
+		"primeSanctum_second_lockSecondLocked": "",
+		"primeSanctum_second_lockThirdLocked": "",
+		"primeSanctum_second_lockUnlocked": "",
+
+		"primeSanctum_second_lockOpen": "",
+		"primeSanctum_second_lockAreYouSure": "",
+		"primeSanctum_second_lockYes1": "",
+		"primeSanctum_second_lockYes2": "",
+		"primeSanctum_second_lockYes3": "",
+		"primeSanctum_second_lockYes4": "",
+		"primeSanctum_second_lockYes5": "",
+		"primeSanctum_second_lockNo1": "",
+		"primeSanctum_second_lockNo2": "",
+
+		"primeSanctum_second_secretText1": "",
+		"primeSanctum_second_secretText2": "",
+		"primeSanctum_second_secretText3": "",
+		"primeSanctum_second_secretText4": "",
+		"primeSanctum_second_secretText5": "",
+		"primeSanctum_second_secretText6": "",
+		"primeSanctum_second_secretText7": "",
+		"primeSanctum_second_secretText8": "",
+		"primeSanctum_second_secretText9": "",
+		"primeSanctum_second_secretText10": "",
+		"primeSanctum_second_secretText11": "",
+		"primeSanctum_second_secretText12": "",
+		"primeSanctum_second_secretText13": ""
 	},
 	"secretLevels": {
 		"secretLevels_prelude_somethingWicked": "",
@@ -1897,8 +1934,38 @@
 		"subtitles_gabrielSecondDefeated8": "",
 		"subtitles_gabrielSecondDefeated9": "",
 		"subtitles_gabrielSecondDefeated10": "",
-		"subtitles_gabrielSecondDefeated11": ""
+		"subtitles_gabrielSecondDefeated11": "",
+		
+		"subtitles_sisyphusPrime_preIntro1": "",
+		"subtitles_sisyphusPrime_preIntro2": "",
+		"subtitles_sisyphusPrime_preIntro3": "",
 
+		"subtitles_sisyphusPrime_intro1": "",
+		"subtitles_sisyphusPrime_intro2": "",
+		"subtitles_sisyphusPrime_intro3": "",
+		"subtitles_sisyphusPrime_intro4": "",
+		"subtitles_sisyphusPrime_intro5": "",
+		"subtitles_sisyphusPrime_intro6": "",
+		"subtitles_sisyphusPrime_intro7": "",
+		"subtitles_sisyphusPrime_intro8": "",
+		"subtitles_sisyphusPrime_intro9": "",
+		"subtitles_sisyphusPrime_intro10": "",
+		"subtitles_sisyphusPrime_intro11": "",
+
+		"subtitles_sisyphusPrime_attack1": "",
+		"subtitles_sisyphusPrime_attack2": "",
+		"subtitles_sisyphusPrime_attack3": "",
+		"subtitles_sisyphusPrime_attack4": "",
+		"subtitles_sisyphusPrime_attack5": "",
+		
+		"subtitles_sisyphusPrime_phaseChange": "",
+		"subtitles_sisyphusPrime_respawnIntro": "",
+
+		"subtitles_sisyphusPrime_defeated1": "",
+		"subtitles_sisyphusPrime_defeated2": "",
+		"subtitles_sisyphusPrime_defeated3": "",
+		"subtitles_sisyphusPrime_defeated4": "",
+		"subtitles_sisyphusPrime_defeated5": ""
 	},
 
 	"misc": {

@@ -6,6 +6,7 @@ namespace UltrakULL.json
         public Metadata metadata;
         public Body body;
         
+        
         public FrontEnd frontend;
         
         public Tutorial tutorial;
@@ -16,6 +17,7 @@ namespace UltrakULL.json
         public Prime primeSanctum;
         public Secret secretLevels;
         public IntermissionStrings intermission;
+        public Museum devMuseum;
         
         public PauseMenu pauseMenu;
         public Option options;
@@ -602,7 +604,38 @@ namespace UltrakULL.json
         public string subtitles_minosPrime_defeated2;
         public string subtitles_minosPrime_defeated3;
         public string subtitles_minosPrime_defeated4;
+
+        public string subtitles_sisyphusPrime_preIntro1;
+        public string subtitles_sisyphusPrime_preIntro2;
+        public string subtitles_sisyphusPrime_preIntro3;
         
+        public string subtitles_sisyphusPrime_intro1;
+        public string subtitles_sisyphusPrime_intro2;
+        public string subtitles_sisyphusPrime_intro3;
+        public string subtitles_sisyphusPrime_intro4;
+        public string subtitles_sisyphusPrime_intro5;
+        public string subtitles_sisyphusPrime_intro6;
+        public string subtitles_sisyphusPrime_intro7;
+        public string subtitles_sisyphusPrime_intro8;
+        public string subtitles_sisyphusPrime_intro9;
+        public string subtitles_sisyphusPrime_intro10;
+        public string subtitles_sisyphusPrime_intro11;
+        
+        public string subtitles_sisyphusPrime_attack1;
+        public string subtitles_sisyphusPrime_attack2;
+        public string subtitles_sisyphusPrime_attack3;
+        public string subtitles_sisyphusPrime_attack4;
+        public string subtitles_sisyphusPrime_attack5;
+            
+        public string subtitles_sisyphusPrime_phaseChange;
+        public string subtitles_sisyphusPrime_respawnIntro;
+        
+        public string subtitles_sisyphusPrime_defeated1;
+        public string subtitles_sisyphusPrime_defeated2;
+        public string subtitles_sisyphusPrime_defeated3;
+        public string subtitles_sisyphusPrime_defeated4;
+        public string subtitles_sisyphusPrime_defeated5;
+
         public string subtitles_gabrielBoat1;
         public string subtitles_gabrielBoat2;
         public string subtitles_gabrielBoat3;
@@ -1432,6 +1465,7 @@ namespace UltrakULL.json
 
         public string leveltips_primeFirst1;
         public string leveltips_primeFirst2;
+        public string leveltips_primeSecond;
 
         public string leveltips_cybergrind;
         public string leveltips_sandbox1;
@@ -1487,6 +1521,8 @@ namespace UltrakULL.json
         public string enemyname_boss_insurrectionistRude;
         public string enemyname_boss_insurrectionistAngry;
         public string enemyname_boss_gabrielSecond;
+        public string enemyname_boss_fleshPanopticon;
+        public string enemyname_boss_sisyphusPrime;
 
 
         public string enemyname_type_lesserHusk;
@@ -1954,6 +1990,36 @@ namespace UltrakULL.json
         public string primeSanctum_first_secretText8;
         public string primeSanctum_first_secretText9;
 
+        public string primeSanctum_second_lockFirstLocked;
+        public string primeSanctum_second_lockSecondLocked;
+        public string primeSanctum_second_lockThirdLocked;
+        public string primeSanctum_second_lockUnlocked;
+        
+        public string primeSanctum_second_lockOpen;
+        public string primeSanctum_second_lockAreYouSure;
+        public string primeSanctum_second_lockYes1;
+        public string primeSanctum_second_lockYes2;
+        public string primeSanctum_second_lockYes3;
+        public string primeSanctum_second_lockYes4;
+        public string primeSanctum_second_lockYes5;
+        public string primeSanctum_second_lockNo1;
+        public string primeSanctum_second_lockNo2;
+        
+        
+        public string primeSanctum_second_secretText1;
+        public string primeSanctum_second_secretText2;
+        public string primeSanctum_second_secretText3;
+        public string primeSanctum_second_secretText4;
+        public string primeSanctum_second_secretText5;
+        public string primeSanctum_second_secretText6;
+        public string primeSanctum_second_secretText7;
+        public string primeSanctum_second_secretText8;
+        public string primeSanctum_second_secretText9;
+        public string primeSanctum_second_secretText10;
+        public string primeSanctum_second_secretText11;
+        public string primeSanctum_second_secretText12;
+        public string primeSanctum_second_secretText13;
+
     }
 
     public class Secret
@@ -1984,6 +2050,31 @@ namespace UltrakULL.json
 
         public string secretLevels_complete1;
         public string secretLevels_complete2;
+    }
+
+    public class Museum
+    {
+        public string museum_bookHakita1;
+        public string museum_bookHakita2;
+        public string museum_bookHakita3;
+        public string museum_bookHakita4;
+        public string museum_bookHakita5;
+        public string museum_bookHakita6;
+        public string museum_bookHakita7;
+        public string museum_bookHakita8;
+        public string museum_bookHakita9;
+        
+        public string museum_bookFancisXie1;
+        public string museum_bookFancisXie2;
+        public string museum_bookFancisXie3;
+        public string museum_bookFancisXie4;
+        public string museum_bookFancisXie5;
+        
+        public string museum_bookJerichoRus1;
+        public string museum_bookJerichoRus2;
+        public string museum_bookJerichoRus3;
+        public string museum_bookJerichoRus4;
+        public string museum_bookJerichoRus5;
     }
 
     public class Misc
