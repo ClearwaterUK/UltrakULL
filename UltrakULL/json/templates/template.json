@@ -1566,7 +1566,25 @@
 		"enemyBios_minosPrime_8": "",
 
 		"enemyBios_minosPrime_strategy1": "",
-		"enemyBios_minosPrime_strategy2": ""
+		"enemyBios_minosPrime_strategy2": "",
+		
+		"enemyBios_fleshPanopticon_1": "",
+		"enemyBios_fleshPanopticon_2": "",
+
+		"enemyBios_fleshPanopticon_strategy1": "",
+		"enemyBios_fleshPanopticon_strategy2": "",
+
+		"enemyBios_sisyphusPrime_1": "",
+		"enemyBios_sisyphusPrime_2": "",
+		"enemyBios_sisyphusPrime_3": "",
+		"enemyBios_sisyphusPrime_4": "",
+		"enemyBios_sisyphusPrime_5": "",
+		"enemyBios_sisyphusPrime_6": "",
+		"enemyBios_sisyphusPrime_7": "",
+		"enemyBios_sisyphusPrime_8": "",
+
+		"enemyBios_sisyphusPrime_strategy1": "",
+		"enemyBios_sisyphusPrime_strategy2": ""
 	},
 
 	"tutorial": {

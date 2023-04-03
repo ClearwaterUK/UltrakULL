@@ -2,6 +2,7 @@
 - **Added content related to Wait Of The World.**
 - Added subtitles and strings for P-2 and Sisyphus Prime.
 - Added shop strings for the S.R.S. Cannon.
+- Added enemy bio strings for Flash Panopticon and Sisyphus Prime.
 
 1.1.1
 - **Added basic support for Right-to-left languages, such as Arabic and Hebrew.**

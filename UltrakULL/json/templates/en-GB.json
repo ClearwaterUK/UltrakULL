@@ -1586,7 +1586,25 @@
         "enemyBios_minosPrime_8": "From the prison inside his own body, Minos helplessly watched as his soulless corpse, now controlled by parasites, tore apart everything he had worked so hard to build, cursing his own weakness for failing to protect his people, vowing to take revenge...",
         
         "enemyBios_minosPrime_strategy1": "It's rare for Minos Prime to give a window of opportunity to heal, so it's vital to learn what attacks leave him momentarily vulnerable and how to dodge them in a way that gives an advantageous position during those moments.",
-        "enemyBios_minosPrime_strategy2": "His snake projectiles can be parried using the Feedbacker for a full heal, even if the projectile doesn't hit Minos Prime."
+        "enemyBios_minosPrime_strategy2": "His snake projectiles can be parried using the Feedbacker for a full heal, even if the projectile doesn't hit Minos Prime.",
+        
+        "enemyBios_fleshPanopticon_1": "Flesh Panopticon is a superior version of the Flesh Prison, built to not only house the soul of King Sisyphus, but also with the capability to keep a watchful eye over any of his followers that may be imprisoned alongside him.",
+        "enemyBios_fleshPanopticon_2": "This feature was however never utilized, as Sisyphus' prime soul had already started forming before being imprisoned, leading angels to fear that he may be able to break out of his prison if awakened.",
+
+        "enemyBios_fleshPanopticon_strategy_1": "Though Flesh Panopticon creates fewer spawn than its predecessor, they're more resilient and their gaze is able to stop all wounds from healing. This may seem just a curse, but it nullifies the Whiplash's primary flaw, allowing it to be used freely to approach and destroy the spawn at close range.",
+        "enemyBios_fleshPanopticon_strategy_2": "Flesh Panopticon's explosives make it dangerous to stay on the ground, but they will phase through the Panopticon to avoid it harming itself, making standing on top of it safer as long as the black hole isn't nearby.",
+
+        "enemyBios_sisyphusPrime_1": "Though Minos was intelligent and persuasive, he was also a gentle and noble man. Such values mattered little to Sisyphus, who would gladly lie, cheat or kill if that's what is needed to protect his comrades.",
+        "enemyBios_sisyphusPrime_2": "In a hubristic show of power, Heaven decided that the only correct punishment for his sins would be breaking his will by subjecting him to an unending and impossible task, unaware of just how tenacious the spite of man can be.",
+        "enemyBios_sisyphusPrime_3": "For thousands of years, Sisyphus bided his time, suffering his punishment day after day without any sign of regret or remorse, waiting for the perfect chance to strike and subvert Heaven's tyrannical rule.",
+        "enemyBios_sisyphusPrime_4": "With the Disappearance of God and chaos in Heaven, Sisyphus' time had finally come, and once the angels returned, they were met with a force and fury that had boiled in the hearts of men for millennia, a warcry so fierce it shook the very foundations of Hell.",
+        "enemyBios_sisyphusPrime_5": "It was all for naught, however, as Sisyphus' charisma and drive had made his warriors dependent on his radiance and guidance. Although he did not know why yet, Gabriel recognised this flaw, having experienced it first hand, and ordered a focused assault to take down the king. ",
+        "enemyBios_sisyphusPrime_6": "He unsheathed his swords for the first time since time immemorial and beheaded Sisyphus, displaying his head for all to see. The morale of Sisyphus' army was broken and the rest of the war was little more than a formality without their shining beacon.",
+        "enemyBios_sisyphusPrime_7": "The failure of the insurrection was no surprise however, and few knew that better than Sisyphus himself. He knew he was fighting a losing battle, that even if they miraculously survived this encounter, they had no chance of winning a full scale war against all of Heaven. Yet he thrust his full heart and soul into battle with a wide smile on his face.",
+        "enemyBios_sisyphusPrime_8": "To him, fighting an impossible battle with full knowledge of its futility and taking joy in just the act of resistance itself is the ultimate rebellion against the oppressor. One must imagine Sisyphus happy.",
+
+        "enemyBios_sisyphusPrime_strategy_1": "Sisyphus' relentless attacks leave little room to recover stamina, but many of them are parryable, allowing for an instant refill.",
+        "enemyBios_sisyphusPrime_strategy_2": "The radiant power of the sun makes Sisyphus' explosive attacks very difficult to avoid, but since a dash gives temporary invincibility, good timing allows one to avoid the damage of an explosion without actually needing to escape its radius."
     },
     
 	"tutorial":{

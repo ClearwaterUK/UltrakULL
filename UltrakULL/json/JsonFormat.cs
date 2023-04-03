@@ -518,6 +518,24 @@ namespace UltrakULL.json
 
         public string enemyBios_minosPrime_strategy1;
         public string enemyBios_minosPrime_strategy2;
+        
+        public string enemyBios_fleshPanopticon_1;
+        public string enemyBios_fleshPanopticon_2;
+        
+        public string enemyBios_fleshPanopticon_strategy1;
+        public string enemyBios_fleshPanopticon_strategy2;
+        
+        public string enemyBios_sisyphusPrime_1;
+        public string enemyBios_sisyphusPrime_2;
+        public string enemyBios_sisyphusPrime_3;
+        public string enemyBios_sisyphusPrime_4;
+        public string enemyBios_sisyphusPrime_5;
+        public string enemyBios_sisyphusPrime_6;
+        public string enemyBios_sisyphusPrime_7;
+        public string enemyBios_sisyphusPrime_8;
+        
+        public string enemyBios_sisyphusPrime_strategy1;
+        public string enemyBios_sisyphusPrime_strategy2;
     }
 
     public class Subtitles

@@ -51,8 +51,7 @@ using UMM;
  * PissyFace+Panopticon descriptions in shop
  * Rumble support and other new options.
  * New sandbox settings (radient enemies, new brushes, enemy customizer)
- * Green RL
- * Something not working in in-game options
+ * Something not working in in-game options (in assist options)
  *
  *
  * 
