@@ -48,10 +48,8 @@ using UMM;
  * P-2 UPDATE DAMAGE REPORT
  *
  * Credits shuffled to actual level. Current credits stuff on main menu will need to be moved to a new class.
- * PissyFace+Panopticon descriptions in shop
  * Rumble support and other new options.
  * New sandbox settings (radient enemies, new brushes, enemy customizer)
- * Something not working in in-game options (in assist options)
  *
  *
  * 

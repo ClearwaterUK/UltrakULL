@@ -1744,6 +1744,7 @@ namespace UltrakULL.json
         public string assists_enemySilhouettesDistance;
         public string assists_enemySilhouettesDistanceMinimum;
         public string assists_enemySilhouettesOutlinesOnly;
+        public string assists_enemySilhouettesOutlineThickness;
         public string assists_major;
         public string assists_majorActivate;
         public string assists_gameSpeed;

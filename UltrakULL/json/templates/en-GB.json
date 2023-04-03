@@ -814,6 +814,7 @@
 		"assists_enemySilhouettesDistance": "ACTIVATION DISTANCE",
         "assists_enemySilhouettesDistanceMinimum": "ALWAYS ON",
 		"assists_enemySilhouettesOutlinesOnly": "OUTLINE ONLY",
+        "assists_enemySilhouettesOutlineThickness": "OUTLINE THICKNESS",
 		"assists_major": "MAJOR ASSISTS",
 		"assists_majorActivate": "ENABLE",
 		"assists_gameSpeed": "GAME SPEED",

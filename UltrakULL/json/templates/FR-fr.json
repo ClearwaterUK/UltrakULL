@@ -760,6 +760,7 @@
 		"assists_enemySilhouettesOutlines": "SILHOUETTES DES ENNEMIS",
 		"assists_enemySilhouettesDistance": "DISTANCE D'ACTIVATION",
 		"assists_enemySilhouettesOutlinesOnly": "CONTOURS SEULEMENT",
+        "assists_enemySilhouettesOutlineThickness": "ÉPAISSEUR DES CONTOURS",
         "assists_enemySilhouettesDistanceMinimum": "ALWAYS ON",
 		"assists_major": "ASSISTANCES MAJEURES",
 		"assists_majorActivate": "ACTIVÉES",
@@ -1520,7 +1521,25 @@
           "enemyBios_minosPrime_7": "À partir du prison dans son propre corps, Minos a regardé en toute impuissance, son corps maintenant côntrolé par des parasites, détruisant tout ce pour lequel il a travaillé si dur.En maudissant soi - même pour avoir échoué de proteger son peuple, il fait vŒu de vengeance...",
           
           "enemyBios_minosPrime_strategy1": "Il est rare que Minos Prime donne un période de temps pour pouvoir vous soigner, donc il est vitale d'aprendre lequels de ses attaques lui laissent vulnérable pendant un court moment, et comment les esquiver dans un tel façon qui permet de vous donner une position d'avantage lors de ces moments.",
-          "enemyBios_minosPrime_strategy2": "Ses projectiles en forme de serpent peuvent être reflectés avec le Renvoyeur pour vous soigner au plein, même si le projectile ne frappe pas Minos Prime."
+          "enemyBios_minosPrime_strategy2": "Ses projectiles en forme de serpent peuvent être reflectés avec le Renvoyeur pour vous soigner au plein, même si le projectile ne frappe pas Minos Prime.",
+
+          "enemyBios_fleshPanopticon_1": "FP1",
+          "enemyBios_fleshPanopticon_2": "FP2",
+
+          "enemyBios_fleshPanopticon_strategy1": "FPS1",
+          "enemyBios_fleshPanopticon_strategy2": "FPS2",
+
+          "enemyBios_sisyphusPrime_1": "SP1",
+          "enemyBios_sisyphusPrime_2": "SP2",
+          "enemyBios_sisyphusPrime_3": "SP3",
+          "enemyBios_sisyphusPrime_4": "SP4",
+          "enemyBios_sisyphusPrime_5": "SP5",
+          "enemyBios_sisyphusPrime_6": "SP6",
+          "enemyBios_sisyphusPrime_7": "SP7",
+          "enemyBios_sisyphusPrime_8": "SP8",
+
+          "enemyBios_sisyphusPrime_strategy1": "SPS1",
+          "enemyBios_sisyphusPrime_strategy2": "SPS2"
     },
     
 	"tutorial": {
