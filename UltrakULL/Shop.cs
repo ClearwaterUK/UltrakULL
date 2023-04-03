@@ -731,8 +731,20 @@ namespace UltrakULL
                 Text freezeframeDescriptionBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(freezeframeInfo, "Button"), "Text"));
                 freezeframeDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
-                //Rocket Launcher green variation (to do)
-                GameObject rlGreenVariation = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Green)");
+                //Rocket Launcher green variation
+                GameObject srsCannon = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Green)");
+                Text srsCannonName = GetTextfromGameObject(GetGameObjectChild(srsCannon, "Text"));
+                srsCannonName.text = LanguageManager.CurrentLanguage.shop.shop_rocketLauncherSrsCannon;
+                
+                GameObject srsCannonInfo = GetGameObjectChild(rocketlauncherWindow, "Variation Info (Green)");
+                Text srsCannonInfoName = GetTextfromGameObject(GetGameObjectChild(srsCannonInfo, "Name"));
+                srsCannonInfoName.text = LanguageManager.CurrentLanguage.shop.shop_rocketLauncherSrsCannon;
+                Text srsCannonInfoDescription = GetTextfromGameObject(GetGameObjectChild(srsCannonInfo, "Description"));
+                srsCannonInfoDescription.text =
+                    LanguageManager.CurrentLanguage.shop.shop_rocketLauncherSrsCannonDescription1 + "\n\n" +
+                    LanguageManager.CurrentLanguage.shop.shop_rocketLauncherSrsCannonDescription2 + "\n\n" +
+                    LanguageManager.CurrentLanguage.shop.shop_rocketLauncherSrsCannonDescription3;
+                srsCannonInfoDescription.fontSize = 16;
 
                 //Rocket Launcher red variation (under construction)
                 GameObject rlRedVariation = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Red)");

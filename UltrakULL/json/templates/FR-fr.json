@@ -1047,6 +1047,11 @@
         "shop_rocketLauncherFreeze": "MINUTEUR",
         "shop_rocketLauncherFreezeDescription1": "Appuyer sur le tir alternative pour <color=orange>geler</color> les roquettes.",
         "shop_rocketLauncherFreezeDescription2": "Les roquettes gelées ont une distance d'explosion augmenté, et <color=orange>resteront gelées</color> entre les changement d'armes.",
+
+        "shop_rocketLauncherSrsCannon": "CANON S.R.S.",
+        "shop_rocketLauncherSrsCannonDescription1": "Appuyer sur le Tir Alternatif pour lancer une <color=orange>boule de canon</color>.",
+        "shop_rocketLauncherSrsCannonDescription2": "<color=orange>Maintenir</color> pour charger la <color=orange>distance</color>.",
+        "shop_rocketLauncherSrsCannonDescription3": "On ignore ce que signifie S.R.S.",
         
         "shop_armFeedbacker": "RENVOYEUR",
         "shop_armFeedbackerDescription1": "Coup de poing rapide avec des dégâts moyens.",

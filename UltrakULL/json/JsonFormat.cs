@@ -1258,6 +1258,11 @@ namespace UltrakULL.json
         public string shop_rocketLauncherFreezeDescription1;
         public string shop_rocketLauncherFreezeDescription2;
         public string shop_rocketLauncherFreezeDescription3;
+        
+        public string shop_rocketLauncherSrsCannon;
+        public string shop_rocketLauncherSrsCannonDescription1;
+        public string shop_rocketLauncherSrsCannonDescription2;
+        public string shop_rocketLauncherSrsCannonDescription3;
 
         public string shop_armFeedbacker;
         public string shop_armFeedbackerDescription1;

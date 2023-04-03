@@ -1102,6 +1102,11 @@
         "shop_rocketLauncherFreeze": "FREEZEFRAME",
         "shop_rocketLauncherFreezeDescription1": "Press Alt Fire to freeze rockets.",
         "shop_rocketLauncherFreezeDescription2": "Frozen rockets have a larger blast radius and will stay frozen even when switching weapons.",
+
+        "shop_rocketLauncherSrsCannon": "S.R.S. CANNON",
+        "shop_rocketLauncherSrsCannonDescription1": "Press Alt Fire to launch <color=orange>cannonball</color>.",
+        "shop_rocketLauncherSrsCannonDescription2": "<color=orange>Hold</color> to charge <color=orange>distance</color>.",
+        "shop_rocketLauncherSrsCannonDescription3": "No one knows what S.R.S. stands for.",
         
         "shop_armFeedbacker": "FEEDBACKER",
         "shop_armFeedbackerDescription1": "Fast punch with decent damage.",
