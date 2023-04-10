@@ -37,7 +37,9 @@ namespace UltrakULL.json
         public CheatStrings cheats;
         public Credits credits;
         public Misc misc;
-        
+
+        public SandboxStrings sandbox;
+
     }
 
     public class Credits
@@ -2119,6 +2121,8 @@ namespace UltrakULL.json
         public string spawner_sandbox;
         public string spawner_enemies;
         public string spawner_items;
+        public string spawner_special;
+        public string spawner_unlockables;
 
         public string stats_time;
         public string stats_kills;
@@ -2189,5 +2193,29 @@ namespace UltrakULL.json
         public string earlyAccessEnd2;
         public string earlyAccessEnd3;
 
+    }
+
+    public class SandboxStrings
+    {
+        public string sandbox_shop_timeOfDay;
+        public string sandbox_shop_worldOptions;
+        public string sandbox_shop_icons;
+
+        public string sandbox_shop_totalBoxes;
+        public string sandbox_shop_totalProps;
+        public string sandbox_shop_totalEnemies;
+        public string sandbox_shop_totalTime;
+
+        public string sandbox_shop_worldOptionsTitle;
+        public string sandbox_shop_worldOptionsEnable;
+        public string sandbox_shop_worldOptionsDisable;
+        public string sandbox_shop_worldOptionsEnabled;
+        public string sandbox_shop_worldOptionsDisabled;
+
+        public string sandbox_shop_mapBorder;
+
+        public string sandbox_shop_iconsTitle;
+        public string sandbox_shop_default;
+        public string sandbox_shop_pitr;
     }
 }

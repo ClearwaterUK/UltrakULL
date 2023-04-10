@@ -749,10 +749,7 @@
 		"hud_styleMeter": "",
 		"hud_styleInfo": "",
 
-		"spawner_sandboxTools": "",
-		"spawner_sandbox": "",
-		"spawner_enemies": "",
-		"spawner_items": "",
+
 
 		"crosshair_title": "",
 		"crosshair_type": "",
@@ -2070,9 +2067,38 @@
 		"classicHud_arm": "",
 		"classicHud_railcannonMeter": "",
 
+		"spawner_sandboxTools": "",
+		"spawner_sandbox": "",
+		"spawner_enemies": "",
+		"spawner_items": "",
+		"spawner_special": "",
+		"spawner_unlockables": "",
+
 		"earlyAccessEnd1": "",
 		"earlyAccessEnd2": "",
 		"earlyAccessEnd3": ""
 
+	},
+	
+	"sandbox": {
+		"sandbox_shop_timeOfDay": "",
+		"sandbox_shop_worldOptions": "",
+		"sandbox_shop_icons": "",
+		
+		"sandbox_shop_totalBoxes": "",
+		"sandbox_shop_totalProps": "",
+		"sandbox_shop_totalEnemies": "",
+		"sandbox_shop_totalTime": "",
+
+		"sandbox_shop_worldOptionsTitle": "",
+		"sandbox_shop_worldOptionsEnable": "",
+		"sandbox_shop_worldOptionsDisable": "",
+		"sandbox_shop_worldOptionsEnabled": "",
+		"sandbox_shop_worldOptionsDisabled": "",
+
+		"sandbox_shop_mapBorder": "",
+		"sandbox_shop_iconsTitle" : "",
+		"sandbox_shop_default": "",
+		"sandbox_shop_pitr": ""
 	}
 }

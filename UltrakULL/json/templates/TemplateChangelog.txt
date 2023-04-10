@@ -1,4 +1,52 @@
-﻿1.1.1:
+﻿1.2.0:
+
+--
+
+ADDED:
+
+New category: sandbox
+
+sandbox: sandbox_shop_timeOfDay
+sandbox: sandbox_shop_worldOptions
+		
+sandbox: sandbox_shop_icons
+sandbox: sandbox_shop_totalBoxes
+sandbox: sandbox_shop_totalProps
+sandbox: sandbox_shop_totalEnemies
+sandbox: sandbox_shop_totalTime
+
+sandbox: sandbox_shop_worldOptionsTitle
+sandbox: sandbox_shop_worldOptionsEnable
+sandbox: sandbox_shop_worldOptionsDisable
+sandbox: sandbox_shop_worldOptionsEnabled
+sandbox: sandbox_shop_worldOptionsDisabled
+
+sandbox: sandbox_shop_mapBorder
+sandbox: sandbox_shop_iconsTitle
+sandbox: sandbox_shop_default
+sandbox: sandbox_shop_pitr
+
+misc: spawner_special
+misc: spawner_unlockables
+
+
+
+--
+
+MODIFIED:
+
+misc: spawner_sandboxItems -> spawner_sandboxTools (Mistake on my behalf with the naming. Sorry!)
+
+Following strings have been moved to "misc" category:
+
+spawner_sandboxTools
+spawner_sandbox
+spawner_enemies
+spawner_items
+
+
+
+1.1.1:
 
 ADDED:
 

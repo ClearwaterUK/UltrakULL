@@ -766,10 +766,6 @@
 		"hud_styleMeter": "STYLE METER",
 		"hud_styleInfo": "STYLE INFO",
 
-        "spawner_sandboxTools": "SANDBOX ITEMS :^)",
-        "spawner_sandbox": "SANDBOX",
-        "spawner_enemies": "ENEMIES",
-        "spawner_items": "OBJETS",
 
 		"crosshair_title": "CROSSHAIR SETTINGS",
 		"crosshair_type": "CROSSHAIR TYPE",
@@ -2091,9 +2087,35 @@
         "classicHud_arm": "ARM",
         "classicHud_railcannonMeter": "CHARGE",
 
+        "spawner_sandboxTools": "SANDBOX ITEMS :^)",
+        "spawner_sandbox": "SANDBOX",
+        "spawner_enemies": "ENEMIES",
+        "spawner_items": "OBJETS",
+        "spawner_special": "SPECIAL",
+        "spawner_unlockables": "UNLOCKABLES",
+
         "earlyAccessEnd1": "THANKS FOR PLAYING",
         "earlyAccessEnd2": "ACT III: GODFIST SUICIDE is still under development.",
         "earlyAccessEnd3": "For news on its progress, follow us on"
 
-	}
+	},
+
+    "sandbox": {
+        "sandbox_shop_timeOfDay": "TIME OF DAY",
+        "sandbox_shop_worldOptions": "WORLD OPTIONS",
+        "sandbox_shop_icons": "ICONS",
+
+        "sandbox_shop_totalBoxes": "TOTAL BOXES BUILT",
+        "sandbox_shop_totalProps": "TOTAL PROPS PLACED",
+        "sandbox_shop_totalEnemies": "TOTAL ENEMIES SPAWNED",
+        "sandbox_shop_totalTime": "TOTAL TIME IN SANDBOX",
+
+        "sandbox_shop_worldOptionsTitle": "WORLD OPTIONS",
+        "sandbox_shop_worldOptionsEnable": "ENABLE",
+        "sandbox_shop_worldOptionsDisable": "DISABLE",
+        "sandbox_shop_worldOptionsEnabled": "ENABLED",
+        "sandbox_shop_worldOptionsDisabled": "DISABLED",
+
+        "sandbox_shop_mapBorder": "Map Border"
+    }
 }

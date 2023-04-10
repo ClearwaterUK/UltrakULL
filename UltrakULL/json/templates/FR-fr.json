@@ -713,10 +713,7 @@
 		"hud_styleMeter": "STYLE-O-MÈTRE",
 		"hud_styleInfo": "INFOS DE STYLE",
 
-        "spawner_sandboxTools": "OBJETS DU BAC À SABLE :^)",
-        "spawner_sandbox": "BAC À SABLE",
-        "spawner_enemies": "ENEMIS",
-        "spawner_items": "OBJETS",
+
 
 		"crosshair_title": "PARAMÈTRES VISEUR",
 		"crosshair_type": "TYPE DE VISEUR",
@@ -2012,11 +2009,44 @@
         "weapons_alreadyBought": "DÉJÀ ACHETÉ",
         "weapons_underConstruction": "SOUS CONSTRUCTION",
 
+        "spawner_sandboxTools": "OBJETS DU BAC À SABLE :^)",
+        "spawner_sandbox": "BAC À SABLE",
+        "spawner_enemies": "ENEMIS",
+        "spawner_items": "OBJETS",
+        "spawner_special": "SPECIAUX",
+        "spawner_unlockables": "BONUS",
+
+        "classicHud_health": "SANTÉ",
+        "classicHud_stamina": "ÉNERGIE",
+        "classicHud_weapon": "ARME",
+        "classicHud_arm": "BRAS",
+        "classicHud_railcannonMeter": "CHARGE",
+
         "earlyAccessEnd1": "MERCI D'AVOIR JOUÉ",
         "earlyAccessEnd2": "ACTE III: SUICIDE DIVIN est encore en développement.",
         "earlyAccessEnd3": "Pour avoir des nouvelles sur le développement, suivez-nous sur:"
-        
-        
-        
-	}
+
+	},
+    "sandbox": {
+        "sandbox_shop_timeOfDay": "TEMPS DU JOUR",
+        "sandbox_shop_worldOptions": "OPTIONS DU MONDE",
+        "sandbox_shop_icons": "ICÔNES",
+
+        "sandbox_shop_totalBoxes": "N° DE BOÏTES PLACÉS",
+        "sandbox_shop_totalProps": "N° DE PIÈCES PLACÉS",
+        "sandbox_shop_totalEnemies": "N° D'ENNEMIES PLACÉS",
+        "sandbox_shop_totalTime": "TEMPS TOTALE DANS BOÏTE À SABLE",
+
+        "sandbox_shop_worldOptionsTitle": "OPTIONS DU MONDE",
+        "sandbox_shop_worldOptionsEnable": "ACTIVÉ",
+        "sandbox_shop_worldOptionsDisable": "DÉSACTIVÉ",
+        "sandbox_shop_worldOptionsEnabled": "ACTIVER",
+        "sandbox_shop_worldOptionsDisabled": "DÉSACTIVER",
+
+        "sandbox_shop_mapBorder": "Bordure du Monde",
+
+        "sandbox_shop_iconsTitle" : "PAQUETS D'ICÔNES",
+        "sandbox_shop_default": "DÉFAUT",
+        "sandbox_shop_pitr": "PITR"
+    }
 }

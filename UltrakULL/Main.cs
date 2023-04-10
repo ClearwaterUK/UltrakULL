@@ -51,7 +51,6 @@ using UMM;
  * Rumble support and other new options.
  * New sandbox settings (radient enemies, new brushes, enemy customizer)
  *
- *
  * 
  * */
 
@@ -348,13 +347,15 @@ namespace UltrakULL
                 Logging.Message("Switching scenes...");
                 Scene currentLevel = SceneManager.GetActiveScene();
                 string levelName = currentLevel.name;
-
-                if (Harmony_Patches.InjectLanguageButton.languageButtonText != null)
+                
+                /*if (Harmony_Patches.InjectLanguageButton.languageButtonText != null)
                 {
                     Harmony_Patches.InjectLanguageButton.languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
                     Harmony_Patches.InjectLanguageButton.languageButtonTitleText.text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
-                }
+                }*/
+                
                 //Each scene (level) has an object called Canvas. Most game objects are there.
+                Logging.Message("Canvas");
                 GameObject canvasObj = GetInactiveRootObject("Canvas");
                 if (!canvasObj)
                 {
@@ -464,6 +465,7 @@ namespace UltrakULL
                                 }
                                 else if (levelName == "uk_construct")
                                 {
+                                    
                                     Logging.Message("Sandbox");
                                     Sandbox sandbox = new Sandbox(ref canvasObj);
                                 }
@@ -506,9 +508,7 @@ namespace UltrakULL
             if (SceneManager.GetActiveScene().name == "Main Menu")
             {
                  yield return new WaitForSeconds(0.50f);
-
-            Console.WriteLine("init");
-            Console.WriteLine(frontEnd.name);
+                 
             //Open Language Folder button in Options->Langauge
             
             Text openLangFolderText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd,"OptionsMenu"), "Language Page"),"Scroll Rect (1)"),"Contents"),"OpenLangFolder"),"Slot Text"));
