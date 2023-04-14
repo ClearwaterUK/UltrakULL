@@ -4,6 +4,7 @@
 - Added shop strings for the S.R.S. Cannon.
 - Added enemy bio strings for Flash Panopticon and Sisyphus Prime.
 - Added strings for the two new categories in the spawner arm.
+- Added strings for the enemy/object modifier in the cheat menu.
 - Refactored and moved several key strings in the templates. Be sure to consult the template changelog.
 
 1.1.1

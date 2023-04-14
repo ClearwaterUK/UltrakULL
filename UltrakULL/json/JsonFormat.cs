@@ -2189,6 +2189,28 @@ namespace UltrakULL.json
         public string classicHud_arm;
         public string classicHud_railcannonMeter;
 
+        public string enemyAlter_title;
+        public string enemyAlter_sizeTitle;
+        public string enemyAlter_uniformToggle;
+        public string enemyAlter_uniformSmall;
+        public string enemyAlter_uniformDefault;
+        public string enemyAlter_uniformLarge;
+        public string enemyAlter_metaTitle;
+        public string enemyAlter_metaFrozen;
+        public string enemyAlter_metaBreakable;
+        public string enemyAlter_metaUnbreakable;
+        public string enemyAlter_metaWeak;
+        public string enemyAlter_jumpPadTitle;
+        public string enemyAlter_jumpPadPower;
+        public string enemyAlter_radianceTitle;
+        public string enemyAlter_radianceEnable;
+        public string enemyAlter_radianceDetails_tier;
+        public string enemyAlter_radianceDamage_tier;
+        public string enemyAlter_radianceHealth_tier;
+        public string enemyAlter_radianceSpeed_tier;
+        public string enemyAlter_boss_title;
+        public string enemyAlter_boss_description;
+        
         public string earlyAccessEnd1;
         public string earlyAccessEnd2;
         public string earlyAccessEnd3;

@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,6 +30,8 @@ namespace UltrakULL
         private void PatchMisc()
         {
             GameObject sandboxShop = GameObject.Find("Sandbox Shop");
+            
+
             
             GameObject sandboxShopCanvas =
                 GetGameObjectChild(GetGameObjectChild(sandboxShop, "Canvas"), "Border");
@@ -85,8 +88,67 @@ namespace UltrakULL
             
             
             // Sandbox enemy modifier menu
+
+            GameObject panel = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Canvas"),"Alter Menu Wrapper"),"Sandbox Alter Menu"),"Spawning Menu");
             
-            GameObject enemyAlterMenu = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Canvas"),"Alter Menu Wrapper"),"Sandbox Alter Menu"),"Spawning Menu"),"Scroll View"),"Viewport");
+            GameObject enemyAlterMenu = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(panel,"Scroll View"),"Viewport"),"Content");
+            
+            Text enemyAlterMenuTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(enemyAlterMenu, "Header"),"Title"));
+            enemyAlterMenuTitle.text = LanguageManager.CurrentLanguage.misc.enemyAlter_title;
+
+            GameObject enemyAlterSizeMenu = GetGameObjectChild(enemyAlterMenu, "Size Options");
+            Text enemyAlterSizeTitle = GetTextfromGameObject(GetGameObjectChild(enemyAlterSizeMenu, "Title (1)"));
+            enemyAlterSizeTitle.text = LanguageManager.CurrentLanguage.misc.enemyAlter_sizeTitle;
+
+            Text enemyAlterSizeUniform = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(enemyAlterSizeMenu, "Toggle"), "Label"));
+            enemyAlterSizeUniform.text = LanguageManager.CurrentLanguage.misc.enemyAlter_uniformToggle;
+
+            GameObject enemyAlterSizeUniformContainer = GetGameObjectChild(GetGameObjectChild(enemyAlterSizeMenu, "Uniform Container"),"Image");
+            Text enemyAlterSizeUniformContainerSmaller = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(enemyAlterSizeUniformContainer, "Divide By Two Button"), "Text"));
+            Text enemyAlterSizeUniformContainerDefault = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(enemyAlterSizeUniformContainer, "Default Size Button"), "Text"));
+            Text enemyAlterSizeUniformContainerLarger = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(enemyAlterSizeUniformContainer, "Time Two Button"), "Text"));
+            enemyAlterSizeUniformContainerSmaller.text = LanguageManager.CurrentLanguage.misc.enemyAlter_uniformSmall;
+            enemyAlterSizeUniformContainerDefault.text = LanguageManager.CurrentLanguage.misc.enemyAlter_uniformDefault;
+            enemyAlterSizeUniformContainerLarger.text = LanguageManager.CurrentLanguage.misc.enemyAlter_uniformLarge;
+            
+            GameObject enemyAlterMeta = GetGameObjectChild(enemyAlterMenu, "Meta Options");
+            Text enemyAlterMetaTitle = GetTextfromGameObject(GetGameObjectChild(enemyAlterMeta, "Title (1)"));
+            enemyAlterMetaTitle.text = LanguageManager.CurrentLanguage.misc.enemyAlter_metaTitle;
+            
+            Text enemyAlterMetaFrozen = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(enemyAlterMeta, "Toggle"),"Label"));
+            enemyAlterMetaFrozen.text = LanguageManager.CurrentLanguage.misc.enemyAlter_metaFrozen;
+            
+            GameObject enemyAlterJumpPad = GetGameObjectChild(enemyAlterMenu, "Jump Pad Options");
+            Text enemyAlterJumpPadTitle = GetTextfromGameObject(GetGameObjectChild(enemyAlterJumpPad, "Title (1)"));
+            enemyAlterJumpPadTitle.text = LanguageManager.CurrentLanguage.misc.enemyAlter_jumpPadTitle;
+
+            //Radiance options
+            GameObject enemyAlterRadiance = GetGameObjectChild(enemyAlterMenu, "Radiance Options");
+            Text enemyAlterRadianceTitle = GetTextfromGameObject(GetGameObjectChild(enemyAlterRadiance, "Title (1)"));
+            enemyAlterRadianceTitle.text = LanguageManager.CurrentLanguage.misc.enemyAlter_radianceTitle;
+            
+            Text enemyAlterRadianceEnable = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(enemyAlterRadiance,"Toggle"),"Label"));
+            enemyAlterRadianceEnable.text = LanguageManager.CurrentLanguage.misc.enemyAlter_radianceEnable;
+
+            //Radiance details
+            GameObject enemyAlterRadianceDetails = GetGameObjectChild(GetGameObjectChild(enemyAlterMenu, "Radiance Details"),"Radiance Settings");
+            Text enemyAlterRadianceDetailsTier = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(enemyAlterRadianceDetails,"Radiance Tier Container"),"Title (4)"));
+            enemyAlterRadianceDetailsTier.text = LanguageManager.CurrentLanguage.misc.enemyAlter_radianceDetails_tier;
+
+            Text enemyAlterRadianceHealth = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(enemyAlterRadianceDetails,"Health Multi Container"),"Title (4)"));
+            enemyAlterRadianceHealth.text = LanguageManager.CurrentLanguage.misc.enemyAlter_radianceHealth_tier;
+            
+            Text enemyAlterRadianceDamage = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(enemyAlterRadianceDetails,"Damage Multi Container"),"Title (4)"));
+            enemyAlterRadianceDamage.text = LanguageManager.CurrentLanguage.misc.enemyAlter_radianceDamage_tier;
+            
+            Text enemyAlterRadianceSpeed = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(enemyAlterRadianceDetails,"Speed Multi Container"),"Title (4)"));
+            enemyAlterRadianceSpeed.text = LanguageManager.CurrentLanguage.misc.enemyAlter_radianceSpeed_tier;
+            
+            //Close button
+            Text enemyAlterClose = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(panel, "Close Button"), "Text"));
+            enemyAlterClose.text = LanguageManager.CurrentLanguage.options.save_close;
+
+            //Note: Stuff for jump pads, props and enemy boss HP bars are located in SandboxPatches because of dynamic object creation by the game
 
         }
 

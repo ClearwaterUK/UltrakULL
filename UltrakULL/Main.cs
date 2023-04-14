@@ -38,9 +38,9 @@ using UMM;
  * - Misc keys as strings (comma, period, etc) missing
  * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
  * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable a patched function by returning true if an exception happens there, will then use original game code.
- * - Options->Sandbox icons names (Can't seem to get the dropdown data inside of the gameObject it's linked to - keeps saying 0 elements but when viewed manually in UnityExplorer it shows them)
  * 
  *  -- STUFF REPORTED BY ULL TEAM --
+ * Bugs/missing things reported in the Discord channels
  * 
  *  -- FOR NEXT HOTFIX --
  *
@@ -49,9 +49,9 @@ using UMM;
  *
  * Credits shuffled to actual level. Current credits stuff on main menu will need to be moved to a new class.
  * Rumble support and other new options.
- * New sandbox settings (radient enemies, new brushes, enemy customizer)
- *
- * 
+ * New loading overlay in the menu
+ * Make language button disappear like other option buttons when save menu is opened
+
  * */
 
 namespace UltrakULL

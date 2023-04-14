@@ -28,6 +28,27 @@ sandbox: sandbox_shop_pitr
 
 misc: spawner_special
 misc: spawner_unlockables
+misc: enemyAlter_title
+misc: enemyAlter_sizeTitle
+misc: enemyAlter_uniformToggle
+misc: enemyAlter_uniformSmall
+misc: enemyAlter_uniformDefault
+misc: enemyAlter_uniformLarge
+misc: enemyAlter_metaTitle
+misc: enemyAlter_metaFrozen
+misc: enemyAlter_metaWeak
+misc: enemyAlter_metaBreakable
+misc: enemyAlter_metaUnbreakable
+misc: enemyAlter_jumpPadTitle
+misc: enemyAlter_jumpPadPower
+misc: enemyAlter_radianceTitle
+misc: enemyAlter_radianceEnable
+misc: enemyAlter_radianceDetails_tier
+misc: enemyAlter_radianceHealth_tier
+misc: enemyAlter_radianceDamage_tier
+misc: enemyAlter_radianceSpeed_tier
+misc: enemyAlter_boss_title
+misc: enemyAlter_boss_description
 
 
 
