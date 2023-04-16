@@ -5,7 +5,7 @@ namespace UltrakULL
 {
     public static class Books
     {
-        public static string GetBookText()
+        public static string GetBookText(string originalText)
         {
             string currentLevel = SceneManager.GetActiveScene().name;
 
@@ -13,7 +13,7 @@ namespace UltrakULL
             {
                 case "CreditsMuseum2":
                 {
-                    return DevMuseum.getMuseumBook();
+                    return DevMuseum.getMuseumBook(originalText);
                 }
                 case "Level 1-4": {
                         return "<b>" + LanguageManager.CurrentLanguage.books.books_limboFourth1 + "</b>\n\n"

@@ -240,6 +240,12 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.levelTips.leveltips_cybergrind;
             }
+            
+            //Dev museum
+            if(currentLevel.Contains("CreditsMuseum2"))
+            {
+                return LanguageManager.CurrentLanguage.levelTips.leveltips_devMuseum;
+            }
 
             return ("Uninplemented level tip");
         }

@@ -1495,6 +1495,8 @@ namespace UltrakULL.json
         public string leveltips_cybergrind;
         public string leveltips_sandbox1;
         public string leveltips_sandbox2;
+        
+        public string leveltips_devMuseum;
     }
 
     public class EnemyNames
@@ -2117,18 +2119,53 @@ namespace UltrakULL.json
         public string museum_bookHakita7;
         public string museum_bookHakita8;
         public string museum_bookHakita9;
-        
-        public string museum_bookFancisXie1;
-        public string museum_bookFancisXie2;
-        public string museum_bookFancisXie3;
-        public string museum_bookFancisXie4;
-        public string museum_bookFancisXie5;
+        public string museum_bookHakita10;
+        public string museum_bookHakita11;
+        public string museum_bookHakita12;
+        public string museum_bookHakita13;
+
+        public string museum_bookFrancisXie1;
+        public string museum_bookFrancisXie2;
+        public string museum_bookFrancisXie3;
+        public string museum_bookFrancisXie4;
+        public string museum_bookFrancisXie5;
+        public string museum_bookFrancisXie6;
+        public string museum_bookFrancisXie7;
+        public string museum_bookFrancisXie8;
+        public string museum_bookFrancisXie9;
         
         public string museum_bookJerichoRus1;
         public string museum_bookJerichoRus2;
         public string museum_bookJerichoRus3;
         public string museum_bookJerichoRus4;
         public string museum_bookJerichoRus5;
+        public string museum_bookJerichoRus6;
+        public string museum_bookJerichoRus7;
+        public string museum_bookJerichoRus8;
+        public string museum_bookJerichoRus9;
+        public string museum_bookJerichoRus10;
+        
+        public string museum_bookBigRockBMP1;
+        public string museum_bookBigRockBMP2;
+        public string museum_bookBigRockBMP3;
+        public string museum_bookBigRockBMP4;
+        public string museum_bookBigRockBMP5;
+        public string museum_bookBigRockBMP6;
+        public string museum_bookBigRockBMP7;
+        public string museum_bookBigRockBMP8;
+        
+        public string museum_bookMaximilianOvesson1;
+        public string museum_bookMaximilianOvesson2;
+        public string museum_bookMaximilianOvesson3;
+        
+        public string museum_bookVictoriaHolland1;
+        public string museum_bookVictoriaHolland2;
+        public string museum_bookVictoriaHolland3;
+        public string museum_bookVictoriaHolland4;
+        public string museum_bookVictoriaHolland5;
+        public string museum_bookVictoriaHolland6;
+        public string museum_bookVictoriaHolland7;
+        public string museum_bookVictoriaHolland8;
     }
 
     public class Misc

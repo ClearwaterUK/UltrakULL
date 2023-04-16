@@ -11,6 +11,65 @@
 		"bodyName": "Traduction française pour ULTRAKILL."
 	},
 
+    "devMuseum": {
+        "museum_bookHakita1": "<b>Salut!</b> Bienvenue au musée des développeurs. Je suis Hakita, le développeur principal du jeu. J'ai demarré le travail sur le jeu par moi-même, mais à travers le temps, le jeu a beaucoup grandi et j'ai eu plein de personnes merveilleuses m'aidant à travers les années, donc les voilà tous!",
+        "museum_bookHakita2": "Cet musée a été principalement créée par Vvizard, avec quelques retouches, itérations, écritures et des bonus par moi. Vous pouvez le retrouver dans la \"Salle de Pause\" dans le couloir et au gauche.",
+        "museum_bookHakita3": "Faites un tour! Le premier étage est dedié à tous les personnes qui ont contribué au développement du jeu, et le seconde étage sont plein de choses liés au développement, comme du contenu supprimé et des anciens versions des choses. Il y a aussi beaucoup de bonus caché partour dans le musée!",
+        "museum_bookHakita4": "La plupart des développeurs auront un livre comme ceci devant eux, auquel vous pouvez lire des détails de leurs contributions au jeu. Voici le mien!",
+        "museum_bookHakita5": "<b><color=orange>HAKITA</color> - CRÉATEUR DE ULTRAKILL</b>",
+        "museum_bookHakita6": "J'ai commencé le développement du jeu le 1er Février, 2018. A ce moment là, ce n'était que moi, avec FlyingDog et Toni Stigell me faisant un modèle en 3D de temps en temps. Bien que l'équipe de développement à bien changé et grandi depuis, je fais toujours la majorité du travail moi-même... Plutôt 60% maintenant que l'ancien 99%.",
+        "museum_bookHakita7": "Mes contributions sont:",
+        "museum_bookHakita8": "- Tout gestion, conception de jeu, conception de son, histoire et animation",
+        "museum_bookHakita9": "- Tout conception des niveaux (sauf cet musée, le Boîte à Sable et 5-S)",
+        "museum_bookHakita10": "- Toute muisque, sauf certains chansons dans la domaine publique, et des muisques par des compositeurs spéciaux (auquel vous pouvez trouver dans la couloir à droite)",
+        "museum_bookHakita11": "- La plupart d'écriture, programmation et direction d'art",
+        "museum_bookHakita12": "- En général, si c'est dans le jeu, je faisais partie de cela d'une manière ou l'autre",
+        "museum_bookHakita13": "Merci d'avoir joué, et avec espoir apprécié, ULTRAKILL. C'est fou de imaginer qu'un projet de passion auquel j'ai commencé basé sur ce que j'ai cru était amusant dans les jeux à devenu un grand succès. J'ai rencontré tellement de personnes incroyables grâce à ce jeu et la communauté qui a grandi autour de ceci a été une grande source de joie (et angoisse) dans ma vie. C'est un don rare de non seulment créer un projet comme ceci avec la contrôle créatif totale, mais de pouvoir travailler grâce à mon propre art sans m'obliger à compromettre ma vision, et c'est tout grâce à New Blood, les développeurs ici dans ce musée, et le plus important... <b>VOUS!</b>",
+
+        "museum_bookFrancisXie1": "<b><color=#4AACBD>FRANCIS XIE</color> - ARTISTE CONCEPTES ET TEXTURES</b>",
+        "museum_bookFrancisXie2": "Francis à rejoint l'équipe en 2021, autour du démarrage du développement du couche Colère, quand il a été ajouté en tant que artiste générale chez New Blood grâce à son incroyable art de ULTRAKILL.",
+        "museum_bookFrancisXie3": "Ses plus grands contributions sont:",
+        "museum_bookFrancisXie4": "- Les concepts pour le Léviathan, le Nocher, et les versions de Minos et Sisyphe, ainsi que leurs portraits.",
+        "museum_bookFrancisXie5": "- Le concept pour l'orgue dans 6-2: ESTHÉTIQUES DE HAINE",
+        "museum_bookFrancisXie6": "- Le concept pour une arme supprimée appelé le Coupeur-Laser",
+        "museum_bookFrancisXie7": "- Les textures du niveau pour 5-3: NAVIRE DES FOUX, ainsi que tous les textures dans la couche Hérésie",
+        "museum_bookFrancisXie8": "- Les concepts des peluches de tous les développeurs",
+        "museum_bookFrancisXie9": "\"Je ne serais simplement pas ici sans ce jeu, et je suis tellement heureux que ça soit ULTRAKILL. Merci à Hakita, toute l'équipe de développement; et tout le monde chez New Blood pour étant des supers gens qui supportent toujours ce que je fais. Des remerciements spéciaux à mon meilleur ami qui m'a encouragé de poursuivre ce que j'adores vraiment; étant une partie de cet équipe est un rêve devenu vrai pour moi. A la santé du meilleur projet!\"",
+
+        "museum_bookJerichoRus1": "<b><color=orange>JERICHO_RUS</color> - ARTISTE CONCEPTES ET TEXTURES</b>",
+        "museum_bookJerichoRus2": "Jericho à rejoint l'équipe en 2019, juste avant la sortie originale du démo de Prélude. Il est responsable de la majorité des conceptes des caractères, et les conceptes des armes, ainsi que tous les textures de niveau pour les couches 2 3 et 4, et quelques textures pour la couche Colère.",
+        "museum_bookJerichoRus3": "Ses plus grands contributions sont:",
+        "museum_bookJerichoRus4": "- Les conceptes pour V1 et Gabriel",
+        "museum_bookJerichoRus5": "- Les conceptes pour la majorité des ennemies, tels que le Drone, le Nettoyeur et le Soldat",
+        "museum_bookJerichoRus6": "- Les concepts pour tous les armes et armes alternatives, sauf le revolver originale et le fusil à pompe",
+        "museum_bookJerichoRus7": "- L'art de promotion principale, qui est aussi utilise comme art de couverture",
+        "museum_bookJerichoRus8": "- La plupart des textures de niveaux, avec tous les textures pour les couches 2 3 et 4",
+        "museum_bookJerichoRus9": "- Tout l'art dans 2-S",
+        "museum_bookJerichoRus10": "\"Salut, mes remerciements à toute l'équipe de dévélopement et à vous tous pour vos appréciations avec ce que nous créeons. J'ai rencontré tellement de gens merveilleuses à travers le développement de ULTRAKILL, et j'espères continuer à faire ceci. Salutations à SXBIG et Luvoid!\"",
+
+        "museum_bookBigRockBMP1": "<b><color=#DA6B6D>BIGROCKBMP</color> - CONCEPT ARTIST</b>",
+        "museum_bookBigRockBMP2": "BigRock joined the team in early 2019, during the Prelude's development. He was the first concept artist for the game and responsible for the designs for many of the game's bosses, such as the game's first ever character design, the Swordsmachine.",
+        "museum_bookBigRockBMP3": "Some of his biggest contributions include:",
+        "museum_bookBigRockBMP4": "- The designs for many of the game's bosses, such as the Swordsmachine, the Corpse of King Minos, and the Hideous Mass",
+        "museum_bookBigRockBMP5": "- The designs for many of the game's enemies, such as the Mindflayer, the Idol and the Sentry",
+        "museum_bookBigRockBMP6": "- The designs for all of the bosses in the Prime Sanctums",
+        "museum_bookBigRockBMP7": "- The painting of the rocket launcher wielding Ferryman in 5-3: SHIP OF FOOLS",
+        "museum_bookBigRockBMP8": "\"When Hakita asked me to design a boss for his game I had no idea that ULTRAKILL would become this big. To see so many people draw fanart of the characters I've designed is both intimidating as it is inspiring me to continue, try and grow as an artist, and I hope my work inspires someone to pick up a pencil as well.\"",
+
+        "museum_bookMaximilianOvesson1": "<b><color=#8f65da>MAXIMILIAN OVESSON</color> - UI ARTIST</b>",
+        "museum_bookMaximilianOvesson2": "Maximilian joined the team in 2018, early in the game's development. He's responsible for the weapon icons used in the UI, the game over skull animation as well as the game's logo.",
+        "museum_bookMaximilianOvesson3": "\"I'm proud to have played a small role in creating ULTRAKILL and grateful for the opportunity to be a part of this game. Thank you for having me and thank you to all the players for your support.\"",
+
+        "museum_bookVictoriaHolland1": "<b><color=#F5ABB9>VICTORIA HOLLAND</color> - LEAD 3D ARTIST AND GRAPHICS PROGRAMMER</b>",
+        "museum_bookVictoriaHolland2": "Victoria joined the team in early 2020, late into the Limbo layer's development. She started off working alongside Sam but from Act 2 onwards, she's been responsible for all 3D models in the game with the only exception of the Sisyphean Insurrectionist. She also handles the programming of all shaders and almost all graphical systems and optimizations.",
+        "museum_bookVictoriaHolland3": "Some of her biggest contributions include:",
+        "museum_bookVictoriaHolland4": "- Many of the Act 1 models, including the Filth, the Corpse of King Minos and the Railcannon",
+        "museum_bookVictoriaHolland5": "- All of the Act 2 models, except the Sisyphean Insurrectionist",
+        "museum_bookVictoriaHolland6": "- Programming for all the shaders",
+        "museum_bookVictoriaHolland7": "- Programming for most graphical systems and optimizations",
+        "museum_bookVictoriaHolland8": "\"Waste no time to fear. Take the leap and embrace the person you want to be. You're not alone, so live your authentic self, and always enjoy the journey.\""
+    },
+
     "credits":{
         "credits_title": "ULTRAKILL",
         "credits_createdBy": "UN JEU CRÉE PAR <color=orange>ARSI \"HAKITA\" PATALA</color>",
@@ -994,7 +1053,9 @@
 
 		"leveltips_cybergrind": "Si vous vous faites envoyer trop loin de l'arène, le surpompement du <color=lime>SURCHARGEMENT</color> est une bonne façon d'y revenir.",
         "leveltips_sandbox1": "<color=orange>LES CODES DE TRICHE</color> peuvent être activés dans les autres niveaux en entrant les touches suivantes:",
-        "leveltips_sandbox2": "L'activation des codes de triches désactiveras les rangs de fin de niveau."
+        "leveltips_sandbox2": "L'activation des codes de triches désactiveras les rangs de fin de niveau.",
+        
+        "leveltips_devMuseum": "Les armes supprimés peuvent être ramassés chez le deuxième étage."
 	},
 	"shop": {
         "shop_tipofthedayTitle": "CONSEIL DU JOUR",

@@ -51,6 +51,7 @@ using UMM;
  * Rumble support and other new options.
  * New loading overlay in the menu
  * Make language button disappear like other option buttons when save menu is opened
+ * Delete Credits category in JSON since DevMuseum now replaces it
 
  * */
 

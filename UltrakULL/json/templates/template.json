@@ -14,7 +14,62 @@
 	},
 	
 	"devMuseum": {
+		"museum_bookHakita1": "",
+		"museum_bookHakita2": "",
+		"museum_bookHakita3": "",
+		"museum_bookHakita4": "",
+		"museum_bookHakita5": "",
+		"museum_bookHakita6": "",
+		"museum_bookHakita7": "",
+		"museum_bookHakita8": "",
+		"museum_bookHakita9": "",
+		"museum_bookHakita10": "",
+		"museum_bookHakita11": "",
+		"museum_bookHakita12": "",
+		"museum_bookHakita13": "",
 		
+		"museum_bookFrancisXie1": "",
+		"museum_bookFrancisXie2": "",
+		"museum_bookFrancisXie3": "",
+		"museum_bookFrancisXie4": "",
+		"museum_bookFrancisXie5": "",
+		"museum_bookFrancisXie6": "",
+		"museum_bookFrancisXie7": "",
+		"museum_bookFrancisXie8": "",
+		"museum_bookFrancisXie9": "",
+
+		"museum_bookJerichoRus1": "",
+		"museum_bookJerichoRus2": "",
+		"museum_bookJerichoRus3": "",
+		"museum_bookJerichoRus4": "",
+		"museum_bookJerichoRus5": "",
+		"museum_bookJerichoRus6": "",
+		"museum_bookJerichoRus7": "",
+		"museum_bookJerichoRus8": "",
+		"museum_bookJerichoRus9": "",
+		"museum_bookJerichoRus10": "", 
+		
+		"museum_bookBigRockBMP1": "",
+		"museum_bookBigRockBMP2": "",
+		"museum_bookBigRockBMP3": "",
+		"museum_bookBigRockBMP4": "",
+		"museum_bookBigRockBMP5": "",
+		"museum_bookBigRockBMP6": "",
+		"museum_bookBigRockBMP7": "",
+		"museum_bookBigRockBMP8": "",
+
+		"museum_bookMaximilianOvesson1": "",
+		"museum_bookMaximilianOvesson2": "",
+		"museum_bookMaximilianOvesson3": "",
+
+		"museum_bookVictoriaHolland1": "",
+		"museum_bookVictoriaHolland2": "",
+		"museum_bookVictoriaHolland3": "",
+		"museum_bookVictoriaHolland4": "",
+		"museum_bookVictoriaHolland5": "",
+		"museum_bookVictoriaHolland6": "",
+		"museum_bookVictoriaHolland7": "",
+		"museum_bookVictoriaHolland8": "",
 	},
 
 	"credits": {
@@ -1030,7 +1085,9 @@
 
 		"leveltips_cybergrind": "",
 		"leveltips_sandbox1": "",
-		"leveltips_sandbox2": ""
+		"leveltips_sandbox2": "",
+
+		"leveltips_devMuseum": ""
 	},
 	"shop": {
 		"shop_tipofthedayTitle": "",
