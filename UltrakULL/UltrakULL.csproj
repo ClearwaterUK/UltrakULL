@@ -194,6 +194,7 @@
     <Compile Include="Harmony Patches\IntroText.cs" />
     <Compile Include="Harmony Patches\LevelNamePopup.cs" />
     <Compile Include="Harmony Patches\LevelStats.cs" />
+    <Compile Include="Harmony Patches\RumbleOptions.cs" />
     <Compile Include="Harmony Patches\SandboxPatches.cs" />
     <Compile Include="Harmony Patches\SaveSlotMenu.cs" />
     <Compile Include="Harmony Patches\ScanningStuff.cs" />

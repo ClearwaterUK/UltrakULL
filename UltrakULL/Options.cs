@@ -55,6 +55,12 @@ namespace UltrakULL
             screenshakeSlider.ifMin = LanguageManager.CurrentLanguage.options.general_screenShakeMinimum;
             screenshakeSlider.ifMax = LanguageManager.CurrentLanguage.options.general_screenShakeMaximum;
 
+            Text controllerRumbleText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Controller Rumble"), "Text"));
+            controllerRumbleText.text = LanguageManager.CurrentLanguage.options.general_controllerRumble;
+            
+            Text controllerRumbleTextCustomize =  GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(generalContent, "Controller Rumble"),"Select"), "Text"));
+            controllerRumbleTextCustomize.text = LanguageManager.CurrentLanguage.options.general_controllerRumbleCustomize;
+            
             Text restartWarningText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Restart Warning"), "Text"));
             restartWarningText.text = LanguageManager.CurrentLanguage.options.general_restartWarning;
 
@@ -688,11 +694,39 @@ namespace UltrakULL
             saveSlotsClose.text = LanguageManager.CurrentLanguage.options.save_close;
         }
 
+        private void PatchRumbleOptions(GameObject optionsMenu)
+        {
+            Text rumbleSettingsTitle = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text (1)"));
+            rumbleSettingsTitle.text = LanguageManager.CurrentLanguage.options.rumble_title;
+
+            Text rumbleFinalMultiplier = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Total"), "Text"));
+            rumbleFinalMultiplier.text = LanguageManager.CurrentLanguage.options.rumble_finalMultiplier;
+
+            Text rumbleCloseButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Close"), "Text"));
+            rumbleCloseButton.text = LanguageManager.CurrentLanguage.options.save_close;
+            
+            //Loop through each entry
+            GameObject rumbleEntryList = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu,"Scroll View"),"Viewport"),"Content");
+            for(int x = 0; x < 19; x++) //Hardcoded, amount may increase in future updates
+            {
+                GameObject entry = rumbleEntryList.transform.GetChild(x).gameObject;
+                //Throws an out of bounds error, but still swaps the text correctly...
+                Text entryIntensity = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(entry,"Button"),"Text (1)"));
+                entryIntensity.text = LanguageManager.CurrentLanguage.options.rumble_intensity;
+                
+                Text entryResetIntensity = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(entry,"Default Button (1)"),"Text"));
+                entryResetIntensity.text = LanguageManager.CurrentLanguage.options.rumble_reset;
+                
+                Text entryEndDelay = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(entry,"End Delay Container"),"Text (2)"));
+                entryEndDelay.text = LanguageManager.CurrentLanguage.options.rumble_endDelay;
+                
+                Text entryResetEndDelay = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(entry,"End Delay Container"),"Default Button"),"Text"));
+                entryResetEndDelay.text = LanguageManager.CurrentLanguage.options.rumble_reset;
+            }
+        }
+
         private void PatchOptions(GameObject optionsMenu)
         {
-            //Best to divide each section into it's own function.
-            //Makes it easier to maintain as well as make it easier to narrow down error-causing lines of code.
-
             if (optionsMenu != null)
             {
                 GameObject generalOptions = GetGameObjectChild(optionsMenu, "Gameplay Options");
@@ -703,6 +737,7 @@ namespace UltrakULL
                 GameObject assistOptions = GetGameObjectChild(optionsMenu, "Assist Options");
                 GameObject colorsOptions = GetGameObjectChild(optionsMenu, "ColorBlindness Options");
                 GameObject savesOptions = GetGameObjectChild(optionsMenu, "Save Slots");
+                GameObject rumbleOptions = GetGameObjectChild(optionsMenu, "Rumble Settings");
 
                 //Main buttons and text
                 Text optionsText = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text"));
@@ -745,6 +780,7 @@ namespace UltrakULL
                     this.PatchAssistOptions(assistOptions);
                     this.PatchColorsOptions(colorsOptions);
                     this.PatchSavesOptions(savesOptions);
+                    this.PatchRumbleOptions(rumbleOptions);
                 }
                 catch(Exception e)
                 {

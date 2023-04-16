@@ -1596,6 +1596,8 @@ namespace UltrakULL.json
         public string general_restartWarning;
         public string general_discordRpc;
         public string general_seasonalEvent;
+        public string general_controllerRumble;
+        public string general_controllerRumbleCustomize;
 
         public string controls_resetDefault;
         public string controls_movement;
@@ -1791,7 +1793,33 @@ namespace UltrakULL.json
         public string save_deleteNo;
         public string save_close;
         public string save_slotEmpty;
-
+        
+        public string rumble_title;
+        public string rumble_finalMultiplier;
+        public string rumble_coinToss;
+        public string rumble_dash;
+        public string rumble_heavyFallImpact;
+        public string rumble_heavyFall;
+        public string rumble_gunFire;
+        public string rumble_gunFireProjectile;
+        public string rumble_gunFireStrong;
+        public string rumble_nailgunFire;
+        public string rumble_railcannonIdle;
+        public string rumble_revolverCharge;
+        public string rumble_sawblade;
+        public string rumble_shotgunCharge;
+        public string rumble_superSaw;
+        public string rumble_jump;
+        public string rumble_magnet;
+        public string rumble_parryFlash;
+        public string rumble_punch;
+        public string rumble_slide;
+        public string rumble_whiplashThrow;
+        public string rumble_whiplashPull;
+        public string rumble_intensity;
+        public string rumble_endDelay;
+        public string rumble_reset;
+        
         public string language_title;
         public string language_languages;
         public string language_openLanguageFolder;

@@ -26,6 +26,9 @@ sandbox: sandbox_shop_iconsTitle
 sandbox: sandbox_shop_default
 sandbox: sandbox_shop_pitr
 
+options: general_controllerRumble
+options: general_controllerRumbleCustomize
+
 misc: spawner_special
 misc: spawner_unlockables
 misc: enemyAlter_title
@@ -49,6 +52,32 @@ misc: enemyAlter_radianceDamage_tier
 misc: enemyAlter_radianceSpeed_tier
 misc: enemyAlter_boss_title
 misc: enemyAlter_boss_description
+
+misc: rumble_title
+misc: rumble_finalMultiplier
+misc: rumble_coinToss
+misc: rumble_dash
+misc: rumble_heavyFallImpact
+misc: rumble_heavyFall
+misc: rumble_gunFire
+misc: rumble_gunFireProjectile
+misc: rumble_gunFireStrong
+misc: rumble_nailgunFire
+misc: rumble_railcannonIdle
+misc: rumble_revolverCherge
+misc: rumble_sawblade
+misc: rumble_shotgunCharge
+misc: rumble_superSaw
+misc: rumble_jump
+misc: rumble_magnet
+misc: rumble_parryFlash
+misc: rumble_punch
+misc: rumble_slide
+misc: rumble_whiplashThrow
+misc: rumble_whiplashPull
+misc: rumble_intensity
+misc: rumble_endDelay
+misc: rumble_reset
 
 
 
