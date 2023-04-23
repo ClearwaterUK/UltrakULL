@@ -47,14 +47,14 @@ using UMM;
  *
  * P-2 UPDATE DAMAGE REPORT
  *
- * Credits shuffled to actual level. Current credits stuff on main menu will need to be moved to a new class.
- * Rumble support and other new options.
  * New loading overlay in the menu
  * Make language button disappear like other option buttons when save menu is opened
  * Delete Credits category in JSON since DevMuseum now replaces it
  * Sissy Prime dubbing
  * Update install instructions on GitHub page (still says to extract to BIE folder when it should go in UMM Mods)
  * Couple of extra style bonuses
+ * 4-S isn't translated, but no errors. Probably forgot to add translation function to onSceneLoaded
+ * 5-2 throws errors with the audio swapper. Check with other levels too
  * */
 
 namespace UltrakULL
@@ -286,57 +286,7 @@ namespace UltrakULL
 
 
         }
-
-
-        public void addModCredits(GameObject frontEnd)
-        {
-            Text creditsFirst = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(frontEnd, "Credits"), "Text (1)"));
-            Text creditsSecond = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(frontEnd, "Credits"), "Text (2)"));
-
-            creditsFirst.text =
-                LanguageManager.CurrentLanguage.credits.credits_title + "\n\n"
-                + LanguageManager.CurrentLanguage.credits.credits_createdBy + "\n\n"
-
-                + LanguageManager.CurrentLanguage.credits.credits_helpedByTitle + "\n\n"
-
-                + LanguageManager.CurrentLanguage.credits.credits_helpedBy1 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_helpedBy2 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_helpedBy3 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_helpedBy4 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_helpedBy5 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_helpedBy6 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_helpedBy7 + "\n\n\n\n"
-
-                + LanguageManager.CurrentLanguage.credits.credits_contributionsTitle + "\n\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions1 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions2 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions3 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions4 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions5 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions6 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions7 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions8 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions9 + "\n";
-
-            creditsSecond.text =  "\n" 
-                + LanguageManager.CurrentLanguage.credits.credits_VATitle + "\n\n"
-
-                + LanguageManager.CurrentLanguage.credits.credits_VA1 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_VA2 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_VA3 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_VA4 + "\n\n\n\n\n\n\n"
-
-                + LanguageManager.CurrentLanguage.credits.credits_QATitle + "\n\n"
-                + LanguageManager.CurrentLanguage.credits.credits_QA1 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_QA2 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_QA3 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_QA4 + "\n";
-            
-            Text creditsBackButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd, "Credits"),"Back (1)"),"Text"));
-            creditsBackButton.text = LanguageManager.CurrentLanguage.shop.shop_back;
-
-        }
-
+        
         //Most of the hook logic and checks go in this function.
         public void onSceneLoaded(Scene scene, LoadSceneMode mode)
         {
@@ -410,8 +360,7 @@ namespace UltrakULL
                             {
                                 ultrakullLogoText.text += "\n<color=red>Unable to check for updates. Check console for info.</color>";
                             }
-
-                            this.addModCredits(canvasObj);
+                            
                             break;
                         }
 

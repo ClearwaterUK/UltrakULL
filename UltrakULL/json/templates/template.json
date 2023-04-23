@@ -359,43 +359,6 @@
 			
 		},
 	
-		"credits": {
-			"credits_title": "",
-			"credits_createdBy": "",
-	
-			"credits_helpedByTitle": "",
-			"credits_helpedBy1": "",
-			"credits_helpedBy2": "",
-			"credits_helpedBy3": "",
-			"credits_helpedBy4": "",
-			"credits_helpedBy5": "",
-			"credits_helpedBy6": "",
-			"credits_helpedBy7": "",
-	
-			"credits_contributionsTitle": "",
-			"credits_contributions1": "",
-			"credits_contributions2": "",
-			"credits_contributions3": "",
-			"credits_contributions4": "",
-			"credits_contributions5": "",
-			"credits_contributions6": "",
-			"credits_contributions7": "",
-			"credits_contributions8": "",
-			"credits_contributions9": "",
-	
-			"credits_VATitle": "",
-			"credits_VA1": "",
-			"credits_VA2": "",
-			"credits_VA3": "",
-			"credits_VA4": "",
-	
-			"credits_QATitle": "",
-			"credits_QA1": "",
-			"credits_QA2": "",
-			"credits_QA3": "",
-			"credits_QA4": ""
-		},
-	
 		"style": {
 			"style_airslam": "",
 			"style_airshot": "",
@@ -1236,6 +1199,7 @@
 			"levelName_cybergrind": "",
 			"levelName_sandbox": "",
 			"levelName_tutorial": "",
+			"levelName_devMuseum": "",
 	
 			"levelName_preludeFirst": "",
 			"levelName_preludeSecond": "",

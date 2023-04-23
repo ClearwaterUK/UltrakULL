@@ -171,8 +171,8 @@ namespace UltrakULL.json
                 language.subtitles,
                 language.style,
                 language.cheats,
-                language.credits,
-                language.misc
+                language.misc,
+                language.devMuseum
             };
             
             foreach(object component in translationComponents)

@@ -361,42 +361,6 @@
         "museum_cinemaStop": ""
     },
 
-    "credits":{
-        "credits_title": "ULTRAKILL",
-        "credits_createdBy": "UN JEU CRÉE PAR <color=orange>ARSI \"HAKITA\" PATALA</color>",
-
-        "credits_helpedByTitle": "AVEC L'AIDE DE:",
-        "credits_helpedBy1": "<color=orange>DAVE OSHRY</color> (PRODUCTEUR EXCLUSIF)",
-        "credits_helpedBy2": "<color=orange>PITR</color> (PROGRAMMEUR)",
-        "credits_helpedBy3": "<color=orange>RYANN VICTORIA</color> (ARTISTE 3D & PROGRAMMEUR ARTISTIQUE)",
-        "credits_helpedBy4": "<color=orange>SAMUEL JAMES BRYAN</color> (ARTISTE 3D)",
-        "credits_helpedBy5": "<color=orange>BIGROCKBMP</color> (CONCEPTEUR)",
-        "credits_helpedBy6": "<color=orange>JERICHO_RUS</color> (ILLUSTRATEUR, CONCEPTEUR ET ARTISTE)",
-        "credits_helpedBy7": "<color=orange>FRANCIS XIE</color> (CONCEPTEUR ET ARTISTE)",
-
-        "credits_contributionsTitle": "AVEC LA CONTRIBUTION SUPPLÉMENTAIRE DE:",
-        "credits_contributions1": "<color=orange>MAXIMILIAN OVESSON</color> (ARTISTE UI)",
-        "credits_contributions2": "<color=orange>JACOB H.H.R.</color> (ÉCRIVAIN [DIALOGUE])",
-        "credits_contributions3": "<color=orange>FLYINGDOG</color> (ARTISTE 3D)",
-        "credits_contributions4": "<color=orange>TONI STIGELL</color> (ARTISTE 3D)",
-        "credits_contributions5": "<color=orange>BEN MOIR</color> (PROGRAMMEUR)",
-        "credits_contributions6": "<color=orange>LUCAS VARNEY</color> (PROGRAMMEUR)",
-        "credits_contributions7": "<color=orange>EMANUIL \"CABALCROW\" CHIZHOV</color> (PROGRAMMEUR)",
-        "credits_contributions8": "<color=orange>HECKTECK</color> (PROGRAMMEUR)",
-        "credits_contributions9": "<color=orange>MEGANEKO</color> (MUSIQUE DU CYBERGRIND)",
-
-        "credits_VATitle": "AVEC LES VOIX DE:",
-        "credits_VA1": "<color=orange>GIANNI MATRAGRANO</color> (GABRIEL)",
-        "credits_VA2": "<color=orange> STEPHAN WEYTE </color> (MINOS PRIME)",
-        "credits_VA3": "<color=orange>MANDALORE HERRINGTON</color> (CHEVALIER-DRUIDE MYSTÉRIEUX)",
-        "credits_VA4": "<color=orange>JUST SHAMMY </color> (ET LE HIBOU)",
-
-        "credits_QATitle": "ET ASSURANCE DE LA QUALITÉE AUDIO PAR:",
-        "credits_QA1": "<color=orange>CAMERON MARTIN</color> (QA EN CHEF)",
-        "credits_QA2": "<color=orange>TUCKER WILKIN </color> (QA SENIOR)",
-        "credits_QA3": "<color=orange>SCOTT GURNEY </color> (QA TECHNIQUE)",
-        "credits_QA4": "<color=orange>DALIA FIGUEROA </color> (QA ET MATÉRIEL PROMOTIONNEL)"
-    },
     
     "style":{
         "style_airslam": "ÉCRASEMENT DANS L'AIR",
@@ -1209,6 +1173,7 @@
         "levelName_cybergrind": "LE CYBER GRIND",
 		"levelName_sandbox": "uk_construct",
         "levelName_tutorial": "TUTORIEL",
+        "levelName_devMuseum": "SALLE DE ULTRADÉVELOPPEMENT",
         
 		"levelName_preludeFirst": "DU MAUVAIS AU PIRE",
 		"levelName_preludeSecond": "L'ABBATOIR",

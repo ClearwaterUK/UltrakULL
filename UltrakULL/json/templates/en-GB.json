@@ -362,43 +362,6 @@
         "museum_rocketRaceResult": "TIME:"
     },
 
-    "credits":{
-        "credits_title": "ULTRAKILL",
-        "credits_createdBy": "A GAME CREATED BY <color=orange>ARSI \"HAKITA\" PATALA</color>",
-
-        "credits_helpedByTitle": "WITH THE HELP OF:",
-        "credits_helpedBy1": "<color=orange>DAVE OSHRY</color> (EXECUTIVE PRODUCER)",
-        "credits_helpedBy2": "<color=orange>PITR</color> (PROGRAMMER)",
-        "credits_helpedBy3": "<color=orange>RYANN VICTORIA</color> (3D ARTIST & SHADER PROGRAMMER)",
-        "credits_helpedBy4": "<color=orange>SAMUEL JAMES BRYAN</color> (3D ARTIST)",
-        "credits_helpedBy5": "<color=orange>BIGROCKBMP</color> (CONCEPT ARTIST)",
-        "credits_helpedBy6": "<color=orange>JERICHO_RUS</color> (ILLUSTRATOR, CONCEPT & TEXTURE ARTIST)",
-        "credits_helpedBy7": "<color=orange>FRANCIS XIE</color> (CONCEPT & TEXTURE ARTIST)",
-
-        "credits_contributionsTitle": "WITH ADDITIONAL CONTRIBUTIONS BY:",
-        "credits_contributions1": "<color=orange>MAXIMILIAN OVESSON</color> (UI ARTIST)",
-        "credits_contributions2": "<color=orange>JACOB H.H.R.</color> (WRITER [PROSE & DIALOGUE])",
-        "credits_contributions3": "<color=orange>FLYINGDOG</color> (3D ARTIST)",
-        "credits_contributions4": "<color=orange>TONI STIGELL</color> (3D ARTIST)",
-        "credits_contributions5": "<color=orange>BEN MOIR</color> (PROGRAMMER)",
-        "credits_contributions6": "<color=orange>LUCAS VARNEY</color> (PROGRAMMER)",
-        "credits_contributions7": "<color=orange>EMANUIL \"CABALCROW\" CHIZHOV</color> (PROGRAMMER)",
-        "credits_contributions8": "<color=orange>HECKTECK</color> (PROGRAMMER)",
-        "credits_contributions9": "<color=orange>MEGANEKO</color> (CYBER GRIND MUSIC COMPOSER)",
-
-        "credits_VATitle": "WITH VOICE ACTING BY:",
-        "credits_VA1": "<color=orange>GIANNI MATRAGRANO</color> (GABRIEL)",
-        "credits_VA2": "<color=orange> STEPHAN WEYTE </color> (MINOS PRIME)",
-        "credits_VA3": "<color=orange>MANDALORE HERRINGTON</color> (MDK)",
-        "credits_VA4": "<color=orange>JUST SHAMMY </color> (&OWL)",
-
-        "credits_QATitle": "AND QUALITY ASSURANCE BY:",
-        "credits_QA1": "<color=orange>CAMERON MARTIN</color> (LEAD QA)",
-        "credits_QA2": "<color=orange>TUCKER WILKIN </color> (SENIOR QA)",
-        "credits_QA3": "<color=orange>SCOTT GURNEY </color> (TECHNICAL QA)",
-        "credits_QA4": "<color=orange>DALIA FIGUEROA </color> (QA & PROMO MATERIAL)"
-    },
-    
     "style":{
         "style_airslam": "AIRSLAM",
         "style_airshot": "AIRSHOT",
@@ -1260,6 +1223,7 @@
         "levelName_cybergrind": "THE CYBER GRIND",
 		"levelName_sandbox": "uk_construct",
         "levelName_tutorial": "TUTORIAL",
+        "levelName_tutorial": "HALL OF ULTRADEVELOPMENT",
         
 		"levelName_preludeFirst": "INTO THE FIRE",
 		"levelName_preludeSecond": "THE MEATGRINDER",

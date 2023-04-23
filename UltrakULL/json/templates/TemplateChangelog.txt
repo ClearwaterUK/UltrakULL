@@ -1,10 +1,104 @@
 ﻿1.2.0:
 
+ADDED:
+
+New category: devMuseum
+
+[To prevent this changelog from being overly long, all multi-line entries are referred to as a single line. Check the templates to view the amount of lines each entry is split into.]
+
+devMuseum: museum_bookHakita
+devMuseum: museum_bookFrancisXie
+devMuseum: museum_bookJerichoRus
+devMuseum: museum_bookBigRockBMP
+devMuseum: museum_bookMaximilianOvesson
+devMuseum: museum_bookVictoriaHolland
+devMuseum: museum_bookToniStigell
+devMuseum: museum_bookFlyingDog
+devMuseum: museum_bookSamuelJamesBryan
+devMuseum: museum_bookQATeam
+devMuseum: museum_bookPitr
+devMuseum: museum_bookCabalcrow
+devMuseum: museum_bookLucasVarney
+devMuseum: museum_bookBenMoir
+devMuseum: museum_bookMeganeko
+devMuseum: museum_bookKeygenChurch
+devMuseum: museum_bookSalad
+devMuseum: museum_bookJacobHHR
+devMuseum: museum_bookVVizard
+devMuseum: museum_bookAdditionalMusic
+devMuseum: museum_bookAdditionalCredits
+devMuseum: museum_bookStephanWeyte
+devMuseum: museum_bookLenvalBrown
+devMuseum: museum_bookGianniMatragrano
+devMuseum: museum_bookMandalore
+
+devMuseum: museum_weaponsBeamcutter
+devMuseum: museum_weaponsBlackHoleCannon
+devMuseum: museum_weaponsRevolver
+devMuseum: museum_weaponsShotgun
+devMuseum: museum_weaponsNailgun
+
+devMuseum: museum_enemiesFilth
+devMuseum: museum_enemiesStray
+devMuseum: museum_enemiesSchism
+devMuseum: museum_enemiesSwordsmachine
+devMuseum: museum_enemiesMaliciousFace
+
+devMuseum: museum_plaquesMuseumTitle
+devMuseum: museum_plaquesArtRoom
+devMuseum: museum_plaquesNerdRoom
+devMuseum: museum_plaquesRestRoom
+devMuseum: museum_plaquesTalkRoom
+devMuseum: museum_plaquesHakita
+devMuseum: museum_plaquesFrancisXie
+devMuseum: museum_plaquesJerichoRus
+devMuseum: museum_plaquesBigRockBMP
+devMuseum: museum_plaquesMaxOvesson
+devMuseum: museum_plaquesVictoriaHolland
+devMuseum: museum_plaquesToniStigell
+devMuseum: museum_plaquesFlyingdog
+devMuseum: museum_plaquesCameronmartin
+devMuseum: museum_plaquesDaliaFigueroa
+devMuseum: museum_plaquesTuckerWilkin
+devMuseum: museum_plaquesScottGurney
+devMuseum: museum_plaquesPitr
+devMuseum: museum_plaquesHeckteck
+devMuseum: museum_plaquesCabalcrow
+devMuseum: museum_plaquesLucasVarney
+devMuseum: museum_plaquesBenMoir
+devMuseum: museum_plaquesDaveOshry
+devMuseum: museum_plaquesMeganeko
+devMuseum: museum_plaquesKeygenChurch
+devMuseum: museum_plaquesSalad
+devMuseum: museum_plaquesJacobHHR
+devMuseum: museum_plaquesVVizard
+devMuseum: museum_plaquesAdditionalMusic
+devMuseum: museum_plaquesAdditionalCredits
+devMuseum: museum_plaquesStephanWeyte
+devMuseum: museum_plaquesLenvalBrown
+devMuseum: museum_plaquesGianniMatragrano
+devMuseum: museum_plaquesJoyYoung
+devMuseum: museum_plaquesMandalore
+
+devMuseum: museum_rocketRace
+devMuseum: museum_rocketRaceResult
+
+devMuseum: museum_cinemaPlay
+devMuseum: museum_cinemaStop
+
+MODIFIED:
+
+REMOVED:
+Credits category and all containing strings
+
 --
 
 ADDED:
 
 New category: sandbox
+
+levelNames: levelName_devMuseum
+levelTips: levelTips_devMuseum
 
 sandbox: sandbox_shop_timeOfDay
 sandbox: sandbox_shop_worldOptions
@@ -93,6 +187,7 @@ spawner_sandboxTools
 spawner_sandbox
 spawner_enemies
 spawner_items
+
 
 
 

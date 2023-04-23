@@ -6,7 +6,12 @@
 - Added strings for the two new categories in the spawner arm.
 - Added strings for the enemy/object modifier in the cheat menu.
 - Added strings for the controller rumble tab in the options menu.
+- Added strings for all the dev museum content.
 - Refactored and moved several key strings in the templates. Be sure to consult the template changelog.
+- Removed the "Credits" category from the templates due to it being redundant thanks to the new dev museum.
+(NOTE: Mod credits will be moved to the dev museum in future.)
+
+- Template changelog is far too big to send here. Be sure to check the GitHub release page for the full changelog.
 
 1.1.1
 - **Added basic support for Right-to-left languages, such as Arabic and Hebrew.**

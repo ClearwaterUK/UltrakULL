@@ -35,49 +35,9 @@ namespace UltrakULL.json
         
         public Style style;
         public CheatStrings cheats;
-        public Credits credits;
         public Misc misc;
 
         public SandboxStrings sandbox;
-
-    }
-
-    public class Credits
-    {
-        public string credits_title;
-        public string credits_createdBy;
-
-        public string credits_helpedByTitle;
-        public string credits_helpedBy1;
-        public string credits_helpedBy2;
-        public string credits_helpedBy3;
-        public string credits_helpedBy4;
-        public string credits_helpedBy5;
-        public string credits_helpedBy6;
-        public string credits_helpedBy7;
-
-        public string credits_contributionsTitle;
-        public string credits_contributions1;
-        public string credits_contributions2;
-        public string credits_contributions3;
-        public string credits_contributions4;
-        public string credits_contributions5;
-        public string credits_contributions6;
-        public string credits_contributions7;
-        public string credits_contributions8;
-        public string credits_contributions9;
-
-        public string credits_VATitle;
-        public string credits_VA1;
-        public string credits_VA2;
-        public string credits_VA3;
-        public string credits_VA4;
-
-        public string credits_QATitle;
-        public string credits_QA1;
-        public string credits_QA2;
-        public string credits_QA3;
-        public string credits_QA4;
 
     }
 
@@ -1400,6 +1360,7 @@ namespace UltrakULL.json
         public string levelName_cybergrind;
         public string levelName_sandbox;
         public string levelName_tutorial;
+        public string levelName_devMuseum;
 
         public string levelName_preludeFirst;
         public string levelName_preludeSecond;
@@ -2226,6 +2187,7 @@ namespace UltrakULL.json
         public string museum_bookMeganeko1;
         public string museum_bookMeganeko2;
         public string museum_bookMeganeko3;
+        public string museum_bookMeganeko4;
         
         public string museum_bookKeygenChurch1;
         public string museum_bookKeygenChurch2;
@@ -2270,6 +2232,7 @@ namespace UltrakULL.json
         
         public string museum_bookLenvalBrown1;
         public string museum_bookLenvalBrown2;
+        public string museum_bookLenvalBrown3;
         
         public string museum_bookGianniMatragrano1;
         public string museum_bookGianniMatragrano2;
