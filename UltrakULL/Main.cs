@@ -530,7 +530,7 @@ namespace UltrakULL
         
         private async Task CheckForUpdates()
         {
-            string updateUrl = "https://api.github.com/repos/clearwatertm/ultrakull/releases/latest";
+            string updateUrl = "https://api.github.com/repos/clearwateruk/ultrakull/releases/latest";
             Client.DefaultRequestHeaders.Accept.Add( new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
             Client.DefaultRequestHeaders.UserAgent.TryParseAdd("request");
             Client.Timeout = TimeSpan.FromSeconds(5);
