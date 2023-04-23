@@ -69,7 +69,297 @@
         "museum_bookVictoriaHolland5": "- All of the Act 2 models, except the Sisyphean Insurrectionist",
         "museum_bookVictoriaHolland6": "- Programming for all the shaders",
         "museum_bookVictoriaHolland7": "- Programming for most graphical systems and optimizations",
-        "museum_bookVictoriaHolland8": "\"Waste no time to fear. Take the leap and embrace the person you want to be. You're not alone, so live your authentic self, and always enjoy the journey.\""
+        "museum_bookVictoriaHolland8": "\"Waste no time to fear. Take the leap and embrace the person you want to be. You're not alone, so live your authentic self, and always enjoy the journey.\"",
+
+        "museum_bookToniStigell1": "<b><color=orange>TONI STIGELL</color> - 3D ARTIST</b>",
+        "museum_bookToniStigell2": "Toni Stigell joined the team right around the start of development in early 2018. We had previously worked together on a few small projects including a now-cancelled stealth game called Untraceable, which is the origin of the thinking man statue that eventually became Cerberus.",
+        "museum_bookToniStigell3": "Alongside that, he modelled many of the early character models for ULTRAKILL until leaving the project in mid 2019. He also made the original Filth model's animations, and though those have since been replaced, Something Wicked still uses one of them, making that the only animation in the game that I haven't made myself.",
+        "museum_bookToniStigell4": "Some of his biggest contributions include:",
+        "museum_bookToniStigell5": "- The original models for the husks, Swordsmachine and Feedbacker arm",
+        "museum_bookToniStigell6": "- The design for the original version of the Filth",
+        "museum_bookToniStigell7": "- Getting me into DMC in the first place",
+
+
+        "museum_bookToniFlyingDog1": "<b><color=#6a36be>FLYINGDOG</color> - 3D ARTIST</b>",
+        "museum_bookToniFlyingDog2": "FlyingDog joined the team right at the start of development in early 2018, designing and creating many of the first 3D models and their textures. Although most of these models have since been remade and replaced, they're still based on his original designs and many of his original models can still be seen here and there as easter eggs. His final contribution to the game was the texture for the Feedbacker arm in mid 2019.",
+        "museum_bookToniFlyingDog3": "Some of his biggest contributions include:",
+        "museum_bookToniFlyingDog4": "- The designs and original models for the revolver, shotgun and Malicious Face",
+        "museum_bookToniFlyingDog5": "- The original model and texture for the nailgun",
+        "museum_bookToniFlyingDog6": "- The textures for the original versions of the husks and Swordsmachine",
+
+        "museum_bookSamuelJamesBryan1": "<b><color=orange>SAMUEL JAMES BRYAN</color> - 3D ARTIST</b>",
+        "museum_bookSamuelJamesBryan2": "Sam joined in mid 2019, early into the Limbo layer's development and is responsible for modelling most of the enemies in Act 1, including V1, V2 and Gabriel. His last modelling work for the game was the Sisyphean Insurrectionist in early 2021 and he has mostly moved on to different projects since then, though he still occasionally helps out with feedback and modelling advice.",
+        "museum_bookSamuelJamesBryan3": "\"No idea, ask Hakita.\"",
+
+        "museum_bookQATeam1": "<b><color=red>CAMERON MARTIN</color> - QUALITY ASSURANCE LEAD",
+        "museum_bookQATeam2": "<color=#6a36be>DALIA FIGUEROA</color> - QUALITY ASSURANCE, PROMO FOOTAGE & SCREENSHOTS",
+        "museum_bookQATeam3": "<color=#11c324>TUCKER WILKIN</color> - SENIOR QUALITY ASSURANCE",
+        "museum_bookQATeam4": "<color=#e28eb6>SCOTT GURNEY</color> - TECHNICAL QUALITY ASSURANCE</b>",
+        "museum_bookQATeam5": "The New Blood QA team (Cameron, Dalia, Tucker and Scott) are responsible for making sure the game runs properly and without any major bugs. It's thanks to them that ULTRAKILL looks and feels like a functioning game despite being a mess of duct tape, spaghetti, glue and prayers underneath. Prior to ULTRAKILL joining the New Blood catalogue, I had to do QA myself, and even that smaller amount of bugtesting makes me question how these people manage to stay sane.",
+        "museum_bookQATeam6": "...Well, relatively sane.",
+        "museum_bookQATeam7": "\"In the immortal words of the great Hungarian centre-forward Nandor Hidegkuti - 'Amikor eljön a forradalom, a zeneipar lesz az első amely menni fog. Köszönöm szépen'\"",
+        "museum_bookQATeam8": "\"Be it games, music, movies or the company of others, be sure to enjoy the good times that you experience and always look back on life with a positive note. Life is precious, and after all, It's your own show. Enjoy your life to its fullest and give everyone respect and love. A smile on someone's face is worth its weight in gold!\"",
+        "museum_bookQATeam9": "\"Of all the scars on my psyche, this one will always remain a favored one. from that cursed door to the accidental spawner arm slip, its been a great time regardless! Sometimes videogames can be cool as hell. hopefully we can get more of them!\"",
+        "museum_bookQATeam10": "\"Being able to help bring to fruition a strong creative vision like Hakita's has been an absolute honor and an unforgettable experience. I will remain forever grateful for the opportunity, and I look forward to whatever might come next!\"",
+
+
+        "museum_bookPitr1": "<b><color=orange>PITR</color> - LEAD PROGRAMMER</b>",
+        "museum_bookPitr2": "PITR already started helping out with programming in late 2019, but was officially added to the team in early 2020 thanks to his ULTRAKILL mods and an early attempt at a custom level system. He's responsible for most advanced programming in the game, such as systems like cheats, Cyber Grind patterns and subtitles. He also created the entirety of the Sandbox and 5-S, with only minor aesthetic touch-ups from me.",
+        "museum_bookPitr3": "Basically, if you look at the game's code and see anything that's actually done well, it's probably by him.",
+        "museum_bookPitr4": "Some of his biggest contributions include:",
+        "museum_bookPitr5": "- Programming and level design for the Sandbox and 5-S",
+        "museum_bookPitr6": "- Programming for most of the advanced systems like cheats, Cyber Grind patterns and subtitles",
+        "museum_bookPitr7": "- Lots of programming optimization and bugfixes",
+        "museum_bookPitr8": "- Lots of miscellaneous programming help",
+
+        "museum_bookHeckteck1": "<b><color=orange>HECKTECK</color> - ADDITIONAL PROGRAMMING</b>",
+        "museum_bookHeckteck2": "Heckteck was brought onto the team temporarily in early 2022 thanks to their experience and skills making mods for ULTRAKILL, to overhaul the style system to include staleness as well as other related quality of life features.",
+        "museum_bookHeckteck3": "\"the harvest is lacking this year\"",
+
+        "museum_bookCabalcrow1": "<b><color=silver>EMANUIL \"CABALCROW\" CHIZHOV</color> - ADDITIONAL PROGRAMMER</b>",
+        "museum_bookCabalcrow2": "CabalCrow was one of the first hardcore ULTRAKILL fans who helped spark the game's speedrunning scene. He also helped out a lot with figuring out bugs before the game got a QA team and recorded most of the trailer footage in early trailers. His programming contribution comes in the form of the climbstep system he created in 2020, which allows players to smoothly step onto and over small ledges and obstacles.",
+        "museum_bookCabalcrow3": "\"you know what they say: 50 bucks is 50 bucks\"",
+
+        "museum_bookLucasVarney1": "<b><color=#BD8BF3>LUCAS VARNEY</color> - ADDITIONAL PROGRAMMER</b>",
+        "museum_bookLucasVarney2": "Lucas is another New Blood programmer, mostly working on his own game but occasionally jumping in to help with ULTRAKILL when needed. His contributions have been mostly optimization related, helping make the game run better as well as creating development tools that allow for easier per-level optimization.",
+        "museum_bookLucasVarney3": "Many thanks to everyone here, including you, the one reading this! It's always been my dream to work on video games, but I never thought I'd be 'good enough' to do it professionally. I dropped out of high school early due to anxiety and I really felt like I was throwing my life away. But I never gave up, and I never will! Whoever you are out there, never lose hope, and always know that there's no shame in being yourself and doing the things you love, so long as nobody gets hurt. You're more than your label, and you're worth more than your credentials. Enjoy the little moments, embrace what makes you happy, and be the best person you can be.\"",
+
+        "museum_bookBenMoir1": "<b><color=#3EF242>BEN MOIR</color> - ADDITIONAL PROGRAMMER</b>",
+        "museum_bookBenMoir2": "Ben aka \"Zombie\" is New Blood's resident programming wizard. He hops around from project to project, fixing tricky issues and giving general programming advice. If there's a problem, he knows the solution.",
+        "museum_bookBenMoir3": "Although most of his work on ULTRAKILL is in the form of helping other programmers, he has himself also programmed some of the systems in the game, such as the controller support and the auto aim assist.",
+        "museum_bookBenMoir4": "\"Hey, Hakita! Can we say 'fuck' in the game?\"",
+
+        "museum_bookMeganeko1": "<b><color=#E93436>MEGANEKO</color> - GUEST COMPOSER</b>",
+        "museum_bookMeganeko2": "I met Meganeko in early 2020 after BigRock, who is a fan of his, noticed he followed the ULTRAKILL Twitter account and asked if he'd be interested in collaborating. Originally I didn't have anything specific in mind, but once he sent me a soundtest clip that showed the kind of sound he'd go for, it immediately struck me as the perfect music for an endless survival mode.",
+        "museum_bookMeganeko3": "That soundtest eventually, through months of iteration, became The Cyber Grind's titular background music. In a way, you can thank him for causing the creation of that mode.",
+        "museum_bookMeganeko4": "\"Playing the alpha demo got me incredibly inspired! Getting to channel that back into the game was a bit surreal. Big thanks to Hakita and BigRock for reaching out!\"",
+
+        "museum_bookKeygenChurch1": "<b><color=#aa0000>KEYGEN CHURCH</color> - GUEST COMPOSER</b>",
+        "museum_bookKeygenChurch2": "Keygen Church aka Master Boot Record approached me in mid-late 2022, and I was already a fan of his music as Keygen Church, so I was very happy to have him on board as a guest composer. The timing was perfect as well, since his style fits so well with the aesthetics of the Heresy layer, so he created the first battle theme for P-2, titled \"Tenebre Rosso Sangue\".",
+        "museum_bookKeygenChurch3": "We also collaborated on the connected ARG, with him doing most of the heavy lifting since he had already done similar things with his projects.",
+        "museum_bookKeygenChurch4": "\"Low Resolution. High Imagination. Praise the code.\"",
+
+        "museum_bookSalad1": "<b><color=#20FF20>SALAD</color> - ARTIST OF JAKITO</b>",
+        "museum_bookSalad2": "Salad drew Jakito.",
+        "museum_bookSalad3": "Some of their biggest contributions include:",
+        "museum_bookSalad4": "- Jakito",
+        "museum_bookSalad5": "\"Are you in or are you skin?\"",
+
+        "museum_bookJacobHHR1": "<b><color=#FFB2DC>JACOB H.H.R.</color> - WRITER (PROSE & DIALOGUE)</b>",
+        "museum_bookJacobHHR2": "Jacob joined the team in early 2020 to help write the prose and dialogue for the game after I met him through a mutual game developer friend. He's mostly responsible for the writing in the various books you find around the levels, as well as Gabriel's dialogue and the prose for the intermission cutscenes. In Act I, I came up with a general outline of what I wanted each text to have and he would write it with some tweaks and edits from me afterwards, while in Act II the prose writing was more of an even 50/50 split between us.",
+        "museum_bookJacobHHR3": "Most of those great poetic phrases and impactful lines that have become iconic in the ULTRAKILL community are thanks to his skills with the English language.",
+
+        "museum_bookVVizard1": "<b><color=#ee0c47>VVIZARD</color> - MUSEUM DEVELOPER</b>",
+        "museum_bookVVizard2": "Vvizard was picked up temporarily in late 2022 to create this museum thanks to his experience and skills with an early version of the ULTRAKILL level editor. He designed the level and made all the models and textures for it.",
+        "museum_bookVVizard3": "If you were wondering why it's the best looking level in the game, he's the reason.",
+        "museum_bookVVizard4": "\"ULTRAKILL is special to me in a way that is just a book's length worth of words, working on this game is something I will hold close to my heart, always. I hope I can continue to work with the wonderful people at New Blood and the interactions I've had with community helped bring me to be a part of this team. Sometimes I wonder where the dominos fall begins and where it will end. But if Oyff ever sees this, a good youtube video (The ULTRAKILL Rip and Tear) really can change your life.\"",
+
+        "museum_bookAdditionalMusic1": "ADDITIONAL MUSIC CREDITS:",
+        "museum_bookAdditionalMusic2": "\"Take Care\", the shop theme: Sampled from \"Were You Foolin'\" by the Russ Morgan Orchestra (Public domain)",
+        "museum_bookAdditionalMusic3": "\"Cerberus\" in 0-5: CERBERUS: Classical music sampled from \"Mars, the Bringer of War\" from Gustav Holst's Planets Suite (Public domain)",
+        "museum_bookAdditionalMusic4": "\"Clair de Lune\" in 1-4: CLAIR DE LUNE: Written by Claude Debussy, performance by Laurens Goedhart (CC 3.0 license)",
+        "museum_bookAdditionalMusic5": "\"BWV 639 'I call to you, Lord Jesus Christ'\" in 3-2: IN THE FLESH: Written by Johann Sebastian Bach (Public domain)",
+        "museum_bookAdditionalMusic6": "\"The Spinal Staircase\" in P-1: SOUL SURVIVOR: Sampled from \"Sourire d'Avril\" composed by Maurice Depret (Public domain)",
+        "museum_bookAdditionalMusic7": "\"CHAOS\" in P-1: SOUL SURVIVOR: Bass clarinet and soprano saxophone improvised and recorded by Quetzal Tirado",
+        "museum_bookAdditionalMusic8": "\"Deep Blue\" in 5-1: IN THE WAKE OF POSEIDON: Tenor saxophone improvised and recorded by Quetzal Tirado, edited by Hakita",
+        "museum_bookAdditionalMusic9": "\"Fallen Angel\" in 6-2: AESTHETICS OF HATE: Adapted from \"BWV 639 'I call to you, Lord Jesus Christ'\" by Johann Sebastian Bach",
+        "museum_bookAdditionalMusic10": "\"7th Symphony, 2nd Movement: Allegretto\" in Intermission 2: Written by Ludwig van Beethoven, performance by Lambis Vassiliadis (Public domain)",
+
+        "museum_bookAdditionalCredits1": "<b>ADDITIONAL CREDITS:</b>",
+        "museum_bookAdditionalCredits2": "Special thanks to:",
+        "museum_bookAdditionalCredits3": "<b>Magnega</b> for telling me my previous game, Untraceable, was unfun, causing an existential crisis that resulted in me dropping that project and making ULTRAKILL instead",
+        "museum_bookAdditionalCredits4": "<b>Mikko Tamper and Robert Raulus</b> for their continued support as well as beta testing and giving feedback",
+        "museum_bookAdditionalCredits5": "<b>B.G.B. and Splendid</b> for beta testing and giving feedback",
+
+        "museum_bookStephanWeyte1": "<b><color=orange>STEPHAN WEYTE</color> - VOICE OF MINOS PRIME</b>",
+        "museum_bookStephanWeyte2": "As with most people, I mainly knew Stephan Weyte as the voice of Caleb from Blood, but hearing him as Nyarlathotep in Dusk made it clear that he still had the skills, so even before joining New Blood, I had already decided that I wanted Stephan to voice someone in ULTRAKILL. When time came to choose the voice for Minos Prime, the choice was obvious.",
+        "museum_bookStephanWeyte3": "Stephan was lovely to work with, and his voice lends so much richness and character to Minos that I really can't imagine him any other way. ",
+
+        "museum_bookLenvalBrown1": "<b><color=orange>LENVAL BROWN</color> - VOICE OF SISYPHUS PRIME</b>",
+        "museum_bookLenvalBrown2": "I approached Lenval in early 2023 after hearing his fantastic performance as the narrator in Disco Elysium and feeling that his deep, textural voice would be the perfect fit for King Sisyphus. He was a pleasure to work with and helped really make Sisyphus stand out as his own unique character.",
+
+        "museum_bookGianniMatragrano1": "<b><color=#20afdb>GIANNI MATRAGRANO</color> - VOICE OF GABRIEL</b>",
+        "museum_bookGianniMatragrano2": "Gianni originally approached me offering his talents in late 2019, but we didn't start working together until mid-late 2020, a bit less than a week before the game came out in Early Access. Despite the short timeframe, he knocked it out of the park, not only defining and solidifying Gabriel's character and voice but also delivering fantastic performances that manage to capture both his visceral intensity and the subtler nuances of his internal world.",
+        "museum_bookGianniMatragrano3": "Since then he's only gotten better, and I'm very glad to work with someone who understands both my vision of the story and the character of Gabriel so well that he was able to improvise all of the taunts in Gabriel's first fight. He's a joy to work with and the dream of any over-ambitious indie developer like me.",
+        "museum_bookGianniMatragrano4": "\"Can you write in it that I said thank you to gay people.\"",
+
+        "museum_bookMandalore1": "<b><color=#e09e2e>MANDALORE</color> <color=#9884bb>HERRINGTON</color> - VOICE OF MYSTERIOUS DRUID KNIGHT</b>",
+        "museum_bookMandalore2": "<b><color=#eabbd7>JOY YOUNG</color> - VOICE OF OWL</b>",
+        "museum_bookMandalore3": "I originally met with Mandalore in late 2019 after his review of Dusk, when I DM'd him to ask him to elaborate on some criticisms he had mentioned of retro shooters. At the time ULTRAKILL was just a small no-name project, but he still took the time to not only write an in-depth reply, but also to play ULTRAKILL's demo and give very useful feedback for it.",
+        "museum_bookMandalore4": "As thanks for his help, I wanted to make a little joke boss fight featuring him and Joy based on some in-jokes from their Mystery of the Druids stream, using clips from his EYE review as his voicelines. Once he saw the boss, he offered to not only re-record those lines, but also record completely new ones with Joy, which they improvised together.",
+        "museum_bookMandalore5": "\"Visit me in the tombs with piped in music. How classy. Thanks for playing!\"",
+        "museum_bookMandalore6": "\"Here for a good time, not a bad time\"",
+
+        "museum_weaponsBeamcutter1": "<b><color=orange>BEAMCUTTER</color></b>",
+        "museum_weaponsBeamcutter2": "Design by Francis, WIP model by Victoria.",
+        "museum_weaponsBeamcutter3": "<b>PRIMARY FIRE:</b> Hold to fire beam",
+        "museum_weaponsBeamcutter4": "<b>SECONDARY FIRE:</b> Place/Remove beam drone",
+        "museum_weaponsBeamcutter5": "A sixth weapon which was cut early into its creation due to running into many design issues and to avoid arsenal bloat and weapon role overlap.",
+        "museum_weaponsBeamcutter6": "Based on the lightning gun archetype, it fires a sustained beam that requires the player to track their target to deal continuous damage. It deals reduced damage while standing still to discourage the player from staying still while firing, though in this version you can just move back and forth quickly to fulfill that requirement without making aiming much harder.",
+        "museum_weaponsBeamcutter7": "Sustained fire weapons are very difficult to make work well with ULTRAKILL's combat system, as proven by how many iterations the Nailgun had to go through before it found its place in the arsenal, and since infinite ammo means every weapon has to have its own niche in order to not make any other weapon obsolete and the Nailgun already filling a similar role, I made the choice to cut it instead of trying to force it into an already full arsenal.",
+        "museum_weaponsBeamcutter8": "The front of the weapon was supposed to spin when the beam is being fired, but this WIP model has no rigging. No sounds were implemented yet either, so it may seem quite weak in terms of feedback in comparison to the finished weapons.",
+        "museum_weaponsBeamcutter9": "While I do like the weapon in concept, I do think it was the right call to cut it. I prefer a smaller arsenal where every weapon is distinct and useful over a larger arsenal where some of them become obsolete with the introduction of others.",
+
+        "museum_weaponsBlackHoleCannon1": "<b><color=orange>BLACK HOLE CANNON</color></b>",
+        "museum_weaponsBlackHoleCannon2": "<b>PRIMARY FIRE:</b> Launch a black hole",
+        "museum_weaponsBlackHoleCannon3": "<b>SECONDARY FIRE:</b> Activate a launched black hole",
+        "museum_weaponsBlackHoleCannon4": "A cut superweapon that was intended to work via a meter that got filled by killing enemies. It was made around early 2019, shortly after the addition of the shotgun, with the intent of it being introduced much later in the game.",
+        "museum_weaponsBlackHoleCannon5": "The player would have the choice of using their kill meter for a temporary buff a la Devil Trigger from Devil May Cry, or a shot with the black hole cannon. The meter was scrapped due to these kinds of mechanics often leading to issues with hoarding and balancing, since encounters can't be balanced around whether or not the player has meter, leading to battles being either too easy with meter or too hard without it.",
+        "museum_weaponsBlackHoleCannon6": "Instead, the DT buff mode idea was turned into the dual wield powerup, which avoids that issue since the level designer controls when the player has access to it, and the Black Hole Cannon's role became filled with the Railcannon, a lower commitment superweapon that's weak enough to not become an ace-in-the-sleeve crutch for players to skip tricky encounters with and usable often enough that the player doesn't feel a need to hoard it.",
+        "museum_weaponsBlackHoleCannon7": "Although the Black Hole Cannon was incredibly powerful when it was originally made, since the only enemies in the game were the basic husks, the game has grown far more chaotic and explosive since then, making it quite weak in comparison. I've kept its original power level for this museum version for the sake of an accurate portrayal, so if it seems weak, that's because it was just made for killing Filth, Strays and Schisms.",
+        "museum_weaponsBlackHoleCannon8": "The Black Hole Cannon never got a visual design or model, hence why it's represented by a stretched out shotgun. This lead to many people thinking it was supposed to be a shotgun variation, but that was never the intent.",
+
+        "museum_weaponsRevolver1": "<color=orange>REVOLVER</color>",
+        "museum_weaponsRevolver2": "LEFT: 2018 Original by FlyingDog",
+        "museum_weaponsRevolver3": "RIGHT: 2022 Remake by Victoria",
+        "museum_weaponsRevolver4": "The first weapon as well as the first model ever made for the game. As usual, there was no concept art, so the design was made up on the spot by FlyingDog based on a prompt from me. Victoria has since then remade the model and texture while keeping true to the original design, making for a straight visual upgrade.",
+        "museum_weaponsRevolver5": "The revolver originally had different green and red variations. The old green variation was the ability to ricochet shots off of surfaces, inspired by Revolver Ocelot. Unfortunately, while cool in concept, it was extremely unwieldy and awkward to use, requiring far too much set up and positioning to be used efficiently, clashing hard with the game's fast pace. The idea of showing off marksmanship via ricocheting shots stayed however, and was reinterpreted into the now iconic and far more useful coin version.",
+        "museum_weaponsRevolver6": "The red variation was a dual wield variation, where the left revolver was fired with the primary fire and the right revolver with the secondary. As with the green variation, this was cool in concept, but mechanically it was very uninteresting beyond the initial novelty. I had some ideas on how to \"fix\" it, but I ended up scrapping it entirely instead, and since then the dual wield idea has been reinterpreted into the much more fun and freeform dual wield powerup.",
+
+        "museum_weaponsShotgun1": "<color=orange>SHOTGUN</color>",
+        "museum_weaponsShotgun2": "LEFT: 2019 Original by FlyingDog",
+        "museum_weaponsShotgun3": "RIGHT: 2022 Remake by Victoria",
+        "museum_weaponsShotgun4": "As with the revolver, the shotgun was made by FlyingDog without concept art, and later remade by Victoria, keeping it faithful to the original design while updating it to fit the game's new visual style better. The new version is lighter in color, since the original matte black style ended up very muted due to the game's vibrant colored lighting, though the people who preferred the old style can use the first color preset to get it back.",
+        "museum_weaponsShotgun5": "The shotgun had some balancing issues when it was originally added since all enemies already died from just a couple of revolver shots, making the shotgun feel pointless in comparison, leading to a bad first impression. Eventually I had the idea of changing the projectile code slightly, making it so shotgun projectiles don't get destroyed when hitting an enemy that is already dead. This small change is really what opened the shotgun up, turning it from just a slow single target damage dealer into a chaotic weapon of mass destruction, making it useful against both tankier enemies as originally intended as well as crowds of weaker enemies.",
+
+        "museum_weaponsNailgun1": "<color=orange>NAILGUN</color>",
+        "museum_weaponsNailgun2": "LEFT: 2019 Original by Jericho and FlyingDog",
+        "museum_weaponsNailgun3": "RIGHT: 2022 Remake by Jericho and Victoria",
+        "museum_weaponsNailgun4": "The first weapon to be based on concept art, drawn and designed by Jericho, as well as FlyingDog's final contribution to the game. The rougher, simpler original model still fit the visual style at the time, but since then the graphics have improved, making it stick out like a sore thumb, which was one of the primary reasons we wanted to redo the old weapon models, alongside the custom color system.",
+        "museum_weaponsNailgun5": "The nailgun is probably the weapon that had to go through the most iteration before it finally found its place in the arsenal. In fact, it wasn't until the Sandbox update in Summer 2021 that it finally really clicked in, meaning it took 2 years of constant tinkering and iteration to make an automatic weapon fit the ULTRAKILL arsenal. The biggest change was the change from infinite ammo to recharging ammo, giving players more reason to switch away from it after a bit of use, but the change that finally really made it click was speeding up the equip animation, which made switching to it in combat much smoother, making it feel like an organic part of weapon combos.",
+        "museum_weaponsNailgun6": "Some scrapped ideas and versions include a high damage slow recharge harpoon and a version that allowed for firing both barrels simultaneously, increasing rate of fire at the cost of the player's movement speed. The former eventually evolved into the magnet and the latter into the overheat, so despite how much things have changed, parts of the originals still remain.",
+
+        "museum_enemiesStray1": "<color=orange>STRAY</color>",
+        "museum_enemiesStray2": "LEFT: 2018 Original by Toni Stigell, FlyingDog and Hakita",
+        "museum_enemiesStray3": "RIGHT: 2020 Remake by Jericho and Sam",
+        "museum_enemiesStray4": "The Stray was originally just called \"Projectile Zombie\" or \"Projectile Husk\" and, for one short period of time, \"Stalker\", though that name was then instead given to the enemy that has it now. Toni was busy at the time, so I, with my limited Blender knowledge, just edited his original Filth model to make the original version of the Stray, and then FlyingDog made the texture for it. Again, we didn't really have any concept art, so the texture was just based on the prompt \"A skeleton with all the organs and meat still inside it\", or something like that.",
+        "museum_enemiesStray5": "The new version, based on Jericho's design for the Soldier, still keeps that general idea but executes it in a much less cartoony way.",
+
+        "museum_enemiesSchism1": "<color=orange>SCHISM</color>",
+        "museum_enemiesSchism2": "LEFT: 2018 Original by Toni Stigell, FlyingDog and Hakita",
+        "museum_enemiesSchism3": "RIGHT: 2020 Remake by BigRock and Sam",
+        "museum_enemiesSchism4": "The Schism, originally just called \"Super Projectile Zombie\", is another edit of the original Filth model. Toni and FlyingDog were both busy around this time, so this model didn't even get a unique texture. It's just the original Filth's texture without the orange tint!",
+        "museum_enemiesSchism5": "The new version still uses the same skeleton and animations, which means the extra arms just flop around like ragdolls since they have no animation data attached to them.",
+        "museum_enemiesSchism6": "The new designs for the Husks were drawn and modelled in a bit of a rush to get them done in time for the Prelude facelift we were doing for the new version of the demo after the game got picked up by New Blood, which meant the new designs only got one sketch from one angle each. This lead to a funny incident where Sam, while making the model, misunderstood the sketch and thought that the head was just sticking out really far in front instead of being on the shoulder, which lead to the first iteration of the model to look like a xenomorph!",
+
+        "museum_enemiesSwordsmachine1": "<color=orange>SWORDSMACHINE</color>",
+        "museum_enemiesSwordsmachine2": "LEFT: 2019 Original by BigRock, FlyingDog and Toni Stigell",
+        "museum_enemiesSwordsmachine3": "RIGHT: 2022 Remake by BigRock and Victoria",
+        "museum_enemiesSwordsmachine4": "Swordsmachine was the first enemy to be designed by a concept artist, and the difference really shows! BigRock's wonderful Blame!-inspired design is rich with implied character that later became explicit when I wrote the data entry for it.",
+        "museum_enemiesSwordsmachine5": "The original model, made by Toni Stigell and textured by FlyingDog, unfortunately lost a lot of the nuances the original design had, but it fit the visual style of the game at the time, and we were all amateurs who didn't know how to do any better. Victoria has since then remade the model based on BigRock's original concept art and perfectly translated it to 3D.",
+        "museum_enemiesSwordsmachine6": "One of the earlier iterations of Swordsmachine's design had a gory human torso, as the enemies at the time were leaning more in the direction of Strogg-like human-machine hybrids before we had the setting, visual language and story properly figured out.",
+
+        "museum_enemiesMaliciousFace1": "<color=orange>MALICIOUS FACE</color>",
+        "museum_enemiesMaliciousFace2": "LEFT: 2018 Original by FlyingDog",
+        "museum_enemiesMaliciousFace3": "RIGHT: 2022 Remake by Victoria",
+        "museum_enemiesMaliciousFace4": "The Malicious Face, called \"Spider\" in the game files thanks to its transparent spider legs, was actually the first enemy to be designed for the game. Although iconic now, its design was supposed to be quite different originally, as I wanted a more stark and simplified look, but FlyingDog, only modelling as a hobby, had a hard time pulling it off without any concept art to aid him, so we eventually compromised with this version.",
+        "museum_enemiesMaliciousFace5": "This was back when I was stupidly ambitious and had no idea what I was doing, so there were a bunch of ideas thrown around that ended up not making it in. The mouth was supposed to move and open when firing, but the rig was buggy and we couldn't get it to work. The eyes were also originally seperated from the main mesh, since I had the idea that it would be cool if you could shoot them out with the revolver for extra damage or to cause the enemy to become blind and attack indiscriminately, which sounds really cool in concept, but in execution would not only be too much complexity for an early enemy but would also give them a hard counter that the player would always resort to, which I've wanted to avoid to make the game more open to player expression. This was before Doom Eternal came out and had a big focus on weakpoints and hard counters.",
+        "museum_enemiesMaliciousFace6": "Another idea I had at one point was for there to be a hole in the back of its head, exposing the brain, allowing for nimble players to score big damage, but this also never materialized. Me coming up with all these dumb ideas, often after the model was already done, but never committing to them was, very understandably, frustrating to FlyingDog.",
+        "museum_enemiesMaliciousFace7": "The new model by Victoria is a beautiful almost 1:1 recreation that manages to keep the iconic look while improving the visual quality while actually <i>decreasing</i> its resolution.",
+
+        "museum_cinemaPlay": "PLAY",
+        "museum_cinemaStop": "STOP",
+
+        "museum_plaquesMuseumTitle": "HALL OF SHAME - THE ULTRAKILL DEVELOPERS",
+        "museum_plaquesArtRoom": "ART ROOM",
+        "museum_plaquesNerdRoom": "NERD ROOM",
+        "museum_plaquesRestRoom": "REST ROOM",
+        "museum_plaquesTalkRoom": "TALK ROOM",
+
+
+        "museum_plaquesHakita1": "ARSI \"HAKITA\" PATALA",
+        "museum_plaquesHakita2": "CREATOR OF ULTRAKILL",
+
+        "museum_plaquesFrancisXie1": "FRANCIS XIE",
+        "museum_plaquesFrancisXie2": "2D ARTIST",
+
+        "museum_plaquesJerichoRus1": "JERICHO RUS",
+        "museum_plaquesJerichoRus2": "2D ARIST",
+
+        "museum_plaquesBigRockBMP1": "BIGROCKBMP",
+        "museum_plaquesBigRockBMP2": "CONCEPT ARTIST",
+
+        "museum_plaquesMaxOvesson1": "MAXIMILIAN OVESSON",
+        "museum_plaquesMaxOvesson2": "2D ARTIST",
+
+        "museum_plaquesVictoriaHolland1": "VICTORIA HOLLAND",
+        "museum_plaquesVictoriaHolland2": "LEAD 2D ARTIST",
+
+        "museum_plaquesToniStigell1": "TONI STIGELL",
+        "museum_plaquesToniStigell2": "3D ARTIST",
+
+        "museum_plaquesFlyingdog1": "FLYINGDOG",
+        "museum_plaquesFlyingdog2": "3D ARTIST",
+
+        "museum_plaquesSamuelJamesBryan1": "SAMUEL JAMES BRYAN",
+        "museum_plaquesSamuelJamesBryan2": "3D ARTIST",
+
+        "museum_plaquesCameronMartin1": "CAMERON MARTIN",
+        "museum_plaquesCameronMartin2": "QUALITY ASSURANCE LEAD",
+
+        "museum_plaquesDaliaFigueroa1": "DALIA FIGUEROA",
+        "museum_plaquesDaliaFigueroa2": "QUALITY ASSURANCE",
+
+        "museum_plaquesTuckerWilkin1": "TUCKER WILKIN",
+        "museum_plaquesTuckerWilkin2": "SENIOR QUALITY ASSURANCE",
+
+        "museum_plaquesScottGurney1": "SCOTT GURNEY",
+        "museum_plaquesScottGurney2": "TECHNICAL QUALITY ASSURANCE",
+
+        "museum_plaquesPitr1": "PITR",
+        "museum_plaquesPitr2": "LEAD PROGRAMMER",
+
+        "museum_plaquesHeckteck1": "HECKTECK",
+        "museum_plaquesHeckteck2": "ADDITIONAL PROGRAMMER",
+
+        "museum_plaquesCabalcrow1": "EMANUIL \"CABALCROW\" CHIZHOV",
+        "museum_plaquesCabalcrow2": "ADDITIONAL PROGRAMMER",
+
+        "museum_plaquesLucasVarney1": "LUCAS VARNEY",
+        "museum_plaquesLucasVarney2": "ADDITIONAL PROGRAMMER",
+
+        "museum_plaquesBenMoir1": "BEN MOIR",
+        "museum_plaquesBenMoir2": "ADDITIONAL PROGRAMMER",
+
+        "museum_plaquesDaveOshry1": "DAVE OSHRY",
+        "museum_plaquesDaveOshry2": "CEO OF NEW BLOOD INTERACTIVE",
+
+        "museum_plaquesMeganeko1": "MEGANEKO",
+        "museum_plaquesMeganeko2": "GUEST COMPOSER",
+
+        "museum_plaquesKeygenChurch1": "KEYGEN CHURCH",
+        "museum_plaquesKeygenChurch2": "GUEST COMPOSER",
+
+        "museum_plaquesSalad1": "SALAD",
+        "museum_plaquesSalad2": "ARTIST OF JAKITO",
+
+        "museum_plaquesJacobHHR1": "JACOB HHR",
+        "museum_plaquesJacobHHR2": "WRITER (PROSE & DIALOGUE)",
+
+        "museum_plaquesVVizard1": "VVIZARD",
+        "museum_plaquesVVizard2": "MUSEUM CREATOR",
+
+        "museum_plaquesAdditionalMusic": "ADDITIONAL MUSIC",
+        "museum_plaquesAdditionalCredits": "ADDITIONAL CREDITS",
+
+        "museum_plaquesStephanWeyte1": "STEPHAN WEYTE",
+        "museum_plaquesStephanWeyte2": "VOICE OF MINOS PRIME",
+
+        "museum_plaquesLenvalBrown1": "LENVAL BROWN",
+        "museum_plaquesLenvalBrown2": "VOICE OF SISYPHUS PRIME",
+
+        "museum_plaquesGianniMatragrano1": "GIANNI MATRAGRANO",
+        "museum_plaquesGianniMatragrano2": "VOICE OF GABRIEL",
+
+        "museum_plaquesJoyYoung1": "JOY YOUNG",
+        "museum_plaquesJoyYoung2": "VOICE OF OWL",
+
+        "museum_plaquesMandalore1": "MANDALORE HERRINGTON",
+        "museum_plaquesMandalore2": "VOICE OF MYSERIOUS DRUID KNIGHT",
+
+        "museum_rocketRace1": "ROCKET RACE",
+        "museum_rocketRace2": "START",
+        "museum_rocketRaceResult": "TIME:"
     },
 
     "credits":{

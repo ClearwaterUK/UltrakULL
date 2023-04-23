@@ -47,14 +47,14 @@
         "museum_bookJerichoRus9": "- Tout l'art dans 2-S",
         "museum_bookJerichoRus10": "\"Salut, mes remerciements à toute l'équipe de dévélopement et à vous tous pour vos appréciations avec ce que nous créeons. J'ai rencontré tellement de gens merveilleuses à travers le développement de ULTRAKILL, et j'espères continuer à faire ceci. Salutations à SXBIG et Luvoid!\"",
 
-        "museum_bookBigRockBMP1": "<b><color=#DA6B6D>BIGROCKBMP</color> - CONCEPT ARTIST</b>",
-        "museum_bookBigRockBMP2": "BigRock joined the team in early 2019, during the Prelude's development. He was the first concept artist for the game and responsible for the designs for many of the game's bosses, such as the game's first ever character design, the Swordsmachine.",
-        "museum_bookBigRockBMP3": "Some of his biggest contributions include:",
-        "museum_bookBigRockBMP4": "- The designs for many of the game's bosses, such as the Swordsmachine, the Corpse of King Minos, and the Hideous Mass",
-        "museum_bookBigRockBMP5": "- The designs for many of the game's enemies, such as the Mindflayer, the Idol and the Sentry",
-        "museum_bookBigRockBMP6": "- The designs for all of the bosses in the Prime Sanctums",
-        "museum_bookBigRockBMP7": "- The painting of the rocket launcher wielding Ferryman in 5-3: SHIP OF FOOLS",
-        "museum_bookBigRockBMP8": "\"When Hakita asked me to design a boss for his game I had no idea that ULTRAKILL would become this big. To see so many people draw fanart of the characters I've designed is both intimidating as it is inspiring me to continue, try and grow as an artist, and I hope my work inspires someone to pick up a pencil as well.\"",
+        "museum_bookBigRockBMP1": "<b><color=#DA6B6D>BIGROCKBMP</color> - ARTISTE CONCEPTES</b>",
+        "museum_bookBigRockBMP2": "BigRock a rejoint l'équipe én début de 2019, pendant le développement du Prélide. Il a été le premier artiste de concepte pour le jeu, et est responsable pour la plupart des boss du jeu, tel que le premier concepte de caractère du jeu, la Machine à Epée.",
+        "museum_bookBigRockBMP3": "Ses plus grands contributions sont:",
+        "museum_bookBigRockBMP4": "- Les conceptes pour la plupart des boss du jeu, tel que la Machine à Epée, le Cadavre du Roi Minos, et la Masse Hideuse",
+        "museum_bookBigRockBMP5": "- Les conceptes pour la plupart des ennemies du jeu, tels que l'Illithid, l'Idôle et la Mitrailleuse.",
+        "museum_bookBigRockBMP6": "- Les conceptes des boss dans les Sanctuaires Primes",
+        "museum_bookBigRockBMP7": "- Les peintures du Nocher portant une Lance-Roquettes dans 5-3: NAVIRE DES FOUX",
+        "museum_bookBigRockBMP8": "\"Quand Hakita m'avait demandé de créer un boss pour son jeu, je n'avais aucune idée que ULTRAKILL deviendra aussi grand. C'est à la fois intimidiant et inspirant de voir tout l'art que les fans du jeu ont crée des caractères, m'inspirant aussi à continuer et tenter d'agrandir en tant qu'artiste, et j'espères que mon travail inspirent les autres à se lancer dans leurs passions aussi.\"",
 
         "museum_bookMaximilianOvesson1": "<b><color=#8f65da>MAXIMILIAN OVESSON</color> - UI ARTIST</b>",
         "museum_bookMaximilianOvesson2": "Maximilian joined the team in 2018, early in the game's development. He's responsible for the weapon icons used in the UI, the game over skull animation as well as the game's logo.",
@@ -67,7 +67,298 @@
         "museum_bookVictoriaHolland5": "- All of the Act 2 models, except the Sisyphean Insurrectionist",
         "museum_bookVictoriaHolland6": "- Programming for all the shaders",
         "museum_bookVictoriaHolland7": "- Programming for most graphical systems and optimizations",
-        "museum_bookVictoriaHolland8": "\"Waste no time to fear. Take the leap and embrace the person you want to be. You're not alone, so live your authentic self, and always enjoy the journey.\""
+        "museum_bookVictoriaHolland8": "\"Waste no time to fear. Take the leap and embrace the person you want to be. You're not alone, so live your authentic self, and always enjoy the journey.\"",
+
+        "museum_bookToniStigell1": "",
+        "museum_bookToniStigell2": "",
+        "museum_bookToniStigell3": "",
+        "museum_bookToniStigell4": "",
+        "museum_bookToniStigell5": "",
+        "museum_bookToniStigell6": "",
+        "museum_bookToniStigell7": "",
+
+        "museum_bookToniFlyingDog1": "",
+        "museum_bookToniFlyingDog2": "",
+        "museum_bookToniFlyingDog3": "",
+        "museum_bookToniFlyingDog4": "",
+        "museum_bookToniFlyingDog5": "",
+        "museum_bookToniFlyingDog6": "",
+
+        "museum_bookSamuelJamesBryan1": "",
+        "museum_bookSamuelJamesBryan2": "",
+        "museum_bookSamuelJamesBryan3": "",
+
+        "museum_bookQATeam1": "",
+        "museum_bookQATeam2": "",
+        "museum_bookQATeam3": "",
+        "museum_bookQATeam4": "",
+        "museum_bookQATeam5": "",
+        "museum_bookQATeam6": "",
+        "museum_bookQATeam7": "",
+        "museum_bookQATeam8": "",
+        "museum_bookQATeam9": "",
+        "museum_bookQATeam10": "",
+
+        "museum_bookPitr1": "",
+        "museum_bookPitr2": "",
+        "museum_bookPitr3": "",
+        "museum_bookPitr4": "",
+        "museum_bookPitr5": "",
+        "museum_bookPitr6": "",
+        "museum_bookPitr7": "",
+        "museum_bookPitr8": "",
+
+        "museum_bookHeckteck1": "",
+        "museum_bookHeckteck2": "",
+        "museum_bookHeckteck3": "",
+
+        "museum_bookCabalcrow1": "",
+        "museum_bookCabalcrow2": "",
+        "museum_bookCabalcrow3": "",
+
+        "museum_bookLucasVarney1": "",
+        "museum_bookLucasVarney2": "",
+        "museum_bookLucasVarney3": "",
+
+        "museum_bookBenMoir1": "",
+        "museum_bookBenMoir2": "",
+        "museum_bookBenMoir3": "",
+        "museum_bookBenMoir4": "",
+
+        "museum_bookMeganeko1": "",
+        "museum_bookMeganeko2": "",
+        "museum_bookMeganeko3": "",
+        "museum_bookMeganeko4": "",
+
+        "museum_bookKeygenChurch1": "",
+        "museum_bookKeygenChurch2": "",
+        "museum_bookKeygenChurch3": "",
+
+        "museum_bookSalad1": "",
+        "museum_bookSalad2": "",
+        "museum_bookSalad3": "",
+
+        "museum_bookJacobHHR1": "",
+        "museum_bookJacobHHR2": "",
+        "museum_bookJacobHHR3": "",
+
+        "museum_bookVVizard1": "",
+        "museum_bookVVizard2": "",
+        "museum_bookVVizard3": "",
+        "museum_bookVVizard4": "",
+
+        "museum_bookAdditionalMusic1": "",
+        "museum_bookAdditionalMusic2": "",
+        "museum_bookAdditionalMusic3": "",
+        "museum_bookAdditionalMusic4": "",
+        "museum_bookAdditionalMusic5": "",
+        "museum_bookAdditionalMusic6": "",
+        "museum_bookAdditionalMusic7": "",
+        "museum_bookAdditionalMusic8": "",
+        "museum_bookAdditionalMusic9": "",
+        "museum_bookAdditionalMusic10": "",
+
+        "museum_bookAdditionalCredits1": "",
+        "museum_bookAdditionalCredits2": "",
+        "museum_bookAdditionalCredits3": "",
+        "museum_bookAdditionalCredits4": "",
+        "museum_bookAdditionalCredits5": "",
+
+        "museum_bookStephanWeyte1": "",
+        "museum_bookStephanWeyte2": "",
+        "museum_bookStephanWeyte3": "",
+
+        "museum_bookLenvalBrown1": "",
+        "museum_bookLenvalBrown2": "",
+
+        "museum_bookGianniMatragrano1": "",
+        "museum_bookGianniMatragrano2": "",
+        "museum_bookGianniMatragrano3": "",
+        "museum_bookGianniMatragrano4": "",
+
+        "museum_bookMandalore1": "",
+        "museum_bookMandalore2": "",
+        "museum_bookMandalore3": "",
+        "museum_bookMandalore4": "",
+        "museum_bookMandalore5": "",
+        "museum_bookMandalore6": "",
+
+        "museum_weaponsBeamcutter1": "",
+        "museum_weaponsBeamcutter2": "",
+        "museum_weaponsBeamcutter3": "",
+        "museum_weaponsBeamcutter4": "",
+        "museum_weaponsBeamcutter5": "",
+        "museum_weaponsBeamcutter6": "",
+        "museum_weaponsBeamcutter7": "",
+        "museum_weaponsBeamcutter8": "",
+        "museum_weaponsBeamcutter9": "",
+
+        "museum_weaponsBlackHoleCannon1": "",
+        "museum_weaponsBlackHoleCannon2": "",
+        "museum_weaponsBlackHoleCannon3": "",
+        "museum_weaponsBlackHoleCannon4": "",
+        "museum_weaponsBlackHoleCannon5": "",
+        "museum_weaponsBlackHoleCannon6": "",
+        "museum_weaponsBlackHoleCannon7": "",
+        "museum_weaponsBlackHoleCannon8": "",
+
+        "museum_weaponsRevolver1": "",
+        "museum_weaponsRevolver2": "",
+        "museum_weaponsRevolver3": "",
+        "museum_weaponsRevolver4": "",
+        "museum_weaponsRevolver5": "",
+        "museum_weaponsRevolver6": "",
+
+        "museum_weaponsShotgun1": "",
+        "museum_weaponsShotgun2": "",
+        "museum_weaponsShotgun3": "",
+        "museum_weaponsShotgun4": "",
+        "museum_weaponsShotgun5": "",
+
+        "museum_weaponsNailgun1": "",
+        "museum_weaponsNailgun2": "",
+        "museum_weaponsNailgun3": "",
+        "museum_weaponsNailgun4": "",
+        "museum_weaponsNailgun5": "",
+        "museum_weaponsNailgun6": "",
+
+        "museum_enemiesStray1": "",
+        "museum_enemiesStray2": "",
+        "museum_enemiesStray3": "",
+        "museum_enemiesStray4": "",
+        "museum_enemiesStray5": "",
+        "museum_enemiesStray6": "",
+
+        "museum_enemiesSchism1": "",
+        "museum_enemiesSchism2": "",
+        "museum_enemiesSchism3": "",
+        "museum_enemiesSchism4": "",
+        "museum_enemiesSchism5": "",
+        "museum_enemiesSchism6": "",
+
+        "museum_enemiesSwordsmachine1": "",
+        "museum_enemiesSwordsmachine2": "",
+        "museum_enemiesSwordsmachine3": "",
+        "museum_enemiesSwordsmachine4": "",
+        "museum_enemiesSwordsmachine5": "",
+        "museum_enemiesSwordsmachine6": "",
+
+        "museum_enemiesMaliciousFace1": "",
+        "museum_enemiesMaliciousFace2": "",
+        "museum_enemiesMaliciousFace3": "",
+        "museum_enemiesMaliciousFace4": "",
+        "museum_enemiesMaliciousFace5": "",
+        "museum_enemiesMaliciousFace6": "",
+        "museum_enemiesMaliciousFace7": "",
+
+        "museum_cinemaPlay": "",
+        "museum_cinemaStop": "",
+
+        "museum_plaquesMuseumTitle": "",
+        "museum_plaquesArtRoom": "",
+        "museum_plaquesNerdRoom": "",
+        "museum_plaquesRestRoom": "",
+        "museum_plaquesTalkRoom": "",
+
+
+        "museum_plaquesHakita1": "ARSI \"HAKITA\" PATALA",
+        "museum_plaquesHakita2": "CRÉATEUR DE ULTRAKILL",
+
+        "museum_plaquesFrancisXie1": "",
+        "museum_plaquesFrancisXie2": "",
+
+        "museum_plaquesJerichoRus1": "",
+        "museum_plaquesJerichoRus2": "",
+
+        "museum_plaquesBigRockBMP1": "",
+        "museum_plaquesBigRockBMP2": "",
+
+        "museum_plaquesMaxOvesson1": "",
+        "museum_plaquesMaxOvesson2": "",
+
+        "museum_plaquesVictoriaHolland1": "",
+        "museum_plaquesVictoriaHolland2": "",
+
+        "museum_plaquesToniStigell1": "",
+        "museum_plaquesToniStigell2": "",
+
+        "museum_plaquesFlyingdog1": "",
+        "museum_plaquesFlyingdog2": "",
+
+        "museum_plaquesSamuelJamesBryan1": "",
+        "museum_plaquesSamuelJamesBryan2": "",
+
+        "museum_plaquesCameronMartin1": "",
+        "museum_plaquesCameronMartin2": "",
+
+        "museum_plaquesJoyYoung1": "",
+        "museum_plaquesJoyYoung2": "",
+
+        "museum_plaquesDaliaFigueroa1": "",
+        "museum_plaquesDaliaFigueroa2": "",
+
+        "museum_plaquesTuckerWilkin1": "",
+        "museum_plaquesTuckerWilkin2": "",
+
+        "museum_plaquesScottGurney1": "",
+
+        "museum_plaquesPitr1": "PITR",
+        "museum_plaquesPitr2": "",
+
+        "museum_plaquesHeckteck1": "HECKTECK",
+        "museum_plaquesHeckteck2": "",
+
+        "museum_plaquesCabalcrow1": "CABALCROW",
+        "museum_plaquesCabalcrow2": "",
+
+        "museum_plaquesLucasVarney1": "",
+        "museum_plaquesLucasVarney2": "",
+
+        "museum_plaquesBenMoir1": "",
+        "museum_plaquesBenMoir2": "",
+
+        "museum_plaquesDaveOshry1": "",
+        "museum_plaquesDaveOshry2": "",
+
+        "museum_plaquesMeganeko1": "",
+        "museum_plaquesMeganeko2": "",
+
+        "museum_plaquesKeygenChurch1": "",
+        "museum_plaquesKeygenChurch2": "",
+
+        "museum_plaquesSalad1": "",
+        "museum_plaquesSalad2": "",
+
+        "museum_plaquesJacobHHR1": "",
+        "museum_plaquesJacobHHR2": "",
+
+        "museum_plaquesVVizard1": "",
+        "museum_plaquesVVizard2": "",
+
+        "museum_plaquesAdditionalMusic": "",
+        "museum_plaquesAdditionalCredits": "",
+
+        "museum_plaquesStephanWeyte1": "",
+        "museum_plaquesStephanWeyte2": "",
+
+        "museum_plaquesLenvalBrown1": "",
+        "museum_plaquesLenvalBrown2": "",
+
+        "museum_plaquesGianniMatragrano1": "",
+        "museum_plaquesGianniMatragrano2": "",
+
+        "museum_plaquesJoyYoung1": "",
+        "museum_plaquesJoyYoung2": "",
+
+        "museum_plaquesMandalore1": "",
+        "museum_plaquesMandalore2": "",
+
+        "museum_rocketRace1": "",
+        "museum_rocketRace2": "",
+        "museum_rocketRaceResult": "",
+
+        "museum_cinemaPlay": "",
+        "museum_cinemaStop": ""
     },
 
     "credits":{

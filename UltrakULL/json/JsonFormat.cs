@@ -2166,6 +2166,302 @@ namespace UltrakULL.json
         public string museum_bookVictoriaHolland6;
         public string museum_bookVictoriaHolland7;
         public string museum_bookVictoriaHolland8;
+        
+        public string museum_bookToniStigell1;
+        public string museum_bookToniStigell2;
+        public string museum_bookToniStigell3;
+        public string museum_bookToniStigell4;
+        public string museum_bookToniStigell5;
+        public string museum_bookToniStigell6;
+        public string museum_bookToniStigell7;
+        
+        public string museum_bookFlyingDog1;
+        public string museum_bookFlyingDog2;
+        public string museum_bookFlyingDog3;
+        public string museum_bookFlyingDog4;
+        public string museum_bookFlyingDog5;
+        public string museum_bookFlyingDog6;
+        
+        public string museum_bookSamuelJamesBryan1;
+        public string museum_bookSamuelJamesBryan2;
+        public string museum_bookSamuelJamesBryan3;
+        
+        public string museum_bookQATeam1;
+        public string museum_bookQATeam2;
+        public string museum_bookQATeam3;
+        public string museum_bookQATeam4;
+        public string museum_bookQATeam5;
+        public string museum_bookQATeam6;
+        public string museum_bookQATeam7;
+        public string museum_bookQATeam8;
+        public string museum_bookQATeam9;
+        public string museum_bookQATeam10;
+        
+        public string museum_bookPitr1;
+        public string museum_bookPitr2;
+        public string museum_bookPitr3;
+        public string museum_bookPitr4;
+        public string museum_bookPitr5;
+        public string museum_bookPitr6;
+        public string museum_bookPitr7;
+        public string museum_bookPitr8;
+        
+        public string museum_bookHeckteck1;
+        public string museum_bookHeckteck2;
+        public string museum_bookHeckteck3;
+        
+        public string museum_bookCabalcrow1;
+        public string museum_bookCabalcrow2;
+        public string museum_bookCabalcrow3;
+        
+        public string museum_bookLucasVarney1;
+        public string museum_bookLucasVarney2;
+        public string museum_bookLucasVarney3;
+        
+        public string museum_bookBenMoir1;
+        public string museum_bookBenMoir2;
+        public string museum_bookBenMoir3;
+        public string museum_bookBenMoir4;
+        
+        public string museum_bookMeganeko1;
+        public string museum_bookMeganeko2;
+        public string museum_bookMeganeko3;
+        
+        public string museum_bookKeygenChurch1;
+        public string museum_bookKeygenChurch2;
+        public string museum_bookKeygenChurch3;
+        public string museum_bookKeygenChurch4;
+        
+        public string museum_bookSalad1;
+        public string museum_bookSalad2;
+        public string museum_bookSalad3;
+        public string museum_bookSalad4;
+        public string museum_bookSalad5;
+        
+        public string museum_bookJacobHHR1;
+        public string museum_bookJacobHHR2;
+        public string museum_bookJacobHHR3;
+        
+        public string museum_bookVVizard1;
+        public string museum_bookVVizard2;
+        public string museum_bookVVizard3;
+        public string museum_bookVVizard4;
+        
+        public string museum_bookAdditionalMusic1;
+        public string museum_bookAdditionalMusic2;
+        public string museum_bookAdditionalMusic3;
+        public string museum_bookAdditionalMusic4;
+        public string museum_bookAdditionalMusic5;
+        public string museum_bookAdditionalMusic6;
+        public string museum_bookAdditionalMusic7;
+        public string museum_bookAdditionalMusic8;
+        public string museum_bookAdditionalMusic9;
+        public string museum_bookAdditionalMusic10;
+        
+        public string museum_bookAdditionalCredits1;
+        public string museum_bookAdditionalCredits2;
+        public string museum_bookAdditionalCredits3;
+        public string museum_bookAdditionalCredits4;
+        public string museum_bookAdditionalCredits5;
+        
+        public string museum_bookStephanWeyte1;
+        public string museum_bookStephanWeyte2;
+        public string museum_bookStephanWeyte3;
+        
+        public string museum_bookLenvalBrown1;
+        public string museum_bookLenvalBrown2;
+        
+        public string museum_bookGianniMatragrano1;
+        public string museum_bookGianniMatragrano2;
+        public string museum_bookGianniMatragrano3;
+        public string museum_bookGianniMatragrano4;
+        
+        public string museum_bookMandalore1;
+        public string museum_bookMandalore2;
+        public string museum_bookMandalore3;
+        public string museum_bookMandalore4;
+        public string museum_bookMandalore5;
+        public string museum_bookMandalore6;
+        
+        public string museum_weaponsBeamcutter1;
+        public string museum_weaponsBeamcutter2;
+        public string museum_weaponsBeamcutter3;
+        public string museum_weaponsBeamcutter4;
+        public string museum_weaponsBeamcutter5;
+        public string museum_weaponsBeamcutter6;
+        public string museum_weaponsBeamcutter7;
+        public string museum_weaponsBeamcutter8;
+        public string museum_weaponsBeamcutter9;
+        
+        public string museum_weaponsBlackHoleCannon1;
+        public string museum_weaponsBlackHoleCannon2;
+        public string museum_weaponsBlackHoleCannon3;
+        public string museum_weaponsBlackHoleCannon4;
+        public string museum_weaponsBlackHoleCannon5;
+        public string museum_weaponsBlackHoleCannon6;
+        public string museum_weaponsBlackHoleCannon7;
+        public string museum_weaponsBlackHoleCannon8;
+        
+        public string museum_weaponsRevolver1;
+        public string museum_weaponsRevolver2;
+        public string museum_weaponsRevolver3;
+        public string museum_weaponsRevolver4;
+        public string museum_weaponsRevolver5;
+        public string museum_weaponsRevolver6;
+        
+        public string museum_weaponsShotgun1;
+        public string museum_weaponsShotgun2;
+        public string museum_weaponsShotgun3;
+        public string museum_weaponsShotgun4;
+        public string museum_weaponsShotgun5;
+        
+        public string museum_weaponsNailgun1;
+        public string museum_weaponsNailgun2;
+        public string museum_weaponsNailgun3;
+        public string museum_weaponsNailgun4;
+        public string museum_weaponsNailgun5;
+        public string museum_weaponsNailgun6;
+        
+        public string museum_enemiesFilth1;
+        public string museum_enemiesFilth2;
+        public string museum_enemiesFilth3;
+        public string museum_enemiesFilth4;
+        public string museum_enemiesFilth5;
+        public string museum_enemiesFilth6;
+        public string museum_enemiesFilth7;
+        
+        public string museum_enemiesStray1;
+        public string museum_enemiesStray2;
+        public string museum_enemiesStray3;
+        public string museum_enemiesStray4;
+        public string museum_enemiesStray5;
+        
+        public string museum_enemiesSchism1;
+        public string museum_enemiesSchism2;
+        public string museum_enemiesSchism3;
+        public string museum_enemiesSchism4;
+        public string museum_enemiesSchism5;
+        public string museum_enemiesSchism6;
+        
+        public string museum_enemiesSwordsmachine1;
+        public string museum_enemiesSwordsmachine2;
+        public string museum_enemiesSwordsmachine3;
+        public string museum_enemiesSwordsmachine4;
+        public string museum_enemiesSwordsmachine5;
+        public string museum_enemiesSwordsmachine6;
+        
+        public string museum_enemiesMaliciousFace1;
+        public string museum_enemiesMaliciousFace2;
+        public string museum_enemiesMaliciousFace3;
+        public string museum_enemiesMaliciousFace4;
+        public string museum_enemiesMaliciousFace5;
+        public string museum_enemiesMaliciousFace6;
+        public string museum_enemiesMaliciousFace7;
+
+        public string museum_plaquesMuseumTitle;
+        
+        public string museum_plaquesHakita1;
+        public string museum_plaquesHakita2;
+        
+        public string museum_plaquesArtRoom;
+        public string museum_plaquesNerdRoom;
+        public string museum_plaquesRestRoom;
+        public string museum_plaquesTalkRoom;
+        
+        public string museum_plaquesFrancisXie1;
+        public string museum_plaquesFrancisXie2;
+        
+        public string museum_plaquesJerichoRus1;
+        public string museum_plaquesJerichoRus2;
+        
+        public string museum_plaquesBigRockBMP1;
+        public string museum_plaquesBigRockBMP2;
+        
+        public string museum_plaquesMaxOvesson1;
+        public string museum_plaquesMaxOvesson2;
+        
+        public string museum_plaquesVictoriaHolland1;
+        public string museum_plaquesVictoriaHolland2;
+        
+        public string museum_plaquesToniStigell1;
+        public string museum_plaquesToniStigell2;
+        
+        public string museum_plaquesFlyingdog1;
+        public string museum_plaquesFlyingdog2;
+        
+        public string museum_plaquesSamuelJamesBryan1;
+        public string museum_plaquesSamuelJamesBryan2;
+        
+        public string museum_plaquesCameronMartin1;
+        public string museum_plaquesCameronMartin2;
+        
+        public string museum_plaquesDaliaFigueroa1;
+        public string museum_plaquesDaliaFigueroa2;
+        
+        public string museum_plaquesTuckerWilkin1;
+        public string museum_plaquesTuckerWilkin2;
+        
+        public string museum_plaquesScottGurney1;
+        public string museum_plaquesScottGurney2;
+        
+        public string museum_plaquesPitr1;
+        public string museum_plaquesPitr2;
+        
+        public string museum_plaquesHeckteck1;
+        public string museum_plaquesHeckteck2;
+        
+        public string museum_plaquesCabalcrow1;
+        public string museum_plaquesCabalcrow2;
+        
+        public string museum_plaquesLucasVarney1;
+        public string museum_plaquesLucasVarney2;
+        
+        public string museum_plaquesBenMoir1;
+        public string museum_plaquesBenMoir2;
+        
+        public string museum_plaquesDaveOshry1;
+        public string museum_plaquesDaveOshry2;
+        
+        public string museum_plaquesMeganeko1;
+        public string museum_plaquesMeganeko2;
+        
+        public string museum_plaquesKeygenChurch1;
+        public string museum_plaquesKeygenChurch2;
+        
+        public string museum_plaquesSalad1;
+        public string museum_plaquesSalad2;
+        
+        public string museum_plaquesJacobHHR1;
+        public string museum_plaquesJacobHHR2;
+        
+        public string museum_plaquesVVizard1;
+        public string museum_plaquesVVizard2;
+        
+        public string museum_plaquesAdditionalMusic;
+        public string museum_plaquesAdditionalCredits;
+        
+        public string museum_plaquesStephanWeyte1;
+        public string museum_plaquesStephanWeyte2;
+        
+        public string museum_plaquesLenvalBrown1;
+        public string museum_plaquesLenvalBrown2;
+        
+        public string museum_plaquesGianniMatragrano1;
+        public string museum_plaquesGianniMatragrano2;
+        
+        public string museum_plaquesJoyYoung1;
+        public string museum_plaquesJoyYoung2;
+        
+        public string museum_plaquesMandalore1;
+        public string museum_plaquesMandalore2;
+        
+        public string museum_rocketRace1;
+        public string museum_rocketRace2;
+        public string museum_rocketRaceResult;
+        
+        public string museum_cinemaPlay;
+        public string museum_cinemaStop;
+
     }
 
     public class Misc

@@ -52,7 +52,9 @@ using UMM;
  * New loading overlay in the menu
  * Make language button disappear like other option buttons when save menu is opened
  * Delete Credits category in JSON since DevMuseum now replaces it
-
+ * Sissy Prime dubbing
+ * Update install instructions on GitHub page (still says to extract to BIE folder when it should go in UMM Mods)
+ * Couple of extra style bonuses
  * */
 
 namespace UltrakULL
@@ -484,6 +486,7 @@ namespace UltrakULL
                                 {
                                     Logging.Message("DevMuseum");
                                     DevMuseum devMuseum = new DevMuseum(ref canvasObj);
+                                    
                                 }
 
                             }
