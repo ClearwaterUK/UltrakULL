@@ -8,6 +8,7 @@
 - Added strings for the controller rumble tab in the options menu.
 - Added strings for all the dev museum content.
 - Added strings for 5-S.
+- Added strings for the new style bonuses (Envirokill, Scrongled, Scrongbongled, Scrindonguloded)
 - Refactored and moved several key strings in the templates. Be sure to consult the template changelog.
 - Removed the "Credits" category from the templates due to it being redundant thanks to the new dev museum.
 (NOTE: Mod credits will be moved to the dev museum in future.)

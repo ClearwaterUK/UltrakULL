@@ -136,6 +136,11 @@ fishing: fish_sharkDescription
 secretLevels: secretLevels_fifth_testamentTitle
 secretLevels: secretLevels_fifth_testament
 
+style: style_envirokill
+style: style_scrongled
+style: style_scrondongled
+style: style_scrindonguloded
+
 
 MODIFIED:
 

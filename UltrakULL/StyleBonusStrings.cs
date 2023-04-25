@@ -80,12 +80,16 @@ namespace UltrakULL
                 switch (regexinput)
                 {
                     case "CONDUCTOR": { return LanguageManager.CurrentLanguage.style.style_conductor; }
-                    case "CRUSHED": { return LanguageManager.CurrentLanguage.style.style_crushed; }
+                    case "CRUSHED": { return LanguageManager.CurrentLanguage.style.style_crushed; } 
+                    case "ENVIROKILL": { return LanguageManager.CurrentLanguage.style.style_envirokill; }
                     case "FALL": { return LanguageManager.CurrentLanguage.style.style_fall; }
                     case "FRIED": { return LanguageManager.CurrentLanguage.style.style_fried; }
                     case "MINCED": { return LanguageManager.CurrentLanguage.style.style_minced; }
                     case "OUT OF BOUNDS": { return LanguageManager.CurrentLanguage.style.style_outofbounds; }
                     case "RICOSHOT": { return LanguageManager.CurrentLanguage.style.style_ricoshot; }
+                    case "SCRONGLED": { return LanguageManager.CurrentLanguage.style.style_scrongled; }
+                    case "SCRONGBONGLED": { return LanguageManager.CurrentLanguage.style.style_scrongbongled; }
+                    case "SCRINDONGULODED": { return LanguageManager.CurrentLanguage.style.style_scrindonguloded; }
                     case "SHREDDED": { return LanguageManager.CurrentLanguage.style.style_shredded; }
                     case "ZAPPED": { return LanguageManager.CurrentLanguage.style.style_zapped; }
                     case "why are you even spawning enemies here": { return LanguageManager.CurrentLanguage.style.style_why; }

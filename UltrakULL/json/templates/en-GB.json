@@ -458,6 +458,7 @@
         "style_doublekill": "DOUBLE KILL",
         "style_downtosize": "DOWN TO SIZE",
         "style_enraged": "ENRAGED",
+        "style_envirokill": "ENVIROKILL",
         "style_exploded": "EXPLODED",
         "style_finishedoff": "FINISHED OFF",
         "style_fireworks": "FIREWORKS",
@@ -482,6 +483,9 @@
         "style_ricoshotUltra": "ULTRA",
         "style_ricoshotCounter": "COUNTER",
         "style_secret": "SECRET",
+        "style_scrindonguloded": "SCRINDONGULODED",
+        "style_scrongled": "SCRONGLED",
+        "style_scrongbongled": "SCRONGBONGLED",
         "style_splattered": "SPLATTERED",
         "style_triplekill": "TRIPLE KILL",
 

@@ -271,6 +271,7 @@ namespace UltrakULL.json
         public string style_doublekill;
         public string style_downtosize;
         public string style_enraged;
+        public string style_envirokill;
         public string style_exploded;
         public string style_finishedoff;
         public string style_fireworks;
@@ -295,6 +296,9 @@ namespace UltrakULL.json
         public string style_ricoshot;
         public string style_ricoshotUltra;
         public string style_ricoshotCounter;
+        public string style_scrindonguloded;
+        public string style_scrongled;
+        public string style_scrongbongled;
         public string style_secret;
         public string style_splattered;
         public string style_triplekill;
