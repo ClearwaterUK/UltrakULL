@@ -167,12 +167,12 @@ namespace UltrakULL.audio
             {
                 string gabeBoatFolder = speechFolder + "gabrielBoat\\";
                 
-                GameObject gabeBoatSpeechObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Unrotated"),"5 - Hologram Rooms"),"5 Nonstuff"),"Decorations"), "Hologram");
-                
+                GameObject gabeBoatSpeechObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Unrotated"),"5 - Hologram Room"),"5 Nonstuff"),"Decorations"), "Hologram");
+
                 AudioSource gabeBoat = gabeBoatSpeechObject.GetComponentInChildren<AudioSource>();
-                
+
                 string gabeBoatString = gabeBoatFolder + "gabrielBoat.wav";
-                
+
                 gabeBoat.clip = SwapClipWithFile(gabeBoat.clip, gabeBoatString);
             }
             else if (levelName == "Level 6-1")
