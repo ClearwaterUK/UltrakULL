@@ -6,10 +6,9 @@ namespace UltrakULL.json
         public Metadata metadata;
         public Body body;
         
-        
         public FrontEnd frontend;
-        
         public Tutorial tutorial;
+        
         public Overture prelude;
         public a1 act1;
         public a2 act2;
@@ -18,6 +17,7 @@ namespace UltrakULL.json
         public Secret secretLevels;
         public IntermissionStrings intermission;
         public Museum devMuseum;
+        public FishingStrings fishing;
         
         public PauseMenu pauseMenu;
         public Option options;
@@ -38,7 +38,87 @@ namespace UltrakULL.json
         public Misc misc;
 
         public SandboxStrings sandbox;
+    }
+    
+    public class FishingStrings
+    {
+        public string fish_ocean;
+        public string fish_cavePool;
+        public string fish_stream;
+        public string fish_lake;
+        public string fish_lakeBloodLower;
+        public string fish_lakeHoly;
+        public string fish_lakeDeep;
+        public string fish_lakeBlood;
+        public string fish_waterWell;
+        public string fish_panOil;
+        
+        public string fish_leaderboard;
+        
+        public string fish_book1;
+        public string fish_book2;
+        public string fish_book3;
+        public string fish_book4;
+        public string fish_book5;
+        public string fish_book6;
+        public string fish_book7;
+        public string fish_book8;
+        public string fish_book9;
+        public string fish_book10;
+        
+        public string fish_rodFar;
+        public string fish_rodClose;
+        public string fish_rodHooked;
+        public string fish_outOfWater;
+        public string fish_fishCaught;
+        public string fish_size;
 
+        
+        public string fish_living;
+        public string fish_tooSmall;
+        public string fish_baitNotWork;
+        public string fish_baitTaken;
+        public string fish_interrupted;
+        
+        public string fish_terminalTitle;
+        public string fish_funnyStupidFish;
+        public string fish_pitrFish;
+        public string fish_trout;
+        public string fish_amidEvilFish;
+        public string fish_chomper;
+        public string fish_bombFish;
+        public string fish_gibeye;
+        public string fish_ironLungFish;
+        public string fish_dopeFish;
+        public string fish_stickFish;
+        public string fish_cookedFish;
+        public string fish_shark;
+        
+        public string fish_funnyStupidFishDescription1;
+        public string fish_funnyStupidFishDescription2;
+        public string fish_pitrFishDescription1;
+        public string fish_pitrFishDescription2;
+        public string fish_troutDescription1;
+        public string fish_troutDescription2;
+        public string fish_amidEvilFishDescription1;
+        public string fish_amidEvilFishDescription2;
+        public string fish_chomperDescription1;
+        public string fish_chomperDescription2;
+        public string fish_bombFishDescription1;
+        public string fish_bombFishDescription2;
+        public string fish_gibeyeDescription1;
+        public string fish_gibeyeDescription2;
+        public string fish_ironLungFishDescription1;
+        public string fish_ironLungFishDescription2;
+        public string fish_dopeFishDescription1;
+        public string fish_dopeFishDescription2;
+        public string fish_stickFishDescription1;
+        public string fish_stickFishDescription2;
+        public string fish_cookedFishDescription1;
+        public string fish_cookedFishDescription2;
+        public string fish_sharkDescription1;
+        public string fish_sharkDescription2;
+        
     }
 
     public class CG
@@ -2064,6 +2144,20 @@ namespace UltrakULL.json
         public string secretLevels_fourth_testament5;
         public string secretLevels_fourth_testament6;
         public string secretLevels_fourth_testament7;
+        
+        public string secretLevels_fifth_testamentTitle;
+        public string secretLevels_fifth_testament1;
+        public string secretLevels_fifth_testament2;
+        public string secretLevels_fifth_testament3;
+        public string secretLevels_fifth_testament4;
+        public string secretLevels_fifth_testament5;
+        public string secretLevels_fifth_testament6;
+        public string secretLevels_fifth_testament7;
+        public string secretLevels_fifth_testament8;
+        public string secretLevels_fifth_testament9;
+        public string secretLevels_fifth_testament10;
+        public string secretLevels_fifth_testament11;
+        public string secretLevels_fifth_testament12;
 
         public string secretLevels_complete1;
         public string secretLevels_complete2;

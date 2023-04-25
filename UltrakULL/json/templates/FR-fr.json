@@ -346,21 +346,93 @@
 
         "museum_plaquesGianniMatragrano1": "",
         "museum_plaquesGianniMatragrano2": "",
-
-        "museum_plaquesJoyYoung1": "",
-        "museum_plaquesJoyYoung2": "",
-
+        
         "museum_plaquesMandalore1": "",
         "museum_plaquesMandalore2": "",
 
         "museum_rocketRace1": "",
         "museum_rocketRace2": "",
-        "museum_rocketRaceResult": "",
-
-        "museum_cinemaPlay": "",
-        "museum_cinemaStop": ""
+        "museum_rocketRaceResult": ""
     },
 
+
+    "fishing": {
+        "fish_ocean": "L'Océan",
+        "fish_cavePool": "Bassin Troglodyte",
+        "fish_stream": "Cours d'Eau",
+        "fish_lake": "Lac",
+        "fish_lakeDeep": "Lac Profond",
+        "fish_lakeBlood": "Lac de Sang",
+        "fish_lakeBloodLower": "Lac de Sang Profond",
+        "fish_lakeHoly": "Lac Sacré",
+        "fish_waterWell": "Puits d'Eau",
+        "fish_panOil": "Huile",
+
+        "fish_leaderboard": "CLASSEMENT TAILLE DE POISSON",
+
+        "fish_book1": "JOUR N°529:",
+        "fish_book2": "TOUJOURS A LA RECHERCHE.",
+        "fish_book3": "AUCUN CONTACT DE L'AGENCE DEPUIS 216 JOURS.",
+        "fish_book4": "JE DEVRAIS RETOURNER AU QG MAIS JE NE PEUX PAS. PAS ENCORE.",
+        "fish_book5": "IL EST LA.",
+        "fish_book6": "QUELQUE PART.",
+        "fish_book7": "JE DOIS LE VOIR.",
+        "fish_book8": "JE DOIS SAVOIR.",
+        "fish_book9": "JEDOISLEVOIRJEDOISSAVOIR",
+        "fish_book10": "TAILLE 2.",
+
+        "fish_rodFar": "loin",
+        "fish_rodClose": "proche",
+        "fish_rodHooked": "Accroché!",
+        "fish_outOfWater": "HORS DE L'EAU",
+        "fish_fishCaught": "Vous avez attrapé",
+        "fish_Size": "TAILLE 1",
+
+        "fish_living": "\"Moyen de vivre.\"",
+        "fish_tooSmall": "Trop petit pour ce poisson. :^(",
+        "fish_baitTaken": "Un poisson à pris l'appât.",
+        "fish_baitNotWork": "Cet appât ne marche pas ici!",
+        "fish_interrupted": "Pêche interrompu.",
+
+        "fish_terminalTitle": "des conseils super sur la pêche",
+        "fish_funnyStupidFish": "Drôle Poisson d'Idiot (Amicale)",
+        "fish_pitrFish": "Poisson PTR",
+        "fish_trout": "Truite",
+        "fish_amidEvilFish": "Poisson en Métal",
+        "fish_chomper": "Chomper",
+        "fish_bombFish": "Poisson Bombé",
+        "fish_gibeye": "Œil",
+        "fish_ironLungFish": "Grenouille (?)",
+        "fish_dopeFish": "Poisson Dope",
+        "fish_stickFish": "Poisson en bâton",
+        "fish_cookedFish": "Poisson Grillé",
+        "fish_shark": "Requin",
+
+        "fish_funnyStupidFishDescription1": "Un poisson stupide. Un poisson très stupide. Un pauvre crétin. Un imbécile. Un bouffon absolute. Un idiot bourdonnant. Porte un sens d'humeur.",
+        "fish_funnyStupidFishDescription2": "Facile à attraper et trés amicale, il est utilisé pour faire apprendre la pêche aux débutants et aux enfants.",
+        "fish_pitrFishDescription1": "Un poisson très malin. Adore les chats. Se nage près de la terre et se fait exprès de se faire rattrapper par les pêcheurs pour être gentil. ",
+        "fish_pitrFishDescription2": "Se trouve toujours au fond de l'hierarchie des poissons.",
+        "fish_troutDescription1": "",
+        "fish_troutDescription2": "",
+        "fish_amidEvilFishDescription1": "",
+        "fish_amidEvilFishDescription2": "",
+        "fish_chomperDescription1": "",
+        "fish_chomperDescription2": "",
+        "fish_bombFishDescription1": "",
+        "fish_bombFishDescription2": "",
+        "fish_gibeyeDescription1": "",
+        "fish_gibeyeDescription2": "",
+        "fish_ironLungFishDescription1": "",
+        "fish_ironLungFishDescription2": "",
+        "fish_dopeFishDescription1": "",
+        "fish_dopeFishDescription2": "",
+        "fish_stickFishDescription1": "",
+        "fish_stickFishDescription2": "",
+        "fish_cookedFishDescription1": "",
+        "fish_cookedFishDescription2": "",
+        "fish_sharkDescription1": "",
+        "fish_sharkDescription2": ""
+    },
     
     "style":{
         "style_airslam": "ÉCRASEMENT DANS L'AIR",
@@ -2107,6 +2179,20 @@
         "secretLevels_fourth_testament5": "LES HURLEMENTS ET GRINCEMENTS DES DENTS",
         "secretLevels_fourth_testament6": "J'AI CRÉÉE L'ENFER...",
         "secretLevels_fourth_testament7": "...Et je ne peux plus le détruire.",
+
+        "secretLevels_fifth_testamentTitle": "TESTAMENT IV",
+        "secretLevels_fifth_testament1": "A remplir",
+        "secretLevels_fifth_testament2": "",
+        "secretLevels_fifth_testament3": "",
+        "secretLevels_fifth_testament4": "",
+        "secretLevels_fifth_testament5": "",
+        "secretLevels_fifth_testament6": "",
+        "secretLevels_fifth_testament7": "",
+        "secretLevels_fifth_testament8": "",
+        "secretLevels_fifth_testament9": "",
+        "secretLevels_fifth_testament10": "",
+        "secretLevels_fifth_testament11": "",
+        "secretLevels_fifth_testament12": "",
         
         "secretLevels_complete1": "MISSION",
         "secretLevels_complete2": "ACCOMPLIE"

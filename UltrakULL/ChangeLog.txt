@@ -1,4 +1,4 @@
-﻿1.2.0
+﻿1.2.0a
 - **Added content related to Wait Of The World.**
 - Added subtitles and strings for P-2 and Sisyphus Prime.
 - Added shop strings for the S.R.S. Cannon.
@@ -7,11 +7,12 @@
 - Added strings for the enemy/object modifier in the cheat menu.
 - Added strings for the controller rumble tab in the options menu.
 - Added strings for all the dev museum content.
+- Added strings for 5-S.
 - Refactored and moved several key strings in the templates. Be sure to consult the template changelog.
 - Removed the "Credits" category from the templates due to it being redundant thanks to the new dev museum.
 (NOTE: Mod credits will be moved to the dev museum in future.)
 
-- Template changelog is far too big to send here. Be sure to check the GitHub release page for the full changelog.
+ Template changelog is far too big to send here. Be sure to check the GitHub release page for the full changelog.
 
 1.1.1
 - **Added basic support for Right-to-left languages, such as Arabic and Hebrew.**

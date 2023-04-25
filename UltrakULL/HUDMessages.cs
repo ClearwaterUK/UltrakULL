@@ -43,10 +43,16 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.misc.hud_weaponVariation;
             }
-            if (message.Contains("=>"))
+            if (message.Contains("=>")) //4-S transaction complete
             {
                 return message; //4-S transaction complete
             }
+            //For some reason 5-S passes through this function instead of passing through HudMessage. So we'll do this
+            if(SceneManager.GetActiveScene().name == "Level 5-S")
+            {
+                return StringsParent.GetMessage(message, "", "");
+            }
+            
 
             //Cybergrind custom pattern fix
             if (SceneManager.GetActiveScene().name == "Endless")
@@ -59,7 +65,7 @@ namespace UltrakULL
             }
 
             Logging.Warn("Couldn't find string for message: " + message);
-            return ("Unimplemented HUD string, check the console");
+            return message;
         }
     }
 }

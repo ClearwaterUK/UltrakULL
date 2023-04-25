@@ -865,9 +865,7 @@ namespace UltrakULL
                 
                 //Whiplash
                 GameObject whiplash = GetGameObjectChild(armWindow, "Variation Panel 3 (New)");
-                Console.WriteLine(whiplash.name);
                 Text whiplashName = GetTextfromGameObject(GetGameObjectChild(whiplash, "Text"));
-                Console.WriteLine(whiplashName.name);
                 whiplashName.text = LanguageManager.CurrentLanguage.shop.shop_armWhiplash;
 
                 GameObject whiplashWindow = GetGameObjectChild(armWindow, "Variation 3 Info (New)");
@@ -893,10 +891,12 @@ namespace UltrakULL
 
         public static void PatchShop(ref GameObject level)
         {
-            if (SceneManager.GetActiveScene().name == "Level 2-S")
+            //No shops in secret levels so immediately back out
+            if (SceneManager.GetActiveScene().name.Contains("-S"))
             {
                 return;
             }
+            
             List<GameObject> shopsToPatch = new List<GameObject>();
             //Start by finding what level we're on and what shopObjects need patching.
             if (SceneManager.GetActiveScene().name == "uk_construct")
@@ -905,7 +905,6 @@ namespace UltrakULL
             }
             else if(SceneManager.GetActiveScene().name.Contains("P-"))
             {
-
                 shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Prime FirstRoom"),"Room"),"Shop"),"Canvas"));
             }
             //Specific fix for 6-1
@@ -974,7 +973,7 @@ namespace UltrakULL
                 }
             }
             
-            Console.WriteLine(shopsToPatch.Count);
+            Logging.Message(shopsToPatch.Count + " shops to patch in scene");
             if (shopsToPatch.Count > 0)
             {
                 PatchShopFrontEnd(ref shopsToPatch);

@@ -174,8 +174,30 @@ namespace UltrakULL
             return "Unknown 5-4 string";
         }
 
-        private static string Level5Secret()
+        private static string Level5Secret(string message)
         {
+            if (message.Contains("living"))
+            {
+                return (LanguageManager.CurrentLanguage.fishing.fish_living);
+            }
+            if (message.Contains("Too small"))
+            {
+                return (LanguageManager.CurrentLanguage.fishing.fish_tooSmall);
+            }
+            if (message.Contains("This bait"))
+            {
+                return (LanguageManager.CurrentLanguage.fishing.fish_baitNotWork);
+            }
+            if (message.Contains("A fish took"))
+            {
+                return (LanguageManager.CurrentLanguage.fishing.fish_baitTaken);
+            }
+            if (message.Contains("Fishing interrupted"))
+            {
+                return (LanguageManager.CurrentLanguage.fishing.fish_interrupted);
+            }
+            
+            
             return "Unknown 5-S string";
         }
 
@@ -249,7 +271,7 @@ namespace UltrakULL
                     }
                 case "Level 5-S":
                     {
-                        return Level5Secret();
+                        return Level5Secret(message);
                     }
                 case "Level 6-1":
                     {

@@ -707,22 +707,30 @@ namespace UltrakULL
             
             //Loop through each entry
             GameObject rumbleEntryList = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu,"Scroll View"),"Viewport"),"Content");
-            for(int x = 0; x < 19; x++) //Hardcoded, amount may increase in future updates
+            try
             {
-                GameObject entry = rumbleEntryList.transform.GetChild(x).gameObject;
-                //Throws an out of bounds error, but still swaps the text correctly...
-                Text entryIntensity = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(entry,"Button"),"Text (1)"));
-                entryIntensity.text = LanguageManager.CurrentLanguage.options.rumble_intensity;
+                for(int x = 0; x < 19; x++) //Hardcoded, amount may increase in future updates
+                {
+                    GameObject entry = rumbleEntryList.transform.GetChild(x).gameObject;
+                    //Throws an out of bounds error, but still swaps the text correctly...
+                    Text entryIntensity = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(entry,"Button"),"Text (1)"));
+                    entryIntensity.text = LanguageManager.CurrentLanguage.options.rumble_intensity;
                 
-                Text entryResetIntensity = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(entry,"Default Button (1)"),"Text"));
-                entryResetIntensity.text = LanguageManager.CurrentLanguage.options.rumble_reset;
+                    Text entryResetIntensity = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(entry,"Default Button (1)"),"Text"));
+                    entryResetIntensity.text = LanguageManager.CurrentLanguage.options.rumble_reset;
                 
-                Text entryEndDelay = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(entry,"End Delay Container"),"Text (2)"));
-                entryEndDelay.text = LanguageManager.CurrentLanguage.options.rumble_endDelay;
+                    Text entryEndDelay = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(entry,"End Delay Container"),"Text (2)"));
+                    entryEndDelay.text = LanguageManager.CurrentLanguage.options.rumble_endDelay;
                 
-                Text entryResetEndDelay = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(entry,"End Delay Container"),"Default Button"),"Text"));
-                entryResetEndDelay.text = LanguageManager.CurrentLanguage.options.rumble_reset;
+                    Text entryResetEndDelay = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(entry,"End Delay Container"),"Default Button"),"Text"));
+                    entryResetEndDelay.text = LanguageManager.CurrentLanguage.options.rumble_reset;
+                }
             }
+            catch (Exception e)
+            {
+               Logging.Warn("Rumble options exception, should be harmless unless if console is spammed with this");
+            }
+            
         }
 
         private void PatchOptions(GameObject optionsMenu)

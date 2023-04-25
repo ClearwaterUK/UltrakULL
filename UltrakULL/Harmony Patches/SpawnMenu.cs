@@ -12,7 +12,6 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool CreateButtons_Prefix(SpawnableObject[] list, ref string sectionName, ref SpawnMenu __instance)
         {
-            Console.WriteLine(sectionName);
             switch(sectionName)
             {
                 case "SANDBOX TOOLS :^)": { sectionName = LanguageManager.CurrentLanguage.misc.spawner_sandboxTools; break; }
@@ -22,7 +21,6 @@ namespace UltrakULL.Harmony_Patches
                 case "SPECIAL": { sectionName = LanguageManager.CurrentLanguage.misc.spawner_special; break; }
                 case "UNLOCKABLES": { sectionName = LanguageManager.CurrentLanguage.misc.spawner_unlockables; break; }
             }
-            Console.WriteLine(sectionName);
 
             return true;
         }

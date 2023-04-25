@@ -3,6 +3,7 @@
 ADDED:
 
 New category: devMuseum
+New category: fishing
 
 [To prevent this changelog from being overly long, all multi-line entries are referred to as a single line. Check the templates to view the amount of lines each entry is split into.]
 
@@ -85,6 +86,56 @@ devMuseum: museum_rocketRaceResult
 
 devMuseum: museum_cinemaPlay
 devMuseum: museum_cinemaStop
+
+fishing: fish_ocean
+fishing: fish_cavePool
+fishing: fish_stream
+fishing: fish_lake
+fishing: fish_lakeDeep
+fishing: fish_lakeBlood
+fishing: fish_lakeBloodLower
+fishing: fish_waterWell
+fishing: fish_panOil
+
+fishing: fish_leaderboard
+
+fishing: fish_book
+
+fishing: fish_living
+fishing: fish_tooSmall
+fishing: fish_baitNotWork
+fishing: fish_baitTaken
+fishing: fish_interrupted
+
+fishing: fish_terminalTitle
+fishing: fish_funnyStupidFish
+fishing: fish_pitrFish
+fishing: fish_trout
+fishing: fish_amidEvilFish
+fishing: fish_chomper
+fishing: fish_bombFish
+fishing: fish_gibeye
+fishing: fish_ironLungFish
+fishing: fish_dopeFish
+fishing: fish_stickFish
+fishing: fish_cookedFish
+fishing: fish_shark
+fishing: fish_funnyStupidFishDescription
+fishing: fish_pitrFishDescription
+fishing: fish_troutDescription
+fishing: fish_amidEvilFishDescription
+fishing: fish_chomperDescription
+fishing: fish_bombFishDescription
+fishing: fish_gibeyeDescription
+fishing: fish_ironLungFishDescription
+fishing: fish_dopeFishDescription
+fishing: fish_stickFishDescription
+fishing: fish_cookedFishDescription
+fishing: fish_sharkDescription
+
+secretLevels: secretLevels_fifth_testamentTitle
+secretLevels: secretLevels_fifth_testament
+
 
 MODIFIED:
 

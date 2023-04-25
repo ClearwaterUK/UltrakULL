@@ -49,7 +49,6 @@ using UMM;
  *
  * New loading overlay in the menu
  * Make language button disappear like other option buttons when save menu is opened
- * Delete Credits category in JSON since DevMuseum now replaces it
  * Sissy Prime dubbing
  * Update install instructions on GitHub page (still says to extract to BIE folder when it should go in UMM Mods)
  * Couple of extra style bonuses
@@ -308,7 +307,6 @@ namespace UltrakULL
                 }*/
                 
                 //Each scene (level) has an object called Canvas. Most game objects are there.
-                Logging.Message("Canvas");
                 GameObject canvasObj = GetInactiveRootObject("Canvas");
                 if (!canvasObj)
                 {
@@ -390,6 +388,11 @@ namespace UltrakULL
                                 {
                                     Logging.Message("Tutorial");
                                 }
+                                else if (levelName.Contains("-S"))
+                                {
+                                    Logging.Message("Secret");
+                                    SecretLevels secretLevels = new SecretLevels(ref canvasObj);
+                                }
                                 if(levelName.Contains("0-"))
                                 {
                                     Logging.Message("Prelude");
@@ -410,14 +413,8 @@ namespace UltrakULL
                                     Logging.Message("Prime");
                                     PrimeSanctum primeSanctumClass = new PrimeSanctum(ref canvasObj);
                                 }
-                                else if (levelName.Contains("-S"))
-                                {
-                                    Logging.Message("Secret");
-                                    SecretLevels secretLevels = new SecretLevels(ref canvasObj);
-                                }
                                 else if (levelName == "uk_construct")
                                 {
-                                    
                                     Logging.Message("Sandbox");
                                     Sandbox sandbox = new Sandbox(ref canvasObj);
                                 }
@@ -435,9 +432,7 @@ namespace UltrakULL
                                 {
                                     Logging.Message("DevMuseum");
                                     DevMuseum devMuseum = new DevMuseum(ref canvasObj);
-                                    
                                 }
-
                             }
                             break;
                         }
@@ -456,8 +451,6 @@ namespace UltrakULL
 
         private IEnumerator ApplyPostFixes(GameObject frontEnd)
         {
-            Console.WriteLine(SceneManager.GetActiveScene().name);
-            Console.WriteLine(SceneManager.GetActiveScene().name == "Main Menu");
             if (SceneManager.GetActiveScene().name == "Main Menu")
             {
                  yield return new WaitForSeconds(0.50f);
@@ -465,7 +458,6 @@ namespace UltrakULL
             //Open Language Folder button in Options->Langauge
             
             Text openLangFolderText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd,"OptionsMenu"), "Language Page"),"Scroll Rect (1)"),"Contents"),"OpenLangFolder"),"Slot Text"));
-            Console.WriteLine("slot text");
             openLangFolderText.text = LanguageManager.CurrentLanguage.options
             .language_openLanguageFolder;
 

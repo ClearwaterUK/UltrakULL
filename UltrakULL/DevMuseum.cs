@@ -352,9 +352,7 @@ namespace UltrakULL
             GameObject lobbyRoomHakitaPlaque = lobbyRoom.transform.GetChild(58).gameObject;
             GameObject lobbyRoomArtRoomPlaque = lobbyRoom.transform.GetChild(0).gameObject;
             GameObject lobbyRoomNerdRoomPlaque = lobbyRoom.transform.GetChild(1).gameObject;
-            
-            Console.WriteLine(lobbyRoomHakitaPlaque.name);
-            
+
             Text frontDeskPlaqueText1 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(lobbyRoomHakitaPlaque,"Canvas (3)"),"Text"));
             frontDeskPlaqueText1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesHakita1;
             Text frontDeskPlaqueText2 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(lobbyRoomHakitaPlaque,"Canvas (3)"),"Text (1)"));
