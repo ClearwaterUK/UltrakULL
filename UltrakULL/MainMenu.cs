@@ -440,14 +440,7 @@ namespace UltrakULL
             Text primeTitle = GetTextfromGameObject(GetGameObjectChild(primeObject, "Text"));
             primeTitle.text = LanguageManager.CurrentLanguage.frontend.layer_prime;
         }
-
-
-        private static void PatchLoadingWindow(GameObject frontEnd)
-        {
-            GameObject loadingObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("MapLoader"), "Loading Blocker"),"Panel"),"Text");
-            Text loadingText = GetTextfromGameObject(loadingObject);
-            loadingText.text = LanguageManager.CurrentLanguage.misc.loading;
-        }
+        
 
         public static void Patch(GameObject frontEnd)
         {
@@ -462,7 +455,6 @@ namespace UltrakULL
                 PatchLevelSelectAct1(frontEnd);
                 PatchLevelSelectAct2(frontEnd);
                 PatchLevelSelectPrime(frontEnd);
-                PatchLoadingWindow(frontEnd);
             }
             catch (Exception e)
             {

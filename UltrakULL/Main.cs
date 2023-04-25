@@ -41,19 +41,17 @@ using UMM;
  * 
  *  -- STUFF REPORTED BY ULL TEAM --
  * Bugs/missing things reported in the Discord channels
+ * Minos death screen audio file name mismatch
  * 
  *  -- FOR NEXT HOTFIX --
- *
- *
- * P-2 UPDATE DAMAGE REPORT
- *
- * New loading overlay in the menu
  * Make language button disappear like other option buttons when save menu is opened
  * Sissy Prime dubbing
  * Update install instructions on GitHub page (still says to extract to BIE folder when it should go in UMM Mods)
- * Couple of extra style bonuses
- * 4-S isn't translated, but no errors. Probably forgot to add translation function to onSceneLoaded
- * 5-2 throws errors with the audio swapper. Check with other levels too
+ *
+ *
+ * CG update soon.
+ * - New terminal for selecting music in CG
+ * - Red revolver
  * */
 
 namespace UltrakULL
