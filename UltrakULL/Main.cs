@@ -18,29 +18,23 @@ using UMM;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater, additional code contributions by Temperz87, translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 23rd December 2022
+ *	Last updated: 25th April 2023
  *	
  *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
  *	This tool is primarily meant to assist with language translation.
  * 
  *  -- MAIN TASK LIST --
- *  - Add ULL credits, translation credits to main menu with help of UKUIHelper library
+ *  - Add ULL credits in dev museum
  *  - Error and exception handling
  *  - Divide up more stuff in try/catch functions (especially the shop), that way less stuff breaks if something bad happens
  * 
  *  -- STUFF FOR FUTURE UPDATES --
- *  - Next game update scheduled for early 2023. P-2, 5-S, radient enemies, rumble support and green rocket launcher
- *  - Swap out rank textures in HUD for translation
- *  - Replace the default font with a version that has better special char + cyrillic support
+ *  - Swap out rank textures in HUD for translation (there's a mod already for this, shall look into)
+ *  - Replace the default font with a version that has better special char + cyrillic support (someone already made a global font, just need to see how to implement)
  *  - Finish audio dubbing documentation
+ *  - Change language file system so they can be directly downloaded in-game (Upload files to private repo?)
  *  
- *  -- BUGS AND QUIRKS TO FIX --
- * - Misc keys as strings (comma, period, etc) missing
- * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
- * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable a patched function by returning true if an exception happens there, will then use original game code.
- * 
- *  -- STUFF REPORTED BY ULL TEAM --
- * Bugs/missing things reported in the Discord channels
+ *  -- BUGS AND QUIRKS TO FIX -- * 
  * Minos death screen audio file name mismatch
  * 
  *  -- FOR NEXT HOTFIX --
