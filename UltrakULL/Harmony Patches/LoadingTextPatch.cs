@@ -16,6 +16,7 @@ namespace UltrakULL.Harmony_Patches
         {
             Text loadingText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(___loadingBlocker,"Panel"),"Text"));
             loadingText.text = LanguageManager.CurrentLanguage.misc.loading;
+            
         }
     }
 }
