@@ -17,7 +17,7 @@ namespace UltrakULL
             Text testamentPanelTitle = null;
 
             //0-S
-            if (SceneManager.GetActiveScene().name == "Level 0-S")
+            if (getCurrentSceneName() == "Level 0-S")
             {
                 GameObject finalRoom = GameObject.Find("FinalRoom 2");
                 
@@ -29,7 +29,7 @@ namespace UltrakULL
                 testamentPanelTitle.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_prelude_testamentTitle;
             }
             //1-S
-            else if (SceneManager.GetActiveScene().name == "Level 1-S")
+            else if (getCurrentSceneName() == "Level 1-S")
             {
                 GameObject finalRoom = GameObject.Find("5 - Finale");
                 
@@ -42,7 +42,7 @@ namespace UltrakULL
                 
             }
             //4-S
-            else if (SceneManager.GetActiveScene().name == "Level 4-S")
+            else if (getCurrentSceneName() == "Level 4-S")
             {
                 testamentPanelTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(testamentRoom, "4 Stuff"), "FinalRoom 2"), "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"),"Panel"),"Title"));
             
@@ -51,7 +51,7 @@ namespace UltrakULL
 
             }
             //5-S   
-            else if (SceneManager.GetActiveScene().name == "Level 5-S")
+            else if (getCurrentSceneName() == "Level 5-S")
             {
                 GameObject finalRoom = GameObject.Find("FinalRoom 2");
                 
@@ -146,7 +146,7 @@ namespace UltrakULL
         public SecretLevels(ref GameObject canvasObj)
         {
             GameObject player = GameObject.Find("Player");
-            this.currentLevel = SceneManager.GetActiveScene().name;
+            this.currentLevel = getCurrentSceneName();
             GameObject testamentRoom = null;
 
             switch (this.currentLevel)

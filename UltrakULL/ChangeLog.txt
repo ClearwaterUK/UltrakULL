@@ -1,4 +1,8 @@
-﻿1.2.0a
+﻿1.2.0b
+- Various fixes
+- Upgraded UMM to 0.5.5.
+
+1.2.0a
 - **Added content related to Wait Of The World.**
 - Added subtitles and strings for P-2 and Sisyphus Prime.
 - Added shop strings for the S.R.S. Cannon.

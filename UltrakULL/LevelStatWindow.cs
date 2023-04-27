@@ -32,7 +32,7 @@ namespace UltrakULL
             Text assistsName = GetTextfromGameObject(GetGameObjectChild(levelStatsWindow, "Assists Title"));
             assistsName.text = LanguageManager.CurrentLanguage.misc.levelstats_majorAssists;
 
-            if (SceneManager.GetActiveScene().name == "Level 4-S")
+            if (getCurrentSceneName() == "Level 4-S")
             {
                 Text cratesName = GetTextfromGameObject(GetGameObjectChild(levelStatsWindow, "Crates Counter"));
                 cratesName.text = LanguageManager.CurrentLanguage.misc.levelstats_boxes;

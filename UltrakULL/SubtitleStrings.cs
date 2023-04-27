@@ -1,5 +1,6 @@
 ﻿using UnityEngine.SceneManagement;
 using UltrakULL.json;
+using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
 {
@@ -731,7 +732,7 @@ namespace UltrakULL
             {
                 return GetFightLine(input);
             }
-            string currentLevel = SceneManager.GetActiveScene().name;
+            string currentLevel = getCurrentSceneName();
             //3-2
             if (currentLevel.Contains("3-2"))
             {

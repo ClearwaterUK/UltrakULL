@@ -1,5 +1,6 @@
 ﻿using UnityEngine.SceneManagement;
 using UltrakULL.json;
+using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
 {
@@ -7,7 +8,7 @@ namespace UltrakULL
     {
         public static string GetBookText(string originalText)
         {
-            string currentLevel = SceneManager.GetActiveScene().name;
+            string currentLevel = getCurrentSceneName();
 
             switch(currentLevel)
             {

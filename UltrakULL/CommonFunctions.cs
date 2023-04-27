@@ -47,6 +47,11 @@ namespace UltrakULL
             }
             return null;
         }
+        
+        public static string getCurrentSceneName()
+        {
+            return SceneHelper.CurrentScene;
+        }
 
         public static void PatchResultsScreen(string name, string challenge)
         {

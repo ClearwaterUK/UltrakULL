@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Text.RegularExpressions;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.Harmony_Patches
 {
     //@Override
@@ -23,7 +25,7 @@ namespace UltrakULL.Harmony_Patches
             ___txt.text = ___fullString;
 
             //Section for 2-S Mirage's names.
-            if (SceneManager.GetActiveScene().name == "Level 2-S")
+            if (getCurrentSceneName() == "Level 2-S")
             {
                 string openingTag = "<color=grey>";
                 string closingTag = "</color>";

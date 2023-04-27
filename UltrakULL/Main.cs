@@ -46,6 +46,11 @@ using UMM;
  * CG update soon.
  * - New terminal for selecting music in CG
  * - Red revolver
+ * - Scene loading names has also changed.
+ * - Leaderboards for levels (+ option for it in options)
+ * - 0-2 tip of the day has been updated
+ * - getCurrentSceneName() no longer works due to asset bundle changes. Replace with getCurrentSceneName in common functions
+ * 
  * */
 
 namespace UltrakULL
@@ -64,7 +69,7 @@ namespace UltrakULL
         public Font vcrFont;
 
         private const string InternalName = "clearwater.ultrakull.ultrakULL";
-        private const string InternalVersion = "1.1.2";
+        private const string InternalVersion = "1.2.0";
         
         private static readonly HttpClient Client = new HttpClient();
         
@@ -289,8 +294,7 @@ namespace UltrakULL
             else
             {
                 Logging.Message("Switching scenes...");
-                Scene currentLevel = SceneManager.GetActiveScene();
-                string levelName = currentLevel.name;
+                string levelName = getCurrentSceneName();
                 
                 /*if (Harmony_Patches.InjectLanguageButton.languageButtonText != null)
                 {
@@ -307,6 +311,7 @@ namespace UltrakULL
                 }
                 else
                 {
+
                     switch(levelName)
                     {
                         case "Intro": { break; }
@@ -443,7 +448,7 @@ namespace UltrakULL
 
         private IEnumerator ApplyPostFixes(GameObject frontEnd)
         {
-            if (SceneManager.GetActiveScene().name == "Main Menu")
+            if (getCurrentSceneName() == "Main Menu")
             {
                  yield return new WaitForSeconds(0.50f);
                  
@@ -458,7 +463,7 @@ namespace UltrakULL
             GameObject ummRestartButton = null;
 
             
-            if(SceneManager.GetActiveScene().name == "Main Menu")
+            if(getCurrentSceneName() == "Main Menu")
             {
                 GameObject titleObject = GetGameObjectChild(frontEnd, "Main Menu (1)");
 

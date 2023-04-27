@@ -18,7 +18,7 @@ namespace UltrakULL.Harmony_Patches
 
         public static bool Prefix(OptionsMenuToManager __instance)
         {
-            if (SceneManager.GetActiveScene().name == "Main Menu")
+            if (getCurrentSceneName() == "Main Menu")
             {
                 Transform panel = __instance.pauseMenu.transform.Find("Panel");
                 GameObject discordButton = panel.Find("Discord").gameObject;

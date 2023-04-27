@@ -25,7 +25,7 @@ namespace UltrakULL
     
         public static void PatchAct2(ref GameObject canvasObj)
         {
-            string currentLevel = SceneManager.GetActiveScene().name;
+            string currentLevel = getCurrentSceneName();
             string levelName = Act2Strings.GetLevelName();
             string levelChallenge = Act2Strings.GetLevelChallenge(currentLevel);
             

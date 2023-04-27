@@ -5,7 +5,7 @@
 		"langVersion": "1.0",
         "langDisplayName": "Français (France)",
 
-        "minimumModVersion": "1.1.2"
+        "minimumModVersion": "1.2.0"
 	},
 	"body": {
 		"bodyName": "Traduction française pour ULTRAKILL."

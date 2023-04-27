@@ -12,7 +12,7 @@ namespace UltrakULL
     {
         private void PatchSecretText(PrimeSanctumStrings strings)
         {
-            string currentLevel = SceneManager.GetActiveScene().name;
+            string currentLevel = getCurrentSceneName();
 
             Text secretText = null;
 
@@ -40,7 +40,7 @@ namespace UltrakULL
 
         public PrimeSanctum(ref GameObject level)
         {
-            string currentLevel = SceneManager.GetActiveScene().name;
+            string currentLevel = getCurrentSceneName();
 
             if (currentLevel.Contains("P-1"))
             {
@@ -49,7 +49,7 @@ namespace UltrakULL
                 PatchResultsScreen(levelname, "");
                 
                 PatchSecretText(primeSanctumChallengeStrings);
-                AudioSwapper.AudioSwap(SceneManager.GetActiveScene().name);
+                AudioSwapper.AudioSwap(getCurrentSceneName());
             }
             else if (currentLevel.Contains("P-2"))
             {
@@ -103,7 +103,7 @@ namespace UltrakULL
                 PatchResultsScreen(levelname, "");
                 
                 PatchSecretText(primeSanctumChallengeStrings);
-                //AudioSwapper.AudioSwap(SceneManager.GetActiveScene().name);
+                //AudioSwapper.AudioSwap(getCurrentSceneName());
             }
         }
     }

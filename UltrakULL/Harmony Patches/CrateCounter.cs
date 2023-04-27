@@ -2,6 +2,8 @@
 using UltrakULL.json;
 using UnityEngine.SceneManagement;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.Harmony_Patches
 {
 
@@ -13,7 +15,7 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool CoinsToPoints_MyPatch(CrateCounter __instance, int ___savedCoins)
         {
-            if (SceneManager.GetActiveScene().name == "Level 4-S")
+            if (getCurrentSceneName() == "Level 4-S")
             {
                 GameProgressSaver.AddMoney(___savedCoins * 100);
 

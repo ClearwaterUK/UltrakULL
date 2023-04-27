@@ -92,7 +92,7 @@ namespace UltrakULL
         //Tips for each level
         public static string GetLevelTip()
         {
-            string currentLevel = SceneManager.GetActiveScene().name;
+            string currentLevel = getCurrentSceneName();
 
             //***Prelude***
             if (currentLevel.Contains("0-2"))

@@ -133,7 +133,7 @@ namespace UltrakULL
             cgTerminalTipboxDescription.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_settingsDescription;
 
             //Main menu
-            GameObject cgTerminalMainMenu = GetGameObjectChild(cgTerminal, "Main Menu");
+            GameObject cgTerminalMainMenu = GetGameObjectChild(GetGameObjectChild(cgTerminal, "Main Menu"),"Buttons");
 
             Text cgTerminalThemesText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgTerminalMainMenu, "ThemeButton"), "Text"));
             cgTerminalThemesText.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themes;
@@ -145,7 +145,6 @@ namespace UltrakULL
             cgTerminalWaveText.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_waves;
 
             //Themes
-
             GameObject cgTerminalThemes = GetGameObjectChild(GetGameObjectChild(cgTerminal, "Themes"),"Panel");
 
             Text cgTerminalThemesTitle = GetTextfromGameObject(GetGameObjectChild(cgTerminalThemes, "Title"));
@@ -153,18 +152,20 @@ namespace UltrakULL
 
             Text cgTerminalThemesDescription = GetTextfromGameObject(GetGameObjectChild(cgTerminalThemes, "Text"));
             cgTerminalThemesDescription.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesDescription;
+            
+            GameObject cgTerminalThemesButton = GetGameObjectChild(cgTerminalThemes,"Buttons");
 
-            Text cgTerminalThemesLight = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgTerminalThemes, "LightButton"), "Text"));
+            Text cgTerminalThemesLight = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgTerminalThemesButton, "LightButton"), "Text"));
             cgTerminalThemesLight.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesLight;
 
-            Text cgTerminalThemesDark = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgTerminalThemes, "DarkButton"), "Text"));
+            Text cgTerminalThemesDark = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgTerminalThemesButton, "DarkButton"), "Text"));
             cgTerminalThemesDark.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesDark;
 
-            Text cgTerminalThemesCustom = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgTerminalThemes, "CustomButton"), "Text"));
+            Text cgTerminalThemesCustom = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgTerminalThemesButton, "CustomButton"), "Text"));
             cgTerminalThemesCustom.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustom;
 
             //Customize theme
-            GameObject cgCustomTheme = GetGameObjectChild(GetGameObjectChild(cgTerminal, "Custom"),"Panel");
+            GameObject cgCustomTheme = GetGameObjectChild(GetGameObjectChild(cgTerminal, "CustomTextures"),"Panel");
             Text cgCustomThemeTitle = GetTextfromGameObject(GetGameObjectChild(cgCustomTheme, "Title"));
             cgCustomThemeTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesModify;
 
@@ -217,7 +218,6 @@ namespace UltrakULL
             cgTerminalPatternsEditor.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_patternsLaunchExternalEditor;
 
             //Waves
-
             GameObject cgTerminalWaves = GetGameObjectChild(GetGameObjectChild(cgTerminal, "Waves"), "Panel");
 
             Text cgTerminalWavesTitle = GetTextfromGameObject(GetGameObjectChild(cgTerminalWaves, "Title"));

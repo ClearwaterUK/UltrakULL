@@ -1,5 +1,6 @@
 ﻿using UnityEngine.SceneManagement;
 using UltrakULL.json;
+using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
 {
@@ -11,7 +12,7 @@ namespace UltrakULL
 
         public string GetSecretText()
         {
-            string currentLevel = SceneManager.GetActiveScene().name;
+            string currentLevel = getCurrentSceneName();
 
             switch (currentLevel)
             {
@@ -24,7 +25,7 @@ namespace UltrakULL
 
         public string GetLevelName()
         {
-            string currentLevel = SceneManager.GetActiveScene().name;
+            string currentLevel = getCurrentSceneName();
 
             switch (currentLevel)
             {

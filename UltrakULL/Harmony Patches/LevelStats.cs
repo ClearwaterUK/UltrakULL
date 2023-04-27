@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
 
 namespace UltrakULL.Harmony_Patches
@@ -34,7 +35,7 @@ namespace UltrakULL.Harmony_Patches
                 StockMapInfo instance2 = StockMapInfo.Instance;
                 if (instance2 != null)
                 {
-                    __instance.levelName.text = LevelNames.GetDiscordLevelName(SceneManager.GetActiveScene().name);
+                    __instance.levelName.text = LevelNames.GetDiscordLevelName(getCurrentSceneName());
                 }
             }
         }

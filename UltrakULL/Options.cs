@@ -804,7 +804,7 @@ namespace UltrakULL
             //Options are in two different locations.
             //On the main menu, it's root/Canvas/OptionsMenu.
             //In-game it's root/Canvas/OptionsMenu.
-            if (SceneManager.GetActiveScene().name == "Main Menu")
+            if (getCurrentSceneName() == "Main Menu")
             {
                 this.optionsMenu = GetGameObjectChild(game, "OptionsMenu");
             }

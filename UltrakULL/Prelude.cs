@@ -23,7 +23,7 @@ namespace UltrakULL
 
         public Prelude(ref GameObject level)
         {
-            string currentLevel = SceneManager.GetActiveScene().name;
+            string currentLevel = getCurrentSceneName();
 
             if (currentLevel == "Level 0-1")
             {

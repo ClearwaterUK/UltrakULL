@@ -34,13 +34,13 @@ namespace UltrakULL
 
         public static void PatchAct1(ref GameObject canvasObj)
         {
-            string currentLevel = SceneManager.GetActiveScene().name;
+            string currentLevel = getCurrentSceneName();
             string levelName = Act1Strings.GetLevelName();
             string levelChallenge = Act1Strings.GetLevelChallenge(currentLevel);
 
             PatchHellmap(ref canvasObj);
             PatchResultsScreen(levelName, levelChallenge);
-            AudioSwapper.AudioSwap(SceneManager.GetActiveScene().name);
+            AudioSwapper.AudioSwap(getCurrentSceneName());
         }
     }
 }

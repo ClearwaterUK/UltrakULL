@@ -1,5 +1,6 @@
 ﻿using UnityEngine.SceneManagement;
 using UltrakULL.json;
+using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
 {
@@ -219,7 +220,7 @@ namespace UltrakULL
 
         public static string GetMessage(string message, string message2, string input)
         {
-            string currentLevel = SceneManager.GetActiveScene().name;
+            string currentLevel = getCurrentSceneName();
             string fullMessage = message + message2;
 
             if(fullMessage.Contains("opens"))
@@ -308,7 +309,7 @@ namespace UltrakULL
 
         public static string GetLevelName()
         {
-            string currentLevel = SceneManager.GetActiveScene().name;
+            string currentLevel = getCurrentSceneName();
 
             switch (currentLevel)
             {
