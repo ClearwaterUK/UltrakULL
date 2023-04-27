@@ -20,13 +20,11 @@ using UMM;
  *	Date started: 21st April 2021
  *	Last updated: 25th April 2023
  *	
- *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
- *	This tool is primarily meant to assist with language translation.
+ *	A translation mod for Ultrakill that hooks into the game and allows for text/string replacement. This tool is primarily meant to assist with language translation.
  * 
  *  -- MAIN TASK LIST --
  *  - Add ULL credits in dev museum
- *  - Error and exception handling
- *  - Divide up more stuff in try/catch functions (especially the shop), that way less stuff breaks if something bad happens
+ *  - CG update stuff
  * 
  *  -- STUFF FOR FUTURE UPDATES --
  *  - Swap out rank textures in HUD for translation (there's a mod already for this, shall look into)
@@ -36,20 +34,19 @@ using UMM;
  *  
  *  -- BUGS AND QUIRKS TO FIX -- * 
  * Minos death screen audio file name mismatch
+ * Some of MDK/Owl's lines are still borked
  * 
  *  -- FOR NEXT HOTFIX --
  * Make language button disappear like other option buttons when save menu is opened
  * Sissy Prime dubbing
- * Update install instructions on GitHub page (still says to extract to BIE folder when it should go in UMM Mods)
  *
  *
- * CG update soon.
+ * CG update:
  * - New terminal for selecting music in CG
  * - Red revolver
- * - Scene loading names has also changed.
+ * - Updated Revolver lore
  * - Leaderboards for levels (+ option for it in options)
  * - 0-2 tip of the day has been updated
- * - getCurrentSceneName() no longer works due to asset bundle changes. Replace with getCurrentSceneName in common functions
  * 
  * */
 

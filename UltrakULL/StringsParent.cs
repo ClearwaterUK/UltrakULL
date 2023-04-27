@@ -10,27 +10,27 @@ namespace UltrakULL
     {
         public static string GetMessage(string message, string message2, string input)
         {
-            Scene currentLevel = SceneManager.GetActiveScene();
-
-            if (currentLevel.name.Contains("Tutorial"))
+            string level = getCurrentSceneName();
+            
+            if (level.Contains("Tutorial"))
             {
                 GameObject canvasObj = GetInactiveRootObject("Canvas");
                 TutorialStrings tutStrings = new TutorialStrings(ref canvasObj);
                 return TutorialStrings.GetMessage(message, message2, input);
             }
-            else if (currentLevel.name.Contains("0-"))
+            else if (level.Contains("0-"))
             {
                 return PreludeStrings.GetMessage(message, message2, input);
             }
-            else if (currentLevel.name.Contains("1-") || (currentLevel.name.Contains("2-") || (currentLevel.name.Contains("3-"))))
+            else if (level.Contains("1-") || (level.Contains("2-") || (level.Contains("3-"))))
             {
                 return Act1Strings.GetMessage(message, message2, input);
             }
-            else if (currentLevel.name.Contains("4-") || (currentLevel.name.Contains("5-") || (currentLevel.name.Contains("6-"))))
+            else if (level.Contains("4-") || (level.Contains("5-") || (level.Contains("6-"))))
             {
                 return Act2Strings.GetMessage(message, message2, input);
             }
-            else if (currentLevel.name.Contains("7-") || (currentLevel.name.Contains("8-") || (currentLevel.name.Contains("9-"))))
+            else if (level.Contains("7-") || (level.Contains("8-") || (level.Contains("9-"))))
             {
                 return "Unimplemented Act 3 function";
             }
