@@ -182,6 +182,7 @@
     <Compile Include="Harmony Patches\Coin.cs" />
     <Compile Include="Harmony Patches\CrateCounter.cs" />
     <Compile Include="Harmony Patches\CustomPatterns.cs" />
+    <Compile Include="Harmony Patches\CybergrindJukebox.cs" />
     <Compile Include="Harmony Patches\DifficultyTitle.cs" />
     <Compile Include="Harmony Patches\DiscordController.cs" />
     <Compile Include="Harmony Patches\EnemyInfoPage.cs" />

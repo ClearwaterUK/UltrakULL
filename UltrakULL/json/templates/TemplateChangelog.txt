@@ -1,4 +1,12 @@
-﻿1.2.0:
+﻿1.2.0b:
+
+ADDED:
+
+shop: shop_revolverSharpshooter
+shop: shop_revolverSharpshooterDescription1
+shop: shop_revolverSharpshooterDescription2
+
+1.2.0:
 
 ADDED:
 

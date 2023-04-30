@@ -145,6 +145,7 @@ namespace UltrakULL.json
         public string cybergrind_settings;
         public string cybergrind_settingsDescription;
         public string cybergrind_themes;
+        public string cybergrind_music;
         public string cybergrind_patterns;
         public string cybergrind_waves;
 
@@ -164,7 +165,16 @@ namespace UltrakULL.json
         public string cybergrind_themesCustomTopRow;
         public string cybergrind_themesCustomTop;
         public string cybergrind_themesCustomGlowIntensity;
-
+        
+        public string cybergrind_musicTitle;
+        public string cybergrind_musicCompleteChallengeRequirement;
+        public string cybergrind_musicSeeEnemyRequirement;
+        public string cybergrind_musicUnlockLevelRequirement;
+        public string cybergrind_musicCompleteLevelRequirement;
+        public string cybergrind_musicUnlocked;
+        public string cybergrind_musicConfirm;
+        public string cybergrind_musicSoundtrack;
+        
         public string cybergrind_patternsTitle;
         public string cybergrind_patternsRefresh;
         public string cybergrind_patternsLaunchExternalEditor;
@@ -1287,6 +1297,10 @@ namespace UltrakULL.json
         public string shop_revolverMarksmanDescription1;
         public string shop_revolverMarksmanDescription2;
         public string shop_revolverMarksmanDescription3;
+        public string shop_revolverSharpshooter;
+        public string shop_revolverSharpshooterDescription1;
+        public string shop_revolverSharpshooterDescription2;
+        
 
         public string shop_shotgunCoreEject;
         public string shop_shotgunCoreEjectDescription1;

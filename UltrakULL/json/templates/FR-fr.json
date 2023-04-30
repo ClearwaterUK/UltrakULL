@@ -530,6 +530,7 @@
           "cybergrind_themes": "THÈMES",
           "cybergrind_patterns": "SCHÉMAS",
           "cybergrind_waves": "VAGUES",
+          "cybergrind_music": "MUSIQUE",
           
           "cybergrind_themesTitle": "THÈMES",
           "cybergrind_themesDescription": "Sélectionnez le thème visuel pour l'arène",
@@ -547,6 +548,15 @@
           "cybergrind_themesCustomTopRow": "LIGNE HAUT",
           "cybergrind_themesCustomTop": "HAUT",
           "cybergrind_themesCustomGlowIntensity": "INTENSITÉ",
+        
+          "cybergrind_musicTitle": "MUSIQUE",
+          "cybergrind_musicCompleteChallengeRequirement": "COMPLÈTEZ LE DÉFI DANS",
+          "cybergrind_musicSeeEnemyRequirement": "RENCONTREZ UN ENNEMI INCONNUE",
+          "cybergrind_musicUnlockLevelRequirement": "DÉBLOQUEZ",
+          "cybergrind_musicCompleteLevelRequirement": "COMPLÈTEZ",
+          "cybergrind_musicUnlocked": "DÉBLOQUÉ",
+          "cybergrind_musicConfirm": "CONFIRMER",
+          "cybergrind_musicSoundtrack": "BANDE SONORE",
           
           "cybergrind_patternsTitle": "SCHÈMAS",
           "cybergrind_patternsRefresh": "ACTUALISER",
@@ -1432,6 +1442,10 @@
         "shop_revolverMarksmanDescription1": "Appuyer sur le tir alternatif pour <color=orange>lancer une pièce</color>.",
         "shop_revolverMarksmanDescription2": "Tirer-la <color=orange>dans l'air</color> pour <color=orange>déflecter</color> votre tir dans le <color=orange>point faible</color> de l'ennemi le plus proche.",
         "shop_revolverMarksmanDescription3": "Les pièces peuvent être enchaînées.",
+
+        "shop_revolverSharpshooter": "TIREUR DE PRÉCISION",
+        "shop_revolverSharpshooterDescription1": "<color=orange>Maintenir</color> le tir alternatif pour charger une laser percant qui <color=orange>rebond des surfaces</color>.",
+        "shop_revolverSharpshooterDescription2": "Elle peut détruire les <color=orange>projectiles</color>.",
         
         "shop_shotgunCoreEject": "ÉJECTEUR",
         "shop_shotgunCoreEjectDescription1": "Appuyer sur le tir alternatif pour surchauffer et <color=orange>lancer</color> les <color=orange>noyeaux</color> du fusil.",

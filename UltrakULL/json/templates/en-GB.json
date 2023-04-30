@@ -540,7 +540,11 @@
         "cybergrind_settingsDescription": "This terminal is used for Cyber Grind customization.",
         "cybergrind_themes": "THEMES",
         "cybergrind_patterns": "PATTERNS",
+        "cybergrind_music": "MUSIC",
         "cybergrind_waves": "WAVES",
+        "cybergrind_musicUnlocked": "UNLOCKED",
+        "cybergrind_musicConfirm": "CONFIRM",
+        "cybergrind_musicSoundtrack": "SOUNDTRACK",
         
         "cybergrind_themesTitle": "THEMES",
         "cybergrind_themesDescription": "Select the visual theme for the arena",
@@ -558,6 +562,12 @@
         "cybergrind_themesCustomTopRow": "TOP ROW",
         "cybergrind_themesCustomTop": "TOP",
         "cybergrind_themesCustomGlowIntensity": "GLOW INTENSITY",
+
+        "cybergrind_musicTitle": "PLAYLIST",
+        "cybergrind_musicCompleteChallengeRequirement": "COMPLETE CHALLENGE FOR",
+        "cybergrind_musicSeeEnemyRequirement": "ENCOUNTER AN UNKNOWN FOE",
+        "cybergrind_musicUnlockLevelRequirement": "REACH",
+        "cybergrind_musicCompleteLevelRequirement": "COMPLETE",
         
         "cybergrind_patternsTitle": "PATTERNS",
         "cybergrind_patternsRefresh": "REFRESH",
@@ -1491,6 +1501,10 @@
         "shop_revolverMarksmanDescription1": "Press Alt Fire to throw a coin.",
         "shop_revolverMarksmanDescription2": "Hit an airborne coin to deflect your shot into the nearest enemy's weakpoint.",
         "shop_revolverMarksmanDescription3": "Coins can be chained.",
+
+        "shop_revolverSharpshooter": "SHARPSHOOTER",
+        "shop_revolverSharpshooterDescription1": "<color=orange>Hold</color> Alt Fire to charge a piercing beam that <color=orange>ricochets off surfaces</color>.",
+        "shop_revolverSharpshooterDescription2": "Can destroy <color=orange>projectiles</color>.",
         
         "shop_shotgunCoreEject": "CORE EJECT",
         "shop_shotgunCoreEjectDescription1": "Press Alt Fire to overheat and launch the shotgun's cores.",

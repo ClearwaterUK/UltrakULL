@@ -32,22 +32,31 @@ using UMM;
  *  - Finish audio dubbing documentation
  *  - Change language file system so they can be directly downloaded in-game (Upload files to private repo?)
  *  
- *  -- BUGS AND QUIRKS TO FIX -- * 
- * Minos death screen audio file name mismatch
- * Some of MDK/Owl's lines are still borked
- * 
  *  -- FOR NEXT HOTFIX --
  * Make language button disappear like other option buttons when save menu is opened
  * Sissy Prime dubbing
  *
  *
  * CG update:
- * - New terminal for selecting music in CG
- * - Red revolver
  * - Updated Revolver lore
  * - Leaderboards for levels (+ option for it in options)
  * - 0-2 tip of the day has been updated
- * 
+ *
+ *- REPORTED BY USERS
+ * Fishing guide terminal sometimes not translated
+ * Second P-2 terminal still English
+ * 5-3 dubbing still not working?
+ * Clash mode missing key in cheat menu
+ * 2-S First prompt panel not translated
+ * 6-1 Terminal not translated
+ * Filth book text in museum missing
+ * enemyBios_sisyphusPrime_strategy_1, enemyBios_sisyphusPrime_strategy_2 not shown
+ * Missing JSON strings that need to be added in the templates:
+ * visualnovel_middleResponseFirst6, enemyBios_stalker_strategy4, subtitles_gabrielSecondTaunt14
+ * Extra lines in RL lore for SRS cannon
+ * Minos death screen audio file name mismatch
+ * Some of MDK/Owl's lines are still borked
+ * 5-: Lake of Blood not translated, "cooking failed" not implemented, message in bottle
  * */
 
 namespace UltrakULL

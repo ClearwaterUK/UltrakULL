@@ -536,8 +536,10 @@
 			"cybergrind_settings": "",
 			"cybergrind_settingsDescription": "",
 			"cybergrind_themes": "",
+			"cybergrind_music": "",
 			"cybergrind_patterns": "",
 			"cybergrind_waves": "",
+
 	
 			"cybergrind_themesTitle": "",
 			"cybergrind_themesDescription": "",
@@ -555,6 +557,15 @@
 			"cybergrind_themesCustomTopRow": "",
 			"cybergrind_themesCustomTop": "",
 			"cybergrind_themesCustomGlowIntensity": "",
+			
+			"cybergrind_musicTitle": "",
+			"cybergrind_musicCompleteChallengeRequirement": "",
+			"cybergrind_musicSeeEnemyRequirement": "",
+			"cybergrind_musicUnlockLevelRequirement": "",
+			"cybergrind_musicCompleteLevelRequirement": "",
+			"cybergrind_musicUnlocked": "",
+			"cybergrind_musicConfirm": "",
+			"cybergrind_musicSoundtrack": "",
 	
 			"cybergrind_patternsTitle": "",
 			"cybergrind_patternsRefresh": "",
@@ -1465,6 +1476,10 @@
 			"shop_revolverMarksmanDescription1": "",
 			"shop_revolverMarksmanDescription2": "",
 			"shop_revolverMarksmanDescription3": "",
+
+			"shop_revolverSharpshooter": "",
+			"shop_revolverSharpshooterDescription1": "",
+			"shop_revolverSharpshooterDescription2": "",
 	
 			"shop_shotgunCoreEject": "",
 			"shop_shotgunCoreEjectDescription1": "",

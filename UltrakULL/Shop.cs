@@ -203,9 +203,20 @@ namespace UltrakULL
                 marksmanWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Revolver red variation (under construction)
-                GameObject revolverRedVariation = GetGameObjectChild(revolverWindow, "Variation Panel (Red)");
-                Text revolverRedUnderConstruction = GetTextfromGameObject(GetGameObjectChild(revolverRedVariation, "Text (1)"));
-                revolverRedUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
+                //Sharpshooter
+                GameObject sharpshooter = GetGameObjectChild(revolverWindow, "Variation Panel (Red)");
+                Text sharpshooterName = GetTextfromGameObject(GetGameObjectChild(sharpshooter, "Text"));
+                sharpshooterName.text = LanguageManager.CurrentLanguage.shop.shop_revolverSharpshooter;
+                sharpshooterName.fontSize = 20;
+                
+                GameObject sharpshooterWindow = GetGameObjectChild(revolverWindow, "Variation Info (Red)");
+                Text sharpshooterWindowName = GetTextfromGameObject(GetGameObjectChild(sharpshooterWindow, "Name"));
+                sharpshooterWindowName.text = sharpshooterName.text;
+                
+                Text sharpshooterWindowDescription = GetTextfromGameObject(GetGameObjectChild(sharpshooterWindow, "Description"));
+                sharpshooterWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_revolverSharpshooterDescription1 + "\n\n"
+                    + LanguageManager.CurrentLanguage.shop.shop_revolverSharpshooterDescription2 + "\n\n";
+                sharpshooterWindowDescription.fontSize = 20;
 
                 //Revolver info & color tabs
                 GameObject revolverExtra = GetGameObjectChild(revolverWindow, "Info and Color Panel");
