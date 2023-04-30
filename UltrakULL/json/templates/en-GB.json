@@ -542,9 +542,7 @@
         "cybergrind_patterns": "PATTERNS",
         "cybergrind_music": "MUSIC",
         "cybergrind_waves": "WAVES",
-        "cybergrind_musicUnlocked": "UNLOCKED",
-        "cybergrind_musicConfirm": "CONFIRM",
-        "cybergrind_musicSoundtrack": "SOUNDTRACK",
+
         
         "cybergrind_themesTitle": "THEMES",
         "cybergrind_themesDescription": "Select the visual theme for the arena",
@@ -568,6 +566,9 @@
         "cybergrind_musicSeeEnemyRequirement": "ENCOUNTER AN UNKNOWN FOE",
         "cybergrind_musicUnlockLevelRequirement": "REACH",
         "cybergrind_musicCompleteLevelRequirement": "COMPLETE",
+        "cybergrind_musicUnlocked": "UNLOCKED",
+        "cybergrind_musicConfirm": "CONFIRM",
+        "cybergrind_musicSoundtrack": "SOUNDTRACK",
         
         "cybergrind_patternsTitle": "PATTERNS",
         "cybergrind_patternsRefresh": "REFRESH",
@@ -1395,7 +1396,7 @@
 
 	},
 	"levelTips":{
-		"leveltips_preludeSecond1": "Hitscan weapons like the Revolver do locational damage.",
+		"leveltips_preludeSecond1": "The Revolver deals <color=orange>locational damage</color>.",
 		"leveltips_preludeSecond2": "A headshot deals 2x damage and a limbshot deals 1.5x damage.",
 
 		"leveltips_preludeThird1": "Dash: Fully invincible, costs stamina",

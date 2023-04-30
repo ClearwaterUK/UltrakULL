@@ -38,9 +38,8 @@ using UMM;
  *
  *
  * CG update:
- * - Updated Revolver lore
+ * - Updated Revolver lore (No changes though...?)
  * - Leaderboards for levels (+ option for it in options)
- * - 0-2 tip of the day has been updated
  *
  *- REPORTED BY USERS
  * Fishing guide terminal sometimes not translated

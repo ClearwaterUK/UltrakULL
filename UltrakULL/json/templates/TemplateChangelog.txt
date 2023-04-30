@@ -6,6 +6,15 @@ shop: shop_revolverSharpshooter
 shop: shop_revolverSharpshooterDescription1
 shop: shop_revolverSharpshooterDescription2
 
+cybergrind: cybergrind_music
+cybergrind: cybergrind_musicTitle
+cybergrind: cybergrind_musicCompleteChallengeRequirement
+cybergrind: cybergrind_musicSeeEnemyRequirement
+cybergrind: cybergrind_musicUnlockLevelRequirement
+cybergrind: cybergrind_musicUnlocked
+cybergrind: cybergrind_musicConfirm
+cybergrind: cybergrind_musicSoundtrack
+
 1.2.0:
 
 ADDED:
