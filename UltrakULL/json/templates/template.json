@@ -380,6 +380,13 @@
 			"fish_panOil": "",
 
 			"fish_leaderboard": "",
+			
+			"fish_bottleMessage1": "",
+			"fish_bottleMessage2": "",
+			"fish_bottleMessage3": "",
+			"fish_bottleMessage4": "",
+			"fish_bottleMessage5": "",
+			"fish_bottleMessage6": "",
 
 			"fish_book1": "",
 			"fish_book2": "",
@@ -397,6 +404,7 @@
 			"fish_rodHooked": "",
 			"fish_outOfWater": "",
 			"fish_fishCaught": "",
+			"fish_cookingFailed": "",
 			"fish_size": "",
 
 			"fish_living": "",

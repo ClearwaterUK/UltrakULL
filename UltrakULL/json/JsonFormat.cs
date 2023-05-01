@@ -55,6 +55,13 @@ namespace UltrakULL.json
         
         public string fish_leaderboard;
         
+        public string fish_bottleMessage1;
+        public string fish_bottleMessage2;
+        public string fish_bottleMessage3;
+        public string fish_bottleMessage4;
+        public string fish_bottleMessage5;
+        public string fish_bottleMessage6;
+        
         public string fish_book1;
         public string fish_book2;
         public string fish_book3;
@@ -71,8 +78,8 @@ namespace UltrakULL.json
         public string fish_rodHooked;
         public string fish_outOfWater;
         public string fish_fishCaught;
+        public string fish_cookingFailed;
         public string fish_size;
-
         
         public string fish_living;
         public string fish_tooSmall;

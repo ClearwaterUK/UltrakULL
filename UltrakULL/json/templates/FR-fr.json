@@ -378,6 +378,13 @@
 
         "fish_leaderboard": "CLASSEMENT TAILLE DE POISSON",
 
+        "fish_bottleMessage1": "Si vous pouvez lire ceci, veuillez m'aider. Je suis coincé sur une île sur la côte depuis quelques semaines, et je suis à court des nécessités.",
+        "fish_bottleMessage2": "On m'a attiré à voyager sur la mer pour trouver la légendaire poisson du Taille 2. J'ai parcouru chaque pouce de terre et lac, mais en vain.",
+        "fish_bottleMessage3": "J'ai déduit qu'ils doivent exister dans la mer profonde, donc je me suis mis à la voille avec un mois de poisson cuit, mais les vagues ont coullé mon bateau avant que j'ai pu trouver quoi que ça soit.",
+        "fish_bottleMessage4": "Vous êtes mon dernier espoir.",
+        "fish_bottleMessage5": "Voyagez vers La Grande Casserole, vous me retrouverez sur une île là-bas. Rammenez moi du poisson supplémentaire et partez pour que je puisses continuer ma recherche.",
+        "fish_bottleMessage6": "LE POISSON DU TAILLE 2 M'APPARTIENT.",
+
         "fish_book1": "JOUR N°529:",
         "fish_book2": "TOUJOURS A LA RECHERCHE.",
         "fish_book3": "AUCUN CONTACT DE L'AGENCE DEPUIS 216 JOURS.",
@@ -394,6 +401,7 @@
         "fish_rodHooked": "Accroché!",
         "fish_outOfWater": "HORS DE L'EAU",
         "fish_fishCaught": "Vous avez attrapé",
+        "fish_cookingFailed": "La cuisine a échoué.",
         "fish_Size": "TAILLE 1",
 
         "fish_living": "\"Moyen de vivre.\"",
@@ -841,7 +849,7 @@
         "visualnovel_middleResponseFirst1": "Ugh! Quelle chance.",
         "visualnovel_middleResponseFirst2": "Mais en rétrospective, tu ne seras pas ici avec moi si tu n'étais pas perdu aussi...",
         "visualnovel_middleResponseFirst3": "Tant pis, ça vaut pas la peine de pleurer sur un peu de sang versé.",
-        "visualnovel_middleResponseFirst4": "Nous pourrions autant attendre un autre étudiant à passer et les suivre."
+        "visualnovel_middleResponseFirst4": "Nous pourrions autant attendre un autre étudiant à passer et les suivre.",
         "visualnovel_middleResponseFirst5": "Je m'appelles Mirage.",
         "visualnovel_middleResponseFirst6": "Ne te donnes pas ton nom, je m'en fiches un peu.",
         

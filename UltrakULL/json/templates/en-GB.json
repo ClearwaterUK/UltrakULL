@@ -384,6 +384,13 @@
 
         "fish_leaderboard": "FISH SIZE LEADERBOARD",
 
+        "fish_bottleMessage1": "If you can read this, please help. I've been stranded on an island off the shore for weeks now, and I'm running out of supplies.",
+        "fish_bottleMessage2": "I was drawn to ride the waves in hopes of finding the legendary size 2 fish. I had combed every inch of land and lake with no avail.",
+        "fish_bottleMessage3": "I deduced that they must exist far out at sea, so I set sail with a month's worth of cooked fish, but the waves sank my ship before I could find anything.",
+        "fish_bottleMessage4": "You're my last hope.",
+        "fish_bottleMessage5": "Set sail towards the big dipper, you will find me on an island there. Bring me more fish and then leave so I may continue my search.",
+        "fish_bottleMessage6": "THE SIZE 2 FISH IS MINE.",
+
         "fish_book1": "DAY 529:",
         "fish_book2": "STILL SEARCHING.",
         "fish_book3": "NO CONTACT FROM THE AGENCY IN 216 DAYS.",
@@ -400,6 +407,7 @@
         "fish_rodHooked": "Hooked!",
         "fish_outOfWater": "OUT OF WATER",
         "fish_fishCaught": "You caught",
+        "fish_cookingFailed": "Cooking failed.",
         "fish_size": "SIZE 1",
 
         "fish_living": "\"It's a living.\"",
@@ -1626,7 +1634,7 @@
         "shop_loreRocketLauncher12": "The cannonballs from the S.R.S. Cannon can be punched to launch them with greater force, shot with a hitscan weapon for an explosion or dropped onto the ground to launch enemies.",
         "shop_loreRocketLauncher13": "Light enemies will be airborne when pulled by the Whiplash, making them very easy targets to hit for the falling enemy explosion bonus. However, this requires a lot of distance from the target if the user wishes to avoid the explosion's increased radius.",
         "shop_loreRocketLauncher14": "Some machines, such as V1, are light enough to ride a rocket. This can be achieved by freezing a rocket with the Freezeframe variation and jumping onto it. Even with the low weight, the rocket will eventually lose power, causing it to drop gradually, but when underwater, V1 is light enough to not cause this drop.",
-        "shop_loreRocketLauncher15": "Although the cannonballs from the S.R.S. Cannon variation can be punched the moment they've been launched, they will have greater durability if punched after they've bounced off an enemy."
+        "shop_loreRocketLauncher15": "Although the cannonballs from the S.R.S. Cannon variation can be punched the moment they've been launched, they will have greater durability if punched after they've bounced off an enemy.",
 
         "shop_revolverPreset1": "STANDARD",
         "shop_revolverPreset2": "MAGNUM",

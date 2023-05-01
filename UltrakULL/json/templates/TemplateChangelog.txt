@@ -25,6 +25,9 @@ subtitles: subtitles_gabrielSecondTaunt14
 
 visualnovel: visualnovel_middleResponseFirst6
 
+fishing: fish_bottleMessage
+fishing: fish_cookingFailed
+
 1.2.0:
 
 ADDED:

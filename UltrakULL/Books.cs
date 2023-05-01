@@ -63,7 +63,10 @@ namespace UltrakULL
                 
                 case "Level 5-S":
                 {
-                    return 
+                    //Book
+                    if(originalText.Contains("I have to see"))
+                    {
+                        return 
                         LanguageManager.CurrentLanguage.fishing.fish_book1 + "\n\n"
                                                                            
                         + LanguageManager.CurrentLanguage.fishing.fish_book2 + "\n"
@@ -109,6 +112,19 @@ namespace UltrakULL
                         + "<size=1>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n\n"
                         
                         +  LanguageManager.CurrentLanguage.fishing.fish_book10;
+                    }
+                    //Bottle message
+                    else
+                    {
+                        return LanguageManager.CurrentLanguage.fishing.fish_bottleMessage1 + "\n\n\n"
+                            + LanguageManager.CurrentLanguage.fishing.fish_bottleMessage2 + "\n\n\n"
+                            + LanguageManager.CurrentLanguage.fishing.fish_bottleMessage3 + "\n\n\n"
+                            + LanguageManager.CurrentLanguage.fishing.fish_bottleMessage4 + "\n\n\n"
+                            + LanguageManager.CurrentLanguage.fishing.fish_bottleMessage5 + "\n\n\n"
+                            + LanguageManager.CurrentLanguage.fishing.fish_bottleMessage6 + "\n\n\n";
+                    }
+                    
+                    
                 }
                 
                 default: { return "Unknown book"; }

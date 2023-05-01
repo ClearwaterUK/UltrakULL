@@ -113,7 +113,7 @@ namespace UltrakULL.Harmony_Patches
                 case "Stream": {__instance.fullName = LanguageManager.CurrentLanguage.fishing.fish_stream; break;}
                 case "Lake Waters": {__instance.fullName = LanguageManager.CurrentLanguage.fishing.fish_lake; break;}
                 case "Lower Bloods": {__instance.fullName = LanguageManager.CurrentLanguage.fishing.fish_lakeBloodLower; break;}
-                case "Lake Of Blood": {__instance.fullName = LanguageManager.CurrentLanguage.fishing.fish_lakeBlood; break;}
+                case "Lake of Blood": {__instance.fullName = LanguageManager.CurrentLanguage.fishing.fish_lakeBlood; break;}
                 case "Water Well": {__instance.fullName = LanguageManager.CurrentLanguage.fishing.fish_waterWell; break;}
                 case "Pan Oil": {__instance.fullName = LanguageManager.CurrentLanguage.fishing.fish_panOil; break;}
                 case "Holy Lake": {__instance.fullName = LanguageManager.CurrentLanguage.fishing.fish_lakeHoly; break;}

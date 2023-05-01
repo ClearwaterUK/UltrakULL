@@ -197,6 +197,10 @@ namespace UltrakULL
             {
                 return (LanguageManager.CurrentLanguage.fishing.fish_interrupted);
             }
+            if (message.Contains("Cooking failed"))
+            {
+                return (LanguageManager.CurrentLanguage.fishing.fish_cookingFailed);
+            }
             
             
             return "Unknown 5-S string";

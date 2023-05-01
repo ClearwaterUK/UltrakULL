@@ -38,16 +38,13 @@ using UMM;
  *
  *
  * CG update:
- * - Updated Revolver lore (No changes though...?)
  * - Leaderboards for levels (+ option for it in options)
  *
  *- REPORTED BY USERS
  * Fishing guide terminal sometimes not translated (doesn't translate when first appears, second time is fine)
  * 5-3 dubbing still not working? (No errors..?)
  * 2-S First prompt panel not translated (No errors, appears fine on my end with French..?)
- * Minos death screen audio file name mismatch
  * Some of MDK/Owl's lines are still borked
- * 5-: Lake of Blood not translated, "cooking failed" not implemented, message in bottle
  * Armboy in museum missing string
  * */
 
