@@ -916,7 +916,24 @@ namespace UltrakULL
             }
             else if(getCurrentSceneName().Contains("P-"))
             {
-                shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Prime FirstRoom"),"Room"),"Shop"),"Canvas"));
+                switch(getCurrentSceneName())
+                {
+                    case "Level P-1":
+                    {
+                        shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Prime FirstRoom"),"Room"),"Shop"),"Canvas"));
+                        shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("2 - Inner Sanctum"),"Shop"),"Canvas"));
+                        break;
+                    }
+                    case "Level P-2":
+                    {
+                        Logging.Message("P-2 shop");
+                        shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Prime FirstRoom"),"Room"),"Shop"),"Canvas"));
+                        Logging.Message("P-2 shop1");
+                        shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"Inside"),"8 - Elevator"),"8 Nonstuff"),"Exit"),"Shop"),"Canvas"));
+                        Logging.Message("P-2 shop2");
+                        break;
+                    }
+                }
             }
             //Specific fix for 6-1
             else if(getCurrentSceneName() == "Level 6-1")
@@ -928,7 +945,7 @@ namespace UltrakULL
             {
                 shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("FirstRoom"), "Room"), "Shop"), "Canvas"));
             } 
-            
+
             switch(getCurrentSceneName())
             {
                 case "Level 0-3":

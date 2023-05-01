@@ -42,8 +42,7 @@ using UMM;
  * - Leaderboards for levels (+ option for it in options)
  *
  *- REPORTED BY USERS
- * Fishing guide terminal sometimes not translated
- * Second P-2 terminal still English
+ * Fishing guide terminal sometimes not translated (doesn't translate when first appears, second time is fine)
  * 5-3 dubbing still not working?
  * Clash mode missing key in cheat menu
  * 2-S First prompt panel not translated
