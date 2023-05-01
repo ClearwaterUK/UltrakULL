@@ -3,8 +3,15 @@
 - Upgraded UMM to 0.5.5.
 - Added strings for the Sharpshooter variation in the shop.
 - Added strings for the Cybergrind music jukebox.
+- Added strings for the missing Filth bio in the dev museum.
+- Added a few missing strings to the template (check template changelog).
+- Added extra strings to rocket launcher lore for extra SRS Cannon lines. (Translators, update your strings in this section.)
 - Fixed the second shops in P-1 and P-2 not being translated.
 - Fixed "Clash Mode" not being translated in the cheats menu.
+- Fixed Minos Primes' death screen not being dubbed.
+- Fixed a small issue in the English template resulting in Sisy Prime's strategy bio not appearing.
+
+
 
 1.2.0a
 - **Added content related to Wait Of The World.**

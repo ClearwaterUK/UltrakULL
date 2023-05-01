@@ -43,17 +43,12 @@ using UMM;
  *
  *- REPORTED BY USERS
  * Fishing guide terminal sometimes not translated (doesn't translate when first appears, second time is fine)
- * 5-3 dubbing still not working?
- * 2-S First prompt panel not translated
- * 6-1 Terminal not translated
- * Filth book text in museum missing
- * enemyBios_sisyphusPrime_strategy_1, enemyBios_sisyphusPrime_strategy_2 not shown
- * Missing JSON strings that need to be added in the templates:
- * visualnovel_middleResponseFirst6, enemyBios_stalker_strategy4, subtitles_gabrielSecondTaunt14
- * Extra lines in RL lore for SRS cannon
+ * 5-3 dubbing still not working? (No errors..?)
+ * 2-S First prompt panel not translated (No errors, appears fine on my end with French..?)
  * Minos death screen audio file name mismatch
  * Some of MDK/Owl's lines are still borked
  * 5-: Lake of Blood not translated, "cooking failed" not implemented, message in bottle
+ * Armboy in museum missing string
  * */
 
 namespace UltrakULL

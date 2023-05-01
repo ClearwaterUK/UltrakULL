@@ -135,7 +135,7 @@ namespace UltrakULL.audio
                 
                 //Scream (note: Scream plays as soon as Defeated is finished playing. So files need to be of correct length to sync with each other correctly)
                 GameObject minosPrimeScream = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(minosPrimeArena,"3 Stuff(Clone)"),"MinosPrimeWave"), "MinosPrime"),"DeathScream");
-                string minosPrimeScreamString = minosPrimeFolder + "minosPrimeScream.wav";
+                string minosPrimeScreamString = minosPrimeFolder + "minosPrimeDeathScream.wav";
                 
                 AudioSource minosPrimeScreamSource = minosPrimeScream.GetComponentInChildren<AudioSource>();
                 minosPrimeScreamSource.clip = SwapClipWithFile(minosPrimeScreamSource.clip, minosPrimeScreamString);

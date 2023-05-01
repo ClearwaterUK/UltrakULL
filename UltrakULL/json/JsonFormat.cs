@@ -425,7 +425,8 @@ namespace UltrakULL.json
         public string enemyBios_stalker_strategy1;
         public string enemyBios_stalker_strategy2;
         public string enemyBios_stalker_strategy3;
-
+        public string enemyBios_stalker_strategy4;
+        
         public string enemyBios_insurrectionist_1;
         public string enemyBios_insurrectionist_2;
         public string enemyBios_insurrectionist_3;
@@ -1412,6 +1413,8 @@ namespace UltrakULL.json
         public string shop_loreRocketLauncher11;
         public string shop_loreRocketLauncher12;
         public string shop_loreRocketLauncher13;
+        public string shop_loreRocketLauncher14;
+        public string shop_loreRocketLauncher15;
 
         public string shop_revolverPreset1;
         public string shop_revolverPreset2;

@@ -5,6 +5,8 @@ ADDED:
 shop: shop_revolverSharpshooter
 shop: shop_revolverSharpshooterDescription1
 shop: shop_revolverSharpshooterDescription2
+shop: shop_loreRocketLauncher14
+shop: shop_loreRocketLauncher15
 
 cybergrind: cybergrind_music
 cybergrind: cybergrind_musicTitle
@@ -14,6 +16,14 @@ cybergrind: cybergrind_musicUnlockLevelRequirement
 cybergrind: cybergrind_musicUnlocked
 cybergrind: cybergrind_musicConfirm
 cybergrind: cybergrind_musicSoundtrack
+
+devMuseum: museum_enemiesFilth
+
+enemybios: enemybios_stalker_strategy4
+
+subtitles: subtitles_gabrielSecondTaunt14
+
+visualnovel: visualnovel_middleResponseFirst6
 
 1.2.0:
 

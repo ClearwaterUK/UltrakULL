@@ -793,9 +793,11 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher9 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher10 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher11 + "\n\n"
-                    + LanguageManager.CurrentLanguage.shop.shop_advancedStrategy + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher12 + "\n\n"
-                    + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher13;
+                    + LanguageManager.CurrentLanguage.shop.shop_advancedStrategy + "\n\n"
+                    + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher13 + "\n\n"
+                    + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher14 + "\n\n"
+                    + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher15;
 
 
                 Text rocketlauncherLoreBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(rocketlauncherLore, "Button"), "Text"));

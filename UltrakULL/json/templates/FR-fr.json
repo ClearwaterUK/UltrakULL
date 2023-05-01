@@ -222,6 +222,14 @@
         "museum_weaponsNailgun5": "",
         "museum_weaponsNailgun6": "",
 
+        "museum_enemiesFilth1": "1",
+        "museum_enemiesFilth2": "2",
+        "museum_enemiesFilth3": "3",
+        "museum_enemiesFilth4": "4",
+        "museum_enemiesFilth5": "5",
+        "museum_enemiesFilth6": "6",
+        "museum_enemiesFilth7": "7",
+
         "museum_enemiesStray1": "",
         "museum_enemiesStray2": "",
         "museum_enemiesStray3": "",
@@ -833,8 +841,9 @@
         "visualnovel_middleResponseFirst1": "Ugh! Quelle chance.",
         "visualnovel_middleResponseFirst2": "Mais en rétrospective, tu ne seras pas ici avec moi si tu n'étais pas perdu aussi...",
         "visualnovel_middleResponseFirst3": "Tant pis, ça vaut pas la peine de pleurer sur un peu de sang versé.",
-        "visualnovel_middleResponseFirst4": "Je m'appelles Mirage.",
-        "visualnovel_middleResponseFirst5": "Ne te donnes pas ton nom, je m'en fiches un peu.",
+        "visualnovel_middleResponseFirst4": "Nous pourrions autant attendre un autre étudiant à passer et les suivre."
+        "visualnovel_middleResponseFirst5": "Je m'appelles Mirage.",
+        "visualnovel_middleResponseFirst6": "Ne te donnes pas ton nom, je m'en fiches un peu.",
         
         "visualnovel_middleResponseSecond1": "QUOI ?",
         "visualnovel_middleResponseSecond2": "MAIS PUTAIN, ÇA VEUT DIRE QUOI 'PAS ENVIE'?",
@@ -1555,8 +1564,10 @@
         "shop_loreRocketLauncher9": "La lance-roquettes a besoin de très peu de préparation pour être utilisé, veuillant dire qu'il peut être retiré, tiré et rangé pour ajouter un coup rapide de dégâts supplémentaires en plein milieu d'un combo.",
         "shop_loreRocketLauncher10": "Les roquettes sont attirés pour les Aimants du cloueur, mais pas autant que les clous. La précision du traquage peut être augmenté en gelant les roquettes avec la variation Arrêt-Image.",
         "shop_loreRocketLauncher11": "Une roquette sera attaché au Fouet sans annuler le coup si elle est frappé avec. Si le Fouet ne rentre pas en collision avec autre chose, la roquette y sera attiré avec, causant une explosion sur collision avec l'utilisateur.",
-        "shop_loreRocketLauncher12": "Les ennemis lègers attirés par le Fouet se trouverent dans l'air, les rendant comme cibles faciles à frapper pour le bonus d'explosion. Cependant, ceci nécessite beaucoup de distance si l'utilisateur souhaite esquiver la portée augmenté de l'explosion.",
-        "shop_loreRocketLauncher13": "Certains machines, V1 inclus, sont assez lègers pour monter sur une roquette. Ceci peut être realisé en gelant une roquette avec la variation Arrêt-Image, et y sautant dessus. Même avec le poids lèger, la roquette perdera sa puissance éventuellement, le causant à descendre au fur et à mesure, mais dans l'eau, V1 est assez lèger pour empêcher cette descente.",
+        "shop_loreRocketLauncher12": "Les boules de canon lancés avec le Canon S.R.S peuvent être frappés avec un coup de point pour les lancer avec plus de force, tirés avec une arme hitscan, ou lancés au sol pour lancer les ennemies.",
+        "shop_loreRocketLauncher13": "Les ennemis lègers attirés par le Fouet se trouverent dans l'air, les rendant comme cibles faciles à frapper pour le bonus d'explosion. Cependant, ceci nécessite beaucoup de distance si l'utilisateur souhaite esquiver la portée augmenté de l'explosion.",
+        "shop_loreRocketLauncher14": "Certains machines, V1 inclus, sont assez lègers pour monter sur une roquette. Ceci peut être realisé en gelant une roquette avec la variation Arrêt-Image, et y sautant dessus. Même avec le poids lèger, la roquette perdera sa puissance éventuellement, le causant à descendre au fur et à mesure, mais dans l'eau, V1 est assez lèger pour empêcher cette descente.",
+        "shop_loreRocketLauncher15": "Bien que les boules de canon du Canon S.R.S peuvent être frappés au moment qu'ils sont lancés, ils portent plus de durabilité s'ils sont frappés après avoir rebondi sur un ennemi.",
 
         "shop_revolverPreset1": "STANDARD",
         "shop_revolverPreset2": "MAGNUM",
@@ -1806,8 +1817,12 @@
           "enemyBios_stalker_4": "Cependant, un force sentient non-identifié ont remplacé les rochers qu'ils portent normallement avec des bombes qui, lors de son detonation, transformera tout sang en proximité en poussière d'or qui couvre la surface du couche.",
           "enemyBios_stalker_5": "La recherche ont demontré que cette technologie est très similaire aux augmentations des Soldats, dont il est possible que les deux modifications viennent de la même source.",
           
-          "enemyBios_stalker_strategy1": "Il est conseillé de exploser un Traqueur au lieu de le laisser exploser tout-seul, puisque l'explosion de ce dernier aura une portée élargie.",
-          "enemyBios_stalker_strategy2": "Si un Traqueur s'approche de son cible, et ne peux plus être repoussé, un lancement au sol peux les lancer hors de portée, pour qu'ils soient explosé en toute securité, puisque l'explosion est principalement horizontal.",
+          "enemyBios_stalker_strategy1": "Les lumières sur son canistre donne une information sur l'état d'un Traqueur. Son couleur montre l'état de l'explosion, et l'intensité du couleur indique leur santé restant.",
+          "enemyBios_stalker_strategy2": "Il est conseillé de exploser un Traqueur au lieu de le laisser exploser tout-seul, puisque l'explosion de ce dernier aura une portée élargie.",
+          "enemyBios_stalker_strategy3": "Si un Traqueur s'approche de son cible, et ne peux plus être repoussé, un lancement au sol peux les lancer hors de portée, pour qu'ils soient explosé en toute securité, puisque l'explosion est principalement horizontal.",
+          "enemyBios_stalker_strategy4": "Le rattachement des aimants sur un Traqueur réduirera la distance de son explosion.",
+
+        
           
           "enemyBios_insurrectionist_1": "Les Insurrectionistes Sisypheanes sont une armée de invocations rassemblées et entraînées par le Roi Sisyphe pour renverser le côntrole du Paradis sur l'Enfer, liberant les pêcheurs de leur torment éternel.",
           "enemyBios_insurrectionist_2": "Durant une ère de chaos dans le Paradis, où la veille des Anges étaient absent, Sisyphe à mis son plan en motion, ses forces recrutant toutes les invocations ayant assez d'intelligence pour être utile à leur cause, et ont commencé à attaquer les démons se promenant sur les dunes d'Avarice.",
@@ -2240,6 +2255,7 @@
         "subtitles_gabriel_taunt10": "Ton crime est ton existence!",
         "subtitles_gabriel_taunt11": "Tu fait pleurer même le diable!",
         "subtitles_gabriel_taunt12": "Tu est surpassé, machine!",
+
         
         "subtitles_gabriel_phaseChange": "ASSEZ!",
         
@@ -2349,6 +2365,7 @@
         "subtitles_gabrielSecondTaunt11": "Je n'ai jamais eu une telle bataille!",
         "subtitles_gabrielSecondTaunt12": "Montre moi à quoi tu serts!",
         "subtitles_gabrielSecondTaunt13": "Ceci EST un bataille digne de la volonté de Dieu!",
+        "subtitles_gabrielSecondTaunt14": "Je te montrera la vrai SPLENDEUR!",
         
         "subtitles_gabrielSecondDefeated1": "Deux fois?!",
         "subtitles_gabrielSecondDefeated2": "Battu par un objet... DEUX FOIS?!",

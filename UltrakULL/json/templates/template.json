@@ -223,6 +223,14 @@
 			"museum_weaponsNailgun4": "",
 			"museum_weaponsNailgun5": "",
 			"museum_weaponsNailgun6": "",
+
+			"museum_enemiesFilth1": "",
+			"museum_enemiesFilth2": "",
+			"museum_enemiesFilth3": "",
+			"museum_enemiesFilth4": "",
+			"museum_enemiesFilth5": "",
+			"museum_enemiesFilth6": "",
+			"museum_enemiesFilth7": "",
 			
 			"museum_enemiesStray1": "",
 			"museum_enemiesStray2": "",
@@ -868,7 +876,8 @@
 			"visualnovel_middleResponseFirst3": "",
 			"visualnovel_middleResponseFirst4": "",
 			"visualnovel_middleResponseFirst5": "",
-	
+			"visualnovel_middleResponseFirst6": "",
+			
 			"visualnovel_middleResponseSecond1": "",
 			"visualnovel_middleResponseSecond2": "",
 			"visualnovel_middleResponseSecond3": "",
@@ -1591,6 +1600,8 @@
 			"shop_loreRocketLauncher11": "",
 			"shop_loreRocketLauncher12": "",
 			"shop_loreRocketLauncher13": "",
+			"shop_loreRocketLauncher14": "",
+			"shop_loreRocketLauncher15": "",
 	
 			"shop_revolverPreset1": "",
 			"shop_revolverPreset2": "",
@@ -1849,6 +1860,7 @@
 			"enemyBios_stalker_strategy1": "",
 			"enemyBios_stalker_strategy2": "",
 			"enemyBios_stalker_strategy3": "",
+			"enemyBios_stalker_strategy4": "",
 	
 			"enemyBios_insurrectionist_1": "",
 			"enemyBios_insurrectionist_2": "",
@@ -2282,6 +2294,7 @@
 			"subtitles_gabriel_taunt10": "",
 			"subtitles_gabriel_taunt11": "",
 			"subtitles_gabriel_taunt12": "",
+
 	
 			"subtitles_gabriel_phaseChange": "",
 	
@@ -2391,6 +2404,7 @@
 			"subtitles_gabrielSecondTaunt11": "",
 			"subtitles_gabrielSecondTaunt12": "",
 			"subtitles_gabrielSecondTaunt13": "",
+			"subtitles_gabrielSecondTaunt14": "",
 	
 			"subtitles_gabrielSecondDefeated1": "",
 			"subtitles_gabrielSecondDefeated2": "",

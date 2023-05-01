@@ -228,6 +228,14 @@
         "museum_weaponsNailgun4": "The first weapon to be based on concept art, drawn and designed by Jericho, as well as FlyingDog's final contribution to the game. The rougher, simpler original model still fit the visual style at the time, but since then the graphics have improved, making it stick out like a sore thumb, which was one of the primary reasons we wanted to redo the old weapon models, alongside the custom color system.",
         "museum_weaponsNailgun5": "The nailgun is probably the weapon that had to go through the most iteration before it finally found its place in the arsenal. In fact, it wasn't until the Sandbox update in Summer 2021 that it finally really clicked in, meaning it took 2 years of constant tinkering and iteration to make an automatic weapon fit the ULTRAKILL arsenal. The biggest change was the change from infinite ammo to recharging ammo, giving players more reason to switch away from it after a bit of use, but the change that finally really made it click was speeding up the equip animation, which made switching to it in combat much smoother, making it feel like an organic part of weapon combos.",
         "museum_weaponsNailgun6": "Some scrapped ideas and versions include a high damage slow recharge harpoon and a version that allowed for firing both barrels simultaneously, increasing rate of fire at the cost of the player's movement speed. The former eventually evolved into the magnet and the latter into the overheat, so despite how much things have changed, parts of the originals still remain.",
+        
+        "museum_enemiesFilth1": "<b><color=orange>FILTH</color>",
+        "museum_enemiesFilth2": "LEFT: 2018 Original by Toni Stigell and FlyingDog",
+        "museum_enemiesFilth3": "RIGHT: 2020 Remake by Jericho, BigRock and Victoria</b>",
+        "museum_enemiesFilth4": "The Filth, originally just called \"Zombie\" or \"Husk\", was the second enemy designed for the game. We didn't have concept artists at the time, so I just told Toni to make a scrawny zombie like the ones from Quake. This was the usual process before BigRock joined as the first concept artist, and the contrast in design quality makes it clear that creative concept artists can really make a big difference.",
+        "museum_enemiesFilth5": "An interesting aspect of the Filth is that, in the early versions of the demo, people complained about the AI of the melee enemies being too dumb, but those complaints completely stopped after the redesign. The new version actually looks like a mindless swarming monster that only thinks about eating, so it being dumb no longer felt out of place or like a flaw. Properly messaging the purpose of an enemy or object through how it looks is an often underappreciated aspect of character design.",
+        "museum_enemiesFilth6": "The new design is inspired by the debut album by Swans, which is also where the enemy got its name from. At first the model's mouth and teeth were much smaller, but I just kept telling Victoria \"BIGGER!\" until we reached the point it's at now.",
+        "museum_enemiesFilth7": "The Filth was originally colored orange to make it fit into the Prelude chapter, but it actually became an issue where people would often have a hard time seeing them since they fit in <i>too</i> well, so their primary color was swapped to green instead.",
 
         "museum_enemiesStray1": "<color=orange>STRAY</color>",
         "museum_enemiesStray2": "LEFT: 2018 Original by Toni Stigell, FlyingDog and Hakita",
@@ -1615,8 +1623,10 @@
         "shop_loreRocketLauncher9": "The launcher requires very little preparation to be used, meaning it can be quickly pulled out, fired and put back away to deal a quick burst of extra damage in the middle of another weapon switching combo.",
         "shop_loreRocketLauncher10": "Rockets are pulled by the Magnet nailgun's magnets, though not as strongly as nails. The accuracy of the tracking can be increased by freezing rockets with the Freezeframe variation.",
         "shop_loreRocketLauncher11": "When hit with the Whiplash, a rocket will be attached to the spear without stopping the throw. If the spear doesn't collide with anything else, the rocket will be pulled back with it, exploding on collision with the user.",
-        "shop_loreRocketLauncher12": "Light enemies will be airborne when pulled by the Whiplash, making them very easy targets to hit for the falling enemy explosion bonus. However, this requires a lot of distance from the target if the user wishes to avoid the explosion's increased radius.",
-        "shop_loreRocketLauncher13": "Some machines, such as V1, are light enough to ride a rocket. This can be achieved by freezing a rocket with the Freezeframe variation and jumping onto it. Even with the low weight, the rocket will eventually lose power, causing it to drop gradually, but when underwater, V1 is light enough to not cause this drop.",
+        "shop_loreRocketLauncher12": "The cannonballs from the S.R.S. Cannon can be punched to launch them with greater force, shot with a hitscan weapon for an explosion or dropped onto the ground to launch enemies.",
+        "shop_loreRocketLauncher13": "Light enemies will be airborne when pulled by the Whiplash, making them very easy targets to hit for the falling enemy explosion bonus. However, this requires a lot of distance from the target if the user wishes to avoid the explosion's increased radius.",
+        "shop_loreRocketLauncher14": "Some machines, such as V1, are light enough to ride a rocket. This can be achieved by freezing a rocket with the Freezeframe variation and jumping onto it. Even with the low weight, the rocket will eventually lose power, causing it to drop gradually, but when underwater, V1 is light enough to not cause this drop.",
+        "shop_loreRocketLauncher15": "Although the cannonballs from the S.R.S. Cannon variation can be punched the moment they've been launched, they will have greater durability if punched after they've bounced off an enemy."
 
         "shop_revolverPreset1": "STANDARD",
         "shop_revolverPreset2": "MAGNUM",
@@ -2041,8 +2051,8 @@
         "enemyBios_sisyphusPrime_7": "The failure of the insurrection was no surprise however, and few knew that better than Sisyphus himself. He knew he was fighting a losing battle, that even if they miraculously survived this encounter, they had no chance of winning a full scale war against all of Heaven. Yet he thrust his full heart and soul into battle with a wide smile on his face.",
         "enemyBios_sisyphusPrime_8": "To him, fighting an impossible battle with full knowledge of its futility and taking joy in just the act of resistance itself is the ultimate rebellion against the oppressor. One must imagine Sisyphus happy.",
 
-        "enemyBios_sisyphusPrime_strategy_1": "Sisyphus' relentless attacks leave little room to recover stamina, but many of them are parryable, allowing for an instant refill.",
-        "enemyBios_sisyphusPrime_strategy_2": "The radiant power of the sun makes Sisyphus' explosive attacks very difficult to avoid, but since a dash gives temporary invincibility, good timing allows one to avoid the damage of an explosion without actually needing to escape its radius."
+        "enemyBios_sisyphusPrime_strategy1": "Sisyphus' relentless attacks leave little room to recover stamina, but many of them are parryable, allowing for an instant refill.",
+        "enemyBios_sisyphusPrime_strategy2": "The radiant power of the sun makes Sisyphus' explosive attacks very difficult to avoid, but since a dash gives temporary invincibility, good timing allows one to avoid the damage of an explosion without actually needing to escape its radius."
     },
     
 	"tutorial":{
