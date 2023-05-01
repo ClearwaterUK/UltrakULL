@@ -7,6 +7,7 @@
 - Added a few missing strings to the template (check template changelog).
 - Added extra strings to rocket launcher lore for extra SRS Cannon lines. (Translators, update your strings in this section.)
 - Added missing strings to 5-S (message in the bottle, "cooking failed" message).
+- Added strings for the level and end-of-level leaderboards.
 - Fixed "Lake of Blood" not being translated in 5-S.
 - Fixed the second shops in P-1 and P-2 not being translated.
 - Fixed "Clash Mode" not being translated in the cheats menu.

@@ -815,7 +815,11 @@
 			"level_fullIntroPrompt": "",
 			"level_fullIntroPromptYes": "",
 			"level_fullIntroPromptNo": "",
-			"level_fullIntroPromptCancel": ""
+			"level_fullIntroPromptCancel": "",
+
+			"leaderboard_anyPercent": "",
+			"leaderboard_pPercent": "",
+			"leaderboard_noEntries": ""
 		},
 		"visualnovel": {
 	

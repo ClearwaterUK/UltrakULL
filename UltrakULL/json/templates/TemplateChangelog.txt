@@ -2,6 +2,10 @@
 
 ADDED:
 
+frontend: leaderboards_anyPercent
+frontend: leaderboards_pPercent
+frontend: leaderboards_noEntries
+
 shop: shop_revolverSharpshooter
 shop: shop_revolverSharpshooterDescription1
 shop: shop_revolverSharpshooterDescription2

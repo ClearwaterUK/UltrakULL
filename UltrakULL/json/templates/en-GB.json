@@ -816,7 +816,11 @@
         "level_fullIntroPrompt": "FULL INTRO?",
         "level_fullIntroPromptYes": "YES",
         "level_fullIntroPromptNo": "NO",
-        "level_fullIntroPromptCancel": "CANCEL"
+        "level_fullIntroPromptCancel": "CANCEL",
+        
+        "leaderboard_anyPercent": "ANY",
+        "leaderboard_pPercent": "P-RANK",
+        "leaderboard_noEntries": "no leaderboard entries"
 	},
     "visualnovel": {
         "visualnovel_mirageName1": "JUST SOMEONE",

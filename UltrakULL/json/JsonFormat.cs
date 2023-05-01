@@ -1194,6 +1194,10 @@ namespace UltrakULL.json
         public string level_fullIntroPromptYes;
         public string level_fullIntroPromptNo;
         public string level_fullIntroPromptCancel;
+        
+        public string leaderboard_anyPercent;
+        public string leaderboard_pPercent;
+        public string leaderboard_noEntries;
 
     }
 

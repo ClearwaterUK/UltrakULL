@@ -783,7 +783,19 @@
 		"layer_greed": "NIVEAU 4 - AVARICE",
 		"layer_wrath": "NIVEAU 5 - COLÈRE",
 		"layer_heresy": "NIVEAU 6 - HÉRÉSIE",
-		"layer_prime": "LES SANCTUAIRES PRIMES"
+		"layer_prime": "LES SANCTUAIRES PRIMES",
+
+        "level_challenge": "DEFI",
+        "level_challengeCompleted": "TERMINE",
+
+        "level_fullIntroPrompt": "INTRO COMPLET?",
+        "level_fullIntroPromptYes": "OUI",
+        "level_fullIntroPromptNo": "NON",
+        "level_fullIntroPromptCancel": "ANNULER",
+
+        "leaderboard_anyPercent": "TOUT",
+        "leaderboard_pPercent": "RANG P",
+        "leaderboard_noEntries": "aucune entrée dans les classements"
 	},
     "visualnovel": {
         "visualnovel_mirageName1": "JUSTE QUELQU'UN",

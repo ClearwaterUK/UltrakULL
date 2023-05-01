@@ -35,6 +35,7 @@ using UMM;
  *  -- FOR NEXT HOTFIX --
  * Make language button disappear like other option buttons when save menu is opened
  * Sissy Prime dubbing
+ * New entries in museum
  *
  *
  * CG update:
@@ -46,6 +47,7 @@ using UMM;
  * 2-S First prompt panel not translated (No errors, appears fine on my end with French..?)
  * Some of MDK/Owl's lines are still borked
  * Armboy in museum missing string
+ * 
  * */
 
 namespace UltrakULL
