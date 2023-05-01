@@ -113,7 +113,7 @@ namespace UltrakULL
                     case "ultrakill.sandbox.rebuild-nav": { return LanguageManager.CurrentLanguage.cheats.cheats_rebuildNav; }
                     case "ultrakill.sandbox.snapping": { return LanguageManager.CurrentLanguage.cheats.cheats_snapping; }
                     case "ultrakill.sandbox.physics": { return LanguageManager.CurrentLanguage.cheats.cheats_physics; }
-                    case "ultrakill.sandbox.crash-mode": { return LanguageManager.CurrentLanguage.cheats.cheats_crashMode; }
+                    case "ultrakill.clash-mode": { return LanguageManager.CurrentLanguage.cheats.cheats_crashMode; }
                 }
                 return cheatIdentifier;
             }

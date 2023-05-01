@@ -4,6 +4,7 @@
 - Added strings for the Sharpshooter variation in the shop.
 - Added strings for the Cybergrind music jukebox.
 - Fixed the second shops in P-1 and P-2 not being translated.
+- Fixed "Clash Mode" not being translated in the cheats menu.
 
 1.2.0a
 - **Added content related to Wait Of The World.**

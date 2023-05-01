@@ -44,7 +44,6 @@ using UMM;
  *- REPORTED BY USERS
  * Fishing guide terminal sometimes not translated (doesn't translate when first appears, second time is fine)
  * 5-3 dubbing still not working?
- * Clash mode missing key in cheat menu
  * 2-S First prompt panel not translated
  * 6-1 Terminal not translated
  * Filth book text in museum missing
