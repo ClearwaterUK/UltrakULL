@@ -168,6 +168,22 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookKeygenChurch3 + "\n\n" 
                     + "<color=#aa0000>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookKeygenChurch4 + "</color>\n\n";
             }
+            if(originalText.Contains("<b><color=red>HEALTH</color> - GUEST COMPOSER</b>"))
+            {
+                return LanguageManager.CurrentLanguage.devMuseum.museum_bookHealth1 + "\n\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookHealth2 + "\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookHealth3 + "\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookHealth4 + "\n\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookHealth5 + "\n\n"
+                    + "<color=red>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookHealth6 + "</color>";
+            }
+            if(originalText.Contains("<b><color=#AA4CAD>QUETZAL TIRADO</color> - GUEST MUSICIAN</b>"))
+            {
+                return LanguageManager.CurrentLanguage.devMuseum.museum_bookQuetzalTirado1 + "\n\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookQuetzalTirado2 + "\n\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookQuetzalTirado3 + "\n\n"
+                    + "<color=#AA4CAD>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookQuetzalTirado4 + "</color>";
+            }
             if(originalText.Contains("<b><color=#20FF20>SALAD</color> - ARTIST OF JAKITO</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookSalad1 + "\n\n" 
@@ -497,6 +513,18 @@ namespace UltrakULL
             Text KeygenPlaque2 = GetTextfromGameObject(GetGameObjectChild(RestRoomKeygenChurchPlaque,"Text (1)"));
             KeygenPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesKeygenChurch1;
             KeygenPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesKeygenChurch2;
+            
+            GameObject RestRoomHealthPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (26)"),"Dev Smalll placard"),"Canvas (4)");
+            Text HealthPlaque1 = GetTextfromGameObject(GetGameObjectChild(RestRoomHealthPlaque,"Text"));
+            Text HealthPlaque2 = GetTextfromGameObject(GetGameObjectChild(RestRoomHealthPlaque,"Text (1)"));
+            HealthPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesHealth1;
+            HealthPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesHealth2;
+            
+            GameObject RestRoomQuetzalTiradoPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (8)"),"Dev Smalll placard"),"Canvas (4)");
+            Text QuetzalTiradoPlaque1 = GetTextfromGameObject(GetGameObjectChild(RestRoomQuetzalTiradoPlaque,"Text"));
+            Text QuetzalTiradoPlaque2 = GetTextfromGameObject(GetGameObjectChild(RestRoomQuetzalTiradoPlaque,"Text (1)"));
+            QuetzalTiradoPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesQuetzalTirado1;
+            QuetzalTiradoPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesQuetzalTirado2;
             
             GameObject RestRoomSaladPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (4)"),"Dev Smalll placard"),"Canvas (4)");
             Text SaladPlaque1 = GetTextfromGameObject(GetGameObjectChild(RestRoomSaladPlaque,"Text"));

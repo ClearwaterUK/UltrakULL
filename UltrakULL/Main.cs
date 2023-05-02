@@ -35,11 +35,8 @@ using UMM;
  *  -- FOR NEXT HOTFIX --
  * Make language button disappear like other option buttons when save menu is opened
  * Sissy Prime dubbing
- * New entries in museum
  *
  *
- * CG update:
- * - Leaderboards for levels (+ option for it in options)
  *
  *- REPORTED BY USERS
  * Fishing guide terminal sometimes not translated (doesn't translate when first appears, second time is fine)

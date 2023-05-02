@@ -134,6 +134,18 @@
         "museum_bookKeygenChurch2": "",
         "museum_bookKeygenChurch3": "",
 
+        "museum_bookHealth1": "",
+        "museum_bookHealth2": "",
+        "museum_bookHealth3": "",
+        "museum_bookHealth4": "",
+        "museum_bookHealth5": "",
+        "museum_bookHealth6": "",
+
+        "museum_bookQuetzalTirado1": "",
+        "museum_bookQuetzalTirado2": "",
+        "museum_bookQuetzalTirado3": "",
+        "museum_bookQuetzalTirado4": "",
+
         "museum_bookSalad1": "",
         "museum_bookSalad2": "",
         "museum_bookSalad3": "",
@@ -333,6 +345,12 @@
 
         "museum_plaquesKeygenChurch1": "",
         "museum_plaquesKeygenChurch2": "",
+
+        "museum_plaquesHealth1": "HEALTH",
+        "museum_plaquesHealth2": "COMPOSITEUR",
+
+        "museum_plaquesQuetzalTirado1": "QUETZAL TIRADO",
+        "museum_plaquesQuetzalTirado2": "COMPOSITEUR",
 
         "museum_plaquesSalad1": "",
         "museum_plaquesSalad2": "",

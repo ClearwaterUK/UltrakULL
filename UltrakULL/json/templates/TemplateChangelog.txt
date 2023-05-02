@@ -22,6 +22,10 @@ cybergrind: cybergrind_musicConfirm
 cybergrind: cybergrind_musicSoundtrack
 
 devMuseum: museum_enemiesFilth
+devMuseum: museum_bookHealth
+devMuseum: museum_bookQuetzalTirado
+devMuseum: museum_plaquesHealth
+devMuseum: museum_plaquesQuetzalTirado
 
 enemybios: enemybios_stalker_strategy4
 

@@ -139,6 +139,18 @@
         "museum_bookKeygenChurch3": "We also collaborated on the connected ARG, with him doing most of the heavy lifting since he had already done similar things with his projects.",
         "museum_bookKeygenChurch4": "\"Low Resolution. High Imagination. Praise the code.\"",
 
+        "museum_bookHealth1": "<b><color=red>HEALTH</color> - GUEST COMPOSER</b>",
+        "museum_bookHealth2": "<b><color=red>BENJAMIN MILLER</color> - DRUMS",
+        "museum_bookHealth3": "<color=red>JACOB DUZSIK</color> - VOCALS, GUITAR",
+        "museum_bookHealth4": "<color=red>JOHN FAMIGLIETTI</color> - BASS, SOFTWARE</b>",
+        "museum_bookHealth5": "In early 2023 we collaborated with the band HEALTH to premiere their song \"HATEFUL\" in the Cyber Grind. I've been a fan of HEALTH ever since I heard their music in Max Payne 3 and their heavy, blood-pumping electronic beats are a perfect fit for ULTRAKILL's mayhem, so I'm very happy that their music became a part of the game.",
+        "museum_bookHealth6": "\"BACK TO THE CYBER GRIND\"",
+
+        "museum_bookQuetzalTirado1": "<b><color=#AA4CAD>QUETZAL TIRADO</color> - GUEST MUSICIAN</b>",
+        "museum_bookQuetzalTirado2": "I met Quetzal through a mutual friend in early 2021, when I asked her if she could record a saxophone solo for the P-1 song \"CHAOS\". The solo didn't really end up working out, but parts of her recordings were still included and scattered about the track for added noise and texture.",
+        "museum_bookQuetzalTirado3": "Later, she recorded improvised saxophone solos for the 5-1 song \"Deep Blue\", which I edited into what you hear in the final version. She also recorded the bass clarinet drone which turned into the Sisyphean Insurrectionist's horn sound effect.",
+        "museum_bookQuetzalTirado4": "\"my mom liked the song i'm on in ultrakill, so i think at this point i count as a successful artist, right? also many thanks to the gay people, find me on that one level where the water fucks up the music, baby\"",
+
         "museum_bookSalad1": "<b><color=#20FF20>SALAD</color> - ARTIST OF JAKITO</b>",
         "museum_bookSalad2": "Salad drew Jakito.",
         "museum_bookSalad3": "Some of their biggest contributions include:",
@@ -337,6 +349,12 @@
 
         "museum_plaquesKeygenChurch1": "KEYGEN CHURCH",
         "museum_plaquesKeygenChurch2": "GUEST COMPOSER",
+        
+        "museum_plaquesHealth1": "HEALTH",
+        "museum_plaquesHealth2": "GUEST COMPOSER",
+
+        "museum_plaquesQuetzalTirado1": "QUETZAL TIRADO",
+        "museum_plaquesQuetzalTirado": "GUEST COMPOSER",
 
         "museum_plaquesSalad1": "SALAD",
         "museum_plaquesSalad2": "ARTIST OF JAKITO",

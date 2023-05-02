@@ -2320,6 +2320,18 @@ namespace UltrakULL.json
         public string museum_bookKeygenChurch3;
         public string museum_bookKeygenChurch4;
         
+        public string museum_bookHealth1;
+        public string museum_bookHealth2;
+        public string museum_bookHealth3;
+        public string museum_bookHealth4;
+        public string museum_bookHealth5;
+        public string museum_bookHealth6;
+        
+        public string museum_bookQuetzalTirado1;
+        public string museum_bookQuetzalTirado2;
+        public string museum_bookQuetzalTirado3;
+        public string museum_bookQuetzalTirado4;
+        
         public string museum_bookSalad1;
         public string museum_bookSalad2;
         public string museum_bookSalad3;
@@ -2516,6 +2528,12 @@ namespace UltrakULL.json
         
         public string museum_plaquesKeygenChurch1;
         public string museum_plaquesKeygenChurch2;
+        
+        public string museum_plaquesHealth1;
+        public string museum_plaquesHealth2;
+        
+        public string museum_plaquesQuetzalTirado1;
+        public string museum_plaquesQuetzalTirado2;
         
         public string museum_plaquesSalad1;
         public string museum_plaquesSalad2;
