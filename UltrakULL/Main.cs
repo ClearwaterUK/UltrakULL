@@ -18,13 +18,12 @@ using UMM;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater, additional code contributions by Temperz87, translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 25th April 2023
+ *	Last updated: 2nd May 2023
  *	
  *	A translation mod for Ultrakill that hooks into the game and allows for text/string replacement. This tool is primarily meant to assist with language translation.
  * 
  *  -- MAIN TASK LIST --
  *  - Add ULL credits in dev museum
- *  - CG update stuff
  * 
  *  -- STUFF FOR FUTURE UPDATES --
  *  - Swap out rank textures in HUD for translation (there's a mod already for this, shall look into)
@@ -34,7 +33,6 @@ using UMM;
  *  
  *  -- FOR NEXT HOTFIX --
  * Make language button disappear like other option buttons when save menu is opened
- * Sissy Prime dubbing
  *
  *
  *

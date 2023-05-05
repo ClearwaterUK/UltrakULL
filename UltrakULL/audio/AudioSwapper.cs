@@ -41,6 +41,7 @@ namespace UltrakULL.audio
 
         public static async void AudioSwap(string levelName)
         {
+            Console.WriteLine("Level: " + levelName);
             if(LanguageManager.configFile.Bind("General","activeDubbing","False").Value == "False")
             {
                 return;
@@ -146,6 +147,45 @@ namespace UltrakULL.audio
                 
                 AudioSource minosPrimeScreamSourceOrig = minosPrimeScreamOrig.GetComponentInChildren<AudioSource>();
                 minosPrimeScreamSourceOrig.clip = SwapClipWithFile(minosPrimeScreamSourceOrig.clip, minosPrimeScreamStringOrig);
+            }
+            else if (levelName == "Level P-2")
+            {
+                string sisyphusPrimeFolder =  AudioSwapper.speechFolder + "sisyphusPrime\\";
+                
+                
+                GameObject sisyphusBreakout = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"9 - Boss Arena"),"Boss Stuff"),"PrisonPhase"),"Flesh Prison 2"),"DelayedInstakill"),"Voice");
+                
+                AudioSource sisyphusBreakoutSource =  sisyphusBreakout.GetComponent<AudioSource>();
+                string sisyphusBreakoutString = sisyphusPrimeFolder + "sisyphusThisPrison.wav";
+                sisyphusBreakoutSource.clip = SwapClipWithFile(sisyphusBreakoutSource.clip, sisyphusBreakoutString);
+                
+                GameObject sisyphusIntro = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"9 - Boss Arena"),"Boss Stuff"),"PrimeIntro"),"SisyphusPrimeIntro"),"VoiceDelayer"),"Voice");
+                
+                AudioSource sisyphusIntroSource =  sisyphusIntro.GetComponent<AudioSource>();
+                string sisyphusIntroString = sisyphusPrimeFolder + "sisyphusIntro.wav";
+                sisyphusIntroSource.clip = SwapClipWithFile(sisyphusIntroSource.clip, sisyphusIntroString);
+                
+                GameObject sisyphusOutro =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"9 - Boss Arena"),"Boss Stuff"),"PrimePhase"),"SisyphusPrime"),"OutroDelay"),"Outro");
+                
+                AudioSource sisyphusOutroSource =  sisyphusOutro.GetComponent<AudioSource>();
+                string sisyphusOutroString = sisyphusPrimeFolder + "sisyphusOutro.wav";
+                sisyphusOutroSource.clip = SwapClipWithFile(sisyphusOutroSource.clip, sisyphusOutroString);
+                
+                GameObject sisyphusRespawn = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"9 - Boss Arena"),"Boss Stuff"),"PrimePhase"),"SisyphusPrime"),"KeepThemComing");
+                
+                AudioSource sisyphusRespawnSource =  sisyphusRespawn.GetComponent<AudioSource>();
+                string sisyphusRespawnString = sisyphusPrimeFolder + "sisyphusKeepThemComing.wav";
+                sisyphusRespawnSource.clip = SwapClipWithFile(sisyphusRespawnSource.clip, sisyphusRespawnString);
+                
+
+                
+
+                
+
+                
+                
+                
+                
             }
             else if (levelName == "Level 4-3")
             {

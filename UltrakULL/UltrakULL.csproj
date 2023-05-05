@@ -177,6 +177,7 @@
     <Compile Include="Harmony Patches\AudioSwaps\MandaloreAudioSwap.cs" />
     <Compile Include="Harmony Patches\AudioSwaps\MinosPrimeAudioSwap.cs" />
     <Compile Include="Harmony Patches\AudioSwaps\AudioFixes.cs" />
+    <Compile Include="Harmony Patches\AudioSwaps\SisyphusPrimeAudioSwap.cs" />
     <Compile Include="Harmony Patches\BossBarManager.cs" />
     <Compile Include="Harmony Patches\CheatsManager.cs" />
     <Compile Include="Harmony Patches\Coin.cs" />

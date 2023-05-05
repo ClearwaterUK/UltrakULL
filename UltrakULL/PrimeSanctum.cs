@@ -103,7 +103,7 @@ namespace UltrakULL
                 PatchResultsScreen(levelname, "");
                 
                 PatchSecretText(primeSanctumChallengeStrings);
-                //AudioSwapper.AudioSwap(getCurrentSceneName());
+                AudioSwapper.AudioSwap(getCurrentSceneName());
             }
         }
     }

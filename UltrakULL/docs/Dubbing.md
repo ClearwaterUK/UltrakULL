@@ -68,6 +68,14 @@ For example, 2 lines may have the same linked subtitles, but one line may have a
 | minosPrimeDeathScream |                                                      | This line plays *immediately* after minosPrimeDefeated, instead of waiting for the relevant point in his death animation. |
 
 
+### P-2: "WAIT OF THE WORLD"
+| Voice line         | Subtitle delay (in seconds)                         | Other notes |
+|--------------------|-----------------------------------------------------|-------------|
+| sisyphusThisPrison | 0.0;1.5;2.8                                         |             |
+| sisyphusIntro      | 0.0;1.7;6.6;10.3;15.8;17.2;22.0;25.9;31.4;35.0;37.4 |             |
+| sisyphusOutro      | 0.0;1.6;6.3;12.1;15.3                               |             |
+
+
 ___
 
 
@@ -105,6 +113,9 @@ Full details to be confirmed.
 
 
 ### Mandalore
+Full details to be confirmed.
+
+### Sisyphus Prime
 Full details to be confirmed.
 
 ## Where to place audio files

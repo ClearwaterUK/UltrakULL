@@ -1,4 +1,7 @@
-﻿1.2.0b
+﻿1.2.0c
+- Added dubbing support for Sisyphus Prime, updated dubbing documentation.
+
+1.2.0b
 - Various fixes
 - Upgraded UMM to 0.5.5.
 - Added strings for the Sharpshooter variation in the shop.
