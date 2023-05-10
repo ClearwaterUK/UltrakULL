@@ -45,7 +45,7 @@ namespace UltrakULL
 			if (missionName.Contains("5-2")) { return "5-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathSecond; }
 			if (missionName.Contains("5-3")) { return "5-3: " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathThird; }
 			if (missionName.Contains("5-4")) { return "5-4: " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathFourth; }
-			if (missionName.Contains("5-S")) { return "5-5: " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathSecret; }
+			if (missionName.Contains("5-S")) { return "5-S: " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathSecret; }
 
 			if (missionName.Contains("6-1")) { return "6-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_heresyFirst; }
 			if (missionName.Contains("6-2")) { return "6-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_heresySecond; }
