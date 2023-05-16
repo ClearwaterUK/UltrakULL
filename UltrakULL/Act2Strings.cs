@@ -1,5 +1,6 @@
 ﻿using UnityEngine.SceneManagement;
 using UltrakULL.json;
+using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
 {
@@ -174,8 +175,34 @@ namespace UltrakULL
             return "Unknown 5-4 string";
         }
 
-        private static string Level5Secret()
+        private static string Level5Secret(string message)
         {
+            if (message.Contains("living"))
+            {
+                return (LanguageManager.CurrentLanguage.fishing.fish_living);
+            }
+            if (message.Contains("Too small"))
+            {
+                return (LanguageManager.CurrentLanguage.fishing.fish_tooSmall);
+            }
+            if (message.Contains("This bait"))
+            {
+                return (LanguageManager.CurrentLanguage.fishing.fish_baitNotWork);
+            }
+            if (message.Contains("A fish took"))
+            {
+                return (LanguageManager.CurrentLanguage.fishing.fish_baitTaken);
+            }
+            if (message.Contains("Fishing interrupted"))
+            {
+                return (LanguageManager.CurrentLanguage.fishing.fish_interrupted);
+            }
+            if (message.Contains("Cooking failed"))
+            {
+                return (LanguageManager.CurrentLanguage.fishing.fish_cookingFailed);
+            }
+            
+            
             return "Unknown 5-S string";
         }
 
@@ -197,7 +224,7 @@ namespace UltrakULL
 
         public static string GetMessage(string message, string message2, string input)
         {
-            string currentLevel = SceneManager.GetActiveScene().name;
+            string currentLevel = getCurrentSceneName();
             string fullMessage = message + message2;
 
             if(fullMessage.Contains("opens"))
@@ -249,7 +276,7 @@ namespace UltrakULL
                     }
                 case "Level 5-S":
                     {
-                        return Level5Secret();
+                        return Level5Secret(message);
                     }
                 case "Level 6-1":
                     {
@@ -286,7 +313,7 @@ namespace UltrakULL
 
         public static string GetLevelName()
         {
-            string currentLevel = SceneManager.GetActiveScene().name;
+            string currentLevel = getCurrentSceneName();
 
             switch (currentLevel)
             {

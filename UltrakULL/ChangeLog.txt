@@ -1,4 +1,44 @@
-﻿1.1.1
+﻿1.2.0b
+- Various fixes
+- Upgraded UMM to 0.5.5.
+- Added strings for the Sharpshooter variation in the shop.
+- Added strings for the Cybergrind music jukebox.
+- Added strings for the missing Filth bio in the dev museum.
+- Added a few missing strings to the template (check template changelog).
+- Added extra strings to rocket launcher lore for extra SRS Cannon lines. (Translators, update your strings in this section.)
+- Added missing strings to 5-S (message in the bottle, "cooking failed" message).
+- Added strings for the level and end-of-level leaderboards.
+- Added strings for extra museum content (Health book+plaques, Quetzal Tirado book+plaques)
+- Fixed "Lake of Blood" not being translated in 5-S.
+- Fixed the second shops in P-1 and P-2 not being translated.
+- Fixed "Clash Mode" not being translated in the cheats menu.
+- Fixed Minos Primes' death screen not being dubbed.
+- Fixed a small issue in the English template resulting in Sisy Prime's strategy bio not appearing.
+
+
+
+1.2.0a
+- **Added content related to Wait Of The World.**
+- Added subtitles and strings for P-2 and Sisyphus Prime.
+- Added shop strings for the S.R.S. Cannon.
+- Added enemy bio strings for Flash Panopticon and Sisyphus Prime.
+- Added strings for the two new categories in the spawner arm.
+- Added strings for the enemy/object modifier in the cheat menu.
+- Added strings for the controller rumble tab in the options menu.
+- Added strings for all the dev museum content.
+- Added strings for 5-S.
+- Added strings for the new style bonuses (Envirokill, Scrongled, Scrongbongled, Scrindonguloded)
+- Refactored and moved several key strings in the templates. Be sure to consult the template changelog.
+- Removed the "Credits" category from the templates due to it being redundant thanks to the new dev museum.
+
+- Fixed an issue with the options menu not being translated in specific levels (such as 4-S).
+- Fixed 5-3 dubbing not working.
+
+(NOTE: Mod credits will be moved to the dev museum in future.)
+
+ Template changelog is far too big to send here. Be sure to check the GitHub release page for the full changelog.
+
+1.1.1
 - **Added basic support for Right-to-left languages, such as Arabic and Hebrew.**
 (**Note**: To set RTL encoding for your language, set langRTL in your JSON metadata to "true" (all lowercase). See JSON changes below.)
 - A big backend cleanup and refactor effort has been done. This should not affect any functionality of the mod, but if any problems arise, please report them.

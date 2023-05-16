@@ -11,7 +11,8 @@ namespace UltrakULL.audio
 {
     public static class AudioSwapper
     {
-        public static string speechFolder = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakullaudio", LanguageManager.CurrentLanguage.metadata.langName);
+        public static string speechFolder = Directory.GetCurrentDirectory() + "\\BepInEx\\config\\ultrakull\\audio\\" + LanguageManager.CurrentLanguage.metadata
+        .langName + "\\";
         
         public static AudioClip SwapClipWithFile(AudioClip sourceClip, string audioFilePath)
         {
@@ -45,14 +46,15 @@ namespace UltrakULL.audio
                 return;
             }
             
-            speechFolder = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull", "audio", LanguageManager.CurrentLanguage.metadata.langName);
+            speechFolder = Directory.GetCurrentDirectory() + "\\BepInEx\\config\\ultrakull\\audio\\" + LanguageManager.CurrentLanguage.metadata
+                .langName + "\\";
             
             //Since the makes a clone of the arena gameObject which is used, wait a small period of time for the new gameObject to be accessible before accessing it.
             await Task.Delay(250);
             
             if (levelName == "Level 3-2")
             {
-                string gabeFirstFolder = Path.Combine(speechFolder, "gabrielBossFirst");
+                string gabeFirstFolder = speechFolder + "gabrielBossFirst\\";
 
                 //Intro lines
                 GameObject gabeIntroFirst = GetInactiveRootObject("gab_Intro1");
@@ -90,7 +92,7 @@ namespace UltrakULL.audio
             }
             else if(levelName == "Level P-1")
             {
-                string minosPrimeFolder = Path.Combine(speechFolder, "minosPrime");
+                string minosPrimeFolder = speechFolder + "minosPrime\\";
                 
                 GameObject minosPrimeArena = GetInactiveRootObject("3 - Fuckatorium");
             
@@ -133,7 +135,7 @@ namespace UltrakULL.audio
                 
                 //Scream (note: Scream plays as soon as Defeated is finished playing. So files need to be of correct length to sync with each other correctly)
                 GameObject minosPrimeScream = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(minosPrimeArena,"3 Stuff(Clone)"),"MinosPrimeWave"), "MinosPrime"),"DeathScream");
-                string minosPrimeScreamString = minosPrimeFolder + "minosPrimeScream.wav";
+                string minosPrimeScreamString = minosPrimeFolder + "minosPrimeDeathScream.wav";
                 
                 AudioSource minosPrimeScreamSource = minosPrimeScream.GetComponentInChildren<AudioSource>();
                 minosPrimeScreamSource.clip = SwapClipWithFile(minosPrimeScreamSource.clip, minosPrimeScreamString);
@@ -150,7 +152,7 @@ namespace UltrakULL.audio
                 //There are two used clips for intro, one for Mandalore, the other for the owl.
                 //I can't find where the owl clip is though...
 
-                string mandaloreFolder = Path.Combine(speechFolder + "mandalore");
+                string mandaloreFolder = speechFolder + "mandalore\\";
                 
                 GameObject mandaloreArena = GetGameObjectChild(GetInactiveRootObject("3 - Traitor Hallway"),"3B - Tomb of Kings");
 
@@ -163,19 +165,19 @@ namespace UltrakULL.audio
             
             else if (levelName == "Level 5-3")
             {
-                string gabeBoatFolder = Path.Combine(speechFolder, "gabrielBoat");
+                string gabeBoatFolder = speechFolder + "gabrielBoat\\";
                 
-                GameObject gabeBoatSpeechObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Unrotated"),"5 - Hologram Rooms"),"5 Nonstuff"),"Decorations"), "Hologram");
-                
+                GameObject gabeBoatSpeechObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Unrotated"),"5 - Hologram Room"),"5 Nonstuff"),"Decorations"), "Hologram");
+
                 AudioSource gabeBoat = gabeBoatSpeechObject.GetComponentInChildren<AudioSource>();
-                
+
                 string gabeBoatString = gabeBoatFolder + "gabrielBoat.wav";
-                
+
                 gabeBoat.clip = SwapClipWithFile(gabeBoat.clip, gabeBoatString);
             }
             else if (levelName == "Level 6-1")
             {
-                string gabeHeresyFolder = Path.Combine(speechFolder, "gabrielHeresy");
+                string gabeHeresyFolder = speechFolder + "gabrielHeresy\\";
                 
                 GameObject gabeHeresyFirst = GetInactiveRootObject("GabrielVoice1");
                 GameObject gabeHeresySecond = GetInactiveRootObject("GabrielVoice2");
@@ -191,7 +193,7 @@ namespace UltrakULL.audio
             }
             else if (levelName == "Level 6-2")
             {
-                string gabeSecondFolder = Path.Combine(speechFolder, "gabrielBossSecond");
+                string gabeSecondFolder = speechFolder + "gabrielBossSecond\\";
                 
                 //Intro lines
                 GameObject gabeSecondSpeechObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("IntroSounds"),"Filler"),

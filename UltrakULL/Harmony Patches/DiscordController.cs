@@ -3,6 +3,8 @@ using System;
 using UnityEngine.SceneManagement;
 using UltrakULL.json;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.Harmony_Patches
 {
     //@Override
@@ -16,7 +18,7 @@ namespace UltrakULL.Harmony_Patches
             if (___activityManager == null) // I don't know how this happens, but it somehow does?
                 return false;
             //Details: Contains total style if in a normal level or wave number if in CG.
-            if (SceneManager.GetActiveScene().name != "Main Menu")
+            if (getCurrentSceneName() != "Main Menu")
             {
                 try
                 {
@@ -45,7 +47,7 @@ namespace UltrakULL.Harmony_Patches
             }
 
             //State: Contains current difficulty if in-level, or only displays "Main Menu"
-            if (SceneManager.GetActiveScene().name == "Main Menu")
+            if (getCurrentSceneName() == "Main Menu")
             {
                 ___cachedActivity.State = LanguageManager.CurrentLanguage.levelNames.levelName_mainMenu;
             }
@@ -78,7 +80,7 @@ namespace UltrakULL.Harmony_Patches
             }
 
             //Assets.LargeText = Level name
-            ___cachedActivity.Assets.LargeText = LevelNames.GetDiscordLevelName(SceneManager.GetActiveScene().name);
+            ___cachedActivity.Assets.LargeText = LevelNames.GetDiscordLevelName(getCurrentSceneName());
 
             //Shoot the data off to Discord RPC.
             ___activityManager.UpdateActivity(___cachedActivity, delegate (Discord.Result result)

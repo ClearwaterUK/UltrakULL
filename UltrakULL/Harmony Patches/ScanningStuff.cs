@@ -18,7 +18,7 @@ namespace UltrakULL.Harmony_Patches
 
             Text scanningText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas, "ScanningStuff"), "ScanningPanel"), "Text"));
             scanningText.text = LanguageManager.CurrentLanguage.books.books_scanning;
-            text = Books.GetBookText();
+            text = Books.GetBookText(text);
             return true;
         }
     }

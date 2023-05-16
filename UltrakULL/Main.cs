@@ -18,45 +18,32 @@ using UMM;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater, additional code contributions by Temperz87, translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 23rd December 2022
+ *	Last updated: 25th April 2023
  *	
- *	This is a translation mod for Ultrakill that hooks into the game and allows for text/string replacement.
- *	This tool is primarily meant to assist with language translation.
+ *	A translation mod for Ultrakill that hooks into the game and allows for text/string replacement. This tool is primarily meant to assist with language translation.
  * 
  *  -- MAIN TASK LIST --
- *  - Add ULL credits, translation credits to main menu with help of UKUIHelper library
- *  - Error and exception handling
- *  - Divide up more stuff in try/catch functions (especially the shop), that way less stuff breaks if something bad happens
+ *  - Add ULL credits in dev museum
+ *  - CG update stuff
  * 
  *  -- STUFF FOR FUTURE UPDATES --
- *  - Next game update scheduled for early 2023. P-2, 5-S, radient enemies, rumble support and green rocket launcher
- *  - Swap out rank textures in HUD for translation
- *  - Replace the default font with a version that has better special char + cyrillic support
+ *  - Swap out rank textures in HUD for translation (there's a mod already for this, shall look into)
+ *  - Replace the default font with a version that has better special char + cyrillic support (someone already made a global font, just need to see how to implement)
  *  - Finish audio dubbing documentation
+ *  - Change language file system so they can be directly downloaded in-game (Upload files to private repo?)
  *  
- *  -- BUGS AND QUIRKS TO FIX --
- * - Misc keys as strings (comma, period, etc) missing
- * - Inconsistencies with commas in input messages (ex: 0-1 has them but slide in tutorial doesn't)
- * - Add more sanity checks in code to prevent entire mod from breaking if something does (Caused when mod tries to get strings from json that don't exist and then just ends up breaking everything). Disable a patched function by returning true if an exception happens there, will then use original game code.
- * - Options->Sandbox icons names (Can't seem to get the dropdown data inside of the gameObject it's linked to - keeps saying 0 elements but when viewed manually in UnityExplorer it shows them)
- * 
- *  -- STUFF REPORTED BY ULL TEAM --
- * 
  *  -- FOR NEXT HOTFIX --
+ * Make language button disappear like other option buttons when save menu is opened
+ * Sissy Prime dubbing
  *
  *
- * P-2 UPDATE DAMAGE REPORT
  *
- * ALL MODS ARE BROKEN. WILL NEED TO WAIT FOR UMM FIXES.
- * Credits shuffled to actual leveL. Current credits stuff on main menu will need to be moved to a new class.
- * P-2 stuff, 5-S stuff.
- * Rumble support and other new options.
- * New sandbox settings.
- * Green R.
- *
- *
- *Intro:
- * 
+ *- REPORTED BY USERS
+ * Fishing guide terminal sometimes not translated (doesn't translate when first appears, second time is fine)
+ * 5-3 dubbing still not working? (No errors..?)
+ * 2-S First prompt panel not translated (No errors, appears fine on my end with French..?)
+ * Some of MDK/Owl's lines are still borked
+ * Armboy in museum missing string
  * 
  * */
 
@@ -76,7 +63,7 @@ namespace UltrakULL
         public Font vcrFont;
 
         private const string InternalName = "clearwater.ultrakull.ultrakULL";
-        private const string InternalVersion = "1.1.2";
+        private const string InternalVersion = "1.2.0";
         
         private static readonly HttpClient Client = new HttpClient();
         
@@ -289,57 +276,7 @@ namespace UltrakULL
 
 
         }
-
-
-        public void addModCredits(GameObject frontEnd)
-        {
-            Text creditsFirst = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(frontEnd, "Credits"), "Text (1)"));
-            Text creditsSecond = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(frontEnd, "Credits"), "Text (2)"));
-
-            creditsFirst.text =
-                LanguageManager.CurrentLanguage.credits.credits_title + "\n\n"
-                + LanguageManager.CurrentLanguage.credits.credits_createdBy + "\n\n"
-
-                + LanguageManager.CurrentLanguage.credits.credits_helpedByTitle + "\n\n"
-
-                + LanguageManager.CurrentLanguage.credits.credits_helpedBy1 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_helpedBy2 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_helpedBy3 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_helpedBy4 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_helpedBy5 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_helpedBy6 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_helpedBy7 + "\n\n\n\n"
-
-                + LanguageManager.CurrentLanguage.credits.credits_contributionsTitle + "\n\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions1 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions2 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions3 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions4 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions5 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions6 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions7 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions8 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_contributions9 + "\n";
-
-            creditsSecond.text =  "\n" 
-                + LanguageManager.CurrentLanguage.credits.credits_VATitle + "\n\n"
-
-                + LanguageManager.CurrentLanguage.credits.credits_VA1 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_VA2 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_VA3 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_VA4 + "\n\n\n\n\n\n\n"
-
-                + LanguageManager.CurrentLanguage.credits.credits_QATitle + "\n\n"
-                + LanguageManager.CurrentLanguage.credits.credits_QA1 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_QA2 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_QA3 + "\n"
-                + LanguageManager.CurrentLanguage.credits.credits_QA4 + "\n";
-            
-            Text creditsBackButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd, "Credits"),"Back (1)"),"Text"));
-            creditsBackButton.text = LanguageManager.CurrentLanguage.shop.shop_back;
-
-        }
-
+        
         //Most of the hook logic and checks go in this function.
         public void onSceneLoaded(Scene scene, LoadSceneMode mode)
         {
@@ -351,14 +288,14 @@ namespace UltrakULL
             else
             {
                 Logging.Message("Switching scenes...");
-                Scene currentLevel = SceneManager.GetActiveScene();
-                string levelName = currentLevel.name;
-
-                if (Harmony_Patches.InjectLanguageButton.languageButtonText != null)
+                string levelName = getCurrentSceneName();
+                
+                /*if (Harmony_Patches.InjectLanguageButton.languageButtonText != null)
                 {
                     Harmony_Patches.InjectLanguageButton.languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
                     Harmony_Patches.InjectLanguageButton.languageButtonTitleText.text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
-                }
+                }*/
+                
                 //Each scene (level) has an object called Canvas. Most game objects are there.
                 GameObject canvasObj = GetInactiveRootObject("Canvas");
                 if (!canvasObj)
@@ -368,6 +305,7 @@ namespace UltrakULL
                 }
                 else
                 {
+
                     switch(levelName)
                     {
                         case "Intro": { break; }
@@ -411,8 +349,7 @@ namespace UltrakULL
                             {
                                 ultrakullLogoText.text += "\n<color=red>Unable to check for updates. Check console for info.</color>";
                             }
-
-                            this.addModCredits(canvasObj);
+                            
                             break;
                         }
 
@@ -442,6 +379,11 @@ namespace UltrakULL
                                 {
                                     Logging.Message("Tutorial");
                                 }
+                                else if (levelName.Contains("-S"))
+                                {
+                                    Logging.Message("Secret");
+                                    SecretLevels secretLevels = new SecretLevels(ref canvasObj);
+                                }
                                 if(levelName.Contains("0-"))
                                 {
                                     Logging.Message("Prelude");
@@ -461,11 +403,6 @@ namespace UltrakULL
                                 {
                                     Logging.Message("Prime");
                                     PrimeSanctum primeSanctumClass = new PrimeSanctum(ref canvasObj);
-                                }
-                                else if (levelName.Contains("-S"))
-                                {
-                                    Logging.Message("Secret");
-                                    SecretLevels secretLevels = new SecretLevels(ref canvasObj);
                                 }
                                 else if (levelName == "uk_construct")
                                 {
@@ -487,7 +424,6 @@ namespace UltrakULL
                                     Logging.Message("DevMuseum");
                                     DevMuseum devMuseum = new DevMuseum(ref canvasObj);
                                 }
-
                             }
                             break;
                         }
@@ -506,18 +442,13 @@ namespace UltrakULL
 
         private IEnumerator ApplyPostFixes(GameObject frontEnd)
         {
-            Console.WriteLine(SceneManager.GetActiveScene().name);
-            Console.WriteLine(SceneManager.GetActiveScene().name == "Main Menu");
-            if (SceneManager.GetActiveScene().name == "Main Menu")
+            if (getCurrentSceneName() == "Main Menu")
             {
                  yield return new WaitForSeconds(0.50f);
-
-            Console.WriteLine("init");
-            Console.WriteLine(frontEnd.name);
+                 
             //Open Language Folder button in Options->Langauge
             
             Text openLangFolderText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd,"OptionsMenu"), "Language Page"),"Scroll Rect (1)"),"Contents"),"OpenLangFolder"),"Slot Text"));
-            Console.WriteLine("slot text");
             openLangFolderText.text = LanguageManager.CurrentLanguage.options
             .language_openLanguageFolder;
 
@@ -526,7 +457,7 @@ namespace UltrakULL
             GameObject ummRestartButton = null;
 
             
-            if(SceneManager.GetActiveScene().name == "Main Menu")
+            if(getCurrentSceneName() == "Main Menu")
             {
                 GameObject titleObject = GetGameObjectChild(frontEnd, "Main Menu (1)");
 
@@ -582,7 +513,7 @@ namespace UltrakULL
         
         private async Task CheckForUpdates()
         {
-            string updateUrl = "https://api.github.com/repos/clearwatertm/ultrakull/releases/latest";
+            string updateUrl = "https://api.github.com/repos/clearwateruk/ultrakull/releases/latest";
             Client.DefaultRequestHeaders.Accept.Add( new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
             Client.DefaultRequestHeaders.UserAgent.TryParseAdd("request");
             Client.Timeout = TimeSpan.FromSeconds(5);

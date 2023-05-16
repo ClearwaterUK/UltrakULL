@@ -102,7 +102,7 @@ namespace UltrakULL
                 Text cgExitDescriptionText = GetTextfromGameObject(GetGameObjectChild(cgExit, "Text"));
 
                 Text cgExitDescription = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgExit, "CyberGrindButton (1)"), "Text"));
-                if (SceneManager.GetActiveScene().name == "uk_construct")
+                if (getCurrentSceneName() == "uk_construct")
                 {
                     cgExitDescription.text = LanguageManager.CurrentLanguage.frontend.mainmenu_quit;
                 }
@@ -203,9 +203,20 @@ namespace UltrakULL
                 marksmanWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Revolver red variation (under construction)
-                GameObject revolverRedVariation = GetGameObjectChild(revolverWindow, "Variation Panel (Red)");
-                Text revolverRedUnderConstruction = GetTextfromGameObject(GetGameObjectChild(revolverRedVariation, "Text (1)"));
-                revolverRedUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
+                //Sharpshooter
+                GameObject sharpshooter = GetGameObjectChild(revolverWindow, "Variation Panel (Red)");
+                Text sharpshooterName = GetTextfromGameObject(GetGameObjectChild(sharpshooter, "Text"));
+                sharpshooterName.text = LanguageManager.CurrentLanguage.shop.shop_revolverSharpshooter;
+                sharpshooterName.fontSize = 20;
+                
+                GameObject sharpshooterWindow = GetGameObjectChild(revolverWindow, "Variation Info (Red)");
+                Text sharpshooterWindowName = GetTextfromGameObject(GetGameObjectChild(sharpshooterWindow, "Name"));
+                sharpshooterWindowName.text = sharpshooterName.text;
+                
+                Text sharpshooterWindowDescription = GetTextfromGameObject(GetGameObjectChild(sharpshooterWindow, "Description"));
+                sharpshooterWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_revolverSharpshooterDescription1 + "\n\n"
+                    + LanguageManager.CurrentLanguage.shop.shop_revolverSharpshooterDescription2 + "\n\n";
+                sharpshooterWindowDescription.fontSize = 20;
 
                 //Revolver info & color tabs
                 GameObject revolverExtra = GetGameObjectChild(revolverWindow, "Info and Color Panel");
@@ -731,8 +742,20 @@ namespace UltrakULL
                 Text freezeframeDescriptionBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(freezeframeInfo, "Button"), "Text"));
                 freezeframeDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
-                //Rocket Launcher green variation (to do)
-                GameObject rlGreenVariation = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Green)");
+                //Rocket Launcher green variation
+                GameObject srsCannon = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Green)");
+                Text srsCannonName = GetTextfromGameObject(GetGameObjectChild(srsCannon, "Text"));
+                srsCannonName.text = LanguageManager.CurrentLanguage.shop.shop_rocketLauncherSrsCannon;
+                
+                GameObject srsCannonInfo = GetGameObjectChild(rocketlauncherWindow, "Variation Info (Green)");
+                Text srsCannonInfoName = GetTextfromGameObject(GetGameObjectChild(srsCannonInfo, "Name"));
+                srsCannonInfoName.text = LanguageManager.CurrentLanguage.shop.shop_rocketLauncherSrsCannon;
+                Text srsCannonInfoDescription = GetTextfromGameObject(GetGameObjectChild(srsCannonInfo, "Description"));
+                srsCannonInfoDescription.text =
+                    LanguageManager.CurrentLanguage.shop.shop_rocketLauncherSrsCannonDescription1 + "\n\n" +
+                    LanguageManager.CurrentLanguage.shop.shop_rocketLauncherSrsCannonDescription2 + "\n\n" +
+                    LanguageManager.CurrentLanguage.shop.shop_rocketLauncherSrsCannonDescription3;
+                srsCannonInfoDescription.fontSize = 16;
 
                 //Rocket Launcher red variation (under construction)
                 GameObject rlRedVariation = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Red)");
@@ -770,9 +793,11 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher9 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher10 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher11 + "\n\n"
-                    + LanguageManager.CurrentLanguage.shop.shop_advancedStrategy + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher12 + "\n\n"
-                    + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher13;
+                    + LanguageManager.CurrentLanguage.shop.shop_advancedStrategy + "\n\n"
+                    + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher13 + "\n\n"
+                    + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher14 + "\n\n"
+                    + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher15;
 
 
                 Text rocketlauncherLoreBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(rocketlauncherLore, "Button"), "Text"));
@@ -853,9 +878,7 @@ namespace UltrakULL
                 
                 //Whiplash
                 GameObject whiplash = GetGameObjectChild(armWindow, "Variation Panel 3 (New)");
-                Console.WriteLine(whiplash.name);
                 Text whiplashName = GetTextfromGameObject(GetGameObjectChild(whiplash, "Text"));
-                Console.WriteLine(whiplashName.name);
                 whiplashName.text = LanguageManager.CurrentLanguage.shop.shop_armWhiplash;
 
                 GameObject whiplashWindow = GetGameObjectChild(armWindow, "Variation 3 Info (New)");
@@ -881,22 +904,41 @@ namespace UltrakULL
 
         public static void PatchShop(ref GameObject level)
         {
-            if (SceneManager.GetActiveScene().name == "Level 2-S")
+            //No shops in secret levels so immediately back out
+            if (getCurrentSceneName().Contains("-S"))
             {
                 return;
             }
+            
             List<GameObject> shopsToPatch = new List<GameObject>();
             //Start by finding what level we're on and what shopObjects need patching.
-            if (SceneManager.GetActiveScene().name == "uk_construct")
+            if (getCurrentSceneName() == "uk_construct")
             {
                 shopsToPatch.Add(GetGameObjectChild(GameObject.Find("Shop"),"Canvas"));
             }
-            else if(SceneManager.GetActiveScene().name.Contains("P-"))
+            else if(getCurrentSceneName().Contains("P-"))
             {
-                shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Prime FirstRoom"),"Room"),"Shop"),"Canvas"));
+                switch(getCurrentSceneName())
+                {
+                    case "Level P-1":
+                    {
+                        shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Prime FirstRoom"),"Room"),"Shop"),"Canvas"));
+                        shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("2 - Inner Sanctum"),"Shop"),"Canvas"));
+                        break;
+                    }
+                    case "Level P-2":
+                    {
+                        Logging.Message("P-2 shop");
+                        shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Prime FirstRoom"),"Room"),"Shop"),"Canvas"));
+                        Logging.Message("P-2 shop1");
+                        shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"Inside"),"8 - Elevator"),"8 Nonstuff"),"Exit"),"Shop"),"Canvas"));
+                        Logging.Message("P-2 shop2");
+                        break;
+                    }
+                }
             }
             //Specific fix for 6-1
-            else if(SceneManager.GetActiveScene().name == "Level 6-1")
+            else if(getCurrentSceneName() == "Level 6-1")
             {
                 shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Interiors"),"FirstRoom"),"Room"),"Shop"),"Canvas"));
             }
@@ -905,8 +947,8 @@ namespace UltrakULL
             {
                 shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("FirstRoom"), "Room"), "Shop"), "Canvas"));
             } 
-            
-            switch(SceneManager.GetActiveScene().name)
+
+            switch(getCurrentSceneName())
             {
                 case "Level 0-3":
                 {
@@ -961,7 +1003,7 @@ namespace UltrakULL
                 }
             }
             
-            Console.WriteLine(shopsToPatch.Count);
+            Logging.Message(shopsToPatch.Count + " shops to patch in scene");
             if (shopsToPatch.Count > 0)
             {
                 PatchShopFrontEnd(ref shopsToPatch);

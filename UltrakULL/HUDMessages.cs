@@ -1,6 +1,7 @@
 ﻿using System;
 using UltrakULL.json;
 using UnityEngine.SceneManagement;
+using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
 {
@@ -43,13 +44,19 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.misc.hud_weaponVariation;
             }
-            if (message.Contains("=>"))
+            if (message.Contains("=>")) //4-S transaction complete
             {
                 return message; //4-S transaction complete
             }
+            //For some reason 5-S passes through this function instead of passing through HudMessage. So we'll do this
+            if(getCurrentSceneName() == "Level 5-S")
+            {
+                return StringsParent.GetMessage(message, "", "");
+            }
+            
 
             //Cybergrind custom pattern fix
-            if (SceneManager.GetActiveScene().name == "Endless")
+            if (getCurrentSceneName() == "Endless")
             {
                 if(message.Contains("NO PATTERNS"))
                 {
@@ -59,7 +66,7 @@ namespace UltrakULL
             }
 
             Logging.Warn("Couldn't find string for message: " + message);
-            return ("Unimplemented HUD string, check the console");
+            return message;
         }
     }
 }

@@ -45,6 +45,8 @@ namespace UltrakULL
                 //Prime Sanctums
                 case ("FLESH PRISON"): { return (LanguageManager.CurrentLanguage.enemyNames.enemyname_fleshPrison); }
                 case ("MINOS PRIME"): { return (LanguageManager.CurrentLanguage.enemyNames.enemyname_minosPrime); }
+                case ("FLESH PANOPTICON"): { return (LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_fleshPanopticon); }
+                case ("SISYPHUS PRIME"): { return (LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_sisyphusPrime); }
 
                 default: { return ("UNKNOWN BOSS NAME"); }
             }

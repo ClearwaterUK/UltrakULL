@@ -58,7 +58,7 @@ namespace UltrakULL
         {
             GameObject intermissionObject = GetGameObjectChild(GetGameObjectChild(canvasObj, "PowerUpVignette"), "Panel");
 
-            switch (SceneManager.GetActiveScene().name)
+            switch (getCurrentSceneName())
             {
                 case "Intermission1": { Act1Int(intermissionObject);  break; }
                 case "Intermission2": { Act2Int(intermissionObject);  break; }

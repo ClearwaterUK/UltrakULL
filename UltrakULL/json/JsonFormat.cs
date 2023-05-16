@@ -7,8 +7,8 @@ namespace UltrakULL.json
         public Body body;
         
         public FrontEnd frontend;
-        
         public Tutorial tutorial;
+        
         public Overture prelude;
         public a1 act1;
         public a2 act2;
@@ -16,6 +16,8 @@ namespace UltrakULL.json
         public Prime primeSanctum;
         public Secret secretLevels;
         public IntermissionStrings intermission;
+        public Museum devMuseum;
+        public FishingStrings fishing;
         
         public PauseMenu pauseMenu;
         public Option options;
@@ -33,48 +35,97 @@ namespace UltrakULL.json
         
         public Style style;
         public CheatStrings cheats;
-        public Credits credits;
         public Misc misc;
-        
+
+        public SandboxStrings sandbox;
     }
-
-    public class Credits
+    
+    public class FishingStrings
     {
-        public string credits_title;
-        public string credits_createdBy;
-
-        public string credits_helpedByTitle;
-        public string credits_helpedBy1;
-        public string credits_helpedBy2;
-        public string credits_helpedBy3;
-        public string credits_helpedBy4;
-        public string credits_helpedBy5;
-        public string credits_helpedBy6;
-        public string credits_helpedBy7;
-
-        public string credits_contributionsTitle;
-        public string credits_contributions1;
-        public string credits_contributions2;
-        public string credits_contributions3;
-        public string credits_contributions4;
-        public string credits_contributions5;
-        public string credits_contributions6;
-        public string credits_contributions7;
-        public string credits_contributions8;
-        public string credits_contributions9;
-
-        public string credits_VATitle;
-        public string credits_VA1;
-        public string credits_VA2;
-        public string credits_VA3;
-        public string credits_VA4;
-
-        public string credits_QATitle;
-        public string credits_QA1;
-        public string credits_QA2;
-        public string credits_QA3;
-        public string credits_QA4;
-
+        public string fish_ocean;
+        public string fish_cavePool;
+        public string fish_stream;
+        public string fish_lake;
+        public string fish_lakeBloodLower;
+        public string fish_lakeHoly;
+        public string fish_lakeDeep;
+        public string fish_lakeBlood;
+        public string fish_waterWell;
+        public string fish_panOil;
+        
+        public string fish_leaderboard;
+        
+        public string fish_bottleMessage1;
+        public string fish_bottleMessage2;
+        public string fish_bottleMessage3;
+        public string fish_bottleMessage4;
+        public string fish_bottleMessage5;
+        public string fish_bottleMessage6;
+        
+        public string fish_book1;
+        public string fish_book2;
+        public string fish_book3;
+        public string fish_book4;
+        public string fish_book5;
+        public string fish_book6;
+        public string fish_book7;
+        public string fish_book8;
+        public string fish_book9;
+        public string fish_book10;
+        
+        public string fish_rodFar;
+        public string fish_rodClose;
+        public string fish_rodHooked;
+        public string fish_outOfWater;
+        public string fish_fishCaught;
+        public string fish_cookingFailed;
+        public string fish_size;
+        
+        public string fish_living;
+        public string fish_tooSmall;
+        public string fish_baitNotWork;
+        public string fish_baitTaken;
+        public string fish_interrupted;
+        
+        public string fish_terminalTitle;
+        public string fish_funnyStupidFish;
+        public string fish_pitrFish;
+        public string fish_trout;
+        public string fish_amidEvilFish;
+        public string fish_chomper;
+        public string fish_bombFish;
+        public string fish_gibeye;
+        public string fish_ironLungFish;
+        public string fish_dopeFish;
+        public string fish_stickFish;
+        public string fish_cookedFish;
+        public string fish_shark;
+        
+        public string fish_funnyStupidFishDescription1;
+        public string fish_funnyStupidFishDescription2;
+        public string fish_pitrFishDescription1;
+        public string fish_pitrFishDescription2;
+        public string fish_troutDescription1;
+        public string fish_troutDescription2;
+        public string fish_amidEvilFishDescription1;
+        public string fish_amidEvilFishDescription2;
+        public string fish_chomperDescription1;
+        public string fish_chomperDescription2;
+        public string fish_bombFishDescription1;
+        public string fish_bombFishDescription2;
+        public string fish_gibeyeDescription1;
+        public string fish_gibeyeDescription2;
+        public string fish_ironLungFishDescription1;
+        public string fish_ironLungFishDescription2;
+        public string fish_dopeFishDescription1;
+        public string fish_dopeFishDescription2;
+        public string fish_stickFishDescription1;
+        public string fish_stickFishDescription2;
+        public string fish_cookedFishDescription1;
+        public string fish_cookedFishDescription2;
+        public string fish_sharkDescription1;
+        public string fish_sharkDescription2;
+        
     }
 
     public class CG
@@ -101,6 +152,7 @@ namespace UltrakULL.json
         public string cybergrind_settings;
         public string cybergrind_settingsDescription;
         public string cybergrind_themes;
+        public string cybergrind_music;
         public string cybergrind_patterns;
         public string cybergrind_waves;
 
@@ -120,7 +172,16 @@ namespace UltrakULL.json
         public string cybergrind_themesCustomTopRow;
         public string cybergrind_themesCustomTop;
         public string cybergrind_themesCustomGlowIntensity;
-
+        
+        public string cybergrind_musicTitle;
+        public string cybergrind_musicCompleteChallengeRequirement;
+        public string cybergrind_musicSeeEnemyRequirement;
+        public string cybergrind_musicUnlockLevelRequirement;
+        public string cybergrind_musicCompleteLevelRequirement;
+        public string cybergrind_musicUnlocked;
+        public string cybergrind_musicConfirm;
+        public string cybergrind_musicSoundtrack;
+        
         public string cybergrind_patternsTitle;
         public string cybergrind_patternsRefresh;
         public string cybergrind_patternsLaunchExternalEditor;
@@ -227,6 +288,7 @@ namespace UltrakULL.json
         public string style_doublekill;
         public string style_downtosize;
         public string style_enraged;
+        public string style_envirokill;
         public string style_exploded;
         public string style_finishedoff;
         public string style_fireworks;
@@ -251,6 +313,9 @@ namespace UltrakULL.json
         public string style_ricoshot;
         public string style_ricoshotUltra;
         public string style_ricoshotCounter;
+        public string style_scrindonguloded;
+        public string style_scrongled;
+        public string style_scrongbongled;
         public string style_secret;
         public string style_splattered;
         public string style_triplekill;
@@ -367,7 +432,8 @@ namespace UltrakULL.json
         public string enemyBios_stalker_strategy1;
         public string enemyBios_stalker_strategy2;
         public string enemyBios_stalker_strategy3;
-
+        public string enemyBios_stalker_strategy4;
+        
         public string enemyBios_insurrectionist_1;
         public string enemyBios_insurrectionist_2;
         public string enemyBios_insurrectionist_3;
@@ -516,6 +582,24 @@ namespace UltrakULL.json
 
         public string enemyBios_minosPrime_strategy1;
         public string enemyBios_minosPrime_strategy2;
+        
+        public string enemyBios_fleshPanopticon_1;
+        public string enemyBios_fleshPanopticon_2;
+        
+        public string enemyBios_fleshPanopticon_strategy1;
+        public string enemyBios_fleshPanopticon_strategy2;
+        
+        public string enemyBios_sisyphusPrime_1;
+        public string enemyBios_sisyphusPrime_2;
+        public string enemyBios_sisyphusPrime_3;
+        public string enemyBios_sisyphusPrime_4;
+        public string enemyBios_sisyphusPrime_5;
+        public string enemyBios_sisyphusPrime_6;
+        public string enemyBios_sisyphusPrime_7;
+        public string enemyBios_sisyphusPrime_8;
+        
+        public string enemyBios_sisyphusPrime_strategy1;
+        public string enemyBios_sisyphusPrime_strategy2;
     }
 
     public class Subtitles
@@ -602,7 +686,38 @@ namespace UltrakULL.json
         public string subtitles_minosPrime_defeated2;
         public string subtitles_minosPrime_defeated3;
         public string subtitles_minosPrime_defeated4;
+
+        public string subtitles_sisyphusPrime_preIntro1;
+        public string subtitles_sisyphusPrime_preIntro2;
+        public string subtitles_sisyphusPrime_preIntro3;
         
+        public string subtitles_sisyphusPrime_intro1;
+        public string subtitles_sisyphusPrime_intro2;
+        public string subtitles_sisyphusPrime_intro3;
+        public string subtitles_sisyphusPrime_intro4;
+        public string subtitles_sisyphusPrime_intro5;
+        public string subtitles_sisyphusPrime_intro6;
+        public string subtitles_sisyphusPrime_intro7;
+        public string subtitles_sisyphusPrime_intro8;
+        public string subtitles_sisyphusPrime_intro9;
+        public string subtitles_sisyphusPrime_intro10;
+        public string subtitles_sisyphusPrime_intro11;
+        
+        public string subtitles_sisyphusPrime_attack1;
+        public string subtitles_sisyphusPrime_attack2;
+        public string subtitles_sisyphusPrime_attack3;
+        public string subtitles_sisyphusPrime_attack4;
+        public string subtitles_sisyphusPrime_attack5;
+            
+        public string subtitles_sisyphusPrime_phaseChange;
+        public string subtitles_sisyphusPrime_respawnIntro;
+        
+        public string subtitles_sisyphusPrime_defeated1;
+        public string subtitles_sisyphusPrime_defeated2;
+        public string subtitles_sisyphusPrime_defeated3;
+        public string subtitles_sisyphusPrime_defeated4;
+        public string subtitles_sisyphusPrime_defeated5;
+
         public string subtitles_gabrielBoat1;
         public string subtitles_gabrielBoat2;
         public string subtitles_gabrielBoat3;
@@ -1079,6 +1194,10 @@ namespace UltrakULL.json
         public string level_fullIntroPromptYes;
         public string level_fullIntroPromptNo;
         public string level_fullIntroPromptCancel;
+        
+        public string leaderboard_anyPercent;
+        public string leaderboard_pPercent;
+        public string leaderboard_noEntries;
 
     }
 
@@ -1190,6 +1309,10 @@ namespace UltrakULL.json
         public string shop_revolverMarksmanDescription1;
         public string shop_revolverMarksmanDescription2;
         public string shop_revolverMarksmanDescription3;
+        public string shop_revolverSharpshooter;
+        public string shop_revolverSharpshooterDescription1;
+        public string shop_revolverSharpshooterDescription2;
+        
 
         public string shop_shotgunCoreEject;
         public string shop_shotgunCoreEjectDescription1;
@@ -1225,6 +1348,11 @@ namespace UltrakULL.json
         public string shop_rocketLauncherFreezeDescription1;
         public string shop_rocketLauncherFreezeDescription2;
         public string shop_rocketLauncherFreezeDescription3;
+        
+        public string shop_rocketLauncherSrsCannon;
+        public string shop_rocketLauncherSrsCannonDescription1;
+        public string shop_rocketLauncherSrsCannonDescription2;
+        public string shop_rocketLauncherSrsCannonDescription3;
 
         public string shop_armFeedbacker;
         public string shop_armFeedbackerDescription1;
@@ -1296,6 +1424,8 @@ namespace UltrakULL.json
         public string shop_loreRocketLauncher11;
         public string shop_loreRocketLauncher12;
         public string shop_loreRocketLauncher13;
+        public string shop_loreRocketLauncher14;
+        public string shop_loreRocketLauncher15;
 
         public string shop_revolverPreset1;
         public string shop_revolverPreset2;
@@ -1342,6 +1472,7 @@ namespace UltrakULL.json
         public string levelName_cybergrind;
         public string levelName_sandbox;
         public string levelName_tutorial;
+        public string levelName_devMuseum;
 
         public string levelName_preludeFirst;
         public string levelName_preludeSecond;
@@ -1432,10 +1563,13 @@ namespace UltrakULL.json
 
         public string leveltips_primeFirst1;
         public string leveltips_primeFirst2;
+        public string leveltips_primeSecond;
 
         public string leveltips_cybergrind;
         public string leveltips_sandbox1;
         public string leveltips_sandbox2;
+        
+        public string leveltips_devMuseum;
     }
 
     public class EnemyNames
@@ -1487,6 +1621,8 @@ namespace UltrakULL.json
         public string enemyname_boss_insurrectionistRude;
         public string enemyname_boss_insurrectionistAngry;
         public string enemyname_boss_gabrielSecond;
+        public string enemyname_boss_fleshPanopticon;
+        public string enemyname_boss_sisyphusPrime;
 
 
         public string enemyname_type_lesserHusk;
@@ -1535,6 +1671,8 @@ namespace UltrakULL.json
         public string general_restartWarning;
         public string general_discordRpc;
         public string general_seasonalEvent;
+        public string general_controllerRumble;
+        public string general_controllerRumbleCustomize;
 
         public string controls_resetDefault;
         public string controls_movement;
@@ -1685,6 +1823,7 @@ namespace UltrakULL.json
         public string assists_enemySilhouettesDistance;
         public string assists_enemySilhouettesDistanceMinimum;
         public string assists_enemySilhouettesOutlinesOnly;
+        public string assists_enemySilhouettesOutlineThickness;
         public string assists_major;
         public string assists_majorActivate;
         public string assists_gameSpeed;
@@ -1729,7 +1868,33 @@ namespace UltrakULL.json
         public string save_deleteNo;
         public string save_close;
         public string save_slotEmpty;
-
+        
+        public string rumble_title;
+        public string rumble_finalMultiplier;
+        public string rumble_coinToss;
+        public string rumble_dash;
+        public string rumble_heavyFallImpact;
+        public string rumble_heavyFall;
+        public string rumble_gunFire;
+        public string rumble_gunFireProjectile;
+        public string rumble_gunFireStrong;
+        public string rumble_nailgunFire;
+        public string rumble_railcannonIdle;
+        public string rumble_revolverCharge;
+        public string rumble_sawblade;
+        public string rumble_shotgunCharge;
+        public string rumble_superSaw;
+        public string rumble_jump;
+        public string rumble_magnet;
+        public string rumble_parryFlash;
+        public string rumble_punch;
+        public string rumble_slide;
+        public string rumble_whiplashThrow;
+        public string rumble_whiplashPull;
+        public string rumble_intensity;
+        public string rumble_endDelay;
+        public string rumble_reset;
+        
         public string language_title;
         public string language_languages;
         public string language_openLanguageFolder;
@@ -1954,6 +2119,36 @@ namespace UltrakULL.json
         public string primeSanctum_first_secretText8;
         public string primeSanctum_first_secretText9;
 
+        public string primeSanctum_second_lockFirstLocked;
+        public string primeSanctum_second_lockSecondLocked;
+        public string primeSanctum_second_lockThirdLocked;
+        public string primeSanctum_second_lockUnlocked;
+        
+        public string primeSanctum_second_lockOpen;
+        public string primeSanctum_second_lockAreYouSure;
+        public string primeSanctum_second_lockYes1;
+        public string primeSanctum_second_lockYes2;
+        public string primeSanctum_second_lockYes3;
+        public string primeSanctum_second_lockYes4;
+        public string primeSanctum_second_lockYes5;
+        public string primeSanctum_second_lockNo1;
+        public string primeSanctum_second_lockNo2;
+        
+        
+        public string primeSanctum_second_secretText1;
+        public string primeSanctum_second_secretText2;
+        public string primeSanctum_second_secretText3;
+        public string primeSanctum_second_secretText4;
+        public string primeSanctum_second_secretText5;
+        public string primeSanctum_second_secretText6;
+        public string primeSanctum_second_secretText7;
+        public string primeSanctum_second_secretText8;
+        public string primeSanctum_second_secretText9;
+        public string primeSanctum_second_secretText10;
+        public string primeSanctum_second_secretText11;
+        public string primeSanctum_second_secretText12;
+        public string primeSanctum_second_secretText13;
+
     }
 
     public class Secret
@@ -1981,9 +2176,399 @@ namespace UltrakULL.json
         public string secretLevels_fourth_testament5;
         public string secretLevels_fourth_testament6;
         public string secretLevels_fourth_testament7;
+        
+        public string secretLevels_fifth_testamentTitle;
+        public string secretLevels_fifth_testament1;
+        public string secretLevels_fifth_testament2;
+        public string secretLevels_fifth_testament3;
+        public string secretLevels_fifth_testament4;
+        public string secretLevels_fifth_testament5;
+        public string secretLevels_fifth_testament6;
+        public string secretLevels_fifth_testament7;
+        public string secretLevels_fifth_testament8;
+        public string secretLevels_fifth_testament9;
+        public string secretLevels_fifth_testament10;
+        public string secretLevels_fifth_testament11;
+        public string secretLevels_fifth_testament12;
 
         public string secretLevels_complete1;
         public string secretLevels_complete2;
+    }
+
+    public class Museum
+    {
+        public string museum_bookHakita1;
+        public string museum_bookHakita2;
+        public string museum_bookHakita3;
+        public string museum_bookHakita4;
+        public string museum_bookHakita5;
+        public string museum_bookHakita6;
+        public string museum_bookHakita7;
+        public string museum_bookHakita8;
+        public string museum_bookHakita9;
+        public string museum_bookHakita10;
+        public string museum_bookHakita11;
+        public string museum_bookHakita12;
+        public string museum_bookHakita13;
+
+        public string museum_bookFrancisXie1;
+        public string museum_bookFrancisXie2;
+        public string museum_bookFrancisXie3;
+        public string museum_bookFrancisXie4;
+        public string museum_bookFrancisXie5;
+        public string museum_bookFrancisXie6;
+        public string museum_bookFrancisXie7;
+        public string museum_bookFrancisXie8;
+        public string museum_bookFrancisXie9;
+        
+        public string museum_bookJerichoRus1;
+        public string museum_bookJerichoRus2;
+        public string museum_bookJerichoRus3;
+        public string museum_bookJerichoRus4;
+        public string museum_bookJerichoRus5;
+        public string museum_bookJerichoRus6;
+        public string museum_bookJerichoRus7;
+        public string museum_bookJerichoRus8;
+        public string museum_bookJerichoRus9;
+        public string museum_bookJerichoRus10;
+        
+        public string museum_bookBigRockBMP1;
+        public string museum_bookBigRockBMP2;
+        public string museum_bookBigRockBMP3;
+        public string museum_bookBigRockBMP4;
+        public string museum_bookBigRockBMP5;
+        public string museum_bookBigRockBMP6;
+        public string museum_bookBigRockBMP7;
+        public string museum_bookBigRockBMP8;
+        
+        public string museum_bookMaximilianOvesson1;
+        public string museum_bookMaximilianOvesson2;
+        public string museum_bookMaximilianOvesson3;
+        
+        public string museum_bookVictoriaHolland1;
+        public string museum_bookVictoriaHolland2;
+        public string museum_bookVictoriaHolland3;
+        public string museum_bookVictoriaHolland4;
+        public string museum_bookVictoriaHolland5;
+        public string museum_bookVictoriaHolland6;
+        public string museum_bookVictoriaHolland7;
+        public string museum_bookVictoriaHolland8;
+        
+        public string museum_bookToniStigell1;
+        public string museum_bookToniStigell2;
+        public string museum_bookToniStigell3;
+        public string museum_bookToniStigell4;
+        public string museum_bookToniStigell5;
+        public string museum_bookToniStigell6;
+        public string museum_bookToniStigell7;
+        
+        public string museum_bookFlyingDog1;
+        public string museum_bookFlyingDog2;
+        public string museum_bookFlyingDog3;
+        public string museum_bookFlyingDog4;
+        public string museum_bookFlyingDog5;
+        public string museum_bookFlyingDog6;
+        
+        public string museum_bookSamuelJamesBryan1;
+        public string museum_bookSamuelJamesBryan2;
+        public string museum_bookSamuelJamesBryan3;
+        
+        public string museum_bookQATeam1;
+        public string museum_bookQATeam2;
+        public string museum_bookQATeam3;
+        public string museum_bookQATeam4;
+        public string museum_bookQATeam5;
+        public string museum_bookQATeam6;
+        public string museum_bookQATeam7;
+        public string museum_bookQATeam8;
+        public string museum_bookQATeam9;
+        public string museum_bookQATeam10;
+        
+        public string museum_bookPitr1;
+        public string museum_bookPitr2;
+        public string museum_bookPitr3;
+        public string museum_bookPitr4;
+        public string museum_bookPitr5;
+        public string museum_bookPitr6;
+        public string museum_bookPitr7;
+        public string museum_bookPitr8;
+        
+        public string museum_bookHeckteck1;
+        public string museum_bookHeckteck2;
+        public string museum_bookHeckteck3;
+        
+        public string museum_bookCabalcrow1;
+        public string museum_bookCabalcrow2;
+        public string museum_bookCabalcrow3;
+        
+        public string museum_bookLucasVarney1;
+        public string museum_bookLucasVarney2;
+        public string museum_bookLucasVarney3;
+        
+        public string museum_bookBenMoir1;
+        public string museum_bookBenMoir2;
+        public string museum_bookBenMoir3;
+        public string museum_bookBenMoir4;
+        
+        public string museum_bookMeganeko1;
+        public string museum_bookMeganeko2;
+        public string museum_bookMeganeko3;
+        public string museum_bookMeganeko4;
+        
+        public string museum_bookKeygenChurch1;
+        public string museum_bookKeygenChurch2;
+        public string museum_bookKeygenChurch3;
+        public string museum_bookKeygenChurch4;
+        
+        public string museum_bookHealth1;
+        public string museum_bookHealth2;
+        public string museum_bookHealth3;
+        public string museum_bookHealth4;
+        public string museum_bookHealth5;
+        public string museum_bookHealth6;
+        
+        public string museum_bookQuetzalTirado1;
+        public string museum_bookQuetzalTirado2;
+        public string museum_bookQuetzalTirado3;
+        public string museum_bookQuetzalTirado4;
+        
+        public string museum_bookSalad1;
+        public string museum_bookSalad2;
+        public string museum_bookSalad3;
+        public string museum_bookSalad4;
+        public string museum_bookSalad5;
+        
+        public string museum_bookJacobHHR1;
+        public string museum_bookJacobHHR2;
+        public string museum_bookJacobHHR3;
+        
+        public string museum_bookVVizard1;
+        public string museum_bookVVizard2;
+        public string museum_bookVVizard3;
+        public string museum_bookVVizard4;
+        
+        public string museum_bookAdditionalMusic1;
+        public string museum_bookAdditionalMusic2;
+        public string museum_bookAdditionalMusic3;
+        public string museum_bookAdditionalMusic4;
+        public string museum_bookAdditionalMusic5;
+        public string museum_bookAdditionalMusic6;
+        public string museum_bookAdditionalMusic7;
+        public string museum_bookAdditionalMusic8;
+        public string museum_bookAdditionalMusic9;
+        public string museum_bookAdditionalMusic10;
+        
+        public string museum_bookAdditionalCredits1;
+        public string museum_bookAdditionalCredits2;
+        public string museum_bookAdditionalCredits3;
+        public string museum_bookAdditionalCredits4;
+        public string museum_bookAdditionalCredits5;
+        
+        public string museum_bookStephanWeyte1;
+        public string museum_bookStephanWeyte2;
+        public string museum_bookStephanWeyte3;
+        
+        public string museum_bookLenvalBrown1;
+        public string museum_bookLenvalBrown2;
+        public string museum_bookLenvalBrown3;
+        
+        public string museum_bookGianniMatragrano1;
+        public string museum_bookGianniMatragrano2;
+        public string museum_bookGianniMatragrano3;
+        public string museum_bookGianniMatragrano4;
+        
+        public string museum_bookMandalore1;
+        public string museum_bookMandalore2;
+        public string museum_bookMandalore3;
+        public string museum_bookMandalore4;
+        public string museum_bookMandalore5;
+        public string museum_bookMandalore6;
+        
+        public string museum_weaponsBeamcutter1;
+        public string museum_weaponsBeamcutter2;
+        public string museum_weaponsBeamcutter3;
+        public string museum_weaponsBeamcutter4;
+        public string museum_weaponsBeamcutter5;
+        public string museum_weaponsBeamcutter6;
+        public string museum_weaponsBeamcutter7;
+        public string museum_weaponsBeamcutter8;
+        public string museum_weaponsBeamcutter9;
+        
+        public string museum_weaponsBlackHoleCannon1;
+        public string museum_weaponsBlackHoleCannon2;
+        public string museum_weaponsBlackHoleCannon3;
+        public string museum_weaponsBlackHoleCannon4;
+        public string museum_weaponsBlackHoleCannon5;
+        public string museum_weaponsBlackHoleCannon6;
+        public string museum_weaponsBlackHoleCannon7;
+        public string museum_weaponsBlackHoleCannon8;
+        
+        public string museum_weaponsRevolver1;
+        public string museum_weaponsRevolver2;
+        public string museum_weaponsRevolver3;
+        public string museum_weaponsRevolver4;
+        public string museum_weaponsRevolver5;
+        public string museum_weaponsRevolver6;
+        
+        public string museum_weaponsShotgun1;
+        public string museum_weaponsShotgun2;
+        public string museum_weaponsShotgun3;
+        public string museum_weaponsShotgun4;
+        public string museum_weaponsShotgun5;
+        
+        public string museum_weaponsNailgun1;
+        public string museum_weaponsNailgun2;
+        public string museum_weaponsNailgun3;
+        public string museum_weaponsNailgun4;
+        public string museum_weaponsNailgun5;
+        public string museum_weaponsNailgun6;
+        
+        public string museum_enemiesFilth1;
+        public string museum_enemiesFilth2;
+        public string museum_enemiesFilth3;
+        public string museum_enemiesFilth4;
+        public string museum_enemiesFilth5;
+        public string museum_enemiesFilth6;
+        public string museum_enemiesFilth7;
+        
+        public string museum_enemiesStray1;
+        public string museum_enemiesStray2;
+        public string museum_enemiesStray3;
+        public string museum_enemiesStray4;
+        public string museum_enemiesStray5;
+        
+        public string museum_enemiesSchism1;
+        public string museum_enemiesSchism2;
+        public string museum_enemiesSchism3;
+        public string museum_enemiesSchism4;
+        public string museum_enemiesSchism5;
+        public string museum_enemiesSchism6;
+        
+        public string museum_enemiesSwordsmachine1;
+        public string museum_enemiesSwordsmachine2;
+        public string museum_enemiesSwordsmachine3;
+        public string museum_enemiesSwordsmachine4;
+        public string museum_enemiesSwordsmachine5;
+        public string museum_enemiesSwordsmachine6;
+        
+        public string museum_enemiesMaliciousFace1;
+        public string museum_enemiesMaliciousFace2;
+        public string museum_enemiesMaliciousFace3;
+        public string museum_enemiesMaliciousFace4;
+        public string museum_enemiesMaliciousFace5;
+        public string museum_enemiesMaliciousFace6;
+        public string museum_enemiesMaliciousFace7;
+
+        public string museum_plaquesMuseumTitle;
+        
+        public string museum_plaquesHakita1;
+        public string museum_plaquesHakita2;
+        
+        public string museum_plaquesArtRoom;
+        public string museum_plaquesNerdRoom;
+        public string museum_plaquesRestRoom;
+        public string museum_plaquesTalkRoom;
+        
+        public string museum_plaquesFrancisXie1;
+        public string museum_plaquesFrancisXie2;
+        
+        public string museum_plaquesJerichoRus1;
+        public string museum_plaquesJerichoRus2;
+        
+        public string museum_plaquesBigRockBMP1;
+        public string museum_plaquesBigRockBMP2;
+        
+        public string museum_plaquesMaxOvesson1;
+        public string museum_plaquesMaxOvesson2;
+        
+        public string museum_plaquesVictoriaHolland1;
+        public string museum_plaquesVictoriaHolland2;
+        
+        public string museum_plaquesToniStigell1;
+        public string museum_plaquesToniStigell2;
+        
+        public string museum_plaquesFlyingdog1;
+        public string museum_plaquesFlyingdog2;
+        
+        public string museum_plaquesSamuelJamesBryan1;
+        public string museum_plaquesSamuelJamesBryan2;
+        
+        public string museum_plaquesCameronMartin1;
+        public string museum_plaquesCameronMartin2;
+        
+        public string museum_plaquesDaliaFigueroa1;
+        public string museum_plaquesDaliaFigueroa2;
+        
+        public string museum_plaquesTuckerWilkin1;
+        public string museum_plaquesTuckerWilkin2;
+        
+        public string museum_plaquesScottGurney1;
+        public string museum_plaquesScottGurney2;
+        
+        public string museum_plaquesPitr1;
+        public string museum_plaquesPitr2;
+        
+        public string museum_plaquesHeckteck1;
+        public string museum_plaquesHeckteck2;
+        
+        public string museum_plaquesCabalcrow1;
+        public string museum_plaquesCabalcrow2;
+        
+        public string museum_plaquesLucasVarney1;
+        public string museum_plaquesLucasVarney2;
+        
+        public string museum_plaquesBenMoir1;
+        public string museum_plaquesBenMoir2;
+        
+        public string museum_plaquesDaveOshry1;
+        public string museum_plaquesDaveOshry2;
+        
+        public string museum_plaquesMeganeko1;
+        public string museum_plaquesMeganeko2;
+        
+        public string museum_plaquesKeygenChurch1;
+        public string museum_plaquesKeygenChurch2;
+        
+        public string museum_plaquesHealth1;
+        public string museum_plaquesHealth2;
+        
+        public string museum_plaquesQuetzalTirado1;
+        public string museum_plaquesQuetzalTirado2;
+        
+        public string museum_plaquesSalad1;
+        public string museum_plaquesSalad2;
+        
+        public string museum_plaquesJacobHHR1;
+        public string museum_plaquesJacobHHR2;
+        
+        public string museum_plaquesVVizard1;
+        public string museum_plaquesVVizard2;
+        
+        public string museum_plaquesAdditionalMusic;
+        public string museum_plaquesAdditionalCredits;
+        
+        public string museum_plaquesStephanWeyte1;
+        public string museum_plaquesStephanWeyte2;
+        
+        public string museum_plaquesLenvalBrown1;
+        public string museum_plaquesLenvalBrown2;
+        
+        public string museum_plaquesGianniMatragrano1;
+        public string museum_plaquesGianniMatragrano2;
+        
+        public string museum_plaquesJoyYoung1;
+        public string museum_plaquesJoyYoung2;
+        
+        public string museum_plaquesMandalore1;
+        public string museum_plaquesMandalore2;
+        
+        public string museum_rocketRace1;
+        public string museum_rocketRace2;
+        public string museum_rocketRaceResult;
+        
+        public string museum_cinemaPlay;
+        public string museum_cinemaStop;
+
     }
 
     public class Misc
@@ -2004,6 +2589,8 @@ namespace UltrakULL.json
         public string spawner_sandbox;
         public string spawner_enemies;
         public string spawner_items;
+        public string spawner_special;
+        public string spawner_unlockables;
 
         public string stats_time;
         public string stats_kills;
@@ -2070,9 +2657,55 @@ namespace UltrakULL.json
         public string classicHud_arm;
         public string classicHud_railcannonMeter;
 
+        public string enemyAlter_title;
+        public string enemyAlter_sizeTitle;
+        public string enemyAlter_uniformToggle;
+        public string enemyAlter_uniformSmall;
+        public string enemyAlter_uniformDefault;
+        public string enemyAlter_uniformLarge;
+        public string enemyAlter_metaTitle;
+        public string enemyAlter_metaFrozen;
+        public string enemyAlter_metaBreakable;
+        public string enemyAlter_metaUnbreakable;
+        public string enemyAlter_metaWeak;
+        public string enemyAlter_jumpPadTitle;
+        public string enemyAlter_jumpPadPower;
+        public string enemyAlter_radianceTitle;
+        public string enemyAlter_radianceEnable;
+        public string enemyAlter_radianceDetails_tier;
+        public string enemyAlter_radianceDamage_tier;
+        public string enemyAlter_radianceHealth_tier;
+        public string enemyAlter_radianceSpeed_tier;
+        public string enemyAlter_boss_title;
+        public string enemyAlter_boss_description;
+        
         public string earlyAccessEnd1;
         public string earlyAccessEnd2;
         public string earlyAccessEnd3;
 
+    }
+
+    public class SandboxStrings
+    {
+        public string sandbox_shop_timeOfDay;
+        public string sandbox_shop_worldOptions;
+        public string sandbox_shop_icons;
+
+        public string sandbox_shop_totalBoxes;
+        public string sandbox_shop_totalProps;
+        public string sandbox_shop_totalEnemies;
+        public string sandbox_shop_totalTime;
+
+        public string sandbox_shop_worldOptionsTitle;
+        public string sandbox_shop_worldOptionsEnable;
+        public string sandbox_shop_worldOptionsDisable;
+        public string sandbox_shop_worldOptionsEnabled;
+        public string sandbox_shop_worldOptionsDisabled;
+
+        public string sandbox_shop_mapBorder;
+
+        public string sandbox_shop_iconsTitle;
+        public string sandbox_shop_default;
+        public string sandbox_shop_pitr;
     }
 }

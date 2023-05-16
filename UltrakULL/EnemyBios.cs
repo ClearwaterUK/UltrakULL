@@ -34,6 +34,8 @@ namespace UltrakULL
                 case "SOMETHING WICKED": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_somethingWicked; }
                 case "FLESH PRISON": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_fleshPrison; }
                 case "MINOS PRIME": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_minosPrime; }
+                case "FLESH PANOPTICON": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_fleshPanopticon; }
+                case "SISYPHUS PRIME": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_sisyphusPrime; }
                 default: { return "Untranslated enemy name"; }
             }
         }
@@ -284,6 +286,24 @@ namespace UltrakULL
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_minosPrime_7 + "\n\n" +
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_minosPrime_8;
                     }
+                case "FLESH PANOPTICON":
+                {
+                    return
+                        LanguageManager.CurrentLanguage.enemyBios.enemyBios_fleshPanopticon_1 + "\n\n" +
+                        LanguageManager.CurrentLanguage.enemyBios.enemyBios_fleshPanopticon_2;
+                }
+                case "SISYPHUS PRIME":
+                {
+                    return
+                        LanguageManager.CurrentLanguage.enemyBios.enemyBios_sisyphusPrime_1 + "\n\n" +
+                        LanguageManager.CurrentLanguage.enemyBios.enemyBios_sisyphusPrime_2 + "\n\n" +
+                        LanguageManager.CurrentLanguage.enemyBios.enemyBios_sisyphusPrime_3 + "\n\n" +
+                        LanguageManager.CurrentLanguage.enemyBios.enemyBios_sisyphusPrime_4 + "\n\n" +
+                        LanguageManager.CurrentLanguage.enemyBios.enemyBios_sisyphusPrime_5 + "\n\n" +
+                        LanguageManager.CurrentLanguage.enemyBios.enemyBios_sisyphusPrime_6 + "\n\n" +
+                        LanguageManager.CurrentLanguage.enemyBios.enemyBios_sisyphusPrime_7 + "\n\n" +
+                        LanguageManager.CurrentLanguage.enemyBios.enemyBios_sisyphusPrime_8;
+                }
                 default: {return "UNKNOWN ENEMY BIO";}
             }
         }
@@ -371,8 +391,8 @@ namespace UltrakULL
                         return
                               "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_stalker_strategy1 + "\n\n"
                             + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_stalker_strategy2 + "\n\n"
-                            + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_stalker_strategy3;
-
+                            + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_stalker_strategy3 + "\n\n"
+                            + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_stalker_strategy4;
                     }
                 case "INSURRECTIONIST":
                     {
@@ -488,6 +508,18 @@ namespace UltrakULL
                         "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_minosPrime_strategy1 + "\n\n"
                       + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_minosPrime_strategy2;
                     }
+                case "FLESH PANOPTICON":
+                {
+                    return
+                        "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_fleshPanopticon_strategy1 + "\n\n"
+                        + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_fleshPanopticon_strategy2;
+                }
+                case "SISYPHUS PRIME":
+                {
+                    return
+                        "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_sisyphusPrime_strategy1 + "\n\n"
+                        + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_sisyphusPrime_strategy2;
+                }
                 default: { return "UNKNOWN"; }
             }
         }

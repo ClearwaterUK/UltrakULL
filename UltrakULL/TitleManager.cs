@@ -55,6 +55,7 @@ namespace UltrakULL
 
             //Prime titles
             if (inputName.Contains("SOUL SURVIVOR")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_primeFirst); }
+            if (inputName.Contains("WAIT OF THE WORLD")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_primeSecond); }
 
             return "";
         }

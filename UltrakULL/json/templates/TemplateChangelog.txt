@@ -1,4 +1,291 @@
-﻿1.1.1:
+﻿1.2.0b:
+
+ADDED:
+
+frontend: leaderboards_anyPercent
+frontend: leaderboards_pPercent
+frontend: leaderboards_noEntries
+
+shop: shop_revolverSharpshooter
+shop: shop_revolverSharpshooterDescription1
+shop: shop_revolverSharpshooterDescription2
+shop: shop_loreRocketLauncher14
+shop: shop_loreRocketLauncher15
+
+cybergrind: cybergrind_music
+cybergrind: cybergrind_musicTitle
+cybergrind: cybergrind_musicCompleteChallengeRequirement
+cybergrind: cybergrind_musicSeeEnemyRequirement
+cybergrind: cybergrind_musicUnlockLevelRequirement
+cybergrind: cybergrind_musicUnlocked
+cybergrind: cybergrind_musicConfirm
+cybergrind: cybergrind_musicSoundtrack
+
+devMuseum: museum_enemiesFilth
+devMuseum: museum_bookHealth
+devMuseum: museum_bookQuetzalTirado
+devMuseum: museum_plaquesHealth
+devMuseum: museum_plaquesQuetzalTirado
+
+enemybios: enemybios_stalker_strategy4
+
+subtitles: subtitles_gabrielSecondTaunt14
+
+visualnovel: visualnovel_middleResponseFirst6
+
+fishing: fish_bottleMessage
+fishing: fish_cookingFailed
+
+1.2.0:
+
+ADDED:
+
+New category: devMuseum
+New category: fishing
+
+[To prevent this changelog from being overly long, all multi-line entries are referred to as a single line. Check the templates to view the amount of lines each entry is split into.]
+
+devMuseum: museum_bookHakita
+devMuseum: museum_bookFrancisXie
+devMuseum: museum_bookJerichoRus
+devMuseum: museum_bookBigRockBMP
+devMuseum: museum_bookMaximilianOvesson
+devMuseum: museum_bookVictoriaHolland
+devMuseum: museum_bookToniStigell
+devMuseum: museum_bookFlyingDog
+devMuseum: museum_bookSamuelJamesBryan
+devMuseum: museum_bookQATeam
+devMuseum: museum_bookPitr
+devMuseum: museum_bookCabalcrow
+devMuseum: museum_bookLucasVarney
+devMuseum: museum_bookBenMoir
+devMuseum: museum_bookMeganeko
+devMuseum: museum_bookKeygenChurch
+devMuseum: museum_bookSalad
+devMuseum: museum_bookJacobHHR
+devMuseum: museum_bookVVizard
+devMuseum: museum_bookAdditionalMusic
+devMuseum: museum_bookAdditionalCredits
+devMuseum: museum_bookStephanWeyte
+devMuseum: museum_bookLenvalBrown
+devMuseum: museum_bookGianniMatragrano
+devMuseum: museum_bookMandalore
+
+devMuseum: museum_weaponsBeamcutter
+devMuseum: museum_weaponsBlackHoleCannon
+devMuseum: museum_weaponsRevolver
+devMuseum: museum_weaponsShotgun
+devMuseum: museum_weaponsNailgun
+
+devMuseum: museum_enemiesFilth
+devMuseum: museum_enemiesStray
+devMuseum: museum_enemiesSchism
+devMuseum: museum_enemiesSwordsmachine
+devMuseum: museum_enemiesMaliciousFace
+
+devMuseum: museum_plaquesMuseumTitle
+devMuseum: museum_plaquesArtRoom
+devMuseum: museum_plaquesNerdRoom
+devMuseum: museum_plaquesRestRoom
+devMuseum: museum_plaquesTalkRoom
+devMuseum: museum_plaquesHakita
+devMuseum: museum_plaquesFrancisXie
+devMuseum: museum_plaquesJerichoRus
+devMuseum: museum_plaquesBigRockBMP
+devMuseum: museum_plaquesMaxOvesson
+devMuseum: museum_plaquesVictoriaHolland
+devMuseum: museum_plaquesToniStigell
+devMuseum: museum_plaquesFlyingdog
+devMuseum: museum_plaquesCameronmartin
+devMuseum: museum_plaquesDaliaFigueroa
+devMuseum: museum_plaquesTuckerWilkin
+devMuseum: museum_plaquesScottGurney
+devMuseum: museum_plaquesPitr
+devMuseum: museum_plaquesHeckteck
+devMuseum: museum_plaquesCabalcrow
+devMuseum: museum_plaquesLucasVarney
+devMuseum: museum_plaquesBenMoir
+devMuseum: museum_plaquesDaveOshry
+devMuseum: museum_plaquesMeganeko
+devMuseum: museum_plaquesKeygenChurch
+devMuseum: museum_plaquesSalad
+devMuseum: museum_plaquesJacobHHR
+devMuseum: museum_plaquesVVizard
+devMuseum: museum_plaquesAdditionalMusic
+devMuseum: museum_plaquesAdditionalCredits
+devMuseum: museum_plaquesStephanWeyte
+devMuseum: museum_plaquesLenvalBrown
+devMuseum: museum_plaquesGianniMatragrano
+devMuseum: museum_plaquesJoyYoung
+devMuseum: museum_plaquesMandalore
+
+devMuseum: museum_rocketRace
+devMuseum: museum_rocketRaceResult
+
+devMuseum: museum_cinemaPlay
+devMuseum: museum_cinemaStop
+
+fishing: fish_ocean
+fishing: fish_cavePool
+fishing: fish_stream
+fishing: fish_lake
+fishing: fish_lakeDeep
+fishing: fish_lakeBlood
+fishing: fish_lakeBloodLower
+fishing: fish_waterWell
+fishing: fish_panOil
+
+fishing: fish_leaderboard
+
+fishing: fish_book
+
+fishing: fish_living
+fishing: fish_tooSmall
+fishing: fish_baitNotWork
+fishing: fish_baitTaken
+fishing: fish_interrupted
+
+fishing: fish_terminalTitle
+fishing: fish_funnyStupidFish
+fishing: fish_pitrFish
+fishing: fish_trout
+fishing: fish_amidEvilFish
+fishing: fish_chomper
+fishing: fish_bombFish
+fishing: fish_gibeye
+fishing: fish_ironLungFish
+fishing: fish_dopeFish
+fishing: fish_stickFish
+fishing: fish_cookedFish
+fishing: fish_shark
+fishing: fish_funnyStupidFishDescription
+fishing: fish_pitrFishDescription
+fishing: fish_troutDescription
+fishing: fish_amidEvilFishDescription
+fishing: fish_chomperDescription
+fishing: fish_bombFishDescription
+fishing: fish_gibeyeDescription
+fishing: fish_ironLungFishDescription
+fishing: fish_dopeFishDescription
+fishing: fish_stickFishDescription
+fishing: fish_cookedFishDescription
+fishing: fish_sharkDescription
+
+secretLevels: secretLevels_fifth_testamentTitle
+secretLevels: secretLevels_fifth_testament
+
+style: style_envirokill
+style: style_scrongled
+style: style_scrondongled
+style: style_scrindonguloded
+
+
+MODIFIED:
+
+REMOVED:
+Credits category and all containing strings
+
+--
+
+ADDED:
+
+New category: sandbox
+
+levelNames: levelName_devMuseum
+levelTips: levelTips_devMuseum
+
+sandbox: sandbox_shop_timeOfDay
+sandbox: sandbox_shop_worldOptions
+		
+sandbox: sandbox_shop_icons
+sandbox: sandbox_shop_totalBoxes
+sandbox: sandbox_shop_totalProps
+sandbox: sandbox_shop_totalEnemies
+sandbox: sandbox_shop_totalTime
+
+sandbox: sandbox_shop_worldOptionsTitle
+sandbox: sandbox_shop_worldOptionsEnable
+sandbox: sandbox_shop_worldOptionsDisable
+sandbox: sandbox_shop_worldOptionsEnabled
+sandbox: sandbox_shop_worldOptionsDisabled
+
+sandbox: sandbox_shop_mapBorder
+sandbox: sandbox_shop_iconsTitle
+sandbox: sandbox_shop_default
+sandbox: sandbox_shop_pitr
+
+options: general_controllerRumble
+options: general_controllerRumbleCustomize
+
+misc: spawner_special
+misc: spawner_unlockables
+misc: enemyAlter_title
+misc: enemyAlter_sizeTitle
+misc: enemyAlter_uniformToggle
+misc: enemyAlter_uniformSmall
+misc: enemyAlter_uniformDefault
+misc: enemyAlter_uniformLarge
+misc: enemyAlter_metaTitle
+misc: enemyAlter_metaFrozen
+misc: enemyAlter_metaWeak
+misc: enemyAlter_metaBreakable
+misc: enemyAlter_metaUnbreakable
+misc: enemyAlter_jumpPadTitle
+misc: enemyAlter_jumpPadPower
+misc: enemyAlter_radianceTitle
+misc: enemyAlter_radianceEnable
+misc: enemyAlter_radianceDetails_tier
+misc: enemyAlter_radianceHealth_tier
+misc: enemyAlter_radianceDamage_tier
+misc: enemyAlter_radianceSpeed_tier
+misc: enemyAlter_boss_title
+misc: enemyAlter_boss_description
+
+misc: rumble_title
+misc: rumble_finalMultiplier
+misc: rumble_coinToss
+misc: rumble_dash
+misc: rumble_heavyFallImpact
+misc: rumble_heavyFall
+misc: rumble_gunFire
+misc: rumble_gunFireProjectile
+misc: rumble_gunFireStrong
+misc: rumble_nailgunFire
+misc: rumble_railcannonIdle
+misc: rumble_revolverCherge
+misc: rumble_sawblade
+misc: rumble_shotgunCharge
+misc: rumble_superSaw
+misc: rumble_jump
+misc: rumble_magnet
+misc: rumble_parryFlash
+misc: rumble_punch
+misc: rumble_slide
+misc: rumble_whiplashThrow
+misc: rumble_whiplashPull
+misc: rumble_intensity
+misc: rumble_endDelay
+misc: rumble_reset
+
+
+
+--
+
+MODIFIED:
+
+misc: spawner_sandboxItems -> spawner_sandboxTools (Mistake on my behalf with the naming. Sorry!)
+
+Following strings have been moved to "misc" category:
+
+spawner_sandboxTools
+spawner_sandbox
+spawner_enemies
+spawner_items
+
+
+
+
+1.1.1:
 
 ADDED:
 

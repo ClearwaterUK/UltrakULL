@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using UltrakULL.audio;
 using UnityEngine.SceneManagement;
+using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL.Harmony_Patches.AudioSwaps
 {
@@ -11,7 +12,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
         [HarmonyPostfix]
         public static void Respawn_SwapperFix()
         {
-            AudioSwapper.AudioSwap(SceneManager.GetActiveScene().name);
+            AudioSwapper.AudioSwap(getCurrentSceneName());
         }
         
     }

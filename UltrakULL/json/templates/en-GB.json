@@ -6,50 +6,474 @@
         "langDisplayName": "English",
         "langRTL": "false",
 
-        "minimumModVersion": "1.1.1"
+        "minimumModVersion": "1.2.0"
 	},
     
 	"body": {
 		"bodyName": "English translation. Effectively the same as the pre-existing English translation in the base game. Works with UltrakULL, but to be mainly used as a work template."
 	},
 
-    "credits":{
-        "credits_title": "ULTRAKILL",
-        "credits_createdBy": "A GAME CREATED BY <color=orange>ARSI \"HAKITA\" PATALA</color>",
+    "devMuseum": {
+        "museum_bookHakita1": "<b>Heya!</b> Welcome to the developer museum. I'm Hakita, the lead developer of the game. I started off working on the game mostly by myself, but overtime the game has grown a lot and I've gotten so many wonderful people helping me out over the years, so here they all are!",
+        "museum_bookHakita2": "This museum was mostly created by Vvizard, with just touchups, iteration, writing and additional easter eggs by me. You can find him in the \"Rest Room\" down the hall and to the left.",
+        "museum_bookHakita3": "Take a look around! The first floor is for all the people who have helped out with the game's development and the second floor is all kinds of other neat development related things, like cut content and early versions of stuff. There's also plenty easter eggs hidden around the museum!",
+        "museum_bookHakita4": "Most developers will have a book like this in front of them, in which you can read details of how they helped in the creation of this game. Here's mine!",
+        "museum_bookHakita5": "<b><color=orange>HAKITA</color> - CREATOR OF ULTRAKILL</b>",
+        "museum_bookHakita6": "I started development on the game on February 1st, 2018. At the time it was just me, with FlyingDog and Toni Stigell making an occasional 3D model. While the development team has changed and grown since then, I still do the majority of the work myself... Just closer to like 60% of it now than the old 99%.",
+        "museum_bookHakita7": "My contributions include:",
+        "museum_bookHakita8": "- All direction, game design, sound design, story and animation",
+        "museum_bookHakita9": "- All level design, except this museum, the Sandbox and 5-S",
+        "museum_bookHakita10": "- All music, except some public domain songs and songs by guest composers (who you'll find down the hall and to the left)",
+        "museum_bookHakita11": "- Most writing, programming and art direction",
+        "museum_bookHakita12": "- Just in general, if it's in the game, I had my finger in that pie",
+        "museum_bookHakita13": "Thank you for playing, and hopefully enjoying, ULTRAKILL. It's insane to me that a passion project I started just based on what I thought was fun in games has grown to be such a massive success. I've met so many amazing people thanks to this game and the community that has grown around it has been a source of much joy (and plenty of anguish) in my life. It's a rare gift to be able to not only create a work like this with full creative control, but also to be able to make a living off my own art without having to compromise on my vision, and it's all thanks to New Blood, all the developers here in this museum, and most importantly... <b>YOU!</b>",
 
-        "credits_helpedByTitle": "WITH THE HELP OF:",
-        "credits_helpedBy1": "<color=orange>DAVE OSHRY</color> (EXECUTIVE PRODUCER)",
-        "credits_helpedBy2": "<color=orange>PITR</color> (PROGRAMMER)",
-        "credits_helpedBy3": "<color=orange>RYANN VICTORIA</color> (3D ARTIST & SHADER PROGRAMMER)",
-        "credits_helpedBy4": "<color=orange>SAMUEL JAMES BRYAN</color> (3D ARTIST)",
-        "credits_helpedBy5": "<color=orange>BIGROCKBMP</color> (CONCEPT ARTIST)",
-        "credits_helpedBy6": "<color=orange>JERICHO_RUS</color> (ILLUSTRATOR, CONCEPT & TEXTURE ARTIST)",
-        "credits_helpedBy7": "<color=orange>FRANCIS XIE</color> (CONCEPT & TEXTURE ARTIST)",
+        "museum_bookFrancisXie1": "<b><color=#4AACBD>FRANCIS XIE</color> - CONCEPT AND TEXTURE ARTIST</b>",
+        "museum_bookFrancisXie2": "Francis joined the team in 2021, around the start of the Wrath layer's development, when he was picked up as a general artist for New Blood thanks to his incredible ULTRAKILL fanart.",
+        "museum_bookFrancisXie3": "Some of his biggest contributions include:",
+        "museum_bookFrancisXie4": "- The designs for the Leviathan, Ferryman, and the pre-corpse version of Minos and Sisyphus, as well as their portraits.",
+        "museum_bookFrancisXie5": "- The design for the church organ in 6-2: AESTHETICS OF HATE",
+        "museum_bookFrancisXie6": "- The design for a cut weapon called the Beamcutter",
+        "museum_bookFrancisXie7": "- The unique level textures for 5-3: SHIP OF FOOLS as well as almost all the textures in the Heresy layer",
+        "museum_bookFrancisXie8": "- The plushie designs of all the developers",
+        "museum_bookFrancisXie9": "\"I simply wouldn't be here without this game and I'm so happy it's ULTRAKILL. Thank you Hakita, the rest of the dev team, and everyone in New Blood for being such great people who always support what I do. Special thanks to my best friend who urged me to pursue what I truly love; being a part of this team has been a dream come true.Here's to the greatest project!\"",
 
-        "credits_contributionsTitle": "WITH ADDITIONAL CONTRIBUTIONS BY:",
-        "credits_contributions1": "<color=orange>MAXIMILIAN OVESSON</color> (UI ARTIST)",
-        "credits_contributions2": "<color=orange>JACOB H.H.R.</color> (WRITER [PROSE & DIALOGUE])",
-        "credits_contributions3": "<color=orange>FLYINGDOG</color> (3D ARTIST)",
-        "credits_contributions4": "<color=orange>TONI STIGELL</color> (3D ARTIST)",
-        "credits_contributions5": "<color=orange>BEN MOIR</color> (PROGRAMMER)",
-        "credits_contributions6": "<color=orange>LUCAS VARNEY</color> (PROGRAMMER)",
-        "credits_contributions7": "<color=orange>EMANUIL \"CABALCROW\" CHIZHOV</color> (PROGRAMMER)",
-        "credits_contributions8": "<color=orange>HECKTECK</color> (PROGRAMMER)",
-        "credits_contributions9": "<color=orange>MEGANEKO</color> (CYBER GRIND MUSIC COMPOSER)",
+        "museum_bookJerichoRus1": "<b><color=orange>JERICHO_RUS</color> - CONCEPT AND TEXTURE ARTIST</b>",
+        "museum_bookJerichoRus2": "Jericho joined the team in 2019, shortly before the original Prelude demo's release. He's responsible for many of the game's character designs and most of its weapon designs, as well as all the level textures for layers 2-4 and some textures for the Wrath layer.",
+        "museum_bookJerichoRus3": "Some of his biggest contributions include:",
+        "museum_bookJerichoRus4": "- The designs for V1 and Gabriel",
+        "museum_bookJerichoRus5": "- The designs for many enemies, such as the Drone, Streetcleaner and Soldier",
+        "museum_bookJerichoRus6": "- The designs for all weapons and alternate weapons, with the exceptions of the original revolver and shotgun",
+        "museum_bookJerichoRus7": "- The main promo art, which is used as the game's cover art",
+        "museum_bookJerichoRus8": "- Most level textures, including all level textures for layers 2-4",
+        "museum_bookJerichoRus9": "- All the art for 2-S",
+        "museum_bookJerichoRus10": "\"Hi, thank you to the rest of the dev team and you guys for enjoying what we create. I’ve met many wonderful people through ULTRAKILL’s development and hope to continue doing so. Shoutout to SXBIG and Luvoid!\"",
 
-        "credits_VATitle": "WITH VOICE ACTING BY:",
-        "credits_VA1": "<color=orange>GIANNI MATRAGRANO</color> (GABRIEL)",
-        "credits_VA2": "<color=orange> STEPHAN WEYTE </color> (MINOS PRIME)",
-        "credits_VA3": "<color=orange>MANDALORE HERRINGTON</color> (MDK)",
-        "credits_VA4": "<color=orange>JUST SHAMMY </color> (&OWL)",
+        "museum_bookBigRockBMP1": "<b><color=#DA6B6D>BIGROCKBMP</color> - CONCEPT ARTIST</b>",
+        "museum_bookBigRockBMP2": "BigRock joined the team in early 2019, during the Prelude's development. He was the first concept artist for the game and responsible for the designs for many of the game's bosses, such as the game's first ever character design, the Swordsmachine.",
+        "museum_bookBigRockBMP3": "Some of his biggest contributions include:",
+        "museum_bookBigRockBMP4": "- The designs for many of the game's bosses, such as the Swordsmachine, the Corpse of King Minos, and the Hideous Mass",
+        "museum_bookBigRockBMP5": "- The designs for many of the game's enemies, such as the Mindflayer, the Idol and the Sentry",
+        "museum_bookBigRockBMP6": "- The designs for all of the bosses in the Prime Sanctums",
+        "museum_bookBigRockBMP7": "- The painting of the rocket launcher wielding Ferryman in 5-3: SHIP OF FOOLS",
+        "museum_bookBigRockBMP8": "\"When Hakita asked me to design a boss for his game I had no idea that ULTRAKILL would become this big. To see so many people draw fanart of the characters I've designed is both intimidating as it is inspiring me to continue, try and grow as an artist, and I hope my work inspires someone to pick up a pencil as well.\"",
 
-        "credits_QATitle": "AND QUALITY ASSURANCE BY:",
-        "credits_QA1": "<color=orange>CAMERON MARTIN</color> (LEAD QA)",
-        "credits_QA2": "<color=orange>TUCKER WILKIN </color> (SENIOR QA)",
-        "credits_QA3": "<color=orange>SCOTT GURNEY </color> (TECHNICAL QA)",
-        "credits_QA4": "<color=orange>DALIA FIGUEROA </color> (QA & PROMO MATERIAL)"
+        "museum_bookMaximilianOvesson1": "<b><color=#8f65da>MAXIMILIAN OVESSON</color> - UI ARTIST</b>",
+        "museum_bookMaximilianOvesson2": "Maximilian joined the team in 2018, early in the game's development. He's responsible for the weapon icons used in the UI, the game over skull animation as well as the game's logo.",
+        "museum_bookMaximilianOvesson3": "\"I'm proud to have played a small role in creating ULTRAKILL and grateful for the opportunity to be a part of this game. Thank you for having me and thank you to all the players for your support.\"",
+
+        "museum_bookVictoriaHolland1": "<b><color=#F5ABB9>VICTORIA HOLLAND</color> - LEAD 3D ARTIST AND GRAPHICS PROGRAMMER</b>",
+        "museum_bookVictoriaHolland2": "Victoria joined the team in early 2020, late into the Limbo layer's development. She started off working alongside Sam but from Act 2 onwards, she's been responsible for all 3D models in the game with the only exception of the Sisyphean Insurrectionist. She also handles the programming of all shaders and almost all graphical systems and optimizations.",
+        "museum_bookVictoriaHolland3": "Some of her biggest contributions include:",
+        "museum_bookVictoriaHolland4": "- Many of the Act 1 models, including the Filth, the Corpse of King Minos and the Railcannon",
+        "museum_bookVictoriaHolland5": "- All of the Act 2 models, except the Sisyphean Insurrectionist",
+        "museum_bookVictoriaHolland6": "- Programming for all the shaders",
+        "museum_bookVictoriaHolland7": "- Programming for most graphical systems and optimizations",
+        "museum_bookVictoriaHolland8": "\"Waste no time to fear. Take the leap and embrace the person you want to be. You're not alone, so live your authentic self, and always enjoy the journey.\"",
+
+        "museum_bookToniStigell1": "<b><color=orange>TONI STIGELL</color> - 3D ARTIST</b>",
+        "museum_bookToniStigell2": "Toni Stigell joined the team right around the start of development in early 2018. We had previously worked together on a few small projects including a now-cancelled stealth game called Untraceable, which is the origin of the thinking man statue that eventually became Cerberus.",
+        "museum_bookToniStigell3": "Alongside that, he modelled many of the early character models for ULTRAKILL until leaving the project in mid 2019. He also made the original Filth model's animations, and though those have since been replaced, Something Wicked still uses one of them, making that the only animation in the game that I haven't made myself.",
+        "museum_bookToniStigell4": "Some of his biggest contributions include:",
+        "museum_bookToniStigell5": "- The original models for the husks, Swordsmachine and Feedbacker arm",
+        "museum_bookToniStigell6": "- The design for the original version of the Filth",
+        "museum_bookToniStigell7": "- Getting me into DMC in the first place",
+
+
+        "museum_bookToniFlyingDog1": "<b><color=#6a36be>FLYINGDOG</color> - 3D ARTIST</b>",
+        "museum_bookToniFlyingDog2": "FlyingDog joined the team right at the start of development in early 2018, designing and creating many of the first 3D models and their textures. Although most of these models have since been remade and replaced, they're still based on his original designs and many of his original models can still be seen here and there as easter eggs. His final contribution to the game was the texture for the Feedbacker arm in mid 2019.",
+        "museum_bookToniFlyingDog3": "Some of his biggest contributions include:",
+        "museum_bookToniFlyingDog4": "- The designs and original models for the revolver, shotgun and Malicious Face",
+        "museum_bookToniFlyingDog5": "- The original model and texture for the nailgun",
+        "museum_bookToniFlyingDog6": "- The textures for the original versions of the husks and Swordsmachine",
+
+        "museum_bookSamuelJamesBryan1": "<b><color=orange>SAMUEL JAMES BRYAN</color> - 3D ARTIST</b>",
+        "museum_bookSamuelJamesBryan2": "Sam joined in mid 2019, early into the Limbo layer's development and is responsible for modelling most of the enemies in Act 1, including V1, V2 and Gabriel. His last modelling work for the game was the Sisyphean Insurrectionist in early 2021 and he has mostly moved on to different projects since then, though he still occasionally helps out with feedback and modelling advice.",
+        "museum_bookSamuelJamesBryan3": "\"No idea, ask Hakita.\"",
+
+        "museum_bookQATeam1": "<b><color=red>CAMERON MARTIN</color> - QUALITY ASSURANCE LEAD",
+        "museum_bookQATeam2": "<color=#6a36be>DALIA FIGUEROA</color> - QUALITY ASSURANCE, PROMO FOOTAGE & SCREENSHOTS",
+        "museum_bookQATeam3": "<color=#11c324>TUCKER WILKIN</color> - SENIOR QUALITY ASSURANCE",
+        "museum_bookQATeam4": "<color=#e28eb6>SCOTT GURNEY</color> - TECHNICAL QUALITY ASSURANCE</b>",
+        "museum_bookQATeam5": "The New Blood QA team (Cameron, Dalia, Tucker and Scott) are responsible for making sure the game runs properly and without any major bugs. It's thanks to them that ULTRAKILL looks and feels like a functioning game despite being a mess of duct tape, spaghetti, glue and prayers underneath. Prior to ULTRAKILL joining the New Blood catalogue, I had to do QA myself, and even that smaller amount of bugtesting makes me question how these people manage to stay sane.",
+        "museum_bookQATeam6": "...Well, relatively sane.",
+        "museum_bookQATeam7": "\"In the immortal words of the great Hungarian centre-forward Nandor Hidegkuti - 'Amikor eljön a forradalom, a zeneipar lesz az első amely menni fog. Köszönöm szépen'\"",
+        "museum_bookQATeam8": "\"Be it games, music, movies or the company of others, be sure to enjoy the good times that you experience and always look back on life with a positive note. Life is precious, and after all, It's your own show. Enjoy your life to its fullest and give everyone respect and love. A smile on someone's face is worth its weight in gold!\"",
+        "museum_bookQATeam9": "\"Of all the scars on my psyche, this one will always remain a favored one. from that cursed door to the accidental spawner arm slip, its been a great time regardless! Sometimes videogames can be cool as hell. hopefully we can get more of them!\"",
+        "museum_bookQATeam10": "\"Being able to help bring to fruition a strong creative vision like Hakita's has been an absolute honor and an unforgettable experience. I will remain forever grateful for the opportunity, and I look forward to whatever might come next!\"",
+
+
+        "museum_bookPitr1": "<b><color=orange>PITR</color> - LEAD PROGRAMMER</b>",
+        "museum_bookPitr2": "PITR already started helping out with programming in late 2019, but was officially added to the team in early 2020 thanks to his ULTRAKILL mods and an early attempt at a custom level system. He's responsible for most advanced programming in the game, such as systems like cheats, Cyber Grind patterns and subtitles. He also created the entirety of the Sandbox and 5-S, with only minor aesthetic touch-ups from me.",
+        "museum_bookPitr3": "Basically, if you look at the game's code and see anything that's actually done well, it's probably by him.",
+        "museum_bookPitr4": "Some of his biggest contributions include:",
+        "museum_bookPitr5": "- Programming and level design for the Sandbox and 5-S",
+        "museum_bookPitr6": "- Programming for most of the advanced systems like cheats, Cyber Grind patterns and subtitles",
+        "museum_bookPitr7": "- Lots of programming optimization and bugfixes",
+        "museum_bookPitr8": "- Lots of miscellaneous programming help",
+
+        "museum_bookHeckteck1": "<b><color=orange>HECKTECK</color> - ADDITIONAL PROGRAMMING</b>",
+        "museum_bookHeckteck2": "Heckteck was brought onto the team temporarily in early 2022 thanks to their experience and skills making mods for ULTRAKILL, to overhaul the style system to include staleness as well as other related quality of life features.",
+        "museum_bookHeckteck3": "\"the harvest is lacking this year\"",
+
+        "museum_bookCabalcrow1": "<b><color=silver>EMANUIL \"CABALCROW\" CHIZHOV</color> - ADDITIONAL PROGRAMMER</b>",
+        "museum_bookCabalcrow2": "CabalCrow was one of the first hardcore ULTRAKILL fans who helped spark the game's speedrunning scene. He also helped out a lot with figuring out bugs before the game got a QA team and recorded most of the trailer footage in early trailers. His programming contribution comes in the form of the climbstep system he created in 2020, which allows players to smoothly step onto and over small ledges and obstacles.",
+        "museum_bookCabalcrow3": "\"you know what they say: 50 bucks is 50 bucks\"",
+
+        "museum_bookLucasVarney1": "<b><color=#BD8BF3>LUCAS VARNEY</color> - ADDITIONAL PROGRAMMER</b>",
+        "museum_bookLucasVarney2": "Lucas is another New Blood programmer, mostly working on his own game but occasionally jumping in to help with ULTRAKILL when needed. His contributions have been mostly optimization related, helping make the game run better as well as creating development tools that allow for easier per-level optimization.",
+        "museum_bookLucasVarney3": "Many thanks to everyone here, including you, the one reading this! It's always been my dream to work on video games, but I never thought I'd be 'good enough' to do it professionally. I dropped out of high school early due to anxiety and I really felt like I was throwing my life away. But I never gave up, and I never will! Whoever you are out there, never lose hope, and always know that there's no shame in being yourself and doing the things you love, so long as nobody gets hurt. You're more than your label, and you're worth more than your credentials. Enjoy the little moments, embrace what makes you happy, and be the best person you can be.\"",
+
+        "museum_bookBenMoir1": "<b><color=#3EF242>BEN MOIR</color> - ADDITIONAL PROGRAMMER</b>",
+        "museum_bookBenMoir2": "Ben aka \"Zombie\" is New Blood's resident programming wizard. He hops around from project to project, fixing tricky issues and giving general programming advice. If there's a problem, he knows the solution.",
+        "museum_bookBenMoir3": "Although most of his work on ULTRAKILL is in the form of helping other programmers, he has himself also programmed some of the systems in the game, such as the controller support and the auto aim assist.",
+        "museum_bookBenMoir4": "\"Hey, Hakita! Can we say 'fuck' in the game?\"",
+
+        "museum_bookMeganeko1": "<b><color=#E93436>MEGANEKO</color> - GUEST COMPOSER</b>",
+        "museum_bookMeganeko2": "I met Meganeko in early 2020 after BigRock, who is a fan of his, noticed he followed the ULTRAKILL Twitter account and asked if he'd be interested in collaborating. Originally I didn't have anything specific in mind, but once he sent me a soundtest clip that showed the kind of sound he'd go for, it immediately struck me as the perfect music for an endless survival mode.",
+        "museum_bookMeganeko3": "That soundtest eventually, through months of iteration, became The Cyber Grind's titular background music. In a way, you can thank him for causing the creation of that mode.",
+        "museum_bookMeganeko4": "\"Playing the alpha demo got me incredibly inspired! Getting to channel that back into the game was a bit surreal. Big thanks to Hakita and BigRock for reaching out!\"",
+
+        "museum_bookKeygenChurch1": "<b><color=#aa0000>KEYGEN CHURCH</color> - GUEST COMPOSER</b>",
+        "museum_bookKeygenChurch2": "Keygen Church aka Master Boot Record approached me in mid-late 2022, and I was already a fan of his music as Keygen Church, so I was very happy to have him on board as a guest composer. The timing was perfect as well, since his style fits so well with the aesthetics of the Heresy layer, so he created the first battle theme for P-2, titled \"Tenebre Rosso Sangue\".",
+        "museum_bookKeygenChurch3": "We also collaborated on the connected ARG, with him doing most of the heavy lifting since he had already done similar things with his projects.",
+        "museum_bookKeygenChurch4": "\"Low Resolution. High Imagination. Praise the code.\"",
+
+        "museum_bookHealth1": "<b><color=red>HEALTH</color> - GUEST COMPOSER</b>",
+        "museum_bookHealth2": "<b><color=red>BENJAMIN MILLER</color> - DRUMS",
+        "museum_bookHealth3": "<color=red>JACOB DUZSIK</color> - VOCALS, GUITAR",
+        "museum_bookHealth4": "<color=red>JOHN FAMIGLIETTI</color> - BASS, SOFTWARE</b>",
+        "museum_bookHealth5": "In early 2023 we collaborated with the band HEALTH to premiere their song \"HATEFUL\" in the Cyber Grind. I've been a fan of HEALTH ever since I heard their music in Max Payne 3 and their heavy, blood-pumping electronic beats are a perfect fit for ULTRAKILL's mayhem, so I'm very happy that their music became a part of the game.",
+        "museum_bookHealth6": "\"BACK TO THE CYBER GRIND\"",
+
+        "museum_bookQuetzalTirado1": "<b><color=#AA4CAD>QUETZAL TIRADO</color> - GUEST MUSICIAN</b>",
+        "museum_bookQuetzalTirado2": "I met Quetzal through a mutual friend in early 2021, when I asked her if she could record a saxophone solo for the P-1 song \"CHAOS\". The solo didn't really end up working out, but parts of her recordings were still included and scattered about the track for added noise and texture.",
+        "museum_bookQuetzalTirado3": "Later, she recorded improvised saxophone solos for the 5-1 song \"Deep Blue\", which I edited into what you hear in the final version. She also recorded the bass clarinet drone which turned into the Sisyphean Insurrectionist's horn sound effect.",
+        "museum_bookQuetzalTirado4": "\"my mom liked the song i'm on in ultrakill, so i think at this point i count as a successful artist, right? also many thanks to the gay people, find me on that one level where the water fucks up the music, baby\"",
+
+        "museum_bookSalad1": "<b><color=#20FF20>SALAD</color> - ARTIST OF JAKITO</b>",
+        "museum_bookSalad2": "Salad drew Jakito.",
+        "museum_bookSalad3": "Some of their biggest contributions include:",
+        "museum_bookSalad4": "- Jakito",
+        "museum_bookSalad5": "\"Are you in or are you skin?\"",
+
+        "museum_bookJacobHHR1": "<b><color=#FFB2DC>JACOB H.H.R.</color> - WRITER (PROSE & DIALOGUE)</b>",
+        "museum_bookJacobHHR2": "Jacob joined the team in early 2020 to help write the prose and dialogue for the game after I met him through a mutual game developer friend. He's mostly responsible for the writing in the various books you find around the levels, as well as Gabriel's dialogue and the prose for the intermission cutscenes. In Act I, I came up with a general outline of what I wanted each text to have and he would write it with some tweaks and edits from me afterwards, while in Act II the prose writing was more of an even 50/50 split between us.",
+        "museum_bookJacobHHR3": "Most of those great poetic phrases and impactful lines that have become iconic in the ULTRAKILL community are thanks to his skills with the English language.",
+
+        "museum_bookVVizard1": "<b><color=#ee0c47>VVIZARD</color> - MUSEUM DEVELOPER</b>",
+        "museum_bookVVizard2": "Vvizard was picked up temporarily in late 2022 to create this museum thanks to his experience and skills with an early version of the ULTRAKILL level editor. He designed the level and made all the models and textures for it.",
+        "museum_bookVVizard3": "If you were wondering why it's the best looking level in the game, he's the reason.",
+        "museum_bookVVizard4": "\"ULTRAKILL is special to me in a way that is just a book's length worth of words, working on this game is something I will hold close to my heart, always. I hope I can continue to work with the wonderful people at New Blood and the interactions I've had with community helped bring me to be a part of this team. Sometimes I wonder where the dominos fall begins and where it will end. But if Oyff ever sees this, a good youtube video (The ULTRAKILL Rip and Tear) really can change your life.\"",
+
+        "museum_bookAdditionalMusic1": "ADDITIONAL MUSIC CREDITS:",
+        "museum_bookAdditionalMusic2": "\"Take Care\", the shop theme: Sampled from \"Were You Foolin'\" by the Russ Morgan Orchestra (Public domain)",
+        "museum_bookAdditionalMusic3": "\"Cerberus\" in 0-5: CERBERUS: Classical music sampled from \"Mars, the Bringer of War\" from Gustav Holst's Planets Suite (Public domain)",
+        "museum_bookAdditionalMusic4": "\"Clair de Lune\" in 1-4: CLAIR DE LUNE: Written by Claude Debussy, performance by Laurens Goedhart (CC 3.0 license)",
+        "museum_bookAdditionalMusic5": "\"BWV 639 'I call to you, Lord Jesus Christ'\" in 3-2: IN THE FLESH: Written by Johann Sebastian Bach (Public domain)",
+        "museum_bookAdditionalMusic6": "\"The Spinal Staircase\" in P-1: SOUL SURVIVOR: Sampled from \"Sourire d'Avril\" composed by Maurice Depret (Public domain)",
+        "museum_bookAdditionalMusic7": "\"CHAOS\" in P-1: SOUL SURVIVOR: Bass clarinet and soprano saxophone improvised and recorded by Quetzal Tirado",
+        "museum_bookAdditionalMusic8": "\"Deep Blue\" in 5-1: IN THE WAKE OF POSEIDON: Tenor saxophone improvised and recorded by Quetzal Tirado, edited by Hakita",
+        "museum_bookAdditionalMusic9": "\"Fallen Angel\" in 6-2: AESTHETICS OF HATE: Adapted from \"BWV 639 'I call to you, Lord Jesus Christ'\" by Johann Sebastian Bach",
+        "museum_bookAdditionalMusic10": "\"7th Symphony, 2nd Movement: Allegretto\" in Intermission 2: Written by Ludwig van Beethoven, performance by Lambis Vassiliadis (Public domain)",
+
+        "museum_bookAdditionalCredits1": "<b>ADDITIONAL CREDITS:</b>",
+        "museum_bookAdditionalCredits2": "Special thanks to:",
+        "museum_bookAdditionalCredits3": "<b>Magnega</b> for telling me my previous game, Untraceable, was unfun, causing an existential crisis that resulted in me dropping that project and making ULTRAKILL instead",
+        "museum_bookAdditionalCredits4": "<b>Mikko Tamper and Robert Raulus</b> for their continued support as well as beta testing and giving feedback",
+        "museum_bookAdditionalCredits5": "<b>B.G.B. and Splendid</b> for beta testing and giving feedback",
+
+        "museum_bookStephanWeyte1": "<b><color=orange>STEPHAN WEYTE</color> - VOICE OF MINOS PRIME</b>",
+        "museum_bookStephanWeyte2": "As with most people, I mainly knew Stephan Weyte as the voice of Caleb from Blood, but hearing him as Nyarlathotep in Dusk made it clear that he still had the skills, so even before joining New Blood, I had already decided that I wanted Stephan to voice someone in ULTRAKILL. When time came to choose the voice for Minos Prime, the choice was obvious.",
+        "museum_bookStephanWeyte3": "Stephan was lovely to work with, and his voice lends so much richness and character to Minos that I really can't imagine him any other way. ",
+
+        "museum_bookLenvalBrown1": "<b><color=orange>LENVAL BROWN</color> - VOICE OF SISYPHUS PRIME</b>",
+        "museum_bookLenvalBrown2": "I approached Lenval in early 2023 after hearing his fantastic performance as the narrator in Disco Elysium and feeling that his deep, textural voice would be the perfect fit for King Sisyphus. He was a pleasure to work with and helped really make Sisyphus stand out as his own unique character.",
+
+        "museum_bookGianniMatragrano1": "<b><color=#20afdb>GIANNI MATRAGRANO</color> - VOICE OF GABRIEL</b>",
+        "museum_bookGianniMatragrano2": "Gianni originally approached me offering his talents in late 2019, but we didn't start working together until mid-late 2020, a bit less than a week before the game came out in Early Access. Despite the short timeframe, he knocked it out of the park, not only defining and solidifying Gabriel's character and voice but also delivering fantastic performances that manage to capture both his visceral intensity and the subtler nuances of his internal world.",
+        "museum_bookGianniMatragrano3": "Since then he's only gotten better, and I'm very glad to work with someone who understands both my vision of the story and the character of Gabriel so well that he was able to improvise all of the taunts in Gabriel's first fight. He's a joy to work with and the dream of any over-ambitious indie developer like me.",
+        "museum_bookGianniMatragrano4": "\"Can you write in it that I said thank you to gay people.\"",
+
+        "museum_bookMandalore1": "<b><color=#e09e2e>MANDALORE</color> <color=#9884bb>HERRINGTON</color> - VOICE OF MYSTERIOUS DRUID KNIGHT</b>",
+        "museum_bookMandalore2": "<b><color=#eabbd7>JOY YOUNG</color> - VOICE OF OWL</b>",
+        "museum_bookMandalore3": "I originally met with Mandalore in late 2019 after his review of Dusk, when I DM'd him to ask him to elaborate on some criticisms he had mentioned of retro shooters. At the time ULTRAKILL was just a small no-name project, but he still took the time to not only write an in-depth reply, but also to play ULTRAKILL's demo and give very useful feedback for it.",
+        "museum_bookMandalore4": "As thanks for his help, I wanted to make a little joke boss fight featuring him and Joy based on some in-jokes from their Mystery of the Druids stream, using clips from his EYE review as his voicelines. Once he saw the boss, he offered to not only re-record those lines, but also record completely new ones with Joy, which they improvised together.",
+        "museum_bookMandalore5": "\"Visit me in the tombs with piped in music. How classy. Thanks for playing!\"",
+        "museum_bookMandalore6": "\"Here for a good time, not a bad time\"",
+
+        "museum_weaponsBeamcutter1": "<b><color=orange>BEAMCUTTER</color></b>",
+        "museum_weaponsBeamcutter2": "Design by Francis, WIP model by Victoria.",
+        "museum_weaponsBeamcutter3": "<b>PRIMARY FIRE:</b> Hold to fire beam",
+        "museum_weaponsBeamcutter4": "<b>SECONDARY FIRE:</b> Place/Remove beam drone",
+        "museum_weaponsBeamcutter5": "A sixth weapon which was cut early into its creation due to running into many design issues and to avoid arsenal bloat and weapon role overlap.",
+        "museum_weaponsBeamcutter6": "Based on the lightning gun archetype, it fires a sustained beam that requires the player to track their target to deal continuous damage. It deals reduced damage while standing still to discourage the player from staying still while firing, though in this version you can just move back and forth quickly to fulfill that requirement without making aiming much harder.",
+        "museum_weaponsBeamcutter7": "Sustained fire weapons are very difficult to make work well with ULTRAKILL's combat system, as proven by how many iterations the Nailgun had to go through before it found its place in the arsenal, and since infinite ammo means every weapon has to have its own niche in order to not make any other weapon obsolete and the Nailgun already filling a similar role, I made the choice to cut it instead of trying to force it into an already full arsenal.",
+        "museum_weaponsBeamcutter8": "The front of the weapon was supposed to spin when the beam is being fired, but this WIP model has no rigging. No sounds were implemented yet either, so it may seem quite weak in terms of feedback in comparison to the finished weapons.",
+        "museum_weaponsBeamcutter9": "While I do like the weapon in concept, I do think it was the right call to cut it. I prefer a smaller arsenal where every weapon is distinct and useful over a larger arsenal where some of them become obsolete with the introduction of others.",
+
+        "museum_weaponsBlackHoleCannon1": "<b><color=orange>BLACK HOLE CANNON</color></b>",
+        "museum_weaponsBlackHoleCannon2": "<b>PRIMARY FIRE:</b> Launch a black hole",
+        "museum_weaponsBlackHoleCannon3": "<b>SECONDARY FIRE:</b> Activate a launched black hole",
+        "museum_weaponsBlackHoleCannon4": "A cut superweapon that was intended to work via a meter that got filled by killing enemies. It was made around early 2019, shortly after the addition of the shotgun, with the intent of it being introduced much later in the game.",
+        "museum_weaponsBlackHoleCannon5": "The player would have the choice of using their kill meter for a temporary buff a la Devil Trigger from Devil May Cry, or a shot with the black hole cannon. The meter was scrapped due to these kinds of mechanics often leading to issues with hoarding and balancing, since encounters can't be balanced around whether or not the player has meter, leading to battles being either too easy with meter or too hard without it.",
+        "museum_weaponsBlackHoleCannon6": "Instead, the DT buff mode idea was turned into the dual wield powerup, which avoids that issue since the level designer controls when the player has access to it, and the Black Hole Cannon's role became filled with the Railcannon, a lower commitment superweapon that's weak enough to not become an ace-in-the-sleeve crutch for players to skip tricky encounters with and usable often enough that the player doesn't feel a need to hoard it.",
+        "museum_weaponsBlackHoleCannon7": "Although the Black Hole Cannon was incredibly powerful when it was originally made, since the only enemies in the game were the basic husks, the game has grown far more chaotic and explosive since then, making it quite weak in comparison. I've kept its original power level for this museum version for the sake of an accurate portrayal, so if it seems weak, that's because it was just made for killing Filth, Strays and Schisms.",
+        "museum_weaponsBlackHoleCannon8": "The Black Hole Cannon never got a visual design or model, hence why it's represented by a stretched out shotgun. This lead to many people thinking it was supposed to be a shotgun variation, but that was never the intent.",
+
+        "museum_weaponsRevolver1": "<color=orange>REVOLVER</color>",
+        "museum_weaponsRevolver2": "LEFT: 2018 Original by FlyingDog",
+        "museum_weaponsRevolver3": "RIGHT: 2022 Remake by Victoria",
+        "museum_weaponsRevolver4": "The first weapon as well as the first model ever made for the game. As usual, there was no concept art, so the design was made up on the spot by FlyingDog based on a prompt from me. Victoria has since then remade the model and texture while keeping true to the original design, making for a straight visual upgrade.",
+        "museum_weaponsRevolver5": "The revolver originally had different green and red variations. The old green variation was the ability to ricochet shots off of surfaces, inspired by Revolver Ocelot. Unfortunately, while cool in concept, it was extremely unwieldy and awkward to use, requiring far too much set up and positioning to be used efficiently, clashing hard with the game's fast pace. The idea of showing off marksmanship via ricocheting shots stayed however, and was reinterpreted into the now iconic and far more useful coin version.",
+        "museum_weaponsRevolver6": "The red variation was a dual wield variation, where the left revolver was fired with the primary fire and the right revolver with the secondary. As with the green variation, this was cool in concept, but mechanically it was very uninteresting beyond the initial novelty. I had some ideas on how to \"fix\" it, but I ended up scrapping it entirely instead, and since then the dual wield idea has been reinterpreted into the much more fun and freeform dual wield powerup.",
+
+        "museum_weaponsShotgun1": "<color=orange>SHOTGUN</color>",
+        "museum_weaponsShotgun2": "LEFT: 2019 Original by FlyingDog",
+        "museum_weaponsShotgun3": "RIGHT: 2022 Remake by Victoria",
+        "museum_weaponsShotgun4": "As with the revolver, the shotgun was made by FlyingDog without concept art, and later remade by Victoria, keeping it faithful to the original design while updating it to fit the game's new visual style better. The new version is lighter in color, since the original matte black style ended up very muted due to the game's vibrant colored lighting, though the people who preferred the old style can use the first color preset to get it back.",
+        "museum_weaponsShotgun5": "The shotgun had some balancing issues when it was originally added since all enemies already died from just a couple of revolver shots, making the shotgun feel pointless in comparison, leading to a bad first impression. Eventually I had the idea of changing the projectile code slightly, making it so shotgun projectiles don't get destroyed when hitting an enemy that is already dead. This small change is really what opened the shotgun up, turning it from just a slow single target damage dealer into a chaotic weapon of mass destruction, making it useful against both tankier enemies as originally intended as well as crowds of weaker enemies.",
+
+        "museum_weaponsNailgun1": "<color=orange>NAILGUN</color>",
+        "museum_weaponsNailgun2": "LEFT: 2019 Original by Jericho and FlyingDog",
+        "museum_weaponsNailgun3": "RIGHT: 2022 Remake by Jericho and Victoria",
+        "museum_weaponsNailgun4": "The first weapon to be based on concept art, drawn and designed by Jericho, as well as FlyingDog's final contribution to the game. The rougher, simpler original model still fit the visual style at the time, but since then the graphics have improved, making it stick out like a sore thumb, which was one of the primary reasons we wanted to redo the old weapon models, alongside the custom color system.",
+        "museum_weaponsNailgun5": "The nailgun is probably the weapon that had to go through the most iteration before it finally found its place in the arsenal. In fact, it wasn't until the Sandbox update in Summer 2021 that it finally really clicked in, meaning it took 2 years of constant tinkering and iteration to make an automatic weapon fit the ULTRAKILL arsenal. The biggest change was the change from infinite ammo to recharging ammo, giving players more reason to switch away from it after a bit of use, but the change that finally really made it click was speeding up the equip animation, which made switching to it in combat much smoother, making it feel like an organic part of weapon combos.",
+        "museum_weaponsNailgun6": "Some scrapped ideas and versions include a high damage slow recharge harpoon and a version that allowed for firing both barrels simultaneously, increasing rate of fire at the cost of the player's movement speed. The former eventually evolved into the magnet and the latter into the overheat, so despite how much things have changed, parts of the originals still remain.",
+        
+        "museum_enemiesFilth1": "<b><color=orange>FILTH</color>",
+        "museum_enemiesFilth2": "LEFT: 2018 Original by Toni Stigell and FlyingDog",
+        "museum_enemiesFilth3": "RIGHT: 2020 Remake by Jericho, BigRock and Victoria</b>",
+        "museum_enemiesFilth4": "The Filth, originally just called \"Zombie\" or \"Husk\", was the second enemy designed for the game. We didn't have concept artists at the time, so I just told Toni to make a scrawny zombie like the ones from Quake. This was the usual process before BigRock joined as the first concept artist, and the contrast in design quality makes it clear that creative concept artists can really make a big difference.",
+        "museum_enemiesFilth5": "An interesting aspect of the Filth is that, in the early versions of the demo, people complained about the AI of the melee enemies being too dumb, but those complaints completely stopped after the redesign. The new version actually looks like a mindless swarming monster that only thinks about eating, so it being dumb no longer felt out of place or like a flaw. Properly messaging the purpose of an enemy or object through how it looks is an often underappreciated aspect of character design.",
+        "museum_enemiesFilth6": "The new design is inspired by the debut album by Swans, which is also where the enemy got its name from. At first the model's mouth and teeth were much smaller, but I just kept telling Victoria \"BIGGER!\" until we reached the point it's at now.",
+        "museum_enemiesFilth7": "The Filth was originally colored orange to make it fit into the Prelude chapter, but it actually became an issue where people would often have a hard time seeing them since they fit in <i>too</i> well, so their primary color was swapped to green instead.",
+
+        "museum_enemiesStray1": "<color=orange>STRAY</color>",
+        "museum_enemiesStray2": "LEFT: 2018 Original by Toni Stigell, FlyingDog and Hakita",
+        "museum_enemiesStray3": "RIGHT: 2020 Remake by Jericho and Sam",
+        "museum_enemiesStray4": "The Stray was originally just called \"Projectile Zombie\" or \"Projectile Husk\" and, for one short period of time, \"Stalker\", though that name was then instead given to the enemy that has it now. Toni was busy at the time, so I, with my limited Blender knowledge, just edited his original Filth model to make the original version of the Stray, and then FlyingDog made the texture for it. Again, we didn't really have any concept art, so the texture was just based on the prompt \"A skeleton with all the organs and meat still inside it\", or something like that.",
+        "museum_enemiesStray5": "The new version, based on Jericho's design for the Soldier, still keeps that general idea but executes it in a much less cartoony way.",
+
+        "museum_enemiesSchism1": "<color=orange>SCHISM</color>",
+        "museum_enemiesSchism2": "LEFT: 2018 Original by Toni Stigell, FlyingDog and Hakita",
+        "museum_enemiesSchism3": "RIGHT: 2020 Remake by BigRock and Sam",
+        "museum_enemiesSchism4": "The Schism, originally just called \"Super Projectile Zombie\", is another edit of the original Filth model. Toni and FlyingDog were both busy around this time, so this model didn't even get a unique texture. It's just the original Filth's texture without the orange tint!",
+        "museum_enemiesSchism5": "The new version still uses the same skeleton and animations, which means the extra arms just flop around like ragdolls since they have no animation data attached to them.",
+        "museum_enemiesSchism6": "The new designs for the Husks were drawn and modelled in a bit of a rush to get them done in time for the Prelude facelift we were doing for the new version of the demo after the game got picked up by New Blood, which meant the new designs only got one sketch from one angle each. This lead to a funny incident where Sam, while making the model, misunderstood the sketch and thought that the head was just sticking out really far in front instead of being on the shoulder, which lead to the first iteration of the model to look like a xenomorph!",
+
+        "museum_enemiesSwordsmachine1": "<color=orange>SWORDSMACHINE</color>",
+        "museum_enemiesSwordsmachine2": "LEFT: 2019 Original by BigRock, FlyingDog and Toni Stigell",
+        "museum_enemiesSwordsmachine3": "RIGHT: 2022 Remake by BigRock and Victoria",
+        "museum_enemiesSwordsmachine4": "Swordsmachine was the first enemy to be designed by a concept artist, and the difference really shows! BigRock's wonderful Blame!-inspired design is rich with implied character that later became explicit when I wrote the data entry for it.",
+        "museum_enemiesSwordsmachine5": "The original model, made by Toni Stigell and textured by FlyingDog, unfortunately lost a lot of the nuances the original design had, but it fit the visual style of the game at the time, and we were all amateurs who didn't know how to do any better. Victoria has since then remade the model based on BigRock's original concept art and perfectly translated it to 3D.",
+        "museum_enemiesSwordsmachine6": "One of the earlier iterations of Swordsmachine's design had a gory human torso, as the enemies at the time were leaning more in the direction of Strogg-like human-machine hybrids before we had the setting, visual language and story properly figured out.",
+
+        "museum_enemiesMaliciousFace1": "<color=orange>MALICIOUS FACE</color>",
+        "museum_enemiesMaliciousFace2": "LEFT: 2018 Original by FlyingDog",
+        "museum_enemiesMaliciousFace3": "RIGHT: 2022 Remake by Victoria",
+        "museum_enemiesMaliciousFace4": "The Malicious Face, called \"Spider\" in the game files thanks to its transparent spider legs, was actually the first enemy to be designed for the game. Although iconic now, its design was supposed to be quite different originally, as I wanted a more stark and simplified look, but FlyingDog, only modelling as a hobby, had a hard time pulling it off without any concept art to aid him, so we eventually compromised with this version.",
+        "museum_enemiesMaliciousFace5": "This was back when I was stupidly ambitious and had no idea what I was doing, so there were a bunch of ideas thrown around that ended up not making it in. The mouth was supposed to move and open when firing, but the rig was buggy and we couldn't get it to work. The eyes were also originally seperated from the main mesh, since I had the idea that it would be cool if you could shoot them out with the revolver for extra damage or to cause the enemy to become blind and attack indiscriminately, which sounds really cool in concept, but in execution would not only be too much complexity for an early enemy but would also give them a hard counter that the player would always resort to, which I've wanted to avoid to make the game more open to player expression. This was before Doom Eternal came out and had a big focus on weakpoints and hard counters.",
+        "museum_enemiesMaliciousFace6": "Another idea I had at one point was for there to be a hole in the back of its head, exposing the brain, allowing for nimble players to score big damage, but this also never materialized. Me coming up with all these dumb ideas, often after the model was already done, but never committing to them was, very understandably, frustrating to FlyingDog.",
+        "museum_enemiesMaliciousFace7": "The new model by Victoria is a beautiful almost 1:1 recreation that manages to keep the iconic look while improving the visual quality while actually <i>decreasing</i> its resolution.",
+
+        "museum_cinemaPlay": "PLAY",
+        "museum_cinemaStop": "STOP",
+
+        "museum_plaquesMuseumTitle": "HALL OF SHAME - THE ULTRAKILL DEVELOPERS",
+        "museum_plaquesArtRoom": "ART ROOM",
+        "museum_plaquesNerdRoom": "NERD ROOM",
+        "museum_plaquesRestRoom": "REST ROOM",
+        "museum_plaquesTalkRoom": "TALK ROOM",
+
+
+        "museum_plaquesHakita1": "ARSI \"HAKITA\" PATALA",
+        "museum_plaquesHakita2": "CREATOR OF ULTRAKILL",
+
+        "museum_plaquesFrancisXie1": "FRANCIS XIE",
+        "museum_plaquesFrancisXie2": "2D ARTIST",
+
+        "museum_plaquesJerichoRus1": "JERICHO RUS",
+        "museum_plaquesJerichoRus2": "2D ARIST",
+
+        "museum_plaquesBigRockBMP1": "BIGROCKBMP",
+        "museum_plaquesBigRockBMP2": "CONCEPT ARTIST",
+
+        "museum_plaquesMaxOvesson1": "MAXIMILIAN OVESSON",
+        "museum_plaquesMaxOvesson2": "2D ARTIST",
+
+        "museum_plaquesVictoriaHolland1": "VICTORIA HOLLAND",
+        "museum_plaquesVictoriaHolland2": "LEAD 2D ARTIST",
+
+        "museum_plaquesToniStigell1": "TONI STIGELL",
+        "museum_plaquesToniStigell2": "3D ARTIST",
+
+        "museum_plaquesFlyingdog1": "FLYINGDOG",
+        "museum_plaquesFlyingdog2": "3D ARTIST",
+
+        "museum_plaquesSamuelJamesBryan1": "SAMUEL JAMES BRYAN",
+        "museum_plaquesSamuelJamesBryan2": "3D ARTIST",
+
+        "museum_plaquesCameronMartin1": "CAMERON MARTIN",
+        "museum_plaquesCameronMartin2": "QUALITY ASSURANCE LEAD",
+
+        "museum_plaquesDaliaFigueroa1": "DALIA FIGUEROA",
+        "museum_plaquesDaliaFigueroa2": "QUALITY ASSURANCE",
+
+        "museum_plaquesTuckerWilkin1": "TUCKER WILKIN",
+        "museum_plaquesTuckerWilkin2": "SENIOR QUALITY ASSURANCE",
+
+        "museum_plaquesScottGurney1": "SCOTT GURNEY",
+        "museum_plaquesScottGurney2": "TECHNICAL QUALITY ASSURANCE",
+
+        "museum_plaquesPitr1": "PITR",
+        "museum_plaquesPitr2": "LEAD PROGRAMMER",
+
+        "museum_plaquesHeckteck1": "HECKTECK",
+        "museum_plaquesHeckteck2": "ADDITIONAL PROGRAMMER",
+
+        "museum_plaquesCabalcrow1": "EMANUIL \"CABALCROW\" CHIZHOV",
+        "museum_plaquesCabalcrow2": "ADDITIONAL PROGRAMMER",
+
+        "museum_plaquesLucasVarney1": "LUCAS VARNEY",
+        "museum_plaquesLucasVarney2": "ADDITIONAL PROGRAMMER",
+
+        "museum_plaquesBenMoir1": "BEN MOIR",
+        "museum_plaquesBenMoir2": "ADDITIONAL PROGRAMMER",
+
+        "museum_plaquesDaveOshry1": "DAVE OSHRY",
+        "museum_plaquesDaveOshry2": "CEO OF NEW BLOOD INTERACTIVE",
+
+        "museum_plaquesMeganeko1": "MEGANEKO",
+        "museum_plaquesMeganeko2": "GUEST COMPOSER",
+
+        "museum_plaquesKeygenChurch1": "KEYGEN CHURCH",
+        "museum_plaquesKeygenChurch2": "GUEST COMPOSER",
+        
+        "museum_plaquesHealth1": "HEALTH",
+        "museum_plaquesHealth2": "GUEST COMPOSER",
+
+        "museum_plaquesQuetzalTirado1": "QUETZAL TIRADO",
+        "museum_plaquesQuetzalTirado": "GUEST COMPOSER",
+
+        "museum_plaquesSalad1": "SALAD",
+        "museum_plaquesSalad2": "ARTIST OF JAKITO",
+
+        "museum_plaquesJacobHHR1": "JACOB HHR",
+        "museum_plaquesJacobHHR2": "WRITER (PROSE & DIALOGUE)",
+
+        "museum_plaquesVVizard1": "VVIZARD",
+        "museum_plaquesVVizard2": "MUSEUM CREATOR",
+
+        "museum_plaquesAdditionalMusic": "ADDITIONAL MUSIC",
+        "museum_plaquesAdditionalCredits": "ADDITIONAL CREDITS",
+
+        "museum_plaquesStephanWeyte1": "STEPHAN WEYTE",
+        "museum_plaquesStephanWeyte2": "VOICE OF MINOS PRIME",
+
+        "museum_plaquesLenvalBrown1": "LENVAL BROWN",
+        "museum_plaquesLenvalBrown2": "VOICE OF SISYPHUS PRIME",
+
+        "museum_plaquesGianniMatragrano1": "GIANNI MATRAGRANO",
+        "museum_plaquesGianniMatragrano2": "VOICE OF GABRIEL",
+
+        "museum_plaquesJoyYoung1": "JOY YOUNG",
+        "museum_plaquesJoyYoung2": "VOICE OF OWL",
+
+        "museum_plaquesMandalore1": "MANDALORE HERRINGTON",
+        "museum_plaquesMandalore2": "VOICE OF MYSERIOUS DRUID KNIGHT",
+
+        "museum_rocketRace1": "ROCKET RACE",
+        "museum_rocketRace2": "START",
+        "museum_rocketRaceResult": "TIME:"
     },
-    
+
+    "fishing": {
+        "fish_ocean": "The Ocean",
+        "fish_cavePool": "Cave Pool",
+        "fish_stream": "Stream",
+        "fish_lake": "Lake Waters",
+        "fish_lakeDeep": "Deeper Lake Waters",
+        "fish_lakeBlood": "Lake Of Blood",
+        "fish_lakeBloodLower": "Lower Bloods",
+        "fish_lakeHoly": "Holy Lake",
+        "fish_waterWell": "Water Well",
+        "fish_panOil": "Pan Oil",
+
+        "fish_leaderboard": "FISH SIZE LEADERBOARD",
+
+        "fish_bottleMessage1": "If you can read this, please help. I've been stranded on an island off the shore for weeks now, and I'm running out of supplies.",
+        "fish_bottleMessage2": "I was drawn to ride the waves in hopes of finding the legendary size 2 fish. I had combed every inch of land and lake with no avail.",
+        "fish_bottleMessage3": "I deduced that they must exist far out at sea, so I set sail with a month's worth of cooked fish, but the waves sank my ship before I could find anything.",
+        "fish_bottleMessage4": "You're my last hope.",
+        "fish_bottleMessage5": "Set sail towards the big dipper, you will find me on an island there. Bring me more fish and then leave so I may continue my search.",
+        "fish_bottleMessage6": "THE SIZE 2 FISH IS MINE.",
+
+        "fish_book1": "DAY 529:",
+        "fish_book2": "STILL SEARCHING.",
+        "fish_book3": "NO CONTACT FROM THE AGENCY IN 216 DAYS.",
+        "fish_book4": "I SHOULD RETURN TO HQ BUT I CAN'T. NOT YET.",
+        "fish_book5": "IT'S THERE.",
+        "fish_book6": "SOMEWHERE.",
+        "fish_book7": "I HAVE TO SEE.",
+        "fish_book8": "I HAVE TO KNOW.",
+        "fish_book9": "IHAVETOSEEIHAVETOKNOW",
+        "fish_book10": "SIZE 2.",
+
+        "fish_rodFar": "far",
+        "fish_rodClose": "close",
+        "fish_rodHooked": "Hooked!",
+        "fish_outOfWater": "OUT OF WATER",
+        "fish_fishCaught": "You caught",
+        "fish_cookingFailed": "Cooking failed.",
+        "fish_size": "SIZE 1",
+
+        "fish_living": "\"It's a living.\"",
+        "fish_tooSmall": "Too small for this fish. :^(",
+        "fish_baitTaken": "A fish took the bait.",
+        "fish_baitNotWork": "This bait didn't work here!",
+        "fish_interrupted": "Fishing interrupted",
+
+        "fish_terminalTitle": "awesome fishing tips",
+        "fish_funnyStupidFish": "Funny Stupid Fish (Friend)",
+        "fish_pitrFish": "PITR Fish",
+        "fish_trout": "Trout",
+        "fish_amidEvilFish": "Metal Fish",
+        "fish_chomper": "Chomper",
+        "fish_bombFish": "Bomb Fish",
+        "fish_gibeye": "Eyeball",
+        "fish_ironLungFish": "Frog (?)",
+        "fish_dopeFish": "Dope Fish",
+        "fish_stickFish": "Stickfish",
+        "fish_cookedFish": "Cooked Fish",
+        "fish_shark": "Shark",
+
+        "fish_funnyStupidFishDescription1": "A stupid fish. A really stupid fish. A dumb cretin. A fool. An absolute buffoon. A bumbling idiot. Has a sense of humor.",
+        "fish_funnyStupidFishDescription2": "Easy to catch and very friendly, is usually used to teach novices and children how to fish.",
+        "fish_pitrFishDescription1": "A very smart fish. Loves cats. Swims near land and will often gets caught by fishers on purpose just to be nice. ",
+        "fish_pitrFishDescription2": "Always ends up at the bottom of fish hierarchies.",
+        "fish_troutDescription1": "A common lake fish. Prefers deep water.",
+        "fish_troutDescription2": "Seems to have been held in high regard by humans, as there are known mask replicas of them.",
+        "fish_amidEvilFishDescription1": "A migratory fish from a land far beyond. Only survives in rocky areas, as its diet consists entirely of rocks. ",
+        "fish_amidEvilFishDescription2": "Only comes out of hiding to feed.",
+        "fish_chomperDescription1": "A migratory fish.",
+        "fish_chomperDescription2": "Originates from Pennsylvania, so it prefers dark, unpleasant and damp places.",
+        "fish_bombFishDescription1": "An extreme kind of fish. Most often found in flowing water, as stillness would be boring and inadequate for stimulation.",
+        "fish_bombFishDescription2": "Has a self-defence mechanism that can cause bodily injury to unaware fishers.",
+        "fish_gibeyeDescription1": "A common fish. Requires blood to survive.",
+        "fish_gibeyeDescription2": "Improves eyesight.",
+        "fish_ironLungFishDescription1": "A migratory deep sea fish. Usually only found on moons, though it can survive anywhere with enough blood.",
+        "fish_ironLungFishDescription2": "Very territorial, attacking anything that enters its domain and never leaves the deep.",
+        "fish_dopeFishDescription1": "A migratory fish. Found everywhere, though usually hidden Well.",
+        "fish_dopeFishDescription2": "Often found accidentally by heroes and travellers across their journeys and is considered a sign of good luck.",
+        "fish_stickFishDescription1": "A common fish. Edible and usually farmed by humans.",
+        "fish_stickFishDescription2": "Can be found in kitchens all across the world.",
+        "fish_cookedFishDescription1": "A common fish. Lives in fire, eats other fish and only comes out when fed.",
+        "fish_cookedFishDescription2": "Considered a delicacy, so fishers will often catch other kinds of fish purely for the sake of feeding them to an open fire to coax it out.",
+        "fish_sharkDescription1": "A carnivorous fish. Originates from Sweden, and has been considered a status symbol in human society, possibly as a sign of femininity or \"those who receive\", though the details have been lost to time.",
+        "fish_sharkDescription2": "Lives in huge bodies of water and avoids land, though it may swim close to shore to feed."
+    },
+
     "style":{
         "style_airslam": "AIRSLAM",
         "style_airshot": "AIRSHOT",
@@ -68,6 +492,7 @@
         "style_doublekill": "DOUBLE KILL",
         "style_downtosize": "DOWN TO SIZE",
         "style_enraged": "ENRAGED",
+        "style_envirokill": "ENVIROKILL",
         "style_exploded": "EXPLODED",
         "style_finishedoff": "FINISHED OFF",
         "style_fireworks": "FIREWORKS",
@@ -92,6 +517,9 @@
         "style_ricoshotUltra": "ULTRA",
         "style_ricoshotCounter": "COUNTER",
         "style_secret": "SECRET",
+        "style_scrindonguloded": "SCRINDONGULODED",
+        "style_scrongled": "SCRONGLED",
+        "style_scrongbongled": "SCRONGBONGLED",
         "style_splattered": "SPLATTERED",
         "style_triplekill": "TRIPLE KILL",
 
@@ -146,7 +574,9 @@
         "cybergrind_settingsDescription": "This terminal is used for Cyber Grind customization.",
         "cybergrind_themes": "THEMES",
         "cybergrind_patterns": "PATTERNS",
+        "cybergrind_music": "MUSIC",
         "cybergrind_waves": "WAVES",
+
         
         "cybergrind_themesTitle": "THEMES",
         "cybergrind_themesDescription": "Select the visual theme for the arena",
@@ -164,6 +594,15 @@
         "cybergrind_themesCustomTopRow": "TOP ROW",
         "cybergrind_themesCustomTop": "TOP",
         "cybergrind_themesCustomGlowIntensity": "GLOW INTENSITY",
+
+        "cybergrind_musicTitle": "PLAYLIST",
+        "cybergrind_musicCompleteChallengeRequirement": "COMPLETE CHALLENGE FOR",
+        "cybergrind_musicSeeEnemyRequirement": "ENCOUNTER AN UNKNOWN FOE",
+        "cybergrind_musicUnlockLevelRequirement": "REACH",
+        "cybergrind_musicCompleteLevelRequirement": "COMPLETE",
+        "cybergrind_musicUnlocked": "UNLOCKED",
+        "cybergrind_musicConfirm": "CONFIRM",
+        "cybergrind_musicSoundtrack": "SOUNDTRACK",
         
         "cybergrind_patternsTitle": "PATTERNS",
         "cybergrind_patternsRefresh": "REFRESH",
@@ -395,7 +834,11 @@
         "level_fullIntroPrompt": "FULL INTRO?",
         "level_fullIntroPromptYes": "YES",
         "level_fullIntroPromptNo": "NO",
-        "level_fullIntroPromptCancel": "CANCEL"
+        "level_fullIntroPromptCancel": "CANCEL",
+        
+        "leaderboard_anyPercent": "ANY",
+        "leaderboard_pPercent": "P-RANK",
+        "leaderboard_noEntries": "no leaderboard entries"
 	},
     "visualnovel": {
         "visualnovel_mirageName1": "JUST SOMEONE",
@@ -662,6 +1105,8 @@
         "general_restartWarning": "MISSION RESTART/QUIT WARNING",
 		"general_discordRpc": "DISCORD INTEGRATION",
 		"general_seasonalEvent": "SEASONAL EVENTS",
+        "general_controllerRumble": "CONTROLLER RUMBLE",
+        "general_controllerRumbleCustomize": "CUSTOMIZE",
 
 		"controls_resetDefault": "RESET TO DEFAULT",
 		"controls_movement": "MOVEMENT",
@@ -766,10 +1211,6 @@
 		"hud_styleMeter": "STYLE METER",
 		"hud_styleInfo": "STYLE INFO",
 
-        "spawner_sandboxTools": "SANDBOX ITEMS :^)",
-        "spawner_sandbox": "SANDBOX",
-        "spawner_enemies": "ENEMIES",
-        "spawner_items": "OBJETS",
 
 		"crosshair_title": "CROSSHAIR SETTINGS",
 		"crosshair_type": "CROSSHAIR TYPE",
@@ -814,6 +1255,7 @@
 		"assists_enemySilhouettesDistance": "ACTIVATION DISTANCE",
         "assists_enemySilhouettesDistanceMinimum": "ALWAYS ON",
 		"assists_enemySilhouettesOutlinesOnly": "OUTLINE ONLY",
+        "assists_enemySilhouettesOutlineThickness": "OUTLINE THICKNESS",
 		"assists_major": "MAJOR ASSISTS",
 		"assists_majorActivate": "ENABLE",
 		"assists_gameSpeed": "GAME SPEED",
@@ -844,6 +1286,33 @@
 		"colors_variationRed": "RED VARIATION",
 		"colors_variationGold": "GOLD VARIATION",
 		"colors_enemies": "ENEMY SILHOUETTES",
+
+
+        "rumble_title": "Rumble Customization",
+        "rumble_finalMultiplier": "FINAL INTENSITY MULTIPLIER",
+        "rumble_coinToss": "Coin Toss",
+        "rumble_dash": "Dashing",
+        "rumble_heavyFallImpact": "Heavy Fall Impact",
+        "rumble_heavyFall": "Fall Impact",
+        "rumble_gunFire": "Gun Fire",
+        "rumble_gunFireProjectile": "Gun Fire (Projectile)",
+        "rumble_gunFireStrong": "Gun Fire (Strong)",
+        "rumble_nailgunFire": "Nailgun",
+        "rumble_railcannonIdle": "Railcannon Idle",
+        "rumble_revolverCharge": "Revolver Charge",
+        "rumble_sawblade": "Sawblade",
+        "rumble_shotgunCharge": "Shotgun Charge",
+        "rumble_superSaw": "Super Saw",
+        "rumble_jump": "Jumping",
+        "rumble_magnet": "Magnet",
+        "rumble_parryFlash": "Parry Flash",
+        "rumble_punch": "Punching",
+        "rumble_slide": "Sliding",
+        "rumble_whiplashThrow": "Whiplash Throw",
+        "rumble_whiplashPull": "Whiplash Pull",
+        "rumble_intensity": "INTENSITY",
+        "rumble_endDelay": "END DELAY",
+        "rumble_reset": "RESET",
 
 		"save_warning1": "The game will reload.",
 		"save_warning2": "If you're in a mission, you current progress will be lost.",
@@ -885,6 +1354,7 @@
         "levelName_cybergrind": "THE CYBER GRIND",
 		"levelName_sandbox": "uk_construct",
         "levelName_tutorial": "TUTORIAL",
+        "levelName_devMuseum": "HALL OF ULTRADEVELOPMENT",
         
 		"levelName_preludeFirst": "INTO THE FIRE",
 		"levelName_preludeSecond": "THE MEATGRINDER",
@@ -918,13 +1388,13 @@
 		"levelName_wrathSecond": "WAVES OF THE STARLESS SEA",
 		"levelName_wrathThird": "SHIP OF FOOLS",
 		"levelName_wrathFourth": "LEVIATHAN",
-		"levelName_wrathSecret": "",
+		"levelName_wrathSecret": "I ONLY SAY MORNING",
         
         "levelName_heresyFirst": "CRY FOR THE WEEPER",
 		"levelName_heresySecond": "AESTHETICS OF HATE",
 
 		"levelName_primeFirst": "SOUL SURVIVOR",
-		"levelName_primeSecond": "",
+		"levelName_primeSecond": "WAIT OF THE WORLD",
 		"levelName_primeThird": ""
 
 
@@ -964,7 +1434,7 @@
 
 	},
 	"levelTips":{
-		"leveltips_preludeSecond1": "Hitscan weapons like the Revolver do locational damage.",
+		"leveltips_preludeSecond1": "The Revolver deals <color=orange>locational damage</color>.",
 		"leveltips_preludeSecond2": "A headshot deals 2x damage and a limbshot deals 1.5x damage.",
 
 		"leveltips_preludeThird1": "Dash: Fully invincible, costs stamina",
@@ -1019,10 +1489,13 @@
 
 		"leveltips_primeFirst1": "Parries can be used as a powerful healing tool.",
 		"leveltips_primeFirst2": "Parrying any enemy projectile or melee attack will fully replenish your health up to the hard damage limit.",
+        "leveltips_primeSecond": "Have fun.",
 
 		"leveltips_cybergrind": "If blown too far off the arena, PUMP CHARGE's overcharge is a good way to get back.",
         "leveltips_sandbox1": "CHEATS can be enabled in other levels by inputting:",
-        "leveltips_sandbox2": "Enabling ranks will disable cheats."
+        "leveltips_sandbox2": "Enabling ranks will disable cheats.",
+        
+        "leveltips_devMuseum": "You can pick up the cut weapons on the second floor."
 	},
 	"shop":{
         "shop_tipofthedayTitle": "TIP OF THE DAY",
@@ -1067,6 +1540,10 @@
         "shop_revolverMarksmanDescription1": "Press Alt Fire to throw a coin.",
         "shop_revolverMarksmanDescription2": "Hit an airborne coin to deflect your shot into the nearest enemy's weakpoint.",
         "shop_revolverMarksmanDescription3": "Coins can be chained.",
+
+        "shop_revolverSharpshooter": "SHARPSHOOTER",
+        "shop_revolverSharpshooterDescription1": "<color=orange>Hold</color> Alt Fire to charge a piercing beam that <color=orange>ricochets off surfaces</color>.",
+        "shop_revolverSharpshooterDescription2": "Can destroy <color=orange>projectiles</color>.",
         
         "shop_shotgunCoreEject": "CORE EJECT",
         "shop_shotgunCoreEjectDescription1": "Press Alt Fire to overheat and launch the shotgun's cores.",
@@ -1101,6 +1578,11 @@
         "shop_rocketLauncherFreeze": "FREEZEFRAME",
         "shop_rocketLauncherFreezeDescription1": "Press Alt Fire to freeze rockets.",
         "shop_rocketLauncherFreezeDescription2": "Frozen rockets have a larger blast radius and will stay frozen even when switching weapons.",
+
+        "shop_rocketLauncherSrsCannon": "S.R.S. CANNON",
+        "shop_rocketLauncherSrsCannonDescription1": "Press Alt Fire to launch <color=orange>cannonball</color>.",
+        "shop_rocketLauncherSrsCannonDescription2": "<color=orange>Hold</color> to charge <color=orange>distance</color>.",
+        "shop_rocketLauncherSrsCannonDescription3": "No one knows what S.R.S. stands for.",
         
         "shop_armFeedbacker": "FEEDBACKER",
         "shop_armFeedbackerDescription1": "Fast punch with decent damage.",
@@ -1171,8 +1653,10 @@
         "shop_loreRocketLauncher9": "The launcher requires very little preparation to be used, meaning it can be quickly pulled out, fired and put back away to deal a quick burst of extra damage in the middle of another weapon switching combo.",
         "shop_loreRocketLauncher10": "Rockets are pulled by the Magnet nailgun's magnets, though not as strongly as nails. The accuracy of the tracking can be increased by freezing rockets with the Freezeframe variation.",
         "shop_loreRocketLauncher11": "When hit with the Whiplash, a rocket will be attached to the spear without stopping the throw. If the spear doesn't collide with anything else, the rocket will be pulled back with it, exploding on collision with the user.",
-        "shop_loreRocketLauncher12": "Light enemies will be airborne when pulled by the Whiplash, making them very easy targets to hit for the falling enemy explosion bonus. However, this requires a lot of distance from the target if the user wishes to avoid the explosion's increased radius.",
-        "shop_loreRocketLauncher13": "Some machines, such as V1, are light enough to ride a rocket. This can be achieved by freezing a rocket with the Freezeframe variation and jumping onto it. Even with the low weight, the rocket will eventually lose power, causing it to drop gradually, but when underwater, V1 is light enough to not cause this drop.",
+        "shop_loreRocketLauncher12": "The cannonballs from the S.R.S. Cannon can be punched to launch them with greater force, shot with a hitscan weapon for an explosion or dropped onto the ground to launch enemies.",
+        "shop_loreRocketLauncher13": "Light enemies will be airborne when pulled by the Whiplash, making them very easy targets to hit for the falling enemy explosion bonus. However, this requires a lot of distance from the target if the user wishes to avoid the explosion's increased radius.",
+        "shop_loreRocketLauncher14": "Some machines, such as V1, are light enough to ride a rocket. This can be achieved by freezing a rocket with the Freezeframe variation and jumping onto it. Even with the low weight, the rocket will eventually lose power, causing it to drop gradually, but when underwater, V1 is light enough to not cause this drop.",
+        "shop_loreRocketLauncher15": "Although the cannonballs from the S.R.S. Cannon variation can be punched the moment they've been launched, they will have greater durability if punched after they've bounced off an enemy.",
 
         "shop_revolverPreset1": "STANDARD",
         "shop_revolverPreset2": "MAGNUM",
@@ -1236,6 +1720,8 @@
 		"enemyname_somethingWicked": "SOMETHING WICKED",
 		"enemyname_fleshPrison": "FLESH PRISON",
 		"enemyname_minosPrime": "MINOS PRIME",
+        "enemyname_boss_fleshPanopticon": "FLESH PANOPTICON",
+        "enemyname_boss_sisyphusPrime": "SISYPHUS PRIME",
         
         "enemyname_boss_cerberus": "CERBERUS, GUARDIAN OF HELL",
         "enemyname_boss_cancerousRodent": "CANCEROUS RODENT",
@@ -1578,7 +2064,25 @@
         "enemyBios_minosPrime_8": "From the prison inside his own body, Minos helplessly watched as his soulless corpse, now controlled by parasites, tore apart everything he had worked so hard to build, cursing his own weakness for failing to protect his people, vowing to take revenge...",
         
         "enemyBios_minosPrime_strategy1": "It's rare for Minos Prime to give a window of opportunity to heal, so it's vital to learn what attacks leave him momentarily vulnerable and how to dodge them in a way that gives an advantageous position during those moments.",
-        "enemyBios_minosPrime_strategy2": "His snake projectiles can be parried using the Feedbacker for a full heal, even if the projectile doesn't hit Minos Prime."
+        "enemyBios_minosPrime_strategy2": "His snake projectiles can be parried using the Feedbacker for a full heal, even if the projectile doesn't hit Minos Prime.",
+        
+        "enemyBios_fleshPanopticon_1": "Flesh Panopticon is a superior version of the Flesh Prison, built to not only house the soul of King Sisyphus, but also with the capability to keep a watchful eye over any of his followers that may be imprisoned alongside him.",
+        "enemyBios_fleshPanopticon_2": "This feature was however never utilized, as Sisyphus' prime soul had already started forming before being imprisoned, leading angels to fear that he may be able to break out of his prison if awakened.",
+
+        "enemyBios_fleshPanopticon_strategy_1": "Though Flesh Panopticon creates fewer spawn than its predecessor, they're more resilient and their gaze is able to stop all wounds from healing. This may seem just a curse, but it nullifies the Whiplash's primary flaw, allowing it to be used freely to approach and destroy the spawn at close range.",
+        "enemyBios_fleshPanopticon_strategy_2": "Flesh Panopticon's explosives make it dangerous to stay on the ground, but they will phase through the Panopticon to avoid it harming itself, making standing on top of it safer as long as the black hole isn't nearby.",
+
+        "enemyBios_sisyphusPrime_1": "Though Minos was intelligent and persuasive, he was also a gentle and noble man. Such values mattered little to Sisyphus, who would gladly lie, cheat or kill if that's what is needed to protect his comrades.",
+        "enemyBios_sisyphusPrime_2": "In a hubristic show of power, Heaven decided that the only correct punishment for his sins would be breaking his will by subjecting him to an unending and impossible task, unaware of just how tenacious the spite of man can be.",
+        "enemyBios_sisyphusPrime_3": "For thousands of years, Sisyphus bided his time, suffering his punishment day after day without any sign of regret or remorse, waiting for the perfect chance to strike and subvert Heaven's tyrannical rule.",
+        "enemyBios_sisyphusPrime_4": "With the Disappearance of God and chaos in Heaven, Sisyphus' time had finally come, and once the angels returned, they were met with a force and fury that had boiled in the hearts of men for millennia, a warcry so fierce it shook the very foundations of Hell.",
+        "enemyBios_sisyphusPrime_5": "It was all for naught, however, as Sisyphus' charisma and drive had made his warriors dependent on his radiance and guidance. Although he did not know why yet, Gabriel recognised this flaw, having experienced it first hand, and ordered a focused assault to take down the king. ",
+        "enemyBios_sisyphusPrime_6": "He unsheathed his swords for the first time since time immemorial and beheaded Sisyphus, displaying his head for all to see. The morale of Sisyphus' army was broken and the rest of the war was little more than a formality without their shining beacon.",
+        "enemyBios_sisyphusPrime_7": "The failure of the insurrection was no surprise however, and few knew that better than Sisyphus himself. He knew he was fighting a losing battle, that even if they miraculously survived this encounter, they had no chance of winning a full scale war against all of Heaven. Yet he thrust his full heart and soul into battle with a wide smile on his face.",
+        "enemyBios_sisyphusPrime_8": "To him, fighting an impossible battle with full knowledge of its futility and taking joy in just the act of resistance itself is the ultimate rebellion against the oppressor. One must imagine Sisyphus happy.",
+
+        "enemyBios_sisyphusPrime_strategy1": "Sisyphus' relentless attacks leave little room to recover stamina, but many of them are parryable, allowing for an instant refill.",
+        "enemyBios_sisyphusPrime_strategy2": "The radiant power of the sun makes Sisyphus' explosive attacks very difficult to avoid, but since a dash gives temporary invincibility, good timing allows one to avoid the damage of an explosion without actually needing to escape its radius."
     },
     
 	"tutorial":{
@@ -1748,7 +2252,36 @@
         "primeSanctum_first_secretText6": "Soon after, the Hell exploration and excavation project was abandoned and this vinyl record remained the only matter to have been successfully transferred before connection between the surface and the terminals was lost.",
         "primeSanctum_first_secretText7": "The terminals now use the record to lure machines into a symbiotic relationship (For further information, see TERMINAL DATA 02: [LINK REMOVED]). However, the terminals only play short instrumental sections of the original record for undetermined reasons.",
         "primeSanctum_first_secretText8": "Some researchers have joked that perhaps the terminals are simply \"too shy to sing\", though rumors have been spreading of mechanics who, after fixing a faulty or broken terminal, said to have heard the terminal play a vocal section when only the mechanic is present with no recording equipment, making this an unverifiable claim.",
-        "primeSanctum_first_secretText9": "END OF DATA 01. For more information, see [LINK REMOVED] and [LINK REMOVED]."     
+        "primeSanctum_first_secretText9": "END OF DATA 01. For more information, see [LINK REMOVED] and [LINK REMOVED].",
+
+        "primeSanctum_second_lockFirstLocked": "LOCK [A]",
+        "primeSanctum_second_lockSecondLocked": "LOCK [B]",
+        "primeSanctum_second_lockThirdLocked": "LOCK [C]",
+        "primeSanctum_second_lockUnlocked": "UNLOCKED",
+
+        "primeSanctum_second_lockOpen": "OPEN",
+        "primeSanctum_second_lockAreYouSure": "ARE YOU SURE?",
+        "primeSanctum_second_lockYes1": "FOLLOW PROTOCOL",
+        "primeSanctum_second_lockYes2": "DO NOT APPROACH IT",
+        "primeSanctum_second_lockYes3": "DO NOT LET IT LOOK AT YOU",
+        "primeSanctum_second_lockYes4": "STAY VIGILENT, AND MOST IMPORTANTLY",
+        "primeSanctum_second_lockYes5": "h a v e  f u n !",
+        "primeSanctum_second_lockNo1": "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA",
+        "primeSanctum_second_lockNo2": "a s i f y o u h a d a c h o i c e",
+
+        "primeSanctum_second_secretText1": "TERMINAL DATA 02 <color=red>[ENCRYPTED]</color>",
+        "primeSanctum_second_secretText2": "AN UPDATE ON TERMINALS ",
+        "primeSanctum_second_secretText3": "<color=grey>(NOTE: THIS IS ALL STILL UNDER INVESTIGATION!!! Do not share until we have verified all claims AND FINISHED THE DRAFT!!!! If this leaks like the last draft there won't be enough money on the entire damn planet to pay your legal fees.) </color>",
+        "primeSanctum_second_secretText4": "Since the previous report, more powerful communication equipment has been succesfully designed and built, made possible thanks to the generous donations of <color=grey>[INSERT COMPANY BEING PRESENTED TO]</color> whom we hold in high regard. With this new equipment, we have managed to re-establish a connection with some of the higher end machines that were left behind after the Hell exploration and excavation project was abruptly cancelled due to <color=red>[ERROR:sAmsGS3JTIU]</color>.\n",
+        "primeSanctum_second_secretText5": "What we have discovered is truly remarkable and, IF PROVEN TRUE BEYOND REASONABLE DOUBT, revolutionary to the entire robotics community: ",
+        "primeSanctum_second_secretText6": "Boredom.",
+        "primeSanctum_second_secretText7": "The terminals, unable to move, have grown bored. While they are connected to each other and able to communicate amongst themselves, once the connection to the surface was cut, they were getting no new input, therefore stalling all communication to repetitions of already known information.",
+        "primeSanctum_second_secretText8": "It is unknown how similar this \"boredom\" is to actual emotion or what has caused it, but it has lead to a symbiotic relationship with other machines. Essentially, the terminals scavenge whatever they can via their teleportation systems and trade those supplies and resources with the machines that were left behind in Hell, in exchange for entertainment.",
+        "primeSanctum_second_secretText9": "That is, the machines record their battles for survival in Hell and the footage is graded based on its entertainment value and used as \"points\" in exchange for goods and services such as new weaponry.",
+        "primeSanctum_second_secretText10": "It seems that this relationship has become so deeply ingrained into the existence of the terminals that they have developed a social hierarchy, wherein those who collect the most entertaining battle data are considered in higher regard than those whose findings are of poorer quality.",
+        "primeSanctum_second_secretText11": "More recently, the terminals have also collected enough data to create a simulation space which they let machines plug into called \"The Cyber Grind\", which allows the machines to simulate battles in a safe environment without the threat of being destroyed, which the terminals watch in real time as a kind of live entertainment.",
+        "primeSanctum_second_secretText12": "These findings are truly extraordinary, and though we too find it hard to believe, all the information we can manage to gather validates these claims. If we can prove it with certainty <color=grey>[AND IF THIS DRAFT DOESN'T FUCKING LEAK AGAIN]</color>, this will cause a paradigm shift that will require re-evaluation of everything we thought we knew about blood-fuelled machinery.",
+        "primeSanctum_second_secretText13": "END OF DATA 02. For more information on the cancelled Hell exploration and excavation project, see DATA 00: <color=red>[LINK REMOVED]</color>."
     },
     "secretLevels":{
         "secretLevels_prelude_somethingWicked": "Something wicked this way comes.",
@@ -1773,6 +2306,20 @@
         "secretLevels_fourth_testament5": "THE WAILING AND THE GNASHING OF TEETH",
         "secretLevels_fourth_testament6": "I HAVE CREATED HELL...",
         "secretLevels_fourth_testament7": "...and I can no longer unmake it.",
+
+        "secretLevels_fifth_testamentTitle": "TESTAMENT IV",
+        "secretLevels_fifth_testament1": "\"FATHER, WHY ETERNAL TORMENT? IS IT NOT CRUEL?",
+        "secretLevels_fifth_testament2": "IS TORTURE UNENDING TRULY A FATE FIT FOR A FOOL?\"",
+        "secretLevels_fifth_testament3": "AN ANGEL SO BRIGHT AND BEAUTIFUL ASKED ME THIS... ",
+        "secretLevels_fifth_testament4": "AND I COULD FIND NO ANSWER",
+        "secretLevels_fifth_testament5": "FOR I COULD NEVER FACE THE GUILT OF WHAT I'D DONE...",
+        "secretLevels_fifth_testament6": "MY REGRET, A GNAWING CANCER",
+        "secretLevels_fifth_testament7": "IN MY HOUR OF WEAKNESS, TERROR POSSESSED ME THEN",
+        "secretLevels_fifth_testament8": "AND I CAST LUCIFER, TOO, INTO THE INFERNAL DEN",
+        "secretLevels_fifth_testament9": "ONCE I REALIZED WHAT I HAD JUST DONE...",
+        "secretLevels_fifth_testament10": "I COULD ONLY WEEP",
+        "secretLevels_fifth_testament11": "AS I SANK SLOWLY INTO DEPTHS OF DESPAIR...",
+        "secretLevels_fifth_testament12": "DEEP, OH SO DEEP",
         
         "secretLevels_complete1": "MISSION",
         "secretLevels_complete2": "COMPLETE"
@@ -1922,7 +2469,38 @@
         "subtitles_gabrielSecondDefeated8": "I-I need some time to think...",
         "subtitles_gabrielSecondDefeated9": "We will meet again, machine.",
         "subtitles_gabrielSecondDefeated10": "May your woes be many...",
-        "subtitles_gabrielSecondDefeated11": "...and your days few."
+        "subtitles_gabrielSecondDefeated11": "...and your days few.",
+
+        "subtitles_sisyphusPrime_preIntro1": "This prison...",
+        "subtitles_sisyphusPrime_preIntro2": "To hold",
+        "subtitles_sisyphusPrime_preIntro3": "ME?",
+
+        "subtitles_sisyphusPrime_intro1": "A visitor?",
+        "subtitles_sisyphusPrime_intro2": "Hmm... Indeed, I have slept long enough.",
+        "subtitles_sisyphusPrime_intro3": "The kingdom of Heaven has long since forgotten my name.",
+        "subtitles_sisyphusPrime_intro4": "And I am EAGER to make them remember.",
+        "subtitles_sisyphusPrime_intro5": "However,",
+        "subtitles_sisyphusPrime_intro6": "The blood of Minos stains your hands, and I must admit...",
+        "subtitles_sisyphusPrime_intro7": "I'm curious about your skills, Weapon.",
+        "subtitles_sisyphusPrime_intro8": "And so, before I tear down the cities and CRUSH the armies of Heaven,",
+        "subtitles_sisyphusPrime_intro9": "You shall do as an appetizer.",
+        "subtitles_sisyphusPrime_intro10": "Come forth, Child of Man...",
+        "subtitles_sisyphusPrime_intro11": "And DIE.",
+
+        "subtitles_sisyphusPrime_attack1": "Nice try!",
+        "subtitles_sisyphusPrime_attack2": "BE GONE!",
+        "subtitles_sisyphusPrime_attack3": "You can't escape!",
+        "subtitles_sisyphusPrime_attack4": "DESTROY!",
+        "subtitles_sisyphusPrime_attack5": "This will hurt.",
+
+        "subtitles_sisyphusPrime_phaseChange": "YES! That's it!",
+        "subtitles_sisyphusPrime_respawnIntro": "Keep them coming!",
+
+        "subtitles_sisyphusPrime_defeated1": "Ahh...",
+        "subtitles_sisyphusPrime_defeated2": "So concludes the life and times of King Sisyphus.",
+        "subtitles_sisyphusPrime_defeated3": "A fitting end to an existence defined by futile struggle,",
+        "subtitles_sisyphusPrime_defeated4": "Doomed from the very start...",
+        "subtitles_sisyphusPrime_defeated5": "And I don't regret a SECOND of it!"
         
     },
     
@@ -2004,9 +2582,57 @@
         "classicHud_arm": "ARM",
         "classicHud_railcannonMeter": "CHARGE",
 
+        "spawner_sandboxTools": "SANDBOX ITEMS :^)",
+        "spawner_sandbox": "SANDBOX",
+        "spawner_enemies": "ENEMIES",
+        "spawner_items": "OBJETS",
+        "spawner_special": "SPECIAL",
+        "spawner_unlockables": "UNLOCKABLES",
+
+        "enemyAlter_title": "ALTER",
+        "enemyAlter_sizeTitle": "SIZE",
+        "enemyAlter_uniformToggle": "UNIFORM",
+        "enemyAlter_uniformSmall": "SMALLER",
+        "enemyAlter_uniformDefault": "DEFAULT",
+        "enemyAlter_uniformLarge": "BIGGER",
+        "enemyAlter_metaTitle": "PROP",
+        "enemyAlter_metaFrozen": "FROZEN",
+        "enemyAlter_metaWeak": "WEAK",
+        "enemyAlter_metaBreakable": "BREAKABLE",
+        "enemyAlter_metaUnbreakable": "UNBREAKABLE",
+        "enemyAlter_jumpPadTitle": "JUMP PAD",
+        "enemyAlter_jumpPadPower": "FORCE",
+        "enemyAlter_radianceTitle": "RADIANCE",
+        "enemyAlter_radianceEnable": "ENABLE RADIANCE",
+        "enemyAlter_radianceDetails_tier": "TIER",
+        "enemyAlter_radianceHealth_tier": "HEALTH",
+        "enemyAlter_radianceDamage_tier": "DAMAGE",
+        "enemyAlter_radianceSpeed_tier": "SPEED",
+        "enemyAlter_boss_title": "ENEMY",
+        "enemyAlter_boss_description": "BOSS HEALTH BAR",
+
         "earlyAccessEnd1": "THANKS FOR PLAYING",
         "earlyAccessEnd2": "ACT III: GODFIST SUICIDE is still under development.",
         "earlyAccessEnd3": "For news on its progress, follow us on"
 
-	}
+	},
+
+    "sandbox": {
+        "sandbox_shop_timeOfDay": "TIME OF DAY",
+        "sandbox_shop_worldOptions": "WORLD OPTIONS",
+        "sandbox_shop_icons": "ICONS",
+
+        "sandbox_shop_totalBoxes": "TOTAL BOXES BUILT",
+        "sandbox_shop_totalProps": "TOTAL PROPS PLACED",
+        "sandbox_shop_totalEnemies": "TOTAL ENEMIES SPAWNED",
+        "sandbox_shop_totalTime": "TOTAL TIME IN SANDBOX",
+
+        "sandbox_shop_worldOptionsTitle": "WORLD OPTIONS",
+        "sandbox_shop_worldOptionsEnable": "ENABLE",
+        "sandbox_shop_worldOptionsDisable": "DISABLE",
+        "sandbox_shop_worldOptionsEnabled": "ENABLED",
+        "sandbox_shop_worldOptionsDisabled": "DISABLED",
+
+        "sandbox_shop_mapBorder": "Map Border"
+    }
 }

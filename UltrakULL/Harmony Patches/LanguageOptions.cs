@@ -18,7 +18,7 @@ namespace UltrakULL.Harmony_Patches
 
         public static bool Prefix(OptionsMenuToManager __instance)
         {
-            if (SceneManager.GetActiveScene().name == "Main Menu")
+            if (getCurrentSceneName() == "Main Menu")
             {
                 Transform panel = __instance.pauseMenu.transform.Find("Panel");
                 GameObject discordButton = panel.Find("Discord").gameObject;
@@ -123,7 +123,7 @@ namespace UltrakULL.Harmony_Patches
                 colorMultiplier = 1f,
                 fadeDuration = 0.1f
             };
-            openLangFolderButton.onClick.AddListener(delegate { Application.OpenURL(Path.Combine(Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar + "BepInEx" + Path.DirectorySeparatorChar + "config" + Path.DirectorySeparatorChar + "ultrakull")); });
+            openLangFolderButton.onClick.AddListener(delegate { Application.OpenURL(Path.Combine(Directory.GetCurrentDirectory() + "\\BepInEx\\config\\ultrakull")); });
 
 
             RectTransform cRect = languagePage.transform.Find("Scroll Rect (1)").Find("Contents").GetComponent<RectTransform>();
