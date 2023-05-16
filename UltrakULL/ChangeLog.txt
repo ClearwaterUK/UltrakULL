@@ -1,6 +1,7 @@
 ﻿1.2.0c
 - Added dubbing support for Sisyphus Prime, updated dubbing documentation.
 - Fixed 5-S incorrectly being displayed as 5-5 in Discord Rich Presence.
+- Modified filepath lookups to be platform agnostic, better file/folder support for Unix/MacOS. Thanks to Coatlessali for the contribution!
 
 1.2.0b
 - Various fixes
