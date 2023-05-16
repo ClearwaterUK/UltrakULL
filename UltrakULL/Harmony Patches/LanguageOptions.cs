@@ -123,7 +123,7 @@ namespace UltrakULL.Harmony_Patches
                 colorMultiplier = 1f,
                 fadeDuration = 0.1f
             };
-            openLangFolderButton.onClick.AddListener(delegate { Application.OpenURL(Path.Combine(Directory.GetCurrentDirectory() + "\\BepInEx\\config\\ultrakull")); });
+            openLangFolderButton.onClick.AddListener(delegate { Application.OpenURL(Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull")); });
 
 
             RectTransform cRect = languagePage.transform.Find("Scroll Rect (1)").Find("Contents").GetComponent<RectTransform>();

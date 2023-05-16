@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using System.IO;
 using UltrakULL.audio;
 using UltrakULL.json;
 using UnityEngine;
@@ -15,7 +16,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             {
                 return;
             }
-            string minosPrimeFolder =  AudioSwapper.speechFolder + "minosPrime\\";
+            string minosPrimeFolder =  AudioSwapper.speechFolder + "minosPrime" + Path.DirectorySeparatorChar;
 
 
             //Kicks (Prepare thyself)
