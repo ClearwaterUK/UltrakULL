@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using HarmonyLib;
 using UltrakULL.audio;
 using UltrakULL.json;
@@ -23,7 +24,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             //NOTE - both audio files for Manda & Owl play at the SAME TIME.
             //This means each seperate audio file will need to have the relevant period of silence before/after speaking.
         
-            string mandaloreFolder = AudioSwapper.speechFolder + "mandalore\\";
+            string mandaloreFolder = AudioSwapper.speechFolder + "mandalore" + Path.DirectorySeparatorChar;
         
             //Attack 1 (Full auto)
             ref AudioClip mandaloreAttack1 = ref __instance.voiceFull;

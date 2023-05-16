@@ -23,7 +23,7 @@ namespace UltrakULL.json
         {
             LoadLanguages(modVersion);
 
-            configFile = new ConfigFile("BepInEx\\config\\ultrakull\\lastLang.cfg", true);
+            configFile = new ConfigFile(Path.Combine("BepInEx", "config", "ultrakull", "lastLang.cfg"), true);
 
             string value = configFile.Bind("General", "LastLanguage", "en-GB").Value;
             string dubValue = configFile.Bind("General","activeDubbing","False").Value;
@@ -52,7 +52,7 @@ namespace UltrakULL.json
         public static void LoadLanguages(string modVersion)
         {
             allLanguages = new Dictionary<string, JsonFormat>();
-            string[] files = Directory.GetFiles(Path.Combine(Directory.GetCurrentDirectory() + "\\BepInEx\\config\\", "UltrakULL"), "*.json");
+            string[] files = Directory.GetFiles(Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull"), "*.json");
             foreach (string file in files)
             {
                 if (TryLoadLang(file, out JsonFormat lang) && !allLanguages.ContainsKey(lang.metadata.langName) && lang.metadata.langName != "te-mp")
@@ -218,8 +218,8 @@ namespace UltrakULL.json
                 
                 MainPatch.instance.onSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
                 LanguageManager.DumpLastLanguage();
-                AudioSwapper.speechFolder = Directory.GetCurrentDirectory() + "\\BepInEx\\config\\ultrakull\\audio\\" + LanguageManager.CurrentLanguage.metadata
-                    .langName + "\\";
+                AudioSwapper.speechFolder = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull", "audio", LanguageManager.CurrentLanguage.metadata
+                    .langName) + Path.DirectorySeparatorChar;
             }
             else
                 Logging.Warn("No language found with name " + langName);

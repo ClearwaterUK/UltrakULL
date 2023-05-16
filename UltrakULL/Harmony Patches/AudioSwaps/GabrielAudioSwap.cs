@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using System.IO;
 using UltrakULL.audio;
 using UltrakULL.json;
 using UnityEngine;
@@ -17,7 +18,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
                 return;
             }
         
-            string gabeFirstFolder =  AudioSwapper.speechFolder + "gabrielBossFirst\\";
+            string gabeFirstFolder =  AudioSwapper.speechFolder + "gabrielBossFirst" + Path.DirectorySeparatorChar;
 
 
             //Taunts
