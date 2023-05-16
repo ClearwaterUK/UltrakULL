@@ -15,7 +15,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             {
                 return;
             }
-            string minosPrimeFolder =  AudioSwapper.speechFolder + "minosPrime" + Path.DirectorySeparatorChar;
+            string minosPrimeFolder =  Path.Combine(AudioSwapper.speechFolder, "minosPrime") + Path.DirectorySeparatorChar;
 
 
             //Kicks (Prepare thyself)
