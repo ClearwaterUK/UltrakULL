@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using ArabicSupportUnity;
+using Discord;
 using UltrakULL.audio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -51,6 +52,8 @@ namespace UltrakULL.json
 
         public static void LoadLanguages(string modVersion)
         {
+            Logging.Warn("Loading language files stored locally on disk...");
+            
             allLanguages = new Dictionary<string, JsonFormat>();
             string[] files = Directory.GetFiles(Path.Combine(Directory.GetCurrentDirectory() + "\\BepInEx\\config\\", "UltrakULL"), "*.json");
             foreach (string file in files)

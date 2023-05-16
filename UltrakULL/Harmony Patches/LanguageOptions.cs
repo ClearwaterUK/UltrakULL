@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.IO;
-
+using System.Net.Http;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 using UltrakULL.json;
 using static UltrakULL.CommonFunctions;
 
@@ -15,7 +17,94 @@ namespace UltrakULL.Harmony_Patches
     {
         public static Text languageButtonText;
         public static Text languageButtonTitleText;
+        private static readonly HttpClient Client = new HttpClient();
+        
+        public static bool langFileLocallyExists(string languageTag)
+        {
+            string expectedFileLocation = Path.Combine(Directory.GetCurrentDirectory() + "\\BepInEx\\config\\", "UltrakULL\\") + languageTag + ".json";
+            return File.Exists(expectedFileLocation);
+        }
 
+        public async static Task getOnlineLanguages(GameObject canvasToCopy, Transform optionsParent)
+        {
+            //Hide the local page, get the list of available languages from the remote repo. Make buttons for each entry found and color code them.
+            //Blue - Installed locally. Green - Not installed, available. Yellow - Installed, update available.
+            
+            
+            //Set up the browser page here.
+            GameObject languageBrowserPage = GameObject.Instantiate(canvasToCopy, optionsParent);
+            languageBrowserPage.name = "Language Browser";
+            languageBrowserPage.SetActive(true);
+            
+            languageButtonTitleText = languageBrowserPage.transform.Find("Text").GetComponent<Text>();
+
+            Transform contentParent = languageBrowserPage.transform.Find("Scroll Rect (1)").Find("Contents");
+            foreach (Transform child in contentParent.GetComponentInChildren<Transform>(true))
+                child.gameObject.SetActive(false);
+            VerticalLayoutGroup vGroup = contentParent.GetComponent<VerticalLayoutGroup>();
+            vGroup.spacing = 7.5f;
+            vGroup.childAlignment = TextAnchor.UpperCenter;
+
+            GameObject languageButtonPrefab = optionsParent.Find("Save Slots").Find("Grid").Find("Slot Row").gameObject;
+            
+            
+            //Fetch the language master file from the remote repo
+            Logging.Warn("Obtaining online languages from UltrakULL repo...");
+
+            string masterLanguageUrl = "https://clearwateruk.github.io/mods/ultrakULL/languagesMaster.json";
+            Client.DefaultRequestHeaders.Accept.Add( new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+            Client.DefaultRequestHeaders.UserAgent.TryParseAdd("request");
+            Client.Timeout = TimeSpan.FromSeconds(5);
+            
+            try
+            {
+                string responseJsonRaw = await Client.GetStringAsync(masterLanguageUrl);
+                MasterLanguages responseJson = JsonConvert.DeserializeObject<MasterLanguages>(responseJsonRaw);
+                
+                Console.WriteLine(responseJson.availableLanguages.ToString());
+                foreach(LanguageInfo langInfo in responseJson.availableLanguages)
+                {
+                    Logging.Warn(langInfo.languageTag);
+                    bool fileLocallyExists = langFileLocallyExists(langInfo.languageTag);
+                    
+                    GameObject languageBrowserButtonInstance = GameObject.Instantiate(languageButtonPrefab, contentParent);
+                    languageBrowserButtonInstance.transform.localScale = new Vector3(0.2188482f, 1.123569f, 0.5088629f);
+                    languageBrowserButtonInstance.transform.Find("Select Wrapper").gameObject.SetActive(false);
+                    languageBrowserButtonInstance.transform.Find("Delete Wrapper").gameObject.SetActive(false);
+                    languageBrowserButtonInstance.transform.Find("State Text").gameObject.SetActive(false);
+                    GameObject.Destroy(languageBrowserButtonInstance.GetComponent<SlotRowPanel>());
+
+                    Transform slotTextTf = languageBrowserButtonInstance.transform.Find("Slot Text");
+                    slotTextTf.localScale = new Vector3(4.983107f, 0.970607f, 2.1431f);
+                    slotTextTf.localPosition = new Vector3(0f, 0f, 0f);
+                    Text slotText = slotTextTf.GetComponent<Text>();
+                    slotText.text = langInfo.languageFullName;
+                    slotText.alignment = TextAnchor.MiddleCenter;
+                    slotText.fontSize = 22;
+
+                    Button langButton = languageBrowserButtonInstance.AddComponent<Button>();
+                    langButton.transition = Selectable.Transition.ColorTint;
+                    langButton.colors = new ColorBlock()
+                    {
+                        normalColor = new Color32(255, 255, 255, 255),
+                        highlightedColor = new Color32(255, 0, 0, 255),
+                        pressedColor = new Color32(255, 255, 0, 255),
+                        disabledColor = new Color32(255, 255, 0, 255),
+                        colorMultiplier = 1f,
+                        fadeDuration = 0.1f
+                    };
+                    langButton.targetGraphic = languageBrowserButtonInstance.transform.Find("Panel").GetComponent<Graphic>();
+                    languageBrowserButtonInstance.SetActive(true);
+                }
+            }
+            catch (Exception e)
+            {
+                Logging.Error("Oops");
+                Logging.Error(e.ToString());
+            }
+
+        }
+        
         public static bool Prefix(OptionsMenuToManager __instance)
         {
             if (getCurrentSceneName() == "Main Menu")
@@ -123,11 +212,12 @@ namespace UltrakULL.Harmony_Patches
                 colorMultiplier = 1f,
                 fadeDuration = 0.1f
             };
+            openLangFolderButton.targetGraphic = openLangFolder.transform.Find("Panel").GetComponent<Graphic>();
             openLangFolderButton.onClick.AddListener(delegate { Application.OpenURL(Path.Combine(Directory.GetCurrentDirectory() + "\\BepInEx\\config\\ultrakull")); });
 
 
             RectTransform cRect = languagePage.transform.Find("Scroll Rect (1)").Find("Contents").GetComponent<RectTransform>();
-            cRect.sizeDelta = new Vector2(600f, LanguageManager.allLanguages.Keys.Count * 100);
+            cRect.sizeDelta = new Vector2(600f, (LanguageManager.allLanguages.Keys.Count) * 100);
 
             optionsParent.Find("Gameplay").GetComponent<Button>().onClick.AddListener(delegate { languagePage.SetActive(false); });
             optionsParent.Find("Controls").GetComponent<Button>().onClick.AddListener(delegate { languagePage.SetActive(false); });
@@ -150,6 +240,33 @@ namespace UltrakULL.Harmony_Patches
                 languageButtonTitleText.text = "--" + "LANGUAGES" + "--";
             }
             
+            //Language browser button
+            GameObject langBrowseFolder = GameObject.Instantiate(languageButtonPrefab, contentParent);
+            langBrowseFolder.name = "LangBrowser";
+            langBrowseFolder.transform.localScale = new Vector3(0.2188482f, 1.123569f, 0.5088629f);
+            langBrowseFolder.transform.Find("Select Wrapper").gameObject.SetActive(false);
+            langBrowseFolder.transform.Find("Delete Wrapper").gameObject.SetActive(false);
+            langBrowseFolder.transform.Find("State Text").gameObject.SetActive(false);
+            GameObject.Destroy(langBrowseFolder.GetComponent<SlotRowPanel>());
+
+            Transform slotTextLangBrowseButton = langBrowseFolder.transform.Find("Slot Text");
+            slotTextLangBrowseButton.localScale = new Vector3(4.983107f, 0.970607f, 2.1431f);
+            slotTextLangBrowseButton.localPosition = new Vector3(0f, 0f, 0f);
+            Text langBrowseText = slotTextLangBrowseButton.GetComponent<Text>();
+            langBrowseText.text = "Browse langs online";
+            Button browseLangButton = langBrowseFolder.AddComponent<Button>();
+            browseLangButton.colors = new ColorBlock()
+            {
+                normalColor = new Color32(255, 255, 255, 255),
+                highlightedColor = new Color32(255, 0, 0, 255),
+                pressedColor = new Color32(255, 255, 0, 255),
+                disabledColor = new Color32(255, 255, 0, 255),
+                colorMultiplier = 1f,
+                fadeDuration = 0.1f
+            };
+            browseLangButton.targetGraphic = langBrowseFolder.transform.Find("Panel").GetComponent<Graphic>();
+            browseLangButton.onClick.AddListener(delegate { languagePage.SetActive(false); getOnlineLanguages(pageToDisable,__instance.optionsMenu.transform); });
+
             //Add toggle to the audio tab that allows for enabling/disabling of swapping for spoken dialogue.
             //Instantiate from the original subtitles panel, but the toggle will need to be swapped for a new one, otherwise it will also toggle subtitles.
             

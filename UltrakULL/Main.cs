@@ -288,11 +288,6 @@ namespace UltrakULL
                 Logging.Message("Switching scenes...");
                 string levelName = getCurrentSceneName();
                 
-                /*if (Harmony_Patches.InjectLanguageButton.languageButtonText != null)
-                {
-                    Harmony_Patches.InjectLanguageButton.languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
-                    Harmony_Patches.InjectLanguageButton.languageButtonTitleText.text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
-                }*/
                 
                 //Each scene (level) has an object called Canvas. Most game objects are there.
                 GameObject canvasObj = GetInactiveRootObject("Canvas");
