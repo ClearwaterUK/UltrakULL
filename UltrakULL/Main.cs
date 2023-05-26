@@ -58,7 +58,7 @@ namespace UltrakULL
         public bool updateAvailable;
         public bool updateFailed;
         
-        public Font vcrFont;
+        public static Font vcrFont;
 
         private const string InternalName = "clearwater.ultrakull.ultrakULL";
         private const string InternalVersion = "1.2.0";
@@ -278,6 +278,8 @@ namespace UltrakULL
         //Most of the hook logic and checks go in this function.
         public void onSceneLoaded(Scene scene, LoadSceneMode mode)
         {
+
+
             if (!this.ready || LanguageManager.CurrentLanguage == null)
             {
                 Logging.Error("UltrakULL has been deactivated to prevent crashing. Check the console for any errors!");
@@ -288,7 +290,6 @@ namespace UltrakULL
                 Logging.Message("Switching scenes...");
                 string levelName = getCurrentSceneName();
                 
-                
                 //Each scene (level) has an object called Canvas. Most game objects are there.
                 GameObject canvasObj = GetInactiveRootObject("Canvas");
                 if (!canvasObj)
@@ -298,12 +299,21 @@ namespace UltrakULL
                 }
                 else
                 {
-
                     switch(levelName)
                     {
                         case "Intro": { break; }
                         case "Main Menu":
                         {
+                            try
+                            {
+                                vcrFont = GameObject.Find(canvasObj.name + "/Main Menu (1)/Title/Text").GetComponentInParent<Text>().font;
+                            }
+                            catch (Exception e)
+                            {
+                                
+                            }
+                            
+                            
                             PatchFrontEnd(canvasObj);
                             
                             //(Re)render the UltrakULL status on screen when a language has been (re)loaded.
@@ -316,7 +326,7 @@ namespace UltrakULL
                             ultrakullLogoText.fontSize = 16;
                             
                             //Get the font so it can applied to any generated buttons
-                            this.vcrFont = ultrakullLogoText.font;
+                            vcrFont = ultrakullLogoText.font;
 
                             //Add notif if there's a mod update available
                             if(updateAvailable)

@@ -10,6 +10,8 @@ using UltrakULL.audio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.json
 {
     public static class LanguageManager
@@ -223,6 +225,11 @@ namespace UltrakULL.json
                 LanguageManager.DumpLastLanguage();
                 AudioSwapper.speechFolder = Directory.GetCurrentDirectory() + "\\BepInEx\\config\\ultrakull\\audio\\" + LanguageManager.CurrentLanguage.metadata
                     .langName + "\\";
+                
+                if(getCurrentSceneName() != "Main Menu")
+                {
+                    MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=orange>Language changes will not fully take effect until the current mission is quit or restarted.</color>");
+                }
             }
             else
                 Logging.Warn("No language found with name " + langName);
