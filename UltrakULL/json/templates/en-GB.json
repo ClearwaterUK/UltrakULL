@@ -433,6 +433,7 @@
         "fish_baitTaken": "A fish took the bait.",
         "fish_baitNotWork": "This bait didn't work here!",
         "fish_interrupted": "Fishing interrupted",
+        "fish_noFishBiting": "Nothing seems to be biting here...",
 
         "fish_terminalTitle": "awesome fishing tips",
         "fish_funnyStupidFish": "Funny Stupid Fish (Friend)",

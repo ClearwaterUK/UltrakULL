@@ -86,6 +86,7 @@ namespace UltrakULL.json
         public string fish_baitNotWork;
         public string fish_baitTaken;
         public string fish_interrupted;
+        public string fish_noFishBiting;
         
         public string fish_terminalTitle;
         public string fish_funnyStupidFish;

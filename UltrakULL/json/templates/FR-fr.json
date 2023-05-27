@@ -427,6 +427,7 @@
         "fish_baitTaken": "Un poisson à pris l'appât.",
         "fish_baitNotWork": "Cet appât ne marche pas ici!",
         "fish_interrupted": "Pêche interrompu.",
+        "fish_noFishBiting": "Aucun poisson ne semble mordre ici...",
 
         "fish_terminalTitle": "des conseils super sur la pêche",
         "fish_funnyStupidFish": "Drôle Poisson d'Idiot (Amicale)",

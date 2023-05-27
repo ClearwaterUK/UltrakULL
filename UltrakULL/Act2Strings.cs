@@ -201,6 +201,10 @@ namespace UltrakULL
             {
                 return (LanguageManager.CurrentLanguage.fishing.fish_cookingFailed);
             }
+            if (message.Contains("Nothing seems"))
+            {
+                return (LanguageManager.CurrentLanguage.fishing.fish_noFishBiting);
+            }
             
             
             return "Unknown 5-S string";
