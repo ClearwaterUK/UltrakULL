@@ -1,6 +1,4 @@
-﻿using System;
-using UltrakULL.json;
-using UnityEngine.SceneManagement;
+﻿using UltrakULL.json;
 using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
@@ -49,14 +47,14 @@ namespace UltrakULL
                 return message; //4-S transaction complete
             }
             //For some reason 5-S passes through this function instead of passing through HudMessage. So we'll do this
-            if(getCurrentSceneName() == "Level 5-S")
+            if(GetCurrentSceneName() == "Level 5-S")
             {
                 return StringsParent.GetMessage(message, "", "");
             }
             
 
             //Cybergrind custom pattern fix
-            if (getCurrentSceneName() == "Endless")
+            if (GetCurrentSceneName() == "Endless")
             {
                 if(message.Contains("NO PATTERNS"))
                 {

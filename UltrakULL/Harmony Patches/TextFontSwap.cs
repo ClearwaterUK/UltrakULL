@@ -12,9 +12,9 @@ namespace UltrakULL.Harmony_Patches
             [HarmonyPostfix]
             public static void SwapFont(Text __instance)
             {
-                if(MainPatch.globalFontReady)
+                if(MainPatch.GlobalFontReady)
                 {
-                    __instance.font = MainPatch.globalFont;
+                    __instance.font = MainPatch.GlobalFont;
                 }
             }
         }

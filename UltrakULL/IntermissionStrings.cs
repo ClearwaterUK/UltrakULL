@@ -1,5 +1,4 @@
-﻿using UnityEngine.SceneManagement;
-using UltrakULL.json;
+﻿using UltrakULL.json;
 using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
@@ -22,7 +21,7 @@ namespace UltrakULL
 
         public string GetIntermissionString(string inputString)
         {
-            string currentLevel = getCurrentSceneName();
+            string currentLevel = GetCurrentSceneName();
 
             //Act 2-S is being treated as an intermission. However as it's by far the most text-heavy area in the game, will redirect it to another
             //file for organisation's sake, at least for the time being.

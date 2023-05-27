@@ -19,6 +19,7 @@ This mod's primary purpose is to bridge the gap for localization and translation
 - Languages are consistently developed and updated for a faithful localization and translation of the original game text
 - Dubbing support allows for translated spoken dialogue
 - Supports right-to-left languages such as Arabic and Persian
+- Cyrillic character support for languages such as Russian, Ukrainian and Belarusian
 
 
 # Download

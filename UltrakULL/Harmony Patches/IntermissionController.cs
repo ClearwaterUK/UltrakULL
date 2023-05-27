@@ -25,7 +25,7 @@ namespace UltrakULL.Harmony_Patches
             ___txt.text = ___fullString;
 
             //Section for 2-S Mirage's names.
-            if (getCurrentSceneName() == "Level 2-S")
+            if (GetCurrentSceneName() == "Level 2-S")
             {
                 string openingTag = "<color=grey>";
                 string closingTag = "</color>";

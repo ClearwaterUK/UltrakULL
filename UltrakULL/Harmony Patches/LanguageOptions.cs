@@ -196,7 +196,7 @@ namespace UltrakULL.Harmony_Patches
                         //Add click listener to download the file when clicked on.
                         langButton.onClick.AddListener(delegate
                         {
-                            if(getCurrentSceneName() != "Main Menu")
+                            if(GetCurrentSceneName() != "Main Menu")
                             {
                                 MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=orange>Languages can not be downloaded while in-game. Please return to the main menu first.</color>");
                             }
@@ -335,7 +335,7 @@ namespace UltrakULL.Harmony_Patches
             hasAlreadyFetchedLanguages = false;
             languageButtons.Clear();
             
-            if (getCurrentSceneName() == "Main Menu")
+            if (GetCurrentSceneName() == "Main Menu")
             {
                 Transform panel = __instance.pauseMenu.transform.Find("Panel");
                 GameObject discordButton = panel.Find("Discord").gameObject;

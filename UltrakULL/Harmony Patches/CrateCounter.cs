@@ -15,7 +15,7 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool CoinsToPoints_MyPatch(CrateCounter __instance, int ___savedCoins)
         {
-            if (getCurrentSceneName() == "Level 4-S")
+            if (GetCurrentSceneName() == "Level 4-S")
             {
                 GameProgressSaver.AddMoney(___savedCoins * 100);
 

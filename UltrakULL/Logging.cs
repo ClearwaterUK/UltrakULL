@@ -5,7 +5,7 @@ namespace UltrakULL
 {
     public static class Logging 
     {
-        public static ManualLogSource UllLogger = BepInEx.Logging.Logger.CreateLogSource("ULL LOGGING");
+        public static ManualLogSource UllLogger = Logger.CreateLogSource("ULL LOGGING");
 
         public static void Debug(string text)
         {

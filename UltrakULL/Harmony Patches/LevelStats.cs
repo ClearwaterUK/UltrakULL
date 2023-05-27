@@ -35,7 +35,7 @@ namespace UltrakULL.Harmony_Patches
                 StockMapInfo instance2 = StockMapInfo.Instance;
                 if (instance2 != null)
                 {
-                    __instance.levelName.text = LevelNames.GetDiscordLevelName(getCurrentSceneName());
+                    __instance.levelName.text = LevelNames.GetDiscordLevelName(GetCurrentSceneName());
                 }
             }
         }

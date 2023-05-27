@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-using UltrakULL.json;
+﻿using UltrakULL.json;
 using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
@@ -13,17 +11,17 @@ namespace UltrakULL
             string fullMessage = message + message2;
             if (fullMessage.Contains("ITEMS"))
             {
-                previousHudMessage = LanguageManager.CurrentLanguage.act1.act1_limboFirst_items1 + " '<color=orange>" + input + "'</color> " + LanguageManager.CurrentLanguage.act1.act1_limboFirst_items2;
+                PreviousHudMessage = LanguageManager.CurrentLanguage.act1.act1_limboFirst_items1 + " '<color=orange>" + input + "'</color> " + LanguageManager.CurrentLanguage.act1.act1_limboFirst_items2;
                 return LanguageManager.CurrentLanguage.act1.act1_limboFirst_items1 + " '<color=orange>" + input + "'</color> " + LanguageManager.CurrentLanguage.act1.act1_limboFirst_items2;
             }
             if (fullMessage.Contains("NAILGUN"))
             {
-                previousHudMessage = LanguageManager.CurrentLanguage.act1.act1_limboFirst_nailgun1 + " '<color=orange>" + input + "'</color> " + LanguageManager.CurrentLanguage.act1.act1_limboFirst_nailgun2 + "\n" + LanguageManager.CurrentLanguage.act1.act1_limboFirst_nailgun3;
+                PreviousHudMessage = LanguageManager.CurrentLanguage.act1.act1_limboFirst_nailgun1 + " '<color=orange>" + input + "'</color> " + LanguageManager.CurrentLanguage.act1.act1_limboFirst_nailgun2 + "\n" + LanguageManager.CurrentLanguage.act1.act1_limboFirst_nailgun3;
                 return LanguageManager.CurrentLanguage.act1.act1_limboFirst_nailgun1 + " '<color=orange>" + input + "'</color> " + LanguageManager.CurrentLanguage.act1.act1_limboFirst_nailgun2 + "\n" + LanguageManager.CurrentLanguage.act1.act1_limboFirst_nailgun3;
             }
 
             //Band-aid fix
-            return previousHudMessage;
+            return PreviousHudMessage;
         }
         //1-2 - The Burning World
         private static string Level12(string message, string message2)
@@ -146,7 +144,7 @@ namespace UltrakULL
 
         public static string GetMessage(string message, string message2, string input)
         {
-            string currentLevel = getCurrentSceneName();
+            string currentLevel = GetCurrentSceneName();
             string fullMessage = message + message2;
 
 
@@ -236,7 +234,7 @@ namespace UltrakULL
 
         public static string GetLevelName()
         {
-            string currentLevel = getCurrentSceneName();
+            string currentLevel = GetCurrentSceneName();
 
             switch (currentLevel)
             {

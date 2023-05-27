@@ -9,11 +9,8 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using UltrakULL.json;
-using System.Linq;
 using BepInEx;
 using static UltrakULL.CommonFunctions;
-using static UltrakULL.ModPatches;
-//using UMM;
 
 /*
  *	UltrakULL (Ultrakill Language Library)
@@ -28,7 +25,6 @@ using static UltrakULL.ModPatches;
  * 
  *  -- STUFF FOR FUTURE UPDATES --
  *  - Swap out rank textures in HUD for translation (there's a mod already for this, shall look into)
- *  - Replace the default font with a version that has better special char + cyrillic support (someone already made a global font, just need to see how to implement)
  *  - Finish audio dubbing documentation
  *  - Swap audio file format for dubbing from .wav to .ogg, will reduce overall mod size.
  *  
@@ -46,29 +42,29 @@ namespace UltrakULL
 {
     //[UKPlugin(InternalName, "UltrakULL (Ultrakill Language Library)", InternalVersion,"A localization and translation plugin for ULTRAKILL. Created by Clearwater.", true,false)]
 
-    [BepInPlugin(GUID, InternalName, InternalVersion)]
+    [BepInPlugin(Guid, InternalName, InternalVersion)]
     public class MainPatch : BaseUnityPlugin
     {
-        public const string GUID = "clearwater.ultrakill.ultrakull";
+        private const string Guid = "clearwater.ultrakill.ultrakull";
         private const string InternalName = "clearwater.ultrakull.ultrakULL";
         private const string InternalVersion = "1.2.0";
 
-        public static MainPatch instance;
+        public static MainPatch Instance;
         public GameObject ultrakullLogo;
         
         public bool ready;
         public bool updateAvailable;
         public bool updateFailed;
-        public static bool globalFontReady;
+        public static bool GlobalFontReady;
         
-        public static Font vcrFont;
+        public static Font VcrFont;
         private static readonly HttpClient Client = new HttpClient();
         
-        public static Font globalFont;
+        public static Font GlobalFont;
 
         public MainPatch()
         {
-            instance = this;
+            Instance = this;
 
         }
 
@@ -218,52 +214,52 @@ namespace UltrakULL
             pressToSkipText.text = LanguageManager.CurrentLanguage.misc.pressToSkip;
 
             //Classic HUD
-            GameObject classicHudBW = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "Crosshair Filler"), "AltHud"), "Filler");
+            GameObject classicHudBw = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "Crosshair Filler"), "AltHud"), "Filler");
             GameObject classicHudColor = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "Crosshair Filler"), "AltHud (2)"), "Filler");
 
-            Text classicHudBWHealth = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Health"), "Title"));
-            Text classicHudBWHealthShow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Health"), "Title (1)"));
+            Text classicHudBwHealth = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Health"), "Title"));
+            Text classicHudBwHealthShow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Health"), "Title (1)"));
             Text classicHudColorHealth = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Health"), "Title"));
             Text classicHudColorHealthShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Health"), "Title (1)"));
-            classicHudBWHealth.text = LanguageManager.CurrentLanguage.misc.classicHud_health;
+            classicHudBwHealth.text = LanguageManager.CurrentLanguage.misc.classicHud_health;
             classicHudColorHealth.text = LanguageManager.CurrentLanguage.misc.classicHud_health;
-            classicHudBWHealthShow.text = LanguageManager.CurrentLanguage.misc.classicHud_health;
+            classicHudBwHealthShow.text = LanguageManager.CurrentLanguage.misc.classicHud_health;
             classicHudColorHealthShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_health;
 
-            Text classicHudBWStamina = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Stamina"), "Title"));
+            Text classicHudBwStamina = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Stamina"), "Title"));
             Text classicHudColorStamina = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Stamina"), "Title"));
-            Text classicHudBWStaminaShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Stamina"), "Title (1)"));
+            Text classicHudBwStaminaShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Stamina"), "Title (1)"));
             Text classicHudColorStaminaShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Stamina"), "Title (1)"));
-            classicHudBWStamina.text = LanguageManager.CurrentLanguage.misc.classicHud_stamina;
+            classicHudBwStamina.text = LanguageManager.CurrentLanguage.misc.classicHud_stamina;
             classicHudColorStamina.text = LanguageManager.CurrentLanguage.misc.classicHud_stamina;
-            classicHudBWStaminaShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_stamina;
+            classicHudBwStaminaShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_stamina;
             classicHudColorStaminaShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_stamina;
 
-            Text classicHudBWWeapon = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Weapon"), "Title"));
+            Text classicHudBwWeapon = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Weapon"), "Title"));
             Text classicHudColorWeapon = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Weapon"), "Title"));
-            Text classicHudBWWeaponShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Weapon"), "Title (1)"));
+            Text classicHudBwWeaponShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Weapon"), "Title (1)"));
             Text classicHudColorWeaponShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Weapon"), "Title (1)"));
-            classicHudBWWeapon.text = LanguageManager.CurrentLanguage.misc.classicHud_weapon;
+            classicHudBwWeapon.text = LanguageManager.CurrentLanguage.misc.classicHud_weapon;
             classicHudColorWeapon.text = LanguageManager.CurrentLanguage.misc.classicHud_weapon;
-            classicHudBWWeaponShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_weapon;
+            classicHudBwWeaponShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_weapon;
             classicHudColorWeaponShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_weapon;
 
-            Text classicHudBWArm = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Arm"), "Title"));
+            Text classicHudBwArm = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Arm"), "Title"));
             Text classicHudColorArm = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Arm"), "Title"));
-            Text classicHudBWArmShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "Arm"), "Title (1)"));
+            Text classicHudBwArmShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Arm"), "Title (1)"));
             Text classicHudColorArmShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Arm"), "Title (1)"));
-            classicHudBWArm.text = LanguageManager.CurrentLanguage.misc.classicHud_arm;
+            classicHudBwArm.text = LanguageManager.CurrentLanguage.misc.classicHud_arm;
             classicHudColorArm.text = LanguageManager.CurrentLanguage.misc.classicHud_arm;
-            classicHudBWArmShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_arm;
+            classicHudBwArmShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_arm;
             classicHudColorArmShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_arm;
 
-            Text classicHudBWRailcannon = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "RailcannonMeter (1)"), "Title"));
+            Text classicHudBwRailcannon = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "RailcannonMeter (1)"), "Title"));
             Text classicHudColorRailcannon = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "RailcannonMeter"), "Title"));
-            Text classicHudBWRailcannonShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBW, "RailcannonMeter (1)"), "Title (1)"));
+            Text classicHudBwRailcannonShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "RailcannonMeter (1)"), "Title (1)"));
             Text classicHudColorRailcannonShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "RailcannonMeter"), "Title (1)"));
-            classicHudBWRailcannon.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
+            classicHudBwRailcannon.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
             classicHudColorRailcannon.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
-            classicHudBWRailcannonShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
+            classicHudBwRailcannonShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
             classicHudColorRailcannonShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
 
             //Close prompt when reading book
@@ -281,12 +277,11 @@ namespace UltrakULL
             if (!this.ready || LanguageManager.CurrentLanguage == null)
             {
                 Logging.Error("UltrakULL has been deactivated to prevent crashing. Check the console for any errors!");
-                return;
             }
             else
             {
                 Logging.Message("Switching scenes...");
-                string levelName = getCurrentSceneName();
+                string levelName = GetCurrentSceneName();
                 
                 //Each scene (level) has an object called Canvas. Most game objects are there.
                 GameObject canvasObj = GetInactiveRootObject("Canvas");
@@ -304,11 +299,11 @@ namespace UltrakULL
                         {
                             try
                             {
-                                vcrFont = GameObject.Find(canvasObj.name + "/Main Menu (1)/Title/Text").GetComponentInParent<Text>().font;
+                                VcrFont = GameObject.Find(canvasObj.name + "/Main Menu (1)/Title/Text").GetComponentInParent<Text>().font;
                             }
                             catch (Exception e)
                             {
-                                
+                                Logging.Warn("VCR font already defined");
                             }
                             
                             
@@ -324,7 +319,7 @@ namespace UltrakULL
                             ultrakullLogoText.fontSize = 16;
                             
                             //Get the font so it can applied to any generated buttons
-                            vcrFont = ultrakullLogoText.font;
+                            VcrFont = ultrakullLogoText.font;
 
                             //Add notif if there's a mod update available
                             if(updateAvailable)
@@ -403,7 +398,7 @@ namespace UltrakULL
                                 else if (levelName.Contains("P-"))
                                 {
                                     Logging.Message("Prime");
-                                    PrimeSanctum primeSanctumClass = new PrimeSanctum(ref canvasObj);
+                                    PrimeSanctum primeSanctumClass = new PrimeSanctum();
                                 }
                                 else if (levelName == "uk_construct")
                                 {
@@ -423,7 +418,7 @@ namespace UltrakULL
                                 else if (levelName == "CreditsMuseum2")
                                 {
                                     Logging.Message("DevMuseum");
-                                    DevMuseum devMuseum = new DevMuseum(ref canvasObj);
+                                    DevMuseum devMuseum = new DevMuseum();
                                 }
                             }
                             break;
@@ -433,21 +428,21 @@ namespace UltrakULL
                 //Bunch of things the mod should do *after* loading to avoid problems.
                 PostInitPatches(canvasObj);
                 
-                if(globalFontReady)
+                if(GlobalFontReady)
                 {
-                    swapFont();
+                    SwapFont();
                 }
                 
             }
 
         }
         
-        public void swapFont()
+        public void SwapFont()
         {
             Text[] yourLabels = FindObjectsOfType<Text>();
             foreach (Text text in yourLabels)
             {
-                text.font = globalFont;
+                text.font = GlobalFont;
             }
         }
 
@@ -458,7 +453,7 @@ namespace UltrakULL
 
         private IEnumerator ApplyPostFixes(GameObject frontEnd)
         {
-            if (getCurrentSceneName() == "Main Menu")
+            if (GetCurrentSceneName() == "Main Menu")
             {
                  yield return new WaitForSeconds(0.50f);
                  
@@ -472,7 +467,7 @@ namespace UltrakULL
             GameObject ummRestartButton = null;
 
             
-            if(getCurrentSceneName() == "Main Menu")
+            if(GetCurrentSceneName() == "Main Menu")
             {
                 GameObject titleObject = GetGameObjectChild(frontEnd, "Main Menu (1)");
 
@@ -559,7 +554,7 @@ namespace UltrakULL
             }
         }
         
-        public void loadFonts()
+        public void LoadFonts()
         {
             Logging.Warn("Loading font resource bundle...");
             AssetBundle fontBundle = AssetBundle.LoadFromFile(
@@ -581,8 +576,8 @@ namespace UltrakULL
                 else
                 {
                     Logging.Warn("Font loaded.");
-                    globalFont = loadedFont;
-                    globalFontReady = true;
+                    GlobalFont = loadedFont;
+                    GlobalFontReady = true;
                 }
             }
                 
@@ -602,7 +597,7 @@ namespace UltrakULL
                 CheckForUpdates();
                 
                 Logging.Warn("--- Loading external fonts ---");
-                loadFonts();
+                LoadFonts();
             
                 Logging.Warn("--- Initializing JSON parser ---");
                 InitJsonParser();

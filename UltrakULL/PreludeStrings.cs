@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-using UltrakULL.json;
+﻿using UltrakULL.json;
 using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
@@ -106,7 +104,7 @@ namespace UltrakULL
 
         public static string GetMessage(string message, string message2, string input)
         {
-            string currentLevel = getCurrentSceneName();
+            string currentLevel = GetCurrentSceneName();
             switch (currentLevel)
             {
                 case "Level 0-1":
@@ -154,7 +152,7 @@ namespace UltrakULL
 
         public static string GetLevelName()
         {
-            string currentLevel = getCurrentSceneName();
+            string currentLevel = GetCurrentSceneName();
 
             switch (currentLevel)
             {

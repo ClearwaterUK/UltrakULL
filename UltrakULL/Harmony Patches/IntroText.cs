@@ -20,8 +20,8 @@ namespace UltrakULL.Harmony_Patches
             TutorialStrings tutStrings = new TutorialStrings(ref canvasObj);
             ___fullString = ___txt.text;
 
-            if (___fullString[0] == 'B') { ___fullString = tutStrings.introFirstPage; }
-            else { ___fullString = tutStrings.introSecondPage; }
+            if (___fullString[0] == 'B') { ___fullString = tutStrings.IntroFirstPage; }
+            else { ___fullString = tutStrings.IntroSecondPage; }
             ___txt.text = ___fullString;
 
             return true;

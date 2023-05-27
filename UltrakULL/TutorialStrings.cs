@@ -9,7 +9,7 @@ namespace UltrakULL
 {
     class TutorialStrings
     {
-        public string introFirstPage;
+        public string IntroFirstPage;
 
         //+ "Y/N ~ \n \n"
         //+ " AUDIO§         Ä½ \n"
@@ -21,7 +21,7 @@ namespace UltrakULL
         //+ "+ALL SYSTEMS OPERATIONAL_½ \n"
         //+ "LOADING STATUS UPDATE§ \n";
 
-        public string introSecondPage;
+        public string IntroSecondPage;
 
         /*
          *  MACHINE ID:            V1½½
@@ -255,7 +255,7 @@ namespace UltrakULL
 
         public TutorialStrings(ref GameObject canvasObj)
         {
-            this.introFirstPage =
+            this.IntroFirstPage =
                 LanguageManager.CurrentLanguage.tutorial.tutorial_introStartup1 + "#" + LanguageManager.CurrentLanguage.tutorial.tutorial_introStartup2 + "½ \n\n"
 
                 + LanguageManager.CurrentLanguage.tutorial.tutorial_introVersion1 + "# \n"
@@ -277,7 +277,7 @@ namespace UltrakULL
                 + "+" + LanguageManager.CurrentLanguage.tutorial.tutorial_systemsOperational + "_½ \n"
                 + LanguageManager.CurrentLanguage.tutorial.tutorial_introLoadStatus + "§";
 
-            this.introSecondPage =
+            this.IntroSecondPage =
             LanguageManager.CurrentLanguage.tutorial.tutorial_introID1 + ":     " + LanguageManager.CurrentLanguage.tutorial.tutorial_introID2 + "½½ \n"
             + LanguageManager.CurrentLanguage.tutorial.tutorial_introLocation1 + ":     " + LanguageManager.CurrentLanguage.tutorial.tutorial_introLocation2 + "@½½ \n"
             + LanguageManager.CurrentLanguage.tutorial.tutorial_introObjective1 + ":    " + LanguageManager.CurrentLanguage.tutorial.tutorial_introObjective2 + "½½ \n\n"

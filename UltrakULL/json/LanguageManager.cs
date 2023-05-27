@@ -221,11 +221,11 @@ namespace UltrakULL.json
                     CurrentLanguage = ApplyRtl(CurrentLanguage);
                 }
                 
-                MainPatch.instance.onSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
+                MainPatch.Instance.onSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
                 LanguageManager.DumpLastLanguage();
-                AudioSwapper.speechFolder = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull", "audio", LanguageManager.CurrentLanguage.metadata.langName) + Path.DirectorySeparatorChar;
+                AudioSwapper.SpeechFolder = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull", "audio", LanguageManager.CurrentLanguage.metadata.langName) + Path.DirectorySeparatorChar;
 					
-                if(getCurrentSceneName() != "Main Menu")
+                if(GetCurrentSceneName() != "Main Menu")
                 {
                     MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=orange>Language changes will not fully take effect until the current mission is quit or restarted.</color>");
                 }

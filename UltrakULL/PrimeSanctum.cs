@@ -1,7 +1,6 @@
 ﻿using UltrakULL.audio;
 using UltrakULL.json;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 using static UltrakULL.CommonFunctions;
@@ -12,7 +11,7 @@ namespace UltrakULL
     {
         private void PatchSecretText(PrimeSanctumStrings strings)
         {
-            string currentLevel = getCurrentSceneName();
+            string currentLevel = GetCurrentSceneName();
 
             Text secretText = null;
 
@@ -38,9 +37,9 @@ namespace UltrakULL
             
         }
 
-        public PrimeSanctum(ref GameObject level)
+        public PrimeSanctum()
         {
-            string currentLevel = getCurrentSceneName();
+            string currentLevel = GetCurrentSceneName();
 
             if (currentLevel.Contains("P-1"))
             {
@@ -49,7 +48,7 @@ namespace UltrakULL
                 PatchResultsScreen(levelname, "");
                 
                 PatchSecretText(primeSanctumChallengeStrings);
-                AudioSwapper.AudioSwap(getCurrentSceneName());
+                AudioSwapper.AudioSwap(GetCurrentSceneName());
             }
             else if (currentLevel.Contains("P-2"))
             {
@@ -103,7 +102,7 @@ namespace UltrakULL
                 PatchResultsScreen(levelname, "");
                 
                 PatchSecretText(primeSanctumChallengeStrings);
-                AudioSwapper.AudioSwap(getCurrentSceneName());
+                AudioSwapper.AudioSwap(GetCurrentSceneName());
             }
         }
     }

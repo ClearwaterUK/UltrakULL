@@ -1,12 +1,11 @@
-﻿using UnityEngine.SceneManagement;
-using UltrakULL.json;
+﻿using UltrakULL.json;
 using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
 {
     public static class Act2Strings
     {
-        private static string previousMessage = "";
+        private static string _previousMessage = "";
 
         private static string Level41()
         {
@@ -52,7 +51,7 @@ namespace UltrakULL
             //Bandaid fix for some edge cases people have been reporting.
             if (fullMessage == "")
             {
-                fullMessage = previousMessage;
+                fullMessage = _previousMessage;
                 return fullMessage;
             }
 
@@ -67,17 +66,17 @@ namespace UltrakULL
             }
             if (fullMessage.Contains("Hold"))
             {
-                previousMessage = LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash1 + " <color=orange>" + input + "</color> " + LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash2;
+                _previousMessage = LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash1 + " <color=orange>" + input + "</color> " + LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash2;
                 return LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash1 + " <color=orange>" + input + "</color> " + LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash2;
             }
             if (fullMessage.Contains("HEAVY"))
             {
-                previousMessage = LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash3;
+                _previousMessage = LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash3;
                 return LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplash3;
             }
             if (fullMessage.Contains("HARD DAMAGE"))
             {
-                previousMessage = LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplashHardDamage1 + "\n"
+                _previousMessage = LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplashHardDamage1 + "\n"
                     + LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplashHardDamage2;
 
                 return LanguageManager.CurrentLanguage.act2.act2_greedFourth_whiplashHardDamage1 + "\n"
@@ -228,7 +227,7 @@ namespace UltrakULL
 
         public static string GetMessage(string message, string message2, string input)
         {
-            string currentLevel = getCurrentSceneName();
+            string currentLevel = GetCurrentSceneName();
             string fullMessage = message + message2;
 
             if(fullMessage.Contains("opens"))
@@ -317,7 +316,7 @@ namespace UltrakULL
 
         public static string GetLevelName()
         {
-            string currentLevel = getCurrentSceneName();
+            string currentLevel = GetCurrentSceneName();
 
             switch (currentLevel)
             {

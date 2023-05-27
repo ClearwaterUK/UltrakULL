@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
@@ -17,7 +16,7 @@ namespace UltrakULL
             Text testamentPanelTitle = null;
 
             //0-S
-            if (getCurrentSceneName() == "Level 0-S")
+            if (GetCurrentSceneName() == "Level 0-S")
             {
                 GameObject finalRoom = GameObject.Find("FinalRoom 2");
                 
@@ -29,7 +28,7 @@ namespace UltrakULL
                 testamentPanelTitle.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_prelude_testamentTitle;
             }
             //1-S
-            else if (getCurrentSceneName() == "Level 1-S")
+            else if (GetCurrentSceneName() == "Level 1-S")
             {
                 GameObject finalRoom = GameObject.Find("5 - Finale");
                 
@@ -42,7 +41,7 @@ namespace UltrakULL
                 
             }
             //4-S
-            else if (getCurrentSceneName() == "Level 4-S")
+            else if (GetCurrentSceneName() == "Level 4-S")
             {
                 testamentPanelTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(testamentRoom, "4 Stuff"), "FinalRoom 2"), "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"),"Panel"),"Title"));
             
@@ -51,7 +50,7 @@ namespace UltrakULL
 
             }
             //5-S   
-            else if (getCurrentSceneName() == "Level 5-S")
+            else if (GetCurrentSceneName() == "Level 5-S")
             {
                 GameObject finalRoom = GameObject.Find("FinalRoom 2");
                 
@@ -127,7 +126,7 @@ namespace UltrakULL
                 }
         }
         
-        public void patch5S(ref GameObject canvasObj)
+        public void Patch5S(ref GameObject canvasObj)
         {
             GameObject powerGauge = GetGameObjectChild(GetInactiveRootObject("FishingCanvas"),"Power Meter");
             Text distanceFar = GetTextfromGameObject(GetGameObjectChild(powerGauge,"Text"));
@@ -146,8 +145,8 @@ namespace UltrakULL
         public SecretLevels(ref GameObject canvasObj)
         {
             GameObject player = GameObject.Find("Player");
-            this.currentLevel = getCurrentSceneName();
-            GameObject testamentRoom = null;
+            this.currentLevel = GetCurrentSceneName();
+            GameObject testamentRoom;
 
             switch (this.currentLevel)
             {
@@ -155,7 +154,7 @@ namespace UltrakULL
                 case "Level 1-S": {testamentRoom = GameObject.Find("5 - Finale"); PatchTestament(ref testamentRoom); break; }
                 case "Level 2-S": {Act1Vn.PatchPrompts(ref canvasObj); break; }
                 case "Level 4-S": {testamentRoom = GetInactiveRootObject("4 - Boulder Run");PatchTestament(ref testamentRoom); break; }
-                case "Level 5-S": {testamentRoom = GetInactiveRootObject("FinalRoom 2");PatchTestament(ref testamentRoom); patch5S(ref canvasObj); break; }
+                case "Level 5-S": {testamentRoom = GetInactiveRootObject("FinalRoom 2");PatchTestament(ref testamentRoom); Patch5S(ref canvasObj); break; }
             }
             GameObject secretLevelResults = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(player, "Main Camera"), "HUD Camera"), "HUD"), "FinishCanvas");
 

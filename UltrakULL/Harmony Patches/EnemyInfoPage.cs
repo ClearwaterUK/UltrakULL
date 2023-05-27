@@ -14,7 +14,7 @@ namespace UltrakULL.Harmony_Patches
         public static void DisplayInfo_Postfix(SpawnableObject source, EnemyInfoPage __instance, Text ___enemyPageTitle, Text ___enemyPageContent)
         {
             string enemyName = EnemyBios.GetName(source.objectName);
-            string enemyType = EnemyBios.getType(source.type);
+            string enemyType = EnemyBios.GetType(source.type);
             string enemyDescription = EnemyBios.GetDescription(source.objectName);
             string enemyStrategy = EnemyBios.GetStrategy(source.objectName);
 

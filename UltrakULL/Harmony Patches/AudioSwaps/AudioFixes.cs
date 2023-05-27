@@ -12,7 +12,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
         [HarmonyPostfix]
         public static void Respawn_SwapperFix()
         {
-            AudioSwapper.AudioSwap(getCurrentSceneName());
+            AudioSwapper.AudioSwap(GetCurrentSceneName());
         }
         
     }

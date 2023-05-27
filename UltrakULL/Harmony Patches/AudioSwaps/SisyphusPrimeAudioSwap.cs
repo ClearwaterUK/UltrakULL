@@ -18,7 +18,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
                 return;
             }
             
-            string sisyphusPrimeFolder =  AudioSwapper.speechFolder + "sisyphusPrime\\";
+            string sisyphusPrimeFolder =  AudioSwapper.SpeechFolder + "sisyphusPrime\\";
             
             AudioClip[] begoneAttacks  = __instance.clapVoice;
             for(int x = 0; x < begoneAttacks.Length; x++)

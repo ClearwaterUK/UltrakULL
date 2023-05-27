@@ -40,7 +40,7 @@ namespace UltrakULL
             }
         }
 
-        public static string getType(string originaltype)
+        public static string GetType(string originaltype)
         {
             switch (originaltype)
             {

@@ -11,7 +11,7 @@ namespace UltrakULL
 {
     public static class CommonFunctions
     {
-        public static ColorBlock ukButtonColors = new ColorBlock()
+        public static ColorBlock UkButtonColors = new ColorBlock()
         {
             normalColor = new Color(0, 0, 0, 0.512f),
             highlightedColor = new Color(1, 1, 1, 0.502f),
@@ -22,7 +22,7 @@ namespace UltrakULL
             fadeDuration = 0.1f
         };
         
-        public static string previousHudMessage;
+        public static string PreviousHudMessage;
         
         public static IEnumerator WaitforSeconds(float seconds)
         {
@@ -48,7 +48,7 @@ namespace UltrakULL
             return null;
         }
         
-        public static string getCurrentSceneName()
+        public static string GetCurrentSceneName()
         {
             return SceneHelper.CurrentScene;
         }
@@ -80,19 +80,18 @@ namespace UltrakULL
           button.GetComponent<RectTransform>().anchorMin = new Vector2(0,0);
           //button.GetComponent<RectTransform>().SetPivot(PivotPresets.MiddleCenter);
           button.GetComponent<Image>().type = Image.Type.Sliced;
-          button.GetComponent<Button>().targetGraphic = (Graphic) button.GetComponent<Image>();
+          button.GetComponent<Button>().targetGraphic = button.GetComponent<Image>();
           GameObject text = CreateText();
           button.GetComponent<Button>().colors = colors;
-          
-          
+
           text.name = "Text";
-          text.GetComponent<RectTransform>().SetParent((Transform) button.GetComponent<RectTransform>());
+          text.GetComponent<RectTransform>().SetParent(button.GetComponent<RectTransform>());
           text.GetComponent<RectTransform>().anchorMax = new Vector2(1,1);
           text.GetComponent<RectTransform>().anchorMin = new Vector2(0,0);
           text.GetComponent<RectTransform>().sizeDelta = Vector2.zero;
           //text.GetComponent<RectTransform>().SetPivot(PivotPresets.MiddleCenter);
           text.GetComponent<Text>().text = buttonText;
-          text.GetComponent<Text>().font = MainPatch.vcrFont;
+          text.GetComponent<Text>().font = MainPatch.VcrFont;
           text.GetComponent<Text>().fontSize = 32;
           text.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
           text.GetComponent<Text>().color = Color.white;
@@ -111,7 +110,7 @@ namespace UltrakULL
             //text.GetComponent<RectTransform>().SetPivot(PivotPresets.MiddleCenter);
             text.AddComponent<Text>();
             text.GetComponent<Text>().text = "Text";
-            text.GetComponent<Text>().font = MainPatch.vcrFont;
+            text.GetComponent<Text>().font = MainPatch.VcrFont;
             text.GetComponent<Text>().fontSize = 32;
             text.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
             text.GetComponent<Text>().color = Color.black;

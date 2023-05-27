@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using UltrakULL.Harmony_Patches;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -806,7 +805,7 @@ namespace UltrakULL
             //Options are in two different locations.
             //On the main menu, it's root/Canvas/OptionsMenu.
             //In-game it's root/Canvas/OptionsMenu.
-            if (getCurrentSceneName() == "Main Menu")
+            if (GetCurrentSceneName() == "Main Menu")
             {
                 this.optionsMenu = GetGameObjectChild(game, "OptionsMenu");
             }

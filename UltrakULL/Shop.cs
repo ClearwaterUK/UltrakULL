@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UltrakULL.json;
 using static UltrakULL.CommonFunctions;
@@ -10,8 +8,8 @@ namespace UltrakULL
 {
     public static class Shop
     {
-        public static GameObject originalShop = null;
-        public static GameObject bossShop = null;
+        public static GameObject OriginalShop = null;
+        public static GameObject BossShop = null;
         
         private static void PatchShopFrontEnd(ref List<GameObject> shopsToPatch)
         {
@@ -102,7 +100,7 @@ namespace UltrakULL
                 Text cgExitDescriptionText = GetTextfromGameObject(GetGameObjectChild(cgExit, "Text"));
 
                 Text cgExitDescription = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgExit, "CyberGrindButton (1)"), "Text"));
-                if (getCurrentSceneName() == "uk_construct")
+                if (GetCurrentSceneName() == "uk_construct")
                 {
                     cgExitDescription.text = LanguageManager.CurrentLanguage.frontend.mainmenu_quit;
                 }
@@ -905,20 +903,20 @@ namespace UltrakULL
         public static void PatchShop(ref GameObject level)
         {
             //No shops in secret levels so immediately back out
-            if (getCurrentSceneName().Contains("-S"))
+            if (GetCurrentSceneName().Contains("-S"))
             {
                 return;
             }
             
             List<GameObject> shopsToPatch = new List<GameObject>();
             //Start by finding what level we're on and what shopObjects need patching.
-            if (getCurrentSceneName() == "uk_construct")
+            if (GetCurrentSceneName() == "uk_construct")
             {
                 shopsToPatch.Add(GetGameObjectChild(GameObject.Find("Shop"),"Canvas"));
             }
-            else if(getCurrentSceneName().Contains("P-"))
+            else if(GetCurrentSceneName().Contains("P-"))
             {
-                switch(getCurrentSceneName())
+                switch(GetCurrentSceneName())
                 {
                     case "Level P-1":
                     {
@@ -938,7 +936,7 @@ namespace UltrakULL
                 }
             }
             //Specific fix for 6-1
-            else if(getCurrentSceneName() == "Level 6-1")
+            else if(GetCurrentSceneName() == "Level 6-1")
             {
                 shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Interiors"),"FirstRoom"),"Room"),"Shop"),"Canvas"));
             }
@@ -948,7 +946,7 @@ namespace UltrakULL
                 shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("FirstRoom"), "Room"), "Shop"), "Canvas"));
             } 
 
-            switch(getCurrentSceneName())
+            switch(GetCurrentSceneName())
             {
                 case "Level 0-3":
                 {

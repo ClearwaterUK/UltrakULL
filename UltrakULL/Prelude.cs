@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 using static UltrakULL.CommonFunctions;
@@ -23,7 +22,7 @@ namespace UltrakULL
 
         public Prelude(ref GameObject level)
         {
-            string currentLevel = getCurrentSceneName();
+            string currentLevel = GetCurrentSceneName();
 
             if (currentLevel == "Level 0-1")
             {

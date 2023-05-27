@@ -11,7 +11,7 @@ namespace UltrakULL.audio
 {
     public static class AudioSwapper
     {
-        public static string speechFolder = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull", "audio", LanguageManager.CurrentLanguage.metadata
+        public static string SpeechFolder = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull", "audio", LanguageManager.CurrentLanguage.metadata
         .langName) + Path.DirectorySeparatorChar;
         
         public static AudioClip SwapClipWithFile(AudioClip sourceClip, string audioFilePath)
@@ -47,7 +47,7 @@ namespace UltrakULL.audio
                 return;
             }
             
-            speechFolder = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull", "audio", LanguageManager.CurrentLanguage.metadata
+            SpeechFolder = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull", "audio", LanguageManager.CurrentLanguage.metadata
                 .langName) + Path.DirectorySeparatorChar;
             
             //Since the makes a clone of the arena gameObject which is used, wait a small period of time for the new gameObject to be accessible before accessing it.
@@ -55,7 +55,7 @@ namespace UltrakULL.audio
             
             if (levelName == "Level 3-2")
             {
-                string gabeFirstFolder = speechFolder + "gabrielBossFirst" + Path.DirectorySeparatorChar;
+                string gabeFirstFolder = SpeechFolder + "gabrielBossFirst" + Path.DirectorySeparatorChar;
 
                 //Intro lines
                 GameObject gabeIntroFirst = GetInactiveRootObject("gab_Intro1");
@@ -93,7 +93,7 @@ namespace UltrakULL.audio
             }
             else if(levelName == "Level P-1")
             {
-                string minosPrimeFolder = speechFolder + "minosPrime" + Path.DirectorySeparatorChar;
+                string minosPrimeFolder = SpeechFolder + "minosPrime" + Path.DirectorySeparatorChar;
                 
                 GameObject minosPrimeArena = GetInactiveRootObject("3 - Fuckatorium");
             
@@ -150,7 +150,7 @@ namespace UltrakULL.audio
             }
             else if (levelName == "Level P-2")
             {
-                string sisyphusPrimeFolder =  AudioSwapper.speechFolder + "sisyphusPrime\\";
+                string sisyphusPrimeFolder =  AudioSwapper.SpeechFolder + "sisyphusPrime\\";
                 
                 
                 GameObject sisyphusBreakout = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"9 - Boss Arena"),"Boss Stuff"),"PrisonPhase"),"Flesh Prison 2"),"DelayedInstakill"),"Voice");
@@ -192,7 +192,7 @@ namespace UltrakULL.audio
                 //There are two used clips for intro, one for Mandalore, the other for the owl.
                 //I can't find where the owl clip is though...
 
-                string mandaloreFolder = speechFolder + "mandalore" + Path.DirectorySeparatorChar;
+                string mandaloreFolder = SpeechFolder + "mandalore" + Path.DirectorySeparatorChar;
                 
                 GameObject mandaloreArena = GetGameObjectChild(GetInactiveRootObject("3 - Traitor Hallway"),"3B - Tomb of Kings");
 
@@ -205,7 +205,7 @@ namespace UltrakULL.audio
             
             else if (levelName == "Level 5-3")
             {
-                string gabeBoatFolder = speechFolder + "gabrielBoat" + Path.DirectorySeparatorChar;
+                string gabeBoatFolder = SpeechFolder + "gabrielBoat" + Path.DirectorySeparatorChar;
                 
                 GameObject gabeBoatSpeechObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Unrotated"),"5 - Hologram Room"),"5 Nonstuff"),"Decorations"), "Hologram");
 
@@ -217,7 +217,7 @@ namespace UltrakULL.audio
             }
             else if (levelName == "Level 6-1")
             {
-                string gabeHeresyFolder = speechFolder + "gabrielHeresy" + Path.DirectorySeparatorChar;
+                string gabeHeresyFolder = SpeechFolder + "gabrielHeresy" + Path.DirectorySeparatorChar;
                 
                 GameObject gabeHeresyFirst = GetInactiveRootObject("GabrielVoice1");
                 GameObject gabeHeresySecond = GetInactiveRootObject("GabrielVoice2");
@@ -233,7 +233,7 @@ namespace UltrakULL.audio
             }
             else if (levelName == "Level 6-2")
             {
-                string gabeSecondFolder = speechFolder + "gabrielBossSecond" + Path.DirectorySeparatorChar;
+                string gabeSecondFolder = SpeechFolder + "gabrielBossSecond" + Path.DirectorySeparatorChar;
                 
                 //Intro lines
                 GameObject gabeSecondSpeechObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("IntroSounds"),"Filler"),

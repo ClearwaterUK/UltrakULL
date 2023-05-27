@@ -72,7 +72,7 @@ namespace UltrakULL
             }
         }
 
-        private static string GetStyleBonus(bool isColor, string inputBonus)
+        private static string GetStyleBonus(string inputBonus)
         {
             string regexinput = Regex.Replace(inputBonus, @"<[^>]*>", "");
 
@@ -106,7 +106,7 @@ namespace UltrakULL
             bool hasColorTag = (inputBonus.Contains("<color="));
             string openingColorTag;
             string closingColorTag = "</color>";
-            string styleBonus = GetStyleBonus(hasColorTag, inputBonus);
+            string styleBonus = GetStyleBonus(inputBonus);
 
             if (hasColorTag)
             {

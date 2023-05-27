@@ -17,7 +17,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             {
                 return;
             }
-            string gabeSecondFolder =  AudioSwapper.speechFolder + "gabrielBossSecond" + Path.DirectorySeparatorChar;
+            string gabeSecondFolder =  AudioSwapper.SpeechFolder + "gabrielBossSecond" + Path.DirectorySeparatorChar;
 
 
             //Taunts

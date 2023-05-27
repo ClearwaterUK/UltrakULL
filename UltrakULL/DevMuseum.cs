@@ -1,5 +1,4 @@
-﻿using System;
-using UltrakULL.json;
+﻿using UltrakULL.json;
 using UnityEngine;
 using UnityEngine.UI;
 using static UltrakULL.CommonFunctions;
@@ -8,7 +7,7 @@ namespace UltrakULL
 {
     public class DevMuseum
     {
-        public static string getMuseumBook(string originalText)
+        public static string GetMuseumBook(string originalText)
         {
             if(originalText.Contains("<b><color=orange>HAKITA</color> - CREATOR OF ULTRAKILL</b>"))
             {
@@ -349,15 +348,13 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_weaponsNailgun5 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_weaponsNailgun6;
             }
-
-                return "";
+            return "";
         }
-        
-        
-        public void patchPlaques()
+
+
+        private void PatchPlaques()
         {
             //Since the dev museum uses unconventional gameObject names compared to the rest of the game, GetChild is primarily used here.
-            
             GameObject museum = GetInactiveRootObject("__Room_Courtyard").transform.GetChild(4).GetChild(0).gameObject;
             Text museumTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(museum,"Canvas (2)"),"Text"));
             museumTitle.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesMuseumTitle;
@@ -383,203 +380,203 @@ namespace UltrakULL
             GameObject plaques = GetInactiveRootObject("__DEV_SPACE_ALL");
             
             GameObject artRoomFrancisPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (13)"),"Dev Smalll placard"),"Canvas (4)");
-            Text FrancisPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomFrancisPlaque,"Text"));
-            Text FrancisPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomFrancisPlaque,"Text (1)"));
-            FrancisPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesFrancisXie1;
-            FrancisPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesFrancisXie2;
+            Text francisPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomFrancisPlaque,"Text"));
+            Text francisPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomFrancisPlaque,"Text (1)"));
+            francisPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesFrancisXie1;
+            francisPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesFrancisXie2;
             
             GameObject artRoomJerichoPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (14)"),"Dev Smalll placard"),"Canvas (4)");
-            Text JerichoPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomJerichoPlaque,"Text"));
-            Text JerichoPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomJerichoPlaque,"Text (1)"));
-            JerichoPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesJerichoRus1;
-            JerichoPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesJerichoRus2;
+            Text jerichoPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomJerichoPlaque,"Text"));
+            Text jerichoPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomJerichoPlaque,"Text (1)"));
+            jerichoPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesJerichoRus1;
+            jerichoPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesJerichoRus2;
             
             GameObject artRoomBigrockPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (12)"),"Dev Smalll placard"),"Canvas (4)");
-            Text BigrockPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomBigrockPlaque,"Text"));
-            Text BigrockPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomBigrockPlaque,"Text (1)"));
-            BigrockPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesBigRockBMP1;
-            BigrockPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesBigRockBMP2;
+            Text bigrockPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomBigrockPlaque,"Text"));
+            Text bigrockPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomBigrockPlaque,"Text (1)"));
+            bigrockPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesBigRockBMP1;
+            bigrockPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesBigRockBMP2;
             
             GameObject artRoomMaximilianPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (15)"),"Dev Smalll placard"),"Canvas (4)");
-            Text MaximilianPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomMaximilianPlaque,"Text"));
-            Text MaximilianPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomMaximilianPlaque,"Text (1)"));
-            MaximilianPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesMaxOvesson1;
-            MaximilianPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesMaxOvesson2;
+            Text maximilianPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomMaximilianPlaque,"Text"));
+            Text maximilianPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomMaximilianPlaque,"Text (1)"));
+            maximilianPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesMaxOvesson1;
+            maximilianPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesMaxOvesson2;
             
             GameObject artRoomVictoriaPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"dev Space Large"),"Dev Large Placard"),"Canvas (4)");
-            Text VictoriaPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomVictoriaPlaque,"Text"));
-            Text VictoriaPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomVictoriaPlaque,"Text (1)"));
-            VictoriaPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesVictoriaHolland1;
-            VictoriaPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesVictoriaHolland2;
+            Text victoriaPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomVictoriaPlaque,"Text"));
+            Text victoriaPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomVictoriaPlaque,"Text (1)"));
+            victoriaPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesVictoriaHolland1;
+            victoriaPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesVictoriaHolland2;
             
             GameObject artRoomToniPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (23)"),"Dev Smalll placard"),"Canvas (4)");
-            Text ToniPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomToniPlaque,"Text"));
-            Text ToniPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomToniPlaque,"Text (1)"));
-            ToniPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesToniStigell1;
-            ToniPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesToniStigell2;
+            Text toniPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomToniPlaque,"Text"));
+            Text toniPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomToniPlaque,"Text (1)"));
+            toniPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesToniStigell1;
+            toniPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesToniStigell2;
             
             GameObject artRoomFlyingdogPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (24)"),"Dev Smalll placard"),"Canvas (4)");
-            Text FlyingdogPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomFlyingdogPlaque,"Text"));
-            Text FlyingdogPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomFlyingdogPlaque,"Text (1)"));
-            FlyingdogPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesFlyingdog1;
-            FlyingdogPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesFlyingdog2;
+            Text flyingdogPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomFlyingdogPlaque,"Text"));
+            Text flyingdogPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomFlyingdogPlaque,"Text (1)"));
+            flyingdogPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesFlyingdog1;
+            flyingdogPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesFlyingdog2;
             
             GameObject artRoomSamuelPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (22)"),"Dev Smalll placard"),"Canvas (4)");
-            Text SamuelPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomSamuelPlaque,"Text"));
-            Text SamuelPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomSamuelPlaque,"Text (1)"));
-            SamuelPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesSamuelJamesBryan1;
-            SamuelPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesSamuelJamesBryan1;
+            Text samuelPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomSamuelPlaque,"Text"));
+            Text samuelPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomSamuelPlaque,"Text (1)"));
+            samuelPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesSamuelJamesBryan1;
+            samuelPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesSamuelJamesBryan1;
             
             GameObject artRoomCameronPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (19)"),"Dev Smalll placard"),"Canvas (4)");
-            Text CameronPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomCameronPlaque,"Text"));
-            Text CameronPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomCameronPlaque,"Text (1)"));
-            CameronPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesCameronMartin1;
-            CameronPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesCameronMartin2;
+            Text cameronPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomCameronPlaque,"Text"));
+            Text cameronPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomCameronPlaque,"Text (1)"));
+            cameronPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesCameronMartin1;
+            cameronPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesCameronMartin2;
             
             GameObject artRoomDaliaPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (16)"),"Dev Smalll placard"),"Canvas (4)");
-            Text DaliaPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomDaliaPlaque,"Text"));
-            Text DaliaPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomDaliaPlaque,"Text (1)"));
-            DaliaPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesDaliaFigueroa1;
-            DaliaPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesDaliaFigueroa2;
+            Text daliaPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomDaliaPlaque,"Text"));
+            Text daliaPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomDaliaPlaque,"Text (1)"));
+            daliaPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesDaliaFigueroa1;
+            daliaPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesDaliaFigueroa2;
             
             GameObject artRoomTuckerPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (18)"),"Dev Smalll placard"),"Canvas (4)");
-            Text TuckerPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomTuckerPlaque,"Text"));
-            Text TuckerPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomTuckerPlaque,"Text (1)"));
-            TuckerPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesDaliaFigueroa1;
-            TuckerPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesDaliaFigueroa2;
+            Text tuckerPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomTuckerPlaque,"Text"));
+            Text tuckerPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomTuckerPlaque,"Text (1)"));
+            tuckerPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesDaliaFigueroa1;
+            tuckerPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesDaliaFigueroa2;
             
             GameObject artRoomScottPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (17)"),"Dev Smalll placard"),"Canvas (4)");
-            Text ScottPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomScottPlaque,"Text"));
-            Text ScottPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomScottPlaque,"Text (1)"));
-            ScottPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesScottGurney1;
-            ScottPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesScottGurney2;
+            Text scottPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomScottPlaque,"Text"));
+            Text scottPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomScottPlaque,"Text (1)"));
+            scottPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesScottGurney1;
+            scottPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesScottGurney2;
             
             GameObject artRoomPitrPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"dev Space Large (2)"),"Dev Large Placard"),"Canvas (4)");
-            Text PitrPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomPitrPlaque,"Text"));
-            Text PitrPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomPitrPlaque,"Text (1)"));
-            PitrPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesPitr1;
-            PitrPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesPitr2;
+            Text pitrPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomPitrPlaque,"Text"));
+            Text pitrPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomPitrPlaque,"Text (1)"));
+            pitrPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesPitr1;
+            pitrPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesPitr2;
             
             GameObject artRoomHeckteckPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (11)"),"Dev Smalll placard"),"Canvas (4)");
-            Text HeckteckPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomHeckteckPlaque,"Text"));
-            Text HeckteckPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomHeckteckPlaque,"Text (1)"));
-            HeckteckPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesHeckteck1;
-            HeckteckPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesHeckteck2;
+            Text heckteckPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomHeckteckPlaque,"Text"));
+            Text heckteckPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomHeckteckPlaque,"Text (1)"));
+            heckteckPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesHeckteck1;
+            heckteckPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesHeckteck2;
             
             GameObject artRoomCabalcrowPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (10)"),"Dev Smalll placard"),"Canvas (4)");
-            Text CabalcrowPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomCabalcrowPlaque,"Text"));
-            Text CabalcrowPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomCabalcrowPlaque,"Text (1)"));
-            CabalcrowPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesCabalcrow1;
-            CabalcrowPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesCabalcrow2;
+            Text cabalcrowPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomCabalcrowPlaque,"Text"));
+            Text cabalcrowPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomCabalcrowPlaque,"Text (1)"));
+            cabalcrowPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesCabalcrow1;
+            cabalcrowPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesCabalcrow2;
             
             GameObject artRoomLucasPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (9)"),"Dev Smalll placard"),"Canvas (4)");
-            Text LucasPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomLucasPlaque,"Text"));
-            Text LucasPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomLucasPlaque,"Text (1)"));
-            LucasPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesLucasVarney1;
-            LucasPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesLucasVarney2;
+            Text lucasPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomLucasPlaque,"Text"));
+            Text lucasPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomLucasPlaque,"Text (1)"));
+            lucasPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesLucasVarney1;
+            lucasPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesLucasVarney2;
             
             GameObject artRoomBenMoirPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (1)"),"Dev Smalll placard"),"Canvas (4)");
-            Text BenPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomBenMoirPlaque,"Text"));
-            Text BenPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomBenMoirPlaque,"Text (1)"));
-            BenPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesBenMoir1;
-            BenPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesBenMoir2;
+            Text benPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomBenMoirPlaque,"Text"));
+            Text benPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomBenMoirPlaque,"Text (1)"));
+            benPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesBenMoir1;
+            benPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesBenMoir2;
             
             GameObject centralHall = GetInactiveRootObject("__Room_Large_Lower").transform.GetChild(4).gameObject;
-            Text DavePlaque1 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(centralHall,"Wing name (4)"),"Canvas (5)"),"Text"));
-            Text DavePlaque2 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(centralHall,"Wing name (4)"),"Canvas (5)"),"Text (1)"));
+            Text davePlaque1 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(centralHall,"Wing name (4)"),"Canvas (5)"),"Text"));
+            Text davePlaque2 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(centralHall,"Wing name (4)"),"Canvas (5)"),"Text (1)"));
             
-            DavePlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesDaveOshry1;
-            DavePlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesDaveOshry2;
+            davePlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesDaveOshry1;
+            davePlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesDaveOshry2;
             
             GameObject centralHallSigns = GetInactiveRootObject("__Room_Large_Lower").transform.GetChild(3).gameObject;
             
             GameObject restRoomSign = centralHallSigns.transform.GetChild(9).gameObject;
             GameObject talkRoomSign = centralHallSigns.transform.GetChild(10).gameObject;
             
-            Text RestRoomPlaque = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(restRoomSign,"Canvas (3)"),"Text"));
-            RestRoomPlaque.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesRestRoom;
+            Text restRoomPlaque = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(restRoomSign,"Canvas (3)"),"Text"));
+            restRoomPlaque.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesRestRoom;
             
-            Text TalkRoomPlaque = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(talkRoomSign,"Canvas (3)"),"Text"));
-            TalkRoomPlaque.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesRestRoom;
+            Text talkRoomPlaque = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(talkRoomSign,"Canvas (3)"),"Text"));
+            talkRoomPlaque.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesRestRoom;
             
-            GameObject RestRoomMeganekoPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (3)"),"Dev Smalll placard"),"Canvas (4)");
-            Text MeganekoPlaque1 = GetTextfromGameObject(GetGameObjectChild(RestRoomMeganekoPlaque,"Text"));
-            Text MeganekoPlaque2 = GetTextfromGameObject(GetGameObjectChild(RestRoomMeganekoPlaque,"Text (1)"));
-            MeganekoPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesMeganeko1;
-            MeganekoPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesMeganeko2;
+            GameObject restRoomMeganekoPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (3)"),"Dev Smalll placard"),"Canvas (4)");
+            Text meganekoPlaque1 = GetTextfromGameObject(GetGameObjectChild(restRoomMeganekoPlaque,"Text"));
+            Text meganekoPlaque2 = GetTextfromGameObject(GetGameObjectChild(restRoomMeganekoPlaque,"Text (1)"));
+            meganekoPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesMeganeko1;
+            meganekoPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesMeganeko2;
             
-            GameObject RestRoomKeygenChurchPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (2)"),"Dev Smalll placard"),"Canvas (4)");
-            Text KeygenPlaque1 = GetTextfromGameObject(GetGameObjectChild(RestRoomKeygenChurchPlaque,"Text"));
-            Text KeygenPlaque2 = GetTextfromGameObject(GetGameObjectChild(RestRoomKeygenChurchPlaque,"Text (1)"));
-            KeygenPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesKeygenChurch1;
-            KeygenPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesKeygenChurch2;
+            GameObject restRoomKeygenChurchPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (2)"),"Dev Smalll placard"),"Canvas (4)");
+            Text keygenPlaque1 = GetTextfromGameObject(GetGameObjectChild(restRoomKeygenChurchPlaque,"Text"));
+            Text keygenPlaque2 = GetTextfromGameObject(GetGameObjectChild(restRoomKeygenChurchPlaque,"Text (1)"));
+            keygenPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesKeygenChurch1;
+            keygenPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesKeygenChurch2;
             
-            GameObject RestRoomHealthPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (26)"),"Dev Smalll placard"),"Canvas (4)");
-            Text HealthPlaque1 = GetTextfromGameObject(GetGameObjectChild(RestRoomHealthPlaque,"Text"));
-            Text HealthPlaque2 = GetTextfromGameObject(GetGameObjectChild(RestRoomHealthPlaque,"Text (1)"));
-            HealthPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesHealth1;
-            HealthPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesHealth2;
+            GameObject restRoomHealthPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (26)"),"Dev Smalll placard"),"Canvas (4)");
+            Text healthPlaque1 = GetTextfromGameObject(GetGameObjectChild(restRoomHealthPlaque,"Text"));
+            Text healthPlaque2 = GetTextfromGameObject(GetGameObjectChild(restRoomHealthPlaque,"Text (1)"));
+            healthPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesHealth1;
+            healthPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesHealth2;
             
-            GameObject RestRoomQuetzalTiradoPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (8)"),"Dev Smalll placard"),"Canvas (4)");
-            Text QuetzalTiradoPlaque1 = GetTextfromGameObject(GetGameObjectChild(RestRoomQuetzalTiradoPlaque,"Text"));
-            Text QuetzalTiradoPlaque2 = GetTextfromGameObject(GetGameObjectChild(RestRoomQuetzalTiradoPlaque,"Text (1)"));
-            QuetzalTiradoPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesQuetzalTirado1;
-            QuetzalTiradoPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesQuetzalTirado2;
+            GameObject restRoomQuetzalTiradoPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (8)"),"Dev Smalll placard"),"Canvas (4)");
+            Text quetzalTiradoPlaque1 = GetTextfromGameObject(GetGameObjectChild(restRoomQuetzalTiradoPlaque,"Text"));
+            Text quetzalTiradoPlaque2 = GetTextfromGameObject(GetGameObjectChild(restRoomQuetzalTiradoPlaque,"Text (1)"));
+            quetzalTiradoPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesQuetzalTirado1;
+            quetzalTiradoPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesQuetzalTirado2;
             
-            GameObject RestRoomSaladPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (4)"),"Dev Smalll placard"),"Canvas (4)");
-            Text SaladPlaque1 = GetTextfromGameObject(GetGameObjectChild(RestRoomSaladPlaque,"Text"));
-            Text SaladPlaque2 = GetTextfromGameObject(GetGameObjectChild(RestRoomSaladPlaque,"Text (1)"));
-            SaladPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesSalad1;
-            SaladPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesSalad2;
+            GameObject restRoomSaladPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (4)"),"Dev Smalll placard"),"Canvas (4)");
+            Text saladPlaque1 = GetTextfromGameObject(GetGameObjectChild(restRoomSaladPlaque,"Text"));
+            Text saladPlaque2 = GetTextfromGameObject(GetGameObjectChild(restRoomSaladPlaque,"Text (1)"));
+            saladPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesSalad1;
+            saladPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesSalad2;
             
-            GameObject RestRoomJacobPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (5)"),"Dev Smalll placard"),"Canvas (4)");
-            Text JacobPlaque1 = GetTextfromGameObject(GetGameObjectChild(RestRoomJacobPlaque,"Text"));
-            Text JacobPlaque2 = GetTextfromGameObject(GetGameObjectChild(RestRoomJacobPlaque,"Text (1)"));
-            JacobPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesJacobHHR1;
-            JacobPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesJacobHHR2;
+            GameObject restRoomJacobPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (5)"),"Dev Smalll placard"),"Canvas (4)");
+            Text jacobPlaque1 = GetTextfromGameObject(GetGameObjectChild(restRoomJacobPlaque,"Text"));
+            Text jacobPlaque2 = GetTextfromGameObject(GetGameObjectChild(restRoomJacobPlaque,"Text (1)"));
+            jacobPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesJacobHHR1;
+            jacobPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesJacobHHR2;
             
-            GameObject RestRoomJVVizardPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (6)"),"Dev Smalll placard"),"Canvas (4)");
-            Text VVizardPlaque1 = GetTextfromGameObject(GetGameObjectChild(RestRoomJVVizardPlaque,"Text"));
-            Text VVizardPlaque2 = GetTextfromGameObject(GetGameObjectChild(RestRoomJVVizardPlaque,"Text (1)"));
-            VVizardPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesVVizard1;
-            VVizardPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesVVizard2;
+            GameObject restRoomJvVizardPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (6)"),"Dev Smalll placard"),"Canvas (4)");
+            Text vVizardPlaque1 = GetTextfromGameObject(GetGameObjectChild(restRoomJvVizardPlaque,"Text"));
+            Text vVizardPlaque2 = GetTextfromGameObject(GetGameObjectChild(restRoomJvVizardPlaque,"Text (1)"));
+            vVizardPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesVVizard1;
+            vVizardPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesVVizard2;
             
-            GameObject RedRoomAdditionalMusicPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (25)"),"Dev Smalll placard"),"Canvas (4)");
-            GameObject RedRoomAdditionalCreditsPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (25)"),"Dev Smalll placard (1)"),"Canvas (4)");
-            Text AdditionalMusicPlaque = GetTextfromGameObject(GetGameObjectChild(RedRoomAdditionalMusicPlaque,"Text"));
-            AdditionalMusicPlaque.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesAdditionalMusic;
-            Text AdditionalCreditsPlaque = GetTextfromGameObject(GetGameObjectChild(RedRoomAdditionalCreditsPlaque,"Text"));
-            AdditionalCreditsPlaque.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesAdditionalCredits;
+            GameObject redRoomAdditionalMusicPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (25)"),"Dev Smalll placard"),"Canvas (4)");
+            GameObject redRoomAdditionalCreditsPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (25)"),"Dev Smalll placard (1)"),"Canvas (4)");
+            Text additionalMusicPlaque = GetTextfromGameObject(GetGameObjectChild(redRoomAdditionalMusicPlaque,"Text"));
+            additionalMusicPlaque.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesAdditionalMusic;
+            Text additionalCreditsPlaque = GetTextfromGameObject(GetGameObjectChild(redRoomAdditionalCreditsPlaque,"Text"));
+            additionalCreditsPlaque.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesAdditionalCredits;
             
-            GameObject TalkRoomStephanPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques, "Prime 1 VA"),"Dev_Space_ (8)"),"Dev Smalll placard"),"Canvas (4)");
-            Text StephanPlaque1 = GetTextfromGameObject(GetGameObjectChild(TalkRoomStephanPlaque,"Text"));
-            Text StephanPlaque2 = GetTextfromGameObject(GetGameObjectChild(TalkRoomStephanPlaque,"Text (1)"));
-            StephanPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesStephanWeyte1;
-            StephanPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesStephanWeyte2;
+            GameObject talkRoomStephanPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques, "Prime 1 VA"),"Dev_Space_ (8)"),"Dev Smalll placard"),"Canvas (4)");
+            Text stephanPlaque1 = GetTextfromGameObject(GetGameObjectChild(talkRoomStephanPlaque,"Text"));
+            Text stephanPlaque2 = GetTextfromGameObject(GetGameObjectChild(talkRoomStephanPlaque,"Text (1)"));
+            stephanPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesStephanWeyte1;
+            stephanPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesStephanWeyte2;
             
-            GameObject TalkRoomLenvalPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques, "Prime 2 VA"),"Dev_Space_ (33)"),"Dev Smalll placard"),"Canvas (4)");
-            Text LenvalPlaque1 = GetTextfromGameObject(GetGameObjectChild(TalkRoomLenvalPlaque,"Text"));
-            Text LenvalPlaque2 = GetTextfromGameObject(GetGameObjectChild(TalkRoomLenvalPlaque,"Text (1)"));
-            LenvalPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesLenvalBrown1;
-            LenvalPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesLenvalBrown2;
+            GameObject talkRoomLenvalPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques, "Prime 2 VA"),"Dev_Space_ (33)"),"Dev Smalll placard"),"Canvas (4)");
+            Text lenvalPlaque1 = GetTextfromGameObject(GetGameObjectChild(talkRoomLenvalPlaque,"Text"));
+            Text lenvalPlaque2 = GetTextfromGameObject(GetGameObjectChild(talkRoomLenvalPlaque,"Text (1)"));
+            lenvalPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesLenvalBrown1;
+            lenvalPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesLenvalBrown2;
             
-            GameObject RestRoomJoyPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (7)"),"Dev Smalll placard"),"Canvas (4)");
-            Text JoyPlaque1 = GetTextfromGameObject(GetGameObjectChild(RestRoomJoyPlaque,"Text"));
-            Text JoyPlaque2 = GetTextfromGameObject(GetGameObjectChild(RestRoomJoyPlaque,"Text (1)"));
-            JoyPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesJoyYoung1;
-            JoyPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesJoyYoung2;
+            GameObject restRoomJoyPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (7)"),"Dev Smalll placard"),"Canvas (4)");
+            Text joyPlaque1 = GetTextfromGameObject(GetGameObjectChild(restRoomJoyPlaque,"Text"));
+            Text joyPlaque2 = GetTextfromGameObject(GetGameObjectChild(restRoomJoyPlaque,"Text (1)"));
+            joyPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesJoyYoung1;
+            joyPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesJoyYoung2;
             
-            GameObject RestRoomMandalorePlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (21)"),"Dev Smalll placard"),"Canvas (4)");
-            Text MandalorePlaque1 = GetTextfromGameObject(GetGameObjectChild(RestRoomMandalorePlaque,"Text"));
-            Text MandalorePlaque2 = GetTextfromGameObject(GetGameObjectChild(RestRoomMandalorePlaque,"Text (1)"));
-            MandalorePlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesMandalore1;
-            MandalorePlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesMandalore2;
+            GameObject restRoomMandalorePlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (21)"),"Dev Smalll placard"),"Canvas (4)");
+            Text mandalorePlaque1 = GetTextfromGameObject(GetGameObjectChild(restRoomMandalorePlaque,"Text"));
+            Text mandalorePlaque2 = GetTextfromGameObject(GetGameObjectChild(restRoomMandalorePlaque,"Text (1)"));
+            mandalorePlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesMandalore1;
+            mandalorePlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesMandalore2;
             
             GameObject artRoomGianniPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"dev Space Large (1)"),"Dev Large Placard"),"Canvas (4)");
-            Text GianniPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomGianniPlaque,"Text"));
-            Text GianniPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomGianniPlaque,"Text (1)"));
-            GianniPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesGianniMatragrano1;
-            GianniPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesGianniMatragrano2;
+            Text gianniPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomGianniPlaque,"Text"));
+            Text gianniPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomGianniPlaque,"Text (1)"));
+            gianniPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesGianniMatragrano1;
+            gianniPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesGianniMatragrano2;
             
             GameObject rocketRaceScreen = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("PuzzleScreen (2)"),"Canvas"),"Background"),"Start");
             
@@ -600,9 +597,9 @@ namespace UltrakULL
             
         }
         
-        public DevMuseum(ref GameObject canvas)
+        public DevMuseum()
         {
-            this.patchPlaques();
+            this.PatchPlaques();
         }
     }
 }

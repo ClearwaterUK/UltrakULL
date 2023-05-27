@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
@@ -10,7 +9,7 @@ namespace UltrakULL
     {
         public static string GetMessage(string message, string message2, string input)
         {
-            string level = getCurrentSceneName();
+            string level = GetCurrentSceneName();
             
             if (level.Contains("Tutorial"))
             {
@@ -92,7 +91,7 @@ namespace UltrakULL
         //Tips for each level
         public static string GetLevelTip()
         {
-            string currentLevel = getCurrentSceneName();
+            string currentLevel = GetCurrentSceneName();
 
             //***Prelude***
             if (currentLevel.Contains("0-2"))

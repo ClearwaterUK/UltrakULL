@@ -1,5 +1,4 @@
-﻿using UnityEngine.SceneManagement;
-using UltrakULL.json;
+﻿using UltrakULL.json;
 using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
@@ -8,13 +7,13 @@ namespace UltrakULL
     {
         public static string GetBookText(string originalText)
         {
-            string currentLevel = getCurrentSceneName();
+            string currentLevel = GetCurrentSceneName();
 
             switch(currentLevel)
             {
                 case "CreditsMuseum2":
                 {
-                    return DevMuseum.getMuseumBook(originalText);
+                    return DevMuseum.GetMuseumBook(originalText);
                 }
                 case "Level 1-4": {
                         return "<b>" + LanguageManager.CurrentLanguage.books.books_limboFourth1 + "</b>\n\n"
