@@ -10,6 +10,7 @@
         public string languageTag;
         public string languageFullName;
         public string author;
+        public string versionNumber;
         
     }
     public class MasterLanguages

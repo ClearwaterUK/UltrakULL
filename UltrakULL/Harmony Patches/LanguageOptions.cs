@@ -157,7 +157,27 @@ namespace UltrakULL.Harmony_Patches
                         
                         if(langFileLocallyExists(langInfo.languageTag))
                         {
-                            slotText.text += "\n(<color=green>Downloaded</color>)";
+                            //If the language file already exists, compare its version with the version found online.
+                            //If the online version has a newer version, display that an update is available.
+                            //Otherwise just display that the language has already been downloaded.
+                            
+                            string langFilePath = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx","config","ultrakull") + Path.DirectorySeparatorChar + langInfo.languageTag + ".json";
+
+                            string jsonFile = File.ReadAllText(langFilePath);
+                            JsonFormat json = JsonConvert.DeserializeObject<JsonFormat>(jsonFile);
+                            
+                            Version onlineCurrentVersion = new Version(json.metadata.langVersion);
+                            Version localCurrentVersion = new Version(langInfo.versionNumber);
+                            
+                            Console.WriteLine(onlineCurrentVersion.CompareTo(localCurrentVersion));
+                            
+                            switch(onlineCurrentVersion.CompareTo(localCurrentVersion))
+                            {
+
+                                case -1: { slotText.text += "\n(<color=green>Update available</color>)";break;}
+                                default: { slotText.text += "\n(<color=green>Downloaded</color>)";break;}
+                            }
+
                         }
                         else
                         {
