@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using UltrakULL.json;
 using System.Linq;
-
+using BepInEx;
 using static UltrakULL.CommonFunctions;
 using static UltrakULL.ModPatches;
-using UMM;
+//using UMM;
 
 /*
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater, additional code contributions by Temperz87, translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 2nd May 2023
+ *	Last updated: 27th May 2023
  *	
  *	A translation mod for Ultrakill that hooks into the game and allows for text/string replacement. This tool is primarily meant to assist with language translation.
  * 
@@ -29,17 +29,13 @@ using UMM;
  *  - Swap out rank textures in HUD for translation (there's a mod already for this, shall look into)
  *  - Replace the default font with a version that has better special char + cyrillic support (someone already made a global font, just need to see how to implement)
  *  - Finish audio dubbing documentation
- *  - Change language file system so they can be directly downloaded in-game (Upload files to private repo?)
+ *  - Swap audio file format for dubbing from .wav to .ogg.
  *  
  *  -- FOR NEXT HOTFIX --
  * Make language button disappear like other option buttons when save menu is opened
  *
- *
- *
  *- REPORTED BY USERS
  * Fishing guide terminal sometimes not translated (doesn't translate when first appears, second time is fine)
- * 5-3 dubbing still not working? (No errors..?)
- * 2-S First prompt panel not translated (No errors, appears fine on my end with French..?)
  * Some of MDK/Owl's lines are still borked
  * Armboy in museum missing string
  * 
@@ -47,10 +43,15 @@ using UMM;
 
 namespace UltrakULL
 {
-    [UKPlugin(InternalName, "UltrakULL (Ultrakill Language Library)", InternalVersion,"A localization and translation plugin for ULTRAKILL. Created by Clearwater.", true,false)]
+    //[UKPlugin(InternalName, "UltrakULL (Ultrakill Language Library)", InternalVersion,"A localization and translation plugin for ULTRAKILL. Created by Clearwater.", true,false)]
 
-    public class MainPatch : UKMod
+    [BepInPlugin(GUID, InternalName, InternalVersion)]
+    public class MainPatch : BaseUnityPlugin
     {
+        public const string GUID = "clearwater.ultrakill.ultrakull";
+        private const string InternalName = "clearwater.ultrakull.ultrakULL";
+        private const string InternalVersion = "1.2.0";
+
         public static MainPatch instance;
         public GameObject ultrakullLogo;
         
@@ -59,12 +60,7 @@ namespace UltrakULL
         public bool updateFailed;
         
         public static Font vcrFont;
-
-        private const string InternalName = "clearwater.ultrakull.ultrakULL";
-        private const string InternalVersion = "1.2.0";
-        
         private static readonly HttpClient Client = new HttpClient();
-        
 
         public MainPatch()
         {
@@ -500,7 +496,7 @@ namespace UltrakULL
             //Check for any other mods that are loaded that might cause conflicts. If so, apply cross-mod patches and changes.
             Logging.Info("Scanning for mods...");
 
-            ModInformation[] loadedMods = UKAPI.AllLoadedModInfoClone.Values.ToArray();
+            /*ModInformation[] loadedMods = UKAPI.AllLoadedModInfoClone.Values.ToArray();
             foreach (ModInformation mod in loadedMods)
             {
                 if (mod.modName.ToLower() == "ultrakilltweaker" || mod.modName == "ULTRAKILLtweaker") //Experimental to see if it helps with reports of it not working for some people
@@ -508,7 +504,7 @@ namespace UltrakULL
                     Logging.Info("UltraTweaker detected, applying options patch");
                     StartCoroutine(UltraTweakerPatch());
                 }
-            }
+            }*/
             }
            
         }
@@ -547,7 +543,7 @@ namespace UltrakULL
         }
 
         //Entry point for the mod.
-        public void Awake()
+        private void Awake()
         {
             Debug.unityLogger.filterLogType = LogType.Exception;
 

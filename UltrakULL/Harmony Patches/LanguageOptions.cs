@@ -169,8 +169,6 @@ namespace UltrakULL.Harmony_Patches
                             Version onlineCurrentVersion = new Version(json.metadata.langVersion);
                             Version localCurrentVersion = new Version(langInfo.versionNumber);
                             
-                            Console.WriteLine(onlineCurrentVersion.CompareTo(localCurrentVersion));
-                            
                             switch(onlineCurrentVersion.CompareTo(localCurrentVersion))
                             {
 
@@ -178,10 +176,6 @@ namespace UltrakULL.Harmony_Patches
                                 default: { slotText.text += "\n(<color=green>Downloaded</color>)";break;}
                             }
 
-                        }
-                        else
-                        {
-                            
                         }
 
                         Button langButton = languageBrowserButtonInstance.AddComponent<Button>();

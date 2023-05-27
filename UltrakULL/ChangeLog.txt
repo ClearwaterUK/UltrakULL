@@ -1,4 +1,5 @@
 ﻿1.2.0c
+- Detached the mod from UMM. As such, **UltraModManager is no longer required to install and use UltrakULL.**
 - **Added the ability to download and update language files directly in-game.**
 (NOTE: Loading language files locally will remain possible.)
 - Added dubbing support for Sisyphus Prime, updated dubbing documentation.
