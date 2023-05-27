@@ -452,8 +452,7 @@ namespace UltrakULL
             //Open Language Folder button in Options->Langauge
             
             Text openLangFolderText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd,"OptionsMenu"), "Language Page"),"Scroll Rect (1)"),"Contents"),"OpenLangFolder"),"Slot Text"));
-            openLangFolderText.text = LanguageManager.CurrentLanguage.options
-            .language_openLanguageFolder;
+            openLangFolderText.text = "<color=#03fc07>Open language folder</color>";
 
             //Get the mods/restart buttons...
             GameObject ummModsButton = null;

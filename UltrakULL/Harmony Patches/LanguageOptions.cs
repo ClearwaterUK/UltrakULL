@@ -3,12 +3,12 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+
 using UltrakULL.json;
 using static UltrakULL.CommonFunctions;
 
@@ -101,9 +101,11 @@ namespace UltrakULL.Harmony_Patches
             
             langBrowserPage.name = "Language Browser";
             langBrowserPage.SetActive(true);
-            
-            languageButtonTitleText = langBrowserPage.transform.Find("Text").GetComponent<Text>();
 
+            Text langBrowserTitle = GetTextfromGameObject(GetGameObjectChild(langBrowserPage,"Text"));
+            langBrowserTitle.text = "--LANGUAGE BROWSER--";
+            langBrowserTitle.resizeTextForBestFit = true;
+            
             Transform contentParent = langBrowserPage.transform.Find("Scroll Rect (1)").Find("Contents");
             foreach (Transform child in contentParent.GetComponentInChildren<Transform>(true))
                 child.gameObject.SetActive(false);
@@ -120,7 +122,6 @@ namespace UltrakULL.Harmony_Patches
                 //If languages were already fetched once, redisplay them
                 foreach(GameObject button in languageButtons)
                 {
-                    
                     button.SetActive(true);
                 }
             }
@@ -275,11 +276,11 @@ namespace UltrakULL.Harmony_Patches
                 using (WebClient webClient = new WebClient())
                 {
                     string messageNotif;
-                    
-                                        
+              
                     //If the file was simply updated, it can be used straightaway.
                     //If a new lang file was downloaded, display a notif to the user to enter a level or reload the menu.
-                    if(langFileLocallyExists(fullPath))
+                    Console.WriteLine(languageTag);
+                    if(langFileLocallyExists(languageTag))
                     {
                         messageNotif = "Language file \"" + languageName + "\" has been updated. It can be used immediately.";
                     }
@@ -299,7 +300,11 @@ namespace UltrakULL.Harmony_Patches
                     MonoSingleton<HudMessageReceiver>.Instance.ClearMessage();
                     MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=lime>" + messageNotif + "</color>");
 
-                    LanguageManager.allLanguages.Add(languageTag, file);
+                    if(!(langFileLocallyExists(languageTag)))
+                    {
+                        LanguageManager.allLanguages.Add(languageTag, file);
+                    }
+
                     //LanguageManager.allLanguagesDisplayNames.Add(languageName, lang);
                 }
             }
@@ -308,8 +313,7 @@ namespace UltrakULL.Harmony_Patches
                 MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=red>A download error occured, file has not been saved.</color>");
                 Console.WriteLine(e.ToString());
             }
-            
-            
+
         }
         
         public static bool Prefix(OptionsMenuToManager __instance)
@@ -415,7 +419,7 @@ namespace UltrakULL.Harmony_Patches
             slotTextLangButton.localScale = new Vector3(4.983107f, 0.970607f, 2.1431f);
             slotTextLangButton.localPosition = new Vector3(0f, 0f, 0f);
             Text openLangFolderText = slotTextLangButton.GetComponent<Text>();
-            openLangFolderText.text = "<color=#03fc07>" + LanguageManager.CurrentLanguage.options.language_openLanguageFolder + "</color>";
+            openLangFolderText.text = "<color=#03fc07>Open language folder</color>";
             openLangFolderText.fontSize = 16;
             Button openLangFolderButton = openLangFolder.AddComponent<Button>();
             openLangFolderButton.colors = new ColorBlock()
