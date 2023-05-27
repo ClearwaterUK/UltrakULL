@@ -345,12 +345,12 @@ namespace UltrakULL
                             //Warn of a language that doesn't match the mod version
                             if (!LanguageManager.FileMatchesMinimumRequiredVersion(LanguageManager.CurrentLanguage.metadata.minimumModVersion, InternalVersion))
                             {
-                                ultrakullLogoText.text += "\n<color=orange>Outdated language\nloaded.\nCheck console and\nuse at your own risk!</color>";
+                                ultrakullLogoText.text += "\n<color=orange>Language version\noutdated.\nPlease update the\nlanguage file\nif one is available!</color>";
                             }
                             //Warn of a failed updated check
                             else if (!(updateAvailable) && updateFailed)
                             {
-                                ultrakullLogoText.text += "\n<color=red>Unable to check for updates. Check console for info.</color>";
+                                ultrakullLogoText.text += "\n<color=red>Unable to check for updates.\nCheck console for info.</color>";
                             }
                             
                             break;
