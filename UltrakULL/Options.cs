@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using UltrakULL.Harmony_Patches;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -777,6 +777,8 @@ namespace UltrakULL
 
                 Text savesButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Saves"), "Text"));
                 savesButton.text = LanguageManager.CurrentLanguage.options.category_saves;
+                
+                
 
                 try
                 {
