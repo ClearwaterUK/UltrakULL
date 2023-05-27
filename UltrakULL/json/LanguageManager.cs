@@ -5,9 +5,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using ArabicSupportUnity;
+using Discord;
 using UltrakULL.audio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL.json
 {
@@ -51,6 +54,8 @@ namespace UltrakULL.json
 
         public static void LoadLanguages(string modVersion)
         {
+            Logging.Warn("Loading language files stored locally on disk...");
+            
             allLanguages = new Dictionary<string, JsonFormat>();
             string[] files = Directory.GetFiles(Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull"), "*.json");
             foreach (string file in files)
@@ -218,8 +223,12 @@ namespace UltrakULL.json
                 
                 MainPatch.instance.onSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
                 LanguageManager.DumpLastLanguage();
-                AudioSwapper.speechFolder = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull", "audio", LanguageManager.CurrentLanguage.metadata
-                    .langName) + Path.DirectorySeparatorChar;
+                AudioSwapper.speechFolder = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull", "audio", LanguageManager.CurrentLanguage.metadata.langName) + Path.DirectorySeparatorChar;
+					
+                if(getCurrentSceneName() != "Main Menu")
+                {
+                    MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=orange>Language changes will not fully take effect until the current mission is quit or restarted.</color>");
+                }
             }
             else
                 Logging.Warn("No language found with name " + langName);

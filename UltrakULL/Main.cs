@@ -58,7 +58,7 @@ namespace UltrakULL
         public bool updateAvailable;
         public bool updateFailed;
         
-        public Font vcrFont;
+        public static Font vcrFont;
 
         private const string InternalName = "clearwater.ultrakull.ultrakULL";
         private const string InternalVersion = "1.2.0";
@@ -278,6 +278,8 @@ namespace UltrakULL
         //Most of the hook logic and checks go in this function.
         public void onSceneLoaded(Scene scene, LoadSceneMode mode)
         {
+
+
             if (!this.ready || LanguageManager.CurrentLanguage == null)
             {
                 Logging.Error("UltrakULL has been deactivated to prevent crashing. Check the console for any errors!");
@@ -288,12 +290,6 @@ namespace UltrakULL
                 Logging.Message("Switching scenes...");
                 string levelName = getCurrentSceneName();
                 
-                /*if (Harmony_Patches.InjectLanguageButton.languageButtonText != null)
-                {
-                    Harmony_Patches.InjectLanguageButton.languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
-                    Harmony_Patches.InjectLanguageButton.languageButtonTitleText.text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
-                }*/
-                
                 //Each scene (level) has an object called Canvas. Most game objects are there.
                 GameObject canvasObj = GetInactiveRootObject("Canvas");
                 if (!canvasObj)
@@ -303,12 +299,21 @@ namespace UltrakULL
                 }
                 else
                 {
-
                     switch(levelName)
                     {
                         case "Intro": { break; }
                         case "Main Menu":
                         {
+                            try
+                            {
+                                vcrFont = GameObject.Find(canvasObj.name + "/Main Menu (1)/Title/Text").GetComponentInParent<Text>().font;
+                            }
+                            catch (Exception e)
+                            {
+                                
+                            }
+                            
+                            
                             PatchFrontEnd(canvasObj);
                             
                             //(Re)render the UltrakULL status on screen when a language has been (re)loaded.
@@ -321,7 +326,7 @@ namespace UltrakULL
                             ultrakullLogoText.fontSize = 16;
                             
                             //Get the font so it can applied to any generated buttons
-                            this.vcrFont = ultrakullLogoText.font;
+                            vcrFont = ultrakullLogoText.font;
 
                             //Add notif if there's a mod update available
                             if(updateAvailable)
@@ -340,12 +345,12 @@ namespace UltrakULL
                             //Warn of a language that doesn't match the mod version
                             if (!LanguageManager.FileMatchesMinimumRequiredVersion(LanguageManager.CurrentLanguage.metadata.minimumModVersion, InternalVersion))
                             {
-                                ultrakullLogoText.text += "\n<color=orange>Outdated language\nloaded.\nCheck console and\nuse at your own risk!</color>";
+                                ultrakullLogoText.text += "\n<color=orange>Language version\noutdated.\nPlease update the\nlanguage file\nif one is available!</color>";
                             }
                             //Warn of a failed updated check
                             else if (!(updateAvailable) && updateFailed)
                             {
-                                ultrakullLogoText.text += "\n<color=red>Unable to check for updates. Check console for info.</color>";
+                                ultrakullLogoText.text += "\n<color=red>Unable to check for updates.\nCheck console for info.</color>";
                             }
                             
                             break;
@@ -447,8 +452,7 @@ namespace UltrakULL
             //Open Language Folder button in Options->Langauge
             
             Text openLangFolderText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd,"OptionsMenu"), "Language Page"),"Scroll Rect (1)"),"Contents"),"OpenLangFolder"),"Slot Text"));
-            openLangFolderText.text = LanguageManager.CurrentLanguage.options
-            .language_openLanguageFolder;
+            openLangFolderText.text = "<color=#03fc07>Open language folder</color>";
 
             //Get the mods/restart buttons...
             GameObject ummModsButton = null;
