@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using System;
 using System.Collections;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -29,7 +30,7 @@ using static UltrakULL.ModPatches;
  *  - Swap out rank textures in HUD for translation (there's a mod already for this, shall look into)
  *  - Replace the default font with a version that has better special char + cyrillic support (someone already made a global font, just need to see how to implement)
  *  - Finish audio dubbing documentation
- *  - Swap audio file format for dubbing from .wav to .ogg.
+ *  - Swap audio file format for dubbing from .wav to .ogg, will reduce overall mod size.
  *  
  *  -- FOR NEXT HOTFIX --
  * Make language button disappear like other option buttons when save menu is opened
@@ -58,9 +59,12 @@ namespace UltrakULL
         public bool ready;
         public bool updateAvailable;
         public bool updateFailed;
+        public static bool globalFontReady;
         
         public static Font vcrFont;
         private static readonly HttpClient Client = new HttpClient();
+        
+        public static Font globalFont;
 
         public MainPatch()
         {
@@ -274,8 +278,6 @@ namespace UltrakULL
         //Most of the hook logic and checks go in this function.
         public void onSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-
-
             if (!this.ready || LanguageManager.CurrentLanguage == null)
             {
                 Logging.Error("UltrakULL has been deactivated to prevent crashing. Check the console for any errors!");
@@ -430,8 +432,23 @@ namespace UltrakULL
                 }
                 //Bunch of things the mod should do *after* loading to avoid problems.
                 PostInitPatches(canvasObj);
+                
+                if(globalFontReady)
+                {
+                    swapFont();
+                }
+                
             }
 
+        }
+        
+        public void swapFont()
+        {
+            Text[] yourLabels = FindObjectsOfType<Text>();
+            foreach (Text text in yourLabels)
+            {
+                text.font = globalFont;
+            }
         }
 
         public void PostInitPatches(GameObject frontEnd)
@@ -541,6 +558,36 @@ namespace UltrakULL
                 updateFailed = true;
             }
         }
+        
+        public void loadFonts()
+        {
+            Logging.Warn("Loading font resource bundle...");
+            AssetBundle fontBundle = AssetBundle.LoadFromFile(
+                Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "plugins", "ultrakull") + Path.DirectorySeparatorChar + "ullfont.resource");
+            if(fontBundle == null)
+            {
+                Logging.Error("FAILED TO LOAD");
+            }
+            else
+            {
+                Logging.Warn("Font bundle loaded.");
+                Logging.Warn("Loading fonts from bundle...");
+                
+                Font loadedFont = fontBundle.LoadAsset<Font>("VCR_OSD_MONO");
+                if(loadedFont == null)
+                {
+                    Logging.Error("FAILED TO LOAD FONT");
+                }
+                else
+                {
+                    Logging.Warn("Font loaded.");
+                    globalFont = loadedFont;
+                    globalFontReady = true;
+                }
+            }
+                
+            
+        }
 
         //Entry point for the mod.
         private void Awake()
@@ -553,6 +600,9 @@ namespace UltrakULL
                 Logging.Warn("--- Checking for updates ---");
                 #pragma warning disable 4014
                 CheckForUpdates();
+                
+                Logging.Warn("--- Loading external fonts ---");
+                loadFonts();
             
                 Logging.Warn("--- Initializing JSON parser ---");
                 InitJsonParser();
