@@ -217,13 +217,25 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalMusic9 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalMusic10;
             }
-            if(originalText.Contains("ADDITIONAL CREDITS"))
+            if(originalText.Contains("COMMUNITY CYBER GRIND"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits1 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits2 + "\n\n"
+                    
+                    //CG pattern credits
+                    + "NO LOAFING\nDood\nSplendidLedraps\nJandy\nStuon\nDryzalar\nWakan\nSlimer\nWilliam\nNotABot\nSpruce\nJacob\n\n"
+                    
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits3 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits4 + "\n\n"
-                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits5 + "\n\n";
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits5 + "\n\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits6 + "\n\n"
+                
+                    //Totally not subtle self-insert for mod credits here. :D
+                    + "<b><color=orange>UltrakULL CREDITS</color></b>:\n\n"
+                    + "Mod created by <color=orange>Clearwater</color>\n"
+                    + "Additional code contributions by <color=orange>Temperz87</color> and <color=orange>CoatlessAli</color>\n"
+                    + "Translations by various community members of the <color=orange>UltrakULL Translation Team</color>\n"
+                    + "Documentation contributions by <color=orange>Frizou</color>";
             }
             if(originalText.Contains("<b><color=orange>STEPHAN WEYTE</color> - VOICE OF MINOS PRIME</b>"))
             {

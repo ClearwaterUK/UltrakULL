@@ -2,6 +2,8 @@
 using HarmonyLib;
 using UnityEngine.UI;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.Harmony_Patches
 {
     public class TextFontSwap
@@ -14,7 +16,19 @@ namespace UltrakULL.Harmony_Patches
             {
                 if(MainPatch.GlobalFontReady)
                 {
-                    __instance.font = MainPatch.GlobalFont;
+                    if(GetCurrentSceneName() == "CreditsMuseum2")
+                    {
+                        //Fix for the museum to prevent plaque fonts from being changed.
+                        if(__instance.font.fontNames[0] == "GFS Garaldus") 
+                        {
+                            //Do nothing xd
+                        }
+                    }
+                    else
+                    {
+                        __instance.font = MainPatch.GlobalFont;
+                    }
+
                 }
             }
         }

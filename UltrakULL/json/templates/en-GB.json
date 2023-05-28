@@ -177,11 +177,12 @@
         "museum_bookAdditionalMusic9": "\"Fallen Angel\" in 6-2: AESTHETICS OF HATE: Adapted from \"BWV 639 'I call to you, Lord Jesus Christ'\" by Johann Sebastian Bach",
         "museum_bookAdditionalMusic10": "\"7th Symphony, 2nd Movement: Allegretto\" in Intermission 2: Written by Ludwig van Beethoven, performance by Lambis Vassiliadis (Public domain)",
 
-        "museum_bookAdditionalCredits1": "<b>ADDITIONAL CREDITS:</b>",
-        "museum_bookAdditionalCredits2": "Special thanks to:",
-        "museum_bookAdditionalCredits3": "<b>Magnega</b> for telling me my previous game, Untraceable, was unfun, causing an existential crisis that resulted in me dropping that project and making ULTRAKILL instead",
-        "museum_bookAdditionalCredits4": "<b>Mikko Tamper and Robert Raulus</b> for their continued support as well as beta testing and giving feedback",
-        "museum_bookAdditionalCredits5": "<b>B.G.B. and Splendid</b> for beta testing and giving feedback",
+        "museum_bookAdditionalCredits1": "<b><color=orange>ADDITIONAL CREDITS:</color></b>",
+        "museum_bookAdditionalCredits2": "<b><color=orange>COMMUNITY CYBER GRIND PATTERNS</color></b> by:",
+        "museum_bookAdditionalCredits3": "<b><color=orange>SPECIAL THANKS</color></b> to:",
+        "museum_bookAdditionalCredits4": "<b>Magnega</b> for telling me my previous game, Untraceable, was unfun, causing an existential crisis that resulted in me dropping that project and making ULTRAKILL instead",
+        "museum_bookAdditionalCredits5": "<b>Mikko Tamper and Robert Raulus</b> for their continued support as well as beta testing and giving feedback",
+        "museum_bookAdditionalCredits6": "<b>B.G.B. and Splendid</b> for beta testing and giving feedback",
 
         "museum_bookStephanWeyte1": "<b><color=orange>STEPHAN WEYTE</color> - VOICE OF MINOS PRIME</b>",
         "museum_bookStephanWeyte2": "As with most people, I mainly knew Stephan Weyte as the voice of Caleb from Blood, but hearing him as Nyarlathotep in Dusk made it clear that he still had the skills, so even before joining New Blood, I had already decided that I wanted Stephan to voice someone in ULTRAKILL. When time came to choose the voice for Minos Prime, the choice was obvious.",

@@ -2364,6 +2364,7 @@ namespace UltrakULL.json
         public string museum_bookAdditionalCredits3;
         public string museum_bookAdditionalCredits4;
         public string museum_bookAdditionalCredits5;
+        public string museum_bookAdditionalCredits6;
         
         public string museum_bookStephanWeyte1;
         public string museum_bookStephanWeyte2;

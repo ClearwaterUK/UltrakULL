@@ -14,14 +14,13 @@ using static UltrakULL.CommonFunctions;
 
 /*
  *	UltrakULL (Ultrakill Language Library)
- *	Written by Clearwater, additional code contributions by Temperz87, translations by UltrakULL Translation Team
+ *	Written by Clearwater, additional code contributions by Temperz87 and CoatlessAli, translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 27th May 2023
+ *	Last updated: 28th May 2023
  *	
  *	A translation mod for Ultrakill that hooks into the game and allows for text/string replacement. This tool is primarily meant to assist with language translation.
  * 
  *  -- MAIN TASK LIST --
- *  - Add ULL credits in dev museum
  * 
  *  -- STUFF FOR FUTURE UPDATES --
  *  - Swap out rank textures in HUD for translation (there's a mod already for this, shall look into)
@@ -40,8 +39,6 @@ using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
 {
-    //[UKPlugin(InternalName, "UltrakULL (Ultrakill Language Library)", InternalVersion,"A localization and translation plugin for ULTRAKILL. Created by Clearwater.", true,false)]
-
     [BepInPlugin(Guid, InternalName, InternalVersion)]
     public class MainPatch : BaseUnityPlugin
     {
@@ -427,24 +424,11 @@ namespace UltrakULL
                 }
                 //Bunch of things the mod should do *after* loading to avoid problems.
                 PostInitPatches(canvasObj);
-                
-                if(GlobalFontReady)
-                {
-                    SwapFont();
-                }
-                
+
             }
 
         }
-        
-        public void SwapFont()
-        {
-            Text[] yourLabels = FindObjectsOfType<Text>();
-            foreach (Text text in yourLabels)
-            {
-                text.font = GlobalFont;
-            }
-        }
+
 
         public void PostInitPatches(GameObject frontEnd)
         {

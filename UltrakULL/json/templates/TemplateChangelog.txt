@@ -3,8 +3,7 @@
 ADDED:
 
 fishing: fish_noFishBiting
-
-
+devMuseum: museum_AdditionalCredits6
 
 1.2.0b:
 
