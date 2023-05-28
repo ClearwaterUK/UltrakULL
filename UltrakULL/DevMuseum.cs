@@ -219,11 +219,11 @@ namespace UltrakULL
             }
             if(originalText.Contains("ADDITIONAL CREDITS"))
             {
-                return LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalMusic1 + "\n\n"
-                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalMusic2 + "\n\n"
-                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalMusic3 + "\n\n"
-                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalMusic4 + "\n\n"
-                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalMusic5 + "\n\n";
+                return LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits1 + "\n\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits2 + "\n\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits3 + "\n\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits4 + "\n\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits5 + "\n\n";
             }
             if(originalText.Contains("<b><color=orange>STEPHAN WEYTE</color> - VOICE OF MINOS PRIME</b>"))
             {
