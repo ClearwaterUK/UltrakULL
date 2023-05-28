@@ -325,6 +325,7 @@ namespace UltrakULL.Harmony_Patches
             catch(Exception e)
             {
                 MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=red>A download error occured, file has not been saved.</color>");
+                Console.WriteLine("Attempted to download from: " + languageFileUrl);
                 Console.WriteLine(e.ToString());
             }
 

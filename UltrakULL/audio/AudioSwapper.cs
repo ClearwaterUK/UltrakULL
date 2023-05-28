@@ -153,25 +153,25 @@ namespace UltrakULL.audio
                 string sisyphusPrimeFolder =  AudioSwapper.SpeechFolder + "sisyphusPrime\\";
                 
                 
-                GameObject sisyphusBreakout = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"9 - Boss Arena"),"Boss Stuff"),"PrisonPhase"),"Flesh Prison 2"),"DelayedInstakill"),"Voice");
+                GameObject sisyphusBreakout = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"9 - Boss Arena"),"Boss Stuff(Clone)"),"PrisonPhase"),"Flesh Prison 2"),"DelayedInstakill"),"Voice");
                 
                 AudioSource sisyphusBreakoutSource =  sisyphusBreakout.GetComponent<AudioSource>();
                 string sisyphusBreakoutString = sisyphusPrimeFolder + "sisyphusThisPrison.wav";
                 sisyphusBreakoutSource.clip = SwapClipWithFile(sisyphusBreakoutSource.clip, sisyphusBreakoutString);
                 
-                GameObject sisyphusIntro = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"9 - Boss Arena"),"Boss Stuff"),"PrimeIntro"),"SisyphusPrimeIntro"),"VoiceDelayer"),"Voice");
+                GameObject sisyphusIntro = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"9 - Boss Arena"),"Boss Stuff(Clone)"),"PrimeIntro"),"SisyphusPrimeIntro"),"VoiceDelayer"),"Voice");
                 
                 AudioSource sisyphusIntroSource =  sisyphusIntro.GetComponent<AudioSource>();
                 string sisyphusIntroString = sisyphusPrimeFolder + "sisyphusIntro.wav";
                 sisyphusIntroSource.clip = SwapClipWithFile(sisyphusIntroSource.clip, sisyphusIntroString);
                 
-                GameObject sisyphusOutro =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"9 - Boss Arena"),"Boss Stuff"),"PrimePhase"),"SisyphusPrime"),"OutroDelay"),"Outro");
+                GameObject sisyphusOutro =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"9 - Boss Arena"),"Boss Stuff(Clone)"),"PrimePhase"),"SisyphusPrime"),"OutroDelay"),"Outro");
                 
                 AudioSource sisyphusOutroSource =  sisyphusOutro.GetComponent<AudioSource>();
                 string sisyphusOutroString = sisyphusPrimeFolder + "sisyphusOutro.wav";
                 sisyphusOutroSource.clip = SwapClipWithFile(sisyphusOutroSource.clip, sisyphusOutroString);
                 
-                GameObject sisyphusRespawn = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"9 - Boss Arena"),"Boss Stuff"),"PrimePhase"),"SisyphusPrime"),"KeepThemComing");
+                GameObject sisyphusRespawn = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"9 - Boss Arena"),"Boss Stuff(Clone)"),"PrimePhase"),"SisyphusPrime"),"KeepThemComing");
                 
                 AudioSource sisyphusRespawnSource =  sisyphusRespawn.GetComponent<AudioSource>();
                 string sisyphusRespawnString = sisyphusPrimeFolder + "sisyphusKeepThemComing.wav";
