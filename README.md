@@ -38,7 +38,7 @@ or via the [UltrakULL Discord](https://discord.gg/ZB7jk6Djv5) in the #language-r
 
 ### Installation:
 
-The installation section is divided into 3 parts:
+The installation section is divided into 2 parts:
 - Installing BepInEx, the modding framework
 - Installing UltrakULL, the mod itself
 
@@ -47,7 +47,7 @@ The installation section is divided into 3 parts:
 - Download all of the required files from the Prerequisites section.
 - Extract the contents of BepInEx to where your ULTRAKILL install folder is located.
 - Launch ULTRAKILL so BepInEx can generate the required files and folders in the install folder. Quit the game once it has loaded to the main menu.
-- 
+
 #### Installing UltrakULL:
 
 - Extract the contents of UltrakULL to your BepInEx folder. Overwrite any files if prompted.
@@ -107,8 +107,7 @@ The installation section is divided into 3 parts:
 
 # Documentation
 
-GitHub documentation coming in future. Until then, documentation on how to create your own language
-can be found in the [UltrakULL Discord.](https://discord.gg/ZB7jk6Djv5)
+GitHub documentation coming in future. Until then, documentation on how to create your own language can be found in the [UltrakULL Discord.](https://discord.gg/ZB7jk6Djv5)
 
 # Building
 
@@ -163,17 +162,10 @@ As of UltrakULL v1.1.0, dubbing support is available for speaking characters! To
 I usually like to post updates and news about development in multiple places, including the [UltrakULL Discord](https://discord.gg/ZB7jk6Djv5) itself,
 the [New Blood Discord](https://discord.gg/newblood), and my [personal Twitter](https://twitter.com/ClearwaterHLL).
 
-### Is UltrakULL compatible with other mods?
-[UltraTweaker](https://github.com/wafflethings/ULTRAKILLtweaker): *Confirmed* to be working, but extensive testing has not been done.
-If UltrakULL and UltraTweaker are being used at the same time, the Language tab in the Options menu will be moved to the right side
-to avoid overlap with UltraTweaker's own Tweaker Options button.
-
-[UltraSkins](https://github.com/The-DoomMan/ULTRASKINS): Loads, but *not fully compatible* due to UltraSkins
-displaying HUD messages that UltrakULL does not correctly show.
 
 # Credits & Contributors
 UltrakULL created by **[Clearwater](https://github.com/ClearwaterTM)**\
-Additional code contributions by **[Temperz87](https://github.com/Temperz87/)**\
+Additional code contributions by **[Temperz87](https://github.com/Temperz87/) and [CoatlessAli](https://github.com/coatlessali/)**\
 Documentation contributions by Frizou.
 Language translations by members of the **UltrakULL Translation Team** \
 (view the [Languages](#Languages) section for full information and crediting)\
