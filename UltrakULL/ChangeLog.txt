@@ -1,5 +1,6 @@
 ﻿1.2.1
 
+- Fixed the bottle message in 5-S also being used for the Size 2 book in the underground well outpost.
 - Fixed some of Sisy Prime's voice lines being played in the incorrect order. ("Destroy" for "You can't escape" etc).
 
 1.2.0c

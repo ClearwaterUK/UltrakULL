@@ -30,7 +30,6 @@ using static UltrakULL.CommonFunctions;
  *  -- FOR NEXT HOTFIX --
  * Make language button disappear like other option buttons when save menu is opened
  * Add authors of current language loaded into credits book
- * 5-S bottle overrides book, need to fix
  * CG: High score disable warning when using custom patterns (https://cdn.discordapp.com/attachments/1029506724035575928/1112482795638497351/Screenshot_2.png)
  * Weapon wheel tick in rumble is missing translation (https://media.discordapp.net/attachments/1029506724035575928/1112460050036961370/Screenshot_1.png)
  * Reduce font size of some of the fishing HUD elements in 5-S to accomodate for longer strings

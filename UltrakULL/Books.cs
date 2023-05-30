@@ -63,7 +63,7 @@ namespace UltrakULL
                 case "Level 5-S":
                 {
                     //Book
-                    if(originalText.Contains("I have to see"))
+                    if(originalText.Contains("DAY 529"))
                     {
                         return 
                         LanguageManager.CurrentLanguage.fishing.fish_book1 + "\n\n"
