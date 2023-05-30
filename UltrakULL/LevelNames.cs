@@ -51,6 +51,7 @@ namespace UltrakULL
 			if (missionName.Contains("6-2")) { return "6-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_heresySecond; }
 
 			if (missionName.Contains("P-1")) { return "P-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeFirst; }
+			if (missionName.Contains("P-2")) { return "P-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeSecond; }
 
 			if (missionName.Contains("Intermission")) { return "???"; }
 

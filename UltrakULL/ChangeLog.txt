@@ -2,6 +2,7 @@
 
 - Fixed the bottle message in 5-S also being used for the Size 2 book in the underground well outpost.
 - Fixed some of Sisy Prime's voice lines being played in the incorrect order. ("Destroy" for "You can't escape" etc).
+- Fixed P-2 displaying as an unknown level in the level stat window.
 
 1.2.0c
 - **Added the ability to download and update language files directly in-game.**
