@@ -29,9 +29,20 @@ using static UltrakULL.CommonFunctions;
  *  
  *  -- FOR NEXT HOTFIX --
  * Make language button disappear like other option buttons when save menu is opened
+ * Add authors of current language loaded into credits book
+ * 5-S bottle overrides book, need to fix
+ * CG: High score disable warning when using custom patterns (https://cdn.discordapp.com/attachments/1029506724035575928/1112482795638497351/Screenshot_2.png)
+ * Weapon wheel tick in rumble is missing translation (https://media.discordapp.net/attachments/1029506724035575928/1112460050036961370/Screenshot_1.png)
+ * Reduce font size of some of the fishing HUD elements in 5-S to accomodate for longer strings
+ * P-2 is showing as unknown level in the tab level stats window
+ * Fishing guide terminal sometimes not translated (doesn't translate when first appears, second time is fine) + awesome fishing tips not translated
+ * "Unlocked" string in CG jukebox not translated
+ * Museum: "Additional music", "Rest room", Dalia's plaque, Samuel James Bryan's plaque, rocket race start hud message, flyingdog's book missing
+ * Typos in the english template: https://cdn.discordapp.com/attachments/1029506724035575928/1113026400736256140/image.png , https://cdn.discordapp.com/attachments/1029506724035575928/1113026401042448394/image.png
+ * 
  *
  *- REPORTED BY USERS
- * Fishing guide terminal sometimes not translated (doesn't translate when first appears, second time is fine)
+ * 
  * Some of MDK/Owl's lines are still borked
  * Armboy in museum missing string
  * 

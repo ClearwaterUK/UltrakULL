@@ -31,7 +31,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             for(int x = 0; x < thisWillHurtAttack.Length; x++)
             {
                 string thisWillHurtString = sisyphusPrimeFolder + "sisyphusThisWillHurt.wav";
-                begoneAttacks[x] =  AudioSwapper.SwapClipWithFile(begoneAttacks[x], thisWillHurtString);
+                thisWillHurtAttack[x] =  AudioSwapper.SwapClipWithFile(thisWillHurtAttack[x], thisWillHurtString);
             }
             
             AudioClip[] grunt = __instance.hurtVoice;
@@ -52,14 +52,14 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             for(int x = 0; x < taunts.Length; x++)
             {
                 string sisyphusPrimeTauntString = sisyphusPrimeFolder + "sisyphusNiceTry" + (x+1).ToString() + ".wav";
-                stompAttacks[x] =  AudioSwapper.SwapClipWithFile(stompAttacks[x], sisyphusPrimeTauntString);
+                taunts[x] =  AudioSwapper.SwapClipWithFile(taunts[x], sisyphusPrimeTauntString);
             }
             
             AudioClip[] uppercutAttacks = __instance.uppercutComboVoice;
             for(int x = 0; x < uppercutAttacks.Length; x++)
             {
                 string sisyphusPrimeUppercutString = sisyphusPrimeFolder + "sisyphusDestroy" + (x+1).ToString() + ".wav";
-                stompAttacks[x] =  AudioSwapper.SwapClipWithFile(uppercutAttacks[x], sisyphusPrimeUppercutString);
+                uppercutAttacks[x] =  AudioSwapper.SwapClipWithFile(uppercutAttacks[x], sisyphusPrimeUppercutString);
             }
         }
     }

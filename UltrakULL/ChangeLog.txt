@@ -1,7 +1,11 @@
-﻿1.2.0c
+﻿1.2.1
+
+- Fixed some of Sisy Prime's voice lines being played in the incorrect order. ("Destroy" for "You can't escape" etc).
+
+1.2.0c
 - **Added the ability to download and update language files directly in-game.**
 (NOTE: Loading language files locally will remain possible.)
-- **Added cyrillic character support. **Languages using cyrillic characters will no longer use the default Unity fallback font.**
+- **Added cyrillic character support. Languages using cyrillic characters will no longer use the default Unity fallback font.**
 - Detached the mod from UMM. As such, **UltraModManager is no longer required to install and use UltrakULL.**
 - Added dubbing support for Sisyphus Prime, updated dubbing documentation.
 - Added mod credits to the additional credits book in the dev museum.
