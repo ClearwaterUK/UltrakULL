@@ -32,11 +32,9 @@ using System.Reflection;
  * Make language button disappear like other option buttons when save menu is opened
  * Add authors of current language loaded into credits book
  * CG: High score disable warning when using custom patterns (https://cdn.discordapp.com/attachments/1029506724035575928/1112482795638497351/Screenshot_2.png)
- * Weapon wheel tick in rumble is missing translation (https://media.discordapp.net/attachments/1029506724035575928/1112460050036961370/Screenshot_1.png)
  * Reduce font size of some of the fishing HUD elements in 5-S to accomodate for longer strings
  * Fishing guide terminal sometimes not translated (doesn't translate when first appears, second time is fine) + awesome fishing tips not translated
  * "Unlocked" string in CG jukebox not translated
- * Typos in the english template: https://cdn.discordapp.com/attachments/1029506724035575928/1113026400736256140/image.png , https://cdn.discordapp.com/attachments/1029506724035575928/1113026401042448394/image.png
  *
  * On boot, if the mod cannot find the file that was set as the last lang used, it needs to revert to en-GB otherwise it'll completely break everything else.
  *

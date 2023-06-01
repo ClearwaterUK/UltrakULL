@@ -1895,6 +1895,7 @@ namespace UltrakULL.json
         public string rumble_intensity;
         public string rumble_endDelay;
         public string rumble_reset;
+        public string rumble_weaponWheel;
         
         public string language_title;
         public string language_languages;

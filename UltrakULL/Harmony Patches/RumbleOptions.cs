@@ -37,7 +37,8 @@ namespace UltrakULL.Harmony_Patches
                 case "rumble.slide": {key = LanguageManager.CurrentLanguage.options.rumble_slide;break;}
                 case "rumble.whiplash.throw": {key = LanguageManager.CurrentLanguage.options.rumble_whiplashThrow;break;}
                 case "rumble.whiplash.pull": {key = LanguageManager.CurrentLanguage.options.rumble_whiplashPull;break;}
-                default:{break;}
+                case "rumble.weapon_wheel_tick": {key = LanguageManager.CurrentLanguage.options.rumble_weaponWheel;break;}
+                default:{Logging.Warn(key);break;}
             }
             return true;
         }

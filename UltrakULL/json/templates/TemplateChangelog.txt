@@ -4,6 +4,8 @@ ADDED:
 
 fishing: fish_noFishBiting
 
+options: rumble_weaponWheel
+
 devMuseum: museum_AdditionalCredits6
 devMuseum: museum_rocketRaceStart
 devMuseum: museum_rocketRaceTime

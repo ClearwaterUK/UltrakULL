@@ -1317,6 +1317,7 @@
         "rumble_slide": "Sliding",
         "rumble_whiplashThrow": "Whiplash Throw",
         "rumble_whiplashPull": "Whiplash Pull",
+        "rumble_weaponWheel": "Weapon Wheel Tick",
         "rumble_intensity": "INTENSITY",
         "rumble_endDelay": "END DELAY",
         "rumble_reset": "RESET",

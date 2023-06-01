@@ -6,6 +6,7 @@
 - Fixed an issue with the way the mod searches for required files, this should fix a major issue when loading the mod from R2ModManager.
 - Fixed a few leftover elements in the dev museum not being translated or missing.
 Thank you to Hydra for the contribution!
+- Added a string for "Weapon Wheel Tick" in the rumble menu.
 
 1.2.0c
 - **Added the ability to download and update language files directly in-game.**
