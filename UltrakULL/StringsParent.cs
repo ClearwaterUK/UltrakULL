@@ -33,6 +33,10 @@ namespace UltrakULL
             {
                 return "Unimplemented Act 3 function";
             }
+            else if (level.Contains("CreditsMuseum2"))
+            {
+                return DevMuseum.GetMessage(message,message2,input);
+            }
             else
             {
                 return "Unimplemented unknown string";

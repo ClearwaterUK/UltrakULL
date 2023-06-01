@@ -381,10 +381,15 @@
 			
 			"museum_rocketRace1": "",
 			"museum_rocketRace2": "",
+			"museum_rocketRaceStart": "",
 			"museum_rocketRaceResult": "",
 			
 			"museum_cinemaPlay": "",
-			"museum_cinemaStop": ""
+			"museum_cinemaStop": "",
+
+			"museum_spoiler1": "",
+			"museum_spoiler2": "",
+			"museum_spoiler3": ""
 			
 		},
 		

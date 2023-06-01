@@ -2566,10 +2566,15 @@ namespace UltrakULL.json
         
         public string museum_rocketRace1;
         public string museum_rocketRace2;
+        public string museum_rocketRaceStart;
         public string museum_rocketRaceResult;
         
         public string museum_cinemaPlay;
         public string museum_cinemaStop;
+        
+        public string museum_spoiler1;
+        public string museum_spoiler2;
+        public string museum_spoiler3;
 
     }
 

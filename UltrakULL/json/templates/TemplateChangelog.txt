@@ -3,7 +3,11 @@
 ADDED:
 
 fishing: fish_noFishBiting
+
 devMuseum: museum_AdditionalCredits6
+devMuseum: museum_rocketRaceStart
+devMuseum: museum_rocketRaceTime
+devMuseum: museum_spoiler
 
 1.2.0b:
 

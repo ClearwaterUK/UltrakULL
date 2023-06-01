@@ -9,6 +9,7 @@ using Discord;
 using UltrakULL.audio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using BepInEx;
 
 using static UltrakULL.CommonFunctions;
 
@@ -26,7 +27,7 @@ namespace UltrakULL.json
         {
             LoadLanguages(modVersion);
 
-            configFile = new ConfigFile(Path.Combine("BepInEx", "config", "ultrakull", "lastLang.cfg"), true);
+            configFile = new ConfigFile(Path.Combine(BepInEx.Paths.ConfigPath, "ultrakull", "lastLang.cfg"), true);
 
             string value = configFile.Bind("General", "LastLanguage", "en-GB").Value;
             string dubValue = configFile.Bind("General","activeDubbing","False").Value;
@@ -57,7 +58,8 @@ namespace UltrakULL.json
             Logging.Warn("Loading language files stored locally on disk...");
             
             allLanguages = new Dictionary<string, JsonFormat>();
-            string[] files = Directory.GetFiles(Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull"), "*.json");
+
+            string[] files = Directory.GetFiles(Path.Combine(BepInEx.Paths.ConfigPath,"ultrakull"),"*.json");
             foreach (string file in files)
             {
                 if (TryLoadLang(file, out JsonFormat lang) && !allLanguages.ContainsKey(lang.metadata.langName) && lang.metadata.langName != "te-mp")
@@ -223,7 +225,7 @@ namespace UltrakULL.json
                 
                 MainPatch.Instance.onSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
                 LanguageManager.DumpLastLanguage();
-                AudioSwapper.SpeechFolder = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull", "audio", LanguageManager.CurrentLanguage.metadata.langName) + Path.DirectorySeparatorChar;
+                AudioSwapper.SpeechFolder = Path.Combine(BepInEx.Paths.ConfigPath,"ultrakull", "audio", LanguageManager.CurrentLanguage.metadata.langName) + Path.DirectorySeparatorChar;
 					
                 if(GetCurrentSceneName() != "Main Menu")
                 {

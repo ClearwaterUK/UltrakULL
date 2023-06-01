@@ -3,6 +3,7 @@ using System.IO;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
+using BepInEx;
 
 using UltrakULL.json;
 using static UltrakULL.CommonFunctions;
@@ -11,8 +12,9 @@ namespace UltrakULL.audio
 {
     public static class AudioSwapper
     {
-        public static string SpeechFolder = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull", "audio", LanguageManager.CurrentLanguage.metadata
+        public static string SpeechFolder = Path.Combine(BepInEx.Paths.ConfigPath,"ultrakull", "audio", LanguageManager.CurrentLanguage.metadata
         .langName) + Path.DirectorySeparatorChar;
+
         
         public static AudioClip SwapClipWithFile(AudioClip sourceClip, string audioFilePath)
         {
@@ -47,7 +49,7 @@ namespace UltrakULL.audio
                 return;
             }
             
-            SpeechFolder = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull", "audio", LanguageManager.CurrentLanguage.metadata
+            SpeechFolder = Path.Combine(BepInEx.Paths.ConfigPath, "ultrakull", "audio", LanguageManager.CurrentLanguage.metadata
                 .langName) + Path.DirectorySeparatorChar;
             
             //Since the makes a clone of the arena gameObject which is used, wait a small period of time for the new gameObject to be accessible before accessing it.

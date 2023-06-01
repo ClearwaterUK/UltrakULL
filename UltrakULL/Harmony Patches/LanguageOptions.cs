@@ -30,9 +30,10 @@ namespace UltrakULL.Harmony_Patches
         
         public static bool langFileLocallyExists(string languageTag)
         {
-            string expectedFileLocation = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull", languageTag + ".json");
+            string expectedFileLocation = Path.Combine(BepInEx.Paths.ConfigPath, "ultrakull", languageTag + ".json");
             return File.Exists(expectedFileLocation);
         }
+
         
         public static void warnBeforeDownload(LanguageInfo lInfo)
         {
@@ -161,7 +162,7 @@ namespace UltrakULL.Harmony_Patches
                             //If the online version has a newer version, display that an update is available.
                             //Otherwise just display that the language has already been downloaded.
                             
-                            string langFilePath = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx","config","ultrakull", langInfo.languageTag + ".json");
+                            string langFilePath = Path.Combine(BepInEx.Paths.ConfigPath,"ultrakull", langInfo.languageTag + ".json");
 
                             string jsonFile = File.ReadAllText(langFilePath);
                             JsonFormat json = JsonConvert.DeserializeObject<JsonFormat>(jsonFile);
@@ -277,9 +278,11 @@ namespace UltrakULL.Harmony_Patches
             
             string languageFileUrl = "https://clearwateruk.github.io/mods/ultrakULL/" + fileName;
             
-            string localLanguageFolder = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull");
+            string localLanguageFolder = Path.Combine(BepInEx.Paths.ConfigPath, "ultrakull//");
             
             string fullPath = localLanguageFolder + fileName;
+            
+            Logging.Warn("Downloading to: " + fullPath);
             
             Client.DefaultRequestHeaders.Accept.Add( new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
             Client.DefaultRequestHeaders.UserAgent.TryParseAdd("request");
@@ -446,7 +449,7 @@ namespace UltrakULL.Harmony_Patches
                 colorMultiplier = 1f,
                 fadeDuration = 0.1f
             };
-            openLangFolderButton.onClick.AddListener(delegate { Application.OpenURL(Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull")); });
+            openLangFolderButton.onClick.AddListener(delegate { Application.OpenURL(Path.Combine(BepInEx.Paths.ConfigPath, "ultrakull")); });
             RectTransform cRect = langLocalPage.transform.Find("Scroll Rect (1)").Find("Contents").GetComponent<RectTransform>();
             cRect.sizeDelta = new Vector2(600f, (LanguageManager.allLanguages.Keys.Count) * 100);
 

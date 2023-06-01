@@ -80,12 +80,12 @@
         "museum_bookToniStigell7": "- Getting me into DMC in the first place",
 
 
-        "museum_bookToniFlyingDog1": "<b><color=#6a36be>FLYINGDOG</color> - 3D ARTIST</b>",
-        "museum_bookToniFlyingDog2": "FlyingDog joined the team right at the start of development in early 2018, designing and creating many of the first 3D models and their textures. Although most of these models have since been remade and replaced, they're still based on his original designs and many of his original models can still be seen here and there as easter eggs. His final contribution to the game was the texture for the Feedbacker arm in mid 2019.",
-        "museum_bookToniFlyingDog3": "Some of his biggest contributions include:",
-        "museum_bookToniFlyingDog4": "- The designs and original models for the revolver, shotgun and Malicious Face",
-        "museum_bookToniFlyingDog5": "- The original model and texture for the nailgun",
-        "museum_bookToniFlyingDog6": "- The textures for the original versions of the husks and Swordsmachine",
+        "museum_bookFlyingDog1": "<b><color=#6a36be>FLYINGDOG</color> - 3D ARTIST</b>",
+        "museum_bookFlyingDog2": "FlyingDog joined the team right at the start of development in early 2018, designing and creating many of the first 3D models and their textures. Although most of these models have since been remade and replaced, they're still based on his original designs and many of his original models can still be seen here and there as easter eggs. His final contribution to the game was the texture for the Feedbacker arm in mid 2019.",
+        "museum_bookFlyingDog3": "Some of his biggest contributions include:",
+        "museum_bookFlyingDog4": "- The designs and original models for the revolver, shotgun and Malicious Face",
+        "museum_bookFlyingDog5": "- The original model and texture for the nailgun",
+        "museum_bookFlyingDog6": "- The textures for the original versions of the husks and Swordsmachine",
 
         "museum_bookSamuelJamesBryan1": "<b><color=orange>SAMUEL JAMES BRYAN</color> - 3D ARTIST</b>",
         "museum_bookSamuelJamesBryan2": "Sam joined in mid 2019, early into the Limbo layer's development and is responsible for modelling most of the enemies in Act 1, including V1, V2 and Gabriel. His last modelling work for the game was the Sisyphean Insurrectionist in early 2021 and he has mostly moved on to different projects since then, though he still occasionally helps out with feedback and modelling advice.",
@@ -386,7 +386,12 @@
 
         "museum_rocketRace1": "ROCKET RACE",
         "museum_rocketRace2": "START",
-        "museum_rocketRaceResult": "TIME:"
+        "museum_rocketRaceStart": "RACE START",
+        "museum_rocketRaceResult": "TIME:",
+        
+        "museum_spoiler1": "WARNING",
+        "museum_spoiler2": "SPOILER",
+        "museum_spoiler3": "OPEN"
     },
 
     "fishing": {

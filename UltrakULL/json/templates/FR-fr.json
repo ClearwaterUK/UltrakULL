@@ -379,9 +379,14 @@
         "museum_plaquesMandalore1": "",
         "museum_plaquesMandalore2": "",
 
-        "museum_rocketRace1": "",
-        "museum_rocketRace2": "",
-        "museum_rocketRaceResult": ""
+        "museum_rocketRace1": "COURSE LANCE-ROQUETTES",
+        "museum_rocketRace2": "DEMARRER",
+        "museum_rocketRaceStart": "RACE START",
+        "museum_rocketRaceResult": "TEMPS: ",
+
+        "museum_spoiler1": "ALERTE",
+        "museum_spoiler2": "SPOILER",
+        "museum_spoiler3": "OUVRIR"
     },
 
 

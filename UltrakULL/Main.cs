@@ -36,11 +36,9 @@ using System.Reflection;
  * Reduce font size of some of the fishing HUD elements in 5-S to accomodate for longer strings
  * Fishing guide terminal sometimes not translated (doesn't translate when first appears, second time is fine) + awesome fishing tips not translated
  * "Unlocked" string in CG jukebox not translated
- * Museum: "Additional music", "Rest room", Dalia's plaque, Samuel James Bryan's plaque, rocket race start hud message, flyingdog's book missing
  * Typos in the english template: https://cdn.discordapp.com/attachments/1029506724035575928/1113026400736256140/image.png , https://cdn.discordapp.com/attachments/1029506724035575928/1113026401042448394/image.png
- * Issue with R2 loading the mod if the mod is loaded from R2, but the base game dir is not set up with BIE+ the mod itself.
- * (This is related to the mod looking for files in the base game dir. Need to find a way to detect if it was loaded from base game dir or loaded from R2.)
- * 
+ *
+ * On boot, if the mod cannot find the file that was set as the last lang used, it needs to revert to en-GB otherwise it'll completely break everything else.
  *
  *- REPORTED BY USERS
  * 

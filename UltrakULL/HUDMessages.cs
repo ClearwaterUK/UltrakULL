@@ -1,6 +1,6 @@
 ﻿using UltrakULL.json;
-using static UltrakULL.CommonFunctions;
-
+                                                                                 using static UltrakULL.CommonFunctions;
+                                                                                 
 namespace UltrakULL
 {
     public static class HUDMessages

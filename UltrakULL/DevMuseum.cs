@@ -7,6 +7,27 @@ namespace UltrakULL
 {
     public class DevMuseum
     {
+        public static string GetMessage(string message, string message2, string input)
+        {
+            if(message.Contains("RACE START"))
+            {
+                return LanguageManager.CurrentLanguage.devMuseum.museum_rocketRaceStart;
+            }
+            if(message.Contains("A R M B O Y"))
+            { 
+                return LanguageManager.CurrentLanguage.act2.act2_heresyFirst_armboy;
+            }
+            if(message.Contains("TIME"))
+            {
+                string time = message.Split(':')[1];
+                
+                return LanguageManager.CurrentLanguage.misc.levelstats_time + ": " + time;
+            }
+            
+            
+            return "";
+        }
+        
         public static string GetMuseumBook(string originalText)
         {
             if(originalText.Contains("<b><color=orange>HAKITA</color> - CREATOR OF ULTRAKILL</b>"))
@@ -102,7 +123,7 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookSamuelJamesBryan1 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookSamuelJamesBryan2 + "\n\n"
-                    + "<color=orange>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookSamuelJamesBryan2 + "</color>";
+                    + "<color=orange>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookSamuelJamesBryan3 + "</color>";
             }
             if(originalText.Contains("<b><color=red>CAMERON MARTIN</color> - QUALITY ASSURANCE LEAD"))
             {
@@ -437,7 +458,7 @@ namespace UltrakULL
             Text samuelPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomSamuelPlaque,"Text"));
             Text samuelPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomSamuelPlaque,"Text (1)"));
             samuelPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesSamuelJamesBryan1;
-            samuelPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesSamuelJamesBryan1;
+            samuelPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesSamuelJamesBryan2;
             
             GameObject artRoomCameronPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (19)"),"Dev Smalll placard"),"Canvas (4)");
             Text cameronPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomCameronPlaque,"Text"));
@@ -454,8 +475,8 @@ namespace UltrakULL
             GameObject artRoomTuckerPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (18)"),"Dev Smalll placard"),"Canvas (4)");
             Text tuckerPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomTuckerPlaque,"Text"));
             Text tuckerPlaque2 = GetTextfromGameObject(GetGameObjectChild(artRoomTuckerPlaque,"Text (1)"));
-            tuckerPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesDaliaFigueroa1;
-            tuckerPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesDaliaFigueroa2;
+            tuckerPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesTuckerWilkin1;
+            tuckerPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesTuckerWilkin2;
             
             GameObject artRoomScottPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (17)"),"Dev Smalll placard"),"Canvas (4)");
             Text scottPlaque1 = GetTextfromGameObject(GetGameObjectChild(artRoomScottPlaque,"Text"));
@@ -509,7 +530,7 @@ namespace UltrakULL
             restRoomPlaque.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesRestRoom;
             
             Text talkRoomPlaque = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(talkRoomSign,"Canvas (3)"),"Text"));
-            talkRoomPlaque.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesRestRoom;
+            talkRoomPlaque.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesTalkRoom;
             
             GameObject restRoomMeganekoPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (3)"),"Dev Smalll placard"),"Canvas (4)");
             Text meganekoPlaque1 = GetTextfromGameObject(GetGameObjectChild(restRoomMeganekoPlaque,"Text"));
@@ -560,17 +581,35 @@ namespace UltrakULL
             Text additionalCreditsPlaque = GetTextfromGameObject(GetGameObjectChild(redRoomAdditionalCreditsPlaque,"Text"));
             additionalCreditsPlaque.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesAdditionalCredits;
             
-            GameObject talkRoomStephanPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques, "Prime 1 VA"),"Dev_Space_ (8)"),"Dev Smalll placard"),"Canvas (4)");
+            GameObject talkRoomStephanPlaque = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques, "Prime 1 VA"),"Dev_Space_ (8)"),"Dev Smalll placard"),"Canvas (4)");
             Text stephanPlaque1 = GetTextfromGameObject(GetGameObjectChild(talkRoomStephanPlaque,"Text"));
             Text stephanPlaque2 = GetTextfromGameObject(GetGameObjectChild(talkRoomStephanPlaque,"Text (1)"));
             stephanPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesStephanWeyte1;
             stephanPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesStephanWeyte2;
+            
+            GameObject talkRoomStephanSpoilerScreen = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques, "Prime 1 VA"),"SpoilerBlock"),"PuzzleScreen (1)"),"Canvas"),"Background");
+            
+            Text stephanSpoiler1 = GetTextfromGameObject(GetGameObjectChild(talkRoomStephanSpoilerScreen,"Text"));
+            stephanSpoiler1.text = "<color=red>!" + LanguageManager.CurrentLanguage.devMuseum.museum_spoiler1 + " !</color>\n" 
+            + LanguageManager.CurrentLanguage.devMuseum.museum_spoiler2;
+            
+            Text stephanSpoiler2 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(talkRoomStephanSpoilerScreen,"OpenButton"),"Text"));
+            stephanSpoiler2.text = LanguageManager.CurrentLanguage.devMuseum.museum_spoiler3;
             
             GameObject talkRoomLenvalPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques, "Prime 2 VA"),"Dev_Space_ (33)"),"Dev Smalll placard"),"Canvas (4)");
             Text lenvalPlaque1 = GetTextfromGameObject(GetGameObjectChild(talkRoomLenvalPlaque,"Text"));
             Text lenvalPlaque2 = GetTextfromGameObject(GetGameObjectChild(talkRoomLenvalPlaque,"Text (1)"));
             lenvalPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesLenvalBrown1;
             lenvalPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesLenvalBrown2;
+            
+            GameObject talkRoomLenvalSpoilerScreen = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques, "Prime 2 VA"),"SpoilerBlock"),"PuzzleScreen (1)"),"Canvas"),"Background");
+            
+            Text lenvalSpoiler1 = GetTextfromGameObject(GetGameObjectChild(talkRoomLenvalSpoilerScreen,"Text"));
+            lenvalSpoiler1.text = "<color=red>!" + LanguageManager.CurrentLanguage.devMuseum.museum_spoiler1 + " !</color>\n" 
+            + LanguageManager.CurrentLanguage.devMuseum.museum_spoiler2;
+            
+            Text lenvalSpoiler2 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(talkRoomLenvalSpoilerScreen,"OpenButton"),"Text"));
+            lenvalSpoiler2.text = LanguageManager.CurrentLanguage.devMuseum.museum_spoiler3;
             
             GameObject restRoomJoyPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (7)"),"Dev Smalll placard"),"Canvas (4)");
             Text joyPlaque1 = GetTextfromGameObject(GetGameObjectChild(restRoomJoyPlaque,"Text"));
