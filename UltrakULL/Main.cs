@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using UltrakULL.json;
 using BepInEx;
 using static UltrakULL.CommonFunctions;
+using System.Reflection;
 
 /*
  *	UltrakULL (Ultrakill Language Library)
@@ -69,6 +70,8 @@ namespace UltrakULL
         private static readonly HttpClient Client = new HttpClient();
         
         public static Font GlobalFont;
+
+        public static string ModFolder => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
         public MainPatch()
         {
@@ -552,8 +555,9 @@ namespace UltrakULL
         public void LoadFonts()
         {
             Logging.Warn("Loading font resource bundle...");
-            AssetBundle fontBundle = AssetBundle.LoadFromFile(
-                Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "plugins", "ultrakull") + Path.DirectorySeparatorChar + "ullfont.resource");
+            //Will file from the same directory that the dll is in.
+            AssetBundle fontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder,"ullfont.resource"));
+
             if(fontBundle == null)
             {
                 Logging.Error("FAILED TO LOAD");

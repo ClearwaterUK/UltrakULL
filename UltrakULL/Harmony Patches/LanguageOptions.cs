@@ -30,7 +30,7 @@ namespace UltrakULL.Harmony_Patches
         
         public static bool langFileLocallyExists(string languageTag)
         {
-            string expectedFileLocation = Path.Combine(Directory.GetCurrentDirectory() + "\\BepInEx\\config\\ultrakull\\") + languageTag + ".json";
+            string expectedFileLocation = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull", languageTag + ".json");
             return File.Exists(expectedFileLocation);
         }
         
@@ -161,7 +161,7 @@ namespace UltrakULL.Harmony_Patches
                             //If the online version has a newer version, display that an update is available.
                             //Otherwise just display that the language has already been downloaded.
                             
-                            string langFilePath = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx","config","ultrakull") + Path.DirectorySeparatorChar + langInfo.languageTag + ".json";
+                            string langFilePath = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx","config","ultrakull", langInfo.languageTag + ".json");
 
                             string jsonFile = File.ReadAllText(langFilePath);
                             JsonFormat json = JsonConvert.DeserializeObject<JsonFormat>(jsonFile);
@@ -277,7 +277,7 @@ namespace UltrakULL.Harmony_Patches
             
             string languageFileUrl = "https://clearwateruk.github.io/mods/ultrakULL/" + fileName;
             
-            string localLanguageFolder = Path.Combine(Directory.GetCurrentDirectory() + "\\BepInEx\\config\\ultrakull\\");
+            string localLanguageFolder = Path.Combine(Directory.GetCurrentDirectory(), "BepInEx", "config", "ultrakull");
             
             string fullPath = localLanguageFolder + fileName;
             
