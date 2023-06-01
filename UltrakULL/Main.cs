@@ -36,8 +36,6 @@ using System.Reflection;
  * Fishing guide terminal sometimes not translated (doesn't translate when first appears, second time is fine) + awesome fishing tips not translated
  * "Unlocked" string in CG jukebox not translated
  *
- * On boot, if the mod cannot find the file that was set as the last lang used, it needs to revert to en-GB otherwise it'll completely break everything else.
- *
  *- REPORTED BY USERS
  * 
  * Some of MDK/Owl's lines are still borked

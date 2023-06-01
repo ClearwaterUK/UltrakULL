@@ -44,7 +44,10 @@ namespace UltrakULL.json
             }
             else
             {
-                jsonLogger.Log(BepInEx.Logging.LogLevel.Message, "No last language found, value was " + value);
+                jsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Previous lang file is missing from disk: " + value);
+                Logging.Warn("Setting language back to en-GB to avoid problems");
+                CurrentLanguage = allLanguages["en-GB"];
+                SetCurrentLanguage("en-GB");
             }
         }
 
@@ -207,6 +210,8 @@ namespace UltrakULL.json
 
         public static void SetCurrentLanguage(string langName)
         {
+            Logging.Warn("SetCurLan to " + langName);
+
             if (CurrentLanguage != null && CurrentLanguage.metadata.langName == langName)
             {
                 Logging.Warn("Tried to switch language to " + langName + " but it was already set as that!");
