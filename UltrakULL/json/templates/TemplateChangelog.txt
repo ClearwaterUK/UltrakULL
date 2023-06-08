@@ -11,6 +11,8 @@ devMuseum: museum_rocketRaceStart
 devMuseum: museum_rocketRaceTime
 devMuseum: museum_spoiler
 
+cybergrind: cybergrind_patternsWarning
+
 1.2.0b:
 
 ADDED:

@@ -610,7 +610,8 @@
         "cybergrind_musicUnlocked": "UNLOCKED",
         "cybergrind_musicConfirm": "CONFIRM",
         "cybergrind_musicSoundtrack": "SOUNDTRACK",
-        
+
+        "cybergrind_patternsWarning": "WARNING: HIGH SCORE WILL NOT BE SAVED WHEN USING CUSTOM PATTERNS",
         "cybergrind_patternsTitle": "PATTERNS",
         "cybergrind_patternsRefresh": "REFRESH",
         "cybergrind_patternsLaunchExternalEditor": "EDITOR",

@@ -12,6 +12,7 @@ Thank you to Hydra for the contribution!
 - Fixed the end of level leaderboard strings switching back to English when toggling back and forth.
 - Fixed regular enemies having boss HP bars appearing as unknown enemy names.
 - Added a string for "Weapon Wheel Tick" in the rumble menu.
+- Added a string for the Cyber Grind custom pattern warning.
 
 1.2.0c
 - **Added the ability to download and update language files directly in-game.**

@@ -600,7 +600,8 @@
           "cybergrind_musicUnlocked": "DÉBLOQUÉ",
           "cybergrind_musicConfirm": "CONFIRMER",
           "cybergrind_musicSoundtrack": "BANDE SONORE",
-          
+
+          "cybergrind_patternsWarning": "ATTENTION: LES MEILLEURS SCORES NE SERONT PAS SAUVEGARDÉES AVEC DES SCHÈMAS PERSONALISÉS",
           "cybergrind_patternsTitle": "SCHÈMAS",
           "cybergrind_patternsRefresh": "ACTUALISER",
           "cybergrind_patternsLaunchExternalEditor": "ÉDITEUR",

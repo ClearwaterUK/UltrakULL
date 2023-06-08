@@ -183,6 +183,7 @@ namespace UltrakULL.json
         public string cybergrind_musicConfirm;
         public string cybergrind_musicSoundtrack;
         
+        public string cybergrind_patternsWarning;
         public string cybergrind_patternsTitle;
         public string cybergrind_patternsRefresh;
         public string cybergrind_patternsLaunchExternalEditor;

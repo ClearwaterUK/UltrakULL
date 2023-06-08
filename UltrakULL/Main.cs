@@ -31,9 +31,7 @@ using System.Reflection;
  *  -- FOR NEXT HOTFIX --
  * Make language button disappear like other option buttons when save menu is opened
  * Add authors of current language loaded into credits book
- * CG: High score disable warning when using custom patterns (https://cdn.discordapp.com/attachments/1029506724035575928/1112482795638497351/Screenshot_2.png)
  * Fishing guide terminal sometimes not translated (doesn't translate when first appears, second time is fine)
- * "Unlocked" string in CG jukebox not translated
  * Update custom font
  *
  *- REPORTED BY USERS

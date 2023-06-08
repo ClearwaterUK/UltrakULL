@@ -204,7 +204,7 @@ namespace UltrakULL
             Text cgCustomThemeBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgCustomTheme, "BackButton"), "Text"));
             cgCustomThemeBack.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustomBack;
 
-            //a
+            //Patterns
             Text cgCustomRefresh = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(cgCustomTheme, "ImageSelectorWrapper"),"RefreshButton"),"Text"));
             cgCustomRefresh.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_patternsRefresh;
 
@@ -223,6 +223,9 @@ namespace UltrakULL
 
             //Patterns
             GameObject cgTerminalPatterns = GetGameObjectChild(GetGameObjectChild(cgTerminal, "Patterns"), "Panel");
+            
+            Text cgPatternsWarning = GetTextfromGameObject(GetGameObjectChild(cgTerminalPatterns,"WarningText"));
+            cgPatternsWarning.text = "<color=red>" + LanguageManager.CurrentLanguage.cyberGrind.cybergrind_patternsWarning + "</color>";
 
 
             Text cgCustomStateButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgTerminalPatterns, "StateButton"), "Text"));
