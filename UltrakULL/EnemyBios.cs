@@ -25,6 +25,7 @@ namespace UltrakULL
                 case "SENTRY": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_sentry; }
                 case "MINDFLAYER": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_mindFlayer; }
                 case "MALICIOUS FACE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_malFace; }
+                case "MYSTERIOUS DRUID KNIGHT (& OWL)": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_mandalore; }
                 case "IDOL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_idol; }
                 case "LEVIATHAN": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_leviathan; }
                 case "CERBERUS": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_cerberus; }
