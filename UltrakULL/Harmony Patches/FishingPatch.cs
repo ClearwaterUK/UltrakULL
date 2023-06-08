@@ -93,9 +93,11 @@ namespace UltrakULL.Harmony_Patches
                     }
                 }
                 ___fishCaughtText.text ="<size=28>" + LanguageManager.CurrentLanguage.fishing.fish_fishCaught + "</size> <color=orange>" + fishName + "</color>";
+                ___fishCaughtText.resizeTextForBestFit = true;
                 
                 Text fishSizeText = GetTextfromGameObject(___fishSizeContainer);
                 fishSizeText.text = LanguageManager.CurrentLanguage.fishing.fish_size;
+                fishSizeText.resizeTextForBestFit = true;
             }
         }
     }

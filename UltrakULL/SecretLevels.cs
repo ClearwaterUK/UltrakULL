@@ -138,6 +138,11 @@ namespace UltrakULL
             
             Text fishingLeaderboardTitle = GetTextfromGameObject(GetGameObjectChild(fishingLeaderboard,"Title"));
             fishingLeaderboardTitle.text = LanguageManager.CurrentLanguage.fishing.fish_leaderboard;
+            
+            GameObject fishingTerminal = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Fishing Enc Terminal"),"Canvas"),"Border"),"TipBox"),"Panel");
+            
+            Text fishingTerminalTitle = GetTextfromGameObject(GetGameObjectChild(fishingTerminal,"Title"));
+            fishingTerminalTitle.text = LanguageManager.CurrentLanguage.fishing.fish_terminalTitle;
         }
         
         // SecretFirstRoom/Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text

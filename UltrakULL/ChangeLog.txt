@@ -5,8 +5,10 @@
 - Fixed some of Sisy Prime's voice lines being played in the incorrect order. ("Destroy" for "You can't escape" etc).
 - Fixed P-2 displaying as an unknown level in the level stat window.
 - Fixed an issue with the way the mod searches for required files, this should fix a major issue when loading the mod from R2ModManager.
-- Fixed a few leftover elements in the dev museum not being translated or missing.
 Thank you to Hydra for the contribution!
+- Fixed a few leftover elements in the dev museum not being translated or missing.
+- Fixed a couple of text strings in 5-S being cut off when too long.
+- Fixed the 5-S fishing terminal title not being translated.
 - Added a string for "Weapon Wheel Tick" in the rumble menu.
 
 1.2.0c
