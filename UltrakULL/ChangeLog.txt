@@ -9,6 +9,7 @@ Thank you to Hydra for the contribution!
 - Fixed a few leftover elements in the dev museum not being translated or missing.
 - Fixed a couple of text strings in 5-S being cut off when too long.
 - Fixed the 5-S fishing terminal title not being translated.
+- Fixed the end of level leaderboard strings switching back to English when toggling back and forth.
 - Added a string for "Weapon Wheel Tick" in the rumble menu.
 
 1.2.0c

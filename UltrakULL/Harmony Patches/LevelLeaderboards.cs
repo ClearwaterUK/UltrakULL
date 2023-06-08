@@ -32,7 +32,7 @@ namespace UltrakULL.Harmony_Patches
             }
         }
         
-        [HarmonyPatch(typeof(LevelEndLeaderboard),"OnEnable")]
+        [HarmonyPatch(typeof(LevelEndLeaderboard),"Update")]
         public class LevelLeaderboardEndPatch
         {
             [HarmonyPostfix]
