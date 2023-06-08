@@ -6,6 +6,7 @@ namespace UltrakULL
     {
         public static string GetName(string originalName)
         {
+            Logging.Warn(originalName);
             switch (originalName)
             {
                 case "FILTH": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_filth; }
