@@ -1,17 +1,21 @@
-﻿1.2.0c:
+﻿1.2.1:
+
+ADDED:
+
+cybergrind: cybergrind_patternsWarning
+options: rumble_weaponWheel
+
+1.2.0c:
 
 ADDED:
 
 fishing: fish_noFishBiting
-
-options: rumble_weaponWheel
 
 devMuseum: museum_AdditionalCredits6
 devMuseum: museum_rocketRaceStart
 devMuseum: museum_rocketRaceTime
 devMuseum: museum_spoiler
 
-cybergrind: cybergrind_patternsWarning
 
 1.2.0b:
 
