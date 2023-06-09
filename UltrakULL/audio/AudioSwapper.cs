@@ -179,30 +179,29 @@ namespace UltrakULL.audio
                 string sisyphusRespawnString = sisyphusPrimeFolder + "sisyphusKeepThemComing.wav";
                 sisyphusRespawnSource.clip = SwapClipWithFile(sisyphusRespawnSource.clip, sisyphusRespawnString);
                 
-
-                
-
-                
-
-                
-                
-                
-                
             }
             else if (levelName == "Level 4-3")
             {
                 //There are two used clips for intro, one for Mandalore, the other for the owl.
-                //I can't find where the owl clip is though...
 
                 string mandaloreFolder = SpeechFolder + "mandalore" + Path.DirectorySeparatorChar;
                 
-                GameObject mandaloreArena = GetGameObjectChild(GetInactiveRootObject("3 - Traitor Hallway"),"3B - Tomb of Kings");
+                GameObject mandaloreArena = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("3 - Traitor Hallway"),"3B - Tomb of Kings"),"3B Stuff"),"Hall");
 
-                GameObject mandaloreIntro = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(mandaloreArena,"3B Stuff"),"Hall"),"FakeMandalore"),"IntroLine");
+                GameObject mandaloreIntro = GetGameObjectChild(GetGameObjectChild(mandaloreArena,"FakeMandalore"),"IntroLine");
                 string mandaloreIntroString = mandaloreFolder + "mandaloreIntro.wav";
                 
                 AudioSource mandaloreIntroSource = mandaloreIntro.GetComponentInChildren<AudioSource>();
                 mandaloreIntroSource.clip = SwapClipWithFile(mandaloreIntroSource.clip, mandaloreIntroString);
+                
+                GameObject owlIntro = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(mandaloreArena,"FakeMandalore"),"Mandalore (Skeleton)"),"Armature.001"),"Base"),"Hips"),"Chest");
+                string owlIntroString = mandaloreFolder + "owlIntro.wav";
+                
+                AudioSource owlIntroSource = owlIntro.GetComponentInChildren<AudioSource>();
+                owlIntroSource.clip = SwapClipWithFile(owlIntroSource.clip,owlIntroString);
+
+                
+                
             }
             
             else if (levelName == "Level 5-3")

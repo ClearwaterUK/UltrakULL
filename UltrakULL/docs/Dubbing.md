@@ -32,12 +32,13 @@ Any lines not denoted here do not contain any specific particularities that requ
 The lines here have some very specific pecularities.
 For example, 2 lines may have the same linked subtitles, but one line may have a period of silence before/after it to give way to the other paired line.(Explain this better later)
 
-| Voice line             | Subtitle delay (in seconds) | Other notes                                                                                            |
-|------------------------|-----------------------------|--------------------------------------------------------------------------------------------------------|
-| mandaloreIntro         | 0.0;3.1                     | mandalore_introOwl has 3.1 seconds of silence at the start; plays at same time as mandalore_introManda |
-| mandalore_phaseChange1 | NEEDS FINISHING             |                                                                                                        |
-|                        |                             |                                                                                                        |
-|                        |                             |                                                                                                        |
+| Voice line             | Subtitle delay (in seconds) | Other notes                                                                                |
+|------------------------|-----------------------------|--------------------------------------------------------------------------------------------|
+| mandaloreIntro         | 0.0                         | Plays at same time as owlIntro.                                                            |
+| owlIntro               | 3.1                         | 3.1 seconds of silence at the start before it plays. Plays at same time as mandaloreIntro. |
+| mandalore_phaseChange1 | NEEDS FINISHING             |                                                                                            |
+|                        |                             |                                                                                            |
+|                        |                             |                                                                                            |
 
 ### 5-3: "SHIP OF FOOLS"
 

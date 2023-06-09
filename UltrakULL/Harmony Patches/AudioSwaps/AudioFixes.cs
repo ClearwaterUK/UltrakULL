@@ -1,5 +1,7 @@
-﻿using HarmonyLib;
+﻿using System;
+using HarmonyLib;
 using UltrakULL.audio;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using static UltrakULL.CommonFunctions;
 
@@ -16,4 +18,6 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
         }
         
     }
+    
+
 }

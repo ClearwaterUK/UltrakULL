@@ -23,21 +23,18 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             
             //NOTE - both audio files for Manda & Owl play at the SAME TIME.
             //This means each seperate audio file will need to have the relevant period of silence before/after speaking.
-        
             string mandaloreFolder = AudioSwapper.SpeechFolder + "mandalore" + Path.DirectorySeparatorChar;
         
             //Attack 1 (Full auto)
             ref AudioClip mandaloreAttack1 = ref __instance.voiceFull;
             string mandaloreAttack1String = mandaloreFolder + "mandaloreAttack1.wav";
             mandaloreAttack1 = AudioSwapper.SwapClipWithFile(mandaloreAttack1, mandaloreAttack1String);
-            
-            
-             //Attack 2 (Fuller auto)
+
+            //Attack 2 (Fuller auto)
             ref AudioClip mandaloreAttack2 = ref __instance.voiceFuller;
             string mandaloreAttack2String = mandaloreFolder + "mandaloreAttack2.wav";
             mandaloreAttack2 = AudioSwapper.SwapClipWithFile(mandaloreAttack2, mandaloreAttack2String);
-            
-            
+
             //Phase change 1 (speed increase)
             ref AudioClip mandalorePhaseChange1Manda = ref __instance.voices[0].secondPhase;
             ref AudioClip mandalorePhaseChange1Owl = ref __instance.voices[1].secondPhase;
@@ -47,8 +44,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             
             mandalorePhaseChange1Manda = AudioSwapper.SwapClipWithFile(mandalorePhaseChange1Manda, mandalorePhaseChange1MandaString);
             mandalorePhaseChange1Owl = AudioSwapper.SwapClipWithFile(mandalorePhaseChange1Owl, mandalorePhaseChange1OwlString);
-            
-            
+
             //Phase change 2 (max speed)
             ref AudioClip mandalorePhaseChange2Manda = ref __instance.voices[0].thirdPhase;
             ref AudioClip mandalorePhaseChange2Owl = ref __instance.voices[1].thirdPhase;
