@@ -1,5 +1,8 @@
 ﻿1.2.1
 
+- Updated the GitHub README to include installation instructions for R2ModManager.
+- Added a string for "Weapon Wheel Tick" in the rumble menu.
+- Added a string for the Cyber Grind custom pattern warning.
 - Fixed an issue where the mod would break on load if the last used language file was missing. The mod will now revert to English if this arises.
 - Fixed the bottle message in 5-S also being used for the Size 2 book in the underground well outpost.
 - Fixed some of Sisy Prime's voice lines being played in the incorrect order. ("Destroy" for "You can't escape" etc).
@@ -12,8 +15,6 @@ Thank you to Hydra for the contribution!
 - Fixed the end of level leaderboard strings switching back to English when toggling back and forth.
 - Fixed regular enemies having boss HP bars appearing as unknown enemy names.
 - Fixed some long standing issues regarding MDK+Owl's voice lines being dubbed in an incorrect manner.
-- Added a string for "Weapon Wheel Tick" in the rumble menu.
-- Added a string for the Cyber Grind custom pattern warning.
 
 1.2.0c
 - **Added the ability to download and update language files directly in-game.**

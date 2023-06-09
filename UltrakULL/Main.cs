@@ -36,8 +36,6 @@ using System.Reflection;
  *
  *- REPORTED BY USERS
  * 
- * Some of MDK/Owl's lines are still borked
- * 
  * */
 
 namespace UltrakULL
