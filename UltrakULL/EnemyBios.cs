@@ -30,18 +30,18 @@ namespace UltrakULL
                 case "V2": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_v2; }
                 case "SENTRY": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_sentry; }
                 case "MINDFLAYER": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_mindFlayer; }
-                case "MALICIOUS FACE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_malFace; }
+                case "MALICIOUS FACE": case "MALICIOUSFACE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_malFace; }
                 case "MYSTERIOUS DRUID KNIGHT (& OWL)": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_mandalore; }
                 case "IDOL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_idol; }
                 case "LEVIATHAN": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_leviathan; }
                 case "CERBERUS": case "CERBRUS, GUARDIAN OF HELL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_cerberus; }
-                case "HIDEOUS MASS": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_hideousMass; }
+                case "HIDEOUS MASS": case "HIDEOUSMASS":{ return LanguageManager.CurrentLanguage.enemyNames.enemyname_hideousMass; }
                 case "GABRIEL, JUDGE OF HELL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_gabriel; }
                 case "GABRIEL, APOSTATE OF HATE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_gabrielSecond; }
                 case "VIRTUE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_virtue; }
                 case "SOMETHING WICKED": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_somethingWicked; }
                 case "FLESH PRISON": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_fleshPrison; }
-                case "MINOS PRIME": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_minosPrime; }
+                case "MINOS PRIME": case "MINOSPRIME":{ return LanguageManager.CurrentLanguage.enemyNames.enemyname_minosPrime; }
                 case "FLESH PANOPTICON": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_fleshPanopticon; }
                 case "SISYPHUS PRIME": case "SISYPHUSPRIME":{ return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_sisyphusPrime; }
                 default: { return "Untranslated enemy name"; }
