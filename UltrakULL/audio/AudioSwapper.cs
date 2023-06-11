@@ -208,7 +208,7 @@ namespace UltrakULL.audio
             {
                 string gabeBoatFolder = SpeechFolder + "gabrielBoat" + Path.DirectorySeparatorChar;
                 
-                GameObject gabeBoatSpeechObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Unrotated"),"5 - Hologram Room"),"5 Nonstuff"),"Decorations"), "Hologram");
+                GameObject gabeBoatSpeechObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Unrotated"),"5 - Hologram Room"),"5 Nonstuff"),"Decorations"), "Hologram"),"Voice");
 
                 AudioSource gabeBoat = gabeBoatSpeechObject.GetComponentInChildren<AudioSource>();
 
