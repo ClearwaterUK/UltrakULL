@@ -17,7 +17,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             {
                 return;
             }
-            
+
             string sisyphusPrimeFolder =  AudioSwapper.SpeechFolder + "sisyphusPrime\\";
             
             AudioClip[] begoneAttacks  = __instance.clapVoice;
@@ -61,6 +61,10 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
                 string sisyphusPrimeUppercutString = sisyphusPrimeFolder + "sisyphusDestroy" + (x+1).ToString() + ".wav";
                 uppercutAttacks[x] =  AudioSwapper.SwapClipWithFile(uppercutAttacks[x], sisyphusPrimeUppercutString);
             }
+            ref AudioClip sisyphusPrimePhaseChange = ref __instance.phaseChangeVoice;
+            string sisyphusPrimePhaseChangeString = sisyphusPrimeFolder + "sisyphusYesThatsIt.wav";
+            sisyphusPrimePhaseChange = AudioSwapper.SwapClipWithFile(sisyphusPrimePhaseChange, sisyphusPrimePhaseChangeString);
+
         }
     }
 }
