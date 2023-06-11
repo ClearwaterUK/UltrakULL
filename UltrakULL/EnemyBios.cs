@@ -15,9 +15,15 @@ namespace UltrakULL
                 case "SOLDIER": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_soldier; }
                 case "THE CORPSE OF KING MINOS": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_minos; }
                 case "STALKER": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_stalker; }
-                case "INSURRECTIONIST": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_insurrectionist; }
+                case "INSURRECTIONIST": case "SISYPHEAN INSURRECTIONIST": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_insurrectionist; }
+                case "INSURRECTIONIST \"ANGRY\"": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_insurrectionistAngry;}
+                case "INSURRECTIONIST \"RUDE\"": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_insurrectionistRude;}
+                case "CANCEROUS RODENT": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_cancerousRodent;}
+                case "VERY CANCEROUS RODENT": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_veryCancerousRodent;}
                 case "FERRYMAN": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_ferryman; }
                 case "SWORDSMACHINE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_swordsmachine; }
+                case "SWORDSMACHINE \"AGONY\"": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_swordsmachineAgony;}
+                case "SWORDSMACHINE \"TUNDRA\"": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_swordsmachineTundra;}
                 case "DRONE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_drone; }
                 case "STREETCLEANER": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_streetCleaner; }
                 case "V2 (2nd)": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_v2Second; }
@@ -28,9 +34,9 @@ namespace UltrakULL
                 case "MYSTERIOUS DRUID KNIGHT (& OWL)": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_mandalore; }
                 case "IDOL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_idol; }
                 case "LEVIATHAN": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_leviathan; }
-                case "CERBERUS": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_cerberus; }
+                case "CERBERUS": case "CERBRUS, GUARDIAN OF HELL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_cerberus; }
                 case "HIDEOUS MASS": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_hideousMass; }
-                case "GABRIEL, JUDGE OF HELL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_gabriel; }
+                case "GABRIEL, JUDGE OF HELL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_gabriel; }
                 case "GABRIEL, APOSTATE OF HATE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_gabrielSecond; }
                 case "VIRTUE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_virtue; }
                 case "SOMETHING WICKED": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_somethingWicked; }
