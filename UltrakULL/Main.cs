@@ -35,6 +35,8 @@ using System.Reflection;
  * Update custom font
  *
  *- REPORTED BY USERS
+ * Gabe missing boss HP bar name in 6-2
+ * "Level leaderboards" in options not translated
  * 
  * */
 

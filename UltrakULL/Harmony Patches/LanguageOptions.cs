@@ -167,12 +167,15 @@ namespace UltrakULL.Harmony_Patches
                             string jsonFile = File.ReadAllText(langFilePath);
                             JsonFormat json = JsonConvert.DeserializeObject<JsonFormat>(jsonFile);
                             
-                            Version onlineCurrentVersion = new Version(json.metadata.langVersion);
-                            Version localCurrentVersion = new Version(langInfo.versionNumber);
+                            Version localCurrentVersion = new Version(json.metadata.langVersion);
+                            Version onlineCurrentVersion = new Version(langInfo.versionNumber);
                             
-                            switch(onlineCurrentVersion.CompareTo(localCurrentVersion))
+                            Logging.Warn("File already exists locally, checking if it can be updated");
+                            Logging.Warn("Local version:" + localCurrentVersion.ToString());
+                            Logging.Warn("Online version:" + onlineCurrentVersion.ToString());
+                            
+                            switch(localCurrentVersion.CompareTo(onlineCurrentVersion))
                             {
-
                                 case -1: { slotText.text += "\n(<color=green>Update available</color>)";break;}
                                 default: { slotText.text += "\n(<color=green>Downloaded</color>)";break;}
                             }

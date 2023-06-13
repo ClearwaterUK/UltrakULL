@@ -1,4 +1,8 @@
-﻿1.2.1
+﻿1.2.2
+
+- Fixed language update comparisons not being correct. Languages with updates will now properly display as such in the language browser.
+
+1.2.1
 
 - Updated the GitHub README to include installation instructions for R2ModManager.
 - Added a string for "Weapon Wheel Tick" in the rumble menu.
