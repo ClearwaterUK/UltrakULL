@@ -2,6 +2,7 @@
 
 ADDED:
 
+leveltips: leveltips_wrathThirdBroken
 options: general_levelLeaderboards
 
 1.2.1:

@@ -381,7 +381,7 @@
 
         "museum_rocketRace1": "COURSE LANCE-ROQUETTES",
         "museum_rocketRace2": "DEMARRER",
-        "museum_rocketRaceStart": "RACE START",
+        "museum_rocketRaceStart": "DEBUT DU COURSE",
         "museum_rocketRaceResult": "TEMPS: ",
 
         "museum_spoiler1": "ALERTE",
@@ -1068,6 +1068,7 @@
 		"general_seasonalEvent": "ÉVENEMENTS SAISONNIERS",
         "general_controllerRumble": "VIBRATION MANETTE",
         "general_controllerRumbleCustomize": "PERSONNALIZER",
+        "general_levelLeaderboards": "CLASSEMENT DES NIVEAUX",
 
 		"controls_resetDefault": "RÉINITIALISER",
 		"controls_movement": "DÉPLACEMENT",
@@ -1443,6 +1444,7 @@
         "leveltips_wrathFirst": "Les chutes <color=orange>sous l'eau</color> sont lentes, mais un <color=orange>lancement au sol</color> permet de se retourner rapidement sur le sol.",
         "leveltips_wrathSecond": "Les <color=orange>glissements</color> sur l'eau vous permettera d'y <color=orange>rebondir</color> sur son surface.",
         "leveltips_wrathThird": "Si un ennemie est <color=orange>béni</color> par une <color=orange>Idole</color>, une connection visible et directe est formé entre les deux, permettant de <color=orange>retrouver</color> facilement et détruire le protecteur.",
+        "leveltips_wrathThirdBroken": "Aie.",
         "leveltips_wrathFourth1": "Les explosions <color=orange>déflectent</color> les projectiles.",
         "leveltips_wrathFourth2": "Si une explosion est crée juste a côté d'où un ennemi tir un projectile, elle peut être <color=orange>renvoyé</color> et peut <color=orange>frapper eux-même</color>.",
         

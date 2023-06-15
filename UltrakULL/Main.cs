@@ -17,7 +17,7 @@ using System.Reflection;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater, additional code contributions by Temperz87 and CoatlessAli, translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 28th May 2023
+ *	Last updated: 15th June 2023
  *	
  *	A translation mod for Ultrakill that hooks into the game and allows for text/string replacement. This tool is primarily meant to assist with language translation.
  * 
@@ -35,7 +35,6 @@ using System.Reflection;
  * Update custom font
  *
  *- REPORTED BY USERS
- * 5-3 end terminal
  * Fix P-2 panel overflowing
  * 
  * */

@@ -1555,6 +1555,7 @@ namespace UltrakULL.json
         public string leveltips_wrathFirst;
         public string leveltips_wrathSecond;
         public string leveltips_wrathThird;
+        public string leveltips_wrathThirdBroken;
         public string leveltips_wrathFourth1;
         public string leveltips_wrathFourth2;
 

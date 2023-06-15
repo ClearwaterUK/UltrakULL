@@ -926,15 +926,24 @@ namespace UltrakULL
                     }
                     case "Level P-2":
                     {
-                        Logging.Message("P-2 shop");
                         shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Prime FirstRoom"),"Room"),"Shop"),"Canvas"));
-                        Logging.Message("P-2 shop1");
                         shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"Inside"),"8 - Elevator"),"8 Nonstuff"),"Exit"),"Shop"),"Canvas"));
-                        Logging.Message("P-2 shop2");
                         break;
                     }
                 }
             }
+            //Specific fix for 5-3, which has a non-interactable shop at the end room.
+            else if(GetCurrentSceneName() == "Level 5-3")
+            {
+                GameObject brokenShop = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Rotated"),"1 - Hallway"),"Shop"),"Canvas"),"TipBox"),"Panel");
+                
+                Text brokenShopTitle = GetTextfromGameObject(GetGameObjectChild(brokenShop,"Title"));
+                brokenShopTitle.text = LanguageManager.CurrentLanguage.shop.shop_tipofthedayTitle;
+                
+                Text brokenShopTip = GetTextfromGameObject(GetGameObjectChild(brokenShop,"TipText"));
+                brokenShopTip.text = LanguageManager.CurrentLanguage.levelTips.leveltips_wrathThirdBroken;
+            }
+            
             //Specific fix for 6-1
             else if(GetCurrentSceneName() == "Level 6-1")
             {

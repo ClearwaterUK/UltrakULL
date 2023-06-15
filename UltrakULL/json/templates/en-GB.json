@@ -6,7 +6,7 @@
         "langDisplayName": "English",
         "langRTL": "false",
 
-        "minimumModVersion": "1.2.0"
+        "minimumModVersion": "1.2.1"
 	},
     
 	"body": {
@@ -1115,6 +1115,7 @@
 		"general_seasonalEvent": "SEASONAL EVENTS",
         "general_controllerRumble": "CONTROLLER RUMBLE",
         "general_controllerRumbleCustomize": "CUSTOMIZE",
+        "general_levelLeaderboards": "LEVEL LEADERBOARDS",
 
 		"controls_resetDefault": "RESET TO DEFAULT",
 		"controls_movement": "MOVEMENT",
@@ -1488,6 +1489,7 @@
         "leveltips_wrathFirst": "Falling underwater is slow, but a ground slam allows for a quick return to the ground.",
         "leveltips_wrathSecond": "Sliding onto water will cause one to skip across its surface.",
         "leveltips_wrathThird": "If an enemy is blessed by an Idol, a direct visible connection is formed between the two, allowing one to easily track down and destroy the protector.",
+        "leveltips_wrathThirdBroken": "Ow.",
         "leveltips_wrathFourth1": "Explosions deflect projectiles.",
         "leveltips_wrathFourth2": "If an explosion is caused right from where an enemy shoots a projectile, it can backfire and hit them instead.",
         
