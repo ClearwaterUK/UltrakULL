@@ -37,7 +37,7 @@ namespace UltrakULL
                 case "CERBERUS": case "CERBRUS, GUARDIAN OF HELL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_cerberus; }
                 case "HIDEOUS MASS": case "HIDEOUSMASS":{ return LanguageManager.CurrentLanguage.enemyNames.enemyname_hideousMass; }
                 case "GABRIEL, JUDGE OF HELL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_gabriel; }
-                case "GABRIEL, APOSTATE OF HATE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_gabrielSecond; }
+                case "GABRIEL, APOSTATE OF HATE": case "GABRIEL, THE APOSTATE OF HATE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_gabrielSecond; }
                 case "VIRTUE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_virtue; }
                 case "SOMETHING WICKED": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_somethingWicked; }
                 case "FLESH PRISON": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_fleshPrison; }

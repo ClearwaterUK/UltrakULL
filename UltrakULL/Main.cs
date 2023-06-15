@@ -35,7 +35,6 @@ using System.Reflection;
  * Update custom font
  *
  *- REPORTED BY USERS
- * Gabe missing boss HP bar name in 6-2
  * 5-3 end terminal
  * Fix P-2 panel overflowing
  * 

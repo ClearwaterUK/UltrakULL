@@ -2,6 +2,7 @@
 
 - Added a string for the level leaderboards toggle in the game options.
 - Fixed language update comparisons not being correct. Languages with updates will now properly display as such in the language browser.
+- Fixed Gabe's boss HP bar in 6-2 not displaying the correct name.
 
 1.2.1
 
