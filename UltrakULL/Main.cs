@@ -36,7 +36,8 @@ using System.Reflection;
  *
  *- REPORTED BY USERS
  * Gabe missing boss HP bar name in 6-2
- * "Level leaderboards" in options not translated
+ * 5-3 end terminal
+ * Fix P-2 panel overflowing
  * 
  * */
 
@@ -47,7 +48,7 @@ namespace UltrakULL
     {
         private const string Guid = "clearwater.ultrakill.ultrakull";
         private const string InternalName = "clearwater.ultrakull.ultrakULL";
-        private const string InternalVersion = "1.2.1";
+        private const string InternalVersion = "1.2.2";
 
         public static MainPatch Instance;
         public GameObject ultrakullLogo;

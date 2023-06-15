@@ -1,5 +1,6 @@
 ﻿1.2.2
 
+- Added a string for the level leaderboards toggle in the game options.
 - Fixed language update comparisons not being correct. Languages with updates will now properly display as such in the language browser.
 
 1.2.1

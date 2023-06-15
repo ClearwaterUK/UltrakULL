@@ -71,6 +71,9 @@ namespace UltrakULL
 
             Text seasonEventText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Seasonal Events"), "Text"));
             seasonEventText.text = LanguageManager.CurrentLanguage.options.general_seasonalEvent;
+            
+            Text levelLeaderboardsText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Level Leaderboards"), "Text"));
+            levelLeaderboardsText.text = LanguageManager.CurrentLanguage.options.general_levelLeaderboards;
         }
         private void PatchControlOptions(GameObject optionsMenu)
         {

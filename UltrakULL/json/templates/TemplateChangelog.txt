@@ -1,6 +1,10 @@
-﻿1.2.1:
+﻿1.2.2:
 
 ADDED:
+
+options: general_levelLeaderboards
+
+1.2.1:
 
 cybergrind: cybergrind_patternsWarning
 options: rumble_weaponWheel

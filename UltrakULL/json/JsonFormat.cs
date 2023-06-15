@@ -1675,6 +1675,7 @@ namespace UltrakULL.json
         public string general_seasonalEvent;
         public string general_controllerRumble;
         public string general_controllerRumbleCustomize;
+        public string general_levelLeaderboards;
 
         public string controls_resetDefault;
         public string controls_movement;
