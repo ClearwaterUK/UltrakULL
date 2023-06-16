@@ -44,59 +44,48 @@ namespace UltrakULL.Harmony_Patches
             //The HUD display uses 2 kinds of messages.
             //One for messages that displays KeyCode inputs (for controls), and one that doesn't.
             //Get the string table based on the area of the game we're currently in.
-
-            Logging.Warn("At start");
+            
             ___messageHud = MonoSingleton<HudMessageReceiver>.Instance;
             ___text = ___messageHud.text;
             if (__instance.input == "")
             {
-                Logging.Warn("In if");
                 string newMessage = StringsParent.GetMessage(__instance.message, __instance.message2, "");
                 ___text.text = newMessage;
             }
             else
             {
-                Logging.Warn("In else");
                 string controlButton;
                 try
                 {
                     KeyCode keyCode = MonoSingleton<InputManager>.Instance.Inputs[__instance.input];
-                    Logging.Warn("Keycode");
 
                     if (keyCode == KeyCode.Mouse0)
                     {
-                        Logging.Warn("If1");
                         controlButton = LanguageManager.CurrentLanguage.misc.controls_leftClick;
                     }
                     else if (keyCode == KeyCode.Mouse1)
                     {
-                        Logging.Warn("If2");
                         controlButton = LanguageManager.CurrentLanguage.misc.controls_rightClick;
                     }
                     else if (keyCode == KeyCode.Mouse2)
                     {
-                        Logging.Warn("If3");
                         controlButton = LanguageManager.CurrentLanguage.misc.controls_middleClick;
                     }
                     else
                     {
-                        Logging.Warn("Else");
                         controlButton = keyCode.ToString();
                     }
                 }
                 catch (Exception e)
                 {
-                    Logging.Warn("Meh");
                     controlButton = "";
                 }
                 
                 //Messages that get input.
 
                 //Compare the start of the first message with the string table.
-                Logging.Warn("Compare");
                 __instance.message = StringsParent.GetMessage(__instance.message, __instance.message2, controlButton);
-
-                Logging.Warn("Replace");
+                
                 ___text.text = __instance.message;
             }
             ___text.text = ___text.text.Replace('$', '\n');

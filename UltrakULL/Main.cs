@@ -266,14 +266,12 @@ namespace UltrakULL
             TextBinds bookPanelBinds = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "ScanningStuff"), "ReadingScanned"), "Panel"), "Text (1)").GetComponent<TextBinds>();
             bookPanelBinds.text1 = LanguageManager.CurrentLanguage.books.books_pressToClose1 + " <color=orange>";
             bookPanelBinds.text2 = "</color> " + LanguageManager.CurrentLanguage.books.books_pressToClose2;
-
-
-
         }
         
         //Most of the hook logic and checks go in this function.
         public void onSceneLoaded(Scene scene, LoadSceneMode mode)
         {
+
             if (!this.ready || LanguageManager.CurrentLanguage == null)
             {
                 Logging.Error("UltrakULL has been deactivated to prevent crashing. Check the console for any errors!");
@@ -282,6 +280,11 @@ namespace UltrakULL
             {
                 Logging.Message("Switching scenes...");
                 string levelName = GetCurrentSceneName();
+                if(levelName == "Intro" || levelName == "Bootstrap")
+                {
+                    Logging.Warn("In intro, not hooking yet");
+                    return;
+                }
                 
                 //Each scene (level) has an object called Canvas. Most game objects are there.
                 GameObject canvasObj = GetInactiveRootObject("Canvas");

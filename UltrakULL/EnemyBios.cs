@@ -34,7 +34,7 @@ namespace UltrakULL
                 case "MYSTERIOUS DRUID KNIGHT (& OWL)": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_mandalore; }
                 case "IDOL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_idol; }
                 case "LEVIATHAN": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_leviathan; }
-                case "CERBERUS": case "CERBRUS, GUARDIAN OF HELL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_cerberus; }
+                case "CERBERUS": case "CERBERUS, GUARDIAN OF HELL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_cerberus; }
                 case "HIDEOUS MASS": case "HIDEOUSMASS":{ return LanguageManager.CurrentLanguage.enemyNames.enemyname_hideousMass; }
                 case "GABRIEL, JUDGE OF HELL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_gabriel; }
                 case "GABRIEL, APOSTATE OF HATE": case "GABRIEL, THE APOSTATE OF HATE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_gabrielSecond; }
