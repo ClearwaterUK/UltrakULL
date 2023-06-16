@@ -30,7 +30,6 @@ using System.Reflection;
  *  
  *  -- FOR NEXT HOTFIX --
  * Make language button disappear like other option buttons when save menu is opened
- * Add authors of current language loaded into credits book
  * Fishing guide terminal sometimes not translated (doesn't translate when first appears, second time is fine)
  * Update custom font
  *

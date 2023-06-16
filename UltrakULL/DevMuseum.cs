@@ -256,7 +256,11 @@ namespace UltrakULL
                     + "Mod created by <color=orange>Clearwater</color>\n"
                     + "Additional code contributions by <color=orange>Temperz87</color> and <color=orange>CoatlessAli</color>\n"
                     + "Translations by various community members of the <color=orange>UltrakULL Translation Team</color>\n"
-                    + "Documentation contributions by <color=orange>Frizou</color>";
+                    + "Documentation contributions by <color=orange>Frizou</color>\n\n"
+                
+                    //Get the translators of the currently loaded language and also place them here.
+                    + "<color=orange>" + LanguageManager.CurrentLanguage.metadata.langDisplayName + "</color>:\n"
+                    + LanguageManager.CurrentLanguage.metadata.langAuthor;
             }
             if(originalText.Contains("<b><color=orange>STEPHAN WEYTE</color> - VOICE OF MINOS PRIME</b>"))
             {

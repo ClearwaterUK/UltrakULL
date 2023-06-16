@@ -1,5 +1,6 @@
 ﻿1.2.2
 
+- Added language credits to the additional credits book in the museum. (NOTE: The credits will change depending on the current language loaded.)
 - Added a string for the level leaderboards toggle in the game options.
 - Added a string for the broken shop terminal at the end of 5-3.
 - Fixed language update comparisons not being correct. Languages with updates will now properly display as such in the language browser.
