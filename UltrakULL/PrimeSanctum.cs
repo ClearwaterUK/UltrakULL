@@ -95,6 +95,9 @@ namespace UltrakULL
                 secondLockWarning.fontSize = 18;
                 secondLockAsIf.text =
                     LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_second_lockNo1 + "\n"
+                    + LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_second_lockNo1 + "\n"
+                    + LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_second_lockNo1 + "\n"
+                    + LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_second_lockNo1 + "\n\n"
                     + LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_second_lockNo2 + "\n";
                 
                 
