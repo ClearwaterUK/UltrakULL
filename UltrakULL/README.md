@@ -76,10 +76,10 @@ Restart the game after applying either steps for your use case.
 
 ## Languages available & fully compatible with latest game version
 
-| Language          | Contributors                                                                                                               | Notes                                  |
-|-------------------|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
-| English (U.S)     | Hakita & New Blood                                                                                                         | Grammatical improvements by Clearwater |
-| Russian (русский) | Nessie_A_WA97, D4N5T3P, Edith Bagel, lrddd, Brainy-Stormie, TwinT, towelie84, mctaylors, Solidus Cumcer, Filin, Ega1232387 |                                        |
+| Language          | Contributors                                                                                                                       | Notes                                  |
+|-------------------|------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
+| English (U.S)     | Hakita & New Blood                                                                                                                 | Grammatical improvements by Clearwater |
+| Russian (русский) | Nessie_A_WA97, D4N5T3P, Edith Bagel, lrddd, Brainy-Stormie, TwinT, towelie84, mctaylors, Solidus Cumcer, Filin, Ega1232387, Khowst |                                        |
 
 ## Languages available but not fully compatible with latest game version
 
@@ -91,36 +91,34 @@ Restart the game after applying either steps for your use case.
 | German (Deutsch)                         | Distrilul, JESTERB0T, Liquid Lest, Psychologemelone44, Termi2, Fabidelune, Madeleine | Act 2       |                                      |
 | Spanish (Español)                        | LambCS, Philia, Lukah, Amarok_Lc, Santy, Radripizza, j(LRC), LEVIBOT                 | Act 2       |                                      |
 | Simplified Chinese (简体中文)                | Hydracerynitis, ciinore, duke325, ponyweeb, Skugra, GoGoblin                         | Act 2       |                                      |
-| Turkish (Türkçe)                         | Legitname1337, Ömer Talha, RTE, Ray_, legio, Scape, Neige                            | Act 2       |                                      |
+| Turkish (Türkçe)                         | Legitname1337, Ömer Talha, RTE, Ray_, legio, Scape, Neige,$ERTU$TAUPTOWN                            | Act 2       |                                      |
 
 ## Languages in development
 
-| Language                      | Contributors                                                   | Notes |
-|-------------------------------|----------------------------------------------------------------|-------|
-| Arabic                        | riko, hamza666                                                 |       |
-| Belarusian (беларуская)       | Kiberkotleta                                                   |       |
-| Bulgarian (Bălgarski)         | Dan                                                            |       |
-| Croatian (Hrvatski)           | Cremee                                                         |       |
-| Danish (Dansk)                | OrangeField,rillebille                                         |       |
-| Dutch (Nederlands)            | Foxo, troingle, The Kneecap Collector                          |       |
-| Estonian (Eestikeel)          | Cremee                                                         |       |
-| Filipino (Pilipino)           | mxkyle, MecanicWithAPistol, FinnianNeko                        |       |
-| Finnish (Suomi)               | GoreDemon, FracturedStar, troingle                             |       |
-| Georgian (ქართული)            | GooseNeck                                                      |       |
-| Greek (Ελληνικά)              | Mi pro                                                         |       |
-| Hungarian (Magyar)            | csigachad, my man, Desert                                      |       |
-| Italian (Italiano)            | Dav, SimonLuck31, Paolotto Games, Cammen, snp, ImmortalChanger |       |
-| Indonesian (Bahasa Indonesia) | Arif “Fry” Siregar, mulfok, Yume                               |       |
-| Korean (한국어)                  | ARSE™, Susu                                                    |       |
-| Latvian (Latviešu)            | Хомос Арасака, сонорный                                        |       |
-| Portugese (Portugês)          | Toyota AE86                                                    |       |
-| Persian (Farsi)               | Intruder                                                       |       |
+| Language                      | Contributors                                                    | Notes |
+|-------------------------------|-----------------------------------------------------------------|-------|
+| Arabic                        | riko, hamza666                                                  |       |
+| Bulgarian (Bălgarski)         | Dan                                                             |       |
+| Croatian (Hrvatski)           | Cremee                                                          |       |
+| Danish (Dansk)                | OrangeField,rillebille                                          |       |
+| Dutch (Nederlands)            | Foxo, troingle, The Kneecap Collector                           |       |
+| Estonian (Eestikeel)          | Cremee                                                          |       |
+| Filipino (Pilipino)           | mxkyle, MecanicWithAPistol, FinnianNeko                         |       |
+| Finnish (Suomi)               | GoreDemon, FracturedStar, troingle                              |       |
+| Greek (Ελληνικά)              | Mi pro                                                          |       |
+| Hungarian (Magyar)            | csigachad, my man, Desert                                       |       |
+| Italian (Italiano)            | Dav, SimonLuck31, Paolotto Games, Cammen, snp, ImmortalChanger  |       |
+| Indonesian (Bahasa Indonesia) | Arif “Fry” Siregar, mulfok, Yume                                |       |
+| Japanese (日本語)                | Liamconn35, kythira                                             |       |
+| Korean (한국어)                  | ARSE™, Susu                                                     |       |
+| Latvian (Latviešu)            | Хомос Арасака, сонорный                                         |       |
+| Portugese (Portugês)          | Toyota AE86                                                     |       |
 | Polish (Polski)               | SmallSeaCat, Fikou, filizanka, Patryk, Spookz, owaloid, Dualite |       |
-| Romanian (Românesc)           | Vampuffin, Rokon                                               |       |
-| Thai (ภาษาไทย)                | Skugra, Winterman, SAPAIDER                                    |       |
-| Traditional Chinese(繁體中文)     | GuonuoTW(SmallNo), duke325                                     |       |
+| Romanian (Românesc)           | Vampuffin, Rokon                                                |       |
+| Thai (ภาษาไทย)                | Skugra, Winterman, SAPAIDER                                     |       |
+| Traditional Chinese(繁體中文)     | GuonuoTW(SmallNo), duke325                                      |       |
 | Ukrainian (Українська)        | Rafunny, Blitzo, Keka, ArtSabs, ak11, CsyeCok The Soldier, twrp |       |
-| Vietnamese (Tiếng Việt)       | TimmyThePea, honkscape, Jerry, null                            |       |
+| Vietnamese (Tiếng Việt)       | TimmyThePea, honkscape, Jerry, null                             |       |
 
 
 Available languages may be directly downloaded for use in-game via the Languages tab in the options menu.
