@@ -17,7 +17,7 @@ using System.Reflection;
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater, additional code contributions by Temperz87 and CoatlessAli, translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 15th June 2023
+ *	Last updated: 17th June 2023
  *	
  *	A translation mod for Ultrakill that hooks into the game and allows for text/string replacement. This tool is primarily meant to assist with language translation.
  * 
@@ -30,11 +30,8 @@ using System.Reflection;
  *  
  *  -- FOR NEXT HOTFIX --
  * Make language button disappear like other option buttons when save menu is opened
- * Fishing guide terminal sometimes not translated (doesn't translate when first appears, second time is fine)
  * Update custom font
  *
- *- REPORTED BY USERS
- * Fix P-2 panel overflowing
  * 
  * */
 

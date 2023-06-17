@@ -4,6 +4,7 @@
 - Added a string for the level leaderboards toggle in the game options.
 - Added a string for the broken shop terminal at the end of 5-3.
 - Modified the "as if you had a choice" panel in P-2 to prevent text from overflowing.
+- Fixed the fishing terminal in 5-S not being translated unless if a fish entry was exited and re-entered.
 - Fixed language update comparisons not being correct. Languages with updates will now properly display as such in the language browser.
 - Fixed Gabe's boss HP bar in 6-2 not displaying the correct name.
 - Fixed Cerberus' boss hp bars in 0-5 not displaying the correct name.

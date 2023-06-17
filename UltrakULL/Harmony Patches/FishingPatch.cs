@@ -124,11 +124,11 @@ namespace UltrakULL.Harmony_Patches
         }
     }
     
-    [HarmonyPatch(typeof(FishEncyclopedia),"DisplayFish")]
-    public class DisplayFish
+    [HarmonyPatch(typeof(FishEncyclopedia),"SelectFish")]
+    public class SelectFish
     {
         [HarmonyPrefix]
-        public static bool DisplayFish_Prefix(ref FishObject fish, FishEncyclopedia __instance)
+        public static bool SelectFish_Prefix(ref FishObject fish, FishEncyclopedia __instance)
         {
             switch(fish.fishName)
             {
