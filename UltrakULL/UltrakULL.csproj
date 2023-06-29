@@ -259,6 +259,7 @@
   <ItemGroup>
     <Content Include="docs\Dubbing.md" />
     <Content Include="fonts\ullfont.resource" />
+    <Content Include="fonts\VCR_OSD_MONO.ttf" />
     <Content Include="json\templates\TemplateChangelog.txt" />
     <Content Include="ChangeLog.txt" />
   </ItemGroup>
