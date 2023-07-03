@@ -80,8 +80,7 @@ namespace UltrakULL
                 + LanguageManager.CurrentLanguage.intermission.act1_intermission_second2 + " ▼\n\n"
                 + LanguageManager.CurrentLanguage.intermission.act1_intermission_second3 + " ▼\n\n"
                 + LanguageManager.CurrentLanguage.intermission.act1_intermission_second4 + " ▼" + LanguageManager.CurrentLanguage.intermission.act1_intermission_second5 + " ▼"
-                + LanguageManager.CurrentLanguage.intermission.act1_intermission_second6 + " ▼" + LanguageManager.CurrentLanguage.intermission.act1_intermission_second5 + " ▼"
-                + LanguageManager.CurrentLanguage.intermission.act1_intermission_second5 + " ▼" + LanguageManager.CurrentLanguage.intermission.act1_intermission_second7 + " ▼\n"
+                + LanguageManager.CurrentLanguage.intermission.act1_intermission_second6 + " ▼" + LanguageManager.CurrentLanguage.intermission.act1_intermission_second7 + " ▼\n"
                 + LanguageManager.CurrentLanguage.intermission.act1_intermission_second8 + " ▼" + LanguageManager.CurrentLanguage.intermission.act1_intermission_second9 + " ▼\n\n"
                 + LanguageManager.CurrentLanguage.intermission.act1_intermission_second10 + " ▼" + LanguageManager.CurrentLanguage.intermission.act1_intermission_second11 + " ▼";
 
