@@ -1,16 +1,16 @@
-﻿using BepInEx.Configuration;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using System.Text;
 using ArabicSupportUnity;
-using Discord;
-using UltrakULL.audio;
-using UnityEngine;
-using UnityEngine.SceneManagement;
 using BepInEx;
-
+using BepInEx.Configuration;
+using BepInEx.Logging;
+using Newtonsoft.Json;
+using UltrakULL.audio;
+using UltrakULL.Flazhik;
+using UnityEngine.SceneManagement;
 using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL.json
@@ -20,21 +20,21 @@ namespace UltrakULL.json
         public static Dictionary<string, JsonFormat> allLanguages = new Dictionary<string, JsonFormat>();
         private static Dictionary<string, JsonFormat> allLanguagesDisplayNames = new Dictionary<string, JsonFormat>();
         public static JsonFormat CurrentLanguage { get; private set; }
-        private static BepInEx.Logging.ManualLogSource jsonLogger = BepInEx.Logging.Logger.CreateLogSource("LanguageManager");
+        private static ManualLogSource jsonLogger = Logger.CreateLogSource("LanguageManager");
         public static ConfigFile configFile;
 
         public static void InitializeManager(string modVersion)
         {
             LoadLanguages(modVersion);
 
-            configFile = new ConfigFile(Path.Combine(BepInEx.Paths.ConfigPath, "ultrakull", "lastLang.cfg"), true);
+            configFile = new ConfigFile(Path.Combine(Paths.ConfigPath, "ultrakull", "lastLang.cfg"), true);
 
             string value = configFile.Bind("General", "LastLanguage", "en-GB").Value;
             string dubValue = configFile.Bind("General","activeDubbing","False").Value;
 
             if (allLanguages.ContainsKey(value))
             {
-                jsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Setting language to " + value);
+                jsonLogger.Log(LogLevel.Message, "Setting language to " + value);
                 CurrentLanguage = allLanguages[value];
                 if(CurrentLanguage.metadata.langRTL == "true")
                 {
@@ -44,11 +44,13 @@ namespace UltrakULL.json
             }
             else
             {
-                jsonLogger.Log(BepInEx.Logging.LogLevel.Message, "Previous lang file is missing from disk: " + value);
+                jsonLogger.Log(LogLevel.Message, "Previous lang file is missing from disk: " + value);
                 Logging.Warn("Setting language back to en-GB to avoid problems");
                 CurrentLanguage = allLanguages["en-GB"];
                 SetCurrentLanguage("en-GB");
             }
+            
+            LoadSubtitledSourcesConfig();
         }
 
         public static void DumpLastLanguage()
@@ -62,26 +64,32 @@ namespace UltrakULL.json
             
             allLanguages = new Dictionary<string, JsonFormat>();
 
-            string[] files = Directory.GetFiles(Path.Combine(BepInEx.Paths.ConfigPath,"ultrakull"),"*.json");
+            string[] files = Directory.GetFiles(Path.Combine(Paths.ConfigPath,"ultrakull"),"*.json");
             foreach (string file in files)
             {
-                if (TryLoadLang(file, out JsonFormat lang) && !allLanguages.ContainsKey(lang.metadata.langName) && lang.metadata.langName != "te-mp")
+                if (TryLoad(file, out JsonFormat lang) && !allLanguages.ContainsKey(lang.metadata.langName) && lang.metadata.langName != "te-mp")
                 {
                     allLanguages.Add(lang.metadata.langName, lang);
                     allLanguagesDisplayNames.Add(lang.metadata.langDisplayName, lang);
                     if (!ValidateFile(lang, modVersion))
-                        jsonLogger.Log(BepInEx.Logging.LogLevel.Debug ,"Failed to validate " + lang.metadata.langName + " however I don't really care");
+                        jsonLogger.Log(LogLevel.Debug ,"Failed to validate " + lang.metadata.langName + " however I don't really care");
                 }
             }
         }
 
-        private static bool TryLoadLang(string pathName, out JsonFormat file)
+        private static void LoadSubtitledSourcesConfig()
         {
-            file = null;
+            var config = Encoding.Default.GetString(Resources.SubtitledSources);
+            SubtitledAudioSourcesReplacer.Config = JsonConvert.DeserializeObject<SubtitledSourcesConfig>(config);
+        }
+
+        private static bool TryLoad<T>(string pathName, out T file)
+        {
+            file = default;
             try
             {
                 string jsonFile = File.ReadAllText(pathName);
-                file = JsonConvert.DeserializeObject<JsonFormat>(jsonFile);
+                file = JsonConvert.DeserializeObject<T>(jsonFile);
                 return true;
             }
             catch (Exception e)
@@ -229,8 +237,9 @@ namespace UltrakULL.json
                 }
                 
                 MainPatch.Instance.onSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
-                LanguageManager.DumpLastLanguage();
-                AudioSwapper.SpeechFolder = Path.Combine(BepInEx.Paths.ConfigPath,"ultrakull", "audio", LanguageManager.CurrentLanguage.metadata.langName) + Path.DirectorySeparatorChar;
+                DumpLastLanguage();
+                AudioSwapper.SpeechFolder = Path.Combine(Paths.ConfigPath,"ultrakull", "audio", CurrentLanguage.metadata.langName) + Path.DirectorySeparatorChar;
+                SubtitledAudioSourcesReplacer.SpeechFolder = AudioSwapper.SpeechFolder;
 					
                 if(GetCurrentSceneName() != "Main Menu")
                 {

@@ -216,10 +216,6 @@ namespace UltrakULL.Harmony_Patches
                         + LanguageManager.CurrentLanguage.fishing.fish_sharkDescription2;
                     break;
                 }
-                default:
-                {
-                    break;
-                }
             }
             return true;
         }

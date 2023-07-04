@@ -12,6 +12,7 @@ using UltrakULL.json;
 using BepInEx;
 using static UltrakULL.CommonFunctions;
 using System.Reflection;
+using UltrakULL.Flazhik;
 
 /*
  *	UltrakULL (Ultrakill Language Library)
@@ -596,6 +597,7 @@ namespace UltrakULL
 
                 Logging.Warn(" --- All done. Enjoy! ---");
                 SceneManager.sceneLoaded += onSceneLoaded;
+                SceneManager.sceneLoaded += SubtitledAudioSourcesReplacer.OnSceneLoaded;
                 this.ready = true;
             }
             catch (Exception e)

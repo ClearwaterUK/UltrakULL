@@ -374,3 +374,5 @@ FodyWeavers.xsd
 /Build Directory.lnk
 /.gitattributes
 /audio/templates/*
+
+.idea/
