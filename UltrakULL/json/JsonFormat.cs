@@ -1,4 +1,6 @@
 ﻿
+using System.Reflection;
+
 namespace UltrakULL.json
 {
     public class JsonFormat
@@ -784,6 +786,11 @@ namespace UltrakULL.json
         public string subtitles_gabrielSecondDefeated11;
         public string subtitles_gabrielSecondDefeated12;
 
+        public string GetField(string name)
+        {
+            var field = typeof(Subtitles).GetField(name, BindingFlags.Public | BindingFlags.Instance);
+            return (string)field.GetValue(this);
+        }
     }
 
     public class VisualNovel

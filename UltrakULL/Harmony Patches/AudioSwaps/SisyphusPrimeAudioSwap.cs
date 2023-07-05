@@ -64,7 +64,6 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             ref AudioClip sisyphusPrimePhaseChange = ref __instance.phaseChangeVoice;
             string sisyphusPrimePhaseChangeString = sisyphusPrimeFolder + "sisyphusYesThatsIt.wav";
             sisyphusPrimePhaseChange = AudioSwapper.SwapClipWithFile(sisyphusPrimePhaseChange, sisyphusPrimePhaseChangeString);
-
         }
     }
 }

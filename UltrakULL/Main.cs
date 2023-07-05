@@ -596,6 +596,7 @@ namespace UltrakULL
 
                 Logging.Warn(" --- All done. Enjoy! ---");
                 SceneManager.sceneLoaded += onSceneLoaded;
+                SceneManager.sceneLoaded += SubtitledAudioSourcesReplacer.OnSceneLoaded;
                 this.ready = true;
             }
             catch (Exception e)

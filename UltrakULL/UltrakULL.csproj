@@ -215,7 +215,10 @@
     <Compile Include="Harmony Patches\ScanningStuff.cs" />
     <Compile Include="Harmony Patches\SpawnMenu.cs" />
     <Compile Include="Harmony Patches\StyleHUD.cs" />
-    <Compile Include="Harmony Patches\SubtitleController.cs" />
+    <Compile Include="Harmony Patches\Subtitles\GabrielSubtitlesSwap.cs" />
+    <Compile Include="Harmony Patches\Subtitles\MandaloreSubtitlesSwap.cs" />
+    <Compile Include="Harmony Patches\Subtitles\MinosPrimeSubtitlesSwap.cs" />
+    <Compile Include="Harmony Patches\Subtitles\SisyphusPrimeSubtitlesSwap.cs" />
     <Compile Include="Harmony Patches\TextFontSwap.cs" />
     <Compile Include="Harmony Patches\VariationInfo.cs" />
     <Compile Include="json\LanguageManager.cs" />
@@ -238,12 +241,19 @@
     <Compile Include="PrimeSanctum.cs" />
     <Compile Include="PrimeSanctumStrings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflectionUtils.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Sandbox.cs" />
     <Compile Include="SecretLevels.cs" />
     <Compile Include="Shop.cs" />
     <Compile Include="StringsParent.cs" />
     <Compile Include="StyleBonusStrings.cs" />
-    <Compile Include="SubtitleStrings.cs" />
+    <Compile Include="SubtitledAudioSourcesReplacer.cs" />
+    <Compile Include="SubtitledSourcesConfig.cs" />
     <Compile Include="TitleManager.cs" />
     <Compile Include="TutorialStrings.cs" />
   </ItemGroup>
@@ -262,6 +272,13 @@
     <Content Include="fonts\VCR_OSD_MONO.ttf" />
     <Content Include="json\templates\TemplateChangelog.txt" />
     <Content Include="ChangeLog.txt" />
+    <Content Include="Resources\SubtitledSources.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
