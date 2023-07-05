@@ -1,4 +1,8 @@
-﻿1.2.2
+﻿1.2.3
+- Refactored subtitles replacement process and audio swaps, added separate patches for Mandalore, Minos, Gabriel and Sisyphus
+
+
+1.2.2
 
 - Added language credits to the additional credits book in the museum. (NOTE: The credits will change depending on the current language loaded.)
 - Added a string for the level leaderboards toggle in the game options.

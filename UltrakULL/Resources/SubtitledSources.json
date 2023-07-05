@@ -1,0 +1,533 @@
+{
+	"scenes": {
+		"Level 3-2": [
+			{
+				"objects": ["gab_Intro1"],
+				"audio": "gabrielBossFirst\\gabrielIntro1.wav",
+				"lines": [
+					{
+						"line": "subtitles_gabriel_intro1",
+						"delay": 1.2
+					},
+					{
+						"line": "subtitles_gabriel_intro2",
+						"delay": 2.4
+					},
+					{
+						"line": "subtitles_gabriel_intro3",
+						"delay": 5.1
+					},
+					{
+						"line": "subtitles_gabriel_intro4",
+						"delay": 10.7
+					}
+				]
+			},
+			{
+				"objects": ["gab_Intro2"],
+				"audio": "gabrielBossFirst\\gabrielIntro2.wav",
+				"lines": [
+					{
+						"line": "subtitles_gabriel_intro5",
+						"delay": 0.1
+					},
+					{
+						"line": "subtitles_gabriel_intro6",
+						"delay": 2.8
+					},
+					{
+						"line": "subtitles_gabriel_intro7",
+						"delay": 5.85
+					},
+					{
+						"line": "subtitles_gabriel_intro8",
+						"delay": 10.15
+					}
+				]
+			},
+			{
+				"objects": ["4 - Heart Chamber/4 Stuff(Clone)/GabrielOutroParent/gab_Intro3"],
+				"audio": "gabrielBossFirst\\gabrielFightStart.wav",
+				"lines": [
+					{
+						"line": "subtitles_gabriel_fightStart",
+						"delay": 0.0
+					}
+				]
+			},
+			{
+				"objects": ["4 - Heart Chamber/4 Stuff(Clone)/GabrielOutroParent/gab_Intro4", "4 - Heart Chamber/4 Stuff/GabrielOutroParent/gab_Intro4"],
+				"audio": "gabrielBossFirst\\gabrielDefeated.wav",
+				"lines": [
+					{
+						"line": "subtitles_gabriel_defeated1",
+						"delay": 0.1
+					},
+					{
+						"line": "subtitles_gabriel_defeated2",
+						"delay": 1.4
+					},
+					{
+						"line": "subtitles_gabriel_defeated3",
+						"delay": 4.15
+					},
+					{
+						"line": "subtitles_gabriel_defeated4",
+						"delay": 6.4
+					},
+					{
+						"line": "subtitles_gabriel_defeated5",
+						"delay": 9.2
+					},
+					{
+						"line": "subtitles_gabriel_defeated6",
+						"delay": 13.0
+					}
+				]
+			},
+			{
+				"objects": ["4 - Heart Chamber/4 Stuff(Clone)/OutroLightSound/Eyeblood/gab_Intro5", "4 - Heart Chamber/4 Stuff/OutroLightSound/Eyeblood/gab_Intro5"],
+				"audio": "gabrielBossFirst\\gabrielOutro.wav",
+				"lines": [
+					{
+						"line": "subtitles_gabriel_defeated7",
+						"delay": 0.3
+					},
+					{
+						"line": "subtitles_gabriel_defeated8",
+						"delay": 3.3
+					}
+				]
+			}
+		],
+		"Level 6-2": [
+			{
+				"objects": ["IntroSounds/Filler/Speech and Music/Speech"],
+				"audio": "gabrielBossSecond\\gabrielSecondIntro.wav",
+				"lines": [
+					{
+						"line": "subtitles_gabrielSecondIntro1",
+						"delay": 1.85
+					}, 
+					{
+						"line": "subtitles_gabrielSecondIntro2",
+						"delay": 3.3
+					},
+					{
+						"line": "subtitles_gabrielSecondIntro3",
+						"delay": 4.7
+					},
+					{
+						"line": "subtitles_gabrielSecondIntro4",
+						"delay": 6.3
+					},
+					{
+						"line": "subtitles_gabrielSecondIntro5",
+						"delay": 10.1
+					},
+					{
+						"line": "subtitles_gabrielSecondIntro6",
+						"delay": 12.7
+					},
+					{
+						"line": "subtitles_gabrielSecondIntro7",
+						"delay": 15.3
+					},
+					{
+						"line": "subtitles_gabrielSecondIntro8",
+						"delay": 18.5
+					},
+					{
+						"line": "subtitles_gabrielSecondIntro9",
+						"delay": 22.3
+					},
+					{
+						"line": "subtitles_gabrielSecondIntro10",
+						"delay": 25.8
+					},
+					{
+						"line": "subtitles_gabrielSecondIntro11",
+						"delay": 28.8
+					},
+					{
+						"line": "subtitles_gabrielSecondIntro12",
+						"delay": 30.5
+					}
+				]
+			},
+			{
+				"objects": ["2 - Organ Hall/2 Stuff(Clone)/Intro"],
+				"audio": "gabrielBossSecond\\gabrielSecondFightStart.wav",
+				"lines": [
+					{
+						"line": "subtitles_gabrielSecondFight1",
+						"delay": 1.5
+					},
+					{
+						"line": "subtitles_gabrielSecondFight2",
+						"delay": 3.1
+					},
+					{
+						"line": "subtitles_gabrielSecondFight3",
+						"delay": 6.1
+					},
+					{
+						"line": "subtitles_gabrielSecondFight4",
+						"delay": 7.4
+					},
+					{
+						"line": "subtitles_gabrielSecondFight5",
+						"delay": 11.3
+					},
+					{
+						"line": "subtitles_gabrielSecondFight6",
+						"delay": 15.1
+					},
+					{
+						"line": "subtitles_gabrielSecondFight7",
+						"delay": 18.2
+					},
+					{
+						"line": "subtitles_gabrielSecondFight8",
+						"delay": 18.9
+					},
+					{
+						"line": "subtitles_gabrielSecondFight9",
+						"delay": 19.6
+					}
+				]
+			},
+			{
+				"objects": ["2 - Organ Hall/2 Stuff(Clone)/GabrielOutroParent/GabrielOutro/OutroVoice"],
+				"audio": "gabrielBossSecond\\gabrielSecondDefeated.wav",
+				"lines": [
+					{
+						"line": "subtitles_gabrielSecondDefeated1",
+						"delay": 0
+					},
+					{
+						"line": "subtitles_gabrielSecondDefeated2",
+						"delay": 1.1
+					},
+					{
+						"line": "subtitles_gabrielSecondDefeated3",
+						"delay": 4.2
+					},
+					{
+						"line": "subtitles_gabrielSecondDefeated4",
+						"delay": 7
+					},
+					{
+						"line": "subtitles_gabrielSecondDefeated5",
+						"delay": 9.3
+					},
+					{
+						"line": "subtitles_gabrielSecondDefeated6",
+						"delay": 12.8
+					},
+					{
+						"line": "subtitles_gabrielSecondDefeated7",
+						"delay": 14.8
+					},
+					{
+						"line": "subtitles_gabrielSecondDefeated8",
+						"delay": 17.2
+					},
+					{
+						"line": "subtitles_gabrielSecondDefeated9",
+						"delay": 20.5
+					}
+				]
+			},
+			{
+				"objects": ["2 - Organ Hall/2 Stuff(Clone)/GabrielOutroParent/EndShatter/gab_Intro5"],
+				"audio": "gabrielBossSecond\\gabrielSecondOutro.wav",
+				"lines": [
+					{
+						"line": "subtitles_gabrielSecondDefeated10",
+						"delay": 0
+					},
+					{
+						"line": "subtitles_gabrielSecondDefeated11",
+						"delay": 4
+					}
+				]
+			}
+		],
+		"Level 5-3": [
+			{
+				"objects": ["Unrotated/5 - Hologram Room/5 Nonstuff/Decorations/Hologram/Voice"],
+				"audio": "gabrielBoat\\gabrielBoat.wav",
+				"lines": [
+					{
+						"line": "subtitles_gabrielBoat1",
+						"delay": 0
+					},
+					{
+						"line": "subtitles_gabrielBoat2",
+						"delay": 2
+					},
+					{
+						"line": "subtitles_gabrielBoat3",
+						"delay": 5
+					},
+					{
+						"line": "subtitles_gabrielBoat4",
+						"delay": 6.5
+					},
+					{
+						"line": "subtitles_gabrielBoat5",
+						"delay": 9.5
+					}
+				]
+			}
+		],
+		"Level 6-1": [
+			{
+				"objects": ["GabrielVoice1"],
+				"audio": "gabrielHeresy\\gabrielHeresyFirst.wav",
+				"lines": [
+					{
+						"line": "subtitles_gabrielHeresy1",
+						"delay": 2
+					},
+					{
+						"line": "subtitles_gabrielHeresy2",
+						"delay": 5.7
+					},
+					{
+						"line": "subtitles_gabrielHeresy3",
+						"delay": 11.1
+					}
+				]
+			},
+			{
+				"objects": ["GabrielVoice2"],
+				"audio": "gabrielHeresy\\gabrielHeresySecond.wav",
+				"lines": [
+					{
+						"line": "subtitles_gabrielHeresy4",
+						"delay": 0.5
+					}
+				]
+			}
+		],
+		"Level P-1": [
+			{
+				"objects": ["3 - Fuckatorium/3 Stuff(Clone)/MinosPrimeIntro/Voice"],
+				"audio": "minosPrime\\minosPrimeIntro.wav",
+				"lines": [
+					{
+						"line": "subtitles_minosPrime_intro1",
+						"delay": 0
+					},
+					{
+						"line": "subtitles_minosPrime_intro2",
+						"delay": 2.4
+					},
+					{
+						"line": "subtitles_minosPrime_intro3",
+						"delay": 7
+					},
+					{
+						"line": "subtitles_minosPrime_intro4",
+						"delay": 10
+					},
+					{
+						"line": "subtitles_minosPrime_intro5",
+						"delay": 13.8
+					},
+					{
+						"line": "subtitles_minosPrime_intro6",
+						"delay": 22
+					},
+					{
+						"line": "subtitles_minosPrime_intro7",
+						"delay": 25.5
+					},
+					{
+						"line": "subtitles_minosPrime_intro8",
+						"delay": 30.5
+					},
+					{
+						"line": "subtitles_minosPrime_intro9",
+						"delay": 37
+					},
+					{
+						"line": "subtitles_minosPrime_intro10",
+						"delay": 40.7
+					},
+					{
+						"line": "subtitles_minosPrime_intro11",
+						"delay": 44
+					}
+				]
+			},
+			{
+				"objects": ["3 - Fuckatorium/3 Stuff/MinosPrimeWave/MinosPrime/Useless", "3 - Fuckatorium/3 Stuff(Clone)/MinosPrimeWave/MinosPrime/Useless"],
+				"audio": "minosPrime\\minosPrimeRespawn.wav",
+				"lines": [
+					{
+						"line": "subtitles_minosPrime_taunt1",
+						"delay": 0
+					}
+				]
+			},
+			{
+				"objects": ["3 - Fuckatorium/3 Stuff(Clone)/MinosPrimeWave/MinosPrime/Outro", "3 - Fuckatorium/3 Stuff/MinosPrimeWave/MinosPrime/Outro"],
+				"audio": "minosPrime\\minosPrimeDefeated.wav",
+				"lines": [
+					{
+						"line": "subtitles_minosPrime_defeated1",
+						"delay": 0
+					},
+					{
+						"line": "subtitles_minosPrime_defeated2",
+						"delay": 4.25
+					},
+					{
+						"line": "subtitles_minosPrime_defeated3",
+						"delay": 7.3
+					},
+					{
+						"line": "subtitles_minosPrime_defeated4",
+						"delay": 11.3
+					}
+				]
+			},
+			{
+				"objects": ["3 - Fuckatorium/3 Stuff(Clone)/MinosPrimeWave/MinosPrime/DeathScream"],
+				"audio": "minosPrime\\minosPrimeDeathScream.wav",
+				"lines": []
+			}
+		],
+		"Level P-2": [
+			{
+				"objects": ["Main Section/9 - Boss Arena/Boss Stuff(Clone)/PrisonPhase/Flesh Prison 2/DelayedInstakill/Voice"],
+				"audio": "sisyphusPrime\\sisyphusThisPrison.wav",
+				"lines": [
+					{
+						"line": "subtitles_sisyphusPrime_preIntro1",
+						"delay": 0
+					},
+					{
+						"line": "subtitles_sisyphusPrime_preIntro2",
+						"delay": 1.5
+					},
+					{
+						"line": "subtitles_sisyphusPrime_preIntro3",
+						"delay": 2.8
+					}
+				]
+			},
+			{
+				"objects": ["Main Section/9 - Boss Arena/Boss Stuff(Clone)/PrimeIntro/SisyphusPrimeIntro/VoiceDelayer/Voice"],
+				"audio": "sisyphusPrime\\sisyphusIntro.wav",
+				"lines": [
+					{
+						"line": "subtitles_sisyphusPrime_intro1",
+						"delay": 0
+					},
+					{
+						"line": "subtitles_sisyphusPrime_intro2",
+						"delay": 1.7
+					},
+					{
+						"line": "subtitles_sisyphusPrime_intro3",
+						"delay": 6.6
+					},
+					{
+						"line": "subtitles_sisyphusPrime_intro4",
+						"delay": 10.3
+					},
+					{
+						"line": "subtitles_sisyphusPrime_intro5",
+						"delay": 15.8
+					},
+					{
+						"line": "subtitles_sisyphusPrime_intro6",
+						"delay": 17.2
+					},
+					{
+						"line": "subtitles_sisyphusPrime_intro7",
+						"delay": 22
+					},
+					{
+						"line": "subtitles_sisyphusPrime_intro8",
+						"delay": 25.9
+					},
+					{
+						"line": "subtitles_sisyphusPrime_intro9",
+						"delay": 31.4
+					},
+					{
+						"line": "subtitles_sisyphusPrime_intro10",
+						"delay": 35
+					},
+					{
+						"line": "subtitles_sisyphusPrime_intro11",
+						"delay": 37.4
+					}
+				]
+			},
+			{
+				"objects": ["Main Section/9 - Boss Arena/Boss Stuff/PrimePhase/SisyphusPrime/OutroDelay/Outro", "Main Section/9 - Boss Arena/Boss Stuff(Clone)/PrimePhase/SisyphusPrime/OutroDelay/Outro"],
+				"audio": "sisyphusPrime\\sisyphusOutro.wav",
+				"lines": [
+					{
+						"line": "subtitles_sisyphusPrime_defeated1",
+						"delay": 0
+					},
+					{
+						"line": "subtitles_sisyphusPrime_defeated2",
+						"delay": 1.6
+					},
+					{
+						"line": "subtitles_sisyphusPrime_defeated3",
+						"delay": 6.3
+					},
+					{
+						"line": "subtitles_sisyphusPrime_defeated4",
+						"delay": 12.1
+					},
+					{
+						"line": "subtitles_sisyphusPrime_defeated5",
+						"delay": 15.3
+					}
+				]
+			},
+			{
+				"objects": ["Main Section/9 - Boss Arena/Boss Stuff(Clone)/PrimePhase/SisyphusPrime/KeepThemComing", "Main Section/9 - Boss Arena/Boss Stuff/PrimePhase/SisyphusPrime/KeepThemComing"],
+				"audio": "sisyphusPrime\\sisyphusKeepThemComing.wav",
+				"lines": [
+					{
+						"line": "subtitles_sisyphusPrime_respawnIntro",
+						"delay": 0
+					}
+				]
+			}
+		],
+		"Level 4-3": [
+			{
+				"objects": ["3 - Traitor Hallway/3B - Tomb of Kings/3B Stuff/Hall/FakeMandalore/IntroLine"],
+				"audio": "mandalore\\mandaloreIntro.wav",
+				"lines": [
+					{
+						"line": "subtitles_mandalore_intro1",
+						"delay": 0,
+						"color": "FFC49E"
+					},
+					{
+						"line": "subtitles_mandalore_intro2",
+						"delay": 3.1,
+						"color": "9EE6FF"
+					}
+				]
+			},
+			{
+				"objects": ["3 - Traitor Hallway/3B - Tomb of Kings/3B Stuff/Hall/FakeMandalore/Mandalore (Skeleton)/Armature.001/Base/Hips/Chest/Shammy"],
+				"audio": "mandalore\\owlIntro.wav"
+			}
+		]
+	}
+}

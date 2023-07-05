@@ -48,7 +48,6 @@ namespace UltrakULL
                 PatchResultsScreen(levelname, "");
                 
                 PatchSecretText(primeSanctumChallengeStrings);
-                AudioSwapper.AudioSwap(GetCurrentSceneName());
             }
             else if (currentLevel.Contains("P-2"))
             {
@@ -105,7 +104,6 @@ namespace UltrakULL
                 PatchResultsScreen(levelname, "");
                 
                 PatchSecretText(primeSanctumChallengeStrings);
-                AudioSwapper.AudioSwap(GetCurrentSceneName());
             }
         }
     }
