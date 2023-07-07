@@ -31,7 +31,6 @@ namespace UltrakULL
             
             PatchResultsScreen(levelName, levelChallenge);
             PatchHellmap(ref canvasObj);
-            AudioSwapper.AudioSwap(currentLevel);
         }
     }
 }

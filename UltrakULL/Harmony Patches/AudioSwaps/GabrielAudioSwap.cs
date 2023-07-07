@@ -9,18 +9,14 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
     [HarmonyPatch(typeof(Gabriel),"Start")]
     public static class GabrielAudioSwap
     {
-        
         [HarmonyPostfix]
         public static void Gabriel_VoiceSwap(ref Gabriel __instance, ref GabrielVoice ___voice)
         {
             if(LanguageManager.configFile.Bind("General","activeDubbing","False").Value == "False")
-            {
                 return;
-            }
-        
+
             string gabeFirstFolder =  AudioSwapper.SpeechFolder + "gabrielBossFirst" + Path.DirectorySeparatorChar;
-
-
+            
             //Taunts
             AudioClip[] gabeTaunts = ___voice.taunt;
             for(int x = 0; x < gabeTaunts.Length; x++)
@@ -50,11 +46,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             {
                 string gabrielHurtString = gabeFirstFolder + "gabrielHurt" + (x+1).ToString() + ".wav";
                 gabeHurt[x] =  AudioSwapper.SwapClipWithFile(gabeHurt[x], gabrielHurtString);
-                
             }
-            
-            
-            
         }
     }
 }

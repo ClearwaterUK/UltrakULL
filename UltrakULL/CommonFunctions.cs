@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection.Emit;
+using HarmonyLib;
+using UltrakULL.json;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
-using UltrakULL.json;
 
 namespace UltrakULL
 {
@@ -184,6 +186,39 @@ namespace UltrakULL
         public static Text GetTextfromGameObject(GameObject objectToUse)
         {
             return objectToUse.GetComponent<Text>();
+        }
+        
+        public static IEnumerable<CodeInstruction> IL(params (OpCode, object)[] instructions)
+        {
+            return instructions.Select(i => new CodeInstruction(i.Item1, i.Item2)).ToList();
+        }
+        
+        public static GameObject GetObject(string path)
+        {
+            string rootPath, restPath = null;
+
+            if (!path.Contains('/'))
+                rootPath = path;
+            else
+            {
+                var pathParts = path.Split(new[] { '/' }, 2);
+                rootPath = pathParts[0];
+                restPath = pathParts[1];
+            }
+
+            var rootList = new List<GameObject>();
+            GameObject rootPart = null;
+            SceneManager.GetActiveScene().GetRootGameObjects(rootList);
+            
+            foreach (var child in rootList.Where(child => child.name == rootPath))
+                rootPart = child;
+
+            if (rootPart == null)
+                return null;
+
+            return restPath == null
+                ? rootPart
+                : rootPart.transform.Find(restPath).gameObject;
         }
     }
 }

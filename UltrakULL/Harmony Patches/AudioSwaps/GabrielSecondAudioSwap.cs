@@ -60,9 +60,6 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
                 gabeSecondTauntsSecondPhase[x] =  AudioSwapper.SwapClipWithFile(gabeSecondTauntsSecondPhase[x], gabeSecondTauntsSecondPhaseString);
                 
             }
-            
-            
-            
         }
     }
 }

@@ -83,8 +83,6 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
                 string minosPrimeHurtString = minosPrimeFolder + "minosPrimeHurt" + (x+1).ToString() + ".wav";
                 minosPrimeHurt[x] =  AudioSwapper.SwapClipWithFile(minosPrimeHurt[x], minosPrimeHurtString);
             }
-
         }
-        
     }
 }
