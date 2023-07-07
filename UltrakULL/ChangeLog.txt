@@ -1,5 +1,6 @@
 ﻿1.2.3
-- Refactored subtitles replacement process and audio swaps, added separate patches for Mandalore, Minos, Gabriel and Sisyphus
+- Major subtitle refactoring work for all voiced characters to improve performance and reduce overhead.
+Thank you so much to Flazhik for the contribution!
 
 
 1.2.2
