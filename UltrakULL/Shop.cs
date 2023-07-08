@@ -942,6 +942,8 @@ namespace UltrakULL
                 
                 Text brokenShopTip = GetTextfromGameObject(GetGameObjectChild(brokenShop,"TipText"));
                 brokenShopTip.text = LanguageManager.CurrentLanguage.levelTips.leveltips_wrathThirdBroken;
+                
+                shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("FirstRoom"), "Room"), "Shop"), "Canvas"));
             }
             
             //Specific fix for 6-1

@@ -1,6 +1,9 @@
 ﻿1.2.3
 - Major subtitle refactoring work for all voiced characters to improve performance and reduce overhead.
 Thank you so much to Flazhik for the contribution!
+- Fixed a couple of repeating lines in the Act 1 intermission.
+- Fixed 5-3's shop not being translated.
+Thank you to BitKoven for these contributions!
 
 
 1.2.2

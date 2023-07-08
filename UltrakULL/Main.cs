@@ -15,9 +15,11 @@ using System.Reflection;
 
 /*
  *	UltrakULL (Ultrakill Language Library)
- *	Written by Clearwater, additional code contributions by Temperz87, Flazhik and CoatlessAli, translations by UltrakULL Translation Team
+ *	Written by Clearwater
+ *  Additional code contributions by Temperz87, Flazhik, BitKoven & CoatlessAli
+ *  Translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 7th July 2023
+ *	Last updated: 8th July 2023
  *	
  *	A translation mod for Ultrakill that hooks into the game and allows for text/string replacement. This tool is primarily meant to assist with language translation.
  * 
@@ -32,6 +34,12 @@ using System.Reflection;
  * Make language button disappear like other option buttons when save menu is opened
  * Update custom font
  *
+ * Typo in English template: Temple*s* of man
+ * Salad's book fifth line missing
+ * Look through all text and maybe set it all to adjust size automatically?
+ * Flyingdog's book text not seeming to appear
+ * Have another look at crossmod support, or at least move the lang button to another place so it doesn't overlap with Tweaker
+ *
  * 
  * */
 
@@ -42,7 +50,7 @@ namespace UltrakULL
     {
         private const string Guid = "clearwater.ultrakill.ultrakull";
         private const string InternalName = "clearwater.ultrakull.ultrakULL";
-        private const string InternalVersion = "1.2.2";
+        private const string InternalVersion = "1.2.3";
 
         public static MainPatch Instance;
         public GameObject ultrakullLogo;
