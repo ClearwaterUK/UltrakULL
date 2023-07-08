@@ -76,10 +76,11 @@ Restart the game after applying either steps for your use case.
 
 ## Languages available & fully compatible with latest game version
 
-| Language          | Contributors                                                                                                                       | Notes                                  |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
-| English (U.S)     | Hakita & New Blood                                                                                                                 | Grammatical improvements by Clearwater |
-| Russian (русский) | Nessie_A_WA97, D4N5T3P, Edith Bagel, lrddd, Brainy-Stormie, TwinT, towelie84, mctaylors, Solidus Cumcer, Filin, Ega1232387, Khowst |                                        |
+| Language            | Contributors                                                                                                                       | Notes                                  |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
+| English (U.S)       | Hakita & New Blood                                                                                                                 | Grammatical improvements by Clearwater |
+| Russian (русский)   | Nessie_A_WA97, D4N5T3P, Edith Bagel, lrddd, Brainy-Stormie, TwinT, towelie84, mctaylors, Solidus Cumcer, Filin, Ega1232387, Khowst |                                        |
+| Filipino (Pilipino) | mxkyle, MecanicWithAPistol, FinnianNiko                                                                                            |                                        |
 
 ## Languages available but not fully compatible with latest game version
 
@@ -91,19 +92,18 @@ Restart the game after applying either steps for your use case.
 | German (Deutsch)                         | Distrilul, JESTERB0T, Liquid Lest, Psychologemelone44, Termi2, Fabidelune, Madeleine | Act 2       |                                      |
 | Spanish (Español)                        | LambCS, Philia, Lukah, Amarok_Lc, Santy, Radripizza, j(LRC), LEVIBOT                 | Act 2       |                                      |
 | Simplified Chinese (简体中文)                | Hydracerynitis, ciinore, duke325, ponyweeb, Skugra, GoGoblin                         | Act 2       |                                      |
-| Turkish (Türkçe)                         | Legitname1337, Ömer Talha, RTE, Ray_, legio, Scape, Neige,$ERTU$TAUPTOWN                            | Act 2       |                                      |
+| Turkish (Türkçe)                         | Legitname1337, Ömer Talha, RTE, Ray_, legio, Scape, Neige,$ERTU$TAUPTOWN             | Act 2       |                                      |
 
 ## Languages in development
 
 | Language                      | Contributors                                                    | Notes |
 |-------------------------------|-----------------------------------------------------------------|-------|
-| Arabic                        | riko, hamza666                                                  |       |
+| Arabic                        | riko, hamza666                                                  |       | 
 | Bulgarian (Bălgarski)         | Dan                                                             |       |
 | Croatian (Hrvatski)           | Cremee                                                          |       |
 | Danish (Dansk)                | OrangeField,rillebille                                          |       |
 | Dutch (Nederlands)            | Foxo, troingle, The Kneecap Collector                           |       |
 | Estonian (Eestikeel)          | Cremee                                                          |       |
-| Filipino (Pilipino)           | mxkyle, MecanicWithAPistol, FinnianNeko                         |       |
 | Finnish (Suomi)               | GoreDemon, FracturedStar, troingle                              |       |
 | Greek (Ελληνικά)              | Mi pro                                                          |       |
 | Hungarian (Magyar)            | csigachad, my man, Desert                                       |       |
