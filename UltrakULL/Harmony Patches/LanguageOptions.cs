@@ -37,7 +37,6 @@ namespace UltrakULL.Harmony_Patches
         
         public static void warnBeforeDownload(LanguageInfo lInfo)
         {
-
             GameObject difficultySelectMenu = GetGameObjectChild(GetInactiveRootObject("Canvas"),"Difficulty Select (1)");
 
             GameObject panelToUse = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Canvas"),"OptionsMenu"),"Assist Options"),"Panel");
@@ -92,8 +91,7 @@ namespace UltrakULL.Harmony_Patches
             
             //Hide the local page, get the list of available languages from the remote repo. Make buttons for each entry found and color code them.
             //Blue - Installed locally. Green - Not installed, available. Yellow - Installed, update available.
-            
-            
+
             //Set up the browser page here.
             if(langBrowserPage == null)
             {
@@ -115,7 +113,6 @@ namespace UltrakULL.Harmony_Patches
             vGroup.childAlignment = TextAnchor.UpperCenter;
 
             GameObject languageButtonPrefab = optionsParent.Find("Save Slots").Find("Grid").Find("Slot Row").gameObject;
-            
             
             //Fetch the language master file from the remote repo
             if(hasAlreadyFetchedLanguages)
@@ -179,7 +176,6 @@ namespace UltrakULL.Harmony_Patches
                                 case -1: { slotText.text += "\n(<color=green>Update available</color>)";break;}
                                 default: { slotText.text += "\n(<color=green>Downloaded</color>)";break;}
                             }
-
                         }
 
                         Button langButton = languageBrowserButtonInstance.AddComponent<Button>();
@@ -217,7 +213,6 @@ namespace UltrakULL.Harmony_Patches
                                     downloadLanguageFile(langInfo.languageTag,langInfo.languageFullName);
                                 }
                             }
-    
                         });
                         
                         //Pop the button into a list, so when the page is exited and reopened, obtained lang buttons will reappear.
@@ -277,7 +272,10 @@ namespace UltrakULL.Harmony_Patches
         
         public static async void downloadLanguageFile(string languageTag, string languageName)
         {
+            MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=orange>DOWNLOADING...</color>");
+            
             string fileName = languageTag + ".json";
+            
             
             string languageFileUrl = "https://clearwateruk.github.io/mods/ultrakULL/" + fileName;
             
@@ -296,20 +294,22 @@ namespace UltrakULL.Harmony_Patches
                 using (WebClient webClient = new WebClient())
                 {
                     string messageNotif;
+                    bool newLangDownloaded = false;
               
                     //If the file was simply updated, it can be used straightaway.
                     //If a new lang file was downloaded, display a notif to the user to enter a level or reload the menu.
                     Console.WriteLine(languageTag);
                     if(langFileLocallyExists(languageTag))
                     {
-                        messageNotif = "Language file \"" + languageName + "\" has been updated. It can be used immediately.";
+                        messageNotif = "Language file \"" + languageName + "\" has been updated.";
                     }
                     else
                     {
                         messageNotif = "A new language file \"" + languageName + "\" has been downloaded. It will be available after restarting your game.";
+                        newLangDownloaded = true;
                     }
                     
-                    MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=orange>DOWNLOADING...</color>");
+
                     
                     webClient.DownloadFile(languageFileUrl, fullPath);
                     string jsonFile = File.ReadAllText(fullPath);
@@ -320,12 +320,15 @@ namespace UltrakULL.Harmony_Patches
                     MonoSingleton<HudMessageReceiver>.Instance.ClearMessage();
                     MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=lime>" + messageNotif + "</color>");
 
-                    if(!(langFileLocallyExists(languageTag)))
+                    if(newLangDownloaded)
                     {
-                        LanguageManager.allLanguages.Add(languageTag, file);
-                    }
 
-                    //LanguageManager.allLanguagesDisplayNames.Add(languageName, lang);
+                        LanguageManager.allLanguages.Add(languageName, file);
+                        
+                        Transform optionsParent = GetGameObjectChild(GetInactiveRootObject("Canvas"),"OptionsMenu").transform;
+                        GameObject languageButtonPrefab = optionsParent.Find("Save Slots").Find("Grid").Find("Slot Row").gameObject;
+                        addLocalLanguageToLocalList(ref languageButtonPrefab, languageName,true);
+                    }
                 }
             }
             catch(Exception e)
@@ -335,6 +338,53 @@ namespace UltrakULL.Harmony_Patches
                 Console.WriteLine(e.ToString());
             }
 
+        }
+        
+        public static void addLocalLanguageToLocalList(ref GameObject languageButtonPrefab, string language, bool newlyAdded=false)
+        {
+            Transform contentParent = langLocalPage.transform.Find("Scroll Rect (1)").Find("Contents");
+            
+            GameObject languageButtonInstance = GameObject.Instantiate(languageButtonPrefab,contentParent);
+            
+            languageButtonInstance.GetComponent<RectTransform>().localScale = new Vector3(0.2188f, 1.1236f, 0.5089f);
+            languageButtonInstance.transform.Find("Select Wrapper").gameObject.SetActive(false);
+            languageButtonInstance.transform.Find("Delete Wrapper").gameObject.SetActive(false);
+            languageButtonInstance.transform.Find("State Text").gameObject.SetActive(false);
+            if(newlyAdded)
+            {
+                languageButtonInstance.transform.SetAsFirstSibling();
+            }
+            GameObject.Destroy(languageButtonInstance.GetComponent<SlotRowPanel>());
+            
+            Transform slotTextTf = languageButtonInstance.transform.Find("Slot Text");
+            slotTextTf.localScale = new Vector3(4.983107f, 0.970607f, 2.1431f);
+            slotTextTf.localPosition = new Vector3(0f, 0f, 0f);
+            Text slotText = slotTextTf.GetComponent<Text>();
+            slotText.text = LanguageManager.allLanguages[language].metadata.langDisplayName;
+            slotText.alignment = TextAnchor.MiddleCenter;
+            slotText.fontSize = 16;
+            
+            Button langButton = languageButtonInstance.AddComponent<Button>();
+            langButton.transition = Selectable.Transition.ColorTint;
+            langButton.colors = new ColorBlock()
+            {
+                normalColor = new Color32(255, 255, 255, 255),
+                highlightedColor = new Color32(255, 0, 0, 255),
+                pressedColor = new Color32(255, 255, 0, 255),
+                disabledColor = new Color32(255, 255, 0, 255),
+                colorMultiplier = 1f,
+                fadeDuration = 0.1f
+            };
+            langButton.targetGraphic = languageButtonInstance.transform.Find("Panel").GetComponent<Graphic>();
+
+
+            langButton.onClick.AddListener(delegate
+            {
+                LanguageManager.SetCurrentLanguage(language);
+            });
+
+            languageButtonInstance.SetActive(true);
+            
         }
         
         public static bool Prefix(OptionsMenuToManager __instance)
@@ -387,43 +437,10 @@ namespace UltrakULL.Harmony_Patches
 
             GameObject languageButtonPrefab = optionsParent.Find("Save Slots").Find("Grid").Find("Slot Row").gameObject;
 
+            //Iterate through each local file and load it.
             foreach (string language in LanguageManager.allLanguages.Keys)
             {
-                GameObject languageButtonInstance = GameObject.Instantiate(languageButtonPrefab, contentParent);
-                languageButtonInstance.transform.localScale = new Vector3(0.2188482f, 1.123569f, 0.5088629f);
-                languageButtonInstance.transform.Find("Select Wrapper").gameObject.SetActive(false);
-                languageButtonInstance.transform.Find("Delete Wrapper").gameObject.SetActive(false);
-                languageButtonInstance.transform.Find("State Text").gameObject.SetActive(false);
-                GameObject.Destroy(languageButtonInstance.GetComponent<SlotRowPanel>());
-
-                Transform slotTextTf = languageButtonInstance.transform.Find("Slot Text");
-                slotTextTf.localScale = new Vector3(4.983107f, 0.970607f, 2.1431f);
-                slotTextTf.localPosition = new Vector3(0f, 0f, 0f);
-                Text slotText = slotTextTf.GetComponent<Text>();
-                slotText.text = LanguageManager.allLanguages[language].metadata.langDisplayName;
-                slotText.alignment = TextAnchor.MiddleCenter;
-                slotText.fontSize = 16;
-
-                Button langButton = languageButtonInstance.AddComponent<Button>();
-                langButton.transition = Selectable.Transition.ColorTint;
-                langButton.colors = new ColorBlock()
-                {
-                    normalColor = new Color32(255, 255, 255, 255),
-                    highlightedColor = new Color32(255, 0, 0, 255),
-                    pressedColor = new Color32(255, 255, 0, 255),
-                    disabledColor = new Color32(255, 255, 0, 255),
-                    colorMultiplier = 1f,
-                    fadeDuration = 0.1f
-                };
-                langButton.targetGraphic = languageButtonInstance.transform.Find("Panel").GetComponent<Graphic>();
-
-
-                langButton.onClick.AddListener(delegate
-                {
-                    LanguageManager.SetCurrentLanguage(language);
-                });
-
-                languageButtonInstance.SetActive(true);
+                addLocalLanguageToLocalList(ref languageButtonPrefab, language);
             }
             button.onClick.AddListener(delegate { langLocalPage.SetActive(true); });
 

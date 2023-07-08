@@ -1,4 +1,5 @@
 ﻿1.2.3
+- Newly downloaded languages now appear in the local languages tab for immediate use instead of requiring a game restart for them to appear.
 - Major subtitle refactoring work for all voiced characters to improve performance and reduce overhead.
 Thank you so much to Flazhik for the contribution!
 - Fixed a couple of repeating lines in the Act 1 intermission.

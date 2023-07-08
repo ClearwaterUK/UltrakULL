@@ -37,7 +37,6 @@ using System.Reflection;
  * Look through all text and maybe set it all to adjust size automatically?
  * Flyingdog's book text not seeming to appear
  * Have another look at crossmod support, or at least move the lang button to another place so it doesn't overlap with Tweaker
- * Try and make newly downloaded langs available from the getgo
  *
  * 
  * */
