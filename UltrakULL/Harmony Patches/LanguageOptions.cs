@@ -409,7 +409,8 @@ namespace UltrakULL.Harmony_Patches
             Transform optionsParent = __instance.optionsMenu.transform;
             GameObject languageButton = GameObject.Instantiate(optionsParent.Find("Gameplay").gameObject, optionsParent);
             languageButton.name = "Language";
-            languageButton.transform.localPosition += new Vector3(0f, 60f, 0f);
+            languageButton.transform.localPosition = new Vector3(-610f, 320f, 0f);
+            //languageButton.transform.localPosition += new Vector3(0f, 60f, 0f);
             languageButtonText = languageButton.transform.GetChild(0).gameObject.GetComponent<Text>();
 
             Button button = languageButton.GetComponent<Button>();
