@@ -1,4 +1,10 @@
-﻿1.2.2:
+﻿1.2.3:
+
+MODIFIED:
+
+devMuseum: museum_plaquesQuetzalTirado -> museum_plaquesQuetzalTirado2
+
+1.2.2:
 
 ADDED:
 

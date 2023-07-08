@@ -3,6 +3,7 @@
 - Adjusted the location of the Languages button in the options. This should prevent overlap with any other mods that add buttons in its original position.
 - Major subtitle refactoring work for all voiced characters to improve performance and reduce overhead.
 Thank you so much to Flazhik for the contribution!
+- Fixed a typo in the English template resulting in Quetzal's museum plaque not appearing. (Check template changes below)
 - Fixed a couple of repeating lines in the Act 1 intermission.
 - Fixed 5-3's shop not being translated.
 Thank you to BitKoven for these contributions!
