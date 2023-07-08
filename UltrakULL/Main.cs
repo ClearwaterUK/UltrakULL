@@ -34,11 +34,10 @@ using System.Reflection;
  * Make language button disappear like other option buttons when save menu is opened
  * Update custom font
  *
- * Typo in English template: Temple*s* of man
- * Salad's book fifth line missing
  * Look through all text and maybe set it all to adjust size automatically?
  * Flyingdog's book text not seeming to appear
  * Have another look at crossmod support, or at least move the lang button to another place so it doesn't overlap with Tweaker
+ * Try and make newly downloaded langs available from the getgo
  *
  * 
  * */

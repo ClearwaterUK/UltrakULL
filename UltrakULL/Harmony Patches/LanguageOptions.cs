@@ -306,7 +306,7 @@ namespace UltrakULL.Harmony_Patches
                     }
                     else
                     {
-                        messageNotif = "A new language file \"" + languageName + "\" has been downloaded. It will be available for use upon entering a mission, or reloading the main menu.";
+                        messageNotif = "A new language file \"" + languageName + "\" has been downloaded. It will be available after restarting your game.";
                     }
                     
                     MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=orange>DOWNLOADING...</color>");
