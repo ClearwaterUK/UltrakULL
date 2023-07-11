@@ -1,0 +1,164 @@
+FILTH(bios) ::= <<
+- <bios.enemyBios_filth_strategy1>
+- <bios.enemyBios_filth_strategy2>
+>>
+
+STRAY(bios) ::= <<
+- <bios.enemyBios_stray_strategy1>
+- <bios.enemyBios_stray_strategy2>
+>>
+
+SCHISM(bios) ::= <<
+- <bios.enemyBios_schism_strategy1>
+- <bios.enemyBios_schism_strategy2>
+- <bios.enemyBios_schism_strategy3>
+>>
+
+SOLDIER(bios) ::= <<
+- <bios.enemyBios_soldier_strategy1>
+- <bios.enemyBios_soldier_strategy2 +>
+- <bios.enemyBios_soldier_strategy3>
+>>
+
+FERRYMAN(bios) ::= <<
+- <bios.enemyBios_ferryman_strategy1>
+- <bios.enemyBios_ferryman_strategy2>
+- <bios.enemyBios_ferryman_strategy3>
+- <bios.enemyBios_ferryman_strategy4>
+>>
+
+SENTRY(bios) ::= <<
+- <bios.enemyBios_sentry_strategy1>
+- <bios.enemyBios_sentry_strategy2>
+- <bios.enemyBios_sentry_strategy3>
+- <bios.enemyBios_sentry_strategy4>
+>>
+
+IDOL(bios) ::= <<
+- <bios.enemyBios_idol_strategy1>
+- <bios.enemyBios_idol_strategy2>
+- <bios.enemyBios_idol_strategy3>
+>>
+
+THECORPSEOFKINGMINOS(bios) ::= <<
+- <bios.enemyBios_corpseOfKingMinos_strategy1>
+- <bios.enemyBios_corpseOfKingMinos_strategy2>
+- <bios.enemyBios_corpseOfKingMinos_strategy3>
+>>
+
+LEVIATHAN(bios) ::= <<
+- <bios.enemyBios_leviathan_strategy1>
+- <bios.enemyBios_leviathan_strategy2>
+- <bios.enemyBios_leviathan_strategy3>
+>>
+
+STALKER(bios) ::= <<
+- <bios.enemyBios_stalker_strategy1>
+- <bios.enemyBios_stalker_strategy2>
+- <bios.enemyBios_stalker_strategy3>
+- <bios.enemyBios_stalker_strategy4>
+>>
+
+INSURRECTIONIST(bios) ::= <<
+- <bios.enemyBios_insurrectionist_strategy1>
+- <bios.enemyBios_insurrectionist_strategy2>
+- <bios.enemyBios_insurrectionist_strategy3>
+- <bios.enemyBios_insurrectionist_strategy4>
+>>
+
+SWORDSMACHINE(bios) ::= <<
+- <bios.enemyBios_swordsmachine_strategy1>
+- <bios.enemyBios_swordsmachine_strategy2>
+- <bios.enemyBios_swordsmachine_strategy3>
+>>
+
+DRONE(bios) ::= <<
+- <bios.enemyBios_drone_strategy1>
+- <bios.enemyBios_drone_strategy2>
+- <bios.enemyBios_drone_strategy3>
+- <bios.enemyBios_drone_strategy4>
+>>
+
+STREETCLEANER(bios) ::= <<
+- <bios.enemyBios_streetcleaner_strategy1>
+- <bios.enemyBios_streetcleaner_strategy2>
+- <bios.enemyBios_streetcleaner_strategy3>
+>>
+
+V2(bios) ::= <<
+- <bios.enemyBios_v2_strategy1>
+- <bios.enemyBios_v2_strategy2>
+- <bios.enemyBios_v2_strategy3>
+- <bios.enemyBios_v2_strategy4>
+>>
+
+MINDFLAYER(bios) ::= <<
+- <bios.enemyBios_mindflayer_strategy1>
+- <bios.enemyBios_mindflayer_strategy2>
+- <bios.enemyBios_mindflayer_strategy3>
+>>
+
+V22nd(bios) ::= <<
+- <bios.enemyBios_v2Second_strategy1>
+- <bios.enemyBios_v2Second_strategy2>
+- <bios.enemyBios_v2Second_strategy3>
+>>
+
+MALICIOUSFACE(bios) ::= <<
+- <bios.enemyBios_maliciousFace_strategy1>
+- <bios.enemyBios_maliciousFace_strategy2>
+>>
+
+CERBERUS(bios) ::= <<
+- <bios.enemyBios_cerberus_strategy1>
+- <bios.enemyBios_cerberus_strategy2>
+- <bios.enemyBios_cerberus_strategy3>
+>>
+
+HIDEOUSMASS(bios) ::= <<
+- <bios.enemyBios_hideousMass_strategy1>
+- <bios.enemyBios_hideousMass_strategy2>
+- <bios.enemyBios_hideousMass_strategy3>
+- <bios.enemyBios_hideousMass_strategy4>
+>>
+
+GABRIELJUDGEOFHELL(bios) ::= <<
+- <bios.enemyBios_gabriel_strategy1>
+- <bios.enemyBios_gabriel_strategy2>
+>>
+
+GABRIELAPOSTATEOFHATE(bios) ::= <<
+- <bios.enemyBios_gabrielSecond_strategy1>
+- <bios.enemyBios_gabrielSecond_strategy2>
+- <bios.enemyBios_gabrielSecond_strategy3>
+>>
+
+VIRTUE(bios) ::= <<
+- <bios.enemyBios_virtue_strategy1>
+- <bios.enemyBios_virtue_strategy2>
+>>
+
+SOMETHINGWICKED(bios) ::= <<
+- <bios.enemyBios_somethingWicked_strategy1>
+- <bios.enemyBios_somethingWicked_strategy2>
+>>
+
+FLESHPRISON(bios) ::= <<
+- <bios.enemyBios_fleshPrison_strategy1>
+- <bios.enemyBios_fleshPrison_strategy2>
+>>
+
+MINOSPRIME(bios) ::= <<
+- <bios.enemyBios_minosPrime_strategy1>
+- <bios.enemyBios_minosPrime_strategy2>
+>>
+
+FLESHPANOPTICON(bios) ::= <<
+- <bios.enemyBios_fleshPanopticon_strategy1>
+- <bios.enemyBios_fleshPanopticon_strategy2>
+>>
+
+SISYPHUSPRIME(bios) ::= <<
+- <bios.enemyBios_sisyphusPrime_strategy1>
+- <bios.enemyBios_sisyphusPrime_strategy2>
+>>

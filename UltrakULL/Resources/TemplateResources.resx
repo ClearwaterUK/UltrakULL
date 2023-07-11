@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Intro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\..\UltrakULL\Resources\Templates\intro.stg;System.String, mscorlib,
+            Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        </value>
+    </data>
+    <data name="Bios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\..\UltrakULL\Resources\Templates\bios.stg;System.String, mscorlib,
+            Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        </value>
+    </data>
+	<data name="Strategies" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\..\UltrakULL\Resources\Templates\strategies.stg;System.String, mscorlib,
+            Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        </value>
+    </data>
+    <data name="Books" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\..\UltrakULL\Resources\Templates\books.stg;System.String, mscorlib,
+            Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        </value>
+    </data>
+    <data name="DevMuseum" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\..\UltrakULL\Resources\Templates\dev_museum.stg;System.String, mscorlib,
+            Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        </value>
+    </data>
+	<data name="PrimeSanctums" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\..\UltrakULL\Resources\Templates\prime_sanctums.stg;System.String, mscorlib,
+            Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        </value>
+    </data>
+	<data name="Testaments" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\..\UltrakULL\Resources\Templates\testaments.stg;System.String, mscorlib,
+            Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        </value>
+    </data>
+	<data name="Intermissions" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\..\UltrakULL\Resources\Templates\intermissions.stg;System.String, mscorlib,
+            Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        </value>
+    </data>
+	<data name="Mirage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\..\UltrakULL\Resources\Templates\mirage.stg;System.String, mscorlib,
+            Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        </value>
+    </data>
+</root>

@@ -10,6 +10,7 @@
     <RootNamespace>UltrakULL</RootNamespace>
     <AssemblyName>UltrakULL</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFramework>net46</TargetFramework>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -35,6 +36,9 @@
     <Reference Include="0Harmony">
       <HintPath>$(BepInExCoreDir)\0Harmony.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="Antlr4.StringTemplate, Version=4.0.7.0, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>lib\Antlr4.StringTemplate.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>$(ManagedDir)\Assembly-CSharp.dll</HintPath>
@@ -125,6 +129,9 @@
   <Target Name="WarnBeforeBuild" BeforeTargets="BeforeBuild">
     <Error Condition="!Exists($(ULTRAKILLPath))" Text="ULTRAKILLPath not set, create a UltrakUll.csproj.user file that sets this property to compile" />
   </Target>
+  <ItemGroup>
+    <PackageReference Include="StringTemplate4" Version="4.0.9-rc1" />
+  </ItemGroup>
   <!-- Building to local build folder -->
   <!-- Create config+plugins folder for BepInEx -->
   <Target Name="MakeMyDir" AfterTargets="BeforeBuild">
@@ -170,10 +177,10 @@
   </Target>
   <ItemGroup>
     <Compile Include="Act1.cs" />
-    <Compile Include="Act1Strings.cs" />
+    <Compile Include="Act1Challenges.cs" />
     <Compile Include="Act1VN.cs" />
     <Compile Include="Act2.cs" />
-    <Compile Include="Act2Strings.cs" />
+    <Compile Include="Act2Challenges.cs" />
     <Compile Include="audio\AudioSwapper.cs" />
     <Compile Include="Books.cs" />
     <Compile Include="BossStrings.cs" />
@@ -215,7 +222,19 @@
     <Compile Include="Harmony Patches\ScanningStuff.cs" />
     <Compile Include="Harmony Patches\SpawnMenu.cs" />
     <Compile Include="Harmony Patches\StyleHUD.cs" />
+    <Compile Include="Harmony Patches\Subtitles\AbstractTranspilingPatch.cs" />
     <Compile Include="Harmony Patches\Subtitles\GabrielSubtitlesSwap.cs" />
+    <Compile Include="Harmony Patches\Subtitles\HUD\BonusHudSwap.cs" />
+    <Compile Include="Harmony Patches\Subtitles\HUD\EndlessGridHudSwap.cs" />
+    <Compile Include="Harmony Patches\Subtitles\HUD\FishingHudSwap.cs" />
+    <Compile Include="Harmony Patches\Subtitles\HUD\FistControlHudSwap.cs" />
+    <Compile Include="Harmony Patches\Subtitles\HUD\HookArmHudSwap.cs" />
+    <Compile Include="Harmony Patches\Subtitles\HUD\LevelStatsEnablerHudSwap.cs" />
+    <Compile Include="Harmony Patches\Subtitles\HUD\MuseumHudSwap.cs" />
+    <Compile Include="Harmony Patches\Subtitles\HUD\OutOfBoundsHudSwap.cs" />
+    <Compile Include="Harmony Patches\Subtitles\HUD\PlatformerDancerHudSwap.cs" />
+    <Compile Include="Harmony Patches\Subtitles\HUD\ShopZoneHudSwap.cs" />
+    <Compile Include="Harmony Patches\Subtitles\HUD\StatsManagerHudSwap.cs" />
     <Compile Include="Harmony Patches\Subtitles\MandaloreSubtitlesSwap.cs" />
     <Compile Include="Harmony Patches\Subtitles\MinosPrimeSubtitlesSwap.cs" />
     <Compile Include="Harmony Patches\Subtitles\SisyphusPrimeSubtitlesSwap.cs" />
@@ -227,9 +246,7 @@
     <Compile Include="libs\ArabicSupportUnity\ArabicSupportUnity.cs" />
     <Compile Include="Logging.cs" />
     <Compile Include="MainMenu.cs" />
-    <Compile Include="HUDMessages.cs" />
     <Compile Include="Intermission.cs" />
-    <Compile Include="IntermissionStrings.cs" />
     <Compile Include="json\JsonFormat.cs" />
     <Compile Include="LevelNames.cs" />
     <Compile Include="LevelStatWindow.cs" />
@@ -237,12 +254,11 @@
     <Compile Include="Options.cs" />
     <Compile Include="Prelude.cs" />
     <Compile Include="Main.cs" />
-    <Compile Include="PreludeStrings.cs" />
+    <Compile Include="PreludeChallenges.cs" />
     <Compile Include="PrimeSanctum.cs" />
-    <Compile Include="PrimeSanctumStrings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReflectionUtils.cs" />
-    <Compile Include="Resources.Designer.cs">
+    <Compile Include="Resources.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -253,7 +269,7 @@
     <Compile Include="StringsParent.cs" />
     <Compile Include="StyleBonusStrings.cs" />
     <Compile Include="SubtitledAudioSourcesReplacer.cs" />
-    <Compile Include="SubtitledSourcesConfig.cs" />
+    <Compile Include="SubtitlesSourcesConfig.cs" />
     <Compile Include="TitleManager.cs" />
     <Compile Include="TutorialStrings.cs" />
   </ItemGroup>
@@ -270,15 +286,17 @@
     <Content Include="docs\Dubbing.md" />
     <Content Include="fonts\ullfont.resource" />
     <Content Include="fonts\VCR_OSD_MONO.ttf" />
+    <Content Include="ILRepack.targets" />
     <Content Include="json\templates\TemplateChangelog.txt" />
     <Content Include="ChangeLog.txt" />
+    <Content Include="lib\Antlr4.StringTemplate.dll" />
+    <Content Include="Resources\MirageDialogObjects.json" />
+    <Content Include="Resources\MuseumBooks.json" />
     <Content Include="Resources\SubtitledSources.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources.resx">
+    <EmbeddedResource Include="Resources\*.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Templates\*.stg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

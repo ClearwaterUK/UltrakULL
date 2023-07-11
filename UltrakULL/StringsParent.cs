@@ -1,97 +1,10 @@
-﻿using UnityEngine;
-
+﻿using UltrakULL.json;
 using static UltrakULL.CommonFunctions;
-using UltrakULL.json;
 
 namespace UltrakULL
 {
     public static class StringsParent
     {
-        public static string GetMessage(string message, string message2, string input)
-        {
-            string level = GetCurrentSceneName();
-            
-            if (level.Contains("Tutorial"))
-            {
-                GameObject canvasObj = GetInactiveRootObject("Canvas");
-                TutorialStrings tutStrings = new TutorialStrings(ref canvasObj);
-                return TutorialStrings.GetMessage(message, message2, input);
-            }
-            else if (level.Contains("0-"))
-            {
-                return PreludeStrings.GetMessage(message, message2, input);
-            }
-            else if (level.Contains("1-") || (level.Contains("2-") || (level.Contains("3-"))))
-            {
-                return Act1Strings.GetMessage(message, message2, input);
-            }
-            else if (level.Contains("4-") || (level.Contains("5-") || (level.Contains("6-"))))
-            {
-                return Act2Strings.GetMessage(message, message2, input);
-            }
-            else if (level.Contains("7-") || (level.Contains("8-") || (level.Contains("9-"))))
-            {
-                return "Unimplemented Act 3 function";
-            }
-            else if (level.Contains("CreditsMuseum2"))
-            {
-                return DevMuseum.GetMessage(message,message2,input);
-            }
-            else
-            {
-                return "Unimplemented unknown string";
-            }
-        }
-
-        public static string GetReturningLevelName(string input)
-        {
-            PreviousMissionSaver instance = MonoSingleton<PreviousMissionSaver>.Instance;
-
-            switch(instance.previousMission)
-            {
-                //Prelude
-                case 2: { return ("0-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_preludeSecond);}
-                case 3: { return ("0-3 - " + LanguageManager.CurrentLanguage.levelNames.levelName_preludeThird); }
-                case 4: { return ("0-4 - " + LanguageManager.CurrentLanguage.levelNames.levelName_preludeFourth); }
-                case 5: { return ("0-5 - " + LanguageManager.CurrentLanguage.levelNames.levelName_preludeFifth); }
-
-                //Act 1
-                //Limbo
-                case 6: { return ("1-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_limboFirst); }
-                case 7: { return ("1-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_limboSecond); }
-                case 8: { return ("1-3 - " + LanguageManager.CurrentLanguage.levelNames.levelName_limboThird); }
-                case 9: { return ("1-4 - " + LanguageManager.CurrentLanguage.levelNames.levelName_limboFourth); }
-
-                //Lust
-                case 10: { return ("2-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_lustFirst); }
-                case 11: { return ("2-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_lustSecond); }
-                case 12: { return ("2-3 - " + LanguageManager.CurrentLanguage.levelNames.levelName_lustThird); }
-                case 13: { return ("2-4 - " + LanguageManager.CurrentLanguage.levelNames.levelName_lustFourth); }
-
-                //Gluttony
-                case 14: { return ("3-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_gluttonyFirst); }
-                case 15: { return ("3-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_gluttonySecond); }
-
-                //Act 2
-                //Greed
-                case 16: { return ("4-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_greedFirst); }
-                case 17: { return ("4-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_greedSecond); }
-                case 18: { return ("4-3 - " + LanguageManager.CurrentLanguage.levelNames.levelName_greedThird); }
-                case 19: { return ("4-4 - " + LanguageManager.CurrentLanguage.levelNames.levelName_greedFourth); }
-
-                //Wrath
-                case 20: { return ("5-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathFirst); }
-                case 21: { return ("5-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathSecond); }
-                case 22: { return ("5-3 - " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathThird); }
-                case 23: { return ("5-4 - " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathFourth); }
-
-                case 999: { return ("P-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_primeFirst); }
-
-                default: { return ("Unknown level ID. Check the console!"); }
-            }
-          
-        }
-
         //Tips for each level
         public static string GetLevelTip()
         {
@@ -252,7 +165,5 @@ namespace UltrakULL
 
             return ("Uninplemented level tip");
         }
-
-
     }
 }

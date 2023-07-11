@@ -1,17 +1,18 @@
-﻿using HarmonyLib;
-using System;
+﻿using System;
 using System.Collections;
 using System.IO;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Reflection;
+using System.Threading.Tasks;
+using BepInEx;
+using HarmonyLib;
+using Newtonsoft.Json;
+using UltrakULL.json;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System.Net.Http;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
-using UltrakULL.json;
-using BepInEx;
 using static UltrakULL.CommonFunctions;
-using System.Reflection;
 
 /*
  *	UltrakULL (Ultrakill Language Library)
@@ -315,8 +316,8 @@ namespace UltrakULL
                             PatchFrontEnd(canvasObj);
                             
                             //(Re)render the UltrakULL status on screen when a language has been (re)loaded.
-                            if (ultrakullLogo != null) {GameObject.Destroy(ultrakullLogo);}
-                            ultrakullLogo = GameObject.Instantiate(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "Main Menu (1)"), "Title"), "Text"), canvasObj.transform);
+                            if (ultrakullLogo != null) {Destroy(ultrakullLogo);}
+                            ultrakullLogo = Instantiate(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "Main Menu (1)"), "Title"), "Text"), canvasObj.transform);
                             ultrakullLogo.transform.localPosition = new Vector3(1075, 210, 0);
                             Text ultrakullLogoText = GetTextfromGameObject(ultrakullLogo);
                             ultrakullLogoText.text = "ultrakULL loaded.\nVersion: " + InternalVersion + "\nCurrent locale: " + LanguageManager.CurrentLanguage.metadata.langName;
@@ -334,7 +335,7 @@ namespace UltrakULL
                                 //Make an update button
                                 GameObject buttonBase= GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj,"Main Menu (1)"),"Panel"),"Youtube");
                                 
-                                GameObject ultrakullUpdateButton = GameObject.Instantiate(buttonBase,buttonBase.transform.parent);
+                                GameObject ultrakullUpdateButton = Instantiate(buttonBase,buttonBase.transform.parent);
                                 ultrakullUpdateButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(185, 0f);
                                 ultrakullUpdateButton.GetComponentInChildren<Image>().color = new Color(0,1,0,1);
                                 ultrakullUpdateButton.GetComponentInChildren<Text>().text = "VIEW UPDATE";
@@ -516,7 +517,7 @@ namespace UltrakULL
         private async Task CheckForUpdates()
         {
             string updateUrl = "https://api.github.com/repos/clearwateruk/ultrakull/releases/latest";
-            Client.DefaultRequestHeaders.Accept.Add( new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+            Client.DefaultRequestHeaders.Accept.Add( new MediaTypeWithQualityHeaderValue("application/json"));
             Client.DefaultRequestHeaders.UserAgent.TryParseAdd("request");
             Client.Timeout = TimeSpan.FromSeconds(5);
             
@@ -550,7 +551,7 @@ namespace UltrakULL
         {
             Logging.Warn("Loading font resource bundle...");
             //Will file from the same directory that the dll is in.
-            AssetBundle fontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder,"ullfont.resource"));
+            AssetBundle fontBundle = AssetBundle.LoadFromFile(Path.Combine(ModFolder,"ullfont.resource"));
 
             if(fontBundle == null)
             {

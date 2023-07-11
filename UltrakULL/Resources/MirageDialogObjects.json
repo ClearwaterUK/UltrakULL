@@ -1,0 +1,80 @@
+{
+  "intro": {
+    "Text": "INTRO_1",
+    "Text (1)": "INTRO_2"
+  },
+  "mirage":
+  {
+    "Fallen/Dialogue Box": "FALLEN",
+    "Fallen/Dialogue Box (A)": "FALLEN_FIRST_RESPONSE",
+    "Fallen/Dialogue Box (B)": "FALLEN_SECOND_RESPONSE",
+    "Fallen/Dialogue Box (C)": "FALLEN_THIRD_RESPONSE",
+    "Fallen/Dialogue Box (C) (1)": "FALLEN_FOURTH_RESPONSE",
+    "Fallen/Dialogue Box (B) (1)": "FALLEN_FIFTH_RESPONSE",
+
+    "Start (Kind)/Dialogue Box": "KIND_FIRST",
+    "Start (Kind)/Dialogue Box (1)": "KIND_SECOND",
+    "Start (Kind)/Dialogue Box (2)": "KIND_THIRD",
+    "Start (Rude)/Dialogue Box": "RUDE_FIRST",
+    "Start (Rude)/Dialogue Box (1)": "RUDE_SECOND",
+    "Start (Rude)/Dialogue Box (2)": "RUDE_THIRD",
+
+    "Middle/Dialogue Box (A1)": "MIDDLE_RESPONSE_FIRST_1",
+    "Middle/Dialogue Box (A2)": "MIDDLE_RESPONSE_FIRST_2",
+    "Middle/Dialogue Box (A3)": "MIDDLE_RESPONSE_FIRST_3",
+    "Middle/Dialogue Box (A4)": "MIDDLE_RESPONSE_FIRST_4",
+    "Middle/Dialogue Box (B1)": "MIDDLE_RESPONSE_SECOND_1",
+    "Middle/Dialogue Box (B2)": "MIDDLE_RESPONSE_SECOND_2",
+    "Middle/Dialogue Box (C1)": "MIDDLE_RESPONSE_THIRD_1",
+    "Middle/Dialogue Box (C2)": "MIDDLE_RESPONSE_THIRD_2",
+
+    "Waiting/Dialogue Box (1)": "WAITING_FIRST",
+    "Waiting/Dialogue Box (2)": "WAITING_SECOND",
+    "Waiting/Dialogue Box (3)": "WAITING_THIRD",
+    "Waiting/Dialogue Box (A1)": "WAITING_RESPONSE_FIRST_1",
+    "Waiting/Dialogue Box (A2)": "WAITING_RESPONSE_FIRST_2",
+    "Waiting/Dialogue Box (B1)": "WAITING_RESPONSE_SECOND",
+    "Waiting/Dialogue Box (B1) (1)": "WAITING_RESPONSE_THIRD",
+
+    "Recklessness/Dialogue Box (1)": "RECKLESSNESS_FIRST",
+    "Recklessness/Dialogue Box (2)": "RECKLESSNESS_SECOND",
+    "Recklessness/Dialogue Box (A1)": "RECKLESSNESS_RESPONSE_FIRST",
+    "Recklessness/Dialogue Box (B1)": "RECKLESSNESS_RESPONSE_SECOND",
+    "Recklessness/Dialogue Box (B1) (1)": "RECKLESSNESS_RESPONSE_THIRD",
+
+    "Nihilism/Dialogue Box (1)": "NIHILISM_1",
+    "Nihilism/Dialogue Box (2)": "NIHILISM_2",
+    "Nihilism/Dialogue Box (3)": "NIHILISM_3",
+    "Nihilism/Dialogue Box (4)": "NIHILISM_4",
+    "Nihilism/Dialogue Box (5)": "NIHILISM_5",
+    "Nihilism/Dialogue Box (6)": "NIHILISM_6",
+    "Nihilism/Dialogue Box (7)": "NIHILISM_7",
+    "Nihilism/Dialogue Box (8)": "NIHILISM_8",
+    "Nihilism/Dialogue Box (9)": "NIHILISM_9",
+    "Nihilism/Dialogue Box (10)": "NIHILISM_10",
+    "Nihilism/Dialogue Box (11)": "NIHILISM_11",
+    "Nihilism/Dialogue Box (12)": "NIHILISM_12",
+    "Nihilism/Dialogue Box (13)": "NIHILISM_13",
+    "Nihilism/Dialogue Box (14)": "NIHILISM_14",
+    "Nihilism/Dialogue Box (15)": "NIHILISM_15",
+    "Nihilism/Dialogue Box (16)": "NIHILISM_16",
+    "Nihilism/Dialogue Box (17)": "NIHILISM_17",
+    "Nihilism/Dialogue Box (18)": "NIHILISM_18",
+    "Nihilism/Dialogue Box (19)": "NIHILISM_19",
+    "Nihilism/Dialogue Box (20)": "NIHILISM_20",
+    "Nihilism/Dialogue Box (21)": "NIHILISM_21",
+    "Nihilism/Dialogue Box (22)": "NIHILISM_22",
+
+    "Conclusion/Dialogue Box (1)": "CONCLUSION_1",
+    "Conclusion/Dialogue Box (2)": "CONCLUSION_2",
+    "Conclusion/Dialogue Box (3)": "CONCLUSION_3",
+    "Conclusion/Dialogue Box (4)": "CONCLUSION_4",
+    "Conclusion/Dialogue Box (5)": "CONCLUSION_5",
+    "Conclusion/Dialogue Box (6)": "CONCLUSION_6",
+
+    "Conclusion/Dialogue Box (A1)": "CONCLUSION_RESPONSE_FIRST_1",
+    "Conclusion/Dialogue Box (A2)": "CONCLUSION_RESPONSE_FIRST_2",
+    "Conclusion/Dialogue Box (B1)": "CONCLUSION_RESPONSE_SECOND_1",
+    "Conclusion/Dialogue Box (B2)": "CONCLUSION_RESPONSE_SECOND_2"
+  }
+}

@@ -19,7 +19,17 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="SubtitledSources" type="System.Resources.ResXFileRef, System.Windows.Forms">
-        <value>..\UltrakULL\Resources\SubtitledSources.json;System.Byte[], mscorlib,
+        <value>..\..\UltrakULL\Resources\SubtitledSources.json;System.Byte[], mscorlib,
+            Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        </value>
+    </data>
+	<data name="MirageDialogObjects" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\..\UltrakULL\Resources\MirageDialogObjects.json;System.String, mscorlib,
+            Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        </value>
+    </data>
+	<data name="MuseumBooks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\..\UltrakULL\Resources\MuseumBooks.json;System.String, mscorlib,
             Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
         </value>
     </data>

@@ -21,6 +21,7 @@ namespace UltrakULL.json
         public static JsonFormat CurrentLanguage { get; private set; }
         private static ManualLogSource jsonLogger = Logger.CreateLogSource("LanguageManager");
         public static ConfigFile configFile;
+        public static SubtitlesSourcesConfig SubtitlesConfig;
 
         public static void InitializeManager(string modVersion)
         {
@@ -78,8 +79,8 @@ namespace UltrakULL.json
 
         private static void LoadSubtitledSourcesConfig()
         {
-            var config = Encoding.Default.GetString(Resources.SubtitledSources);
-            SubtitledAudioSourcesReplacer.Config = JsonConvert.DeserializeObject<SubtitledSourcesConfig>(config);
+            var rawConfig = Encoding.Default.GetString(Resources.SubtitledSources);
+            SubtitlesConfig = JsonConvert.DeserializeObject<SubtitlesSourcesConfig>(rawConfig);
         }
 
         private static bool TryLoad<T>(string pathName, out T file)

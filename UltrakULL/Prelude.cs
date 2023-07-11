@@ -38,8 +38,8 @@ namespace UltrakULL
                 }
             }
             
-            string levelName = PreludeStrings.GetLevelName();
-            string levelChallenge = PreludeStrings.GetLevelChallenge(currentLevel);
+            string levelName = PreludeChallenges.GetLevelName();
+            string levelChallenge = PreludeChallenges.GetLevelChallenge(currentLevel);
 
             PatchResultsScreen(levelName,levelChallenge);
         }

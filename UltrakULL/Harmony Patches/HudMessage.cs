@@ -1,13 +1,14 @@
-﻿using HarmonyLib;
-using UnityEngine;
-using UnityEngine.UI;
-using System;
-
+﻿using System.Collections.Generic;
+using System.Linq;
+using Antlr4.StringTemplate;
+using HarmonyLib;
 using UltrakULL.json;
+using UnityEngine.UI;
+using static UltrakULL.CommonFunctions;
+using static UnityEngine.KeyCode;
 
 namespace UltrakULL.Harmony_Patches
 {
-
     [HarmonyPatch(typeof(HudMessage), "Update")]
     public static class HudMessageUpdatePatch
     {
@@ -22,73 +23,125 @@ namespace UltrakULL.Harmony_Patches
         }
     }
 
-    [HarmonyPatch(typeof(HudMessageReceiver),"SendHudMessage")]
-    public static class SendHudMessagePatch
-    {
-        [HarmonyPrefix]
-        public static bool SendHudMessage_Prefix(ref string newmessage, string newinput = "", string newmessage2 = "", int delay = 0, bool silent = false)
-        {
-            newmessage = HUDMessages.GetHUDToolTip(newmessage);
-            return true;
-        }
-    }
-
-    //@Override
-    //Overrides the PlayMessage method from the HudMessage class. This is needed for swapping text in message boxes.
+    // Overrides the PlayMessage method from the HudMessage class. This is needed for swapping text in message boxes.
     [HarmonyPatch(typeof(HudMessage), "PlayMessage")]
     public static class LocalizeHudMessage
     {
-        [HarmonyPostfix]
-        public static void PlayMessage_MyPatch(HudMessage __instance, bool ___activated, HudMessageReceiver ___messageHud, Text ___text, Image ___img)
+        
+        private const string Tutorial = "Tutorial";
+        private const string WrathSecret = "Level 5-S";
+        private const string DevMuseum = "CreditsMuseum2";
+        private const string PreludePrefix = "0-";
+        private const char TemplateDelimiter = '$';
+        
+        private static readonly List<string> Act1Prefixes = new List<string> { "1-", "2-", "3-" };
+        private static readonly List<string> Act2Prefixes = new List<string> { "4-", "5-", "6-" };
+        
+        [HarmonyPrefix]
+        public static bool PlayMessage_MyPatch(HudMessage __instance)
         {
-            //The HUD display uses 2 kinds of messages.
-            //One for messages that displays KeyCode inputs (for controls), and one that doesn't.
-            //Get the string table based on the area of the game we're currently in.
+            if (!TryGetTranslationObject(out var translation))
+                return true;
+
+            if (!TryLoadMetadata(out var sceneReference) || sceneReference.HudMessageSource == null) 
+                return true;
             
-            ___messageHud = MonoSingleton<HudMessageReceiver>.Instance;
-            ___text = ___messageHud.text;
-            if (__instance.input == "")
-            {
-                string newMessage = StringsParent.GetMessage(__instance.message, __instance.message2, "");
-                ___text.text = newMessage;
-            }
-            else
-            {
-                string controlButton;
-                try
+            foreach (var hudSource in sceneReference.HudMessageSource)
+                foreach (var hudObject in hudSource.Objects)
                 {
-                    KeyCode keyCode = MonoSingleton<InputManager>.Instance.Inputs[__instance.input];
+                    if (!hudObject.Equals(GetGameObjectPath(__instance.gameObject)))
+                        continue;
 
-                    if (keyCode == KeyCode.Mouse0)
-                    {
-                        controlButton = LanguageManager.CurrentLanguage.misc.controls_leftClick;
-                    }
-                    else if (keyCode == KeyCode.Mouse1)
-                    {
-                        controlButton = LanguageManager.CurrentLanguage.misc.controls_rightClick;
-                    }
-                    else if (keyCode == KeyCode.Mouse2)
-                    {
-                        controlButton = LanguageManager.CurrentLanguage.misc.controls_middleClick;
-                    }
-                    else
-                    {
-                        controlButton = keyCode.ToString();
-                    }
-                }
-                catch (Exception e)
-                {
-                    controlButton = "";
-                }
-                
-                //Messages that get input.
+                    var template = RepopulateIfNecessary(new Template(hudSource.Message, TemplateDelimiter, TemplateDelimiter)
+                        .Add("translation", translation)
+                        .Add("input", LocalizeInput(__instance)));
 
-                //Compare the start of the first message with the string table.
-                __instance.message = StringsParent.GetMessage(__instance.message, __instance.message2, controlButton);
-                
-                ___text.text = __instance.message;
+                    __instance.message = template.Render().Replace('$', '\n');
+                    __instance.input = string.Empty;
+                    __instance.message2 = string.Empty;
+                    break;
+                }
+            
+            return true;
+        }
+        
+        private static bool TryGetTranslationObject(out TraversableTranslation translation)
+        {
+            var currentLanguage = LanguageManager.CurrentLanguage;
+            var currentScene = GetCurrentSceneName();
+
+            switch (currentScene)
+            {
+                case Tutorial: translation = currentLanguage.tutorial;
+                    return true;
+                case WrathSecret: translation = currentLanguage.fishing;
+                    return true;
+                case DevMuseum: translation = currentLanguage.devMuseum;
+                    return true;
             }
-            ___text.text = ___text.text.Replace('$', '\n');
+
+            if (currentScene.Contains(PreludePrefix)) {
+                translation = currentLanguage.prelude;
+                return true;
+            }
+
+            if (Act1Prefixes.Any(prefix => currentScene.Contains(prefix))) {
+                translation = currentLanguage.act1;
+                return true;
+            }
+
+            if (Act2Prefixes.Any(prefix => currentScene.Contains(prefix))) {
+                translation = currentLanguage.act2;
+                return true;
+            }
+
+            translation = default;
+            return false;
+        }
+        
+        private static Template RepopulateIfNecessary(Template template)
+        {
+            if (GetCurrentSceneName() == "Level 4-4")
+                return template.Add("altRevolver", LanguageManager.CurrentLanguage.act1.act1_limboFourth_alternateRevolver);
+            
+            if (GetCurrentSceneName() == "CreditsMuseum2")
+                return template.Add("armboy", LanguageManager.CurrentLanguage.act2.act2_heresyFirst_armboy);
+
+            return template;
+        }
+
+        private static string LocalizeInput(HudMessage hudMessage)
+        {
+            try
+            {
+                if (hudMessage == null || hudMessage.input == string.Empty)
+                    return string.Empty;
+                
+                var misc = LanguageManager.CurrentLanguage.misc;
+                var keyCode = MonoSingleton<InputManager>.Instance.Inputs[hudMessage.input];
+
+                switch (keyCode)
+                {
+                    case Mouse0: return misc.controls_leftClick;
+                    case Mouse1: return misc.controls_rightClick;
+                    case Mouse2: return misc.controls_middleClick;
+                    default: return keyCode.ToString();
+                }
+            }
+            catch (KeyNotFoundException e)
+            {
+                return string.Empty;
+            }
+        }
+        
+        private static bool TryLoadMetadata(out SceneReference reference)
+        {
+            if (LanguageManager.SubtitlesConfig != null
+                && LanguageManager.SubtitlesConfig.Scenes.TryGetValue(GetCurrentSceneName(), out reference))
+                return true;
+
+            reference = default;
+            return false;
         }
     }
 }

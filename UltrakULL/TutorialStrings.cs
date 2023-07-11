@@ -1,95 +1,17 @@
 ﻿using System;
+using UltrakULL.json;
 using UnityEngine;
 using UnityEngine.UI;
-
-using UltrakULL.json;
 using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
 {
-    class TutorialStrings
+    public static class TutorialStrings
     {
-        public string IntroFirstPage;
-
-        //+ "Y/N ~ \n \n"
-        //+ " AUDIO§         Ä½ \n"
-        //+ " VIDEO§         Ä½ \n"
-        //+ "MECHANICS§     Ä½ \n"
-        //+ "+ CALIBRATION COMPLETE_ \n"
-        //+ "+PRIMARY SETTINGS UPDATED_ \n"
-        //+ "(±ASSIST OPTIONS_ AVAILABLE IN PAUSE MENU)½ \n"
-        //+ "+ALL SYSTEMS OPERATIONAL_½ \n"
-        //+ "LOADING STATUS UPDATE§ \n";
-
-        public string IntroSecondPage;
-
-        /*
-         *  MACHINE ID:            V1½½
-            LOCATION:              APPROACHING HELL½½@
-            CURRENT OBJECTIVE:     FIND A WEAPON½½
-
-            *MANKIND IS DEAD._½½
-            *BLOOD IS FUEL._½½
-            *HELL IS FULL._½½&
-         */
-
-        public static string GetMessage(string inputMessage, string inputMessage2, string input)
-        {
-            string fullMessage = inputMessage + inputMessage2;
-
-            if (fullMessage.Contains("PUNCH"))
-            {
-                return (LanguageManager.CurrentLanguage.tutorial.tutorial_punch1 + " <color=orange>" + input + "</color> " + LanguageManager.CurrentLanguage.tutorial.tutorial_punch2);
-            }
-            else if (fullMessage.Contains("SLIDE"))
-            {
-                return (LanguageManager.CurrentLanguage.tutorial.tutorial_slide1 + " <color=orange>" + input + "</color> " + LanguageManager.CurrentLanguage.tutorial.tutorial_slide2);
-            }
-            else if (fullMessage.Contains("DASH"))
-            {
-                return (LanguageManager.CurrentLanguage.tutorial.tutorial_dash1 + "<color=orange>" + input + "</color> " + LanguageManager.CurrentLanguage.tutorial.tutorial_dash2 + "\n" + LanguageManager.CurrentLanguage.tutorial.tutorial_dash3);
-            }
-            else if (fullMessage.Contains("HEALTH"))
-            {
-                return (LanguageManager.CurrentLanguage.tutorial.tutorial_health1 + "\n" + LanguageManager.CurrentLanguage.tutorial.tutorial_health2);
-            }
-            else if (fullMessage.Contains("JUMP"))
-            {
-                return (LanguageManager.CurrentLanguage.tutorial.tutorial_walljump);
-            }
-            else if (fullMessage.Contains("SHOCKWAVE"))
-            {
-                return (LanguageManager.CurrentLanguage.tutorial.tutorial_shockwave1 + " <color=orange>" + input + "</color> " + LanguageManager.CurrentLanguage.tutorial.tutorial_shockwave2 + "\n" + LanguageManager.CurrentLanguage.tutorial.tutorial_shockwave3);
-            }
-            else if (fullMessage.Contains("ORBS"))
-            {
-                return (LanguageManager.CurrentLanguage.tutorial.tutorial_orb1 + "\n" + LanguageManager.CurrentLanguage.tutorial.tutorial_orb2);
-            }
-            else
-            {
-                return ("Unimplemented tutorial string");
-            }
-        }
-
-        //IMPORTANT CHARACTERS TO USE:
-        // # - 3 repeating dots
-        // § - Indent
-        // + - Lime green text
-        // * - Red text
-        // ± - Blue text
-        // _ - Close color
-        // ½ - Half second pause
-        // @ - Begins to fade out intro music
-        // ~ - Wait for recalibration input
-        // & - Ends intro text and loads the tutorial
-        // β - Recalibration yes (automatically shows keyboard or controller button depending on what the player is using)
-        // δ - Recalibration no (automatically shows keyboard or controller button depending on what the player is using)
-
-        public void PatchCalibrationWindows(ref GameObject canvasObj)
+        public static void PatchCalibrationWindows(ref GameObject canvasObj)
         {
             try
             {
-
                 GameObject calibrationAudioWindow = GetGameObjectChild(GetGameObjectChild(canvasObj, "Intro"), "Audio Calibration");
                 GameObject calibrationAudioWindowWarning = GetGameObjectChild(calibrationAudioWindow, "Warning");
                 GameObject calibrationVideoWindow = GetGameObjectChild(GetGameObjectChild(canvasObj, "Intro"), "Video Calibration");
@@ -251,42 +173,6 @@ namespace UltrakULL
                 Logging.Error("Failed to patch tutorial panels");
                 Logging.Error(e.ToString());
             }
-        }
-
-        public TutorialStrings(ref GameObject canvasObj)
-        {
-            this.IntroFirstPage =
-                LanguageManager.CurrentLanguage.tutorial.tutorial_introStartup1 + "#" + LanguageManager.CurrentLanguage.tutorial.tutorial_introStartup2 + "½ \n\n"
-
-                + LanguageManager.CurrentLanguage.tutorial.tutorial_introVersion1 + "# \n"
-                + "+" + LanguageManager.CurrentLanguage.tutorial.tutorial_introVersion2 + "_½ \n\n"
-
-                + LanguageManager.CurrentLanguage.tutorial.tutorial_introCalibration1 + "#\n"
-                + "+" + LanguageManager.CurrentLanguage.tutorial.tutorial_introCalibration2 + "_\n\n"
-
-                + LanguageManager.CurrentLanguage.tutorial.tutorial_recalibrationPrompt + "\n β/δ~ \n"
-
-                + LanguageManager.CurrentLanguage.tutorial.tutorial_calibrationAudio + "§Ä½ \n"
-                + LanguageManager.CurrentLanguage.tutorial.tutorial_calibrationVideo + "§Ä½ \n"
-                + LanguageManager.CurrentLanguage.tutorial.tutorial_calibrationMechanics + "§Ä½ \n\n"
-
-                + "+" + LanguageManager.CurrentLanguage.tutorial.tutorial_calibrationComplete1 + "_ \n"
-                + "+" + LanguageManager.CurrentLanguage.tutorial.tutorial_calibrationComplete2 + "_ \n"
-                + "(±" + LanguageManager.CurrentLanguage.tutorial.tutorial_introReminder + " _)½ \n\n"
-
-                + "+" + LanguageManager.CurrentLanguage.tutorial.tutorial_systemsOperational + "_½ \n"
-                + LanguageManager.CurrentLanguage.tutorial.tutorial_introLoadStatus + "§";
-
-            this.IntroSecondPage =
-            LanguageManager.CurrentLanguage.tutorial.tutorial_introID1 + ":     " + LanguageManager.CurrentLanguage.tutorial.tutorial_introID2 + "½½ \n"
-            + LanguageManager.CurrentLanguage.tutorial.tutorial_introLocation1 + ":     " + LanguageManager.CurrentLanguage.tutorial.tutorial_introLocation2 + "@½½ \n"
-            + LanguageManager.CurrentLanguage.tutorial.tutorial_introObjective1 + ":    " + LanguageManager.CurrentLanguage.tutorial.tutorial_introObjective2 + "½½ \n\n"
-            + "*" + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed1 + "_½½ \n"
-            + "*" + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed2 + "_½½ \n"
-            + "*" + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed3 + "_½½&";
-
-            PatchCalibrationWindows(ref canvasObj);
-
         }
     }
 }

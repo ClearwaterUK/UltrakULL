@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using BepInEx;
 using UltrakULL.json;
@@ -15,8 +14,6 @@ namespace UltrakULL
     {
         public static string SpeechFolder = Combine(Paths.ConfigPath,"ultrakull", "audio", LanguageManager.CurrentLanguage.metadata
             .langName);
-        
-        public static SubtitledSourcesConfig Config;
 
         public static async void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
@@ -26,21 +23,21 @@ namespace UltrakULL
 
         public static void ReplaceSubsAndAudio()
         {
-            if (!TryLoadMetadata(out var objectReferences)) 
+            if (!TryLoadMetadata(out var sceneReference) || sceneReference.SubtitledSource == null) 
                 return;
             
-            foreach (var objectReference in objectReferences)
+            foreach (var subtitledSource in sceneReference.SubtitledSource)
             {
-                foreach (var gameObject in objectReference.Objects)
+                foreach (var objectReference in subtitledSource.Objects)
                 {
-                    var subtitledAudioSource = GetObject(gameObject).GetComponent<SubtitledAudioSource>();
-                    var audioSource = GetObject(gameObject).GetComponentInChildren<AudioSource>();
-    
+                    var subtitledAudioSource = GetObject(objectReference).GetComponent<SubtitledAudioSource>();
+                    var audioSource = GetObject(objectReference).GetComponentInChildren<AudioSource>();
+
                     if (ActiveDubbingEnabled())
-                        audioSource.clip = SwapClipWithFile(audioSource.clip, Combine(SpeechFolder, objectReference.AudioPath));
-                    
+                        audioSource.clip = SwapClipWithFile(audioSource.clip, Combine(SpeechFolder, subtitledSource.AudioPath));
+                
                     if (subtitledAudioSource != null)
-                        SetPrivate(subtitledAudioSource, typeof(SubtitledAudioSource), "subtitles", objectReference.ToSubtitleData());
+                        SetPrivate(subtitledAudioSource, typeof(SubtitledAudioSource), "subtitles", subtitledSource.ToSubtitleData());
                 }
             }
         }
@@ -50,12 +47,13 @@ namespace UltrakULL
             return LanguageManager.configFile.Bind("General", "activeDubbing", "False").Value != "False";
         }
 
-        private static bool TryLoadMetadata(out List<SubtitledObjectReference> references)
+        private static bool TryLoadMetadata(out SceneReference reference)
         {
-            if (Config != null && Config.Scenes.TryGetValue(GetCurrentSceneName(), out references))
+            if (LanguageManager.SubtitlesConfig != null
+                && LanguageManager.SubtitlesConfig.Scenes.TryGetValue(GetCurrentSceneName(), out reference))
                 return true;
 
-            references = default;
+            reference = default;
             return false;
         }
     }

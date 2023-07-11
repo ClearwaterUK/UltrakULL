@@ -1,7 +1,8 @@
-﻿using HarmonyLib;
-using UnityEngine;
+﻿using System.Text;
+using Antlr4.StringTemplate;
+using HarmonyLib;
+using UltrakULL.json;
 using UnityEngine.UI;
-
 using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL.Harmony_Patches
@@ -11,17 +12,30 @@ namespace UltrakULL.Harmony_Patches
     [HarmonyPatch(typeof(IntroText), "Start")]
     public static class LocalizeIntroText
     {
+        private const string Tutorial = "tutorial";
+        private const string FirstScreen = "FIRST_SCREEN";
+        private const string SecondScreen = "SECOND_SCREEN";
+        
         [HarmonyPrefix]
         public static bool IntroTextStart_MyPatch(IntroText __instance, Text ___txt, string ___fullString)
         {
-            GameObject canvasObj = GetInactiveRootObject("Canvas");
+            var introTemplateGroup = new TemplateGroupString(Resources.Intro);
+            introTemplateGroup.SetDelimiters('$', '$');
+            introTemplateGroup.Encoding = Encoding.Unicode;
+
+            var canvasObj = GetInactiveRootObject("Canvas");
             ___txt = __instance.GetComponent<Text>();
+            TutorialStrings.PatchCalibrationWindows(ref canvasObj);
 
-            TutorialStrings tutStrings = new TutorialStrings(ref canvasObj);
-            ___fullString = ___txt.text;
+            var template = ___txt.text[0] == 'B'
+                ? FirstScreen
+                : SecondScreen;
+            
+            ___fullString = introTemplateGroup
+                .GetInstanceOf(template)
+                .Add(Tutorial, LanguageManager.CurrentLanguage.tutorial)
+                .Render();
 
-            if (___fullString[0] == 'B') { ___fullString = tutStrings.IntroFirstPage; }
-            else { ___fullString = tutStrings.IntroSecondPage; }
             ___txt.text = ___fullString;
 
             return true;
