@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Reflection;
 
 namespace UltrakULL.json
@@ -42,8 +43,12 @@ namespace UltrakULL.json
         public SandboxStrings sandbox;
     }
     
-    public class FishingStrings
+    public class FishingStrings : TraversableTranslation
     {
+        public FishingStrings() : base(typeof(FishingStrings))
+        {
+        }
+        
         public string fish_ocean;
         public string fish_cavePool;
         public string fish_stream;
@@ -128,7 +133,6 @@ namespace UltrakULL.json
         public string fish_cookedFishDescription2;
         public string fish_sharkDescription1;
         public string fish_sharkDescription2;
-        
     }
 
     public class CG
@@ -606,8 +610,12 @@ namespace UltrakULL.json
         public string enemyBios_sisyphusPrime_strategy2;
     }
 
-    public class Subtitles
+    public class Subtitles : TraversableTranslation
     {
+        public Subtitles() : base(typeof(Subtitles))
+        {
+        }
+
         public string subtitles_gabriel_intro1;
         public string subtitles_gabriel_intro2;
         public string subtitles_gabriel_intro3;
@@ -785,12 +793,6 @@ namespace UltrakULL.json
         public string subtitles_gabrielSecondDefeated10;
         public string subtitles_gabrielSecondDefeated11;
         public string subtitles_gabrielSecondDefeated12;
-
-        public string GetField(string name)
-        {
-            var field = typeof(Subtitles).GetField(name, BindingFlags.Public | BindingFlags.Instance);
-            return (string)field.GetValue(this);
-        }
     }
 
     public class VisualNovel
@@ -1912,8 +1914,12 @@ namespace UltrakULL.json
         public string language_openLanguageFolder;
     }
 
-    public class Tutorial
+    public class Tutorial : TraversableTranslation
     {
+        public Tutorial() : base(typeof(Tutorial))
+        {
+        }
+        
         public string tutorial_introStartup1;
         public string tutorial_introStartup2;
         public string tutorial_introVersion1;
@@ -1970,11 +1976,14 @@ namespace UltrakULL.json
         public string tutorial_shockwave3;
         public string tutorial_orb1;
         public string tutorial_orb2;
-
     }
 
-    public class Overture
+    public class Overture : TraversableTranslation
     {
+        public Overture() : base(typeof(Overture))
+        {
+        }
+        
         public string prelude_first_openingCredits1;
         public string prelude_first_openingCredits2;
         public string prelude_first_pipeClip;
@@ -2035,8 +2044,12 @@ namespace UltrakULL.json
         public string challenges_heresySecond;
     }
 
-    public class a1
+    public class a1 : TraversableTranslation
     {
+        public a1() : base(typeof(a1))
+        {
+        }
+        
         public string act1_limboFirst_items1;
         public string act1_limboFirst_items2;
         public string act1_limboFirst_nailgun1;
@@ -2068,11 +2081,13 @@ namespace UltrakULL.json
 
 
         public string act1_secret;
-
-
     }
-    public class a2
+    public class a2 : TraversableTranslation
     {
+        public a2() : base(typeof(a2))
+        {
+        }
+        
         public string act2_greedSecond_sand;
 
         public string act2_greedThird_wallClip;
@@ -2085,6 +2100,7 @@ namespace UltrakULL.json
         public string act2_greedFourth_whiplash2;
         public string act2_greedFourth_whiplash3;
 
+        public string act2_limboFourth_alternateRevolver;
         public string act2_greedFourth_whiplashHardDamage1;
         public string act2_greedFourth_whiplashHardDamage2;
 
@@ -2165,8 +2181,6 @@ namespace UltrakULL.json
 
     public class Secret
     {
-
-
         public string secretLevels_prelude_somethingWicked;
         public string secretLevels_prelude_testamentTitle;
         public string secretLevels_prelude_testament1;
@@ -2207,8 +2221,12 @@ namespace UltrakULL.json
         public string secretLevels_complete2;
     }
 
-    public class Museum
+    public class Museum : TraversableTranslation
     {
+        public Museum() : base(typeof(Museum))
+        {
+        }
+        
         public string museum_bookHakita1;
         public string museum_bookHakita2;
         public string museum_bookHakita3;
@@ -2586,7 +2604,6 @@ namespace UltrakULL.json
         public string museum_spoiler1;
         public string museum_spoiler2;
         public string museum_spoiler3;
-
     }
 
     public class Misc
@@ -2725,5 +2742,20 @@ namespace UltrakULL.json
         public string sandbox_shop_iconsTitle;
         public string sandbox_shop_default;
         public string sandbox_shop_pitr;
+    }
+
+    public abstract class TraversableTranslation
+    {
+        private readonly Type type;
+        protected TraversableTranslation(Type type)
+        {
+            this.type = type;
+        }
+
+        public string GetField(string name)
+        {
+            var field = type.GetField(name, BindingFlags.Public | BindingFlags.Instance);
+            return (string)field.GetValue(this);
+        }
     }
 }

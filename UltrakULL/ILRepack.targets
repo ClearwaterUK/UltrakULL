@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Target Name="ILRepacker" AfterTargets="Build">
+        <ItemGroup>
+            <InputAssemblies Include="$(TargetDir)plugins/UltrakULL/UltrakULL.dll" />
+            <InputAssemblies Include="$(OutputPath)Antlr3.Runtime.dll" />
+            <InputAssemblies Include="$(OutputPath)Antlr4.StringTemplate.dll" />
+        </ItemGroup>
+        
+        <ItemGroup>
+            <SearchDirectories Include="$(BepInExCoreDir)" />
+            <SearchDirectories Include="$(ManagedDir)" />
+        </ItemGroup>
+
+        <ILRepack
+                Parallel="true"
+                Internalize="true"
+                InputAssemblies="@(InputAssemblies)"
+                LibraryPath="@(SearchDirectories)"
+                TargetKind="Dll"
+                OutputFile="$(TargetDir)plugins/UltrakULL/$(AssemblyName).dll"
+        />
+    </Target>
+</Project>

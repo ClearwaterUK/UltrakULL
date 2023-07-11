@@ -1,8 +1,7 @@
 ﻿using System;
-using UltrakULL.audio;
+using UltrakULL.json;
 using UnityEngine;
 using UnityEngine.UI;
-using UltrakULL.json;
 using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
@@ -34,8 +33,8 @@ namespace UltrakULL
         public static void PatchAct1(ref GameObject canvasObj)
         {
             string currentLevel = GetCurrentSceneName();
-            string levelName = Act1Strings.GetLevelName();
-            string levelChallenge = Act1Strings.GetLevelChallenge(currentLevel);
+            string levelName = Act1Challenges.GetLevelName();
+            string levelChallenge = Act1Challenges.GetLevelChallenge(currentLevel);
 
             PatchHellmap(ref canvasObj);
             PatchResultsScreen(levelName, levelChallenge);

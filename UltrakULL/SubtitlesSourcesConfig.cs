@@ -5,13 +5,22 @@ using UltrakULL.json;
 
 namespace UltrakULL
 {
-    public class SubtitledSourcesConfig
+    public class SubtitlesSourcesConfig
     {
         [JsonProperty("scenes")]
-        public Dictionary<string, List<SubtitledObjectReference>> Scenes;
+        public Dictionary<string, SceneReference> Scenes;
+    }
+
+    public class SceneReference
+    {
+        [JsonProperty("subtitledAudioSources")]
+        public List<SubtitledSource> SubtitledSource;
+
+        [JsonProperty("hudMessages")]
+        public List<HudMessageSource> HudMessageSource;
     }
     
-    public class SubtitledObjectReference
+    public class SubtitledSource
     {
         [JsonProperty("objects")]
         public List<string> Objects;
@@ -53,5 +62,14 @@ namespace UltrakULL
         
         [JsonProperty("color")]
         public string Color;
+    }
+    
+    public class HudMessageSource
+    {
+        [JsonProperty("objects")]
+        public List<string> Objects;
+
+        [JsonProperty("message")]
+        public string Message;
     }
 }

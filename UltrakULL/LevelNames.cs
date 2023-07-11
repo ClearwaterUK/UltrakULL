@@ -4,7 +4,6 @@ namespace UltrakULL
 {
 	public static class LevelNames
 	{
-
 		public static string GetDiscordLevelName(string missionName)
         {
 			if (missionName.Contains("Main Menu")) { return LanguageManager.CurrentLanguage.levelNames.levelName_mainMenu; }
