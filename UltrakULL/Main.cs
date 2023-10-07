@@ -12,6 +12,7 @@ using UltrakULL.json;
 using BepInEx;
 using static UltrakULL.CommonFunctions;
 using System.Reflection;
+using UnityEngine.Assertions;
 
 /*
  *	UltrakULL (Ultrakill Language Library)
@@ -56,6 +57,7 @@ namespace UltrakULL
         private static readonly HttpClient Client = new HttpClient();
         
         public static Font GlobalFont;
+        public static Font SecondFont;
 
         public static string ModFolder => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
@@ -543,7 +545,7 @@ namespace UltrakULL
         
         public void LoadFonts()
         {
-            Logging.Warn("Loading font resource bundle...");
+            Logging.Warn("Loading global font resource bundle...");
             //Will file from the same directory that the dll is in.
             AssetBundle fontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder,"ullfont.resource"));
 
@@ -559,17 +561,35 @@ namespace UltrakULL
                 Font loadedFont = fontBundle.LoadAsset<Font>("VCR_OSD_MONO");
                 if(loadedFont == null)
                 {
-                    Logging.Error("FAILED TO LOAD FONT");
+                    Logging.Error("FAILED TO LOAD GLOBAL FONT");
                 }
                 else
                 {
-                    Logging.Warn("Font loaded.");
+                    Logging.Warn("GlobalFont loaded.");
                     GlobalFont = loadedFont;
                     GlobalFontReady = true;
                 }
-            }
                 
-            
+            }
+            Logging.Warn("Loading Second font resource bundle...");
+            //Will file from the same directory that the dll is in.
+            Logging.Warn("Font bundle loaded.");
+            Logging.Warn("Loading fonts from bundle...");
+            fontBundle.Unload(false);
+            fontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder, "ullfont.resource"));
+            Font SecondLoadedFont = fontBundle.LoadAsset<Font>("EBGaramond-Regular");
+            if (SecondLoadedFont == null)
+            {
+                Logging.Error("FAILED TO LOAD SECOND FONT");
+            }
+            else
+            {
+                Logging.Warn("SecondFont loaded.");
+                SecondFont = SecondLoadedFont;
+
+            }
+
+
         }
 
         //Entry point for the mod.

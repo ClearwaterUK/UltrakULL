@@ -14,21 +14,47 @@ namespace UltrakULL.Harmony_Patches
             [HarmonyPostfix]
             public static void SwapFont(Text __instance)
             {
-                if(MainPatch.GlobalFontReady)
+                if (MainPatch.GlobalFontReady)
                 {
-                    if(GetCurrentSceneName() == "CreditsMuseum2")
+                    if (GetCurrentSceneName() == "CreditsMuseum2")
                     {
-                        //Fix for the museum to prevent plaque fonts from being changed.
-                        if(__instance.font.fontNames[0] == "GFS Garaldus") 
+                        Text[] allTextElements = UnityEngine.Object.FindObjectsOfType<Text>();
+
+                        foreach (Text textElement in allTextElements)
                         {
-                            //Do nothing xd
+                            if (textElement.font.fontNames[0] == "GFS Garaldus")
+                            {
+                                // Changes the font for all text elements that have the font "GFS Garaldus".
+
+                                //Checks for an alternative font and prevents a bug which can cause all fonts to break, even if they should not be replaced. (maybe already fixed)
+                                if (MainPatch.SecondFont != null)
+                                {
+                                    textElement.font = MainPatch.SecondFont;
+                                }
+                                else
+                                {
+                                    Logging.Error("The second font is not loaded. Cancelling the change of the font of this object.");
+                                }
+                            }
+                            else
+                            {
+                                if (textElement.font != MainPatch.SecondFont)
+                                {
+                                    textElement.font = MainPatch.GlobalFont; // Doesn't let you replace fonts that have already been replaced with another font.
+                                }
+                                
+                            }
                         }
                     }
                     else
                     {
-                        __instance.font = MainPatch.GlobalFont;
+                        // Change the font for all items at other locations
+                        Text[] allTextElements = UnityEngine.Object.FindObjectsOfType<Text>();
+                        foreach (Text textElement in allTextElements)
+                        {
+                            textElement.font = MainPatch.GlobalFont;
+                        }
                     }
-
                 }
             }
         }
