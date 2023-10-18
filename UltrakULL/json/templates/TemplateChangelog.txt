@@ -1,5 +1,11 @@
 ﻿1.2.3:
 
+ADDED:
+misc: hellmap_violence, hellmap_fraud, hellmap_treachery
+challenges: challenges_violence(first-fourth), challenges_fraud(first-fourth), challenges_treachery(first-fourth)
+levels: levelnames_violence(first-secret), levelnames_fraud(first-secret), levelnames_treachery(first-secret)
+leveltips: leveltips_violence(first-fourth), leveltips_fraud(first-fourth), leveltips_treachery(first-fourth)
+
 MODIFIED:
 
 devMuseum: museum_plaquesQuetzalTirado -> museum_plaquesQuetzalTirado2

@@ -16,7 +16,7 @@ using System.Reflection;
 /*
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater
- *  Additional code contributions by Temperz87, Flazhik, BitKoven & CoatlessAli
+ *  Additional code contributions by Temperz87, Flazhik, BitKoven, CoatlessAli and others
  *  Translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
  *	Last updated: 8th July 2023
@@ -29,7 +29,11 @@ using System.Reflection;
  *  - Swap out rank textures in HUD for translation (there's a mod already for this, shall look into)
  *  - Finish audio dubbing documentation
  *  - Swap audio file format for dubbing from .wav to .ogg, will reduce overall mod size.
- *  
+ *  - Prep work for next update: Act 3 (at least Violence), change in some HUD font displaying, enemy infighting, CG custom music among other things
+ *      - Mannequins, 7-1 titles, 7-2 titles, yellow hookpoints
+ *  - 2 PRs to have a look at that have just been sitting on the repo because I've been busy Despair
+ *  - There's a much better way to patch the shop terminals. Check the code used in V-Ranks!
+ * 
  *  -- FOR NEXT HOTFIX --
  * Make language button disappear like other option buttons when save menu is opened
  * Update custom font

@@ -218,6 +218,52 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.levelTips.leveltips_heresySecond1 + "\n" + LanguageManager.CurrentLanguage.levelTips.leveltips_heresySecond2;
             }
+            
+            //Violence
+            if (currentLevel.Contains("7-1"))
+            {
+                return LanguageManager.CurrentLanguage.levelTips.leveltips_violenceFirst;
+            }
+            if (currentLevel.Contains("7-2"))
+            {
+                return LanguageManager.CurrentLanguage.levelTips.leveltips_violenceSecond;
+            }
+            if (currentLevel.Contains("7-3"))
+            {
+                return LanguageManager.CurrentLanguage.levelTips.leveltips_violenceThird;
+            }
+            if (currentLevel.Contains("7-4"))
+            {
+                return LanguageManager.CurrentLanguage.levelTips.leveltips_violenceFourth;
+            }
+            
+            //Fraud
+            if (currentLevel.Contains("8-1"))
+            {
+                return LanguageManager.CurrentLanguage.levelTips.leveltips_fraudFirst;
+            }
+            if (currentLevel.Contains("8-2"))
+            {
+                return LanguageManager.CurrentLanguage.levelTips.leveltips_fraudSecond;
+            }
+            if (currentLevel.Contains("8-3"))
+            {
+                return LanguageManager.CurrentLanguage.levelTips.leveltips_fraudThird;
+            }
+            if (currentLevel.Contains("8-4"))
+            {
+                return LanguageManager.CurrentLanguage.levelTips.leveltips_fraudFourth;
+            }
+            
+            //Heresy
+            if (currentLevel.Contains("9-1"))
+            {
+                return LanguageManager.CurrentLanguage.levelTips.leveltips_treacheryFirst;
+            }
+            if (currentLevel.Contains("9-2"))
+            {
+                return LanguageManager.CurrentLanguage.levelTips.leveltips_treacherySecond;
+            }
 
             //Sandbox
             if (currentLevel.Contains("uk_construct"))

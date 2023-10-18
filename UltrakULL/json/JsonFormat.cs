@@ -1520,6 +1520,19 @@ namespace UltrakULL.json
         public string levelName_heresyFirst;
         public string levelName_heresySecond;
 
+        public string levelName_violenceFirst;
+        public string levelName_violenceSecond;
+        public string levelName_violenceThird;
+        public string levelName_violenceFourth;
+
+        public string levelName_fraudFirst;
+        public string levelName_fraudSecond;
+        public string levelName_fraudThird;
+        public string levelName_fraudFourth;
+
+        public string levelName_treacheryFirst;
+        public string levelName_treacherySecond;
+
         public string levelName_primeFirst;
         public string levelName_primeSecond;
         public string levelName_primeThird;
@@ -1570,6 +1583,19 @@ namespace UltrakULL.json
         public string leveltips_heresyFirst2;
         public string leveltips_heresySecond1;
         public string leveltips_heresySecond2;
+        
+        public string leveltips_violenceFirst;
+        public string leveltips_violenceSecond;
+        public string leveltips_violenceThird;
+        public string leveltips_violenceFourth;
+        
+        public string leveltips_fraudFirst;
+        public string leveltips_fraudSecond;
+        public string leveltips_fraudThird;
+        public string leveltips_fraudFourth;
+
+        public string leveltips_treacheryFirst;
+        public string leveltips_treacherySecond;
 
         public string leveltips_primeFirst1;
         public string leveltips_primeFirst2;
@@ -2033,6 +2059,19 @@ namespace UltrakULL.json
 
         public string challenges_heresyFirst;
         public string challenges_heresySecond;
+
+        public string challenges_violenceFirst;
+        public string challenges_violenceSecond;
+        public string challenges_violenceThird;
+        public string challenges_violenceFourth;
+
+        public string challenges_fraudFirst;
+        public string challenges_fraudSecond;
+        public string challenges_fraudThird;
+        public string challenges_fraudFourth;
+        
+        public string challenges_treacheryFirst;
+        public string challenges_treacherySecond;
     }
 
     public class a1
@@ -2623,6 +2662,9 @@ namespace UltrakULL.json
         public string hellmap_greed;
         public string hellmap_wrath;
         public string hellmap_heresy;
+        public string hellmap_violence;
+        public string hellmap_fraud;
+        public string hellmap_treachery;
         public string hellmap_prime;
 
         public string hellmap_first;

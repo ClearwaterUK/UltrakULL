@@ -1382,7 +1382,22 @@
 	
 			"levelName_heresyFirst": "",
 			"levelName_heresySecond": "",
-	
+			
+			"levelName_violenceFirst": "",
+			"levelName_violenceSecond": "",
+			"levelName_violenceThird": "",
+			"levelName_violenceFourth": "",
+			"levelName_violenceSecret": "",
+			
+			"levelName_fraudFirst": "",
+			"levelName_fraudSecond": "",
+			"levelName_fraudThird": "",
+			"levelName_fraudFourth": "",
+			"levelName_fraudSecret": "",
+
+			"levelName_treacheryFirst": "",
+			"levelName_treacherySecond": "",
+
 			"levelName_primeFirst": "",
 			"levelName_primeSecond": "",
 			"levelName_primeThird": ""
@@ -1419,8 +1434,20 @@
 			"challenges_wrathFourth": "",
 	
 			"challenges_heresyFirst": "",
-			"challenges_heresySecond": ""
-	
+			"challenges_heresySecond": "",
+			
+			"challenges_violenceFirst": "",
+			"challenges_violenceSecond": "",
+			"challenges_violenceThird": "",
+			"challenges_violenceFourth": "",
+
+			"challenges_fraudFirst": "",
+			"challenges_fraudSecond": "",
+			"challenges_fraudThird": "",
+			"challenges_fraudFourth": "",
+
+			"challenges_treacheryFirst": "",
+			"challenges_treacherySecond": ""
 		},
 		"levelTips": {
 			"leveltips_preludeSecond1": "",
@@ -1479,6 +1506,19 @@
 			"leveltips_heresyFirst2": "",
 			"leveltips_heresySecond1": "",
 			"leveltips_heresySecond2": "",
+			
+			"leveltips_violenceFirst": "",
+			"leveltips_violenceSecond": "",
+			"leveltips_violenceThird": "",
+			"leveltips_violenceFourth": "",
+
+			"leveltips_fraudFirst": "",
+			"leveltips_fraudSecond": "",
+			"leveltips_fraudThird": "",
+			"leveltips_fraudFourth": "",
+
+			"leveltips_treacheryFirst": "",
+			"leveltips_treacherySecond": "",
 	
 			"leveltips_cybergrind": "",
 			"leveltips_sandbox1": "",
@@ -2522,6 +2562,9 @@
 			"hellmap_greed": "",
 			"hellmap_wrath": "",
 			"hellmap_heresy": "",
+			"hellmap_violence": "",
+			"hellmap_fraud": "",
+			"hellmap_treachery": "",
 			"hellmap_prime": "",
 			"hellmap_act1crescendo": "",
 			"hellmap_act1climax": "",

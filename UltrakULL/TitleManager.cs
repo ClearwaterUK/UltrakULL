@@ -52,6 +52,22 @@ namespace UltrakULL
             //Heresy titles
             if (inputName.Contains("CRY FOR THE WEEPER")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_heresyFirst); }
             if (inputName.Contains("AESTHETICS OF HATE")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_heresySecond); }
+            
+            //Violence titles
+            if (inputName.Contains(("GARDEN OF FORKING PATHS"))) { return (LanguageManager.CurrentLanguage.levelNames.levelName_violenceFirst); }
+            if (inputName.Contains(("LIGHT UP THE NIGHT"))) { return (LanguageManager.CurrentLanguage.levelNames.levelName_violenceSecond); }
+            if (inputName.Contains(("VIOLENCE THIRD"))) { return (LanguageManager.CurrentLanguage.levelNames.levelName_violenceThird); }
+            if (inputName.Contains(("VIOLENCE CLIMAX"))) { return (LanguageManager.CurrentLanguage.levelNames.levelName_violenceFourth); }
+            
+            //Fraud titles
+            if (inputName.Contains(("FRAUD FIRST"))) { return (LanguageManager.CurrentLanguage.levelNames.levelName_fraudFirst); }
+            if (inputName.Contains(("FRAUD SECOND"))) { return (LanguageManager.CurrentLanguage.levelNames.levelName_fraudSecond); }
+            if (inputName.Contains(("FRAUD THIRD"))) { return (LanguageManager.CurrentLanguage.levelNames.levelName_fraudThird); }
+            if (inputName.Contains(("FRAUD CLIMAX"))) { return (LanguageManager.CurrentLanguage.levelNames.levelName_fraudFourth); }
+            
+            //Treachery titles
+            if (inputName.Contains("TREACHERY FIRST")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_treacheryFirst); }
+            if (inputName.Contains("TREACHERY SECOND")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_treacherySecond); }
 
             //Prime titles
             if (inputName.Contains("SOUL SURVIVOR")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_primeFirst); }
