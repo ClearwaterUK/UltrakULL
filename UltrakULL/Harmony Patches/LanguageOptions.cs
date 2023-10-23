@@ -131,7 +131,6 @@ namespace UltrakULL.Harmony_Patches
                     string responseJsonRaw = await Client.GetStringAsync(masterLanguageUrl);
                     MasterLanguages responseJson = JsonConvert.DeserializeObject<MasterLanguages>(responseJsonRaw);
                     
-                    Console.WriteLine(responseJson.availableLanguages.ToString());
                     //Enumerate across all of the langs obtained from the master lang file online, and create download buttons for them.
                     foreach(LanguageInfo langInfo in responseJson.availableLanguages)
                     {
@@ -298,24 +297,21 @@ namespace UltrakULL.Harmony_Patches
               
                     //If the file was simply updated, it can be used straightaway.
                     //If a new lang file was downloaded, display a notif to the user to enter a level or reload the menu.
-                    Console.WriteLine(languageTag);
                     if(langFileLocallyExists(languageTag))
                     {
                         messageNotif = "Language file \"" + languageName + "\" has been updated.";
                     }
                     else
                     {
-                        messageNotif = "A new language file \"" + languageName + "\" has been downloaded. It will be available after restarting your game.";
+                        messageNotif = "A new language file \"" + languageName + "\" has been downloaded. It will be available for use upon entering a level.";
                         newLangDownloaded = true;
                     }
-                    
 
-                    
                     webClient.DownloadFile(languageFileUrl, fullPath);
                     string jsonFile = File.ReadAllText(fullPath);
                     JsonFormat file = JsonConvert.DeserializeObject<JsonFormat>(jsonFile);
                     
-                    Console.WriteLine("Lang file saved.");
+                    Logging.Info("Lang file saved.");
                        
                     MonoSingleton<HudMessageReceiver>.Instance.ClearMessage();
                     MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=lime>" + messageNotif + "</color>");
@@ -334,8 +330,8 @@ namespace UltrakULL.Harmony_Patches
             catch(Exception e)
             {
                 MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=red>A download error occured, file has not been saved.</color>");
-                Console.WriteLine("Attempted to download from: " + languageFileUrl);
-                Console.WriteLine(e.ToString());
+                Logging.Error("Attempted to download from: " + languageFileUrl);
+                Logging.Error(e.ToString());
             }
 
         }

@@ -14,7 +14,7 @@ namespace UltrakULL.Harmony_Patches
             [HarmonyPostfix]
             public static void SwapFont(Text __instance)
             {
-                if(MainPatch.GlobalFontReady)
+                if(Core.GlobalFontReady)
                 {
                     if(GetCurrentSceneName() == "CreditsMuseum2")
                     {
@@ -26,9 +26,8 @@ namespace UltrakULL.Harmony_Patches
                     }
                     else
                     {
-                        __instance.font = MainPatch.GlobalFont;
+                        __instance.font = Core.GlobalFont;
                     }
-
                 }
             }
         }

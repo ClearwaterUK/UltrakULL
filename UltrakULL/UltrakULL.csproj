@@ -181,6 +181,7 @@
     <Compile Include="BossStrings.cs" />
     <Compile Include="Cheats.cs" />
     <Compile Include="CommonFunctions.cs" />
+    <Compile Include="Core.cs" />
     <Compile Include="CyberGrind.cs" />
     <Compile Include="DevMuseum.cs" />
     <Compile Include="EnemyBios.cs" />

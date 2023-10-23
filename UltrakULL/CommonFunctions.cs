@@ -91,9 +91,9 @@ namespace UltrakULL
           text.GetComponent<RectTransform>().anchorMax = new Vector2(1,1);
           text.GetComponent<RectTransform>().anchorMin = new Vector2(0,0);
           text.GetComponent<RectTransform>().sizeDelta = Vector2.zero;
-          //text.GetComponent<RectTransform>().SetPivot(PivotPresets.MiddleCenter);
+
           text.GetComponent<Text>().text = buttonText;
-          text.GetComponent<Text>().font = MainPatch.VcrFont;
+          text.GetComponent<Text>().font = Core.VcrFont;
           text.GetComponent<Text>().fontSize = 32;
           text.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
           text.GetComponent<Text>().color = Color.white;
@@ -112,7 +112,7 @@ namespace UltrakULL
             //text.GetComponent<RectTransform>().SetPivot(PivotPresets.MiddleCenter);
             text.AddComponent<Text>();
             text.GetComponent<Text>().text = "Text";
-            text.GetComponent<Text>().font = MainPatch.VcrFont;
+            text.GetComponent<Text>().font = Core.VcrFont;
             text.GetComponent<Text>().fontSize = 32;
             text.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
             text.GetComponent<Text>().color = Color.black;
