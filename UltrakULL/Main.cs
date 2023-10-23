@@ -40,6 +40,8 @@ using System.Reflection;
  *
  * Look through all text and maybe set it all to adjust size automatically?
  * Flyingdog's book text not seeming to appear
+ * Move the languages button from top left to top right so it doesn't conflict with any other mods. Was done in past with mod patches but will now hardcode it.
+ * Clean up main a bit. Move most logic out to a seperate file
  *
  * 
  * */
