@@ -1403,6 +1403,21 @@
         "levelName_heresyFirst": "CRY FOR THE WEEPER",
 		"levelName_heresySecond": "AESTHETICS OF HATE",
 
+        "levelName_violenceFirst": "GARDEN OF FORKING PATHS",
+        "levelName_violenceSecond": "LIGHT UP THE NIGHT",
+        "levelName_violenceThird": "VIOLENCE THIRD",
+        "levelName_violenceFourth": "VIOLENCE CLIMAX",
+        "levelName_violenceSecret": "VIOLENCE SECRET",
+
+        "levelName_fraudFirst": "FRAUD FIRST",
+        "levelName_fraudSecond": "FRAUD SECOND",
+        "levelName_fraudThird": "FRAUD THIRD",
+        "levelName_fraudFourth": "FRAUD CLIMAX",
+        "levelName_fraudSecret": "FRAUD SECRET",
+
+        "levelName_treacheryFirst": "TREACHERY FIRST",
+        "levelName_treacherySecond": "TREACHERY CLIMAX",
+
 		"levelName_primeFirst": "SOUL SURVIVOR",
 		"levelName_primeSecond": "WAIT OF THE WORLD",
 		"levelName_primeThird": ""
@@ -1440,7 +1455,20 @@
 		"challenges_wrathFourth": "REACH THE SURFACE IN UNDER 10 SECONDS",
         
         "challenges_heresyFirst": "BEAT THE SECRET ENCOUNTER",
-		"challenges_heresySecond": "HIT GABRIEL INTO THE CEILING"
+		"challenges_heresySecond": "HIT GABRIEL INTO THE CEILING",
+
+        "challenges_violenceFirst": "CHALLENGE VIOLENCE FIRST",
+        "challenges_violenceSecond": "CHALLENGE VIOLENCE SECOND",
+        "challenges_violenceThird": "CHALLENGE VIOLENCE THIRD",
+        "challenges_violenceFourth": "CHALLENGE VIOLENCE CLIMAX",
+
+        "challenges_fraudFirst": "CHALLENGE FRAUD FIRST",
+        "challenges_fraudSecond": "CHALLENGE FRAUD SECOND",
+        "challenges_fraudThird": "CHALLENGE FRAUD THIRD",
+        "challenges_fraudFourth": "CHALLENGE FRAUD CLIMAX",
+
+        "challenges_treacheryFirst": "CHALLENGE TREACHERY FIRST",
+        "challenges_treacherySecond": "CHALLENGE TREACHERY SECOND"
 
 	},
 	"levelTips":{
@@ -1497,6 +1525,19 @@
         "leveltips_heresyFirst2": "Using the environment to break line-of-sight with enemies allows for some breathing room and time to consider <color=orange>target prioritization</color>.",
         "leveltips_heresySecond1": "DON'T WASTE STAMINA!",
         "leveltips_heresySecond2": "Dashing needlessly while fighting very aggressive foes will quickly cause one to have none left when it is most needed.",
+        
+        "leveltips_violenceFirst": "LEVEL TIP VIOLENCE FIRST",
+        "leveltips_violenceSecond": "LEVEL TIP VIOLENCE SECOND",
+        "leveltips_violenceThird": "LEVEL TIP VIOLENCE THIRD",
+        "leveltips_violenceFourth": "LEVEL TIP VIOLENCE CLIMAX",
+
+        "leveltips_fraudFirst": "LEVEL TIP FRAUD FIRST",
+        "leveltips_fraudSecond": "LEVEL TIP FRAUD SECOND",
+        "leveltips_fraudThird": "LEVEL TIP FRAUD THIRD",
+        "leveltips_fraudFourth": "LEVEL TIP FRAUD CLIMAX",
+
+        "leveltips_treacheryFirst": "LEVEL TIP TREACHERY FIRST",
+        "leveltips_treacherySecond": "LEVEL TIP TREACHERY CLIMAX",
 
 		"leveltips_primeFirst1": "Parries can be used as a powerful healing tool.",
 		"leveltips_primeFirst2": "Parrying any enemy projectile or melee attack will fully replenish your health up to the hard damage limit.",
@@ -2543,6 +2584,10 @@
 		"hellmap_greed": "GREED",
 		"hellmap_wrath": "WRATH",
 		"hellmap_heresy": "HERESY",
+        "hellmap_greed": "VIOLENCE",
+        "hellmap_wrath": "FRAUD",
+        "hellmap_heresy": "TREACHERY",
+        
 		"hellmap_prime": "PRIME",
 
 		"hellmap_first": "FIRST",
