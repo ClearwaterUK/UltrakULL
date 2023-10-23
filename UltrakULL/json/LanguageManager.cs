@@ -9,6 +9,7 @@ using BepInEx.Configuration;
 using BepInEx.Logging;
 using Newtonsoft.Json;
 using UltrakULL.audio;
+using UltrakULL.Harmony_Patches;
 using UnityEngine.SceneManagement;
 using static UltrakULL.CommonFunctions;
 
@@ -239,6 +240,10 @@ namespace UltrakULL.json
                 DumpLastLanguage();
                 AudioSwapper.SpeechFolder = Path.Combine(Paths.ConfigPath,"ultrakull", "audio", CurrentLanguage.metadata.langName) + Path.DirectorySeparatorChar;
                 SubtitledAudioSourcesReplacer.SpeechFolder = AudioSwapper.SpeechFolder;
+                
+                //Patch some leftover components that aren't caught in the main change wave...
+                InjectLanguageButton.updateLanguageButtonText();
+                LoadingTextPatch.updateLoadingText();
 					
                 if(GetCurrentSceneName() != "Main Menu")
                 {

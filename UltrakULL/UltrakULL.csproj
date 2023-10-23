@@ -236,7 +236,6 @@
     <Compile Include="json\JsonFormat.cs" />
     <Compile Include="LevelNames.cs" />
     <Compile Include="LevelStatWindow.cs" />
-    <Compile Include="ModPatches.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="Prelude.cs" />
     <Compile Include="Main.cs" />

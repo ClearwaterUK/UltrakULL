@@ -34,6 +34,11 @@ namespace UltrakULL.Harmony_Patches
             return File.Exists(expectedFileLocation);
         }
 
+        public static void updateLanguageButtonText()
+        {
+            languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
+            languageButtonTitleText.text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
+        }
         
         public static void warnBeforeDownload(LanguageInfo lInfo)
         {
@@ -405,7 +410,7 @@ namespace UltrakULL.Harmony_Patches
             Transform optionsParent = __instance.optionsMenu.transform;
             GameObject languageButton = GameObject.Instantiate(optionsParent.Find("Gameplay").gameObject, optionsParent);
             languageButton.name = "Language";
-            languageButton.transform.localPosition = new Vector3(-610f, 320f, 0f);
+            languageButton.transform.localPosition = new Vector3(475f, -300f, 0f);
             //languageButton.transform.localPosition += new Vector3(0f, 60f, 0f);
             languageButtonText = languageButton.transform.GetChild(0).gameObject.GetComponent<Text>();
 
