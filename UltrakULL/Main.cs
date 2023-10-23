@@ -31,11 +31,10 @@ using System.Reflection;
  *  - There's a much better way to patch the shop terminals. Check the code used in V-Ranks!
  * 
  *  -- FOR NEXT HOTFIX --
- * Make language button disappear like other option buttons when save menu is opened
  * Update custom font
  *
  * Look through all text and maybe set it all to adjust size automatically?
- * Flyingdog's book text not seeming to appear
+ * Flyingdog's book text not seeming to appear (appears fine with English template)
  *
  * 
  * */

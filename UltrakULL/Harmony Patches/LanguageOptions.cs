@@ -409,6 +409,7 @@ namespace UltrakULL.Harmony_Patches
 
             Transform optionsParent = __instance.optionsMenu.transform;
             GameObject languageButton = GameObject.Instantiate(optionsParent.Find("Gameplay").gameObject, optionsParent);
+            languageButton.transform.SetAsFirstSibling(); //Prevents lang button from appearing over the save menu
             languageButton.name = "Language";
             languageButton.transform.localPosition = new Vector3(475f, -300f, 0f);
             //languageButton.transform.localPosition += new Vector3(0f, 60f, 0f);
