@@ -216,6 +216,7 @@
     <Compile Include="Harmony Patches\SandboxPatches.cs" />
     <Compile Include="Harmony Patches\SaveSlotMenu.cs" />
     <Compile Include="Harmony Patches\ScanningStuff.cs" />
+    <Compile Include="Harmony Patches\ShopPatch.cs" />
     <Compile Include="Harmony Patches\SpawnMenu.cs" />
     <Compile Include="Harmony Patches\StyleHUD.cs" />
     <Compile Include="Harmony Patches\Subtitles\GabrielSubtitlesSwap.cs" />

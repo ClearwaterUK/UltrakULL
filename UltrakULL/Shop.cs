@@ -8,13 +8,8 @@ namespace UltrakULL
 {
     public static class Shop
     {
-        public static GameObject OriginalShop = null;
-        public static GameObject BossShop = null;
-        
-        private static void PatchShopFrontEnd(ref List<GameObject> shopsToPatch)
+        private static void PatchShopFrontEnd(ref GameObject shopObject)
         {
-            foreach(GameObject shopObject in shopsToPatch)
-            {
                 //Tip panel
                 GameObject tipPanel = GetGameObjectChild(GetGameObjectChild(shopObject, "TipBox"), "Panel");
                 Text tipTitle = GetTextfromGameObject(GetGameObjectChild(tipPanel, "Title"));
@@ -48,9 +43,6 @@ namespace UltrakULL
                 Text enemiesTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shopObject, "Enemies"), "Panel"),"Title"));
                 enemiesTitle.text = LanguageManager.CurrentLanguage.shop.shop_monsters;
 
-                //Enemies back button
-                Text enemiesBackButtonText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shopObject, "Enemies"),"BackButton (2)"),"Text"));
-
                 //Sandbox enter description
                 GameObject sandboxEnter = GetGameObjectChild(GetGameObjectChild(shopObject, "Sandbox"), "Panel");
 
@@ -68,9 +60,7 @@ namespace UltrakULL
                 Text sandboxEnterButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(sandboxEnter, "SandboxButton (1)"), "Text"));
                 sandboxEnterButton.text = LanguageManager.CurrentLanguage.shop.shop_sandboxEnter;
 
-
                 //CG enter description
-
                 GameObject cgEnter = GetGameObjectChild(GetGameObjectChild(shopObject, "The Cyber Grind"), "Panel");
 
                 Text cgEnterTitle = GetTextfromGameObject(GetGameObjectChild(cgEnter, "Title"));
@@ -85,19 +75,11 @@ namespace UltrakULL
                 Text cgEnterButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgEnter, "CyberGrindButton (1)"), "Text"));
                 cgEnterButton.text = LanguageManager.CurrentLanguage.shop.shop_cybergrindEnter;
 
-                
-                
                 //CG exit description
                 GameObject cgExit = GetGameObjectChild(GetGameObjectChild(shopObject, "Return from Cyber Grind"), "Panel");
 
                 Text cgExitTitle = GetTextfromGameObject(GetGameObjectChild(cgExit, "Title"));
                 cgExitTitle.text = LanguageManager.CurrentLanguage.shop.shop_cybergrindExitTitle;
-
-
-                //Disable the LevelNameFinder component so it doesn't remove the translated string!
-                GameObject levelText = GetGameObjectChild(cgExit, "Text");
-
-                Text cgExitDescriptionText = GetTextfromGameObject(GetGameObjectChild(cgExit, "Text"));
 
                 Text cgExitDescription = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgExit, "CyberGrindButton (1)"), "Text"));
                 if (GetCurrentSceneName() == "uk_construct")
@@ -129,12 +111,10 @@ namespace UltrakULL
                 Text cgExitBackButtonText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shopObject, "Return from Cyber Grind"), "BackButton (2)"), "Text"));
                 cgExitBackButtonText.text = LanguageManager.CurrentLanguage.shop.shop_back;
             }
-        }
+        
 
-        private static void PatchWeapons(ref List<GameObject> shopsToPatch)
+        private static void PatchWeapons(ref GameObject shopObject)
         {
-            foreach(GameObject shopObject in shopsToPatch)
-            {
                 GameObject shopWeaponsObject  = GetGameObjectChild(shopObject,"Weapons");
 
                 Text weaponBackText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "BackButton (1)"), "Text"));
@@ -518,7 +498,6 @@ namespace UltrakULL
                 Text nailgunLoreBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(nailgunLore, "Button"), "Text"));
                 nailgunLoreBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
-
                 //Nailgun preset colors
                 GameObject nailgunColorWindow = GetGameObjectChild(nailgunWindow, "Color Screen");
 
@@ -679,7 +658,6 @@ namespace UltrakULL
                 Text railcannonLoreBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(railcannonLore, "Button"), "Text"));
                 railcannonLoreBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
-
                 //Railcannon preset colors
                 GameObject railcannonColorWindow = GetGameObjectChild(railcannonWindow, "Color Screen");
 
@@ -719,7 +697,6 @@ namespace UltrakULL
                 Text railcannonCustomColorPrompt = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(railcannonWindow, "Color Screen"), "Standard"), "Custom"), "Locked"), "Blocker"), "Text"));
 
                 railcannonCustomColorPrompt.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustomUnlockPrompt + ": " + LanguageManager.CurrentLanguage.shop.shop_weaponsRailcannon;
-
 
                 //Rocket launcher window & descriptions
                 GameObject rocketlauncherWindow = GetGameObjectChild(shopWeaponsObject, "RocketLauncherWindow");
@@ -796,8 +773,7 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher13 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher14 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_loreRocketLauncher15;
-
-
+                
                 Text rocketlauncherLoreBack = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(rocketlauncherLore, "Button"), "Text"));
                 rocketlauncherLoreBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
@@ -895,130 +871,13 @@ namespace UltrakULL
                 GameObject goldArm = GetGameObjectChild(armWindow, "Variation Panel 1 (3)");
                 Text goldArmUnderConstruction = GetTextfromGameObject(GetGameObjectChild(goldArm, "Text (1)"));
                 goldArmUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
-            }
-
         }
 
-
-        public static void PatchShop(ref GameObject level)
+        public static void PatchShopRefactor(ref GameObject shopObject)
         {
-            //No shops in secret levels so immediately back out
-            if (GetCurrentSceneName().Contains("-S"))
-            {
-                return;
-            }
-            
-            List<GameObject> shopsToPatch = new List<GameObject>();
-            //Start by finding what level we're on and what shopObjects need patching.
-            if (GetCurrentSceneName() == "uk_construct")
-            {
-                shopsToPatch.Add(GetGameObjectChild(GameObject.Find("Shop"),"Canvas"));
-            }
-            else if(GetCurrentSceneName().Contains("P-"))
-            {
-                switch(GetCurrentSceneName())
-                {
-                    case "Level P-1":
-                    {
-                        shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Prime FirstRoom"),"Room"),"Shop"),"Canvas"));
-                        shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("2 - Inner Sanctum"),"Shop"),"Canvas"));
-                        break;
-                    }
-                    case "Level P-2":
-                    {
-                        shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Prime FirstRoom"),"Room"),"Shop"),"Canvas"));
-                        shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"Inside"),"8 - Elevator"),"8 Nonstuff"),"Exit"),"Shop"),"Canvas"));
-                        break;
-                    }
-                }
-            }
-            //Specific fix for 5-3, which has a non-interactable shop at the end room.
-            else if(GetCurrentSceneName() == "Level 5-3")
-            {
-                GameObject brokenShop = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Rotated"),"1 - Hallway"),"Shop"),"Canvas"),"TipBox"),"Panel");
-                
-                Text brokenShopTitle = GetTextfromGameObject(GetGameObjectChild(brokenShop,"Title"));
-                brokenShopTitle.text = LanguageManager.CurrentLanguage.shop.shop_tipofthedayTitle;
-                
-                Text brokenShopTip = GetTextfromGameObject(GetGameObjectChild(brokenShop,"TipText"));
-                brokenShopTip.text = LanguageManager.CurrentLanguage.levelTips.leveltips_wrathThirdBroken;
-                
-                shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("FirstRoom"), "Room"), "Shop"), "Canvas"));
-            }
-            
-            //Specific fix for 6-1
-            else if(GetCurrentSceneName() == "Level 6-1")
-            {
-                shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GameObject.Find("Interiors"),"FirstRoom"),"Room"),"Shop"),"Canvas"));
-            }
-            
-            else
-            {
-                shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("FirstRoom"), "Room"), "Shop"), "Canvas"));
-            } 
-
-            switch(GetCurrentSceneName())
-            {
-                case "Level 0-3":
-                {
-                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("5 - Path 1 - Hallway"),"5 Nonstuff"),"Shop"),"Canvas"));
-                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("10B - Boss Staircase"),"5 Nonstuff"),"Shop"),"Canvas"));
-                    break;
-                }
-                case "Level 0-5":
-                {
-                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("3 - Smallway"),"Shop"),"Canvas"));
-                    break;
-                }
-                case "Level 1-3":
-                {
-                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("R1 - Courtyard"),"R1 Nonstuff"),"Shop"),"Canvas"));
-                    break;
-                }
-                case "Level 1-4":
-                {
-                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("V2 - Arena"),"V2 Nonstuff"),"Shop"),"Canvas"));
-                    break;
-                }
-                case "Level 2-4":
-                {
-                    shopsToPatch.Add(GetGameObjectChild(GetInactiveRootObject("Shop"),"Canvas"));
-                    break;
-                }
-                case "Level 3-2":
-                {
-                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("4 - Heart Chamber"),"4 Nonstuff"),"Shop"),"Canvas"));
-                    break;
-                }
-                case "Level 4-4":
-                {
-                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("6 - Boss Entrance"),"Shop"),"Canvas"));
-                    break;
-                }
-                case "Level 5-2":
-                {
-                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("8 - Ship"),"Ship Nonstuff"),"Shop"),"Canvas"));
-                    break;
-                }
-                case "Level 5-4":
-                {                    
-                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Surface"),"Nonstuff"),"SpawnRock"),"Shop"),"Canvas"));
-                    break;
-                }
-                case "Level 6-2":
-                {
-                    shopsToPatch.Add(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("1 - Entryway"),"Grand Hall"),"Boss Room Tunnel"),"Shop"),"Canvas"));
-                    break;
-                }
-            }
-            
-            Logging.Message(shopsToPatch.Count + " shops to patch in scene");
-            if (shopsToPatch.Count > 0)
-            {
-                PatchShopFrontEnd(ref shopsToPatch);
-                PatchWeapons(ref shopsToPatch);
-            }
-           
+            PatchShopFrontEnd(ref shopObject);
+            PatchWeapons(ref shopObject);
         }
+        
     }
 }

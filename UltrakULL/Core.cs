@@ -249,7 +249,7 @@ namespace UltrakULL
                             HUDMessages.PatchDeathScreen(ref canvasObj);
                             LevelStatWindow.PatchStats(ref canvasObj);
                             HUDMessages.PatchMisc(ref canvasObj);
-                            Shop.PatchShop(ref canvasObj);
+                            //Shop.PatchShop(ref canvasObj);
                             Options options = new Options(ref canvasObj);
                             Logging.Message("Base elements patched");
                         }

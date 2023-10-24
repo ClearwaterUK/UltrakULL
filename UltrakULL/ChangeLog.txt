@@ -1,6 +1,7 @@
 ﻿
 1.2.3
 - Begun tentative prepwork for Act 3. Added pre-emptive strings for expected Act 3 contents.
+- Optimized the way shop terminals are patched.
 - Fixed the "language" button in the options appearing over the save panel menu when the latter was opened.
 - Moved the "language" button in the options from the top-left to the bottom-right to prevent conflicting with any other mods that use the top-left space.
 - Newly downloaded languages now appear in the local languages tab after entering a level, instead of requiring a full game restart.

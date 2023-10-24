@@ -28,7 +28,6 @@ using System.Reflection;
  *  - Prep work for next update: Act 3 (at least Violence), change in some HUD font displaying, enemy infighting, CG custom music among other things
  *      - Mannequins, 7-1 titles, 7-2 titles, yellow hookpoints
  *  - 2 PRs to have a look at that have just been sitting on the repo because I've been busy Despair
- *  - There's a much better way to patch the shop terminals. Check the code used in V-Ranks!
  * 
  *  -- FOR NEXT HOTFIX --
  * Update custom font
