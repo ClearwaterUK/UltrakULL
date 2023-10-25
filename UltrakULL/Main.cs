@@ -19,23 +19,25 @@ using System.Reflection;
  *	
  *	A translation mod for Ultrakill that hooks into the game and allows for text/string replacement. This tool is primarily meant to assist with language translation.
  * 
- *  -- MAIN TASK LIST --
+ *  -- LONG-TERM TASK LIST --
+ * Allow freshly downloaded languages to be used straight after downloading, instead of needing a level change.
+ * Better error handling - If the previously loaded file was missing, reset to English and display HUD message saying it was reset
+ * Bundle submitted voice packs with language downloads
+ * Sit down and finish audio documentation
+ * Figure out why online language browser breaks sometimes. Seems to happen at random with no singular cause. Quick game restart usually fixes.
+ * Clean up logging, redirect or simplify non-breaking warnings & errors.
+ * Expected stuff to change/break in Act 3: CG custom music, new enemies, changes in HUD font
+ * Swap rank textures in HUD for translated ones (there's already a mod that allows this. Will need to either integrate or copy code from it)
  * 
- *  -- STUFF FOR FUTURE UPDATES --
- *  - Swap out rank textures in HUD for translation (there's a mod already for this, shall look into)
- *  - Finish audio dubbing documentation
- *  - Swap audio file format for dubbing from .wav to .ogg, will reduce overall mod size.
- *  - Prep work for next update: Act 3 (at least Violence), change in some HUD font displaying, enemy infighting, CG custom music among other things
- *      - Mannequins, 7-1 titles, 7-2 titles, yellow hookpoints
- *  - 2 PRs to have a look at that have just been sitting on the repo because I've been busy Despair
- * 
- *  -- FOR NEXT HOTFIX --
- * Update custom font
- *
- * Look through all text and maybe set it all to adjust size automatically?
+ * -- STUFF FOR NEXT UPDATE --
+ * Fix MDK+OWl lines in cojunction with the above.
+ * Swap audio file format from .wav to .ogg. Will reduce overall mod size.
+ * Redo audio lines for bosses. Rename files instead of using numbers, will be easier for users instead of numbering everything.
+ * -- REPORTED STUFF TO INVESTIGATE --
  * Flyingdog's book text not seeming to appear (appears fine with English template)
- *
+  *  - 2 PRs to have a look at that have just been sitting on the repo because I've been busy Despair
  * 
+ *
  * */
 
 namespace UltrakULL
