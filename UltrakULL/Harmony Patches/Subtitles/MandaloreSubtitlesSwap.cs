@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
 using UltrakULL.json;
@@ -34,6 +35,7 @@ namespace UltrakULL.Harmony_Patches.Subtitles
                 { "Just fucking", ("subtitles_mandalore_phaseChangeFirst2", OwlColor) }
             };
 
+
         [HarmonyTranspiler]
         [HarmonyPatch(typeof(Mandalore), "Start")]
         private static IEnumerable<CodeInstruction> Mandalore_Start(IEnumerable<CodeInstruction> instructions)
@@ -42,15 +44,22 @@ namespace UltrakULL.Harmony_Patches.Subtitles
             var switchOffset = code.FindIndex(instruction => instruction.opcode == Switch);
 
             // Second argument is an offset from switch IL instruction, it's a constant
-            ReplaceLdstr(switchOffset, 0x03, "subtitles_mandalore_taunt3", MandaloreColor, code);
-            ReplaceLdstr(switchOffset, 0x0C, "subtitles_mandalore_taunt2", OwlColor, code);
-            ReplaceLdstr(switchOffset, 0x18, "subtitles_mandalore_taunt5", OwlColor, code);
-            ReplaceLdstr(switchOffset, 0x22, "subtitles_mandalore_taunt1", OwlColor, code);
-            ReplaceLdstr(switchOffset, 0x28, "subtitles_mandalore_intro2", MandaloreColor, code);
-            ReplaceLdstr(switchOffset, 0x37, "subtitles_mandalore_taunt4", MandaloreColor, code);
+            //NOTE: Don't touch this order. The game won't like it otherwise
+            ReplaceLdstr(switchOffset, 0x03, "subtitles_mandalore_taunt3", MandaloreColor, code); //works
+            ReplaceLdstr(switchOffset, 0x0C, "subtitles_mandalore_taunt2", OwlColor, code); //works
+            ReplaceLdstr(switchOffset, 0x18, "subtitles_mandalore_taunt5", OwlColor, code); //works
+            
+            //TODO: Commented out these two lines for now as they're causing crashes. Waiting for Flazhik to investigate and fix.
+            //ReplaceLdstr(switchOffset, 0x22, "subtitles_mandalore_taunt1", OwlColor, code);
+            //ReplaceLdstr(switchOffset, 0x28, "subtitles_mandalore_intro2", MandaloreColor, code);
+            
+            //Commented line is the offset when the above two lines are uncommented. Waiting for fix.
+            //ReplaceLdstr(switchOffset, 0x37, "subtitles_mandalore_taunt4", MandaloreColor, code); //works
+            ReplaceLdstr(switchOffset, 0x2D, "subtitles_mandalore_taunt4", MandaloreColor, code); //works
 
             return code;
         }
+        
         
         [HarmonyTranspiler]
         [HarmonyPatch(typeof(Mandalore), "Update")]
