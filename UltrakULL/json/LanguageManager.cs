@@ -114,14 +114,14 @@ namespace UltrakULL.json
                 if (!FileMatchesMinimumRequiredVersion(language.metadata.minimumModVersion, modVersion))
                 {
                     Logging.Warn(language.metadata.langName + " does not match the version required by the mod. Please check for an update to this file.");
-                    Logging.Warn("You can still use this file, but expect errors and weirdness related to missing strings. Consider yourself warned.");
+                    //Logging.Warn("You can still use this file, but expect errors and weirdness related to missing strings. Consider yourself warned.");
                     return false;
                 }
 
                 Logging.Message("Checking contents...");
                 if (language.metadata != null && language.body != null)
                 {
-                    Logging.Message("File " + language.metadata.langName + " validated.");
+                    //Logging.Message("File " + language.metadata.langName + " validated.");
                     return true;
                 }
                 else

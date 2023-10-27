@@ -18,12 +18,32 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             string gabeFirstFolder =  AudioSwapper.SpeechFolder + "gabrielBossFirst" + Path.DirectorySeparatorChar;
             
             //Taunts
+            
+            //Going to redo this.
+            //Going to change it from taunt1, taunt2, taunt3 etc so each file name is more easily recognisable.
+            // "GabeYouMakeEven", "GaveYouAreOutclassed" etc.
             AudioClip[] gabeTaunts = ___voice.taunt;
+            
+            //Line order is based on line order of the, so it's not alphabetical.
+            string[] tauntLines = 
+            {
+                "gabrielTaunt_YouDefyTheLight",
+                "gabrielTaunt_AMereObject",
+                "gabrielTaunt_ThereCanBeOnlyLight",
+                "gabrielTaunt_Foolishness",
+                "gabrielTaunt_AnImperfection",
+                "gabrielTaunt_NotEvenMortal",
+                "gabrielTaunt_YouAreLessThanNothing",
+                "gabrielTaunt_YoureAnError",
+                "gabrielTaunt_TheLightIsPerfection",
+                "gabrielTaunt_YouAreOutclassed",
+                "gabrielTaunt_YourCrimeIsExistence",
+                "gabrielTaunt_YouMakeEven"
+            };
             for(int x = 0; x < gabeTaunts.Length; x++)
             {
-                string gabrielTauntString = gabeFirstFolder + "gabrielTaunt" + (x+1).ToString() + ".wav";
+                string gabrielTauntString = gabeFirstFolder + tauntLines[x] + ".wav"; 
                 gabeTaunts[x] =  AudioSwapper.SwapClipWithFile(gabeTaunts[x], gabrielTauntString);
-                
             }
             
             //Phase change - need to use ref otherwise it gets swapped back to original

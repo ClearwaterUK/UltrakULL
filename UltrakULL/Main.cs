@@ -32,10 +32,12 @@ using System.Reflection;
  * -- STUFF FOR NEXT UPDATE --
  * Fix MDK+OWl lines in cojunction with the above.
  * Swap audio file format from .wav to .ogg. Will reduce overall mod size.
- * Redo audio lines for bosses. Rename files instead of using numbers, will be easier for users instead of numbering everything.
+
  * -- REPORTED STUFF TO INVESTIGATE --
  * Flyingdog's book text not seeming to appear (appears fine with English template)
   *  - 2 PRs to have a look at that have just been sitting on the repo because I've been busy Despair
+ * Spawning MDK+Owl while noclipped causes a crash. Function that's causing it: MandaloreSubtitlesSwap->Mandalore_Start
+ *  * Offending transpiler lines have been commented out for now. Waiting for Flazhik to look at and fix.
  * 
  *
  * */
