@@ -23,7 +23,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             AudioClip[] minosPrimeKick = __instance.riderKickVoice;
             for(int x = 0; x < minosPrimeKick.Length; x++)
             {
-                string minosPrimeKickString = minosPrimeFolder + "minosPrimeDie" + (x+1).ToString() + ".wav";
+                string minosPrimeKickString = minosPrimeFolder + "minosPrimeDie" + (x+1).ToString();
                 minosPrimeKick[x] =  AudioSwapper.SwapClipWithFile(minosPrimeKick[x], minosPrimeKickString);
             }
             
@@ -31,7 +31,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             AudioClip[] minosPrimeJudgement = __instance.dropkickVoice;
             for(int x = 0; x < minosPrimeJudgement.Length; x++)
             {
-                string minosPrimeJudgementString = minosPrimeFolder + "minosPrimeJudgement" + (x+1).ToString() + ".wav";
+                string minosPrimeJudgementString = minosPrimeFolder + "minosPrimeJudgement" + (x+1).ToString();
                 minosPrimeJudgement[x] =  AudioSwapper.SwapClipWithFile(minosPrimeJudgement[x], minosPrimeJudgementString);
                 
             }
@@ -40,7 +40,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             AudioClip[] minosPrimeCrush = __instance.dropAttackVoice;
             for(int x = 0; x < minosPrimeCrush.Length; x++)
             {
-                string minosPrimeCrushString = minosPrimeFolder + "minosPrimeCrush" + (x+1).ToString() + ".wav";
+                string minosPrimeCrushString = minosPrimeFolder + "minosPrimeCrush" + (x+1).ToString();
                 minosPrimeCrush[x] =  AudioSwapper.SwapClipWithFile(minosPrimeCrush[x], minosPrimeCrushString);
             }
             
@@ -48,7 +48,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             AudioClip[] minosPrimePunch = __instance.boxingVoice;
             for(int x = 0; x < minosPrimePunch.Length; x++)
             {
-                string minosPrimePunchString = minosPrimeFolder + "minosPrimeThyEndIsNow" + (x+1).ToString() + ".wav";
+                string minosPrimePunchString = minosPrimeFolder + "minosPrimeThyEndIsNow" + (x+1).ToString();
                 minosPrimePunch[x] =  AudioSwapper.SwapClipWithFile(minosPrimePunch[x], minosPrimePunchString);
             }
             
@@ -56,14 +56,14 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             AudioClip[] minosPrimeCombo = __instance.comboVoice;
             for(int x = 0; x < minosPrimeCombo.Length; x++)
             {
-                string minosPrimeComboString = minosPrimeFolder + "minosPrimePrepareThyself" + (x+1).ToString() + ".wav";
+                string minosPrimeComboString = minosPrimeFolder + "minosPrimePrepareThyself" + (x+1).ToString();
                 minosPrimeCombo[x] =  AudioSwapper.SwapClipWithFile(minosPrimeCombo[x], minosPrimeComboString);
             }
             
             
             //Phase change - need to use ref otherwise it gets swapped back to original
             ref AudioClip minosPrimePhaseChange = ref __instance.phaseChangeVoice;
-            string minosPrimePhaseChangeString = minosPrimeFolder + "minosPrimePhaseChange.wav";
+            string minosPrimePhaseChangeString = minosPrimeFolder + "minosPrimePhaseChange";
             minosPrimePhaseChange = AudioSwapper.SwapClipWithFile(minosPrimePhaseChange, minosPrimePhaseChangeString);
             
             
@@ -71,7 +71,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
             AudioClip[] minosPrimeHurt = __instance.hurtVoice;
             for(int x = 0; x < minosPrimeHurt.Length; x++)
             {
-                string minosPrimeHurtString = minosPrimeFolder + "minosPrimeHurt" + (x+1).ToString() + ".wav";
+                string minosPrimeHurtString = minosPrimeFolder + "minosPrimeHurt" + (x+1).ToString();
                 minosPrimeHurt[x] =  AudioSwapper.SwapClipWithFile(minosPrimeHurt[x], minosPrimeHurtString);
             }
         }

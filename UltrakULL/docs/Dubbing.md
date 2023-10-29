@@ -84,7 +84,7 @@ ___
 
 ## Adding your own audio files
 
-Audio files should be in .wav format. Depending on compatability, feedback and future updates, the audio format used may change in future.
+Audio files should be in .ogg format.
 
 ## Reproducing voice effects for each character
 You will first need [Audacity](https://www.audacityteam.org/download/). This tool is highly recommended to follow the steps given here.

@@ -14,10 +14,10 @@ namespace UltrakULL.audio
         
         public static AudioClip SwapClipWithFile(AudioClip sourceClip, string audioFilePath)
         {
-            string file = "file://" + audioFilePath;
+            string file = "file://" + audioFilePath + ".ogg";
             Logging.Message("Swapping: " + file);
 
-            UnityWebRequest fileRequest = UnityWebRequestMultimedia.GetAudioClip(file,AudioType.WAV);
+            UnityWebRequest fileRequest = UnityWebRequestMultimedia.GetAudioClip(file,AudioType.OGGVORBIS);
             fileRequest.SendWebRequest();
             try
             {
