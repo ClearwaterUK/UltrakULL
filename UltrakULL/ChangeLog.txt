@@ -2,6 +2,8 @@
 1.2.3
 - Begun tentative prepwork for Act 3. Added pre-emptive strings for expected Act 3 contents.
 - Optimized the way shop terminals are patched.
+- Added a message to the main menu if for whatever reason the current language file used could not be loaded for whatever reason.
+(NOTE: Language will always revert to English if this happens.)
 - Changed the audio format used for dubbing from .wav to .ogg, resulting in a significant reduce in file size.
 (NOTE: Voice actors, you will need to convert your files from .wav to .ogg!)
 - Changed a few audio file names related to bosses to make recognizing them easier. This should also fix the problem with MDK+Owl's lines all being jumbled.

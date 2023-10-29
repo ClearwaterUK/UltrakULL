@@ -46,6 +46,7 @@ namespace UltrakULL.json
             {
                 jsonLogger.Log(LogLevel.Message, "Previous lang file is missing from disk: " + value);
                 Logging.Warn("Setting language back to en-GB to avoid problems");
+                Core.wasLanguageReset = true;
                 CurrentLanguage = allLanguages["en-GB"];
                 SetCurrentLanguage("en-GB");
             }

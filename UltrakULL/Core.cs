@@ -22,6 +22,8 @@ namespace UltrakULL
         public static bool GlobalFontReady;
         public static Font GlobalFont;
         
+        public static bool wasLanguageReset = false;
+        
         private static readonly HttpClient Client = new HttpClient();
         
         //Encapsulation function to patch all of the front end.
@@ -187,6 +189,12 @@ namespace UltrakULL
                     case "Intro": { break; }
                     case "Main Menu":
                     {
+                        if(Core.wasLanguageReset)
+                        {
+                            Core.wasLanguageReset = false;
+                            MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=orange>The currently set language file could not be loaded.\nLanguage has been reset to English to avoid problems.</color>");
+                        }
+                        
                         try
                         { 
                             VcrFont = GameObject.Find(canvasObj.name + "/Main Menu (1)/Title/Text").GetComponentInParent<Text>().font;
@@ -249,7 +257,7 @@ namespace UltrakULL
                             HUDMessages.PatchDeathScreen(ref canvasObj);
                             LevelStatWindow.PatchStats(ref canvasObj);
                             HUDMessages.PatchMisc(ref canvasObj);
-                            //Shop.PatchShop(ref canvasObj);
+                            Shop.PatchShopRefactor(ref canvasObj);
                             Options options = new Options(ref canvasObj);
                             Logging.Message("Base elements patched");
                         }
