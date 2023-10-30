@@ -61,7 +61,7 @@ namespace UltrakULL.json
 
         public static void LoadLanguages(string modVersion)
         {
-            Logging.Warn("Loading language files stored locally on disk...");
+            Logging.Message("Loading language files stored locally on disk...");
             
             allLanguages = new Dictionary<string, JsonFormat>();
 
@@ -73,7 +73,7 @@ namespace UltrakULL.json
                     allLanguages.Add(lang.metadata.langName, lang);
                     allLanguagesDisplayNames.Add(lang.metadata.langDisplayName, lang);
                     if (!ValidateFile(lang, modVersion))
-                        jsonLogger.Log(LogLevel.Debug ,"Failed to validate " + lang.metadata.langName + " however I don't really care");
+                        jsonLogger.Log(LogLevel.Debug ,"Failed to validate " + lang.metadata.langName);
                 }
             }
         }
@@ -102,7 +102,7 @@ namespace UltrakULL.json
 
         private static bool ValidateFile(JsonFormat language, string modVersion)
         {
-            Logging.Message("Opening file: " + language.metadata.langName + "...");
+            Logging.Message("Checking file: " + language.metadata.langName + "...");
             try
             {
                 //Following conditions to validate a file:
@@ -110,11 +110,11 @@ namespace UltrakULL.json
                 //Must have a metadata attribute and a body attribute
                 //Version logged in the JSON file must match or be newer than the current mod version
                 //Will need to implement further sanity checks.
-                Logging.Message("Checking version...");
+                //Logging.Message("Checking version...");
 
                 if (!FileMatchesMinimumRequiredVersion(language.metadata.minimumModVersion, modVersion))
                 {
-                    Logging.Warn(language.metadata.langName + " does not match the version required by the mod. Please check for an update to this file.");
+                    Logging.Warn(language.metadata.langName + " does not match the minimum required mod version. Please check for a language update.");
                     //Logging.Warn("You can still use this file, but expect errors and weirdness related to missing strings. Consider yourself warned.");
                     return false;
                 }
@@ -218,8 +218,6 @@ namespace UltrakULL.json
 
         public static void SetCurrentLanguage(string langName)
         {
-            Logging.Warn("SetCurLan to " + langName);
-
             if (CurrentLanguage != null && CurrentLanguage.metadata.langName == langName)
             {
                 Logging.Warn("Tried to switch language to " + langName + " but it was already set as that!");

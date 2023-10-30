@@ -53,8 +53,8 @@ namespace UltrakULL
                 
                 switch(localVersion.CompareTo(onlineVersion))
                 {
-                    case -1: { Logging.Message("NEWER VERSION AVAILABLE ON GITHUB!"); updateAvailable = true; break;}
-                    default: { Logging.Message("No newer version detected. Assuming current version is up to date."); updateAvailable = false;break;}
+                    case -1: { Logging.Warn("UPDATE AVAILABLE!"); updateAvailable = true; break;}
+                    default: { Logging.Warn("No newer version detected. Assuming current version is up to date."); updateAvailable = false;break;}
                 }
             }
             catch (Exception e)
@@ -138,7 +138,7 @@ namespace UltrakULL
         
         public static void LoadFonts()
         {
-            Logging.Warn("Loading font resource bundle...");
+            Logging.Message("Loading font resource bundle...");
             //Will file from the same directory that the dll is in.
             AssetBundle fontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder,"ullfont.resource"));
 
@@ -148,8 +148,8 @@ namespace UltrakULL
             }
             else
             {
-                Logging.Warn("Font bundle loaded.");
-                Logging.Warn("Loading fonts from bundle...");
+                Logging.Message("Font bundle loaded.");
+                Logging.Message("Loading fonts from bundle...");
                 
                 Font loadedFont = fontBundle.LoadAsset<Font>("VCR_OSD_MONO");
                 if(loadedFont == null)
@@ -167,11 +167,12 @@ namespace UltrakULL
         
         public static void HandleSceneSwitch(Scene scene,ref GameObject canvas)
         {
-            Logging.Message("Switching scenes...");
+            //Logging.Message("Switching scenes...");
             string levelName = GetCurrentSceneName();
             if(levelName == "Intro" || levelName == "Bootstrap")
             { 
-                Logging.Warn("In intro, not hooking yet");
+                //Don't do anything if we're still booting up the game.
+                //Logging.Warn("In intro, not hooking yet");
                 return;
             }
             
@@ -194,16 +195,7 @@ namespace UltrakULL
                             Core.wasLanguageReset = false;
                             MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=orange>The currently set language file could not be loaded.\nLanguage has been reset to English to avoid problems.</color>");
                         }
-                        
-                        try
-                        { 
-                            VcrFont = GameObject.Find(canvasObj.name + "/Main Menu (1)/Title/Text").GetComponentInParent<Text>().font;
-                        }
-                        catch (Exception e)
-                        { 
-                            Logging.Warn("VCR font already defined");
-                        }
-                        
+
                         PatchFrontEnd(canvasObj);
                             
                         //(Re)render the UltrakULL status on screen when a language has been (re)loaded.

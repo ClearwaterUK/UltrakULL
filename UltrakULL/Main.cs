@@ -29,7 +29,7 @@ using System.Reflection;
  * Swap rank textures in HUD for translated ones (there's already a mod that allows this. Will need to either integrate or copy code from it)
  * 
  * -- STUFF FOR NEXT UPDATE --
-
+ 
  * -- REPORTED STUFF TO INVESTIGATE --
  * Flyingdog's book text not seeming to appear (appears fine with English template)
   *  - 2 PRs to have a look at that have just been sitting on the repo because I've been busy Despair
@@ -113,7 +113,7 @@ namespace UltrakULL
                 Logging.Warn("--- Loading external fonts ---");
                 Core.LoadFonts();
             
-                Logging.Warn("--- Initializing JSON parser ---");
+                Logging.Warn("--- Initializing language manager ---");
                 LanguageManager.InitializeManager(InternalVersion);
                 
                 Logging.Warn("--- Patching vanilla game functions ---");

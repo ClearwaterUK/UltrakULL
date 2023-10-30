@@ -346,6 +346,7 @@ namespace UltrakULL.Harmony_Patches
             Transform contentParent = langLocalPage.transform.Find("Scroll Rect (1)").Find("Contents");
             
             GameObject languageButtonInstance = GameObject.Instantiate(languageButtonPrefab,contentParent);
+            languageButtonInstance.name = language;
             
             languageButtonInstance.GetComponent<RectTransform>().localScale = new Vector3(0.2188f, 1.1236f, 0.5089f);
             languageButtonInstance.transform.Find("Select Wrapper").gameObject.SetActive(false);
@@ -362,6 +363,7 @@ namespace UltrakULL.Harmony_Patches
             slotTextTf.localPosition = new Vector3(0f, 0f, 0f);
             Text slotText = slotTextTf.GetComponent<Text>();
             slotText.text = LanguageManager.allLanguages[language].metadata.langDisplayName;
+            if(LanguageManager.CurrentLanguage.metadata.langName == language) {slotText.text += "\n(<color=lime>Selected</color>)";}
             slotText.alignment = TextAnchor.MiddleCenter;
             slotText.fontSize = 16;
             
@@ -381,6 +383,10 @@ namespace UltrakULL.Harmony_Patches
 
             langButton.onClick.AddListener(delegate
             {
+                GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(contentParent.gameObject,LanguageManager.CurrentLanguage.metadata.langName),"Slot Text")).text = LanguageManager.CurrentLanguage.metadata.langDisplayName;
+
+                GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(contentParent.gameObject,language),"Slot Text")).text += "\n(<color=lime>Selected</color>)";
+
                 LanguageManager.SetCurrentLanguage(language);
             });
 
