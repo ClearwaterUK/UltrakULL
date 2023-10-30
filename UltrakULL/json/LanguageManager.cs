@@ -159,7 +159,6 @@ namespace UltrakULL.json
             //JSON version is lower than mod version
             else
             {
-                Logging.Warn("File does not current mod version.");
                 return false;
             }
         }

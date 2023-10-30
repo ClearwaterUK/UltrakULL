@@ -249,26 +249,18 @@ namespace UltrakULL
                     default:
                     {
                         Logging.Message("Regular scene");
-                        try
-                        {
-                            Logging.Message("Attempting to patch base elements");
-                            PatchPauseMenu(ref canvasObj);
-                            Cheats.PatchCheatConsentPanel(ref canvasObj);
-                            HUDMessages.PatchDeathScreen(ref canvasObj);
-                            LevelStatWindow.PatchStats(ref canvasObj);
-                            HUDMessages.PatchMisc(ref canvasObj);
-                            Shop.PatchShopRefactor(ref canvasObj);
-                            Options options = new Options(ref canvasObj);
-                            Logging.Message("Base elements patched");
+                        Logging.Message("Attempting to patch base elements");
+                        PatchPauseMenu(ref canvasObj);
+                        Cheats.PatchCheatConsentPanel(ref canvasObj);
+                        HUDMessages.PatchDeathScreen(ref canvasObj);
+                        LevelStatWindow.PatchStats(ref canvasObj);
+                        HUDMessages.PatchMisc(ref canvasObj);
+                        Options options = new Options(ref canvasObj);
+                        Logging.Message("Base elements patched");
                         }
-                        catch (Exception e)
-                        {
-                            Logging.Error("Something went wrong while patching base elements.");
-                            Logging.Error(e.ToString());
-                        }
-                        finally
-                        {
-                            if (levelName.Contains("Tutorial"))
+                        
+                        
+                        if (levelName.Contains("Tutorial"))
                             { 
                                 Logging.Message("Tutorial");
                             }
@@ -317,13 +309,11 @@ namespace UltrakULL
                                 Logging.Message("DevMuseum");
                                 DevMuseum devMuseum = new DevMuseum();
                             }
-                        }
                         break;
-                    }
                 }
             }
         }
-        
+
         public static async void ApplyPostInitFixes(GameObject canvasObj)
         {
             await Task.Delay(250);

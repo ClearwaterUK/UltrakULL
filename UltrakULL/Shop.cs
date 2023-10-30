@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UltrakULL.json;
@@ -10,6 +11,8 @@ namespace UltrakULL
     {
         private static void PatchShopFrontEnd(ref GameObject shopObject)
         {
+            try
+            {
                 //Tip panel
                 GameObject tipPanel = GetGameObjectChild(GetGameObjectChild(shopObject, "TipBox"), "Panel");
                 Text tipTitle = GetTextfromGameObject(GetGameObjectChild(tipPanel, "Title"));
@@ -111,10 +114,18 @@ namespace UltrakULL
                 Text cgExitBackButtonText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shopObject, "Return from Cyber Grind"), "BackButton (2)"), "Text"));
                 cgExitBackButtonText.text = LanguageManager.CurrentLanguage.shop.shop_back;
             }
+            catch (Exception e)
+            {
+                Logging.Error(e.ToString());
+            }
+
+        }
         
 
         private static void PatchWeapons(ref GameObject shopObject)
         {
+            try
+            {
                 GameObject shopWeaponsObject  = GetGameObjectChild(shopObject,"Weapons");
 
                 Text weaponBackText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "BackButton (1)"), "Text"));
@@ -871,6 +882,12 @@ namespace UltrakULL
                 GameObject goldArm = GetGameObjectChild(armWindow, "Variation Panel 1 (3)");
                 Text goldArmUnderConstruction = GetTextfromGameObject(GetGameObjectChild(goldArm, "Text (1)"));
                 goldArmUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
+            }
+            catch (Exception e)
+            {
+                Logging.Error(e.ToString());
+            }
+                
         }
 
         public static void PatchShopRefactor(ref GameObject shopObject)
