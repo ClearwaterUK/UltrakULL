@@ -308,7 +308,7 @@ namespace UltrakULL.Harmony_Patches
                     }
                     else
                     {
-                        messageNotif = "A new language file \"" + languageName + "\" has been downloaded. It will be available for use upon entering a level.";
+                        messageNotif = "A new language file \"" + languageName + "\" has been downloaded.";
                         newLangDownloaded = true;
                     }
 

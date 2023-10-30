@@ -20,8 +20,7 @@ using System.Reflection;
  *	A translation mod for Ultrakill that hooks into the game and allows for text/string replacement. This tool is primarily meant to assist with language translation.
  * 
  *  -- LONG-TERM TASK LIST --
- * Allow freshly downloaded languages to be used straight after downloading, instead of needing a level change.
- * Better error handling - If the previously loaded file was missing, reset to English and display HUD message saying it was reset
+ * Better error handling
  * Bundle submitted voice packs with language downloads
  * Sit down and finish audio documentation
  * Figure out why online language browser breaks sometimes. Seems to happen at random with no singular cause. Quick game restart usually fixes.
