@@ -12,9 +12,8 @@ Thank you to lenarikil for the contribution!
 - Changed a few audio file names related to bosses to make recognizing them easier. This should also fix the problem with MDK+Owl's lines all being jumbled.
 - Fixed the "language" button in the options appearing over the save panel menu when the latter was opened.
 - Moved the "language" button in the options from the top-left to the bottom-right to prevent conflicting with any other mods that use the top-left space.
-- Newly downloaded languages now appear in the local languages tab being downloaded, instead of needing a full game restart.
+- Newly downloaded languages now appear in the local languages tab immediately, instead of needing a full game restart.
 - Fixed some frontend elements not changing text when the current language is changed.
-- Adjusted the location of the Languages button in the options. This should prevent overlap with any other mods that add buttons in its original position.
 - Major subtitle refactoring work for all voiced characters to improve performance and reduce overhead.
 Thank you so much to Flazhik for the contribution!
 - Fixed a typo in the English template resulting in Quetzal's museum plaque not appearing. (Check template changes below)

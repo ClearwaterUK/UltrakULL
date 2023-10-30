@@ -318,17 +318,19 @@ namespace UltrakULL.Harmony_Patches
                     
                     Logging.Info("Lang file saved.");
                        
+                    
                     MonoSingleton<HudMessageReceiver>.Instance.ClearMessage();
                     MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=lime>" + messageNotif + "</color>");
 
                     if(newLangDownloaded)
                     {
 
-                        LanguageManager.allLanguages.Add(languageName, file);
+                        LanguageManager.allLanguages.Add(languageTag, file);
+                        
                         
                         Transform optionsParent = GetGameObjectChild(GetInactiveRootObject("Canvas"),"OptionsMenu").transform;
                         GameObject languageButtonPrefab = optionsParent.Find("Save Slots").Find("Grid").Find("Slot Row").gameObject;
-                        addLocalLanguageToLocalList(ref languageButtonPrefab, languageName,true);
+                        addLocalLanguageToLocalList(ref languageButtonPrefab, file.metadata.langName,true);
                     }
                 }
             }
@@ -343,6 +345,7 @@ namespace UltrakULL.Harmony_Patches
         
         public static void addLocalLanguageToLocalList(ref GameObject languageButtonPrefab, string language, bool newlyAdded=false)
         {
+            Console.WriteLine("Language: " + language);
             Transform contentParent = langLocalPage.transform.Find("Scroll Rect (1)").Find("Contents");
             
             GameObject languageButtonInstance = GameObject.Instantiate(languageButtonPrefab,contentParent);

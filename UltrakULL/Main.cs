@@ -32,7 +32,6 @@ using System.Reflection;
  
  * -- REPORTED STUFF TO INVESTIGATE --
  * Flyingdog's book text not seeming to appear (appears fine with English template)
-  *  - 2 PRs to have a look at that have just been sitting on the repo because I've been busy Despair
  * Spawning MDK+Owl while noclipped causes a crash. Function that's causing it: MandaloreSubtitlesSwap->Mandalore_Start
  *  * Offending transpiler lines have been commented out for now. Waiting for Flazhik to look at and fix.
  * 
