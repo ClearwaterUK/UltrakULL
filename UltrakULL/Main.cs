@@ -86,7 +86,11 @@ namespace UltrakULL
                 GameObject canvasObj = GetInactiveRootObject("Canvas");
                 Core.HandleSceneSwitch(scene, ref canvasObj);
                 //Bunch of things the mod should do *after* loading to avoid problems.
-                PostInitPatches(canvasObj);
+                if(GetCurrentSceneName() != "Bootstrap" || GetCurrentSceneName() != "Intro")
+                {
+                    PostInitPatches(canvasObj);
+                }
+
             }
         }
 
