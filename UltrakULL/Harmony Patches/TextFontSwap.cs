@@ -1,4 +1,5 @@
-﻿using System.Net.Mime;
+﻿using System;
+using System.Net.Mime;
 using HarmonyLib;
 using UnityEngine.UI;
 
@@ -12,16 +13,19 @@ namespace UltrakULL.Harmony_Patches
         public static class TextFontSwapper
         {
             [HarmonyPostfix]
-            public static void SwapFont(Text __instance)
+            public static void SwapFont(ref Text __instance)
             {
                 if(Core.GlobalFontReady)
                 {
                     if(GetCurrentSceneName() == "CreditsMuseum2")
                     {
-                        //Fix for the museum to prevent plaque fonts from being changed.
-                        if(__instance.font.fontNames[0] == "GFS Garaldus") 
+                        if(__instance.font.fontNames[0] == "GFS Garaldus")
                         {
-                            //Do nothing xd
+                            __instance.font = Core.MuseumFont;
+                        }
+                        else
+                        {
+                            __instance.font = Core.GlobalFont;
                         }
                     }
                     else

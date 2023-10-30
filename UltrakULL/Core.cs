@@ -21,6 +21,7 @@ namespace UltrakULL
         
         public static bool GlobalFontReady;
         public static Font GlobalFont;
+        public static Font MuseumFont;
         
         public static bool wasLanguageReset = false;
         
@@ -151,16 +152,18 @@ namespace UltrakULL
                 Logging.Message("Font bundle loaded.");
                 Logging.Message("Loading fonts from bundle...");
                 
-                Font loadedFont = fontBundle.LoadAsset<Font>("VCR_OSD_MONO");
-                if(loadedFont == null)
+                Font font1 = fontBundle.LoadAsset<Font>("VCR_OSD_MONO");
+                Font font2 = fontBundle.LoadAsset<Font>("EBGaramond-Regular");
+                if(font1 == null || font2 == null)
                 {
                     Logging.Error("FAILED TO LOAD FONT");
                 }
                 else
                 {
-                    Logging.Warn("Font loaded.");
-                    GlobalFont = loadedFont;
+                    Logging.Warn("Fonts loaded.");
+                    GlobalFont = font1;
                     GlobalFontReady = true;
+                    MuseumFont = font2;
                 }
             }
         }
@@ -208,7 +211,7 @@ namespace UltrakULL
                         ultrakullLogoText.fontSize = 16;
                             
                         //Get the font so it can applied to any generated buttons
-                        VcrFont = ultrakullLogoText.font;
+                        VcrFont = Core.VcrFont;
                             
                         //Add notif if there's a mod update available
                         if(updateAvailable)

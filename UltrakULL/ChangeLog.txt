@@ -1,5 +1,7 @@
 ﻿
 1.2.3
+- Added Cyrillic character support to the font used in the museum plaques.
+Thank you to lenarikil for the contribution!
 - Begun tentative prepwork for Act 3. Added pre-emptive strings for expected Act 3 contents.
 - Optimized the way shop terminals are patched.
 - Added a message to the main menu if for whatever reason the current language file used could not be loaded for whatever reason.
