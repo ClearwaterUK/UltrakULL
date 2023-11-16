@@ -109,6 +109,18 @@ namespace UltrakULL
             {
                 titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_heresy);
             }
+            else if (inputTitle.Contains("VIOLENCE"))
+            {
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_violence);
+            }
+            else if (inputTitle.Contains("FRAUD"))
+            {
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_fraud);
+            }
+            else if (inputTitle.Contains("TREACHERY"))
+            {
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_treachery);
+            }
             else if (inputTitle.Contains("PRIME"))
             {
                 titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_prime);
@@ -135,6 +147,15 @@ namespace UltrakULL
                 titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_act2climax);
                 return titleToReturn.ToString();
             }
+            if (inputTitle.Contains("ACT III CRESCENDO"))
+            {
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_act3crescendo);
+            }
+            else if (inputTitle.Contains("ACT III CLIMAX"))
+            {
+                titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_act3climax);
+                return titleToReturn.ToString();
+            }
 
             else if (inputTitle.Contains("FIRST"))
             {
@@ -154,8 +175,6 @@ namespace UltrakULL
             }
             else if (inputTitle.Contains("CLIMAX"))
             {
-
-
                 titleToReturn.Append(LanguageManager.CurrentLanguage.misc.hellmap_climax);
             }
             return titleToReturn.ToString();
