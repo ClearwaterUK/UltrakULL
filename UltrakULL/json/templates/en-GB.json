@@ -355,7 +355,7 @@
         "museum_plaquesHealth2": "GUEST COMPOSER",
 
         "museum_plaquesQuetzalTirado1": "QUETZAL TIRADO",
-        "museum_plaquesQuetzalTirado2": "GUEST COMPOSER",
+        "museum_plaquesQuetzalTirado2": "GUEST MUSICIAN",
 
         "museum_plaquesSalad1": "SALAD",
         "museum_plaquesSalad2": "ARTIST OF JAKITO",
@@ -2584,9 +2584,9 @@
 		"hellmap_greed": "GREED",
 		"hellmap_wrath": "WRATH",
 		"hellmap_heresy": "HERESY",
-        "hellmap_greed": "VIOLENCE",
-        "hellmap_wrath": "FRAUD",
-        "hellmap_heresy": "TREACHERY",
+        "hellmap_violence": "VIOLENCE",
+        "hellmap_fraud": "FRAUD",
+        "hellmap_treachery": "TREACHERY",
         
 		"hellmap_prime": "PRIME",
 
@@ -2599,6 +2599,8 @@
         "hellmap_act1climax": "ACT I CLIMAX",
         "hellmap_act2crescendo": "ACT II CRESCENDO",
         "hellmap_act2climax": "ACT II CLIMAX",
+        "hellmap_act3crescendo": "ACT III CRESCENDO",
+        "hellmap_act3climax": "ACT III CLIMAX",
         
         "levelstats_time": "TIME",
         "levelstats_kills": "KILLS",
