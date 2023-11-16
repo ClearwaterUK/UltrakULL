@@ -304,7 +304,7 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_enemiesStray1 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesStray2 + "\n" 
-                    + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesStray3 + "\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesStray3 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesStray4 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesStray5;
             }
@@ -312,7 +312,7 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSchism1 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSchism2 + "\n" 
-                    + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSchism3 + "\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSchism3 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSchism4 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSchism5 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSchism6;
@@ -321,7 +321,7 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSwordsmachine1 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSwordsmachine2 + "\n" 
-                    + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSwordsmachine3 + "\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSwordsmachine3 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSwordsmachine4 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSwordsmachine5 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSwordsmachine6;
@@ -330,7 +330,7 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_enemiesMaliciousFace1 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesMaliciousFace2 + "\n" 
-                    + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesMaliciousFace3 + "\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesMaliciousFace3 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesMaliciousFace4 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesMaliciousFace5 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesMaliciousFace6 + "\n\n"
