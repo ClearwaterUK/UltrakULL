@@ -173,7 +173,6 @@ namespace UltrakULL
 
             //***Act 2***
             //Greed
-
             if (currentLevel.Contains("4-1"))
             {
                 return LanguageManager.CurrentLanguage.levelTips.leveltips_greedFirst;
@@ -255,7 +254,7 @@ namespace UltrakULL
                 return LanguageManager.CurrentLanguage.levelTips.leveltips_fraudFourth;
             }
             
-            //Heresy
+            //Treachery
             if (currentLevel.Contains("9-1"))
             {
                 return LanguageManager.CurrentLanguage.levelTips.leveltips_treacheryFirst;
