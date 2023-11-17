@@ -50,8 +50,24 @@ namespace UltrakULL
 			if (missionName.Contains("6-1")) { return "6-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_heresyFirst; }
 			if (missionName.Contains("6-2")) { return "6-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_heresySecond; }
 
+			if (missionName.Contains("7-1")) { return "7-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceFirst; }
+			if (missionName.Contains("7-2")) { return "7-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceSecond; }
+			if (missionName.Contains("7-3")) { return "7-3: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceThird; }
+			if (missionName.Contains("7-4")) { return "7-4: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceFourth; }
+			if (missionName.Contains("7-S")) { return "7-S: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceSecret; }
+
+			if (missionName.Contains("8-1")) { return "8-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudFirst; }
+			if (missionName.Contains("8-2")) { return "8-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudSecond; }
+			if (missionName.Contains("8-3")) { return "8-3: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudThird; }
+			if (missionName.Contains("8-4")) { return "8-4: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudFourth; }
+			if (missionName.Contains("8-S")) { return "8-S: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudSecret; }
+
+			if (missionName.Contains("9-1")) { return "9-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_treacheryFirst; }
+			if (missionName.Contains("9-2")) { return "9-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_treacherySecond; }
+			
 			if (missionName.Contains("P-1")) { return "P-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeFirst; }
 			if (missionName.Contains("P-2")) { return "P-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeSecond; }
+			if (missionName.Contains("P-3")) { return "P-3: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeThird; }
 
 			if (missionName.Contains("Intermission")) { return "???"; }
 
@@ -119,7 +135,26 @@ namespace UltrakULL
 				case 25:
 					return "6-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_heresySecond;
 				case 26:
-					return "7-1: ???";
+					return "7-1: " + "???" //LanguageManager.CurrentLanguage.levelNames.levelName_violenceFirst;
+					//We'll add this line once Violence releases so that it doesn't show the name until then
+				case 27:
+					return "7-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceSecond;
+				case 28:
+					return "7-3: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceThird;
+				case 29:
+					return "7-4: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceFourth;
+				case 30:
+					return "8-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudFirst;
+				case 31:
+					return "8-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudSecond;
+				case 32:
+					return "8-3: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudThird;
+				case 33:
+					return "8-4: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudFourth;
+				case 34:
+					return "9-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_treacheryFirst;
+				case 35:
+					return "9-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_treacherySecond;
 				default:
 					switch (missionNum)
 					{
