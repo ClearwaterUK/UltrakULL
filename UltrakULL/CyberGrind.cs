@@ -186,25 +186,36 @@ namespace UltrakULL
             Text cgMusicSoundtrackCancel = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgMusicSoundtrack,"BackButton"),"Text"));
             cgMusicSoundtrackCancel.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustomBack;
 
-            GameObject cgMusicSoundtrackFolderMenu = GetGameObjectChild(cgMusicSoundtrack,"ImageSelectionWrapper");
-            foreach (Transform child in cgMusicSoundtrackFolderMenu.transform)
+            GameObject cgMusicSoundtrackAddMenu = GetGameObjectChild(GetGameObjectChild(cgMusicSoundtrack,"ImageSelectionWrapper"),"ImageSelector");
+            //Changes all folders' own names based on their original name
+            foreach (Transform child in cgMusicSoundtrackAddMenu.transform)
             {
                 if (this.name == "FolderTemplate(Clone)")
                 {
                     Text cgMusicSoundtrackFolderTitle = GetTextfromGameObject(GetGameObjectChild(this,"Text"));
                     switch (cgMusicSoundtrackFolderTitle.text)
                     {
-                        case "THE CYBER GRIND": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_folderNameCyberGrind; }
-                        case "PRELUDE": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_folderNamePrelude; }
-                        case "ACT 1": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_folderNameAct1; }
-                        case "ACT 2": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_folderNameAct2; }
-                        //case "ACT 3": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_folderNameAct3; } For when the act 3 folder gets added
-                        case "SECRET LEVELS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_folderNameSecret; }
-                        case "PRIME SANCTUMS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_folderNamePrime; }
-                        case "MISCELLANEOUS TRACKS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_folderNameMisc; }
+                        case "THE CYBER GRIND": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameCyberGrind; }
+                        case "PRELUDE": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNamePrelude; }
+                        case "ACT 1": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameAct1; }
+                        case "ACT 2": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameAct2; }
+                        case "ACT 3": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameAct3; } //For when the act 3 folder gets added, currently shouldn't get activated
+                        case "SECRET LEVELS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameSecret; }
+                        case "PRIME SANCTUMS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNamePrime; }
+                        case "MISCELLANEOUS TRACKS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameMisc; }
                             
                         default: { return "Unknown folder name"; }
                     }
+                }
+            }
+
+            //Changes the "UNLOCKED" string under songs that are unlocked
+            foreach (Transform child in cgMusicSoundtrackAddMenu.transform)
+            {
+                if (this.name == "SongTemplate(Clone)")
+                {
+                    Text cgMusicSoundtrackTask = GetTextfromGameObject(GetGameObjectChild(this,"Cost"));
+                    if (cgMusicSoundtrackTask.text == "UNLOCKED") { cgMusicSoundtrackTask.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicUnlocked; }
                 }
             }
             
