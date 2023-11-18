@@ -1,4 +1,13 @@
-﻿
+1.2.3b
+- Added more tentative prepwork for Act 3, both in the code and in the templates
+- Fixed folder names not being translatable in the Cybergrind music menu
+- Fixed the 'Unlocked' status for music not being translatable
+- Fixed a minor issue where some enemy books in the museum missed a line skip
+- Fixed a minor issue in the English template where the added lines for the Act 3 layers were duplicates from Act 2's
+- Fixed a possible issue in the English template where some characters were non-standard, might have conflicted with the used font
+- Corrected a minor mistake in the English template in Francis' quote where a space was missing
+- Corrected a minor mistake in the English template in Quetzal's title on her Museum plate where it was claimed she was a composer instead of a musician
+
 1.2.3
 - Added Cyrillic character support to the font used in the museum plaques.
 Thank you to lenarikil for the contribution!
@@ -20,7 +29,7 @@ Thank you so much to Flazhik for the contribution!
 - Fixed a couple of repeating lines in the Act 1 intermission.
 - Fixed 5-3's shop not being translated.
 Thank you to BitKoven for these contributions!
-- Fixed a missing fifth line in Salad's book of the blank template.
+- Fixed a missing fifth line in Salad's book in the blank template.
 - Fixed a typo in Minos Prime's intro in the English template.
 
 
