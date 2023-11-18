@@ -186,6 +186,29 @@ namespace UltrakULL
             Text cgMusicSoundtrackCancel = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cgMusicSoundtrack,"BackButton"),"Text"));
             cgMusicSoundtrackCancel.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustomBack;
 
+            GameObject cgMusicSoundtrackFolderMenu = GetGameObjectChild(cgMusicSoundtrack,"ImageSelectionWrapper");
+            foreach (Transform child in cgMusicSoundtrackFolderMenu.transform)
+            {
+                if (this.name == "FolderTemplate(Clone)")
+                {
+                    Text cgMusicSoundtrackFolderTitle = GetTextfromGameObject(GetGameObjectChild(this,"Text"));
+                    switch (cgMusicSoundtrackFolderTitle.text)
+                    {
+                        case "THE CYBER GRIND": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_folderNameCyberGrind; }
+                        case "PRELUDE": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_folderNamePrelude; }
+                        case "ACT 1": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_folderNameAct1; }
+                        case "ACT 2": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_folderNameAct2; }
+                        //case "ACT 3": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_folderNameAct3; } For when the act 3 folder gets added
+                        case "SECRET LEVELS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_folderNameSecret; }
+                        case "PRIME SANCTUMS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_folderNamePrime; }
+                        case "MISCELLANEOUS TRACKS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_folderNameMisc; }
+                            
+                        default: { return "Unknown folder name"; }
+                    }
+                }
+            }
+            
+            
             //Customize theme
             GameObject cgCustomTheme = GetGameObjectChild(GetGameObjectChild(cgTerminal, "CustomTextures"),"Panel");
             Text cgCustomThemeTitle = GetTextfromGameObject(GetGameObjectChild(cgCustomTheme, "Title"));
