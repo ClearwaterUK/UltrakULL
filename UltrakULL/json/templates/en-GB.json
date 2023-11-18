@@ -26,7 +26,7 @@
         "museum_bookHakita10": "- All music, except some public domain songs and songs by guest composers (who you'll find down the hall and to the left)",
         "museum_bookHakita11": "- Most writing, programming and art direction",
         "museum_bookHakita12": "- Just in general, if it's in the game, I had my finger in that pie",
-        "museum_bookHakita13": "Thank you for playing, and hopefully enjoying, ULTRAKILL. It's insane to me that a passion project I started just based on what I thought was fun in games has grown to be such a massive success. I've met so many amazing people thanks to this game and the community that has grown around it has been a source of much joy (and plenty of anguish) in my life. It's a rare gift to be able to not only create a work like this with full creative control, but also to be able to make a living off my own art without having to compromise on my vision, and it's all thanks to New Blood, all the developers here in this museum, and most importantly... <b>YOU!</b>",
+        "museum_bookHakita13": "Thank you for playing, and hopefully enjoying, ULTRAKILL. It's insane to me that a passion project I started just based on what I thought was fun in games has grown to be such a massive success. I've met so many amazing people thanks to this game and the community that has grown around it has been a source of much joy (and plenty of anguish) in my life. It's a rare gift to be able to not only create a work like this with full creative control, but also to be able to make a living off my own art without having to compromise on my vision, and it's all thanks to New Blood, all the developers here in this museum, and most importantly <b>YOU!</b>",
 
         "museum_bookFrancisXie1": "<b><color=#4AACBD>FRANCIS XIE</color> - CONCEPT AND TEXTURE ARTIST</b>",
         "museum_bookFrancisXie2": "Francis joined the team in 2021, around the start of the Wrath layer's development, when he was picked up as a general artist for New Blood thanks to his incredible ULTRAKILL fanart.",
@@ -47,7 +47,7 @@
         "museum_bookJerichoRus7": "- The main promo art, which is used as the game's cover art",
         "museum_bookJerichoRus8": "- Most level textures, including all level textures for layers 2-4",
         "museum_bookJerichoRus9": "- All the art for 2-S",
-        "museum_bookJerichoRus10": "\"Hi, thank you to the rest of the dev team and you guys for enjoying what we create. I’ve met many wonderful people through ULTRAKILL’s development and hope to continue doing so. Shoutout to SXBIG and Luvoid!\"",
+        "museum_bookJerichoRus10": "\"Hi, thank you to the rest of the dev team and you guys for enjoying what we create. I've met many wonderful people through ULTRAKILL's development and hope to continue doing so. Shoutout to SXBIG and Luvoid!\"",
 
         "museum_bookBigRockBMP1": "<b><color=#DA6B6D>BIGROCKBMP</color> - CONCEPT ARTIST</b>",
         "museum_bookBigRockBMP2": "BigRock joined the team in early 2019, during the Prelude's development. He was the first concept artist for the game and responsible for the designs for many of the game's bosses, such as the game's first ever character design, the Swordsmachine.",
@@ -96,7 +96,7 @@
         "museum_bookQATeam3": "<color=#11c324>TUCKER WILKIN</color> - SENIOR QUALITY ASSURANCE",
         "museum_bookQATeam4": "<color=#e28eb6>SCOTT GURNEY</color> - TECHNICAL QUALITY ASSURANCE</b>",
         "museum_bookQATeam5": "The New Blood QA team (Cameron, Dalia, Tucker and Scott) are responsible for making sure the game runs properly and without any major bugs. It's thanks to them that ULTRAKILL looks and feels like a functioning game despite being a mess of duct tape, spaghetti, glue and prayers underneath. Prior to ULTRAKILL joining the New Blood catalogue, I had to do QA myself, and even that smaller amount of bugtesting makes me question how these people manage to stay sane.",
-        "museum_bookQATeam6": "...Well, relatively sane.",
+        "museum_bookQATeam6": "Well, relatively sane.",
         "museum_bookQATeam7": "\"In the immortal words of the great Hungarian centre-forward Nandor Hidegkuti - 'Amikor eljön a forradalom, a zeneipar lesz az első amely menni fog. Köszönöm szépen'\"",
         "museum_bookQATeam8": "\"Be it games, music, movies or the company of others, be sure to enjoy the good times that you experience and always look back on life with a positive note. Life is precious, and after all, It's your own show. Enjoy your life to its fullest and give everyone respect and love. A smile on someone's face is worth its weight in gold!\"",
         "museum_bookQATeam9": "\"Of all the scars on my psyche, this one will always remain a favored one. from that cursed door to the accidental spawner arm slip, its been a great time regardless! Sometimes videogames can be cool as hell. hopefully we can get more of them!\"",
@@ -439,7 +439,7 @@
         "fish_baitTaken": "A fish took the bait.",
         "fish_baitNotWork": "This bait didn't work here!",
         "fish_interrupted": "Fishing interrupted",
-        "fish_noFishBiting": "Nothing seems to be biting here...",
+        "fish_noFishBiting": "Nothing seems to be biting here",
 
         "fish_terminalTitle": "awesome fishing tips",
         "fish_funnyStupidFish": "Funny Stupid Fish (Friend)",
@@ -632,13 +632,13 @@
     },
     
     "books":{
-        "books_scanning": "SCANNING...",
+        "books_scanning": "SCANNING",
         "books_pressToClose1": "PRESS",
         "books_pressToClose2": "TO CLOSE.",
 
         "books_limboFourth1": "Text scanned - Unique Passage:",
-        "books_limboFourth2": "...My mind is adrift with the eternal torments. Lucid vistas painted in insidious tones, hollow walls that scream to the touch. A mocking song plays at all hours, even the sounds of birds are fake. All reminders of my enduring damnation.",
-        "books_limboFourth3": "Gabriel my dearest friend, in endless penance I have awaited your embrace into Heaven. I have been so faithful, accepting of my fate, but to what end? What punishment is this, that I am to bare the keys to my own doom with no hope of salvation... These skulls sneer their devilish grins, voices chattering, tempting me to take the plunge deeper into Hell... I won't do it.",
+        "books_limboFourth2": "My mind is adrift with the eternal torments. Lucid vistas painted in insidious tones, hollow walls that scream to the touch. A mocking song plays at all hours, even the sounds of birds are fake. All reminders of my enduring damnation.",
+        "books_limboFourth3": "Gabriel my dearest friend, in endless penance I have awaited your embrace into Heaven. I have been so faithful, accepting of my fate, but to what end? What punishment is this, that I am to bare the keys to my own doom with no hope of salvation These skulls sneer their devilish grins, voices chattering, tempting me to take the plunge deeper into Hell I won't do it.",
         "books_limboFourth4": "I've hidden them away amongst the furnishings, books, and the very foundations of this accursed place. Forgive me Gabriel, I will await you...",
         "books_limboFourth5": "Remaining text: Irrelevant.",
         
@@ -663,9 +663,9 @@
         "books_wrathSecond1": "TEXT SCANNED - LEGIBLE SCRIPT:",
         "books_wrathSecond2": "EXCERPT FROM FERRYMAN'S DIARY",
         "books_wrathSecond3": "Some calamity has struck the mortal world. What once was The River Styx has now grown to an unfathomable ocean. A million weeping souls pouring in each day that the shores can barely contain. A tearful tide spilling over at each end, bow to stern, crying for mercy, begging for safe passage. But not all souls can pay and these old hands can only take so many coins.",
-        "books_wrathSecond4": "Then one day, the current shifted. Wave after wave for minutes on end of millions, billions, as though the throat of the world was cut wide and the head wrenched back to speed the pour. I didn’t have time to react. The weariness from my ceaseless work claimed me and I slipped beneath the roiling sea, into the depths of the Ocean Styx, my fate sealed by the crushing masses of endless bodies.",
+        "books_wrathSecond4": "Then one day, the current shifted. Wave after wave for minutes on end of millions, billions, as though the throat of the world was cut wide and the head wrenched back to speed the pour. I didn't have time to react. The weariness from my ceaseless work claimed me and I slipped beneath the roiling sea, into the depths of the Ocean Styx, my fate sealed by the crushing masses of endless bodies.",
         "books_wrathSecond5": "Suddenly, there was a light as brilliant as the Lord himself, ushering me from the darkness with mighty arms that held me with such compassion and warmth as I have never known:",
-        "books_wrathSecond6": "\"Be not afraid, sinner. Your devotion to God shows goodness in you; plentiful indeed. The heart is willing but the body must rest, lest you squander one of the Lord’s creations.\"",
+        "books_wrathSecond6": "\"Be not afraid, sinner. Your devotion to God shows goodness in you; plentiful indeed. The heart is willing but the body must rest, lest you squander one of the Lord's creations.\"",
         "books_wrathSecond7": "His gentle words eased the pain and mended my wounds. My face wet with tears of relief, my words muffled by the weight of my duty. I could only lay in reverence, carried in the embrace of majesty.",
         "books_wrathSecond8": "Radiant is Gabriel, for he is the light in my darkness.",
         "books_wrathSecond9": "Remaining text: Irrelevant."
@@ -677,9 +677,9 @@
         "act1_intermission_first4": "Their eyes ablaze with bitter resentment, glaring through Gabriel's wounds of body and soul, bore outward for all to see.",
         "act1_intermission_first5": "Has this one abandoned the way of our creator?",
         "act1_intermission_first6": "It is unworthy of its Holy Light.",
-        "act1_intermission_first7": "The Father’s Light is indomitable.",
+        "act1_intermission_first7": "The Father's Light is indomitable.",
         "act1_intermission_first8": "This one sees fit to squander it.",
-        "act1_intermission_first9": "Their words resonated in Gabriel’s limbs, coursing through as lightning upon wire, a searing hiss that would strike lessers deaf and blind.",
+        "act1_intermission_first9": "Their words resonated in Gabriel's limbs, coursing through as lightning upon wire, a searing hiss that would strike lessers deaf and blind.",
         "act1_intermission_first10": "The Holy Light within him, an unstoppable storm of divine fury.",
         "act1_intermission_first11": "Insurmountable for mere Objects.",
         "act1_intermission_first12": "This he knew.",
@@ -706,12 +706,12 @@
         "act2_intermission_first2": "Introspection.",
         "act2_intermission_first3": "How many had he killed?",
         "act2_intermission_first4": "Had he ever thought to count?",
-        "act2_intermission_first5": "How much cruelty did he embody… and to what end?",
+        "act2_intermission_first5": "How much cruelty did he embody... and to what end?",
         "act2_intermission_first6": "How many did he condemn to hell and who did it benefit..?",
         
         "act2_intermission_first7": "Two defeats at the hands of the machine had changed Gabriel.",
         "act2_intermission_first8": "The world of the once supposed Will of God was now shattered and only he was left to put the pieces back together.",
-        "act2_intermission_first9": "They collected before the light of a dying fire that fresh fuel couldn’t sustain, this new light showing the truth to Gabriel:",
+        "act2_intermission_first9": "They collected before the light of a dying fire that fresh fuel couldn't sustain, this new light showing the truth to Gabriel:",
         
         "act2_intermission_first10": "The pieces never fit together to begin with.",
         
