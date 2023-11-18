@@ -1,7 +1,8 @@
 1.2.3b:
 
 ADDED:
-misc: hellmap_act3crescendo, hellmap_act3climax
+misc: hellmap_act3(crescendo, climax)
+cybergrind: musicFolderName(CyberGrind, Prelude, Act1, Act2, Act3, Secret, Prime, Misc)
 
 1.2.3:
 
