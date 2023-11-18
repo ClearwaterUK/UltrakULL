@@ -26,7 +26,7 @@
         "museum_bookHakita10": "- All music, except some public domain songs and songs by guest composers (who you'll find down the hall and to the left)",
         "museum_bookHakita11": "- Most writing, programming and art direction",
         "museum_bookHakita12": "- Just in general, if it's in the game, I had my finger in that pie",
-        "museum_bookHakita13": "Thank you for playing, and hopefully enjoying, ULTRAKILL. It's insane to me that a passion project I started just based on what I thought was fun in games has grown to be such a massive success. I've met so many amazing people thanks to this game and the community that has grown around it has been a source of much joy (and plenty of anguish) in my life. It's a rare gift to be able to not only create a work like this with full creative control, but also to be able to make a living off my own art without having to compromise on my vision, and it's all thanks to New Blood, all the developers here in this museum, and most importantly <b>YOU!</b>",
+        "museum_bookHakita13": "Thank you for playing, and hopefully enjoying, ULTRAKILL. It's insane to me that a passion project I started just based on what I thought was fun in games has grown to be such a massive success. I've met so many amazing people thanks to this game and the community that has grown around it has been a source of much joy (and plenty of anguish) in my life. It's a rare gift to be able to not only create a work like this with full creative control, but also to be able to make a living off my own art without having to compromise on my vision, and it's all thanks to New Blood, all the developers here in this museum, and most importantly... <b>YOU!</b>",
 
         "museum_bookFrancisXie1": "<b><color=#4AACBD>FRANCIS XIE</color> - CONCEPT AND TEXTURE ARTIST</b>",
         "museum_bookFrancisXie2": "Francis joined the team in 2021, around the start of the Wrath layer's development, when he was picked up as a general artist for New Blood thanks to his incredible ULTRAKILL fanart.",
@@ -36,7 +36,7 @@
         "museum_bookFrancisXie6": "- The design for a cut weapon called the Beamcutter",
         "museum_bookFrancisXie7": "- The unique level textures for 5-3: SHIP OF FOOLS as well as almost all the textures in the Heresy layer",
         "museum_bookFrancisXie8": "- The plushie designs of all the developers",
-        "museum_bookFrancisXie9": "\"I simply wouldn't be here without this game and I'm so happy it's ULTRAKILL. Thank you Hakita, the rest of the dev team, and everyone in New Blood for being such great people who always support what I do. Special thanks to my best friend who urged me to pursue what I truly love; being a part of this team has been a dream come true.Here's to the greatest project!\"",
+        "museum_bookFrancisXie9": "\"I simply wouldn't be here without this game and I'm so happy it's ULTRAKILL. Thank you Hakita, the rest of the dev team, and everyone in New Blood for being such great people who always support what I do. Special thanks to my best friend who urged me to pursue what I truly love; being a part of this team has been a dream come true. Here's to the greatest project!\"",
 
         "museum_bookJerichoRus1": "<b><color=orange>JERICHO_RUS</color> - CONCEPT AND TEXTURE ARTIST</b>",
         "museum_bookJerichoRus2": "Jericho joined the team in 2019, shortly before the original Prelude demo's release. He's responsible for many of the game's character designs and most of its weapon designs, as well as all the level textures for layers 2-4 and some textures for the Wrath layer.",
@@ -96,7 +96,7 @@
         "museum_bookQATeam3": "<color=#11c324>TUCKER WILKIN</color> - SENIOR QUALITY ASSURANCE",
         "museum_bookQATeam4": "<color=#e28eb6>SCOTT GURNEY</color> - TECHNICAL QUALITY ASSURANCE</b>",
         "museum_bookQATeam5": "The New Blood QA team (Cameron, Dalia, Tucker and Scott) are responsible for making sure the game runs properly and without any major bugs. It's thanks to them that ULTRAKILL looks and feels like a functioning game despite being a mess of duct tape, spaghetti, glue and prayers underneath. Prior to ULTRAKILL joining the New Blood catalogue, I had to do QA myself, and even that smaller amount of bugtesting makes me question how these people manage to stay sane.",
-        "museum_bookQATeam6": "Well, relatively sane.",
+        "museum_bookQATeam6": "...Well, relatively sane.",
         "museum_bookQATeam7": "\"In the immortal words of the great Hungarian centre-forward Nandor Hidegkuti - 'Amikor eljön a forradalom, a zeneipar lesz az első amely menni fog. Köszönöm szépen'\"",
         "museum_bookQATeam8": "\"Be it games, music, movies or the company of others, be sure to enjoy the good times that you experience and always look back on life with a positive note. Life is precious, and after all, It's your own show. Enjoy your life to its fullest and give everyone respect and love. A smile on someone's face is worth its weight in gold!\"",
         "museum_bookQATeam9": "\"Of all the scars on my psyche, this one will always remain a favored one. from that cursed door to the accidental spawner arm slip, its been a great time regardless! Sometimes videogames can be cool as hell. hopefully we can get more of them!\"",
@@ -439,7 +439,7 @@
         "fish_baitTaken": "A fish took the bait.",
         "fish_baitNotWork": "This bait didn't work here!",
         "fish_interrupted": "Fishing interrupted",
-        "fish_noFishBiting": "Nothing seems to be biting here",
+        "fish_noFishBiting": "Nothing seems to be biting here...",
 
         "fish_terminalTitle": "awesome fishing tips",
         "fish_funnyStupidFish": "Funny Stupid Fish (Friend)",
@@ -632,13 +632,13 @@
     },
     
     "books":{
-        "books_scanning": "SCANNING",
+        "books_scanning": "SCANNING...",
         "books_pressToClose1": "PRESS",
         "books_pressToClose2": "TO CLOSE.",
 
         "books_limboFourth1": "Text scanned - Unique Passage:",
-        "books_limboFourth2": "My mind is adrift with the eternal torments. Lucid vistas painted in insidious tones, hollow walls that scream to the touch. A mocking song plays at all hours, even the sounds of birds are fake. All reminders of my enduring damnation.",
-        "books_limboFourth3": "Gabriel my dearest friend, in endless penance I have awaited your embrace into Heaven. I have been so faithful, accepting of my fate, but to what end? What punishment is this, that I am to bare the keys to my own doom with no hope of salvation These skulls sneer their devilish grins, voices chattering, tempting me to take the plunge deeper into Hell I won't do it.",
+        "books_limboFourth2": "...My mind is adrift with the eternal torments. Lucid vistas painted in insidious tones, hollow walls that scream to the touch. A mocking song plays at all hours, even the sounds of birds are fake. All reminders of my enduring damnation.",
+        "books_limboFourth3": "Gabriel my dearest friend, in endless penance I have awaited your embrace into Heaven. I have been so faithful, accepting of my fate, but to what end? What punishment is this, that I am to bare the keys to my own doom with no hope of salvation... These skulls sneer their devilish grins, voices chattering, tempting me to take the plunge deeper into Hell... I won't do it.",
         "books_limboFourth4": "I've hidden them away amongst the furnishings, books, and the very foundations of this accursed place. Forgive me Gabriel, I will await you...",
         "books_limboFourth5": "Remaining text: Irrelevant.",
         
