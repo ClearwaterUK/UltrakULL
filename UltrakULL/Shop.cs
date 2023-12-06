@@ -140,6 +140,12 @@ namespace UltrakULL
                 Text weaponNailgunText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "NailgunButton"), "Text"));
                 weaponNailgunText.text = LanguageManager.CurrentLanguage.shop.shop_weaponsNailgun;
 
+                //"Like, a lot of P"
+                Text weaponMoney = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "Panel"), "Money"));
+                if (weaponMoney.text = "LIKE, A LOT OF <color=orange>P</color>")
+                { weaponMoney.text = LanguageManager.CurrentLanguage.shop.shop_MoneyCount; }
+                else { weaponMoney.text = LanguageManager.CurrentLanguage.shop.shop_lotsOfMoney; }
+
                 //Slight problem - not all the text fits in the box.
                 //The longer text is, the more we'll need to reduce the font size to compensate.
                 Text weaponRailcannonText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "RailcannonButton"), "Text"));
