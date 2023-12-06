@@ -143,7 +143,7 @@ namespace UltrakULL
                 //"Like, a lot of P"
                 Text weaponMoney = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "Panel"), "Money"));
                 if (weaponMoney.text = "LIKE, A LOT OF <color=orange>P</color>")
-                { weaponMoney.text = LanguageManager.CurrentLanguage.shop.shop_MoneyCount; }
+                { weaponMoney.text = LanguageManager.CurrentLanguage.shop.shop_moneyCount; }
                 else { weaponMoney.text = LanguageManager.CurrentLanguage.shop.shop_lotsOfMoney; }
 
                 //Slight problem - not all the text fits in the box.
