@@ -126,6 +126,14 @@ namespace UltrakULL
         {
             try
             {
+                //Points (P)
+                Text weaponMoney = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "Panel"), "Money"));
+                int currentMoney = GameProgressSaver.GetMoney();
+                if (weaponMoney.text == "LIKE, A LOT OF <color=orange>P</color>")
+                { weaponMoney.text = LanguageManager.CurrentLanguage.shop.shop_lotsOfMoney; }
+                else { weaponMoney.text = currentMoney + LanguageManager.CurrentLanguage.shop.shop_moneyCount; }
+
+                //weapons
                 GameObject shopWeaponsObject  = GetGameObjectChild(shopObject,"Weapons");
 
                 Text weaponBackText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "BackButton (1)"), "Text"));
@@ -139,13 +147,6 @@ namespace UltrakULL
 
                 Text weaponNailgunText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "NailgunButton"), "Text"));
                 weaponNailgunText.text = LanguageManager.CurrentLanguage.shop.shop_weaponsNailgun;
-
-                //"Like, a lot of P"
-                Text weaponMoney = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "Panel"), "Money"));
-                int currentMoney = GameProgressSaver.GetMoney();
-                if (weaponMoney.text = "LIKE, A LOT OF <color=orange>P</color>")
-                { weaponMoney.text = LanguageManager.CurrentLanguage.shop.shop_lotsOfMoney; }
-                else { weaponMoney.text = currentMoney + LanguageManager.CurrentLanguage.shop.shop_moneyCount; }
 
                 //Slight problem - not all the text fits in the box.
                 //The longer text is, the more we'll need to reduce the font size to compensate.
