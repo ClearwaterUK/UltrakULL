@@ -185,6 +185,15 @@ namespace UltrakULL.json
         public string cybergrind_musicConfirm;
         public string cybergrind_musicSoundtrack;
         
+        public string cybergrind_musicFolderNameCyberGrind;
+        public string cybergrind_musicFolderNamePrelude;
+        public string cybergrind_musicFolderNameAct1;
+        public string cybergrind_musicFolderNameAct2;
+        public string cybergrind_musicFolderNameAct3;
+        public string cybergrind_musicFolderNameSecret;
+        public string cybergrind_musicFolderNamePrime;
+        public string cybergrind_musicFolderNameMisc;
+        
         public string cybergrind_patternsWarning;
         public string cybergrind_patternsTitle;
         public string cybergrind_patternsRefresh;
@@ -1285,6 +1294,8 @@ namespace UltrakULL.json
         public string shop_returnToMission;
         public string shop_sandbox;
         public string shop_soulOrbs;
+        public string shop_moneyCount;
+        public string shop_lotsOfMoney;
 
         public string shop_cybergrindDescription1;
         public string shop_cybergrindDescription2;
