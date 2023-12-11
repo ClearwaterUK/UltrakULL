@@ -1,7 +1,8 @@
 1.2.3b
 - Added more tentative prepwork for Act 3, both in the code and in the templates
-- Fixed folder names not being translatable in the Cybergrind music menu
-- Fixed the 'Unlocked' status for music not being translatable
+- Added the style bonus 'Overkill'
+- Added folder names in the Cybergrind music menu
+- Added the 'Unlocked' status for music in the Cybergrind
 - Fixed a minor issue where some enemy books in the museum missed a line skip
 - Fixed a minor issue in the English template where the added lines for the Act 3 layers were duplicates from Act 2's
 - Fixed a possible issue in the English template where some characters were non-standard, might have conflicted with the used font
