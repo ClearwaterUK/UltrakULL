@@ -59,6 +59,7 @@ namespace UltrakULL
                 case "ultrakill.multikill": { return "<color=orange>" + LanguageManager.CurrentLanguage.style.style_multikill + "</color>"; }
                 case "ultrakill.nailbombed": { return LanguageManager.CurrentLanguage.style.style_nailbombed; }
                 case "ultrakill.nailbombedalive": { return "<color=grey>" + LanguageManager.CurrentLanguage.style.style_nailbombed + "</color>"; }
+                case "ultrakill.overkill": { return LanguageManager.CurrentLanguage.style.style_overkill; }
                 case "ultrakill.parry": { return "<color=lime>" + LanguageManager.CurrentLanguage.style.style_parry + "</color>"; }
                 case "ultrakill.projectileboost": { return "<color=lime>" + LanguageManager.CurrentLanguage.style.style_projectileboost + "</color>"; }
                 case "ultrakill.quickdraw": { return "<color=cyan>" + LanguageManager.CurrentLanguage.style.style_quickdraw + "</color>"; }
@@ -66,8 +67,6 @@ namespace UltrakULL
                 case "ultrakill.secret": { return "<color=cyan>" + LanguageManager.CurrentLanguage.style.style_secret + "</color>"; }
                 case "ultrakill.splattered": { return LanguageManager.CurrentLanguage.style.style_splattered; }
                 case "ultrakill.triplekill": { return "<color=orange>" + LanguageManager.CurrentLanguage.style.style_triplekill + "</color>"; }
-
-                default: return "COULD NOT FIND MATCHING ID";
             }
         }
 
