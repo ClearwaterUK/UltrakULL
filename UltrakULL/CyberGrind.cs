@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -187,35 +187,14 @@ namespace UltrakULL
             cgMusicSoundtrackCancel.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustomBack;
 
             GameObject cgMusicSoundtrackAddMenu = GetGameObjectChild(GetGameObjectChild(cgMusicSoundtrack,"ImageSelectionWrapper"),"ImageSelector");
-            //Changes all folders' own names based on their original name
-            foreach (Transform child in cgMusicSoundtrackAddMenu.transform)
-            {
-                if (this.name == "FolderTemplate(Clone)")
-                {
-                    Text cgMusicSoundtrackFolderTitle = GetTextfromGameObject(GetGameObjectChild(this,"Text"));
-                    switch (cgMusicSoundtrackFolderTitle.text)
-                    {
-                        case "THE CYBER GRIND": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameCyberGrind; }
-                        case "PRELUDE": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNamePrelude; }
-                        case "ACT 1": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameAct1; }
-                        case "ACT 2": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameAct2; }
-                        case "ACT 3": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameAct3; } //For when the act 3 folder gets added, currently shouldn't get activated
-                        case "SECRET LEVELS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameSecret; }
-                        case "PRIME SANCTUMS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNamePrime; }
-                        case "MISCELLANEOUS TRACKS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameMisc; }
-                            
-                        default: { return "Unknown folder name"; }
-                    }
-                }
-            }
 
             //Changes the "UNLOCKED" string under songs that are unlocked
-            foreach (Transform child in cgMusicSoundtrackAddMenu.transform)
+            foreach (GameObject child in cgMusicSoundtrackAddMenu.transform)
             {
-                if (this.name == "SongTemplate(Clone)")
+                if (child.name == "SongTemplate(Clone)")
                 {
-                    Text cgMusicSoundtrackTask = GetTextfromGameObject(GetGameObjectChild(this,"Cost"));
-                    if (cgMusicSoundtrackTask.text == "UNLOCKED") { cgMusicSoundtrackTask.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicUnlocked; }
+                    Text cgMusicSoundtrackTask = GetTextfromGameObject(GetGameObjectChild(child, "Cost"));
+                    if (cgMusicSoundtrackTask.text == "<i>UNLOCKED</i>") { cgMusicSoundtrackTask.text = "<i>" + LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicUnlocked + "/<i>"; }
                 }
             }
             
@@ -288,12 +267,42 @@ namespace UltrakULL
                 LanguageManager.CurrentLanguage.cyberGrind.cybergrind_wavesDescription2;
             cgTerminalWavesText.fontSize = 16;
         }
+
+        public static string PatchTerminalFolder()
+        {
+            //Changes all folders' own names based on their original name
+            GameObject level = GameObject.Find("FirstRoom");
+            GameObject cgTerminal = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(level, "Room"), "CyberGrindSettings"), "Canvas");
+            GameObject cgMusicSoundtrack = GetGameObjectChild(GetGameObjectChild(cgTerminal, "SoundtrackMusic"), "Panel");
+            GameObject cgMusicSoundtrackAddMenu = GetGameObjectChild(GetGameObjectChild(cgMusicSoundtrack, "ImageSelectionWrapper"), "ImageSelector");
+            foreach (GameObject child in cgMusicSoundtrackAddMenu.transform)
+            {
+                if (child.name == "FolderTemplate(Clone)")
+                {
+                    Text cgMusicSoundtrackFolderTitle = GetTextfromGameObject(GetGameObjectChild(child, "Text"));
+                    switch (cgMusicSoundtrackFolderTitle.text)
+                    {
+                        case "THE CYBER GRIND": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameCyberGrind; }
+                        case "PRELUDE": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNamePrelude; }
+                        case "ACT 1": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameAct1; }
+                        case "ACT 2": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameAct2; }
+                        case "ACT 3": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameAct3; } //For when the act 3 folder gets added, currently shouldn't get activated
+                        case "SECRET LEVELS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameSecret; }
+                        case "PRIME SANCTUMS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNamePrime; }
+                        case "MISCELLANEOUS TRACKS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameMisc; }
+
+                        default: { return "Unknown folder name"; }
+                    }
+                }
+            }
+            return "Missing folder reference";
+        }
         public static void PatchCg()
         {
             PatchWaveBoard();
             PatchResults();
             PatchTerminal();
+            PatchTerminalFolder();
         }
-
     }
 }
