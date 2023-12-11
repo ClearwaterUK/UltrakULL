@@ -1,6 +1,7 @@
 1.2.3b:
 
 ADDED:
+style: overkill
 cybergrind: musicFolderName(CyberGrind, Prelude, Act1, Act2, Act3, Secret, Prime, Misc)
 shop: moneyCount, lotsOfMoney
 misc: hellmap_act3(crescendo, climax)
