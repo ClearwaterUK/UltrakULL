@@ -320,6 +320,7 @@ namespace UltrakULL.json
         public string style_mauriced;
         public string style_multikill;
         public string style_nailbombed;
+        public string style_overkill;
         public string style_parry;
         public string style_projectileboost;
         public string style_quickdraw;
