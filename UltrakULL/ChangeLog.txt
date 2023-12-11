@@ -5,6 +5,7 @@
 - Fixed a minor issue where some enemy books in the museum missed a line skip
 - Fixed a minor issue in the English template where the added lines for the Act 3 layers were duplicates from Act 2's
 - Fixed a possible issue in the English template where some characters were non-standard, might have conflicted with the used font
+- Fixed the style bonus 'Limbshot' never showing up
 - Corrected a minor mistake in the English template in Francis' quote where a space was missing
 - Corrected a minor mistake in the English template in Quetzal's title on her Museum plate where it was claimed she was a composer instead of a musician
 
