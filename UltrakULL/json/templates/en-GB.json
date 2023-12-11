@@ -517,6 +517,7 @@
         "style_mauriced": "MAURICED",
         "style_multikill": "MULTIKILL",
         "style_nailbombed": "NAILBOMBED",
+	"style_overkill": "OVERKILL",
         "style_parry": "PARRY",
         "style_projectileboost": "PROJECTILE BOOST",
         "style_quickdraw": "QUICKDRAW",
