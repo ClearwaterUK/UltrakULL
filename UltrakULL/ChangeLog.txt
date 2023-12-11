@@ -20,6 +20,7 @@ Thank you so much to Flazhik for the contribution!
 - Fixed a couple of repeating lines in the Act 1 intermission.
 - Fixed 5-3's shop not being translated.
 Thank you to BitKoven for these contributions!
+- Fixed Flyingdog's museum book text not appearing.
 - Fixed a missing fifth line in Salad's book of the blank template.
 - Fixed a typo in Minos Prime's intro in the English template.
 
