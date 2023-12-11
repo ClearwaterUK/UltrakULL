@@ -67,6 +67,8 @@ namespace UltrakULL
                 case "ultrakill.secret": { return "<color=cyan>" + LanguageManager.CurrentLanguage.style.style_secret + "</color>"; }
                 case "ultrakill.splattered": { return LanguageManager.CurrentLanguage.style.style_splattered; }
                 case "ultrakill.triplekill": { return "<color=orange>" + LanguageManager.CurrentLanguage.style.style_triplekill + "</color>"; }
+
+                default: return "";
             }
         }
 
