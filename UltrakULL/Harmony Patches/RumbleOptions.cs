@@ -15,6 +15,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool RumbleOptionsFullname(ref string key)
         {
+            if(isUsingEnglish())
+            {
+                return true;
+            }
             switch (key)
             {
                 case "rumble.coin_toss": {key = LanguageManager.CurrentLanguage.options.rumble_coinToss;break;}

@@ -16,6 +16,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void LevelStatsStart_Postfix(LevelStats __instance, StatsManager ___sman)
         {
+            if(isUsingEnglish())
+            {
+                return;
+            }
             if (__instance.secretLevel)
             {
                 __instance.levelName.text = LanguageManager.CurrentLanguage.frontend.chapter_secretMission;
@@ -49,6 +53,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void CheckStats_Postfix(LevelStats __instance, StatsManager ___sman)
         {
+            if(isUsingEnglish())
+            {
+                return;
+            }
             if (__instance.challenge)
             {
                 if (MonoSingleton<ChallengeManager>.Instance.challengeDone && !MonoSingleton<ChallengeManager>.Instance.challengeFailed)

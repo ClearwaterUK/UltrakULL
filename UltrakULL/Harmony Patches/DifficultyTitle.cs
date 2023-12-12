@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using UltrakULL.json;
 using System;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.Harmony_Patches
 {
     //@Override
@@ -13,6 +15,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool Check_MyPatch(DifficultyTitle __instance, Text ___txt)
         {
+            if(isUsingEnglish())
+            {
+                return false;
+            }
             try
             {
                 int @int = MonoSingleton<PrefsManager>.Instance.GetInt("difficulty", 0);

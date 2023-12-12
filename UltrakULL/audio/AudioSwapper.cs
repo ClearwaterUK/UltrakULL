@@ -5,6 +5,8 @@ using UltrakULL.json;
 using UnityEngine;
 using UnityEngine.Networking;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.audio
 {
     public static class AudioSwapper
@@ -14,6 +16,10 @@ namespace UltrakULL.audio
         
         public static AudioClip SwapClipWithFile(AudioClip sourceClip, string audioFilePath)
         {
+            if(isUsingEnglish())
+            {
+                return sourceClip;
+            }
             string file = "file://" + audioFilePath + ".ogg";
             Logging.Message("Swapping: " + file);
 

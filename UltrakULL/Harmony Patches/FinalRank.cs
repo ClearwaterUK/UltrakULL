@@ -2,6 +2,8 @@
 using UltrakULL.json;
 using UnityEngine.UI;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.Harmony_Patches
 {
     //@Override
@@ -12,6 +14,11 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool SetInfo_MyPatch(int restarts, bool damage, bool majorUsed, bool cheatsUsed, FinalRank __instance, bool ___noRestarts, bool ___majorAssists, bool ___noDamage)
         {
+            if(isUsingEnglish())
+            {
+                return false;
+            }
+            
             __instance.extraInfo.text = "";
             int num = 1;
             if (!damage)

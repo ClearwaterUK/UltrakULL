@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Lifetime;
+using static UltrakULL.CommonFunctions;
+
 
 namespace UltrakULL.Harmony_Patches
 {
@@ -16,7 +18,11 @@ namespace UltrakULL.Harmony_Patches
             [HarmonyPrefix]
             public static bool CybergrindJukeboxCompleteLevelRequirementPatch(ref UnlockCondition.HasCompletedLevelChallenge __instance, ref string __result)
             {
-                __result = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicCompleteChallengeRequirement + " " + GetMissionName.GetMissionNumberOnly(__instance.levelIndex);
+                if(!isUsingEnglish())
+                {
+                    __result = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicCompleteChallengeRequirement + " " + GetMissionName.GetMissionNumberOnly(__instance.levelIndex);
+                }
+
    
                 return false;
             }
@@ -31,7 +37,11 @@ namespace UltrakULL.Harmony_Patches
             [HarmonyPrefix]
             public static bool CybergrindJukeboxCompleteLevelRequirementPatch(ref UnlockCondition.HasSeenEnemy __instance, ref string __result)
             {
-                __result = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicSeeEnemyRequirement;
+                if(!isUsingEnglish())
+                {
+                    __result = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicSeeEnemyRequirement;
+                }
+
                 return false;
             }
         }
@@ -45,7 +55,10 @@ namespace UltrakULL.Harmony_Patches
             [HarmonyPrefix]
             public static bool CybergrindJukeboxUnlockLevelRequirementPatch(ref UnlockCondition.HasReachedLevel __instance, ref string __result)
             {
-                __result = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicUnlockLevelRequirement;
+                if(!isUsingEnglish())
+                {
+                 __result = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicUnlockLevelRequirement;
+                }
                 return false;
             }
         }
@@ -59,7 +72,10 @@ namespace UltrakULL.Harmony_Patches
             [HarmonyPrefix]
             public static bool CybergrindJukeboxCompleteLevelRequirementPatch(ref UnlockCondition.HasCompletedLevel __instance, ref string __result)
             {
-                __result = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicCompleteLevelRequirement + " " +  GetMissionName.GetMissionNumberOnly(__instance.levelIndex);
+                if(!isUsingEnglish())
+                {
+                    __result = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicCompleteLevelRequirement + " " +  GetMissionName.GetMissionNumberOnly(__instance.levelIndex);
+                }
                 return false;
             }
         }
@@ -73,7 +89,10 @@ namespace UltrakULL.Harmony_Patches
             [HarmonyPrefix]
             public static bool CybergrindJukeboxCompleteSecretLevelRequirementPatch(ref UnlockCondition.HasCompletedSecretLevel __instance, ref string __result)
             {
-                __result = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicCompleteLevelRequirement + " " + __instance.secretLevelIndex + "-S";
+                if(!isUsingEnglish())
+                {
+                    __result = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicCompleteLevelRequirement + " " + __instance.secretLevelIndex + "-S";
+                }
                 return false;
             }
         }

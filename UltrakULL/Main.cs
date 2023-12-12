@@ -81,6 +81,8 @@ namespace UltrakULL
         //Most of the hook logic and checks go in this function.
         public void onSceneLoaded(Scene scene, LoadSceneMode mode)
         {
+            
+            
             if (!this.ready || LanguageManager.CurrentLanguage == null)
             {
                 Logging.Error("UltrakULL has been deactivated to prevent crashing. Check the console for any errors!");

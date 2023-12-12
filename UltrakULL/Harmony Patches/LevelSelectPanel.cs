@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using System;
 using System.Linq;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.Harmony_Patches
 {
     //@Override
@@ -15,6 +17,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void CheckScore_MyPatchPostFix(LevelSelectPanel __instance)
         {
+            if(isUsingEnglish())
+            {
+                return;
+            }
             int num = __instance.levelNumber;
             RankData rank = GameProgressSaver.GetRank(num, false);
 

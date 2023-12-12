@@ -4,6 +4,8 @@ using UltrakULL.audio;
 using UltrakULL.json;
 using UnityEngine;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.Harmony_Patches.AudioSwaps
 {
     [HarmonyPatch(typeof(Gabriel),"Start")]
@@ -12,16 +14,12 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
         [HarmonyPostfix]
         public static void Gabriel_VoiceSwap(ref Gabriel __instance, ref GabrielVoice ___voice)
         {
-            if(LanguageManager.configFile.Bind("General","activeDubbing","False").Value == "False")
+            if(LanguageManager.configFile.Bind("General","activeDubbing","False").Value == "False" || isUsingEnglish())
                 return;
-
+            
             string gabeFirstFolder =  AudioSwapper.SpeechFolder + "gabrielBossFirst" + Path.DirectorySeparatorChar;
             
             //Taunts
-            
-            //Going to redo this.
-            //Going to change it from taunt1, taunt2, taunt3 etc so each file name is more easily recognisable.
-            // "GabeYouMakeEven", "GaveYouAreOutclassed" etc.
             AudioClip[] gabeTaunts = ___voice.taunt;
             
             //Line order is based on line order of the, so it's not alphabetical.

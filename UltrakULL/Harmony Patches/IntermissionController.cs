@@ -16,6 +16,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool Start_MyPatch(IntermissionController __instance, ref string ___preText, ref string ___fullString, ref Text ___txt)
         {
+            if(isUsingEnglish())
+            {
+                return true;
+            }
             ___txt = __instance.GetComponent<Text>();
             ___fullString = ___txt.text;
             ___txt.text = "";

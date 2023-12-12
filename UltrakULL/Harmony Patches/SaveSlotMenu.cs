@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 using UltrakULL.json;
 
+using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL.Harmony_Patches
 {
@@ -15,6 +16,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void UpdateSlotState_Postfix(SlotRowPanel targetPanel, SaveSlotMenu.SlotData data)
         {
+            if(isUsingEnglish())
+            {
+                return;
+            }
             bool flag = GameProgressSaver.currentSlot == targetPanel.slotIndex;
             targetPanel.selectButton.GetComponentInChildren<Text>().text = (flag ? LanguageManager.CurrentLanguage.options.save_selected : LanguageManager.CurrentLanguage.options.save_select);
             targetPanel.stateLabel.text = SaveToString(data.exists, data.highestLvlNumber, data.highestDifficulty);
@@ -67,6 +72,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void ClearSlotPostfix_MyPatch(int slot, Text ___wipeConsentContent)
         {
+            if(isUsingEnglish())
+            {
+                return;
+            }
             ___wipeConsentContent.text = string.Format(LanguageManager.CurrentLanguage.options.save_deleteWarning1 + " <color=red>" + LanguageManager.CurrentLanguage.options.save_deleteWarning2 + " {0}</color>?", slot + 1);
         }
     }

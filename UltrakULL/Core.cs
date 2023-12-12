@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Net.Http;
 using System.Threading.Tasks;
+using HarmonyLib;
 using Newtonsoft.Json;
 using UltrakULL.json;
 using static UltrakULL.CommonFunctions;
@@ -170,6 +171,8 @@ namespace UltrakULL
         
         public static void HandleSceneSwitch(Scene scene,ref GameObject canvas)
         {
+
+            
             //Logging.Message("Switching scenes...");
             string levelName = GetCurrentSceneName();
             if(levelName == "Intro" || levelName == "Bootstrap")
@@ -230,7 +233,7 @@ namespace UltrakULL
                         //Warn of a language that doesn't match the mod version
                         if (!LanguageManager.FileMatchesMinimumRequiredVersion(LanguageManager.CurrentLanguage.metadata.minimumModVersion, MainPatch.GetVersion()))
                         {
-                            ultrakullLogoText.text += "\n<color=orange>Language version\noutdated.\nPlease update the\nlanguage file\nif one is available!</color>";
+                            ultrakullLogoText.text += "\n<color=orange>This language file\nwas created for\nan older version of\nUltrakULL.\nPlease check for\nan update to this file!</color>";
                         }
                         //Warn of a failed updated check
                         else if (!(updateAvailable) && updateFailed)
@@ -243,6 +246,12 @@ namespace UltrakULL
 
                     default:
                     {
+                        if (isUsingEnglish())
+                        {
+                            Logging.Warn("Current language is English, not patching.");
+                            return;
+                        }
+                        
                         Logging.Message("Regular scene");
                         Logging.Message("Attempting to patch base elements");
                         PatchPauseMenu(ref canvasObj);
@@ -314,7 +323,7 @@ namespace UltrakULL
             await Task.Delay(250);
             if (GetCurrentSceneName() == "Main Menu")
             {
-                //Open Language Folder button in Options->Langauge
+                //Open Language Folder button in Options->Language
                 Text openLangFolderText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj,"OptionsMenu"), "Language Page"),"Scroll Rect (1)"),"Contents"),"OpenLangFolder"),"Slot Text")); 
                 openLangFolderText.text = "<color=#03fc07>Open language folder</color>";
 

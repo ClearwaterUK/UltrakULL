@@ -9,6 +9,7 @@ Thank you to lenarikil for the contribution!
 - Added an indicator showing what language is currently being used in the language options.
 - Changed the audio format used for dubbing from .wav to .ogg, resulting in a significant reduce in file size.
 (NOTE: Voice actors, you will need to convert your files from .wav to .ogg!)
+- Setting the active language to English will now effectively deactivate the mod, not making it use any specific language file.
 - Changed a few audio file names related to bosses to make recognizing them easier. This should also fix the problem with MDK+Owl's lines all being jumbled.
 - Fixed the "language" button in the options appearing over the save panel menu when the latter was opened.
 - Moved the "language" button in the options from the top-left to the bottom-right to prevent conflicting with any other mods that use the top-left space.

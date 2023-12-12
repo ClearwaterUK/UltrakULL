@@ -19,6 +19,10 @@ namespace UltrakULL.Harmony_Patches
             [HarmonyPostfix]
             public static void LevelLeaderboardPatch_Postfix(ref Text ___anyPercentLabel, ref Text ___pRankLabel, ref GameObject ___noItemsPanel)
             {
+                if(isUsingEnglish())
+                {
+                    return;
+                }
                 LeaderboardProperties.Difficulties[0] = LanguageManager.CurrentLanguage.frontend.difficulty_harmless;
                 LeaderboardProperties.Difficulties[1] =  LanguageManager.CurrentLanguage.frontend.difficulty_lenient;
                 LeaderboardProperties.Difficulties[2] =  LanguageManager.CurrentLanguage.frontend.difficulty_standard;
@@ -38,6 +42,10 @@ namespace UltrakULL.Harmony_Patches
             [HarmonyPostfix]
             public static void LevelLeaderboardEndPatch_Postfix(ref bool ___displayPRank, ref Text ___leaderboardType, ref GameObject ___loadingPanel)
             {
+                if(isUsingEnglish())
+                {
+                    return;
+                }
                 ___leaderboardType.text = (___displayPRank ? LanguageManager.CurrentLanguage.frontend.leaderboard_pPercent : LanguageManager.CurrentLanguage.frontend.leaderboard_anyPercent);
                 
                 Text connecting = GetTextfromGameObject(___loadingPanel);

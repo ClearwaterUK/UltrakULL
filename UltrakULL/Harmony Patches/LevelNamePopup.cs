@@ -1,5 +1,7 @@
 ﻿using HarmonyLib;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.Harmony_Patches
 {
     //@Override
@@ -10,6 +12,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool NameAppear_MyPatch(LevelNamePopup __instance, ref string ___layerString, ref string ___nameString)
         {
+            if(isUsingEnglish())
+            {
+                return false;
+            }
             ___layerString = TitleManager.GetLayer(___layerString);
             ___nameString = TitleManager.GetName(___nameString);
 

@@ -14,7 +14,10 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
         [HarmonyPostfix]
         public static void Respawn_SwapperFix()
         {
-            SubtitledAudioSourcesReplacer.ReplaceSubsAndAudio();
+            if(!isUsingEnglish())
+            {
+                SubtitledAudioSourcesReplacer.ReplaceSubsAndAudio();
+            }
         }
     }
 }

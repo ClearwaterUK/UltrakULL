@@ -12,11 +12,15 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void FishingHUDPatch_Postfix(ref GameObject ___outOfWaterMessage, ref GameObject ___hookedContainer)
         {
-            Text outOfWaterText = GetTextfromGameObject(GetGameObjectChild(___outOfWaterMessage,"Text"));
-            outOfWaterText.text = LanguageManager.CurrentLanguage.fishing.fish_outOfWater;
+            if(!isUsingEnglish())
+            {
+                Text outOfWaterText = GetTextfromGameObject(GetGameObjectChild(___outOfWaterMessage,"Text"));
+                outOfWaterText.text = LanguageManager.CurrentLanguage.fishing.fish_outOfWater;
             
-            Text hookedText = GetTextfromGameObject(GetGameObjectChild(___hookedContainer,"Text"));
-            hookedText.text = LanguageManager.CurrentLanguage.fishing.fish_rodHooked;
+                Text hookedText = GetTextfromGameObject(GetGameObjectChild(___hookedContainer,"Text"));
+                hookedText.text = LanguageManager.CurrentLanguage.fishing.fish_rodHooked;
+            }
+            
         }
     }
 
@@ -26,6 +30,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void ShowFish_Postfix(ref Text ___fishCaughtText,ref GameObject ___fishSizeContainer,bool show = true, FishObject fish = null)
         {
+            if(isUsingEnglish())
+            {
+                return;
+            }
             if(show && fish != null)
             {
                 string fishName = "";
@@ -108,6 +116,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void DisplayWaterType_Postfix(ref FishDB __instance)
         {
+            if(!isUsingEnglish())
+            {
+                return;
+            }
             switch(__instance.fullName)
             {
                 case "The Ocean": {__instance.fullName = LanguageManager.CurrentLanguage.fishing.fish_ocean; break;}
@@ -130,6 +142,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool SelectFish_Prefix(ref FishObject fish, FishEncyclopedia __instance)
         {
+            if(!isUsingEnglish())
+            {
+                return false;
+            }
             switch(fish.fishName)
             {
                 case "Funny Stupid Fish (Friend)":

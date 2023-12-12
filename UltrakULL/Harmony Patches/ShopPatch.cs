@@ -13,6 +13,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void shopPatch(ShopZone __instance, ref Canvas ___shopCanvas)
         { 
+            if(isUsingEnglish())
+            {
+                return;
+            }
             if(___shopCanvas != null)
             {
                 Text origTip = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(___shopCanvas.gameObject,"TipBox"),"Panel"),"TipText"));

@@ -5,6 +5,8 @@ using System;
 
 using UltrakULL.json;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.Harmony_Patches
 {
 
@@ -14,6 +16,11 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool Update_MyPatch(HudMessage __instance, Image ___img, Text ___text)
         {
+            if(isUsingEnglish())
+            {
+                return false;
+            }
+            
             if(___img != null && ___text != null)
             {
                 return true;
@@ -28,7 +35,11 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool SendHudMessage_Prefix(ref string newmessage, string newinput = "", string newmessage2 = "", int delay = 0, bool silent = false)
         {
-            newmessage = HUDMessages.GetHUDToolTip(newmessage);
+            if(!isUsingEnglish())
+            {
+                newmessage = HUDMessages.GetHUDToolTip(newmessage);
+            }
+            
             return true;
         }
     }
@@ -41,6 +52,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void PlayMessage_MyPatch(HudMessage __instance, bool ___activated, HudMessageReceiver ___messageHud, Text ___text, Image ___img)
         {
+            if(isUsingEnglish())
+            {
+                return;
+            }
             //The HUD display uses 2 kinds of messages.
             //One for messages that displays KeyCode inputs (for controls), and one that doesn't.
             //Get the string table based on the area of the game we're currently in.
