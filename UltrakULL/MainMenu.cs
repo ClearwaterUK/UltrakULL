@@ -228,7 +228,7 @@ namespace UltrakULL
         {
             GameObject chapterObject = GetGameObjectChild(frontEnd, "Chapter Select");
             Text chapterText = GetTextfromGameObject(chapterObject.transform.Find("Title (1)").gameObject);
-            chapterText.text = LanguageManager.CurrentLanguage.frontend.chapter_title;
+            chapterText.text = "--" + LanguageManager.CurrentLanguage.frontend.chapter_title + "--";
 
             GameObject preludeObject = GetGameObjectChild(chapterObject, "Prelude");
             Text preludeText = GetTextfromGameObject(preludeObject.transform.Find("Name").gameObject);
