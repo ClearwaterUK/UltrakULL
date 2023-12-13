@@ -5,6 +5,8 @@ using UltrakULL.audio;
 using UltrakULL.json;
 using UnityEngine;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.Harmony_Patches.AudioSwaps
 {
     [HarmonyPatch(typeof(Mandalore),"Start")]
@@ -15,7 +17,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
         {
             try
             {
-                if(LanguageManager.configFile.Bind("General","activeDubbing","False").Value == "False")
+                if(LanguageManager.configFile.Bind("General","activeDubbing","False").Value == "False" || isUsingEnglish())
                 {
                     return;
                 }

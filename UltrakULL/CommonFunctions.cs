@@ -13,6 +13,11 @@ namespace UltrakULL
 {
     public static class CommonFunctions
     {
+        public static bool isUsingEnglish()
+        {
+            return (LanguageManager.CurrentLanguage.metadata.langDisplayName == "English");
+        }
+        
         public static ColorBlock UkButtonColors = new ColorBlock()
         {
             normalColor = new Color(0, 0, 0, 0.512f),

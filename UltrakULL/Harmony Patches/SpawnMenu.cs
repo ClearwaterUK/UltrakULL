@@ -2,6 +2,8 @@
 using HarmonyLib;
 using UltrakULL.json;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.Harmony_Patches
 {
     //@Override
@@ -12,6 +14,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool CreateButtons_Prefix(SpawnableObject[] list, ref string sectionName, ref SpawnMenu __instance)
         {
+            if(isUsingEnglish())
+            {
+                return true;
+            }
             switch(sectionName)
             {
                 case "SANDBOX TOOLS :^)": { sectionName = LanguageManager.CurrentLanguage.misc.spawner_sandboxTools; break; }

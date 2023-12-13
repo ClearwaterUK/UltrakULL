@@ -15,6 +15,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void BuildSavesMenu_Postfix(ref SandboxHud __instance, ref SandboxSaveItem ___sandboxSaveTemplate)
         {
+            if(isUsingEnglish())
+            {
+                return;
+            }
             GameObject canvas = GetInactiveRootObject("Canvas");
             
             GameObject dupeSaveList = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas,"Cheat Menu"),"Sandbox Saves"),"Scroll View"),"Viewport"),"Content");
@@ -44,6 +48,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void SandboxShopPatch_Postfix(StatsDisplay __instance, ref Text ___textContent)
         {
+            if(isUsingEnglish())
+            {
+                return;
+            }
             SandboxStats sandboxStats = SteamController.Instance.GetSandboxStats();
             ___textContent.text = string.Format("<color=orange>{0}</color> - " + LanguageManager.CurrentLanguage.sandbox.sandbox_shop_totalBoxes + "\n",sandboxStats.brushesBuilt)
                                   + string.Format("<color=orange>{0}</color> - " + LanguageManager.CurrentLanguage.sandbox.sandbox_shop_totalProps +  "\n",sandboxStats.propsSpawned)
@@ -58,6 +66,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void sandboxWorldOptions_Postfix(ref WorldOptions __instance, Text ___borderStatus, Text ___buttonText, bool ___isBorderOn)
         {
+            if(isUsingEnglish())
+            {
+                return;
+            }
             ___borderStatus.text = (___isBorderOn ? LanguageManager.CurrentLanguage.sandbox.sandbox_shop_worldOptionsEnabled : LanguageManager.CurrentLanguage.sandbox.sandbox_shop_worldOptionsDisabled);
             ___buttonText.text = (___isBorderOn ? LanguageManager.CurrentLanguage.sandbox.sandbox_shop_worldOptionsEnable : LanguageManager.CurrentLanguage.sandbox.sandbox_shop_worldOptionsDisable);
         }
@@ -69,6 +81,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool sandboxAlterOptionsTitles_Prefix(ref string name)
         {
+            if(isUsingEnglish())
+            {
+                return true;
+            }
             switch (name)
             {
                 case "enemy": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_boss_title; break;}
@@ -87,6 +103,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool sandboxAlterOptions_Prefix(ref string name, bool initialState, Action<bool> callback, AlterMenuElements __instance)
         {
+            if(isUsingEnglish())
+            {
+                return true;
+            }
             switch (name)
             {
                 case "Boss Health Bar": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_boss_description; break;}

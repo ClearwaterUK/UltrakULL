@@ -1,6 +1,8 @@
 ﻿using HarmonyLib;
 using System.Collections.Generic;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.Harmony_Patches
 {
     //@Override
@@ -12,6 +14,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool GetLocalizedName_MyPatch(string id, StyleHUD __instance, Dictionary<string, string> ___idNameDict, ref string __result)
         {
+            if(isUsingEnglish())
+            {
+                return true;
+            }
             if (___idNameDict.ContainsKey(id))
             {
                 __result = StyleBonusStrings.GetStyleBonusDictionary(id);

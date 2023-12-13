@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 using UltrakULL.json;
 
+using static UltrakULL.CommonFunctions;
+
 
 namespace UltrakULL.Harmony_Patches
 {
@@ -14,6 +16,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void UpdateMoney_Postfix(VariationInfo __instance, int ___money, bool ___alreadyOwned, Text ___buttonText)
         {
+            if(isUsingEnglish())
+            {
+                return;
+            }
             if (!___alreadyOwned)
             {
                 if (__instance.cost < 0)

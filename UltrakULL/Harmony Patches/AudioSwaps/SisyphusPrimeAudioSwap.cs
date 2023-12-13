@@ -13,7 +13,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
         [HarmonyPostfix]
         public static void SisyphusPrimeAudioSwapPatch(ref SisyphusPrime __instance)
         {
-            if(LanguageManager.configFile.Bind("General","activeDubbing","False").Value == "False")
+            if(LanguageManager.configFile.Bind("General","activeDubbing","False").Value == "False" || isUsingEnglish())
             {
                 return;
             }

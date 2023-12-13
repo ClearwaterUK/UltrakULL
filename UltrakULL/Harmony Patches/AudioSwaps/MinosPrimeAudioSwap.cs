@@ -4,6 +4,8 @@ using UltrakULL.audio;
 using UltrakULL.json;
 using UnityEngine;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.Harmony_Patches.AudioSwaps
 {
     [HarmonyPatch(typeof(MinosPrime),"Start")]
@@ -12,7 +14,7 @@ namespace UltrakULL.Harmony_Patches.AudioSwaps
         [HarmonyPostfix]
         public static void MinosPrime_VoiceSwap(ref MinosPrime __instance)
         {
-            if(LanguageManager.configFile.Bind("General","activeDubbing","False").Value == "False")
+            if(LanguageManager.configFile.Bind("General","activeDubbing","False").Value == "False" || isUsingEnglish())
             {
                 return;
             }

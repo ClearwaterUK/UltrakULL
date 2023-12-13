@@ -2,6 +2,8 @@
 using UltrakULL.json;
 using UnityEngine;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.Harmony_Patches
 {
     //@Override
@@ -12,6 +14,11 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool RicoshotPointsCheck_MyPatch(Coin __instance, GameObject ___altBeam, bool ___wasShotByEnemy, StyleHUD ___shud, EnemyIdentifier ___eid)
         {
+            if(isUsingEnglish())
+            {
+                return true;
+            }
+            
             string text = "";
             int num = 50;
             RevolverBeam revolverBeam;

@@ -1,6 +1,8 @@
 ﻿using HarmonyLib;
 using UltrakULL.json;
 
+using static UltrakULL.CommonFunctions;
+
 namespace UltrakULL.Harmony_Patches
 {
     //@Override
@@ -11,6 +13,11 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void OnEnablePostFix_MyPatch(GunColorTypeGetter __instance)
         {
+            if(isUsingEnglish())
+            {
+                return;
+            }
+            
             for (int i = 1; i < 5; i++)
             {
                 bool flag = GameProgressSaver.GetTotalSecretsFound() >= GunColorController.requiredSecrets[i];

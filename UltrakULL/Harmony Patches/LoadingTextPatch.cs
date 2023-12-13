@@ -23,8 +23,12 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void LoadingTextPatch_Postfix(Scene scene, LoadSceneMode mode, ref SceneHelper __instance, ref GameObject ___loadingBlocker)
         {
-            loadingText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(___loadingBlocker,"Panel"),"Text"));
-            loadingText.text = LanguageManager.CurrentLanguage.misc.loading;
+            if(!isUsingEnglish())
+            {
+                loadingText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(___loadingBlocker,"Panel"),"Text"));
+                loadingText.text = LanguageManager.CurrentLanguage.misc.loading;
+            }
+
             
         }
     }

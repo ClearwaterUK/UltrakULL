@@ -15,13 +15,13 @@ using System.Reflection;
  *  Additional code contributions by Temperz87, Flazhik, BitKoven, CoatlessAli and others
  *  Translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 8th July 2023
+ *	Last updated: 30th October 2023
  *	
  *	A translation mod for Ultrakill that hooks into the game and allows for text/string replacement. This tool is primarily meant to assist with language translation.
  * 
  *  -- LONG-TERM TASK LIST --
  * Better error handling
- * Bundle submitted voice packs with language downloads
+ * Bundle submitted voice packs with language downloads (EternalUnion recommends Google Drive)
  * Sit down and finish audio documentation
  * Figure out why online language browser breaks sometimes. Seems to happen at random with no singular cause. Quick game restart usually fixes.
  * Clean up logging, redirect or simplify non-breaking warnings & errors.
@@ -29,12 +29,18 @@ using System.Reflection;
  * Swap rank textures in HUD for translated ones (there's already a mod that allows this. Will need to either integrate or copy code from it)
  * 
  * -- STUFF FOR NEXT UPDATE --
+ * Update the Github language board yet again...
  
  * -- REPORTED STUFF TO INVESTIGATE --
  * Spawning MDK+Owl while noclipped causes a crash. Function that's causing it: MandaloreSubtitlesSwap->Mandalore_Start
  *  * Offending transpiler lines have been commented out for now. Waiting for Flazhik to look at and fix.
  * 
+ * -- TESTING REPORTS --
+ * Some ogg files apparantly not playing correctly (Checked Spanish pack that Lukah sent, seems to be working fine... Will keep an eye on.)
+ * "Home or ~" cheat string not translated
  *
+ *
+ * VIOLENCE COMING THIS MONTH. BE READY FOR STUFF TO BREAK COMPLETELY.
  * */
 
 namespace UltrakULL
@@ -74,6 +80,8 @@ namespace UltrakULL
         //Most of the hook logic and checks go in this function.
         public void onSceneLoaded(Scene scene, LoadSceneMode mode)
         {
+            
+            
             if (!this.ready || LanguageManager.CurrentLanguage == null)
             {
                 Logging.Error("UltrakULL has been deactivated to prevent crashing. Check the console for any errors!");

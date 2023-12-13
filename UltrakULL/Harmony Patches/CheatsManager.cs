@@ -17,6 +17,11 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPostfix]
         public static void RebuildMenu_Postfix()
         {
+            if(isUsingEnglish())
+            {
+                return;
+            }
+            
             GameObject canvas = GetInactiveRootObject("Canvas");
 
             GameObject cheatMenu = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas, "Cheat Menu"), "Cheats Manager"), "Scroll View"), "Viewport");

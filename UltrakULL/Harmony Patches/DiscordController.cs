@@ -17,6 +17,10 @@ namespace UltrakULL.Harmony_Patches
         {
             if (___activityManager == null) // I don't know how this happens, but it somehow does?
                 return false;
+            if(isUsingEnglish())
+            {
+                return false;
+            }
             //Details: Contains total style if in a normal level or wave number if in CG.
             if (GetCurrentSceneName() != "Main Menu")
             {

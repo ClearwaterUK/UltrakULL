@@ -14,6 +14,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool ScanBook_MyPatch(ref string text, bool noScan, int instanceId, ScanningStuff __instance)
         {
+            if(isUsingEnglish())
+            {
+                return true;
+            }
             GameObject canvas = GetInactiveRootObject("Canvas");
 
             Text scanningText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas, "ScanningStuff"), "ScanningPanel"), "Text"));

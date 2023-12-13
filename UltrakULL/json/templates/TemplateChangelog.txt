@@ -17,6 +17,7 @@ leveltips: leveltips_violence(first-fourth), leveltips_fraud(first-fourth), leve
 MODIFIED:
 
 devMuseum: museum_plaquesQuetzalTirado -> museum_plaquesQuetzalTirado2
+devMuseum: museum_booktoniFlyingDog -> museum_bookFlyingDog
 
 1.2.2:
 

@@ -14,6 +14,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool IntroTextStart_MyPatch(IntroText __instance, Text ___txt, string ___fullString)
         {
+            if(isUsingEnglish())
+            {
+                return true;
+            }
             GameObject canvasObj = GetInactiveRootObject("Canvas");
             ___txt = __instance.GetComponent<Text>();
 
