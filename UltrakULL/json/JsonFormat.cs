@@ -1536,11 +1536,13 @@ namespace UltrakULL.json
         public string levelName_violenceSecond;
         public string levelName_violenceThird;
         public string levelName_violenceFourth;
+        public string levelName_violenceSecret;
 
         public string levelName_fraudFirst;
         public string levelName_fraudSecond;
         public string levelName_fraudThird;
         public string levelName_fraudFourth;
+        public string levelName_fraudSecret;
 
         public string levelName_treacheryFirst;
         public string levelName_treacherySecond;

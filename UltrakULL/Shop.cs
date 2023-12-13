@@ -126,6 +126,9 @@ namespace UltrakULL
         {
             try
             {
+                
+                //weapons
+                GameObject shopWeaponsObject  = GetGameObjectChild(shopObject,"Weapons");
                 //Points (P)
                 Text weaponMoney = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "Panel"), "Money"));
                 int currentMoney = GameProgressSaver.GetMoney();
@@ -133,8 +136,7 @@ namespace UltrakULL
                 { weaponMoney.text = LanguageManager.CurrentLanguage.shop.shop_lotsOfMoney; }
                 else { weaponMoney.text = currentMoney + LanguageManager.CurrentLanguage.shop.shop_moneyCount; }
 
-                //weapons
-                GameObject shopWeaponsObject  = GetGameObjectChild(shopObject,"Weapons");
+
 
                 Text weaponBackText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "BackButton (1)"), "Text"));
                 weaponBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
