@@ -29,7 +29,6 @@ using System.Reflection;
  * Swap rank textures in HUD for translated ones (there's already a mod that allows this. Will need to either integrate or copy code from it)
  * 
  * -- STUFF FOR NEXT UPDATE --
- * If English is selected, just disable the mod entirely. No need to actually maintain an English "language" that way.
  * Update the Github language board yet again...
  
  * -- REPORTED STUFF TO INVESTIGATE --

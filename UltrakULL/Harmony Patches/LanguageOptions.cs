@@ -111,10 +111,17 @@ namespace UltrakULL.Harmony_Patches
             langBrowserTitle.resizeTextForBestFit = true;
             
             Transform contentParent = langBrowserPage.transform.Find("Scroll Rect (1)").Find("Contents");
+            int amountOfLangs = 0;
             foreach (Transform child in contentParent.GetComponentInChildren<Transform>(true))
+            {
                 child.gameObject.SetActive(false);
+                amountOfLangs++;
+            }
             VerticalLayoutGroup vGroup = contentParent.GetComponent<VerticalLayoutGroup>();
-            vGroup.spacing = 7.5f;
+            contentParent.GetComponentInChildren<RectTransform>().offsetMax += new Vector2(0, (amountOfLangs/2)*70);
+                
+            vGroup.spacing = 5f;
+            
             vGroup.childAlignment = TextAnchor.UpperCenter;
 
             GameObject languageButtonPrefab = optionsParent.Find("Save Slots").Find("Grid").Find("Slot Row").gameObject;
