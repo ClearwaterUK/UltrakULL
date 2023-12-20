@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using TMPro;
 using UltrakULL.json;
 using UnityEngine.UI;
 
@@ -10,11 +11,11 @@ namespace UltrakULL.Harmony_Patches
     public static class LevelNameFinderTranslation
     {
         [HarmonyPostfix]
-        public static void OnEnable_Postfix(LevelNameFinder __instance, Text ___targetText)
+        public static void OnEnable_Postfix(LevelNameFinder __instance, TextMeshProUGUI ___txt)
         {
             if(!isUsingEnglish())
             {
-                ___targetText.text = "<color=red>" + LanguageManager.CurrentLanguage.shop.shop_cybergrindReturningTo + "</color>:\n" + LevelNames.GetLevelName(__instance.otherLevelNumber);
+                ___txt.text = "<color=red>" + LanguageManager.CurrentLanguage.shop.shop_cybergrindReturningTo + "</color>:\n" + LevelNames.GetLevelName(__instance.otherLevelNumber);
             }
            
         }

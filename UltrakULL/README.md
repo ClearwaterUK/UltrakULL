@@ -24,10 +24,10 @@ This mod's primary purpose is to bridge the gap for localization and translation
 
 # Download & Installation
 
-UltrakULL and can be be obtained either through the [Releases page](https://github.com/ClearwaterTM/UltrakULL/releases) (*recommended*),
+UltrakULL can be obtained either through the [Releases page](https://github.com/ClearwaterTM/UltrakULL/releases) (*recommended*),
 or via the [UltrakULL Discord.](https://discord.gg/ZB7jk6Djv5)
 
-The only prerequisite is a Steam version of ULTRAKILL. <br>**Demo, GOG.com and cracked versions are NOT supported.**
+The only prerequisite is an up-to-date Steam version of ULTRAKILL. <br>**Demo, GOG.com and cracked versions are NOT supported.**
 
 ## Installation via Thunderstore
 
@@ -54,7 +54,7 @@ Installing UltrakULL via GitHub is divided into 2 parts:
 
 ### Usage
 
-- If the mod has loaded correctly, you will see a new "Languages" tab in the Options menu.
+- If the mod has loaded correctly, you will see a new "Languages" tab in the Options menu, in the bottom-right hand corner.
   <img src="https://cdn.discordapp.com/attachments/472691871806652429/1037354187341701130/unknown.png" alt="drawing" width="550"/>
 - From the Languages tab, you can browse available translations for the game by selecting the "Browse Languages Online" button. Additionally, language files that are locally installed in the mod folder will be detected and made available for selection any available language based on the language files UltrakULL has found, and will load them into the game.
 
@@ -74,7 +74,7 @@ Restart the game after applying either steps for your use case.
 
 # Languages
 
-## Languages available & fully compatible with latest game version
+## Languages available
 
 | Language            | Contributors                                                                                                                       | Notes                                  |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
@@ -82,7 +82,7 @@ Restart the game after applying either steps for your use case.
 | Russian (русский)   | Nessie_A_WA97, D4N5T3P, Edith Bagel, lrddd, Brainy-Stormie, TwinT, towelie84, mctaylors, Solidus Cumcer, Filin, Ega1232387, Khowst |                                        |
 | Filipino (Pilipino) | mxkyle, MecanicWithAPistol, FinnianNiko                                                                                            |                                        |
 
-## Languages available but not fully compatible with latest game version
+## Languages available but not fully compatible with latest game version (TODO: MERGE BELOW INTO ABOVE)
 
 | Language                                 | Contributors                                                                         | Last update | Notes                                |
 |------------------------------------------|--------------------------------------------------------------------------------------|-------------|--------------------------------------|
@@ -94,7 +94,7 @@ Restart the game after applying either steps for your use case.
 | Simplified Chinese (简体中文)                | Hydracerynitis, ciinore, duke325, ponyweeb, Skugra, GoGoblin                         | Act 2       |                                      |
 | Turkish (Türkçe)                         | Legitname1337, Ömer Talha, RTE, Ray_, legio, Scape, Neige,$ERTU$TAUPTOWN             | Act 2       |                                      |
 
-## Languages in development
+## Languages in development (TODO: MOVE ACTUAL FINISHED LANGS, AND DELETE THIS)
 
 | Language                      | Contributors                                                    | Notes |
 |-------------------------------|-----------------------------------------------------------------|-------|
@@ -184,19 +184,17 @@ GitHub documentation coming in future. Until then, documentation on how to creat
 can be found in the [UltrakULL Discord.](https://discord.gg/ZB7jk6Djv5)
 
 # Building
-
-Build instructions coming in future.
+###  (This info is for developers. If you only want to play/use the mod, you do not need to read this.)
+1) Clone the repository.<br>`git clone https://github.com/ClearwaterUK/UltrakULL`
+2) Set ULTRAKILLPath as an environment variable, which points to your game installation. <br> This is used to automatically acquire any necessary .dll files from the game location to build the mod.
+On Windows: (INSERT PICTURE HERE)
+3) Open the project solution in Visual Studio or Rider.
+4) Build the solution. The solution will automatically set up the folder structure, and will drop compiled mod as a DLL.dll file into BepInEx/plugins/UltrakULL.<br>
+If you have any language templates or dubbing audio files, the project will automatically copy those to config/ultrakull.
+5) Drop all the generated files and folders into `[Your Steam folder]/steamapps/common/ULTRAKILL/`
 
 # Credits & Contributors
-UltrakULL created by **[Clearwater](https://github.com/ClearwaterTM)**\
-Additional code contributions by **[Temperz87](https://github.com/Temperz87/)** & **[CoatlessAli](https://github.com/coatlessali)**\
-Documentation contributions by Frizou \
-Language translations by members of the **UltrakULL Translation Team** (view the [Languages](#Languages) section for full information and crediting)\
-ULTRAKILL created by **Arsi 'Hakita' Patala** and published by **New Blood Interactive**
-
-UltrakULL uses the following libraries:
-- [JSON.Net](https://github.com/JamesNK/Newtonsoft.Json) by [NewtonSoft](https://www.newtonsoft.com/json), licenced under the MIT Licence.
-- [arabic-support-unity](https://github.com/Konash/arabic-support-unity) by [Konash](https://github.com/Konash), licenced under the MIT licence.
+View CREDITS.md for full crediting information.
 
 # Links
 

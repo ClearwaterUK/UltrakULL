@@ -40,7 +40,13 @@ using System.Reflection;
  * "Home or ~" cheat string not translated
  *
  *
- * VIOLENCE COMING THIS MONTH. BE READY FOR STUFF TO BREAK COMPLETELY.
+ * -- VIOLENCE DAMAGE REPORT --
+ * Text elements now use TextMeshPro and variants
+ * Options->PatchControlOptions needs to be COMPLETELY redone.
+ * Options->PatchColorOptions has new entries.
+ * LocalizeGameProgressCheck
+ *
+ * Virtually everything in-level is busted.
  * */
 
 namespace UltrakULL

@@ -10,11 +10,11 @@ namespace UltrakULL.Harmony_Patches
     public static class LocalizeBossBar
     {
         [HarmonyPrefix]
-        public static bool CreateBossBar_MyPatch(ref string bossName)
+        public static bool CreateBossBar_MyPatch(ref BossHealthBar bossBar)
         {
             if(!isUsingEnglish())
             {
-                bossName = BossStrings.GetBossName(bossName);
+                bossBar.bossName = BossStrings.GetBossName(bossBar.source.FullName);
             }
             return true;
         }

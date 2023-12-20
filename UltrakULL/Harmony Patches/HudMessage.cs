@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-
+using TMPro;
 using UltrakULL.json;
 
 using static UltrakULL.CommonFunctions;
@@ -50,7 +50,7 @@ namespace UltrakULL.Harmony_Patches
     public static class LocalizeHudMessage
     {
         [HarmonyPostfix]
-        public static void PlayMessage_MyPatch(HudMessage __instance, bool ___activated, HudMessageReceiver ___messageHud, Text ___text, Image ___img)
+        public static void PlayMessage_MyPatch(HudMessage __instance, bool ___activated, HudMessageReceiver ___messageHud, TMP_Text ___text, Image ___img)
         {
             if(isUsingEnglish())
             {
@@ -62,34 +62,35 @@ namespace UltrakULL.Harmony_Patches
             
             ___messageHud = MonoSingleton<HudMessageReceiver>.Instance;
             ___text = ___messageHud.text;
-            if (__instance.input == "")
+            if(__instance.actionReference == null)
             {
                 string newMessage = StringsParent.GetMessage(__instance.message, __instance.message2, "");
                 ___text.text = newMessage;
             }
+            
             else
             {
-                string controlButton;
+                string controlButton = "FixHudMessage.cs pls!";
                 try
                 {
-                    KeyCode keyCode = MonoSingleton<InputManager>.Instance.Inputs[__instance.input];
+                    /*string keyCode =  MonoSingleton<InputManager>.Instance.GetBindingString(__instance.actionReference.action.id);
 
-                    if (keyCode == KeyCode.Mouse0)
+                    if (keyCode == KeyCode.Mouse0.ToString())
                     {
                         controlButton = LanguageManager.CurrentLanguage.misc.controls_leftClick;
                     }
-                    else if (keyCode == KeyCode.Mouse1)
+                    else if (keyCode == KeyCode.ToString())
                     {
                         controlButton = LanguageManager.CurrentLanguage.misc.controls_rightClick;
                     }
-                    else if (keyCode == KeyCode.Mouse2)
+                    else if (keyCode == KeyCode.ToString())
                     {
                         controlButton = LanguageManager.CurrentLanguage.misc.controls_middleClick;
                     }
                     else
                     {
                         controlButton = keyCode.ToString();
-                    }
+                    }*/
                 }
                 catch (Exception e)
                 {

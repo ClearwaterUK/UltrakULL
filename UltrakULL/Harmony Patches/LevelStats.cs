@@ -13,8 +13,10 @@ namespace UltrakULL.Harmony_Patches
     [HarmonyPatch(typeof(LevelStats), "Start")]
     public static class LocalizeLevelStatNames
     {
+        private static StatsManager sman = MonoSingleton<StatsManager>.Instance;
+        
         [HarmonyPostfix]
-        public static void LevelStatsStart_Postfix(LevelStats __instance, StatsManager ___sman)
+        public static void LevelStatsStart_Postfix(LevelStats __instance)//, StatsManager ___sman)
         {
             if(isUsingEnglish())
             {
@@ -30,11 +32,11 @@ namespace UltrakULL.Harmony_Patches
                 __instance.levelName.text = ((instance != null) ? instance.levelName : "???");
             }
             RankData rankData = null;
-            if (___sman.levelNumber != 0 && !Debug.isDebugBuild)
+            if (sman.levelNumber != 0 && !Debug.isDebugBuild)
             {
                 rankData = GameProgressSaver.GetRank(true);
             }
-            if (___sman.levelNumber != 0 && (Debug.isDebugBuild || (rankData != null && rankData.levelNumber == ___sman.levelNumber)))
+            if (sman.levelNumber != 0 && (Debug.isDebugBuild || (rankData != null && rankData.levelNumber == sman.levelNumber)))
             {
                 StockMapInfo instance2 = StockMapInfo.Instance;
                 if (instance2 != null)
@@ -50,8 +52,10 @@ namespace UltrakULL.Harmony_Patches
     [HarmonyPatch(typeof(LevelStats), "CheckStats")]
     public static class LocalizeStatsScreen
     {
+        private static StatsManager sman = MonoSingleton<StatsManager>.Instance;
+        
         [HarmonyPostfix]
-        public static void CheckStats_Postfix(LevelStats __instance, StatsManager ___sman)
+        public static void CheckStats_Postfix(LevelStats __instance)
         {
             if(isUsingEnglish())
             {
@@ -70,7 +74,7 @@ namespace UltrakULL.Harmony_Patches
             }
             if (__instance.majorAssists)
             {
-                if (___sman.majorUsed)
+                if (sman.majorUsed)
                 {
                     __instance.majorAssists.text = "<color=#4C99E6>" + LanguageManager.CurrentLanguage.misc.state_yes + "</color>";
                     return;

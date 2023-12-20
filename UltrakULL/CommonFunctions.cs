@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
 using HarmonyLib;
+using TMPro;
 using UltrakULL.json;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -191,6 +192,11 @@ namespace UltrakULL
         public static Text GetTextfromGameObject(GameObject objectToUse)
         {
             return objectToUse.GetComponent<Text>();
+        }
+
+        public static TextMeshProUGUI GetTextMeshProUGUI(GameObject objectToUse)
+        {
+            return objectToUse.GetComponent<TextMeshProUGUI>();
         }
         
         public static IEnumerable<CodeInstruction> IL(params (OpCode, object)[] instructions)

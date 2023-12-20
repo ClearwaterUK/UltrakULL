@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static UltrakULL.CommonFunctions;
@@ -33,19 +34,19 @@ namespace UltrakULL
                 christmasText.text = "<color=red>--" + LanguageManager.CurrentLanguage.frontend.mainmenu_christmas + "--</color>";
 
                 //Play button
-                Text playButtonText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(titleObject, "Continue"), "Text"));
+                TextMeshProUGUI playButtonText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(titleObject, "Continue"), "Text"));
                 playButtonText.text = LanguageManager.CurrentLanguage.frontend.mainmenu_play;
 
                 //Options button
-                Text optionsButtontext = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(titleObject, "Options"), "Text"));
+                TextMeshProUGUI optionsButtontext = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(titleObject, "Options"), "Text"));
                 optionsButtontext.text = LanguageManager.CurrentLanguage.frontend.mainmenu_options;
 
                 //Credits button
-                Text creditsButtontext = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(titleObject, "Credits"), "Text"));
+                TextMeshProUGUI creditsButtontext = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(titleObject, "Credits"), "Text"));
                 creditsButtontext.text = LanguageManager.CurrentLanguage.frontend.mainmenu_credits;
 
                 //Quit button
-                Text quitButtontext = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(titleObject, "Quit"), "Text"));
+                TextMeshProUGUI quitButtontext = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(titleObject, "Quit"), "Text"));
                 quitButtontext.text = LanguageManager.CurrentLanguage.frontend.mainmenu_quit;
 
                 //UMM buttons

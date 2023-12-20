@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using TMPro;
 using UltrakULL.json;
 
 using static UltrakULL.CommonFunctions;
@@ -11,7 +12,7 @@ namespace UltrakULL.Harmony_Patches
     public static class LocalizeGunColorTypeShop
     {
         [HarmonyPostfix]
-        public static void OnEnablePostFix_MyPatch(GunColorTypeGetter __instance)
+        public static void OnEnablePostFix_MyPatch(GunColorTypeGetter __instance, TMP_Text[] ___templateTexts)
         {
             if(isUsingEnglish())
             {
@@ -23,7 +24,7 @@ namespace UltrakULL.Harmony_Patches
                 bool flag = GameProgressSaver.GetTotalSecretsFound() >= GunColorController.requiredSecrets[i];
                 if (!flag)
                 {
-                    __instance.templateTexts[i].text = string.Concat(new object[]
+                    ___templateTexts[i].text = string.Concat(new object[]
                     {
                         LanguageManager.CurrentLanguage.shop.shop_soulOrbs + ": ",
                         GameProgressSaver.GetTotalSecretsFound(),

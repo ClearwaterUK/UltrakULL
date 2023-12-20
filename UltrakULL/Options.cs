@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -16,213 +17,216 @@ namespace UltrakULL
         private void PatchGeneralOptions(GameObject generalOptions)
         {
             //General options
-            Text generalText = GetTextfromGameObject(GetGameObjectChild(generalOptions, "Text"));
+            TextMeshProUGUI generalText = GetTextMeshProUGUI(GetGameObjectChild(generalOptions, "Text"));
             generalText.text = "--" + LanguageManager.CurrentLanguage.options.category_general + "--";
 
             GameObject generalContent = GetGameObjectChild(GetGameObjectChild(generalOptions, "Scroll Rect (1)"), "Contents");
 
-            Text mouseSensitivityText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Mouse Sensitivity"), "Text"));
+            TextMeshProUGUI mouseSensitivityText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(generalContent, "Mouse Sensitivity"), "Text"));
             mouseSensitivityText.text = LanguageManager.CurrentLanguage.options.general_mouseSensitivity;
 
-            Text invertXAxisText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Invert Axis"), "Text"));
+            TextMeshProUGUI invertXAxisText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(generalContent, "Invert Axis"), "Text"));
             invertXAxisText.text = LanguageManager.CurrentLanguage.options.general_xInversion;
 
-            Text invertYAxisText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Invert Axis"), "Text (1)"));
+            TextMeshProUGUI invertYAxisText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(generalContent, "Invert Axis"), "Text (1)"));
             invertYAxisText.text = LanguageManager.CurrentLanguage.options.general_yInversion;
 
-            Text fovText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "FOV"), "Text"));
+            TextMeshProUGUI fovText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(generalContent, "FOV"), "Text"));
             fovText.text = LanguageManager.CurrentLanguage.options.general_fieldOfVision;
 
-            Text weaponPosText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Weapon Position"), "Text"));
+            TextMeshProUGUI weaponPosText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(generalContent, "Weapon Position"), "Text"));
             weaponPosText.text = LanguageManager.CurrentLanguage.options.general_weaponPosition;
             
             //Have to patch directly from the Dropdown.OptionData list.
             GameObject weaponPosList = GetGameObjectChild(GetGameObjectChild(generalContent, "Weapon Position"), "Dropdown");
-            Dropdown weaponPosDropdown = weaponPosList.GetComponent<Dropdown>();
-            List<Dropdown.OptionData> weaponPosListText = weaponPosDropdown.options;
+            TMP_Dropdown weaponPosDropdown = weaponPosList.GetComponent<TMP_Dropdown>();
+            List<TMP_Dropdown.OptionData> weaponPosListText = weaponPosDropdown.options;
             weaponPosListText[0].text = LanguageManager.CurrentLanguage.options.general_weaponPositionRight;
             weaponPosListText[1].text = LanguageManager.CurrentLanguage.options.general_weaponPositionMiddle;
             weaponPosListText[2].text = LanguageManager.CurrentLanguage.options.general_weaponPositionLeft;
 
-            Text rememberWeaponText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Variation Memory"), "Text"));
+            TextMeshProUGUI rememberWeaponText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(generalContent, "Variation Memory"), "Text"));
             rememberWeaponText.text = LanguageManager.CurrentLanguage.options.general_rememberWeapon;
 
-            Text screenshakeText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Screenshake"), "Text"));
+            TextMeshProUGUI screenshakeText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(generalContent, "Screenshake"), "Text"));
             screenshakeText.text = LanguageManager.CurrentLanguage.options.general_screenShake;
 
             SliderValueToText screenshakeSlider = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(generalContent, "Screenshake"), "Button"), "Slider (1)"), "Text (2)").GetComponentInChildren<SliderValueToText>();
             screenshakeSlider.ifMin = LanguageManager.CurrentLanguage.options.general_screenShakeMinimum;
             screenshakeSlider.ifMax = LanguageManager.CurrentLanguage.options.general_screenShakeMaximum;
 
-            Text controllerRumbleText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Controller Rumble"), "Text"));
+            TextMeshProUGUI controllerRumbleText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(generalContent, "Controller Rumble"), "Text"));
             controllerRumbleText.text = LanguageManager.CurrentLanguage.options.general_controllerRumble;
             
-            Text controllerRumbleTextCustomize =  GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(generalContent, "Controller Rumble"),"Select"), "Text"));
+            TextMeshProUGUI controllerRumbleTextCustomize =  GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(generalContent, "Controller Rumble"),"Select"), "Text"));
             controllerRumbleTextCustomize.text = LanguageManager.CurrentLanguage.options.general_controllerRumbleCustomize;
             
-            Text restartWarningText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Restart Warning"), "Text"));
+            TextMeshProUGUI restartWarningText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(generalContent, "Restart Warning"), "Text"));
             restartWarningText.text = LanguageManager.CurrentLanguage.options.general_restartWarning;
 
-            Text cameraTiltText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Camera Tilt"), "Text"));
+            TextMeshProUGUI cameraTiltText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(generalContent, "Camera Tilt"), "Text"));
             cameraTiltText.text = LanguageManager.CurrentLanguage.options.general_cameraTilt;
 
-            Text discordText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Discord Integration"), "Text"));
+            TextMeshProUGUI discordText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(generalContent, "Discord Integration"), "Text"));
             discordText.text = LanguageManager.CurrentLanguage.options.general_discordRpc;
 
-            Text seasonEventText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Seasonal Events"), "Text"));
+            TextMeshProUGUI seasonEventText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(generalContent, "Seasonal Events"), "Text"));
             seasonEventText.text = LanguageManager.CurrentLanguage.options.general_seasonalEvent;
             
-            Text levelLeaderboardsText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(generalContent, "Level Leaderboards"), "Text"));
+            TextMeshProUGUI levelLeaderboardsText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(generalContent, "Level Leaderboards"), "Text"));
             levelLeaderboardsText.text = LanguageManager.CurrentLanguage.options.general_levelLeaderboards;
         }
         private void PatchControlOptions(GameObject optionsMenu)
         {
+                //THIS NEEDS TO BE COMPLETELY REDONE.
+            
                 //Control options
-
-                Text controlText = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text (1)"));
+                /*TextMeshProUGUI controlText = GetTextMeshProUGUI(GetGameObjectChild(optionsMenu, "Text (1)"));
                 controlText.text = "--"+ LanguageManager.CurrentLanguage.options.category_controls + "--";
 
                 GameObject controlContent = GetGameObjectChild(GetGameObjectChild(optionsMenu, "Scroll Rect"), "Contents");
 
-                Text resetToDefaultText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(controlContent, "Default"), "Text"));
+                TextMeshProUGUI resetToDefaultText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Default"), "Text"));
                 resetToDefaultText.text = LanguageManager.CurrentLanguage.options.controls_resetDefault;
 
-                Text movementText = GetTextfromGameObject(GetGameObjectChild(controlContent, "Text"));
+                TextMeshProUGUI movementText = GetTextMeshProUGUI(GetGameObjectChild(controlContent, "Text"));
                 movementText.text = "--"+ LanguageManager.CurrentLanguage.options.controls_movement+"--";
 
-                Text moveforwardText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(controlContent, "Forward"), "Text"));
+                TextMeshProUGUI moveforwardText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Forward"), "Text"));
                 moveforwardText.text = LanguageManager.CurrentLanguage.options.controls_forward;
 
-                Text movebackText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(controlContent, "Back"), "Text"));
+                TextMeshProUGUI movebackText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Back"), "Text"));
                 movebackText.text = LanguageManager.CurrentLanguage.options.controls_back;
 
-                Text moveleftText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(controlContent, "Left"), "Text"));
+                TextMeshProUGUI moveleftText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Left"), "Text"));
                 moveleftText.text = LanguageManager.CurrentLanguage.options.controls_left;
 
-                Text moverightText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(controlContent, "Right"), "Text"));
+                TextMeshProUGUI moverightText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Right"), "Text"));
                 moverightText.text = LanguageManager.CurrentLanguage.options.controls_right;
 
-                Text jumpText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(controlContent, "Jump"), "Text"));
+                TextMeshProUGUI jumpText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Jump"), "Text"));
                 jumpText.text = LanguageManager.CurrentLanguage.options.controls_jump;
 
-                Text dashText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(controlContent, "Dash"), "Text"));
+                TextMeshProUGUI dashText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Dash"), "Text"));
                 dashText.text = LanguageManager.CurrentLanguage.options.controls_dash;
 
-                Text actionsText = GetTextfromGameObject(GetGameObjectChild(controlContent, "Text (1)"));
+                TextMeshProUGUI actionsText = GetTextMeshProUGUI(GetGameObjectChild(controlContent, "Text (1)"));
                 actionsText.text = "--"+ LanguageManager.CurrentLanguage.options.controls_actions+ "--";
 
-                Text primaryFireText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(controlContent, "Fire"), "Text"));
+                TextMeshProUGUI primaryFireText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Fire"), "Text"));
                 primaryFireText.text = LanguageManager.CurrentLanguage.options.controls_primaryFire;
 
-                Text secondaryFireText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(controlContent, "Alt Fire"), "Text"));
+                TextMeshProUGUI secondaryFireText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Alt Fire"), "Text"));
                 secondaryFireText.text = LanguageManager.CurrentLanguage.options.controls_secondaryFire;
                 secondaryFireText.fontSize = 11;
 
-                Text punchText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(controlContent, "Punch"), "Text"));
+                TextMeshProUGUI punchText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Punch"), "Text"));
                 punchText.text = LanguageManager.CurrentLanguage.options.controls_punch;
                 punchText.fontSize = 12;
 
-                Text lastUsedWeaponText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(controlContent, "Last Used Weapon"), "Text"));
+                TextMeshProUGUI lastUsedWeaponText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Last Used Weapon"), "Text"));
                 lastUsedWeaponText.text = LanguageManager.CurrentLanguage.options.controls_lastUsedWeapon;
                 lastUsedWeaponText.fontSize = 10;
 
-                Text switchVariationText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(controlContent, "Change Variation"), "Text"));
+                TextMeshProUGUI switchVariationText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Change Variation"), "Text"));
                 switchVariationText.text = LanguageManager.CurrentLanguage.options.controls_changeVariation;
                 switchVariationText.fontSize = 11;
 
-                Text switchArmText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(controlContent, "Change Arm"), "Text"));
+                TextMeshProUGUI switchArmText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Change Arm"), "Text"));
                 switchArmText.text = LanguageManager.CurrentLanguage.options.controls_changeArm;
                 switchArmText.fontSize = 11;
 
-                Text slideText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(controlContent, "Slide"), "Text"));
+                TextMeshProUGUI slideText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Slide"), "Text"));
                 slideText.text = LanguageManager.CurrentLanguage.options.controls_slide;
 
-                Text whiplashText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(controlContent, "Whiplash"), "Text"));
+                TextMeshProUGUI whiplashText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Whiplash"), "Text"));
                 whiplashText.text = LanguageManager.CurrentLanguage.options.controls_whiplash;
 
                 GameObject weaponSettings = GetGameObjectChild(controlContent, "Weapons Settings");
 
-                Text weaponSettingsText = GetTextfromGameObject(GetGameObjectChild(weaponSettings, "Text (1)"));
+                TextMeshProUGUI weaponSettingsText = GetTextMeshProUGUI(GetGameObjectChild(weaponSettings, "Text (1)"));
                 weaponSettingsText.text = "--"+ LanguageManager.CurrentLanguage.options.controls_weapons + "--";
 
-                Text slot1Text = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(weaponSettings, "Slot 1"),"Text"));
+                TextMeshProUGUI slot1Text = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(weaponSettings, "Slot 1"),"Text"));
                 slot1Text.text = LanguageManager.CurrentLanguage.options.controls_slot1;
 
-                Text slot2Text = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(weaponSettings, "Slot 2"), "Text"));
+                TextMeshProUGUI slot2Text = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(weaponSettings, "Slot 2"), "Text"));
                 slot2Text.text = LanguageManager.CurrentLanguage.options.controls_slot2;
 
-                Text slot3Text = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(weaponSettings, "Slot 3"), "Text"));
+                TextMeshProUGUI slot3Text = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(weaponSettings, "Slot 3"), "Text"));
                 slot3Text.text = LanguageManager.CurrentLanguage.options.controls_slot3;
 
-                Text slot4Text = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(weaponSettings, "Slot 4"), "Text"));
+                TextMeshProUGUI slot4Text = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(weaponSettings, "Slot 4"), "Text"));
                 slot4Text.text = LanguageManager.CurrentLanguage.options.controls_slot4;
 
-                Text slot5Text = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(weaponSettings, "Slot 5"), "Text"));
+                TextMeshProUGUI slot5Text = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(weaponSettings, "Slot 5"), "Text"));
                 slot5Text.text = LanguageManager.CurrentLanguage.options.controls_slot5;
-
 
                 GameObject mouseWheelSettings = GetGameObjectChild(weaponSettings, "Mouse Wheel Settings");
 
-                Text scrollTypeText = GetTextfromGameObject(GetGameObjectChild(mouseWheelSettings, "Text (1)"));
+                TextMeshProUGUI scrollTypeText = GetTextMeshProUGUI(GetGameObjectChild(mouseWheelSettings, "Text (1)"));
                 scrollTypeText.text = LanguageManager.CurrentLanguage.options.controls_scrollType;
 
 
                 GameObject scrollTypeList = GetGameObjectChild(mouseWheelSettings, "Dropdown (1)");
 
-                Dropdown scrollTypeDropdown = scrollTypeList.GetComponent<Dropdown>();
-                List<Dropdown.OptionData> scrollTypeDropdownText = scrollTypeDropdown.options;
+                TMP_Dropdown scrollTypeDropdown = scrollTypeList.GetComponent<TMP_Dropdown>();
+                List<TMP_Dropdown.OptionData> scrollTypeDropdownText = scrollTypeDropdown.options;
                 scrollTypeDropdownText[0].text = LanguageManager.CurrentLanguage.options.controls_scrollTypeWeapons;
                 scrollTypeDropdownText[1].text = LanguageManager.CurrentLanguage.options.controls_scrollTypeVariations;
                 scrollTypeDropdownText[2].text = LanguageManager.CurrentLanguage.options.controls_scrollTypeAll;
 
                 GameObject mouseWheelContent = GetGameObjectChild(mouseWheelSettings, "Mouse Wheel to Change Weapon");
 
-                Text changeWeaponMouseWheel = GetTextfromGameObject(GetGameObjectChild(mouseWheelContent, "Text"));
+                TextMeshProUGUI changeWeaponMouseWheel = GetTextMeshProUGUI(GetGameObjectChild(mouseWheelContent, "Text"));
                 changeWeaponMouseWheel.text = LanguageManager.CurrentLanguage.options.controls_mouseWheelToChangeWeapon;
 
-                Text reverseScrollText = GetTextfromGameObject(GetGameObjectChild(mouseWheelSettings, "Text"));
-                reverseScrollText.text = LanguageManager.CurrentLanguage.options.controls_reverseScroll;
+                TextMeshProUGUI reverseScrollText = GetTextMeshProUGUI(GetGameObjectChild(mouseWheelSettings, "Text"));
+                reverseScrollText.text = LanguageManager.CurrentLanguage.options.controls_reverseScroll;*/
         }
         private void PatchGraphicsOptions(GameObject optionsMenu)
         {
+                //Order of elements have changed about
                 //Graphics options
-
-                Text graphicsText = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text (1)"));
+                TextMeshProUGUI graphicsText = GetTextMeshProUGUI(GetGameObjectChild(optionsMenu, "Text (1)"));
                 graphicsText.text = "--"+ LanguageManager.CurrentLanguage.options.category_graphics+ "--";
 
                 GameObject graphicsContent = GetGameObjectChild(GetGameObjectChild(optionsMenu, "Scroll Rect"), "Contents");
 
-                Text resolutionText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Resolution"), "Text"));
+                TextMeshProUGUI resolutionText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Resolution"), "Text"));
                 resolutionText.text = LanguageManager.CurrentLanguage.options.graphics_resolution;
 
-                Text fullscreenText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "FullScreen"), "Text"));
+                TextMeshProUGUI fullscreenText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "FullScreen"), "Text"));
                 fullscreenText.text = LanguageManager.CurrentLanguage.options.graphics_fullscreen;
 
-                Text fpslimitText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Framerate Limiter"), "Text"));
+                TextMeshProUGUI fpslimitText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Framerate Limiter"), "Text"));
                 fpslimitText.text = LanguageManager.CurrentLanguage.options.graphics_maxFps;
 
                 GameObject fpsObject = GetGameObjectChild(GetGameObjectChild(graphicsContent, "Framerate Limiter"), "Dropdown");
-                Dropdown fpsDropdown = fpsObject.GetComponent<Dropdown>();
-                List<Dropdown.OptionData> fpsDropdownListText = fpsDropdown.options;
+                TMP_Dropdown fpsDropdown = fpsObject.GetComponent<TMP_Dropdown>();
+                List<TMP_Dropdown.OptionData> fpsDropdownListText = fpsDropdown.options;
                 fpsDropdownListText[0].text = LanguageManager.CurrentLanguage.options.graphics_maxFpsNone;
                 fpsDropdownListText[1].text = LanguageManager.CurrentLanguage.options.graphics_maxFps2x;
-
-
-                Text vsyncText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "VSync"), "Text"));
+                
+                TextMeshProUGUI vsyncText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "VSync"), "Text"));
                 vsyncText.text = LanguageManager.CurrentLanguage.options.graphics_vsync;
-
-                Text psxFilterSettingsText = GetTextfromGameObject(GetGameObjectChild(graphicsContent, "Text (5)"));
+                
+                TextMeshProUGUI gammaCorrectionText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Gamma Correction"), "Text"));
+                gammaCorrectionText.text = "GAMMA_CORRECTION";
+                
+                TextMeshProUGUI psxFilterSettingsText = GetTextMeshProUGUI(GetGameObjectChild(graphicsContent, "Text (5)"));
                 psxFilterSettingsText.text = "--"+ LanguageManager.CurrentLanguage.options.graphics_filters+"--";
 
-                Text psxFilterSettingsDescription = GetTextfromGameObject(GetGameObjectChild(graphicsContent, "Text (6)"));
-                psxFilterSettingsDescription.text = LanguageManager.CurrentLanguage.options.graphics_filtersDescription;
+                //(Not shown by default anymore, safe to get rid of?)
+                //TextMeshProUGUI psxFilterSettingsDescription = GetTextMeshProUGUI(GetGameObjectChild(graphicsContent, "Text (6)"));
+                //psxFilterSettingsDescription.text = LanguageManager.CurrentLanguage.options.graphics_filtersDescription;
 
-                Text downscalingText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Pixelization"), "Text"));
+                TextMeshProUGUI downscalingText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Pixelization"), "Text"));
                 downscalingText.text = LanguageManager.CurrentLanguage.options.graphics_pixelisation;
 
                 GameObject resolution = GetGameObjectChild(GetGameObjectChild(graphicsContent, "Pixelization"), "Dropdown (1)");
-                Dropdown resolutionDropdown = resolution.GetComponent<Dropdown>();
-                List<Dropdown.OptionData> resolutionDropdownListText = resolutionDropdown.options;
+                TMP_Dropdown resolutionDropdown = resolution.GetComponent<TMP_Dropdown>();
+                List<TMP_Dropdown.OptionData> resolutionDropdownListText = resolutionDropdown.options;
 
                 resolutionDropdownListText[0].text = LanguageManager.CurrentLanguage.options.graphics_pixelisationNone;
                 resolutionDropdownListText[1].text = LanguageManager.CurrentLanguage.options.graphics_pixelisation720p;
@@ -233,21 +237,21 @@ namespace UltrakULL
                 resolutionDropdownListText[6].text = LanguageManager.CurrentLanguage.options.graphics_pixelisation36p;
 
 
-                Text ditheringText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Dithering (1)"), "Text"));
+                TextMeshProUGUI ditheringText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Dithering (1)"), "Text"));
                 ditheringText.text = LanguageManager.CurrentLanguage.options.graphics_dithering;
 
                 SliderValueToText ditheringSlider = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Dithering (1)"), "Button"),"Slider (2)"),"Text (3)").GetComponentInChildren<SliderValueToText>();
                 ditheringSlider.ifMin = LanguageManager.CurrentLanguage.options.graphics_ditheringMinimum;
 
-                Text textureWarpingText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Texture Warping (1)"), "Text"));
+                TextMeshProUGUI textureWarpingText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Texture Warping (1)"), "Text"));
                 textureWarpingText.text = LanguageManager.CurrentLanguage.options.graphics_textureWarping;
 
-                Text vertexWarpingText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Vertex Warping"), "Text"));
+                TextMeshProUGUI vertexWarpingText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Vertex Warping"), "Text"));
                 vertexWarpingText.text = LanguageManager.CurrentLanguage.options.graphics_vertexWarping;
 
                 GameObject vertexWarping = GetGameObjectChild(GetGameObjectChild(graphicsContent, "Vertex Warping"),"Dropdown");
-                Dropdown vertexWarpingDropdown = vertexWarping.GetComponent<Dropdown>();
-                List<Dropdown.OptionData> vertexWarpingDropdownListText = vertexWarpingDropdown.options;
+                TMP_Dropdown vertexWarpingDropdown = vertexWarping.GetComponent<TMP_Dropdown>();
+                List<TMP_Dropdown.OptionData> vertexWarpingDropdownListText = vertexWarpingDropdown.options;
 
                 vertexWarpingDropdownListText[0].text = LanguageManager.CurrentLanguage.options.graphics_vertexWarpingNone;
                 vertexWarpingDropdownListText[1].text = LanguageManager.CurrentLanguage.options.graphics_vertexWarpingLight;
@@ -256,18 +260,18 @@ namespace UltrakULL
                 vertexWarpingDropdownListText[4].text = LanguageManager.CurrentLanguage.options.graphics_vertexWarpingVeryStrong;
                 vertexWarpingDropdownListText[5].text = LanguageManager.CurrentLanguage.options.graphics_vertexWarpingAbsurd;
 
-                Text customColorPalette = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Custom Color Palette"), "Text"));
+                TextMeshProUGUI customColorPalette = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Custom Color Palette"), "Text"));
                 customColorPalette.text = LanguageManager.CurrentLanguage.options.graphics_customColorPalette;
 
                 Text customColorPaletteSelect = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Custom Color Palette"), "Select"),"Text"));
                 customColorPaletteSelect.text = LanguageManager.CurrentLanguage.options.graphics_customColorPaletteSelect;
 
-                Text colorCompressionText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Color Compression"), "Text"));
+                TextMeshProUGUI colorCompressionText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Color Compression"), "Text"));
                 colorCompressionText.text = LanguageManager.CurrentLanguage.options.graphics_colorCompression;
 
                 GameObject colorCompression = GetGameObjectChild(GetGameObjectChild(graphicsContent, "Color Compression"),"Dropdown");
-                Dropdown colorCompressionDropdown = colorCompression.GetComponent<Dropdown>();
-                List<Dropdown.OptionData> colorCompressionDropdownListText = colorCompressionDropdown.options;
+                TMP_Dropdown colorCompressionDropdown = colorCompression.GetComponent<TMP_Dropdown>();
+                List<TMP_Dropdown.OptionData> colorCompressionDropdownListText = colorCompressionDropdown.options;
 
                 colorCompressionDropdownListText[0].text = LanguageManager.CurrentLanguage.options.graphics_colorCompressionNone;
                 colorCompressionDropdownListText[1].text = LanguageManager.CurrentLanguage.options.graphics_colorCompressionLight;
@@ -276,73 +280,73 @@ namespace UltrakULL
                 colorCompressionDropdownListText[4].text = LanguageManager.CurrentLanguage.options.graphics_colorCompressionVeryStrong;
                 colorCompressionDropdownListText[5].text = LanguageManager.CurrentLanguage.options.graphics_colorCompressionAbsurd;
 
-                Text performanceText = GetTextfromGameObject(GetGameObjectChild(graphicsContent, "Text (4)"));
+                TextMeshProUGUI performanceText = GetTextMeshProUGUI(GetGameObjectChild(graphicsContent, "Text (4)"));
                 performanceText.text = "--"+ LanguageManager.CurrentLanguage.options.graphics_performance + "--";
 
-                Text simplifiedExplosionsText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Simplified Explosions"), "Text"));
+                TextMeshProUGUI simplifiedExplosionsText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Simplified Explosions"), "Text"));
                 simplifiedExplosionsText.text = LanguageManager.CurrentLanguage.options.graphics_performanceSimpleExplosions;
 
-                Text simplifiedFireText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Simplified Fire"), "Text"));
+                TextMeshProUGUI simplifiedFireText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Simplified Fire"), "Text"));
                 simplifiedFireText.text = LanguageManager.CurrentLanguage.options.graphics_performanceSimpleFire;
 
-                Text simplifiedSpawnText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Simplified Spawn Effects"), "Text"));
+                TextMeshProUGUI simplifiedSpawnText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Simplified Spawn Effects"), "Text"));
                 simplifiedSpawnText.text = LanguageManager.CurrentLanguage.options.graphics_performanceSimpleSpawn;
 
-                Text disabledParticlesText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Disable Environmental Particles"), "Text"));
+                TextMeshProUGUI disabledParticlesText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Disable Environmental Particles"), "Text"));
                 disabledParticlesText.text = LanguageManager.CurrentLanguage.options.graphics_performanceDisableEnviParticles;
 
-                Text simpleNailPhysicsText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Simple Nail Physics"), "Text"));
+                TextMeshProUGUI simpleNailPhysicsText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Simple Nail Physics"), "Text"));
                 simpleNailPhysicsText.text = LanguageManager.CurrentLanguage.options.graphics_performanceSimpleNails;
 
-                Text goreSettingsText = GetTextfromGameObject(GetGameObjectChild(graphicsContent, "Text (2)"));
+                TextMeshProUGUI goreSettingsText = GetTextMeshProUGUI(GetGameObjectChild(graphicsContent, "Text (2)"));
                 goreSettingsText.text = "--"+ LanguageManager.CurrentLanguage.options.graphics_gore+ "--";
 
-                Text goreSettingsDescription = GetTextfromGameObject(GetGameObjectChild(graphicsContent, "Text (3)"));
+                TextMeshProUGUI goreSettingsDescription = GetTextMeshProUGUI(GetGameObjectChild(graphicsContent, "Text (3)"));
                 goreSettingsDescription.text = LanguageManager.CurrentLanguage.options.graphics_goreNote;
 
-                Text enableBloodandGoreText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "BloodAndGore"), "Text"));
+                TextMeshProUGUI enableBloodandGoreText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "BloodAndGore"), "Text"));
                 enableBloodandGoreText.text = LanguageManager.CurrentLanguage.options.graphics_goreEnable;
 
-                Text freezeGoreText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Freeze Gore"), "Text"));
+                TextMeshProUGUI freezeGoreText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Freeze Gore"), "Text"));
                 freezeGoreText.text = LanguageManager.CurrentLanguage.options.graphics_goreDisablePhysics;
 
-                Text bloodstainChanceText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Bloodstain Chance"), "Text"));
+                TextMeshProUGUI bloodstainChanceText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Bloodstain Chance"), "Text"));
                 bloodstainChanceText.text = LanguageManager.CurrentLanguage.options.graphics_goreBloodChance;
 
-                Text maxBloodText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Max Gore"), "Text"));
+                TextMeshProUGUI maxBloodText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Max Gore"), "Text"));
                 maxBloodText.text = LanguageManager.CurrentLanguage.options.graphics_goreMaxGore;
         }
         private void PatchAudioOptions(GameObject optionsMenu)
         {
             //Audio options
-            Text audioTitle = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text (2)"));
+            TextMeshProUGUI audioTitle = GetTextMeshProUGUI(GetGameObjectChild(optionsMenu, "Text (2)"));
             audioTitle.text = "--" + LanguageManager.CurrentLanguage.options.audio_title + "--";
 
             GameObject audioContent = GetGameObjectChild(optionsMenu, "Image");
 
-            Text subtitlesText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(audioContent, "Subtitles Checkbox"), "Text"));
+            TextMeshProUGUI subtitlesText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(audioContent, "Subtitles Checkbox"), "Text"));
             subtitlesText.text = LanguageManager.CurrentLanguage.options.audio_subtitles;
 
-            Text masterVolumeText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(audioContent, "Master Volume"), "Text"));
+            TextMeshProUGUI masterVolumeText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(audioContent, "Master Volume"), "Text"));
             masterVolumeText.text = LanguageManager.CurrentLanguage.options.audio_globalVolume;
 
-            Text musicVolumeText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(audioContent, "Music Volume"), "Text"));
+            TextMeshProUGUI musicVolumeText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(audioContent, "Music Volume"), "Text"));
             musicVolumeText.text = LanguageManager.CurrentLanguage.options.audio_musicVolume;
         }
         private void PatchHUDOptions(GameObject optionsMenu)
         {
         //HUD options
-                Text hudTitle = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text"));
+                TextMeshProUGUI hudTitle = GetTextMeshProUGUI(GetGameObjectChild(optionsMenu, "Text"));
                 hudTitle.text = "--"+ LanguageManager.CurrentLanguage.options.hud_title + "--";
 
                 GameObject hudContent = GetGameObjectChild(GetGameObjectChild(optionsMenu, "Scroll Rect (1)"), "Contents");
 
-                Text hudTypeText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(hudContent, "HUD Type"), "Text"));
+                TextMeshProUGUI hudTypeText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(hudContent, "HUD Type"), "Text"));
                 hudTypeText.text = LanguageManager.CurrentLanguage.options.hud_type;
 
                 GameObject hudType = GetGameObjectChild(GetGameObjectChild(hudContent, "HUD Type"), "Dropdown");
-                Dropdown hudTypeDropdown = hudType.GetComponent<Dropdown>();
-                List<Dropdown.OptionData> hudTypeDropdownListText = hudTypeDropdown.options;
+                TMP_Dropdown hudTypeDropdown = hudType.GetComponent<TMP_Dropdown>();
+                List<TMP_Dropdown.OptionData> hudTypeDropdownListText = hudTypeDropdown.options;
 
                 hudTypeDropdownListText[0].text = LanguageManager.CurrentLanguage.options.hud_typeNone;
                 hudTypeDropdownListText[1].text = LanguageManager.CurrentLanguage.options.hud_typeStandard;
@@ -350,7 +354,7 @@ namespace UltrakULL
                 hudTypeDropdownListText[3].text = LanguageManager.CurrentLanguage.options.hud_typeClassicWhite;
 
 
-                Text backgroundOpacityText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(hudContent, "Background Opacity"), "Text"));
+                TextMeshProUGUI backgroundOpacityText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(hudContent, "Background Opacity"), "Text"));
                 backgroundOpacityText.text = LanguageManager.CurrentLanguage.options.hud_backgroundOpacity;
 
                 SliderValueToText backgroundOpacitySlider = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(hudContent, "Background Opacity"), "Button"),"Slider (1)").GetComponentInChildren<SliderValueToText>();
@@ -358,52 +362,52 @@ namespace UltrakULL
                 backgroundOpacitySlider.ifMin = LanguageManager.CurrentLanguage.options.hud_backgroundOpacityMinimum;
                 backgroundOpacitySlider.ifMax = LanguageManager.CurrentLanguage.options.hud_backgroundOpacityMaximum;
 
-                Text alwaysOnTopText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(hudContent, "Always On Top"), "Text"));
+                TextMeshProUGUI alwaysOnTopText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(hudContent, "Always On Top"), "Text"));
                 alwaysOnTopText.text = LanguageManager.CurrentLanguage.options.hud_alwaysOnTop;
 
-                Text iconsText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(hudContent, "Icons"), "Text"));
+                TextMeshProUGUI iconsText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(hudContent, "Icons"), "Text"));
                 iconsText.text = LanguageManager.CurrentLanguage.options.hud_icons;
 
-                Text hudElements = GetTextfromGameObject(GetGameObjectChild(hudContent, "-- HUD Elements -- "));
+                TextMeshProUGUI hudElements = GetTextMeshProUGUI(GetGameObjectChild(hudContent, "-- HUD Elements -- "));
                 hudElements.text = "--" + LanguageManager.CurrentLanguage.options.hud_hudElements + "--";
 
-                Text weaponIconText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(hudContent, "Weapon Icon"), "Text"));
+                TextMeshProUGUI weaponIconText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(hudContent, "Weapon Icon"), "Text"));
                 weaponIconText.text = LanguageManager.CurrentLanguage.options.hud_weaponIcon;
 
-                Text armIconText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(hudContent, "Arm Icon"), "Text"));
+                TextMeshProUGUI armIconText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(hudContent, "Arm Icon"), "Text"));
                 armIconText.text = LanguageManager.CurrentLanguage.options.hud_armIcon;
 
-                Text railcannonMeterText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(hudContent, "Railcannon Meter"), "Text"));
+                TextMeshProUGUI railcannonMeterText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(hudContent, "Railcannon Meter"), "Text"));
                 railcannonMeterText.text = LanguageManager.CurrentLanguage.options.hud_railcannonMeter;
 
-                Text styleMeterText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(hudContent, "Style Meter"), "Text"));
+                TextMeshProUGUI styleMeterText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(hudContent, "Style Meter"), "Text"));
                 styleMeterText.text = LanguageManager.CurrentLanguage.options.hud_styleMeter;
 
-                Text styleInfoText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(hudContent, "Style Info"), "Text"));
+                TextMeshProUGUI styleInfoText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(hudContent, "Style Info"), "Text"));
                 styleInfoText.text = LanguageManager.CurrentLanguage.options.hud_styleInfo;
 
                 //Crosshair settings
 
-                Text crosshairTitle = GetTextfromGameObject(GetGameObjectChild(hudContent, "-- Crosshair Settings --"));
+                TextMeshProUGUI crosshairTitle = GetTextMeshProUGUI(GetGameObjectChild(hudContent, "-- Crosshair Settings --"));
                 crosshairTitle.text = "--"+ LanguageManager.CurrentLanguage.options.crosshair_title+ "--";
 
-                Text crosshairTypeText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(hudContent, "Crosshair Type"), "Text"));
+                TextMeshProUGUI crosshairTypeText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(hudContent, "Crosshair Type"), "Text"));
                 crosshairTypeText.text = LanguageManager.CurrentLanguage.options.crosshair_type;
 
                 GameObject crosshairType = GetGameObjectChild(GetGameObjectChild(hudContent, "Crosshair Type"), "Dropdown");
-                Dropdown crosshairTypeDropdown = crosshairType.GetComponent<Dropdown>();
-                List<Dropdown.OptionData> crosshairTypeDropdownListText = crosshairTypeDropdown.options;
+                TMP_Dropdown crosshairTypeDropdown = crosshairType.GetComponent<TMP_Dropdown>();
+                List<TMP_Dropdown.OptionData> crosshairTypeDropdownListText = crosshairTypeDropdown.options;
 
                 crosshairTypeDropdownListText[0].text = LanguageManager.CurrentLanguage.options.crosshair_typeNone;
                 crosshairTypeDropdownListText[1].text = LanguageManager.CurrentLanguage.options.crosshair_typeSmall;
                 crosshairTypeDropdownListText[2].text = LanguageManager.CurrentLanguage.options.crosshair_typeLarge;
 
-                Text crosshairColorText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(hudContent, "Crosshair Color"), "Text"));
+                TextMeshProUGUI crosshairColorText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(hudContent, "Crosshair Color"), "Text"));
                 crosshairColorText.text = LanguageManager.CurrentLanguage.options.crosshair_color;
 
                 GameObject crosshairColor = GetGameObjectChild(GetGameObjectChild(hudContent, "Crosshair Color"), "Dropdown");
-                Dropdown crosshairColorDropdown = crosshairColor.GetComponent<Dropdown>();
-                List<Dropdown.OptionData> crosshairColorDropdownListText = crosshairColorDropdown.options;
+                TMP_Dropdown crosshairColorDropdown = crosshairColor.GetComponent<TMP_Dropdown>();
+                List<TMP_Dropdown.OptionData> crosshairColorDropdownListText = crosshairColorDropdown.options;
 
                 crosshairColorDropdownListText[0].text = LanguageManager.CurrentLanguage.options.crosshair_colorInverted;
                 crosshairColorDropdownListText[1].text = LanguageManager.CurrentLanguage.options.crosshair_colorWhite;
@@ -416,12 +420,12 @@ namespace UltrakULL
                 crosshairColorDropdownListText[8].text = LanguageManager.CurrentLanguage.options.crosshair_colorYellow;
                 crosshairColorDropdownListText[9].text = LanguageManager.CurrentLanguage.options.crosshair_colorMagenta;
 
-                Text crosshairHudSizeText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(hudContent, "Crosshair HUD"), "Text"));
+                TextMeshProUGUI crosshairHudSizeText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(hudContent, "Crosshair HUD"), "Text"));
                 crosshairHudSizeText.text = LanguageManager.CurrentLanguage.options.crosshair_size;
 
                 GameObject crosshairSize = GetGameObjectChild(GetGameObjectChild(hudContent, "Crosshair HUD"), "Dropdown");
-                Dropdown crosshairSizeDropdown = crosshairSize.GetComponent<Dropdown>();
-                List<Dropdown.OptionData> crosshairSizeDropdownListText = crosshairSizeDropdown.options;
+                TMP_Dropdown crosshairSizeDropdown = crosshairSize.GetComponent<TMP_Dropdown>();
+                List<TMP_Dropdown.OptionData> crosshairSizeDropdownListText = crosshairSizeDropdown.options;
 
                 crosshairSizeDropdownListText[0].text = LanguageManager.CurrentLanguage.options.crosshair_sizeNone;
                 crosshairSizeDropdownListText[1].text = LanguageManager.CurrentLanguage.options.crosshair_sizeThin;
@@ -429,19 +433,17 @@ namespace UltrakULL
                 crosshairSizeDropdownListText[3].text = LanguageManager.CurrentLanguage.options.crosshair_sizeThick;
                 crosshairSizeDropdownListText[4].text = LanguageManager.CurrentLanguage.options.crosshair_sizeVeryThick;
 
-
-                Text crosshairHudFadeText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(hudContent, "Crosshair HUD Fade Out"), "Text"));
+                TextMeshProUGUI crosshairHudFadeText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(hudContent, "Crosshair HUD Fade Out"), "Text"));
                 crosshairHudFadeText.text = LanguageManager.CurrentLanguage.options.crosshair_hudFade;
 
-                Text crosshairPowerupText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(hudContent, "Crosshair PowerUp Meter"), "Text"));
+                TextMeshProUGUI crosshairPowerupText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(hudContent, "Crosshair PowerUp Meter"), "Text"));
                 crosshairPowerupText.text = LanguageManager.CurrentLanguage.options.crosshair_powerupBar;
 
         }
         private void PatchAssistOptions(GameObject optionsMenu)
         {
                 //Assist options
-
-                Text assistTitle = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text (1)"));
+                TextMeshProUGUI assistTitle = GetTextMeshProUGUI(GetGameObjectChild(optionsMenu, "Text (1)"));
                 assistTitle.text = "--"+ LanguageManager.CurrentLanguage.options.assists_title + "--";
 
                 GameObject assistMajorAssistPanel = GetGameObjectChild(GetGameObjectChild(optionsMenu, "Panel"),"Panel");
@@ -458,7 +460,6 @@ namespace UltrakULL
 
                 Text assistDisclaimerConfirmText = GetTextfromGameObject(GetGameObjectChild(assistMajorAssistPanel, "Text (1)"));
                 assistDisclaimerConfirmText.text = LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimerConfirm;
-
                 assistDisclaimerConfirmText.fontSize = 24;
 
                 Text assistDisclaimerYesText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistMajorAssistPanel, "Yes"),"Text"));
@@ -469,33 +470,33 @@ namespace UltrakULL
 
                 GameObject assistContent = GetGameObjectChild(GetGameObjectChild(optionsMenu, "Scroll Rect"), "Contents");
 
-                Text assistMinorAssistText = GetTextfromGameObject(GetGameObjectChild(assistContent, "Text (5)"));
+                TextMeshProUGUI assistMinorAssistText = GetTextMeshProUGUI(GetGameObjectChild(assistContent, "Text (5)"));
                 assistMinorAssistText.text = "--"+ LanguageManager.CurrentLanguage.options.assists_minor +"--";
 
-                Text assistAutoAimText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistContent, "Auto Aim"),"Text (1)"));
+                TextMeshProUGUI assistAutoAimText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistContent, "Auto Aim"),"Text (1)"));
                 assistAutoAimText.text = LanguageManager.CurrentLanguage.options.assists_autoAim;
 
-                Text assistAutoAimAmountText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistContent, "Auto Aim Amount"), "Text (1)"));
+                TextMeshProUGUI assistAutoAimAmountText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistContent, "Auto Aim Amount"), "Text (1)"));
                 assistAutoAimAmountText.text = LanguageManager.CurrentLanguage.options.assists_autoAimPercent;
 
                 SliderValueToText autoAimSlider = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(assistContent, "Auto Aim Amount"), "Button"), "Slider"), "Text (2)").GetComponentInChildren<SliderValueToText>();
                 autoAimSlider.ifMin = LanguageManager.CurrentLanguage.options.assists_autoAimPercentMinimum;
                 autoAimSlider.ifMax = LanguageManager.CurrentLanguage.options.assists_autoAimPercentMaximum;
 
-                Text assistEnemySilhouettesTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(assistContent, "Enemy Simplifier (1)"),"Option"), "Text (1)"));
+                TextMeshProUGUI assistEnemySilhouettesTitle = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(assistContent, "Enemy Simplifier (1)"),"Option"), "Text (1)"));
                 assistEnemySilhouettesTitle.text = LanguageManager.CurrentLanguage.options.assists_enemySilhouettesOutlines;
 
                 GameObject assistEnemySilhouettes = GetGameObjectChild(GetGameObjectChild(assistContent, "Enemy Simplifier (1)"),"Option"); //
 
-                Text assistEnemySilhouettesOutlineText = GetTextfromGameObject(GetGameObjectChild(assistEnemySilhouettes, "Text (1)"));
+                TextMeshProUGUI assistEnemySilhouettesOutlineText = GetTextMeshProUGUI(GetGameObjectChild(assistEnemySilhouettes, "Text (1)"));
                 assistEnemySilhouettesOutlineText.text =  LanguageManager.CurrentLanguage.options.assists_enemySilhouettes;
 
                 GameObject assistEnemySilhouettesExtra = GetGameObjectChild(assistContent, "Activation Distance");
 
-                Text assistEnemySilhouettesDistance = GetTextfromGameObject(GetGameObjectChild(assistEnemySilhouettesExtra, "Text (1)"));
+                TextMeshProUGUI assistEnemySilhouettesDistance = GetTextMeshProUGUI(GetGameObjectChild(assistEnemySilhouettesExtra, "Text (1)"));
                 assistEnemySilhouettesDistance.text = LanguageManager.CurrentLanguage.options.assists_enemySilhouettesDistance;
 
-                Text assistEnemySilhouettesOutlineThickness = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistEnemySilhouettesExtra, "Outline Thickness"), "Text (1)"));
+                TextMeshProUGUI assistEnemySilhouettesOutlineThickness = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistEnemySilhouettesExtra, "Outline Thickness"), "Text (1)"));
                 assistEnemySilhouettesOutlineThickness.text =
                     LanguageManager.CurrentLanguage.options.assists_enemySilhouettesOutlineThickness;
                 
@@ -503,30 +504,30 @@ namespace UltrakULL
                 SliderValueToText assistEnemySilhouettesDistanceSlider = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(assistContent, "Activation Distance"),"Button"),"Slider"),"Text (2)").GetComponentInChildren<SliderValueToText>();
                 assistEnemySilhouettesDistanceSlider.ifMin = LanguageManager.CurrentLanguage.options.assists_enemySilhouettesDistanceMinimum;
 
-                Text assistEnemySilhouettesOutlinesOnlyText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistEnemySilhouettesExtra, "Extra"),"Text (2)"));
+                TextMeshProUGUI assistEnemySilhouettesOutlinesOnlyText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistEnemySilhouettesExtra, "Extra"),"Text (2)"));
                 assistEnemySilhouettesOutlinesOnlyText.text = LanguageManager.CurrentLanguage.options.assists_enemySilhouettesOutlinesOnly;
 
                 GameObject assistsMajor = GetGameObjectChild(assistContent, "Major Assists");
-                Text assistsMajorTitle = GetTextfromGameObject(assistsMajor);
+                TextMeshProUGUI assistsMajorTitle = GetTextMeshProUGUI(assistsMajor);
 
                 assistsMajorTitle.text = "--"+ LanguageManager.CurrentLanguage.options.assists_major +"--";
                 assistsMajorTitle.fontSize = 20;
 
-                Text assistsMajorActivateText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Enable"),"Text (1)"));
+                TextMeshProUGUI assistsMajorActivateText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Enable"),"Text (1)"));
                 assistsMajorActivateText.text = LanguageManager.CurrentLanguage.options.assists_majorActivate;
 
-                Text assistsMajorGameSpeedText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Game Speed"), "Text (1)"));
+                TextMeshProUGUI assistsMajorGameSpeedText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Game Speed"), "Text (1)"));
                 assistsMajorGameSpeedText.text = LanguageManager.CurrentLanguage.options.assists_gameSpeed;
 
-                Text assistsDamageTakenText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Damage Taken"), "Text (1)"));
+                TextMeshProUGUI assistsDamageTakenText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Damage Taken"), "Text (1)"));
                 assistsDamageTakenText.text = LanguageManager.CurrentLanguage.options.assists_damageTaken;
 
-                Text assistsBossOverrideText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Boss Difficulty Override"), "Text"));
+                TextMeshProUGUI assistsBossOverrideText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Boss Difficulty Override"), "Text"));
                 assistsBossOverrideText.text = LanguageManager.CurrentLanguage.options.assists_bossOverride;
 
                 GameObject bossOverride = GetGameObjectChild(GetGameObjectChild(assistsMajor, "Boss Difficulty Override"), "Dropdown");
-                Dropdown bossOverrideDropdown = bossOverride.GetComponent<Dropdown>();
-                List<Dropdown.OptionData> bossOverrideDropdownListText = bossOverrideDropdown.options;
+                TMP_Dropdown bossOverrideDropdown = bossOverride.GetComponent<TMP_Dropdown>();
+                List<TMP_Dropdown.OptionData> bossOverrideDropdownListText = bossOverrideDropdown.options;
 
                 bossOverrideDropdownListText[0].text = LanguageManager.CurrentLanguage.options.assists_bossOverrideNone;
                 bossOverrideDropdownListText[1].text = LanguageManager.CurrentLanguage.frontend.difficulty_harmless;
@@ -537,133 +538,133 @@ namespace UltrakULL
                 Text assistsBossRestartText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Boss Difficulty Override"), "Text (1)"));
                 assistsBossRestartText.text = LanguageManager.CurrentLanguage.options.assists_bossRestartRequired;
 
-                Text assistsInfiniteStaminaText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Infinite Stamina"), "Text (1)"));
+                TextMeshProUGUI assistsInfiniteStaminaText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Infinite Stamina"), "Text (1)"));
                 assistsInfiniteStaminaText.text = LanguageManager.CurrentLanguage.options.assists_infiniteEnergy;
 
-                Text assistsDisableWhiplashHardDamageText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Disable Whiplash Hard Damage"), "Text (1)"));
+                TextMeshProUGUI assistsDisableWhiplashHardDamageText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Disable Whiplash Hard Damage"), "Text (1)"));
                 assistsDisableWhiplashHardDamageText.text = LanguageManager.CurrentLanguage.options.assists_disableWhiplashHardDamage;
 
-                Text assistsDisableHardDamageText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Disable Hard Damage"), "Text (1)"));
+                TextMeshProUGUI assistsDisableHardDamageText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Disable Hard Damage"), "Text (1)"));
                 assistsDisableHardDamageText.text = LanguageManager.CurrentLanguage.options.assists_disableHardDamage;
 
-                Text assistsDisableWeaponFreshnessText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Disable Weapon Freshness"), "Text (1)"));
+                TextMeshProUGUI assistsDisableWeaponFreshnessText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Disable Weapon Freshness"), "Text (1)"));
                 assistsDisableWeaponFreshnessText.text = LanguageManager.CurrentLanguage.options.assists_disableWeaponFreshness;
 
-                Text assistsDisablePopupText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Disable Popup"), "Text (1)"));
+                TextMeshProUGUI assistsDisablePopupText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Disable Popup"), "Text (1)"));
                 assistsDisablePopupText.text = LanguageManager.CurrentLanguage.options.assists_disablePopupHints;
 
         }
         private void PatchColorsOptions(GameObject optionsMenu)
         {
                 //Colors options
-                Text colorsPanel = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text (1)"));
+                TextMeshProUGUI colorsPanel = GetTextMeshProUGUI(GetGameObjectChild(optionsMenu, "Text (1)"));
                 colorsPanel.text = "--" + LanguageManager.CurrentLanguage.options.colors_title + "--";
 
-                Text colorsResetDefaultText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu,"Scroll Rect"),"Contents"),"Default"),"Text"));
+                TextMeshProUGUI colorsResetDefaultText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu,"Scroll Rect"),"Contents"),"Default"),"Text"));
                 colorsResetDefaultText.text = LanguageManager.CurrentLanguage.options.colors_reset;
 
                 //HUD Text
                 GameObject colorsHudObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Scroll Rect"),"Contents"),"HUD");
 
-                Text colorsHudHealthText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsHudObject,"Health"),"Text"));
+                TextMeshProUGUI colorsHudHealthText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsHudObject,"Health"),"Text"));
                 colorsHudHealthText.text = LanguageManager.CurrentLanguage.options.colors_hudHealth;
 
-                Text colorsHudHealthNumberText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "HpText"), "Text"));
+                TextMeshProUGUI colorsHudHealthNumberText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "HpText"), "Text"));
                 colorsHudHealthNumberText.text = LanguageManager.CurrentLanguage.options.colors_hudHealthNumber;
 
-                Text colorsHudSoftDamageText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "AfterImage"), "Text"));
+                TextMeshProUGUI colorsHudSoftDamageText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "AfterImage"), "Text"));
                 colorsHudSoftDamageText.text = LanguageManager.CurrentLanguage.options.colors_hudDamage;
 
-                Text colorsHudHardDamageText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "AntiHp"), "Text"));
+                TextMeshProUGUI colorsHudHardDamageText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "AntiHp"), "Text"));
                 colorsHudHardDamageText.text = LanguageManager.CurrentLanguage.options.colors_hudHardDamage;
 
-                Text colorsHudOverhealText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "Overheal"), "Text"));
+                TextMeshProUGUI colorsHudOverhealText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "Overheal"), "Text"));
                 colorsHudOverhealText.text = LanguageManager.CurrentLanguage.options.colors_hudOverheal;
 
-                Text colorsHudStaminaText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "Stamina"), "Text"));
+                TextMeshProUGUI colorsHudStaminaText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "Stamina"), "Text"));
                 colorsHudStaminaText.text = LanguageManager.CurrentLanguage.options.colors_hudEnergyFull;
 
-                Text colorsHudStaminaChargingText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "StaminaCharging"), "Text"));
+                TextMeshProUGUI colorsHudStaminaChargingText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "StaminaCharging"), "Text"));
                 colorsHudStaminaChargingText.text = LanguageManager.CurrentLanguage.options.colors_hudEnergyPartial;
 
-                Text colorsHudStaminaEmptyText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "StaminaEmpty"), "Text"));
+                TextMeshProUGUI colorsHudStaminaEmptyText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "StaminaEmpty"), "Text"));
                 colorsHudStaminaEmptyText.text = LanguageManager.CurrentLanguage.options.colors_hudEnergyEmpty;
 
-                Text colorsHudRailcannonFullText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "RailcannonFull"), "Text"));
+                TextMeshProUGUI colorsHudRailcannonFullText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "RailcannonFull"), "Text"));
                 colorsHudRailcannonFullText.text = LanguageManager.CurrentLanguage.options.colors_railcannonFull;
 
-                Text colorsHudRailcannonChargingText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "RailcannonCharging"), "Text"));
+                TextMeshProUGUI colorsHudRailcannonChargingText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "RailcannonCharging"), "Text"));
                 colorsHudRailcannonChargingText.text = LanguageManager.CurrentLanguage.options.colors_railcannonPartial;
 
-                Text colorsHudVarBlueText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "Blue Variation"), "Text"));
+                TextMeshProUGUI colorsHudVarBlueText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "Blue Variation"), "Text"));
                 colorsHudVarBlueText.text = LanguageManager.CurrentLanguage.options.colors_variationBlue;
 
-                Text colorsHudVarGreenText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "Green Variation"), "Text"));
+                TextMeshProUGUI colorsHudVarGreenText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "Green Variation"), "Text"));
                 colorsHudVarGreenText.text = LanguageManager.CurrentLanguage.options.colors_variationGreen;
 
-                Text colorsHudVarRedText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "Red Variation"), "Text"));
+                TextMeshProUGUI colorsHudVarRedText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "Red Variation"), "Text"));
                 colorsHudVarRedText.text = LanguageManager.CurrentLanguage.options.colors_variationRed;
 
-                Text colorsHudVarGoldText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "Gold Variation"), "Text"));
+                TextMeshProUGUI colorsHudVarGoldText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsHudObject, "Gold Variation"), "Text"));
                 colorsHudVarGoldText.text = LanguageManager.CurrentLanguage.options.colors_variationGold;
 
                 //Enemy names text
                 //Later down the line, could be better to get the names from EnemyBios.
                 GameObject colorsEnemiesObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Scroll Rect"), "Contents"), "Enemies");
 
-                Text colorsEnemiesText = GetTextfromGameObject(colorsEnemiesObject);
+                TextMeshProUGUI colorsEnemiesText = GetTextMeshProUGUI(colorsEnemiesObject);
 
                 colorsEnemiesText.text = LanguageManager.CurrentLanguage.options.colors_enemies;
 
-                Text colorsEnemiesFilthText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Filth"), "Text"));
+                TextMeshProUGUI colorsEnemiesFilthText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Filth"), "Text"));
                 colorsEnemiesFilthText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_filth;
 
-                Text colorsEnemiesStrayText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Stray"), "Text"));
+                TextMeshProUGUI colorsEnemiesStrayText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Stray"), "Text"));
                 colorsEnemiesStrayText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_stray;
 
-                Text colorsEnemiesMalFaceText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Malicious Face"), "Text"));
+                TextMeshProUGUI colorsEnemiesMalFaceText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Malicious Face"), "Text"));
                 colorsEnemiesMalFaceText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_malFace;
 
-                Text colorsEnemiesSchismText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Schism"), "Text"));
+                TextMeshProUGUI colorsEnemiesSchismText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Schism"), "Text"));
                 colorsEnemiesSchismText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_schism;
 
-                Text colorsEnemiesSwordsmachineText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Swordsmachine"), "Text"));
+                TextMeshProUGUI colorsEnemiesSwordsmachineText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Swordsmachine"), "Text"));
                 colorsEnemiesSwordsmachineText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_swordsmachine;
 
-                Text colorsEnemiesCerberusText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Cerberus"), "Text"));
+                TextMeshProUGUI colorsEnemiesCerberusText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Cerberus"), "Text"));
                 colorsEnemiesCerberusText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_cerberus;
 
-                Text colorsEnemiesDroneText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Drone"), "Text"));
+                TextMeshProUGUI colorsEnemiesDroneText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Drone"), "Text"));
                 colorsEnemiesDroneText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_drone;
 
-                Text colorsEnemiesStreetcleanerText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Streetcleaner"), "Text"));
+                TextMeshProUGUI colorsEnemiesStreetcleanerText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Streetcleaner"), "Text"));
                 colorsEnemiesStreetcleanerText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_streetCleaner;
 
-                Text colorsEnemiesSoldierText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Shotgunner"), "Text"));
+                TextMeshProUGUI colorsEnemiesSoldierText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Shotgunner"), "Text"));
                 colorsEnemiesSoldierText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_soldier;
 
-                Text colorsEnemiesV2Text = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "V2"), "Text"));
+                TextMeshProUGUI colorsEnemiesV2Text = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "V2"), "Text"));
                 colorsEnemiesV2Text.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_v2;
 
-                Text colorsEnemiesMindflayerText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Mindflayer"), "Text"));
+                TextMeshProUGUI colorsEnemiesMindflayerText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Mindflayer"), "Text"));
                 colorsEnemiesMindflayerText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_mindFlayer;
 
-                Text colorsEnemiesVirtueText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Virtue"), "Text"));
+                TextMeshProUGUI colorsEnemiesVirtueText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Virtue"), "Text"));
                 colorsEnemiesVirtueText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_virtue;
 
-                Text colorsEnemiesStalkerText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Stalker"), "Text"));
+                TextMeshProUGUI colorsEnemiesStalkerText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Stalker"), "Text"));
                 colorsEnemiesStalkerText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_stalker;
 
-                Text colorsEnemiesSisyphusText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Sisyphus"), "Text"));
+                TextMeshProUGUI colorsEnemiesSisyphusText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Sisyphus"), "Text"));
                 colorsEnemiesSisyphusText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_insurrectionist;
 
-                Text colorsEnemiesSentryText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Sentry"), "Text"));
+                TextMeshProUGUI colorsEnemiesSentryText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Sentry"), "Text"));
                 colorsEnemiesSentryText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_sentry;
 
-                Text colorsEnemiesIdolText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Idol"), "Text"));
+                TextMeshProUGUI colorsEnemiesIdolText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Idol"), "Text"));
                 colorsEnemiesIdolText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_idol;
 
-                Text colorsEnemiesFerrymanText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Ferryman"), "Text"));
+                TextMeshProUGUI colorsEnemiesFerrymanText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(colorsEnemiesObject, "Ferryman"), "Text"));
                 colorsEnemiesFerrymanText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_ferryman;
 
         }
@@ -698,13 +699,13 @@ namespace UltrakULL
 
         private void PatchRumbleOptions(GameObject optionsMenu)
         {
-            Text rumbleSettingsTitle = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text (1)"));
+            TextMeshProUGUI rumbleSettingsTitle = GetTextMeshProUGUI(GetGameObjectChild(optionsMenu, "Text (1)"));
             rumbleSettingsTitle.text = LanguageManager.CurrentLanguage.options.rumble_title;
 
-            Text rumbleFinalMultiplier = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Total"), "Text"));
+            TextMeshProUGUI rumbleFinalMultiplier = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Total"), "Text"));
             rumbleFinalMultiplier.text = LanguageManager.CurrentLanguage.options.rumble_finalMultiplier;
 
-            Text rumbleCloseButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Close"), "Text"));
+            TextMeshProUGUI rumbleCloseButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Close"), "Text"));
             rumbleCloseButton.text = LanguageManager.CurrentLanguage.options.save_close;
             
             //Loop through each entry
@@ -715,16 +716,16 @@ namespace UltrakULL
                 {
                     GameObject entry = rumbleEntryList.transform.GetChild(x).gameObject;
                     //Throws an out of bounds error, but still swaps the text correctly...
-                    Text entryIntensity = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(entry,"Button"),"Text (1)"));
+                    TextMeshProUGUI entryIntensity = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(entry,"Button"),"Text (1)"));
                     entryIntensity.text = LanguageManager.CurrentLanguage.options.rumble_intensity;
                 
-                    Text entryResetIntensity = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(entry,"Default Button (1)"),"Text"));
+                    TextMeshProUGUI entryResetIntensity = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(entry,"Default Button (1)"),"Text"));
                     entryResetIntensity.text = LanguageManager.CurrentLanguage.options.rumble_reset;
                 
-                    Text entryEndDelay = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(entry,"End Delay Container"),"Text (2)"));
+                    TextMeshProUGUI entryEndDelay = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(entry,"End Delay Container"),"Text (2)"));
                     entryEndDelay.text = LanguageManager.CurrentLanguage.options.rumble_endDelay;
                 
-                    Text entryResetEndDelay = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(entry,"End Delay Container"),"Default Button"),"Text"));
+                    TextMeshProUGUI entryResetEndDelay = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(entry,"End Delay Container"),"Default Button"),"Text"));
                     entryResetEndDelay.text = LanguageManager.CurrentLanguage.options.rumble_reset;
                 }
             }
@@ -750,49 +751,48 @@ namespace UltrakULL
                 GameObject rumbleOptions = GetGameObjectChild(optionsMenu, "Rumble Settings");
 
                 //Main buttons and text
-                Text optionsText = GetTextfromGameObject(GetGameObjectChild(optionsMenu, "Text"));
+                TextMeshProUGUI optionsText = GetTextMeshProUGUI(GetGameObjectChild(optionsMenu, "Text"));
                 optionsText.text = LanguageManager.CurrentLanguage.options.options_title;
 
-                Text backText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Back"),"Text"));
+                TextMeshProUGUI backText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Back"),"Text"));
                 backText.text = LanguageManager.CurrentLanguage.options.options_back;
 
-                Text generalButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Gameplay"), "Text"));
+                TextMeshProUGUI generalButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Gameplay"), "Text"));
                 generalButton.text = LanguageManager.CurrentLanguage.options.category_general;
 
-                Text controlButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Controls"), "Text"));
+                TextMeshProUGUI controlButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Controls"), "Text"));
                 controlButton.text = LanguageManager.CurrentLanguage.options.category_controls;
 
-                Text graphicsButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Video"), "Text"));
+                TextMeshProUGUI graphicsButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Video"), "Text"));
                 graphicsButton.text = LanguageManager.CurrentLanguage.options.category_graphics;
 
-                Text audioButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Audio"), "Text"));
+                TextMeshProUGUI audioButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Audio"), "Text"));
                 audioButton.text = LanguageManager.CurrentLanguage.options.category_sound;
 
-                Text hudButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "HUD"), "Text"));
+                TextMeshProUGUI hudButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(optionsMenu, "HUD"), "Text"));
                 hudButton.text = LanguageManager.CurrentLanguage.options.category_display;
 
-                Text assistButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Assist"), "Text"));
+                TextMeshProUGUI assistButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Assist"), "Text"));
                 assistButton.text = LanguageManager.CurrentLanguage.options.category_assists;
 
-                Text colorsButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Colors"), "Text"));
+                TextMeshProUGUI colorsButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Colors"), "Text"));
                 colorsButton.text = LanguageManager.CurrentLanguage.options.category_colors;
 
-                Text savesButton = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Saves"), "Text"));
+                TextMeshProUGUI savesButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Saves"), "Text"));
                 savesButton.text = LanguageManager.CurrentLanguage.options.category_saves;
                 
                 
 
                 try
                 {
-                    this.PatchGeneralOptions(generalOptions);
-                    this.PatchControlOptions(controlOptions);
-                    this.PatchGraphicsOptions(graphicsOptions);
-                    this.PatchAudioOptions(audioOptions);
-                    this.PatchHUDOptions(hudOptions);
-                    this.PatchAssistOptions(assistOptions);
-                    this.PatchColorsOptions(colorsOptions);
-                    this.PatchSavesOptions(savesOptions);
-                    this.PatchRumbleOptions(rumbleOptions);
+                    try { this.PatchGeneralOptions(generalOptions); }catch (Exception e) { Console.WriteLine("Failed to patch general options."); Console.WriteLine(e.ToString()); }
+                    try { this.PatchControlOptions(controlOptions); }catch (Exception e) { Console.WriteLine("Failed to patch control options."); Console.WriteLine(e.ToString()); }
+                    try { this.PatchGraphicsOptions(graphicsOptions); }catch (Exception e) { Console.WriteLine("Failed to patch graphics options."); Console.WriteLine(e.ToString()); }
+                    try { this.PatchAudioOptions(audioOptions); }catch (Exception e) { Console.WriteLine("Failed to patch audio options."); Console.WriteLine(e.ToString()); }
+                    try { this.PatchHUDOptions(hudOptions); }catch (Exception e) { Console.WriteLine("Failed to patch HUD options."); Console.WriteLine(e.ToString()); }
+                    try { this.PatchAssistOptions(assistOptions); }catch (Exception e) { Console.WriteLine("Failed to patch assist options."); Console.WriteLine(e.ToString()); }
+                    try { this.PatchColorsOptions(colorsOptions); }catch (Exception e) { Console.WriteLine("Failed to patch colors options."); Console.WriteLine(e.ToString()); }
+                    try { this.PatchSavesOptions(savesOptions); }catch (Exception e) { Console.WriteLine("Failed to patch save options."); Console.WriteLine(e.ToString()); }
                 }
                 catch(Exception e)
                 {
