@@ -640,7 +640,7 @@
         "books_greedThird1": "Dans le PYRAMIDE se trouve la chambre DU CHAT et DU RODENT.",
         "books_greedThird2": "Dans la CHAMBRE se trouve un bassin d'EAU CLAIRE.",
         "books_greedThird3": "Dans l'EAU se cache un SECRÈT...",
-        "books_greedThird4": "Mais que ceux qui porte la magie <color=cyan>ÉLECTRIQUE</color> des Druides peuvent le trouver.",
+        "books_greedThird4": "Mais que ceux qui porte la magie <color=blue>ÉLECTRIQUE</color> des Druides peuvent le trouver.",
         
         "books_wrathSecond1": "TEXT ANALYSÉ - SCRIPTE LISIBLE:",
         "books_wrathSecond2": "EXTRAIT DE JOURNAL DU PASSEUR:",
@@ -1410,11 +1410,11 @@
 
 		"leveltips_limboFirst": "Certains ennemis émettent des <color=orange>sons</color> pour les rendre plus facile à traquer.",
 
-		"leveltips_limboSecond": "Utilisez les <color=cyan>AIMANTS DU CLOUEUR</color> pour former des <color=orange>orbes</color> de clous qui peuvent être <color=orange>deplaceés</color> grace au force de tirage des <color=orange>autres aimants</color>.",
+		"leveltips_limboSecond": "Utilisez les <color=blue>AIMANTS DU CLOUEUR</color> pour former des <color=orange>orbes</color> de clous qui peuvent être <color=orange>deplaceés</color> grace au force de tirage des <color=orange>autres aimants</color>.",
 
 		"leveltips_limboThird1": "Les ennemies peuvent <color=orange>attaquer</color> des autres ennemies.",
 		"leveltips_limboThird2": "Avec les bons reflexes et le bon positionnement, les ennemies puissants peuvent devenir des armes puissantes.",
-		"leveltips_limboFourth": "Les <color=cyan>AIMANTS DU CLOUEUR</color> peuvent être attachés aux ennemis pour rendre les cibles mobiles plus facile à frapper avec des clous.",
+		"leveltips_limboFourth": "Les <color=blue>AIMANTS DU CLOUEUR</color> peuvent être attachés aux ennemis pour rendre les cibles mobiles plus facile à frapper avec des clous.",
 
 		"leveltips_lustFirst": "Les ennemies <color=orange>hurlent</color> lorsqu'ils tombent d'une <color=orange>hauteur fatale</color>.",
 
@@ -1425,13 +1425,13 @@
 		"leveltips_lustThird": "Toute les variations du <color=orange>CANON ÉLECTRIQUE</color> partagent le même temps de rechargement. Choisissez bien quelle variation qui correspond à la situation.",
 
 		"leveltips_lustFourth1": "Le <color=orange>GLISSAGE</color> gardera votre élan pendant une courte période de temps.",
-		"leveltips_lustFourth2": "L'enchaînement des <color=orange>SAUTS ACCROUPIS</color> après un <color=cyan>SAUT PROPULSÉ</color> résultera en vitesse extrême.",
+		"leveltips_lustFourth2": "L'enchaînement des <color=orange>SAUTS ACCROUPIS</color> après un <color=blue>SAUT PROPULSÉ</color> résultera en vitesse extrême.",
 
 		"leveltips_gluttonyFirst": "Les <color=orange>dangers environmentaux</color>, tels que les liquides nuisibles, infligera aussi des dégâts aux ennemis.",
 		"leveltips_gluttonySecond1": "Si vous avez de mal à battre un ennemi fort,<color= orange> éloignez-vous et observez-le</color>.",
 		"leveltips_gluttonySecond2": "Chaque ennemie a son propre <color=orange>comportement</color> et <color=orange>signalement des attaques</color>, et si vous l'apprenez, la victoire vous sera apporté.",
 
-		"leveltips_greedFirst": "Les armes à '<color=orange>TIR INSTANTANÉ</color>' peuvent être utilisés pour frapper l'<color=cyan>ÉJECTION DU NOYEAU</color> dans l'air pour augmenter ses dégâts et la taille d'explosion.",
+		"leveltips_greedFirst": "Les armes à '<color=orange>TIR INSTANTANÉ</color>' peuvent être utilisés pour frapper l'<color=blue>ÉJECTION DU NOYEAU</color> dans l'air pour augmenter ses dégâts et la taille d'explosion.",
 		"leveltips_greedSecond": "Les <color=orange>puissances</color> peuvent être enchaîneés.",
 		"leveltips_greedThird": "Frappez un ennemi avec la <color=orange>côté</color> d'une <color=orange>explosion</color> pour le lancer sans infliger beaucoup de dégâts. Ceci est un outil effectif contre les <color=oranger>Traqueurs</color>.",
 		"leveltips_greedFourth": "Les <color=orange>pièces</color> se trouvent dans l'air peuvent être tiré dessus avec n'importe quel arme '<color=orange>hitscan</color>'.",
@@ -2085,22 +2085,22 @@
 		"tutorial_slide1": "Maintenir ",
 		"tutorial_slide2": "pour <color=orange>GLISSER.</color>",
 		"tutorial_dash1": "Appuyer sur ",
-		"tutorial_dash2": "pour <color=cyan>ESQUIVER</color>. (Utilise d'<color=cyan>ÉNERGIE</color>.)",
+		"tutorial_dash2": "pour <color=blue>ESQUIVER</color>. (Utilise d'<color=blue>ÉNERGIE</color>.)",
 		"tutorial_dash3": "Peut être utilisé dans l'air.",
 		"tutorial_health1": "Infligir des dégâts sur des ennemis à courte distance pour <color=red>VOUS BAIGNER DANS DU SANG FRAIS.",
 		"tutorial_health2": "CECI EST LA SEULE FAÇON POUR RÉCUPÉRER VOTRE SANTÉ</color>.",
 		"tutorial_walljump": "<color=orange>SAUTER</color> prés d'un <color=orange>MUR</color> pour y <color=orange>SAUTER DESSUS</color>. (Max. 3 fois)",
 		"tutorial_shockwave1": "Appuyer sur",
 		"tutorial_shockwave2": "pour vous <color=orange>LANCER AU SOL</color>.",
-		"tutorial_shockwave3": "Maintenir pour lancer un <color=orange>CHOC</color>. (Utilise <color=cyan>2 ÉNERGIE</color>)",
-		"tutorial_orb1": "La plupart des niveaux contiennent des <color=cyan>GLOBES D'ÂMES.</color>",
+		"tutorial_shockwave3": "Maintenir pour lancer un <color=orange>CHOC</color>. (Utilise <color=blue>2 ÉNERGIE</color>)",
+		"tutorial_orb1": "La plupart des niveaux contiennent des <color=blue>GLOBES D'ÂMES.</color>",
 		"tutorial_orb2": "Touchez-les pour recevoir un <color=orange>BONUS DE POINTS</color>."
 	},
 	"prelude": {
 		"prelude_first_openingCredits1": "<color=orange>NEW BLOOD</color> PRÉSENTE",
 		"prelude_first_openingCredits2": "UN JEU DE ARSI '<color=orange>HAKITA</color>' PATALA",
         "prelude_first_pipeClip": "\"LE CLIP DU TUILEAU RESTE.\"$T.HAKITA",
-		"prelude_first_revolverPierce1": "<color=cyan>REVOLVER</color>: Maintenir",
+		"prelude_first_revolverPierce1": "<color=blue>REVOLVER</color>: Maintenir",
 		"prelude_first_revolverPierce2": "pour tirer un coup <color=orange>PERÇANT</color>.",
 		"prelude_first_parry": "Frapper un projectile au bon moment pour le <color=red>renvoyer</color> à un ennemi.",
         
@@ -2115,23 +2115,23 @@
         "prelude_second_changeEquipped": "Changez de variation d'arme <color=orange>ÉQUIPÉ</color> avec",
 
 		"prelude_third_needShotgun": "<color=red>PUISSANCE DE FEU INSUFFISANTE</color>",
-		"prelude_third_shotgun1": "<color=cyan>FUSIL À POMPE</color>: Appuyer sur",
+		"prelude_third_shotgun1": "<color=blue>FUSIL À POMPE</color>: Appuyer sur",
 		"prelude_third_shotgun2": "pour lancer un projectile explosive.",
 		"prelude_third_shotgun3": "Maintenir pour charger la distance.",
-		"prelude_third_shotgunPierce": "<color=cyan>FUSIL À POMPE</color>: Le tir primaire perce les ennemis faibles.",
+		"prelude_third_shotgunPierce": "<color=blue>FUSIL À POMPE</color>: Le tir primaire perce les ennemis faibles.",
 
 		"prelude_secret_somethingWicked": "Quelque chose de maudit arrive."
 	},
 	"act1": {
 		"act1_limboFirst_items1": "Appuyer sur",
 		"act1_limboFirst_items2": "pour ramasser des <color=orange>OBJETS</color>.",
-		"act1_limboFirst_nailgun1": "<color=cyan>CLOUEUR</color>: Appuyer sur",
-		"act1_limboFirst_nailgun2": "pour tirer un <color=cyan>AIMANT QUI ATTIRE DES CLOUS</color>.",
+		"act1_limboFirst_nailgun1": "<color=blue>CLOUEUR</color>: Appuyer sur",
+		"act1_limboFirst_nailgun2": "pour tirer un <color=blue>AIMANT QUI ATTIRE DES CLOUS</color>.",
 		"act1_limboFirst_nailgun3": "Les aimants peuvent être attâchés à l'environment pour former des pièges.",
         
-        "act1_limboSecond_blueAttack": "Un <color=cyan>ÉCLAIR BLEU</color> signifie une attaque <color=cyan>NON RENVOYABLE</color>.",
+        "act1_limboSecond_blueAttack": "Un <color=blue>ÉCLAIR BLEU</color> signifie une attaque <color=blue>NON RENVOYABLE</color>.",
 
-		"act1_limboThird_splitDoor1": "Les portes à <color=red>COULEURS</color> <color=cyan>MULTIPLES</color> n'ont besoin <color=red>QU'UN</color> <color=cyan>CRÂNE</color> pour l'ouvrir.",
+		"act1_limboThird_splitDoor1": "Les portes à <color=red>COULEURS</color> <color=blue>MULTIPLES</color> n'ont besoin <color=red>QU'UN</color> <color=blue>CRÂNE</color> pour l'ouvrir.",
 		"act1_limboThird_splitDoor2": "Restez à l'intérieur si vous ne cherchez pas la douleur.",
 
 		"act1_limboFourth_book": "<color=orange>RAMASSER</color> POUR LIRE.",
@@ -2144,11 +2144,11 @@
 
 		"act1_lustFirst_knuckleblaster1": "<color=red>BOMBARDIER</color>: <color=orange>MAINTENIR</color>",
 		"act1_lustFirst_knuckleblaster2": "pour lancer un <color=orange>CHOC</color> qui repoussent les ennemies.",
-		"act1_lustFirst_dashjump": "<color=cyan>SAUT PROPULSÉE</color>: Gardez la vitesse <color=cyan>D'ESQUIVE</color> en y <color=orange>SAUTANT</color> en plein milieu d'esquive.",
+		"act1_lustFirst_dashjump": "<color=blue>SAUT PROPULSÉE</color>: Gardez la vitesse <color=blue>D'ESQUIVE</color> en y <color=orange>SAUTANT</color> en plein milieu d'esquive.",
 
-		"act1_lustSecond_feedbacker1": "Seul le <color=cyan>RÉTROACTEUR</color> peut déflecter les projectiles.",
+		"act1_lustSecond_feedbacker1": "Seul le <color=blue>RÉTROACTEUR</color> peut déflecter les projectiles.",
 		"act1_lustSecond_feedbacker2": "Changez d'armes avec ",
-		"act1_lustSecond_railcannon": "<color=cyan>CANON ÉLECTRIQUE</color>: <color=orange>SE RECHARGE</color> même quand il est <color=orange>NON ÉQUIPÉ</color>. Changez d'armes pour continuer à lutter entre les tirs.",
+		"act1_lustSecond_railcannon": "<color=blue>CANON ÉLECTRIQUE</color>: <color=orange>SE RECHARGE</color> même quand il est <color=orange>NON ÉQUIPÉ</color>. Changez d'armes pour continuer à lutter entre les tirs.",
 
 		"act1_lustThird_water": "L'eau a été vidé.",
 
@@ -2177,19 +2177,19 @@
         
         "act2_greed_secretDoor": "Une porte a été ouverte.",
         
-        "act2_wrathFirst_slingshot": "Les <color=cyan>POINTS DE GRAPPIN BLEUS</color> servent comme points de lancement.",
+        "act2_wrathFirst_slingshot": "Les <color=blue>POINTS DE GRAPPIN BLEUS</color> servent comme points de lancement.",
         "act2_wrathFirst_whiplashUnderwater": "<color=lime>COUP DE FOUET</color>: N'accumles <color=orange>PAS</color> des <color=grey>DÉGÂTS DURS</color> quand vous êtes SOUS L'EAU.$ Amusez-vous bien.",
         "act2_wrathFirst_waterDrained": "L'eau a été vidée.",
         "act2_wrathFirst_sentry": "POUR INTERROMPRE UNE MITRAILLEUSE:$Bombardier (Bras rouge) <color=orange>//</color> Canon-électrique <color=orange>//</color> Choc du lancement au sol <color=orange>//</color> Revolver à l'antenne",
         
-        "act2_wrathSecond_idol": "Les <color=cyan>IDOLES</color> ne peuvent seulment être cassés avec un <color=orange>COUP DE POING</color>.",
+        "act2_wrathSecond_idol": "Les <color=blue>IDOLES</color> ne peuvent seulment être cassés avec un <color=orange>COUP DE POING</color>.",
         "act2_wrathSecond_neptune": "Hark! Neptune les ont abattu à la mort.",
         "act2_wrathSecond_jakito1": "<color=red>JE SUIS JAKITO. RAMMENEZ-MOI UN SACRIFICE. CECI ME DONNERA LA PUISSANCE POUR ÉCHAPPER.</color>",
         "act2_wrathSecond_jakito2": "<color=red>NON. ÇA DOIT ÊTRE DU CHAIR INNOCENT.</color>",
         "act2_wrathSecond_jakito3": "<color=red>MERCI. MAINTENANT, JE VAIS DÈTRUIRE CETTE MONDE.</color>",
         
-        "act2_wrathThird_rocketLauncher": "<color=cyan>LANCE-ROQUETTES</color>: Les coups <color=orange>DIRECTES</color> causent des <color=orange>EXPLOSIONS</color.$Les tirs indirects lanceront les ennemies.",
-        "act2_wrathThird_rocketLauncherMidair": "<color=cyan>LANCE-ROQUETTES</color>: Les coups directes sur les ennemies <color=orange>TOMBANTS</color> causeront une explosion <color=orange>PLUS FORT</color>.",
+        "act2_wrathThird_rocketLauncher": "<color=blue>LANCE-ROQUETTES</color>: Les coups <color=orange>DIRECTES</color> causent des <color=orange>EXPLOSIONS</color.$Les tirs indirects lanceront les ennemies.",
+        "act2_wrathThird_rocketLauncherMidair": "<color=blue>LANCE-ROQUETTES</color>: Les coups directes sur les ennemies <color=orange>TOMBANTS</color> causeront une explosion <color=orange>PLUS FORT</color>.",
         "act2_wrathThird_soldierBlock": "Les Soldats ne <color=orange>PEUVENT PAS</color> bloquer les explosions dans <color=orange>L'AIR</color>.$ Tirez une roquette <color=orange>A CÔTÉ</color> d'eux pour les lancer.",
         "act2_wrathThird_hank": "Rien ne se passe, mais vous êtes sûr que Hank Jr. et ses Hankcêtres l'apprécieraient... S'ils n'étaient pas morts.",
         
