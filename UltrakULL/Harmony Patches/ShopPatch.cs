@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using TMPro;
 using UltrakULL.json;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,6 +20,15 @@ namespace UltrakULL.Harmony_Patches
             }
             if(___shopCanvas != null)
             {
+                if (__instance.gameObject.name == "Testament Shop")
+                {
+                    Logging.Warn("Prime end testament, getting text");
+                    TextMeshProUGUI primeEndText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(___shopCanvas.gameObject,"Border"),"TipBox"),
+                        "Panel"),"Scroll View"),"Viewport"),"Content"),"Text (1)"));
+                    PrimeSanctumStrings pss = new PrimeSanctumStrings();
+                    primeEndText.text = pss.GetSecretText();
+                    return;
+                }
                 Text origTip = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(___shopCanvas.gameObject,"TipBox"),"Panel"),"TipText"));
                 
                 GameObject shopObject = ___shopCanvas.gameObject;
