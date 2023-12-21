@@ -1,4 +1,5 @@
-﻿using UltrakULL.json;
+﻿using TMPro;
+using UltrakULL.json;
 using UnityEngine;
 using UnityEngine.UI;
 using static UltrakULL.CommonFunctions;
@@ -518,6 +519,8 @@ namespace UltrakULL
             benPlaque1.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesBenMoir1;
             benPlaque2.text = LanguageManager.CurrentLanguage.devMuseum.museum_plaquesBenMoir2;
             
+            
+            //Central hall
             GameObject centralHall = GetInactiveRootObject("__Room_Large_Lower").transform.GetChild(4).gameObject;
             Text davePlaque1 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(centralHall,"Wing name (4)"),"Canvas (5)"),"Text"));
             Text davePlaque2 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(centralHall,"Wing name (4)"),"Canvas (5)"),"Text (1)"));
@@ -593,11 +596,11 @@ namespace UltrakULL
             
             GameObject talkRoomStephanSpoilerScreen = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques, "Prime 1 VA"),"SpoilerBlock"),"PuzzleScreen (1)"),"Canvas"),"Background");
             
-            Text stephanSpoiler1 = GetTextfromGameObject(GetGameObjectChild(talkRoomStephanSpoilerScreen,"Text"));
+            TextMeshProUGUI stephanSpoiler1 = GetTextMeshProUGUI(GetGameObjectChild(talkRoomStephanSpoilerScreen,"Text"));
             stephanSpoiler1.text = "<color=red>!" + LanguageManager.CurrentLanguage.devMuseum.museum_spoiler1 + " !</color>\n" 
             + LanguageManager.CurrentLanguage.devMuseum.museum_spoiler2;
             
-            Text stephanSpoiler2 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(talkRoomStephanSpoilerScreen,"OpenButton"),"Text"));
+            TextMeshProUGUI stephanSpoiler2 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(talkRoomStephanSpoilerScreen,"OpenButton"),"Text"));
             stephanSpoiler2.text = LanguageManager.CurrentLanguage.devMuseum.museum_spoiler3;
             
             GameObject talkRoomLenvalPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques, "Prime 2 VA"),"Dev_Space_ (33)"),"Dev Smalll placard"),"Canvas (4)");
@@ -608,11 +611,11 @@ namespace UltrakULL
             
             GameObject talkRoomLenvalSpoilerScreen = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques, "Prime 2 VA"),"SpoilerBlock"),"PuzzleScreen (1)"),"Canvas"),"Background");
             
-            Text lenvalSpoiler1 = GetTextfromGameObject(GetGameObjectChild(talkRoomLenvalSpoilerScreen,"Text"));
+            TextMeshProUGUI lenvalSpoiler1 = GetTextMeshProUGUI(GetGameObjectChild(talkRoomLenvalSpoilerScreen,"Text"));
             lenvalSpoiler1.text = "<color=red>!" + LanguageManager.CurrentLanguage.devMuseum.museum_spoiler1 + " !</color>\n" 
             + LanguageManager.CurrentLanguage.devMuseum.museum_spoiler2;
             
-            Text lenvalSpoiler2 = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(talkRoomLenvalSpoilerScreen,"OpenButton"),"Text"));
+            TextMeshProUGUI lenvalSpoiler2 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(talkRoomLenvalSpoilerScreen,"OpenButton"),"Text"));
             lenvalSpoiler2.text = LanguageManager.CurrentLanguage.devMuseum.museum_spoiler3;
             
             GameObject restRoomJoyPlaque =  GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(plaques,"Dev_Space_ (7)"),"Dev Smalll placard"),"Canvas (4)");
@@ -635,18 +638,18 @@ namespace UltrakULL
             
             GameObject rocketRaceScreen = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("PuzzleScreen (2)"),"Canvas"),"Background"),"Start");
             
-            Text rocketRaceTitle = GetTextfromGameObject(GetGameObjectChild(rocketRaceScreen,"Text"));
+            TextMeshProUGUI rocketRaceTitle = GetTextMeshProUGUI(GetGameObjectChild(rocketRaceScreen,"Text"));
             rocketRaceTitle.text = LanguageManager.CurrentLanguage.devMuseum.museum_rocketRace1;
             
-            Text rocketRaceStart = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(rocketRaceScreen,"OpenButton"),"Text"));
+            TextMeshProUGUI rocketRaceStart = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(rocketRaceScreen,"OpenButton"),"Text"));
             rocketRaceStart.text = LanguageManager.CurrentLanguage.devMuseum.museum_rocketRace2;
             
             GameObject theater = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("__Room_Theater"),"Ultrakill Projector"),"PuzzleScreen"),"Canvas"),"Background");
             
-            Text theaterPlay = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(theater,"PlayButton"),"Text"));
+            TextMeshProUGUI theaterPlay = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(theater,"PlayButton"),"Text"));
             theaterPlay.text = LanguageManager.CurrentLanguage.devMuseum.museum_cinemaPlay;
             
-            Text theaterStop = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(theater,"StopButton"),"Text"));
+            TextMeshProUGUI theaterStop = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(theater,"StopButton"),"Text"));
             theaterStop.text = LanguageManager.CurrentLanguage.devMuseum.museum_cinemaStop;
             
             
