@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UltrakULL.json;
 using UnityEngine;
 using UnityEngine.UI;
@@ -95,72 +96,52 @@ namespace UltrakULL
         {
             GameObject player = GameObject.Find("Player");
             GameObject styleMeter = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(player, "Main Camera"), "HUD Camera"), "HUD"), "StyleCanvas"), "Panel (1)"), "Panel"), "Text (1)"), "Text");
-            Text styleMeterMultiplierText = GetTextfromGameObject(styleMeter);
+            TextMeshProUGUI styleMeterMultiplierText = GetTextMeshProUGUI(styleMeter);
             styleMeterMultiplierText.text = LanguageManager.CurrentLanguage.style.stylemeter_multiplier;
-            
-            GameObject pressToSkip = GetGameObjectChild(canvasObj, "CutsceneSkipText");
 
+            GameObject pressToSkip = GetGameObjectChild(canvasObj, "CutsceneSkipText");
+            
             //Need to disable the TextOverride component.
             Component[] test = pressToSkip.GetComponents(typeof(Component));
             Behaviour bhvr = (Behaviour)test[4];
             bhvr.enabled = false;
-
-            Text pressToSkipText = GetTextfromGameObject(pressToSkip);
+            TextMeshProUGUI pressToSkipText = GetTextMeshProUGUI(pressToSkip);
             pressToSkipText.text = LanguageManager.CurrentLanguage.misc.pressToSkip;
-
+            
             //Classic HUD
             GameObject classicHudBw = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "Crosshair Filler"), "AltHud"), "Filler");
             GameObject classicHudColor = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "Crosshair Filler"), "AltHud (2)"), "Filler");
-
-            Text classicHudBwHealth = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Health"), "Title"));
-            Text classicHudBwHealthShow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Health"), "Title (1)"));
-            Text classicHudColorHealth = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Health"), "Title"));
-            Text classicHudColorHealthShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Health"), "Title (1)"));
+            
+            TextMeshProUGUI classicHudBwHealth = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Health"), "Title"));
+            TextMeshProUGUI classicHudColorHealth = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Health (1)"), "Title"));
             classicHudBwHealth.text = LanguageManager.CurrentLanguage.misc.classicHud_health;
             classicHudColorHealth.text = LanguageManager.CurrentLanguage.misc.classicHud_health;
-            classicHudBwHealthShow.text = LanguageManager.CurrentLanguage.misc.classicHud_health;
-            classicHudColorHealthShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_health;
 
-            Text classicHudBwStamina = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Stamina"), "Title"));
-            Text classicHudColorStamina = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Stamina"), "Title"));
-            Text classicHudBwStaminaShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Stamina"), "Title (1)"));
-            Text classicHudColorStaminaShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Stamina"), "Title (1)"));
+            TextMeshProUGUI classicHudBwStamina = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Stamina"), "Title"));
+            TextMeshProUGUI classicHudColorStamina = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Stamina (1)"), "Title"));
             classicHudBwStamina.text = LanguageManager.CurrentLanguage.misc.classicHud_stamina;
             classicHudColorStamina.text = LanguageManager.CurrentLanguage.misc.classicHud_stamina;
-            classicHudBwStaminaShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_stamina;
-            classicHudColorStaminaShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_stamina;
-
-            Text classicHudBwWeapon = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Weapon"), "Title"));
-            Text classicHudColorWeapon = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Weapon"), "Title"));
-            Text classicHudBwWeaponShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Weapon"), "Title (1)"));
-            Text classicHudColorWeaponShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Weapon"), "Title (1)"));
+            
+            TextMeshProUGUI classicHudBwWeapon = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Weapon"), "Title"));
+            TextMeshProUGUI classicHudColorWeapon = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Weapon (1)"), "Title"));
             classicHudBwWeapon.text = LanguageManager.CurrentLanguage.misc.classicHud_weapon;
             classicHudColorWeapon.text = LanguageManager.CurrentLanguage.misc.classicHud_weapon;
-            classicHudBwWeaponShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_weapon;
-            classicHudColorWeaponShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_weapon;
 
-            Text classicHudBwArm = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Arm"), "Title"));
-            Text classicHudColorArm = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Arm"), "Title"));
-            Text classicHudBwArmShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Arm"), "Title (1)"));
-            Text classicHudColorArmShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Arm"), "Title (1)"));
+            TextMeshProUGUI classicHudBwArm = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Arm"), "Title"));
+            TextMeshProUGUI classicHudColorArm = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Arm (1)"), "Title"));
             classicHudBwArm.text = LanguageManager.CurrentLanguage.misc.classicHud_arm;
             classicHudColorArm.text = LanguageManager.CurrentLanguage.misc.classicHud_arm;
-            classicHudBwArmShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_arm;
-            classicHudColorArmShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_arm;
 
-            Text classicHudBwRailcannon = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "RailcannonMeter (1)"), "Title"));
-            Text classicHudColorRailcannon = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "RailcannonMeter"), "Title"));
-            Text classicHudBwRailcannonShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudBw, "RailcannonMeter (1)"), "Title (1)"));
-            Text classicHudColorRailcannonShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(classicHudColor, "RailcannonMeter"), "Title (1)"));
+            TextMeshProUGUI classicHudBwRailcannon = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(classicHudBw, "RailcannonMeter (1)"), "Title"));
+            TextMeshProUGUI classicHudColorRailcannon = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(classicHudColor, "RailcannonMeter (2)"), "Title"));
             classicHudBwRailcannon.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
             classicHudColorRailcannon.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
-            classicHudBwRailcannonShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
-            classicHudColorRailcannonShadow.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
 
             //Close prompt when reading book
             TextBinds bookPanelBinds = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "ScanningStuff"), "ReadingScanned"), "Panel"), "Text (1)").GetComponent<TextBinds>();
             bookPanelBinds.text1 = LanguageManager.CurrentLanguage.books.books_pressToClose1 + " <color=orange>";
             bookPanelBinds.text2 = "</color> " + LanguageManager.CurrentLanguage.books.books_pressToClose2;
+
         }
     }
 }

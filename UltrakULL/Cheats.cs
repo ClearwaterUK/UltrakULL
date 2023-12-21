@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static UltrakULL.CommonFunctions;
@@ -16,21 +17,21 @@ namespace UltrakULL
             GameObject cheatsConsentTextObject = GetGameObjectChild(cheatsConsentObject, "Text");
 
             //Consent window
-            Text cheatsConsentText = GetTextfromGameObject(GetGameObjectChild(cheatsConsentObject, "Text"));
+            TextMeshProUGUI cheatsConsentText = GetTextMeshProUGUI(GetGameObjectChild(cheatsConsentObject, "Text"));
             cheatsConsentText.text =
                 LanguageManager.CurrentLanguage.cheats.cheats_disclaimer1 + "\n\n"
                 + LanguageManager.CurrentLanguage.cheats.cheats_disclaimer2;
 
-            Text cheatsConsentYesText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cheatsConsentObject, "Yes"), "Text"));
+            TextMeshProUGUI cheatsConsentYesText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(cheatsConsentObject, "Yes"), "Text"));
             cheatsConsentYesText.text = LanguageManager.CurrentLanguage.cheats.cheats_disclaimerYes;
             cheatsConsentYesText.fontSize = 22;
 
-            Text cheatsConsentNoText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(cheatsConsentObject, "No"), "Text"));
+            TextMeshProUGUI cheatsConsentNoText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(cheatsConsentObject, "No"), "Text"));
             cheatsConsentNoText.text = LanguageManager.CurrentLanguage.cheats.cheats_disclaimerNo;
 
             GameObject cheatsPanelObject = GetGameObjectChild(GetGameObjectChild(canvasObj, "Cheat Menu"), "Cheats Manager");
 
-            Text cheatsPanelObjectTitle = GetTextfromGameObject(GetGameObjectChild(cheatsPanelObject, "Title"));
+            TextMeshProUGUI cheatsPanelObjectTitle = GetTextMeshProUGUI(GetGameObjectChild(cheatsPanelObject, "Title"));
             cheatsPanelObjectTitle.text = LanguageManager.CurrentLanguage.cheats.cheats_panelTitle;
 
             //Need to disable the TextOverride component.
@@ -39,16 +40,16 @@ namespace UltrakULL
             bhvr.enabled = false;
 
             //Cheat confirmation panel
-            GameObject cheatsEnabledConfirmationObject = CommonFunctions.GetGameObjectChild(CommonFunctions.GetGameObjectChild(CommonFunctions.GetGameObjectChild(canvasObj, "Cheat Menu"), "Cheats Overlay"),"Cheats Enabled");
+            GameObject cheatsEnabledConfirmationObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "Cheat Menu"), "Cheats Overlay"),"Cheats Enabled");
 
-            Text cheatsEnabledConfirmationTitleText = CommonFunctions.GetTextfromGameObject(CommonFunctions.GetGameObjectChild(cheatsEnabledConfirmationObject, "Title"));
+            TextMeshProUGUI cheatsEnabledConfirmationTitleText = GetTextMeshProUGUI(GetGameObjectChild(cheatsEnabledConfirmationObject, "Title"));
             cheatsEnabledConfirmationTitleText.text = LanguageManager.CurrentLanguage.cheats.cheats_cheatsEnabled;
 
             //Text cheatsEnabledConfirmationButtonsText = CommonFunctions.getTextfromGameObject(CommonFunctions.getGameObjectChild(cheatsEnabledConfirmationObject, "Details Tip"));
             //cheatsEnabledConfirmationButtonsText.text = "HOME ou ~";
             
             //Teleport menu title
-            Text cheatsTeleportMenuTitle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj,"Cheat Menu"),"Cheats Teleport"),"Title"));
+            TextMeshProUGUI cheatsTeleportMenuTitle = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj,"Cheat Menu"),"Cheats Teleport"),"Title"));
             cheatsTeleportMenuTitle.text = LanguageManager.CurrentLanguage.cheats.cheats_teleportMenu;
         }
 

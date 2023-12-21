@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UltrakULL.audio;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,15 +14,15 @@ namespace UltrakULL
         {
             try
             {
-                GameObject hellMapObject = GetGameObjectChild(canvasObj, "Hellmap");
+                GameObject hellMapObject = GetGameObjectChild(GetGameObjectChild(canvasObj, "Hellmap"),"Hellmap Act 1");
 
-                Text hellmapLimbo = GetTextfromGameObject(GetGameObjectChild(hellMapObject, "Text"));
+                TextMeshProUGUI hellmapLimbo = GetTextMeshProUGUI(GetGameObjectChild(hellMapObject, "Text"));
                 hellmapLimbo.text = LanguageManager.CurrentLanguage.misc.hellmap_limbo;
 
-                Text hellmapLust = GetTextfromGameObject(GetGameObjectChild(hellMapObject, "Text (1)"));
+                TextMeshProUGUI hellmapLust = GetTextMeshProUGUI(GetGameObjectChild(hellMapObject, "Text (1)"));
                 hellmapLust.text = LanguageManager.CurrentLanguage.misc.hellmap_lust;
 
-                Text hellmapGluttony = GetTextfromGameObject(GetGameObjectChild(hellMapObject, "Text (2)"));
+                TextMeshProUGUI hellmapGluttony = GetTextMeshProUGUI(GetGameObjectChild(hellMapObject, "Text (2)"));
                 hellmapGluttony.text = LanguageManager.CurrentLanguage.misc.hellmap_gluttony;
             }
             catch(Exception e)

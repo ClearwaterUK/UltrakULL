@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 using static UltrakULL.CommonFunctions;
@@ -13,27 +14,27 @@ namespace UltrakULL
             GameObject levelStatsWindow = GetGameObjectChild(GetGameObjectChild(canvasObj, "Level Stats Controller"), "Level Stats (1)");
             
             //Secret levels will only have a timer, or something else.
-            Text timeName = GetTextfromGameObject(GetGameObjectChild(levelStatsWindow, "Time Title"));
+            TextMeshProUGUI timeName = GetTextMeshProUGUI(GetGameObjectChild(levelStatsWindow, "Time Title"));
             timeName.text = LanguageManager.CurrentLanguage.misc.levelstats_time; 
 
-            Text killsName = GetTextfromGameObject(GetGameObjectChild(levelStatsWindow, "Kills Title"));
+            TextMeshProUGUI killsName = GetTextMeshProUGUI(GetGameObjectChild(levelStatsWindow, "Kills Title"));
             killsName.text = LanguageManager.CurrentLanguage.misc.levelstats_kills;
 
-            Text styleName = GetTextfromGameObject(GetGameObjectChild(levelStatsWindow, "Style Title"));
+            TextMeshProUGUI styleName = GetTextMeshProUGUI(GetGameObjectChild(levelStatsWindow, "Style Title"));
             styleName.text = LanguageManager.CurrentLanguage.misc.levelstats_style;
 
-            Text secretsName = GetTextfromGameObject(GetGameObjectChild(levelStatsWindow, "Secrets Title"));
+            TextMeshProUGUI secretsName = GetTextMeshProUGUI(GetGameObjectChild(levelStatsWindow, "Secrets Title"));
             secretsName.text = LanguageManager.CurrentLanguage.misc.levelstats_secrets;
 
-            Text challengesName = GetTextfromGameObject(GetGameObjectChild(levelStatsWindow, "Challenge Title"));
+            TextMeshProUGUI challengesName = GetTextMeshProUGUI(GetGameObjectChild(levelStatsWindow, "Challenge Title"));
             challengesName.text = LanguageManager.CurrentLanguage.misc.levelstats_challenge;
 
-            Text assistsName = GetTextfromGameObject(GetGameObjectChild(levelStatsWindow, "Assists Title"));
+            TextMeshProUGUI assistsName = GetTextMeshProUGUI(GetGameObjectChild(levelStatsWindow, "Assists Title"));
             assistsName.text = LanguageManager.CurrentLanguage.misc.levelstats_majorAssists;
 
             if (GetCurrentSceneName() == "Level 4-S")
             {
-                Text cratesName = GetTextfromGameObject(GetGameObjectChild(levelStatsWindow, "Crates Counter"));
+                TextMeshProUGUI cratesName = GetTextMeshProUGUI(GetGameObjectChild(levelStatsWindow, "Crates Counter"));
                 cratesName.text = LanguageManager.CurrentLanguage.misc.levelstats_boxes;
             }
         }

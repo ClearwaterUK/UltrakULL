@@ -80,27 +80,27 @@ namespace UltrakULL
                 GameObject pauseMenu = GetGameObjectChild(canvasObj, "PauseMenu");
 
                 //Title
-                Text pauseText = GetTextfromGameObject(GetGameObjectChild(pauseMenu, "Text"));
+                TextMeshProUGUI pauseText = GetTextMeshProUGUI(GetGameObjectChild(pauseMenu, "Text"));
                 pauseText.text = "-- " + LanguageManager.CurrentLanguage.pauseMenu.pause_title + " --";
 
                 //Resume
-                Text continueText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Resume"), "Text"));
+                TextMeshProUGUI continueText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Resume"), "Text"));
                 continueText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_resume;
 
                 //Checkpoint
-                Text checkpointText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Restart Checkpoint"), "Text"));
+                TextMeshProUGUI checkpointText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Restart Checkpoint"), "Text"));
                 checkpointText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_respawn;
 
                 //Restart mission
-                Text restartText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Restart Mission"), "Text"));
+                TextMeshProUGUI restartText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Restart Mission"), "Text"));
                 restartText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_restart;
 
                 //Options
-                Text optionsText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Options"), "Text"));
+                TextMeshProUGUI optionsText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Options"), "Text"));
                 optionsText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_options;
 
                 //Quit
-                Text quitText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Quit Mission"), "Text"));
+                TextMeshProUGUI quitText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Quit Mission"), "Text"));
                 quitText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_quit;
 
                 //Quit+Restart windows
@@ -108,31 +108,31 @@ namespace UltrakULL
 
                 //Quit
                 GameObject quitDialog = GetGameObjectChild(GetGameObjectChild(pauseDialogs, "Quit Confirm"), "Panel");
-                Text quitDialogText = GetTextfromGameObject(GetGameObjectChild(quitDialog, "Text"));
+                TextMeshProUGUI quitDialogText = GetTextMeshProUGUI(GetGameObjectChild(quitDialog, "Text (2)"));
                 quitDialogText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_quitConfirm;
 
-                Text quitDialogTooltip = GetTextfromGameObject(GetGameObjectChild(quitDialog, "Text (1)"));
+                TextMeshProUGUI quitDialogTooltip = GetTextMeshProUGUI(GetGameObjectChild(quitDialog, "Text (1)"));
                 quitDialogTooltip.text = LanguageManager.CurrentLanguage.pauseMenu.pause_disableWindow;
 
-                Text quitDialogYes = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(quitDialog, "Confirm"), "Text"));
+                TextMeshProUGUI quitDialogYes = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(quitDialog, "Confirm"), "Text"));
                 quitDialogYes.text = LanguageManager.CurrentLanguage.pauseMenu.pause_quitConfirmYes;
 
-                Text quitDialogNo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(quitDialog, "Cancel"), "Text"));
+                TextMeshProUGUI quitDialogNo = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(quitDialog, "Cancel"), "Text"));
                 quitDialogNo.text = LanguageManager.CurrentLanguage.pauseMenu.pause_quitConfirmNo;
 
                 //Restart
                 GameObject restartDialog = GetGameObjectChild(GetGameObjectChild(pauseDialogs, "Restart Confirm"), "Panel");
 
-                Text restartDialogText = GetTextfromGameObject(GetGameObjectChild(restartDialog, "Text"));
+                TextMeshProUGUI restartDialogText = GetTextMeshProUGUI(GetGameObjectChild(restartDialog, "Text"));
                 restartDialogText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_restartConfirm;
 
-                Text restartDialogTooltip = GetTextfromGameObject(GetGameObjectChild(restartDialog, "Text (1)"));
+                TextMeshProUGUI restartDialogTooltip = GetTextMeshProUGUI(GetGameObjectChild(restartDialog, "Text (1)"));
                 restartDialogTooltip.text = LanguageManager.CurrentLanguage.pauseMenu.pause_disableWindow;
 
-                Text restartDialogYes = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(restartDialog, "Confirm"), "Text"));
+                TextMeshProUGUI restartDialogYes = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(restartDialog, "Confirm"), "Text"));
                 restartDialogYes.text = LanguageManager.CurrentLanguage.pauseMenu.pause_restartConfirmYes;
 
-                Text restartDialogNo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(restartDialog, "Cancel"), "Text"));
+                TextMeshProUGUI restartDialogNo = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(restartDialog, "Cancel"), "Text"));
                 restartDialogNo.text = LanguageManager.CurrentLanguage.pauseMenu.pause_restartConfirmNo;
             }
             catch (Exception e)
@@ -145,7 +145,7 @@ namespace UltrakULL
         public static void LoadFonts()
         {
             Logging.Message("Loading font resource bundle...");
-            //Will file from the same directory that the dll is in.
+            //Will load from the same directory that the dll is in.
             AssetBundle fontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder,"ullfont.resource"));
 
             if(fontBundle == null)
@@ -267,12 +267,13 @@ namespace UltrakULL
                         
                         Logging.Message("Regular scene");
                         Logging.Message("Attempting to patch base elements");
-                        PatchPauseMenu(ref canvasObj);
-                        Cheats.PatchCheatConsentPanel(ref canvasObj);
-                        HUDMessages.PatchDeathScreen(ref canvasObj);
-                        LevelStatWindow.PatchStats(ref canvasObj);
-                        HUDMessages.PatchMisc(ref canvasObj);
-                        Options options = new Options(ref canvasObj);
+                        try{PatchPauseMenu(ref canvasObj);} catch(Exception e){Console.WriteLine(e.ToString());}
+                        try{Cheats.PatchCheatConsentPanel(ref canvasObj);;} catch(Exception e){Console.WriteLine(e.ToString());}
+                        try{HUDMessages.PatchDeathScreen(ref canvasObj);} catch(Exception e){Console.WriteLine(e.ToString());}
+                        try{LevelStatWindow.PatchStats(ref canvasObj);} catch(Exception e){Console.WriteLine(e.ToString());}
+                        try{HUDMessages.PatchMisc(ref canvasObj);} catch(Exception e){Console.WriteLine(e.ToString());}
+                        try{Options options = new Options(ref canvasObj);} catch(Exception e){Console.WriteLine(e.ToString());}
+        
                         Logging.Message("Base elements patched");
                         }
                         

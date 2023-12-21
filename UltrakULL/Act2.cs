@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -12,14 +13,15 @@ namespace UltrakULL
     {
         private static void PatchHellmap(ref GameObject canvasObj)
         {
-            GameObject hellMapObject = GetGameObjectChild(canvasObj, "Hellmap");
-            Text hellmapGreed = GetTextfromGameObject(GetGameObjectChild(hellMapObject, "Text"));
+            GameObject hellMapObject = GetGameObjectChild(GetGameObjectChild(canvasObj, "Hellmap"),"Hellmap Act 2");
+            
+            TextMeshProUGUI hellmapGreed = GetTextMeshProUGUI(GetGameObjectChild(hellMapObject, "Text"));
             hellmapGreed.text = LanguageManager.CurrentLanguage.misc.hellmap_greed;
 
-            Text hellmapWrath = GetTextfromGameObject(GetGameObjectChild(hellMapObject, "Text (1)"));
+            TextMeshProUGUI hellmapWrath = GetTextMeshProUGUI(GetGameObjectChild(hellMapObject, "Text (1)"));
             hellmapWrath.text = LanguageManager.CurrentLanguage.misc.hellmap_wrath;
 
-            Text hellmapHeresy = GetTextfromGameObject(GetGameObjectChild(hellMapObject, "Text (2)"));
+            TextMeshProUGUI hellmapHeresy = GetTextMeshProUGUI(GetGameObjectChild(hellMapObject, "Text (2)"));
             hellmapHeresy.text = LanguageManager.CurrentLanguage.misc.hellmap_heresy;
         }
     

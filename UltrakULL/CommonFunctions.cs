@@ -132,16 +132,15 @@ namespace UltrakULL
 
             GameObject coreGame = GameObject.Find("Player");
 
-            GameObject resultsPanel = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(coreGame, "Main Camera"), "HUD Camera"), "HUD"), "FinishCanvas"), "Panel"); // What happened here?
+            GameObject resultsPanel = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(coreGame, "Main Camera"), "HUD Camera"), "HUD"), "FinishCanvas"), "Panel"); 
 
             //Level title
             GameObject resultsTitle = GetGameObjectChild(resultsPanel, "Title");
-            Text resultsTitleLevelName = GetTextfromGameObject(GetGameObjectChild(resultsTitle, "Text"));
+            TextMeshProUGUI resultsTitleLevelName = GetTextMeshProUGUI(GetGameObjectChild(resultsTitle, "Text"));
             resultsTitleLevelName.text = levelName;
 
             //Disable the levelFinderComponent, so the level name doesn't get reverted when the results panel appears.
             LevelNameFinder finder = resultsTitleLevelName.GetComponent<LevelNameFinder>();
-
             if (finder != null)
             {
                 finder.enabled = false;
@@ -150,41 +149,41 @@ namespace UltrakULL
             //Time
             //For some bizzare reason, the timer is labelled as "ff". Hakita were you cutting corners? :D
             GameObject timeTitle = GetGameObjectChild(resultsPanel, "ff");
-            Text timeTitleText = GetTextfromGameObject(GetGameObjectChild(timeTitle, "Text"));
+            TextMeshProUGUI timeTitleText = GetTextMeshProUGUI(GetGameObjectChild(timeTitle, "Text"));
             timeTitleText.text = LanguageManager.CurrentLanguage.misc.stats_time;
 
             //Kills
             GameObject killsTitle = GetGameObjectChild(resultsPanel, "Kills - Info");
-            Text killsTitleText = GetTextfromGameObject(GetGameObjectChild(killsTitle, "Text"));
+            TextMeshProUGUI killsTitleText = GetTextMeshProUGUI(GetGameObjectChild(killsTitle, "Text"));
             killsTitleText.text = LanguageManager.CurrentLanguage.misc.stats_kills;
 
             //Style
             GameObject styleTitle = GetGameObjectChild(resultsPanel, "Style - Info");
-            Text styleTitleText = GetTextfromGameObject(GetGameObjectChild(styleTitle, "Text"));
+            TextMeshProUGUI styleTitleText = GetTextMeshProUGUI(GetGameObjectChild(styleTitle, "Text"));
             styleTitleText.text = LanguageManager.CurrentLanguage.misc.stats_style;
 
             //Secrets
             GameObject secretsTitle = GetGameObjectChild(resultsPanel, "Secrets -  Title");
-            Text secretsTitleText = GetTextfromGameObject(GetGameObjectChild(secretsTitle, "Text"));
+            TextMeshProUGUI secretsTitleText = GetTextMeshProUGUI(GetGameObjectChild(secretsTitle, "Text"));
             secretsTitleText.text = LanguageManager.CurrentLanguage.misc.stats_secrets;
 
             //Challenge title
             GameObject challengeTitle = GetGameObjectChild(resultsPanel, "Challenge - Title");
-            Text challengeTitleText = GetTextfromGameObject(GetGameObjectChild(challengeTitle, "Text"));
+            TextMeshProUGUI challengeTitleText = GetTextMeshProUGUI(GetGameObjectChild(challengeTitle, "Text"));
             challengeTitleText.text = LanguageManager.CurrentLanguage.misc.stats_challenge;
 
             //Challenge description
             GameObject challengeDescription = GetGameObjectChild(resultsPanel, "Challenge");
-            Text challengeDescriptionText = GetTextfromGameObject(GetGameObjectChild(challengeDescription, "Text"));
+            TextMeshProUGUI challengeDescriptionText = GetTextMeshProUGUI(GetGameObjectChild(challengeDescription, "ChallengeText"));
             challengeDescriptionText.text = levelChallenge;
 
             //Total points
-            Text totalPointsText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(resultsPanel, "Total Points"),"Text (1)"));
+            TextMeshProUGUI totalPointsText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(resultsPanel, "Total Points"),"Text (1)"));
             totalPointsText.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_total + ":";
         }
 
 
-        public static GameObject GetGameObjectChild(GameObject parentObject, string childToFind) // Why does this exist if we're just doing a single function call? 
+        public static GameObject GetGameObjectChild(GameObject parentObject, string childToFind)
         {
             GameObject childToReturn = parentObject.transform.Find(childToFind).gameObject;
             return childToReturn;
