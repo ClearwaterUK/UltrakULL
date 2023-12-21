@@ -45,6 +45,8 @@ using System.Reflection;
  * Options->PatchControlOptions needs to be COMPLETELY redone.
  * Options->PatchColorOptions has new entries.
  * LocalizeGameProgressCheck
+ * LevelNameFinder->OnEnable needs to be redone.
+ * Need to convert Fonts to FontAsset to use in TMP. Can't do until back at apartment.
  *
  * Virtually everything in-level is busted.
  * */

@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using HarmonyLib;
 using Newtonsoft.Json;
+using TMPro;
 using UltrakULL.json;
 using static UltrakULL.CommonFunctions;
 
@@ -21,8 +22,11 @@ namespace UltrakULL
         public static bool updateFailed;
         
         public static bool GlobalFontReady;
+        
         public static Font GlobalFont;
         public static Font MuseumFont;
+        public static TMP_FontAsset GlobalFontTMP;
+        public static TMP_FontAsset MuseumFontTMP;
         
         public static bool wasLanguageReset = false;
         
@@ -155,16 +159,25 @@ namespace UltrakULL
                 
                 Font font1 = fontBundle.LoadAsset<Font>("VCR_OSD_MONO");
                 Font font2 = fontBundle.LoadAsset<Font>("EBGaramond-Regular");
+                TMP_FontAsset font1TMP = fontBundle.LoadAsset<TMP_FontAsset>("VCR_OSD_MONO");
+                TMP_FontAsset font2TMP = fontBundle.LoadAsset<TMP_FontAsset>("EBGaramond-Regular");
+                
                 if(font1 == null || font2 == null)
                 {
-                    Logging.Error("FAILED TO LOAD FONT");
+                    Logging.Error("FAILED TO LOAD FONTS");
+                }
+                if(font1TMP == null || font2TMP == null)
+                {
+                    Logging.Error("FAILED TO LOAD TMP FONTS");
                 }
                 else
                 {
                     Logging.Warn("Fonts loaded.");
                     GlobalFont = font1;
+                    GlobalFontTMP = font1TMP;
                     GlobalFontReady = true;
                     MuseumFont = font2;
+                    MuseumFontTMP = font2TMP;
                 }
             }
         }
@@ -324,7 +337,7 @@ namespace UltrakULL
             if (GetCurrentSceneName() == "Main Menu")
             {
                 //Open Language Folder button in Options->Language
-                Text openLangFolderText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj,"OptionsMenu"), "Language Page"),"Scroll Rect (1)"),"Contents"),"OpenLangFolder"),"Slot Text")); 
+                TextMeshProUGUI openLangFolderText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj,"OptionsMenu"), "Language Page"),"Scroll Rect (1)"),"Contents"),"OpenLangFolder"),"Slot Text")); 
                 openLangFolderText.text = "<color=#03fc07>Open language folder</color>";
 
                 //Get the mods/restart buttons...

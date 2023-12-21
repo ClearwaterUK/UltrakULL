@@ -159,9 +159,9 @@ namespace UltrakULL.Harmony_Patches
                         Transform slotTextTf = languageBrowserButtonInstance.transform.Find("Slot Text");
                         slotTextTf.localScale = new Vector3(4.983107f, 0.970607f, 2.1431f);
                         slotTextTf.localPosition = new Vector3(0f, 0f, 0f);
-                        Text slotText = slotTextTf.GetComponent<Text>();
+                        TextMeshProUGUI slotText = slotTextTf.GetComponent<TextMeshProUGUI>();
                         slotText.text = langInfo.languageFullName;
-                        slotText.alignment = TextAnchor.MiddleCenter;
+                        slotText.alignment = TextAlignmentOptions.Center;
                         slotText.fontSize = 16;
                         
                         if(langFileLocallyExists(langInfo.languageTag))
@@ -254,8 +254,8 @@ namespace UltrakULL.Harmony_Patches
             returnToList.localScale = new Vector3(4.983107f, 0.970607f, 2.1431f);
             returnToList.localPosition = new Vector3(0f, 0f, 0f);
             TextMeshProUGUI returnToListText = returnToList.GetComponent<TextMeshProUGUI>();
-            returnToListText.text = "<color=#03fc07>Return</color>";
-            returnToListText.alignment = TextAlignmentOptions.MidlineJustified;
+            returnToListText.text = "<color=green>Return</color>";
+            returnToListText.alignment = TextAlignmentOptions.Center;
             returnToListText.fontSize = 16;
 
             Button returnToListButton = returnToLocalList.AddComponent<Button>();
@@ -327,7 +327,7 @@ namespace UltrakULL.Harmony_Patches
                        
                     
                     MonoSingleton<HudMessageReceiver>.Instance.ClearMessage();
-                    MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=lime>" + messageNotif + "</color>");
+                    MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=green>" + messageNotif + "</color>");
 
                     if(newLangDownloaded)
                     {
@@ -373,7 +373,7 @@ namespace UltrakULL.Harmony_Patches
             slotTextTf.localPosition = new Vector3(0f, 0f, 0f);
             TextMeshProUGUI slotText = slotTextTf.GetComponent<TextMeshProUGUI>();
             slotText.text = LanguageManager.allLanguages[language].metadata.langDisplayName;
-            if(LanguageManager.CurrentLanguage.metadata.langName == language) {slotText.text += "\n(<color=lime>Selected</color>)";}
+            if(LanguageManager.CurrentLanguage.metadata.langName == language) {slotText.text += "\n(<color=green>Selected</color>)";}
             slotText.alignment = TextAlignmentOptions.Midline;
             slotText.fontSize = 16;
             
