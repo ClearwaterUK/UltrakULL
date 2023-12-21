@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -89,7 +90,6 @@ namespace UltrakULL
         {
             try
             {
-
                 GameObject calibrationAudioWindow = GetGameObjectChild(GetGameObjectChild(canvasObj, "Intro"), "Audio Calibration");
                 GameObject calibrationAudioWindowWarning = GetGameObjectChild(calibrationAudioWindow, "Warning");
                 GameObject calibrationVideoWindow = GetGameObjectChild(GetGameObjectChild(canvasObj, "Intro"), "Video Calibration");
@@ -97,42 +97,42 @@ namespace UltrakULL
                 GameObject calibrationControllerWindow = GetGameObjectChild(GetGameObjectChild(canvasObj, "Intro"), "Auto-Aim Settings");
 
                 //Audio
-                Text calibrationAudioTitle = GetTextfromGameObject(GetGameObjectChild(calibrationAudioWindow, "Text"));
+                TextMeshProUGUI calibrationAudioTitle = GetTextMeshProUGUI(GetGameObjectChild(calibrationAudioWindow, "Text"));
                 calibrationAudioTitle.text = LanguageManager.CurrentLanguage.tutorial.tutorial_audioCalibrationTitle;
 
-                Text calibrationAudioMaster = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(calibrationAudioWindow, "Master Volume (1)"), "Text"));
+                TextMeshProUGUI calibrationAudioMaster = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationAudioWindow, "Master Volume (1)"), "Text"));
                 calibrationAudioMaster.text = LanguageManager.CurrentLanguage.options.audio_globalVolume;
 
-                Text calibrationAudioMusic = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(calibrationAudioWindow, "Music Volume (1)"), "Text"));
+                TextMeshProUGUI calibrationAudioMusic = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationAudioWindow, "Music Volume (1)"), "Text"));
                 calibrationAudioMusic.text = LanguageManager.CurrentLanguage.options.audio_musicVolume;
 
-                Text calibrationAudioDone = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(calibrationAudioWindow, "Bone (1)"), "Text"));
+                TextMeshProUGUI calibrationAudioDone = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationAudioWindow, "Bone (1)"), "Text"));
                 calibrationAudioDone.text = LanguageManager.CurrentLanguage.shop.shop_colorsDone;
                 
-                Text calibrationAudioDoneAlt = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(calibrationAudioWindow, "Done"), "Text"));
+                TextMeshProUGUI calibrationAudioDoneAlt = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationAudioWindow, "Done"), "Text"));
                 calibrationAudioDoneAlt.text = LanguageManager.CurrentLanguage.shop.shop_colorsDone;
 
                 //Audio warning
-                Text calibrationAudioWarningPrompt = GetTextfromGameObject(GetGameObjectChild(calibrationAudioWindowWarning, "Text"));
+                TextMeshProUGUI calibrationAudioWarningPrompt = GetTextMeshProUGUI(GetGameObjectChild(calibrationAudioWindowWarning, "Text"));
                 calibrationAudioWarningPrompt.text =
                     "<color=red>" + LanguageManager.CurrentLanguage.tutorial.tutorial_audioCalibrationWarning1 +"</color>" + "\n\n"
                      + LanguageManager.CurrentLanguage.tutorial.tutorial_audioCalibrationWarning2 + "\n\n" +
                      LanguageManager.CurrentLanguage.tutorial.tutorial_audioCalibrationWarning3;
 
-                Text calibrationAudioWarningPromptYes = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(calibrationAudioWindowWarning, "Done (1)"), "Text"));
+                TextMeshProUGUI calibrationAudioWarningPromptYes = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationAudioWindowWarning, "Done (1)"), "Text"));
                 calibrationAudioWarningPromptYes.text = LanguageManager.CurrentLanguage.tutorial.tutorial_audioCalibrationWarningPromptYes;
 
-                Text calibrationAudioWarningPromptNo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(calibrationAudioWindowWarning, "Done (2)"), "Text"));
+                TextMeshProUGUI calibrationAudioWarningPromptNo = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationAudioWindowWarning, "Done (2)"), "Text"));
                 calibrationAudioWarningPromptNo.text = LanguageManager.CurrentLanguage.tutorial.tutorial_audioCalibrationWarningPromptNo;
 
                 //Video
-                Text calibrationVideoTitle = GetTextfromGameObject(GetGameObjectChild(calibrationVideoWindow, "Text"));
+                TextMeshProUGUI calibrationVideoTitle = GetTextMeshProUGUI(GetGameObjectChild(calibrationVideoWindow, "Text"));
                 calibrationVideoTitle.text = LanguageManager.CurrentLanguage.tutorial.tutorial_videoCalibrationTitle;
 
-                Text calibrationVideoPcDescription = GetTextfromGameObject(GetGameObjectChild(calibrationVideoWindow, "Text (1)"));
+                TextMeshProUGUI calibrationVideoPcDescription = GetTextMeshProUGUI(GetGameObjectChild(calibrationVideoWindow, "Text (1)"));
                 calibrationVideoPcDescription.text = LanguageManager.CurrentLanguage.tutorial.tutorial_videoCalibrationPcDescription;
 
-                Text calibrationVideoPsxDescription = GetTextfromGameObject(GetGameObjectChild(calibrationVideoWindow, "Text (2)"));
+                TextMeshProUGUI calibrationVideoPsxDescription = GetTextMeshProUGUI(GetGameObjectChild(calibrationVideoWindow, "Text (2)"));
                 calibrationVideoPsxDescription.text = LanguageManager.CurrentLanguage.tutorial.tutorial_videoCalibrationPsxDescription;
 
                 //Mechanics (difficulty)
@@ -226,19 +226,19 @@ namespace UltrakULL
                 underConstructionText.text = LanguageManager.CurrentLanguage.frontend.difficulty_underConstruction;
 
                 //Controller/autoaim settings
-                Text calibrationControllerTitle = GetTextfromGameObject(GetGameObjectChild(calibrationControllerWindow, "Text"));
+                TextMeshProUGUI calibrationControllerTitle = GetTextMeshProUGUI(GetGameObjectChild(calibrationControllerWindow, "Text"));
                 calibrationControllerTitle.text = "! " + LanguageManager.CurrentLanguage.tutorial.tutorial_controllerCalibrationTitle + " !";
 
-                Text calibrationControllerSubtitle = GetTextfromGameObject(GetGameObjectChild(calibrationControllerWindow, "Text (1)"));
+                TextMeshProUGUI calibrationControllerSubtitle = GetTextMeshProUGUI(GetGameObjectChild(calibrationControllerWindow, "Text (1)"));
                 calibrationControllerSubtitle.text = LanguageManager.CurrentLanguage.tutorial.tutorial_controllerCalibrationSubtitle;
 
-                Text calibrationControllerAutoAimToggle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(calibrationControllerWindow, "Auto Aim (1)"),"Text (1)"));
+                TextMeshProUGUI calibrationControllerAutoAimToggle = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationControllerWindow, "Auto Aim (1)"),"Text (1)"));
                 calibrationControllerAutoAimToggle.text = LanguageManager.CurrentLanguage.options.assists_autoAim;
 
-                Text calibrationControllerAutoAimPercent = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(calibrationControllerWindow, "Auto Aim Amount (1)"),"Text (1)"));
+                TextMeshProUGUI calibrationControllerAutoAimPercent = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationControllerWindow, "Auto Aim Amount (1)"),"Text (1)"));
                 calibrationControllerAutoAimPercent.text = LanguageManager.CurrentLanguage.options.assists_autoAimPercent;
 
-                Text calibrationControllerAutoAimReminder = GetTextfromGameObject(GetGameObjectChild(calibrationControllerWindow, "Text (2)"));
+                TextMeshProUGUI calibrationControllerAutoAimReminder = GetTextMeshProUGUI(GetGameObjectChild(calibrationControllerWindow, "Text (2)"));
                 calibrationControllerAutoAimReminder.text = LanguageManager.CurrentLanguage.tutorial.tutorial_controllerCalibrationTooltip;
 
                 //Tooltip

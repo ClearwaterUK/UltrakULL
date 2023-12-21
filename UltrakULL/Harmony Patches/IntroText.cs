@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,14 +13,14 @@ namespace UltrakULL.Harmony_Patches
     public static class LocalizeIntroText
     {
         [HarmonyPrefix]
-        public static bool IntroTextStart_MyPatch(IntroText __instance, Text ___txt, string ___fullString)
+        public static bool IntroTextStart_MyPatch(IntroText __instance, TMP_Text ___txt, string ___fullString)
         {
             if(isUsingEnglish())
             {
                 return true;
             }
             GameObject canvasObj = GetInactiveRootObject("Canvas");
-            ___txt = __instance.GetComponent<Text>();
+            ___txt = __instance.GetComponent<TMP_Text>();
 
             TutorialStrings tutStrings = new TutorialStrings(ref canvasObj);
             ___fullString = ___txt.text;
