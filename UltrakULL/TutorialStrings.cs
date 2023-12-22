@@ -178,7 +178,7 @@ namespace UltrakULL
                     + "\n\n"
                     + LanguageManager.CurrentLanguage.frontend.difficulty_harmlessDescription2
                     + "\n\n"
-                    + "<color=lime>" + LanguageManager.CurrentLanguage.frontend.difficulty_harmlessDescription3 + "</color>";
+                    + "<color=green>" + LanguageManager.CurrentLanguage.frontend.difficulty_harmlessDescription3 + "</color>";
 
                 //Lenient title
                 GameObject calibrationLenientInfo = GetGameObjectChild(calibrationMechanicsWindow, "Lenient Info");

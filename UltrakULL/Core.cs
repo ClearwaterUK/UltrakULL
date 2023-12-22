@@ -232,7 +232,7 @@ namespace UltrakULL
                         //Add notif if there's a mod update available
                         if(updateAvailable)
                         { 
-                            ultrakullLogoText.text += "\n<color=lime>UPDATE AVAILABLE!</color>";
+                            ultrakullLogoText.text += "\n<color=green>UPDATE AVAILABLE!</color>";
                                 
                             //Make an update button
                             GameObject buttonBase= GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj,"Main Menu (1)"),"Panel"),"Youtube");

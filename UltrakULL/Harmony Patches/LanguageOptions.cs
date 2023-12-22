@@ -394,7 +394,7 @@ namespace UltrakULL.Harmony_Patches
             {
                 GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(contentParent.gameObject,LanguageManager.CurrentLanguage.metadata.langName),"Slot Text")).text = LanguageManager.CurrentLanguage.metadata.langDisplayName;
 
-                GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(contentParent.gameObject,language),"Slot Text")).text += "\n(<color=lime>Selected</color>)";
+                GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(contentParent.gameObject,language),"Slot Text")).text += "\n(<color=green>Selected</color>)";
 
                 LanguageManager.SetCurrentLanguage(language);
             });
