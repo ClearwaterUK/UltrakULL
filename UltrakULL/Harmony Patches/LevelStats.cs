@@ -10,6 +10,7 @@ namespace UltrakULL.Harmony_Patches
 
     //@Override
     //Overrides the Start method from LevelStats class to localize level names
+    //MAY BE OBSOLETE AND CAN REMOVE.
     [HarmonyPatch(typeof(LevelStats), "Start")]
     public static class LocalizeLevelStatNames
     {
@@ -35,6 +36,7 @@ namespace UltrakULL.Harmony_Patches
             if (sman.levelNumber != 0 && !Debug.isDebugBuild)
             {
                 rankData = GameProgressSaver.GetRank(true);
+                __instance.levelName.text = LevelNames.GetDiscordLevelName(GetCurrentSceneName());
             }
             if (sman.levelNumber != 0 && (Debug.isDebugBuild || (rankData != null && rankData.levelNumber == sman.levelNumber)))
             {
@@ -44,6 +46,7 @@ namespace UltrakULL.Harmony_Patches
                     __instance.levelName.text = LevelNames.GetDiscordLevelName(GetCurrentSceneName());
                 }
             }
+            __instance.levelName.text = LevelNames.GetDiscordLevelName(GetCurrentSceneName());
         }
     }
 

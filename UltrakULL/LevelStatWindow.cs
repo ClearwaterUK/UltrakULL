@@ -13,6 +13,9 @@ namespace UltrakULL
         {
             GameObject levelStatsWindow = GetGameObjectChild(GetGameObjectChild(canvasObj, "Level Stats Controller"), "Level Stats (1)");
             
+            TextMeshProUGUI levelName = GetTextMeshProUGUI(GetGameObjectChild(levelStatsWindow, "Title"));
+            levelName.text = LevelNames.GetDiscordLevelName(GetCurrentSceneName());
+
             //Secret levels will only have a timer, or something else.
             TextMeshProUGUI timeName = GetTextMeshProUGUI(GetGameObjectChild(levelStatsWindow, "Time Title"));
             timeName.text = LanguageManager.CurrentLanguage.misc.levelstats_time; 

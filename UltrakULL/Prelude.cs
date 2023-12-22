@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,10 +14,10 @@ namespace UltrakULL
         {
             GameObject openingCredsParent = GetGameObjectChild(canvasObj, "HurtScreen");
 
-            Text openingCredsFirst = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(openingCredsParent, "Text 1 Sound"), "Text (1)"));
+            TextMeshProUGUI openingCredsFirst = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(openingCredsParent, "Text 1 Sound"), "Text (1)"));
             openingCredsFirst.text = LanguageManager.CurrentLanguage.prelude.prelude_first_openingCredits1;
 
-            Text openingCredsSecond = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(openingCredsParent, "Text 2 Sound"), "Text (2)"));
+            TextMeshProUGUI openingCredsSecond = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(openingCredsParent, "Text 2 Sound"), "Text (2)"));
             openingCredsSecond.text = LanguageManager.CurrentLanguage.prelude.prelude_first_openingCredits2;
         }
 

@@ -46,6 +46,9 @@ using System.Reflection;
  * Need to convert Fonts to FontAsset to use in TMP. Can't do until back at apartment.
  *
  *
+ * LevelLeaderboards->EndPatch
+ * Weapon freshness seems to flicker.
+ *
  * */
 
 namespace UltrakULL

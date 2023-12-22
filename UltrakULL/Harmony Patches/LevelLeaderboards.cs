@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Lifetime;
+using TMPro;
 using UnityEngine;
 
 using static UltrakULL.CommonFunctions;
@@ -48,7 +49,7 @@ namespace UltrakULL.Harmony_Patches
                 }
                 ___leaderboardType.text = (___displayPRank ? LanguageManager.CurrentLanguage.frontend.leaderboard_pPercent : LanguageManager.CurrentLanguage.frontend.leaderboard_anyPercent);
                 
-                Text connecting = GetTextfromGameObject(___loadingPanel);
+                TextMeshProUGUI connecting = GetTextMeshProUGUI(___loadingPanel);
                 connecting.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_connectingToSteam;
             }
         }
