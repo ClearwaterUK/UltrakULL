@@ -70,7 +70,7 @@ namespace UltrakULL
 
                 case "???": { return "???"; }
                 case "PRIME SOUL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_type_primeSoul; }
-                default: { return "UNKNOWN ENEMY TYPE"; }
+                default: { Logging.Warn("Unknown enemy type");return originaltype; }
             }
         }
 
@@ -312,7 +312,9 @@ namespace UltrakULL
                         LanguageManager.CurrentLanguage.enemyBios.enemyBios_sisyphusPrime_7 + "\n\n" +
                         LanguageManager.CurrentLanguage.enemyBios.enemyBios_sisyphusPrime_8;
                 }
-                default: {return "UNKNOWN ENEMY BIO";}
+                default: {Logging.Warn( "UNKNOWN ENEMY BIO: " + originalenemy);
+                    return originalenemy;
+                }
             }
         }
 

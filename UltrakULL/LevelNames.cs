@@ -71,7 +71,8 @@ namespace UltrakULL
 
 			if (missionName.Contains("Intermission")) { return "???"; }
 
-			return ("Unknown level - " + missionName);
+	        Logging.Warn("Unknown level name: " + missionName);
+			return missionName;
         }
 
         public static string GetLevelName(int missionNum)

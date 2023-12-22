@@ -293,7 +293,7 @@ namespace UltrakULL
                         case "PRIME SANCTUMS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNamePrime; }
                         case "MISCELLANEOUS TRACKS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameMisc; }
 
-                        default: {Logging.Warn("Missing CG music folder: " + cgMusicSoundtrackFolderTitle.text); return "Unknown folder name"; }
+                        default: {Logging.Warn("Missing CG music folder: " + cgMusicSoundtrackFolderTitle.text); return cgMusicSoundtrackFolderTitle.text; }
                     }
                 }
             }

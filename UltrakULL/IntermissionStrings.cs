@@ -60,7 +60,8 @@ namespace UltrakULL
                 if (inputString.Contains("Bereft")) { return this.act2IntermissionSixth ; }
             }
 
-            return "Unknown intermission string";
+            Logging.Warn("Unknown intermission string:\n" + inputString);
+            return inputString;
         }
 
         public IntermissionStrings()

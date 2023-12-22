@@ -1,4 +1,5 @@
-﻿using UltrakULL.json;
+﻿using System;
+using UltrakULL.json;
 using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL
@@ -131,7 +132,12 @@ namespace UltrakULL
                     {
                         return LevelSecret(message, message2);
                     }
-                default: return "Unimplemented Prelude string";
+                default:
+                {
+                    Console.WriteLine("Unknown Prelude string: \n" + message + message2);
+                    return message + message2;
+                }
+                    
             }
 
         }
