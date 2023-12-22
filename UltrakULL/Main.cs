@@ -50,7 +50,6 @@ using System.Reflection;
  * TMP text changes now only support certain colors. Lime/cyan no longer work, need to change to green/blue.
  *
  * Secret levels: PatchTestament
- * Sandbox: PatchDupeMenu (and likely other stuff)
  *
  *
  * Virtually everything in-level is busted.

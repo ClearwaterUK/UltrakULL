@@ -20,7 +20,14 @@ namespace UltrakULL.Harmony_Patches
             }
             if(___shopCanvas != null)
             {
-                if (__instance.gameObject.name == "Testament Shop")
+                //Secret testaments (Don't do anything here since it's taken care of elsewhere
+                if (__instance.gameObject.name == "Testament Shop" && GetCurrentSceneName().Contains("-S"))
+                {
+                    return;
+                }
+
+                //Prime testaments
+                if (__instance.gameObject.name == "Testament Shop" && GetCurrentSceneName().Contains("P-"))
                 {
                     Logging.Warn("Prime end testament, getting text");
                     TextMeshProUGUI primeEndText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(___shopCanvas.gameObject,"Border"),"TipBox"),
@@ -29,8 +36,8 @@ namespace UltrakULL.Harmony_Patches
                     primeEndText.text = pss.GetSecretText();
                     return;
                 }
-                Text origTip = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(___shopCanvas.gameObject,"TipBox"),"Panel"),"TipText"));
                 
+                Text origTip = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(___shopCanvas.gameObject,"TipBox"),"Panel"),"TipText"));
                 GameObject shopObject = ___shopCanvas.gameObject;
                 
                 //Redirect for the 5-3 end shop.
