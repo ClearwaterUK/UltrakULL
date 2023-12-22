@@ -49,8 +49,8 @@ using System.Reflection;
  * Need to convert Fonts to FontAsset to use in TMP. Can't do until back at apartment.
  * TMP text changes now only support certain colors. Lime/cyan no longer work, need to change to green/blue.
  *
- * Cybergrind: PatchTerminal
  * Secret levels: PatchTestament
+ * Sandbox: PatchDupeMenu (and likely other stuff)
  *
  *
  * Virtually everything in-level is busted.
