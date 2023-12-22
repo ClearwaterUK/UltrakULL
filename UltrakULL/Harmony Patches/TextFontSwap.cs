@@ -46,7 +46,7 @@ namespace UltrakULL.Harmony_Patches
             [HarmonyPostfix]
             public static void SwapFont(ref TextMeshProUGUI __instance)
             {
-                if(Core.GlobalFontReady)
+                if(Core.TMPFontReady)
                 {
                     if(GetCurrentSceneName() == "CreditsMuseum2")
                     {

@@ -44,7 +44,6 @@ using System.Reflection;
  * Text elements now use TextMeshPro and variants
  * Options->PatchColorOptions has new entries. (Will do for 1.2.4)
  * Need to convert Fonts to FontAsset to use in TMP. Can't do until back at apartment.
- * TMP text changes now only support certain colors. Lime/cyan no longer work, need to change to green/blue.
  *
  *
  * */

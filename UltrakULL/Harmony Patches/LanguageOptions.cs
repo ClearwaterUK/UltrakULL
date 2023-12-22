@@ -53,14 +53,14 @@ namespace UltrakULL.Harmony_Patches
 
             redownloadConfirmPanel.name = "ConfirmDownloadPanel";
             
-            TextMeshProUGUI confirmDownloadText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(redownloadConfirmPanel,"Panel"),"Text (2)"));
+            Text confirmDownloadText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(redownloadConfirmPanel,"Panel"),"Text (2)"));
             
             confirmDownloadText.fontSize = 22;
             confirmDownloadText.text =
             "This language has already been downloaded. <color=#34e1eb>Redownload?</color>\n\n" 
                 +"<color=orange>The current file's contents will be overwritten.</color>";
 
-            TextMeshProUGUI confirmDownloadTextConfirm = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(redownloadConfirmPanel,"Panel"),"Text (1)"));
+            Text confirmDownloadTextConfirm = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(redownloadConfirmPanel,"Panel"),"Text (1)"));
             confirmDownloadTextConfirm.text = "";
             
             //Destroy the original buttons and replace them with new ones (at least until I can figure out how to change the listeners of the original buttons)
@@ -75,6 +75,7 @@ namespace UltrakULL.Harmony_Patches
             DownloadYes.transform.position = new Vector3(1150, 300, 0);
             DownloadYes.GetComponentInChildren<RectTransform>().sizeDelta = new Vector2(300f, 50f);
             DownloadYes.GetComponentInChildren<Text>().text = "YES";
+            DownloadYes.GetComponentInChildren<Text>().font = Core.GlobalFont;
             DownloadYes.transform.SetParent(redownloadConfirmPanel.transform);
             
             GameObject DownloadNo = CreateButton("NO","DownloadNo");
@@ -82,6 +83,7 @@ namespace UltrakULL.Harmony_Patches
             DownloadNo.transform.position = new Vector3(750, 300, 0);
             DownloadNo.GetComponentInChildren<RectTransform>().sizeDelta = new Vector2(300f, 50f);
             DownloadNo.GetComponentInChildren<Text>().text = "NO";
+            DownloadNo.GetComponentInChildren<Text>().font = Core.GlobalFont;
             DownloadNo.transform.SetParent(redownloadConfirmPanel.transform);
             
             DownloadYes.GetComponentInChildren<Button>().onClick.AddListener(delegate { redownloadConfirmPanel.SetActive(false); downloadLanguageFile(lInfo.languageTag,lInfo.languageFullName); });

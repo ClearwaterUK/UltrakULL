@@ -22,6 +22,7 @@ namespace UltrakULL
         public static bool updateFailed;
         
         public static bool GlobalFontReady;
+        public static bool TMPFontReady;
         
         public static Font GlobalFont;
         public static Font MuseumFont;
@@ -162,30 +163,36 @@ namespace UltrakULL
                 TMP_FontAsset font1TMP = fontBundle.LoadAsset<TMP_FontAsset>("VCR_OSD_MONO");
                 TMP_FontAsset font2TMP = fontBundle.LoadAsset<TMP_FontAsset>("EBGaramond-Regular");
                 
-                if(font1 == null || font2 == null)
+                if(font1 && font2)
                 {
-                    Logging.Error("FAILED TO LOAD FONTS");
-                }
-                if(font1TMP == null || font2TMP == null)
-                {
-                    Logging.Error("FAILED TO LOAD TMP FONTS");
+                    Logging.Warn("Normal fonts loaded.");
+                    GlobalFont = font1;
+                    MuseumFont = font2;
+                    GlobalFontReady = true;
                 }
                 else
                 {
-                    Logging.Warn("Fonts loaded.");
-                    GlobalFont = font1;
+                    Logging.Error("FAILED TO LOAD NORMAL FONTS");
+                    GlobalFontReady = false;
+                }
+                if(font1TMP && font2TMP)
+                {
+                    Logging.Warn("Normal TMP fonts loaded.");
                     GlobalFontTMP = font1TMP;
-                    GlobalFontReady = true;
-                    MuseumFont = font2;
                     MuseumFontTMP = font2TMP;
                 }
+                else
+                {
+                    Logging.Error("FAILED TO LOAD TMP FONTS");
+                    TMPFontReady = false;
+                }
+                
             }
         }
         
         public static void HandleSceneSwitch(Scene scene,ref GameObject canvas)
         {
 
-            
             //Logging.Message("Switching scenes...");
             string levelName = GetCurrentSceneName();
             if(levelName == "Intro" || levelName == "Bootstrap")
