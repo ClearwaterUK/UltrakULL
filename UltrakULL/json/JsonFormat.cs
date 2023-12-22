@@ -1725,8 +1725,10 @@ namespace UltrakULL.json
         public string general_controllerRumbleCustomize;
         public string general_levelLeaderboards;
 
+        public string controls_bindings;
         public string controls_resetDefault;
         public string controls_movement;
+        public string controls_move;
         public string controls_forward;
         public string controls_back;
         public string controls_left;
@@ -1736,18 +1738,26 @@ namespace UltrakULL.json
         public string controls_actions;
         public string controls_primaryFire;
         public string controls_secondaryFire;
+        public string controls_arms;
         public string controls_punch;
+        public string controls_nextWeapon;
+        public string controls_previousWeapon;
         public string controls_lastUsedWeapon;
         public string controls_changeVariation;
         public string controls_changeArm;
         public string controls_slide;
         public string controls_whiplash;
         public string controls_weapons;
+        public string controls_slot0;
         public string controls_slot1;
         public string controls_slot2;
         public string controls_slot3;
         public string controls_slot4;
         public string controls_slot5;
+        public string controls_slot6;
+        public string controls_slot7;
+        public string controls_slot8;
+        public string controls_slot9;
         public string controls_scrollType;
         public string controls_scrollTypeWeapons;
         public string controls_scrollTypeVariations;

@@ -81,108 +81,37 @@ namespace UltrakULL
                 //THIS NEEDS TO BE COMPLETELY REDONE.
             
                 //Control options
-                /*TextMeshProUGUI controlText = GetTextMeshProUGUI(GetGameObjectChild(optionsMenu, "Text (1)"));
-                controlText.text = "--"+ LanguageManager.CurrentLanguage.options.category_controls + "--";
+                TextMeshProUGUI controlText = GetTextMeshProUGUI(GetGameObjectChild(optionsMenu, "Text (1)"));
+                controlText.text = "-- "+ LanguageManager.CurrentLanguage.options.category_controls + " --";
 
                 GameObject controlContent = GetGameObjectChild(GetGameObjectChild(optionsMenu, "Scroll Rect"), "Contents");
 
-                TextMeshProUGUI resetToDefaultText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Default"), "Text"));
-                resetToDefaultText.text = LanguageManager.CurrentLanguage.options.controls_resetDefault;
+                TextMeshProUGUI weaponsTitle = GetTextMeshProUGUI(controlContent.transform.GetChild(0).gameObject);
+                weaponsTitle.text = "-- " + LanguageManager.CurrentLanguage.options.controls_weapons +" --";
+                
+                GameObject mouseWheelContent = GetGameObjectChild(controlContent, "Mouse Wheel to Change Weapon");
+                TextMeshProUGUI changeWeaponMouseWheel = GetTextMeshProUGUI(GetGameObjectChild(mouseWheelContent, "Text"));
+                changeWeaponMouseWheel.text = LanguageManager.CurrentLanguage.options.controls_mouseWheelToChangeWeapon;
 
-                TextMeshProUGUI movementText = GetTextMeshProUGUI(GetGameObjectChild(controlContent, "Text"));
-                movementText.text = "--"+ LanguageManager.CurrentLanguage.options.controls_movement+"--";
-
-                TextMeshProUGUI moveforwardText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Forward"), "Text"));
-                moveforwardText.text = LanguageManager.CurrentLanguage.options.controls_forward;
-
-                TextMeshProUGUI movebackText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Back"), "Text"));
-                movebackText.text = LanguageManager.CurrentLanguage.options.controls_back;
-
-                TextMeshProUGUI moveleftText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Left"), "Text"));
-                moveleftText.text = LanguageManager.CurrentLanguage.options.controls_left;
-
-                TextMeshProUGUI moverightText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Right"), "Text"));
-                moverightText.text = LanguageManager.CurrentLanguage.options.controls_right;
-
-                TextMeshProUGUI jumpText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Jump"), "Text"));
-                jumpText.text = LanguageManager.CurrentLanguage.options.controls_jump;
-
-                TextMeshProUGUI dashText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Dash"), "Text"));
-                dashText.text = LanguageManager.CurrentLanguage.options.controls_dash;
-
-                TextMeshProUGUI actionsText = GetTextMeshProUGUI(GetGameObjectChild(controlContent, "Text (1)"));
-                actionsText.text = "--"+ LanguageManager.CurrentLanguage.options.controls_actions+ "--";
-
-                TextMeshProUGUI primaryFireText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Fire"), "Text"));
-                primaryFireText.text = LanguageManager.CurrentLanguage.options.controls_primaryFire;
-
-                TextMeshProUGUI secondaryFireText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Alt Fire"), "Text"));
-                secondaryFireText.text = LanguageManager.CurrentLanguage.options.controls_secondaryFire;
-                secondaryFireText.fontSize = 11;
-
-                TextMeshProUGUI punchText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Punch"), "Text"));
-                punchText.text = LanguageManager.CurrentLanguage.options.controls_punch;
-                punchText.fontSize = 12;
-
-                TextMeshProUGUI lastUsedWeaponText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Last Used Weapon"), "Text"));
-                lastUsedWeaponText.text = LanguageManager.CurrentLanguage.options.controls_lastUsedWeapon;
-                lastUsedWeaponText.fontSize = 10;
-
-                TextMeshProUGUI switchVariationText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Change Variation"), "Text"));
-                switchVariationText.text = LanguageManager.CurrentLanguage.options.controls_changeVariation;
-                switchVariationText.fontSize = 11;
-
-                TextMeshProUGUI switchArmText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Change Arm"), "Text"));
-                switchArmText.text = LanguageManager.CurrentLanguage.options.controls_changeArm;
-                switchArmText.fontSize = 11;
-
-                TextMeshProUGUI slideText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Slide"), "Text"));
-                slideText.text = LanguageManager.CurrentLanguage.options.controls_slide;
-
-                TextMeshProUGUI whiplashText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Whiplash"), "Text"));
-                whiplashText.text = LanguageManager.CurrentLanguage.options.controls_whiplash;
-
-                GameObject weaponSettings = GetGameObjectChild(controlContent, "Weapons Settings");
-
-                TextMeshProUGUI weaponSettingsText = GetTextMeshProUGUI(GetGameObjectChild(weaponSettings, "Text (1)"));
-                weaponSettingsText.text = "--"+ LanguageManager.CurrentLanguage.options.controls_weapons + "--";
-
-                TextMeshProUGUI slot1Text = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(weaponSettings, "Slot 1"),"Text"));
-                slot1Text.text = LanguageManager.CurrentLanguage.options.controls_slot1;
-
-                TextMeshProUGUI slot2Text = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(weaponSettings, "Slot 2"), "Text"));
-                slot2Text.text = LanguageManager.CurrentLanguage.options.controls_slot2;
-
-                TextMeshProUGUI slot3Text = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(weaponSettings, "Slot 3"), "Text"));
-                slot3Text.text = LanguageManager.CurrentLanguage.options.controls_slot3;
-
-                TextMeshProUGUI slot4Text = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(weaponSettings, "Slot 4"), "Text"));
-                slot4Text.text = LanguageManager.CurrentLanguage.options.controls_slot4;
-
-                TextMeshProUGUI slot5Text = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(weaponSettings, "Slot 5"), "Text"));
-                slot5Text.text = LanguageManager.CurrentLanguage.options.controls_slot5;
-
-                GameObject mouseWheelSettings = GetGameObjectChild(weaponSettings, "Mouse Wheel Settings");
-
-                TextMeshProUGUI scrollTypeText = GetTextMeshProUGUI(GetGameObjectChild(mouseWheelSettings, "Text (1)"));
-                scrollTypeText.text = LanguageManager.CurrentLanguage.options.controls_scrollType;
-
-
-                GameObject scrollTypeList = GetGameObjectChild(mouseWheelSettings, "Dropdown (1)");
+                TextMeshProUGUI weaponScrollType = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Weapon Scroll Type"),"Text (1)"));
+                weaponScrollType.text = LanguageManager.CurrentLanguage.options.controls_scrollType;
+                
+                //Dropdown here
+                GameObject scrollTypeList = (GetGameObjectChild(GetGameObjectChild(controlContent, "Weapon Scroll Type"),"Dropdown (1)"));
 
                 TMP_Dropdown scrollTypeDropdown = scrollTypeList.GetComponent<TMP_Dropdown>();
                 List<TMP_Dropdown.OptionData> scrollTypeDropdownText = scrollTypeDropdown.options;
                 scrollTypeDropdownText[0].text = LanguageManager.CurrentLanguage.options.controls_scrollTypeWeapons;
                 scrollTypeDropdownText[1].text = LanguageManager.CurrentLanguage.options.controls_scrollTypeVariations;
                 scrollTypeDropdownText[2].text = LanguageManager.CurrentLanguage.options.controls_scrollTypeAll;
-
-                GameObject mouseWheelContent = GetGameObjectChild(mouseWheelSettings, "Mouse Wheel to Change Weapon");
-
-                TextMeshProUGUI changeWeaponMouseWheel = GetTextMeshProUGUI(GetGameObjectChild(mouseWheelContent, "Text"));
-                changeWeaponMouseWheel.text = LanguageManager.CurrentLanguage.options.controls_mouseWheelToChangeWeapon;
-
-                TextMeshProUGUI reverseScrollText = GetTextMeshProUGUI(GetGameObjectChild(mouseWheelSettings, "Text"));
-                reverseScrollText.text = LanguageManager.CurrentLanguage.options.controls_reverseScroll;*/
+                
+                TextMeshProUGUI reverseScrollDirection = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Scroll Reversed"),"Text"));
+                reverseScrollDirection.text = LanguageManager.CurrentLanguage.options.controls_reverseScroll;
+                
+                //Bindings
+                TextMeshProUGUI bindingsTitle = GetTextMeshProUGUI(controlContent.transform.GetChild(4).gameObject);
+                bindingsTitle.text = "-- " + LanguageManager.CurrentLanguage.options.controls_bindings + " --";
+                
         }
         private void PatchGraphicsOptions(GameObject optionsMenu)
         {

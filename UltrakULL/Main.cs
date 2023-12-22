@@ -42,17 +42,13 @@ using System.Reflection;
  *
  * -- VIOLENCE DAMAGE REPORT --
  * Text elements now use TextMeshPro and variants
- * Options->PatchControlOptions needs to be COMPLETELY redone.
  * Options->PatchColorOptions has new entries.
  * LocalizeGameProgressCheck
  * LevelNameFinder->OnEnable needs to be redone.
  * Need to convert Fonts to FontAsset to use in TMP. Can't do until back at apartment.
  * TMP text changes now only support certain colors. Lime/cyan no longer work, need to change to green/blue.
  *
- * Secret levels: PatchTestament
  *
- *
- * Virtually everything in-level is busted.
  * */
 
 namespace UltrakULL
