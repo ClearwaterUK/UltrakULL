@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using System;
+using HarmonyLib;
 using TMPro;
 using UltrakULL.json;
 using UnityEngine.UI;
@@ -15,18 +16,9 @@ namespace UltrakULL.Harmony_Patches
         {
             if(!isUsingEnglish())
             {
-                if (!___txt)
-                {
-                    ___txt = __instance.GetComponent<Text>();
-                }
+                ___txt2.text = "<color=red>" + LanguageManager.CurrentLanguage.shop.shop_cybergrindReturningTo +
+                               "</color>:\n" + LevelNames.GetLevelName(__instance.otherLevelNumber);
 
-                if (!___txt2)
-                {
-                    ___txt2 = __instance.GetComponent<TMP_Text>();
-                }
-                //___txt.text = "RETURNINGTOTEXTHERE"; //"<color=red>" + LanguageManager.CurrentLanguage.shop.shop_cybergrindReturningTo +
-                              //"</color>:\n" + "LEVELNAMEHERE";//LevelNames.GetLevelName(__instance.otherLevelNumber);
-                              //___txt2.text = ___txt.text;
             }
         }
     }

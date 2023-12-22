@@ -70,37 +70,11 @@ namespace UltrakULL.Harmony_Patches
             
             else
             {
-                string controlButton = "FixHudMessage.cs pls!";
-                try
-                {
-                    /*string keyCode =  MonoSingleton<InputManager>.Instance.GetBindingString(__instance.actionReference.action.id);
+                string bindingString = MonoSingleton<InputManager>.Instance.GetBindingString(__instance.actionReference.action.id);
 
-                    if (keyCode == KeyCode.Mouse0.ToString())
-                    {
-                        controlButton = LanguageManager.CurrentLanguage.misc.controls_leftClick;
-                    }
-                    else if (keyCode == KeyCode.ToString())
-                    {
-                        controlButton = LanguageManager.CurrentLanguage.misc.controls_rightClick;
-                    }
-                    else if (keyCode == KeyCode.ToString())
-                    {
-                        controlButton = LanguageManager.CurrentLanguage.misc.controls_middleClick;
-                    }
-                    else
-                    {
-                        controlButton = keyCode.ToString();
-                    }*/
-                }
-                catch (Exception e)
-                {
-                    controlButton = "";
-                }
-                
                 //Messages that get input.
-
                 //Compare the start of the first message with the string table.
-                __instance.message = StringsParent.GetMessage(__instance.message, __instance.message2, controlButton);
+                __instance.message = StringsParent.GetMessage(__instance.message, __instance.message2, bindingString);
                 
                 ___text.text = __instance.message;
             }
