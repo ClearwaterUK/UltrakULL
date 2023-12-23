@@ -38,16 +38,13 @@ using System.Reflection;
  * -- TESTING REPORTS --
  * Some ogg files apparantly not playing correctly (Checked Spanish pack that Lukah sent, seems to be working fine... Will keep an eye on.)
  * "Home or ~" cheat string not translated
+ * Weapon freshness seems to flicker.
  *
  *
  * -- VIOLENCE DAMAGE REPORT --
  * Text elements now use TextMeshPro and variants
  * Options->PatchColorOptions has new entries. (Will do for 1.2.4)
  * Need to convert Fonts to FontAsset to use in TMP. Can't do until back at apartment.
- *
- *
- * LevelLeaderboards->EndPatch
- * Weapon freshness seems to flicker.
  *
  * */
 

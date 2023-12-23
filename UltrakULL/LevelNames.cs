@@ -136,8 +136,7 @@ namespace UltrakULL
 				case 25:
 					return "6-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_heresySecond;
 				case 26:
-					return "7-1: " + "???"; //LanguageManager.CurrentLanguage.levelNames.levelName_violenceFirst;
-					//We'll add this line once Violence releases so that it doesn't show the name until then
+					return "7-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceFirst;
 				case 27:
 					return "7-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceSecond;
 				case 28:
