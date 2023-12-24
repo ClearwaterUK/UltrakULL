@@ -55,7 +55,9 @@ Installing UltrakULL via GitHub is divided into 2 parts:
 ### Usage
 
 - If the mod has loaded correctly, you will see a new "Languages" tab in the Options menu, in the bottom-right hand corner.
-  <img src="https://cdn.discordapp.com/attachments/472691871806652429/1188532184039043102/image.png?ex=659addda&is=658868da&hm=375363c76c52d1ea20c05fafef696a441f7e66a84671fe14bcc1ae9b8880eb2b&" alt="drawing" width="550"/>
+  
+<img src="https://cdn.discordapp.com/attachments/472691871806652429/1188532184039043102/image.png?ex=659addda&is=658868da&hm=375363c76c52d1ea20c05fafef696a441f7e66a84671fe14bcc1ae9b8880eb2b&" alt="drawing" width="550"/>
+  
 - From the Languages tab, you can browse available translations for the game by selecting the "Browse Languages Online" button. Additionally, language files that are locally installed in the mod folder will be detected and made available for selection any available language based on the language files UltrakULL has found, and will load them into the game.
 
 ### Troubleshooting
