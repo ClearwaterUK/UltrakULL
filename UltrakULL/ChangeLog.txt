@@ -1,5 +1,7 @@
 1.2.3b 
 - Critical fixes under the hood to fix the mod. (Note: Layer 7 content will come later.)
+- Fixed an oversight preventing Sisyphus Prime's and Minos Prime's intro from being dubbed, if dubbing was enabled.
+- Fixed some forgotten elements on P-2 causing the mod to break on that level.
 
 
 - Added more tentative prepwork for Act 3, both in the code and in the templates

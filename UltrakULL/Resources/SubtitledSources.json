@@ -314,6 +314,56 @@
 		],
 		"Level P-1": [
 			{
+				"objects": ["3 - Fuckatorium/3 Stuff/MinosPrimeIntro/Voice"],
+				"audio": "minosPrime\\minosPrimeIntro",
+				"lines": [
+					{
+						"line": "subtitles_minosPrime_intro1",
+						"delay": 0
+					},
+					{
+						"line": "subtitles_minosPrime_intro2",
+						"delay": 2.4
+					},
+					{
+						"line": "subtitles_minosPrime_intro3",
+						"delay": 7
+					},
+					{
+						"line": "subtitles_minosPrime_intro4",
+						"delay": 10
+					},
+					{
+						"line": "subtitles_minosPrime_intro5",
+						"delay": 13.8
+					},
+					{
+						"line": "subtitles_minosPrime_intro6",
+						"delay": 22
+					},
+					{
+						"line": "subtitles_minosPrime_intro7",
+						"delay": 25.5
+					},
+					{
+						"line": "subtitles_minosPrime_intro8",
+						"delay": 30.5
+					},
+					{
+						"line": "subtitles_minosPrime_intro9",
+						"delay": 37
+					},
+					{
+						"line": "subtitles_minosPrime_intro10",
+						"delay": 40.7
+					},
+					{
+						"line": "subtitles_minosPrime_intro11",
+						"delay": 44
+					}
+				]
+			},
+			{
 				"objects": ["3 - Fuckatorium/3 Stuff(Clone)/MinosPrimeIntro/Voice"],
 				"audio": "minosPrime\\minosPrimeIntro",
 				"lines": [
@@ -402,6 +452,24 @@
 			}
 		],
 		"Level P-2": [
+			{
+				"objects": ["Main Section/9 - Boss Arena/Boss Stuff/PrisonPhase/Flesh Prison 2/DelayedInstakill/Voice"],
+				"audio": "sisyphusPrime\\sisyphusThisPrison",
+				"lines": [
+					{
+						"line": "subtitles_sisyphusPrime_preIntro1",
+						"delay": 0
+					},
+					{
+						"line": "subtitles_sisyphusPrime_preIntro2",
+						"delay": 1.5
+					},
+					{
+						"line": "subtitles_sisyphusPrime_preIntro3",
+						"delay": 2.8
+					}
+				]
+			},
 			{
 				"objects": ["Main Section/9 - Boss Arena/Boss Stuff(Clone)/PrisonPhase/Flesh Prison 2/DelayedInstakill/Voice"],
 				"audio": "sisyphusPrime\\sisyphusThisPrison",

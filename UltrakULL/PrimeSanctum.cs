@@ -1,4 +1,5 @@
-﻿using UltrakULL.audio;
+﻿using TMPro;
+using UltrakULL.audio;
 using UltrakULL.json;
 using UnityEngine;
 using UnityEngine.UI;
@@ -57,12 +58,12 @@ namespace UltrakULL
                 //First lock buttons
                 GameObject firstLockObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"Inside"),"8 - Elevator"),"8 Stuff"),"PuzzleScreen"),"Canvas");
                 
-                Text firstLockLocked = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(firstLockObject,"Button"),"Text (Locked)"));
-                Text firstLockUnlocked = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(firstLockObject,"Button"),"Text (Unlocked)"));
-                Text secondLockLocked = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(firstLockObject,"Button (1)"),"Text (Locked)"));
-                Text secondLockUnlocked = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(firstLockObject,"Button (1)"),"Text (Unlocked)"));
-                Text thirdLockLocked = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(firstLockObject,"Button (2)"),"Text (Locked)"));
-                Text thirdLockUnlocked = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(firstLockObject,"Button (2)"),"Text (Unlocked)"));
+                TextMeshProUGUI firstLockLocked = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(firstLockObject,"Button"),"Text (Locked)"));
+                TextMeshProUGUI firstLockUnlocked = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(firstLockObject,"Button"),"Text (Unlocked)"));
+                TextMeshProUGUI secondLockLocked = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(firstLockObject,"Button (1)"),"Text (Locked)"));
+                TextMeshProUGUI secondLockUnlocked = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(firstLockObject,"Button (1)"),"Text (Unlocked)"));
+                TextMeshProUGUI thirdLockLocked = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(firstLockObject,"Button (2)"),"Text (Locked)"));
+                TextMeshProUGUI thirdLockUnlocked = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(firstLockObject,"Button (2)"),"Text (Unlocked)"));
 
                 firstLockLocked.text = LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_second_lockFirstLocked;
                 firstLockUnlocked.text = LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_second_lockUnlocked;
@@ -74,12 +75,12 @@ namespace UltrakULL
                 //Second lock buttons
                 GameObject secondLockObject = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Main Section"),"Inside"),"8 - Elevator"),"8 Stuff"),"PuzzleScreen (1)"),"Canvas");
 
-                Text secondLockOpen =
-                    GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(secondLockObject, "Button"), "Text"));
-                Text secondLockAreYouSure = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(secondLockObject, "AreYouSure"), "Text"));
+                TextMeshProUGUI secondLockOpen =
+                    GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(secondLockObject, "Button"), "Text"));
+                TextMeshProUGUI secondLockAreYouSure = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(secondLockObject, "AreYouSure"), "Text"));
 
-                Text secondLockWarning = GetTextfromGameObject(GetGameObjectChild(secondLockObject, "WarningText"));
-                Text secondLockAsIf = GetTextfromGameObject(GetGameObjectChild(secondLockObject, "AsIfText"));
+                TextMeshProUGUI secondLockWarning = GetTextMeshProUGUI(GetGameObjectChild(secondLockObject, "WarningText"));
+                TextMeshProUGUI secondLockAsIf = GetTextMeshProUGUI(GetGameObjectChild(secondLockObject, "AsIfText"));
 
                 secondLockOpen.text = LanguageManager.CurrentLanguage.primeSanctum.primeSanctum_second_lockOpen;
                 secondLockOpen.fontSize = 20;
