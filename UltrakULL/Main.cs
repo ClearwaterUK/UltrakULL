@@ -55,7 +55,7 @@ namespace UltrakULL
     {
         private const string Guid = "clearwater.ultrakill.ultrakull";
         private const string InternalName = "clearwater.ultrakull.ultrakULL";
-        private const string InternalVersion = "1.2.3";
+        private const string InternalVersion = "1.2.4";
 
         public static MainPatch Instance;
         public bool ready;
