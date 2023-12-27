@@ -14,6 +14,7 @@ namespace UltrakULL.json
         public Overture prelude;
         public a1 act1;
         public a2 act2;
+        public a3 act3;
         public CG cyberGrind;
         public Prime primeSanctum;
         public Secret secretLevels;
@@ -2180,6 +2181,11 @@ namespace UltrakULL.json
 
         public string act2_secretNotReady;
 
+    }
+
+    public class a3
+    {
+        
     }
 
     public class Prime

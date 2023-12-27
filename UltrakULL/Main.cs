@@ -119,7 +119,10 @@ namespace UltrakULL
             try
             {
                 Logging.Warn("--- Checking for updates ---");
-                Core.CheckForUpdates();
+                Task.Run(() =>
+                {
+                    return Core.CheckForUpdates();
+                });
                 
                 Logging.Warn("--- Loading external fonts ---");
                 Core.LoadFonts();

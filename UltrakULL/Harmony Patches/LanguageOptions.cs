@@ -148,7 +148,6 @@ namespace UltrakULL.Harmony_Patches
                     //Enumerate across all of the langs obtained from the master lang file online, and create download buttons for them.
                     foreach(LanguageInfo langInfo in responseJson.availableLanguages)
                     {
-                        Logging.Warn(langInfo.languageTag);
                         bool fileLocallyExists = langFileLocallyExists(langInfo.languageTag);
                         
                         GameObject languageBrowserButtonInstance = GameObject.Instantiate(languageButtonPrefab, contentParent);
@@ -180,13 +179,9 @@ namespace UltrakULL.Harmony_Patches
                             Version localCurrentVersion = new Version(json.metadata.langVersion);
                             Version onlineCurrentVersion = new Version(langInfo.versionNumber);
                             
-                            Logging.Warn("File already exists locally, checking if it can be updated");
-                            Logging.Warn("Local version:" + localCurrentVersion.ToString());
-                            Logging.Warn("Online version:" + onlineCurrentVersion.ToString());
-                            
                             switch(localCurrentVersion.CompareTo(onlineCurrentVersion))
                             {
-                                case -1: { slotText.text += "\n(<color=green>Update available</color>)";break;}
+                                case -1: {Logging.Warn("Update available for this language"); slotText.text += "\n(<color=green>Update available</color>)";break;}
                                 default: { slotText.text += "\n(<color=green>Downloaded</color>)";break;}
                             }
                         }
@@ -223,7 +218,11 @@ namespace UltrakULL.Harmony_Patches
                                 else
                                 {
                                     Logging.Warn("Downloading language file - " + langInfo.languageTag + ".json...");
-                                    downloadLanguageFile(langInfo.languageTag,langInfo.languageFullName);
+                                    Task.Run(() =>
+                                    {
+                                        downloadLanguageFile(langInfo.languageTag,langInfo.languageFullName);
+                                    });
+                                    
                                 }
                             }
                         });
@@ -283,13 +282,12 @@ namespace UltrakULL.Harmony_Patches
             });
         }
         
-        public static async void downloadLanguageFile(string languageTag, string languageName)
+        public static void downloadLanguageFile(string languageTag, string languageName)
         {
             MonoSingleton<HudMessageReceiver>.Instance.SendHudMessage("<color=orange>DOWNLOADING...</color>");
             
             string fileName = languageTag + ".json";
-            
-            
+
             string languageFileUrl = "https://clearwateruk.github.io/mods/ultrakULL/" + fileName;
             
             string localLanguageFolder = Path.Combine(BepInEx.Paths.ConfigPath, "ultrakull//");
@@ -354,7 +352,6 @@ namespace UltrakULL.Harmony_Patches
         
         public static void addLocalLanguageToLocalList(ref GameObject languageButtonPrefab, string language, bool newlyAdded=false)
         {
-            Console.WriteLine("Language: " + language);
             Transform contentParent = langLocalPage.transform.Find("Scroll Rect (1)").Find("Contents");
 
             GameObject languageButtonInstance = GameObject.Instantiate(languageButtonPrefab,contentParent);
@@ -540,7 +537,7 @@ namespace UltrakULL.Harmony_Patches
                 fadeDuration = 0.1f
             };
             browseLangButton.targetGraphic = langBrowseFolder.transform.Find("Panel").GetComponent<Graphic>();
-            browseLangButton.onClick.AddListener(delegate { langLocalPage.SetActive(false); getOnlineLanguages(pageToDisable,__instance.optionsMenu.transform); });
+            browseLangButton.onClick.AddListener(delegate{ langLocalPage.SetActive(false); getOnlineLanguages(pageToDisable,__instance.optionsMenu.transform); });
 
             //Add toggle to the audio tab that allows for enabling/disabling of swapping for spoken dialogue.
             //Instantiate from the original subtitles panel, but the toggle will need to be swapped for a new one, otherwise it will also toggle subtitles.
