@@ -16,7 +16,62 @@ namespace UltrakULL.Harmony_Patches
         public static bool Check_MyPatch(DifficultyTitle __instance, ref Text ___txt, ref TMP_Text ___txt2)
         {
             if(isUsingEnglish())
-            {
+            {int @int = MonoSingleton<PrefsManager>.Instance.GetInt("difficulty", 0);
+                string text = "";
+                if (__instance.lines)
+                {
+                    text += "-- ";
+
+                }
+
+                switch (@int)
+                {
+                    case 0:
+                        text += "HARMLESS";
+                        break;
+                    case 1:
+                        text += "LENIENT";
+                        break;
+                    case 2:
+                        text += "STANDARD";
+                        break;
+                    case 3:
+                        text += "VIOLENT";
+                        break;
+                    case 4:
+                        text += "BRUTAL";
+                        break;
+                    case 5:
+                        text += "ULTRAKILL MUST DIE";
+                        break;
+                }
+
+                if (__instance.lines)
+                {
+                    text += " --";
+                }
+
+                if (!___txt2)
+                {
+                    ___txt2 = __instance.GetComponent<TMP_Text>();
+                }
+
+                if (___txt2)
+                {
+                    ___txt2.text = text;
+                    return false;
+                }
+
+                if (!___txt)
+                {
+                    ___txt = __instance.GetComponent<Text>();
+                }
+
+                if (___txt)
+                {
+                    ___txt.text = text;
+                }
+
                 return false;
             }
 
