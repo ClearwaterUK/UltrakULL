@@ -2,9 +2,9 @@
 
 - UltrakULL created & maintained by **[Clearwater](https://github.com/ClearwaterTM)**
 - Additional contributions by:
-  -  **[Temperz87](https://github.com/Temperz87/)**: UI elements, language loader, in-game language changing
-  -  **[CoatlessAli](https://github.com/coatlessali)**: Cross-platform compatability
-  - **[Frizou](https://github.com/FrizouWasThere)**: Dubbing documentation, numerous 1.2.3 contributions
+  - **[Temperz87](https://github.com/Temperz87/)**: UI elements, language loader, in-game language changing
+  - **[CoatlessAli](https://github.com/coatlessali)**: Cross-platform compatability
+  - **[Frizou](https://github.com/FrizouWasThere)**: Dubbing documentation, numerous 1.2.3 and 1.3.0 contributions
   - Flazhik: Subtitle refactoring
   - Hydraxous: R2ModManager support
   - lenarikil: Credits museum Cyrillic font support
