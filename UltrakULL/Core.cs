@@ -232,9 +232,7 @@ namespace UltrakULL
                         ultrakullLogoText.text = "ultrakULL loaded.\nVersion: " + MainPatch.GetVersion() + "\nCurrent locale: " + LanguageManager.CurrentLanguage.metadata.langName;
                         ultrakullLogoText.alignment = TextAnchor.UpperLeft;
                         ultrakullLogoText.fontSize = 16;
-                            
-                        //Get the font so it can applied to any generated buttons
-                        VcrFont = Core.VcrFont;
+                        
                             
                         //Add notif if there's a mod update available
                         if(updateAvailable)

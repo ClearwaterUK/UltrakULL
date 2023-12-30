@@ -5,8 +5,6 @@ namespace UltrakULL
 {
     public static class Act3Strings
     {
-        private static string _previousMessage = "";
-
         public static string Level71()
         {
             return "Unknown 7-1 string";

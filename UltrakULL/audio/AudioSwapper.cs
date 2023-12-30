@@ -29,7 +29,7 @@ namespace UltrakULL.audio
             {
                 while (!fileRequest.isDone) {}
  
-                if (fileRequest.isNetworkError || fileRequest.isHttpError) Logging.Warn(fileRequest.error + "\n Expected path: " + audioFilePath);
+                if (fileRequest.isNetworkError || fileRequest.isHttpError) Logging.Warn(fileRequest.error + "\n Expected path: " + audioFilePath + ".ogg");
                 else
                 {
                     sourceClip = DownloadHandlerAudioClip.GetContent(fileRequest);

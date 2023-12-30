@@ -102,7 +102,6 @@ namespace UltrakULL.json
 
         private static bool ValidateFile(JsonFormat language, string modVersion)
         {
-            Logging.Message("Checking file: " + language.metadata.langName + "...");
             try
             {
                 //Following conditions to validate a file:
@@ -114,15 +113,13 @@ namespace UltrakULL.json
 
                 if (!FileMatchesMinimumRequiredVersion(language.metadata.minimumModVersion, modVersion))
                 {
-                    Logging.Warn(language.metadata.langName + " does not match the minimum required mod version. Please check for a language update.");
-                    //Logging.Warn("You can still use this file, but expect errors and weirdness related to missing strings. Consider yourself warned.");
+                    Logging.Warn(language.metadata.langName + " was made for an older game version.");
                     return false;
                 }
 
                 Logging.Message("Checking contents...");
                 if (language.metadata != null && language.body != null)
                 {
-                    //Logging.Message("File " + language.metadata.langName + " validated.");
                     return true;
                 }
                 else
@@ -172,6 +169,7 @@ namespace UltrakULL.json
                 language.prelude,
                 language.act1,
                 language.act2,
+                language.act3,
                 language.cyberGrind,
                 language.primeSanctum,
                 language.secretLevels,
