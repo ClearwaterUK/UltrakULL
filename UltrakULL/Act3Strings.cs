@@ -7,6 +7,10 @@ namespace UltrakULL
     {
         public static string Level71()
         {
+            if (fullMessage.Contains("A door opens."))
+            {
+                return (LanguageManager.CurrentLanguage.act3.act3_violenceFirst_doorOpens);
+            }
             return "Unknown 7-1 string";
         }
         
