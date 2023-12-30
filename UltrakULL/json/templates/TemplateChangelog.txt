@@ -6,8 +6,8 @@ enemyName: gutterman, guttertank, earthmover, mannequin, minotaur, boss_earthmov
 devMuseum: bookAdditionalCredits7, bookMandalore7
 
 MODIFIED:
-devMuseum: bookAdditionalCredits(3-6) -> bookAdditionalCredits(4-7)
-devMuseum: bookMandalore(4-6) -> bookMandalore(5-7)
+devMuseum: bookAdditionalCredits(2-6) -> bookAdditionalCredits(3-7)
+devMuseum: bookMandalore(5-6) -> bookMandalore(6-7)
 
 1.2.3b:
 
