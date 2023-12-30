@@ -5,8 +5,9 @@ namespace UltrakULL
 {
     public static class Act3Strings
     {
-        public static string Level71()
+        public static string Level71(string message, string message2)
         {
+            string fullMessage = message + message2;
             if (fullMessage.Contains("A door opens."))
             {
                 return (LanguageManager.CurrentLanguage.act3.act3_violenceFirst_doorOpens);
@@ -14,8 +15,17 @@ namespace UltrakULL
             return "Unknown 7-1 string";
         }
         
-        public static string Level72()
+        public static string Level72(string message, string message2, string input)
         {
+            string fullMessage = message + message2;
+            if (fullMessage.Contains("Swap arms with"))
+            {
+                return LanguageManager.CurrentLanguage.act3.act3_violenceSecond_guttermanTutorial + " '<color=orange>" + input + "</color>'";
+            }
+            if (fullMessage.Contains("BIGGER BOOM"))
+            {
+                return (LanguageManager.CurrentLanguage.act3.act3_violenceSecond_biggerBoom);
+            }
             return "Unknown 7-2 string";
         }
         
