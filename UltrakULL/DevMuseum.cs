@@ -243,19 +243,20 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits1 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits2 + "\n\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits3 + "\n\n"
                     
                     //CG pattern credits
                     + "NO LOAFING\nDood\nSplendidLedraps\nJandy\nStuon\nDryzalar\nWakan\nSlimer\nWilliam\nNotABot\nSpruce\nJacob\n\n"
                     
-                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits3 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits4 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits5 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits6 + "\n\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits7 + "\n\n"
                 
                     //Totally not subtle self-insert for mod credits here. :D
                     + "<b><color=orange>UltrakULL CREDITS</color></b>:\n\n"
                     + "Mod created by <color=orange>Clearwater</color>\n"
-                    + "Additional code contributions by <color=orange>Temperz87</color> and <color=orange>CoatlessAli</color>\n"
+                    + "Additional code contributions by <color=orange>Temperz87</color>, <color=orange>CoatlessAli</color> and <color=orange>Frizou</color>\n"
                     + "Translations by various community members of the <color=orange>UltrakULL Translation Team</color>\n"
                     + "Documentation contributions by <color=orange>Frizou</color>\n\n"
                 
@@ -288,7 +289,8 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookMandalore3 +  "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookMandalore4 +  "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookMandalore5 +  "\n\n"
-                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookMandalore6;
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookMandalore6 +  "\n\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookMandalore7;
             }
             
             if(originalText.Contains("<b><color=orange>FILTH</color>"))
