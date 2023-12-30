@@ -2350,6 +2350,14 @@
 	
 			"act2_secretNotReady": ""
 		},
+		"act3": {
+			"act3_violenceFirst_doorOpens": "",
+			
+			"act3_violenceSecond_guttermanTutorial": "",
+			"act3_violenceSecond_biggerBoom": "",
+			
+			"act3_violenceThird_feedIt": "",
+		},
 		"primeSanctum": {
 			"primeSanctum_first_secretText1": "",
 			"primeSanctum_first_secretText2": "",
