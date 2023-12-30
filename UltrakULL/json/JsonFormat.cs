@@ -515,7 +515,6 @@ namespace UltrakULL.json
         public string enemyBios_sentry_strategy3;
         public string enemyBios_sentry_strategy4;
 
-
         public string enemyBios_v2Second_1;
         public string enemyBios_v2Second_2;
         public string enemyBios_v2Second_3;
@@ -524,6 +523,37 @@ namespace UltrakULL.json
         public string enemyBios_v2Second_strategy1;
         public string enemyBios_v2Second_strategy2;
         public string enemyBios_v2Second_strategy3;
+        
+        public string enemyBios_gutterman_1;
+        public string enemyBios_gutterman_2;
+        public string enemyBios_gutterman_3;
+        public string enemyBios_gutterman_4;
+
+        public string enemyBios_gutterman_strategy1;
+        public string enemyBios_gutterman_strategy2;
+        public string enemyBios_gutterman_strategy3;
+        public string enemyBios_gutterman_strategy4;
+        
+        public string enemyBios_guttertank_1;
+        public string enemyBios_guttertank_2;
+        public string enemyBios_guttertank_3;
+        public string enemyBios_guttertank_4;
+        public string enemyBios_guttertank_5;
+        public string enemyBios_guttertank_6;
+        public string enemyBios_guttertank_7;
+        
+        public string enemyBios_guttertank_strategy1;
+        public string enemyBios_guttertank_strategy2;
+        
+        public string enemyBios_earthmover_1;
+        public string enemyBios_earthmover_2;
+        public string enemyBios_earthmover_3;
+        public string enemyBios_earthmover_4;
+        public string enemyBios_earthmover_5;
+        public string enemyBios_earthmover_6;
+        
+        public string enemyBios_earthmover_strategy1;
+        public string enemyBios_earthmover_strategy2;
 
         public string enemyBios_maliciousFace_1;
         public string enemyBios_maliciousFace_2;
@@ -546,6 +576,24 @@ namespace UltrakULL.json
         public string enemyBios_hideousMass_strategy2;
         public string enemyBios_hideousMass_strategy3;
         public string enemyBios_hideousMass_strategy4;
+        
+        public string enemyBios_mannequin_1;
+        public string enemyBios_mannequin_2;
+        public string enemyBios_mannequin_3;
+        public string enemyBios_mannequin_4;
+        public string enemyBios_mannequin_5;
+        
+        public string enemyBios_mannequin_strategy1;
+        public string enemyBios_mannequin_strategy2;
+        public string enemyBios_mannequin_strategy3;
+        
+        public string enemyBios_minotaur_1;
+        public string enemyBios_minotaur_2;
+        public string enemyBios_minotaur_3;
+        public string enemyBios_minotaur_4;
+        
+        public string enemyBios_minotaur_strategy1;
+        public string enemyBios_minotaur_strategy2;
 
         public string enemyBios_gabriel_1;
         public string enemyBios_gabriel_2;
@@ -1628,7 +1676,6 @@ namespace UltrakULL.json
         public string enemyname_filth;
         public string enemyname_stray;
         public string enemyname_schism;
-
         public string enemyname_soldier;
         public string enemyname_minos;
         public string enemyname_stalker;
@@ -1636,19 +1683,21 @@ namespace UltrakULL.json
         public string enemyname_swordsmachine;
         public string enemyname_drone;
         public string enemyname_streetCleaner;
-
         public string enemyname_sentry;
+        public string enemyname_gutterman;
+        public string enemyname_guttertank;
+        public string enemyname_earthmover;
         public string enemyname_idol;
         public string enemyname_ferryman;
         public string enemyname_leviathan;
-
-
         public string enemyname_v2;
         public string enemyname_v2Second;
         public string enemyname_mindFlayer;
         public string enemyname_malFace;
         public string enemyname_cerberus;
         public string enemyname_hideousMass;
+        public string enemyname_mannequin;
+        public string enemyname_minotaur;
         public string enemyname_gabriel;
         public string enemyname_gabrielSecond;
         public string enemyname_virtue;
@@ -1667,6 +1716,7 @@ namespace UltrakULL.json
         public string enemyname_boss_insurrectionist;
         public string enemyname_boss_mandalore;
         public string enemyname_boss_v2;
+        public string enemyname_boss_earthmover;
         public string enemyname_boss_ferryman;
         public string enemyname_boss_leviathan;
         public string enemyname_boss_insurrectionistRude;
@@ -2445,6 +2495,7 @@ namespace UltrakULL.json
         public string museum_bookAdditionalCredits4;
         public string museum_bookAdditionalCredits5;
         public string museum_bookAdditionalCredits6;
+        public string museum_bookAdditionalCredits7;
         
         public string museum_bookStephanWeyte1;
         public string museum_bookStephanWeyte2;
@@ -2465,6 +2516,7 @@ namespace UltrakULL.json
         public string museum_bookMandalore4;
         public string museum_bookMandalore5;
         public string museum_bookMandalore6;
+        public string museum_bookMandalore7;
         
         public string museum_weaponsBeamcutter1;
         public string museum_weaponsBeamcutter2;
