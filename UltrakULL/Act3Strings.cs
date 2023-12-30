@@ -24,7 +24,7 @@ namespace UltrakULL
             }
             if (fullMessage.Contains("BIGGER BOOM"))
             {
-                return (LanguageManager.CurrentLanguage.act3.act3_violenceSecond_biggerBoom);
+                return ("<color=red>" + LanguageManager.CurrentLanguage.act3.act3_violenceSecond_biggerBoom + "</color>");
             }
             return "Unknown 7-2 string";
         }
@@ -34,7 +34,7 @@ namespace UltrakULL
             string fullMessage = message + message2;
             if (fullMessage.Contains("F E E D"))
             {
-                return (LanguageManager.CurrentLanguage.act3.act3_violenceThird_feedIt);
+                return ("<color=red>" + LanguageManager.CurrentLanguage.act3.act3_violenceThird_feedIt + "</color>");
             }
             return "Unknown 7-3 string";
         }
