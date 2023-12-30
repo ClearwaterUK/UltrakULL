@@ -2373,6 +2373,14 @@
         
         "act2_secretNotReady": "YOU'RE NOT SUPPOSED TO BE HERE."
 	},
+	"act3": {
+		"act3_violenceFirst_doorOpens": "A door opens.",
+			
+		"act3_violenceSecond_guttermanTutorial": "The <color=orange>GUTTERMAN SHIELD</color> can be <color=orange>BROKEN</color> with the <color=red>KNUCKLEBLASTER</color>. Swap arms with",
+		"act3_violenceSecond_biggerBoom": "WE'RE GONNA NEED A BIGGER BOOM",
+			
+		"act3_violenceThird_feedIt": "F E E D   I T .",
+	},
     "primeSanctum":{
         "primeSanctum_first_secretText1": "TERMINAL DATA 01 [ENCRYPTED]",
         "primeSanctum_first_secretText2": "INTRODUCTION TO TERMINALS (DRAFT! DO NOT SEND!! // todo: ADD PICTURES SO THOSE FUCKING SUITS DON'T FALL ASLEEP LIKE LAST TIME)",
