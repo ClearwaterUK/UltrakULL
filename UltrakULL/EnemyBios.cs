@@ -29,13 +29,19 @@ namespace UltrakULL
                 case "V2 (2nd)": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_v2Second; }
                 case "V2": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_v2; }
                 case "SENTRY": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_sentry; }
+                case "GUTTERMAN": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_gutterman; }
+                case "GUTTERTANK": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_guttertank; }
                 case "MINDFLAYER": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_mindFlayer; }
+                case "EARTHMOVER": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_earthmover; }
+                case "1000-THR \"EARTHMOVER\"": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_earthmover; }
                 case "MALICIOUS FACE": case "MALICIOUSFACE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_malFace; }
                 case "MYSTERIOUS DRUID KNIGHT (& OWL)": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_mandalore; }
                 case "IDOL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_idol; }
                 case "LEVIATHAN": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_leviathan; }
                 case "CERBERUS": case "CERBERUS, GUARDIAN OF HELL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_cerberus; }
                 case "HIDEOUS MASS": case "HIDEOUSMASS":{ return LanguageManager.CurrentLanguage.enemyNames.enemyname_hideousMass; }
+                case "MANNEQUIN": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_mannequin; }
+                case "MINOTAUR": { return "<s>" + LanguageManager.CurrentLanguage.enemyNames.enemyname_minotaur + "</s>"; }
                 case "GABRIEL, JUDGE OF HELL": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_gabriel; }
                 case "GABRIEL, APOSTATE OF HATE": case "GABRIEL, THE APOSTATE OF HATE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_gabrielSecond; }
                 case "VIRTUE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_virtue; }
@@ -109,17 +115,6 @@ namespace UltrakULL
 
                     }
 
-                case "FERRYMAN":
-                    {
-                           return
-                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_ferryman_1 + "\n\n" +
-                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_ferryman_2 + "\n\n" +
-                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_ferryman_3 + "\n\n" +
-                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_ferryman_4 + "\n\n" +
-                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_ferryman_5 + "\n\n" +
-                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_ferryman_6;
-                    }
-
                 case "IDOL":
                     {
                         return
@@ -127,15 +122,6 @@ namespace UltrakULL
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_idol_2 + "\n\n" +
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_idol_3 + "\n\n" +
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_idol_4;
-                    }
-
-                case "LEVIATHAN":
-                    {
-                        return
-                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_leviathan_1 + "\n\n" +
-                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_leviathan_2 + "\n\n" +
-                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_leviathan_3 + "\n\n" +
-                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_leviathan_4;
                     }
 
                 case "THE CORPSE OF KING MINOS":
@@ -166,6 +152,17 @@ namespace UltrakULL
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_insurrectionist_4 + "\n\n" +
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_insurrectionist_5 + "\n\n" +
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_insurrectionist_6;
+                    }
+
+                case "FERRYMAN":
+                    {
+                           return
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_ferryman_1 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_ferryman_2 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_ferryman_3 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_ferryman_4 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_ferryman_5 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_ferryman_6;
                     }
 
                 case "SWORDSMACHINE":
@@ -208,15 +205,6 @@ namespace UltrakULL
 
                     }
 
-                case "SENTRY":
-                    {
-                        return
-                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_sentry_1 + "\n\n" +
-                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_sentry_2 + "\n\n" +
-                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_sentry_3 + "\n\n" +
-                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_sentry_4;
-                    }
-
                 case "V2 (2nd)":
                     {
                         return
@@ -225,11 +213,50 @@ namespace UltrakULL
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_v2Second_3 + "\n\n" +
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_v2Second_4;
                     }
+
+                case "SENTRY":
+                    {
+                        return
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_sentry_1 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_sentry_2 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_sentry_3 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_sentry_4;
+                    }
+                case "GUTTERMAN":
+                    {
+                        return
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_gutterman_1 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_gutterman_2 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_gutterman_3 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_gutterman_4;
+                    }
+                case "GUTTERTANK":
+                    {
+                        return
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_guttertank_1 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_guttertank_2 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_guttertank_3 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_guttertank_4 + "\n"   +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_guttertank_5 + "\n"   +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_guttertank_6 + "\n"   +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_guttertank_7;
+                    }
+                case "EARTHMOVER":
+                    {
+                        return
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_earthmover_1 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_earthmover_2 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_earthmover_3 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_earthmover_4 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_earthmover_5 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_earthmover_6;
+                    }
                 case "MALICIOUS FACE":
                     {
                         return
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_maliciousFace_1 + "\n\n" +
-                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_maliciousFace_2;
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_maliciousFace_2 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_maliciousFace_3;
                     }
                 case "CERBERUS":
                     {
@@ -242,6 +269,31 @@ namespace UltrakULL
                         return
                           LanguageManager.CurrentLanguage.enemyBios.enemyBios_hideousMass_1 + "\n\n" +
                           LanguageManager.CurrentLanguage.enemyBios.enemyBios_hideousMass_2;
+                    }
+                case "LEVIATHAN":
+                    {
+                        return
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_leviathan_1 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_leviathan_2 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_leviathan_3 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_leviathan_4;
+                    }
+                case "MANNEQUIN":
+                    {
+                        return
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_mannequin_1 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_mannequin_2 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_mannequin_3 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_mannequin_4 + "\n\n" +
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_mannequin_5;
+                    }
+                case "MINOTAUR":
+                    {
+                        return
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_minotaur_1 + "\n\n...\n\n...\n\n...\n\n" +
+                            "<color=red><s>" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_minotaur_2 + "\n\n" +
+                            "<color=red><s>" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_minotaur_3 + "\n\n" +
+                            "<color=red><s>" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_minotaur_4 + "</color></s>";
                     }
                 case "GABRIEL, JUDGE OF HELL":
                     {
@@ -456,12 +508,31 @@ namespace UltrakULL
                           + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_v2Second_strategy2 + "\n\n"
                           + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_v2Second_strategy3;
                     }
+                case "GUTTERMAN":
+                    {
+                        return
+                            "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_gutterman_strategy1 + "\n\n"
+                          + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_gutterman_strategy2 + "\n\n"
+                          + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_gutterman_strategy3 + "\n\n"
+                          + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_gutterman_strategy4;
+                    }
+                case "GUTTERTANK":
+                    {
+                        return
+                            "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_guttertank_strategy1 + "\n\n"
+                          + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_guttertank_strategy2;
+                    }
+                case "EARTHMOVER":
+                    {
+                        return
+                            "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_earthmover_strategy1 + "\n\n"
+                          + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_earthmover_strategy2;
+                    }
                 case "MALICIOUS FACE":
                     {
                         return
                         "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_maliciousFace_strategy1 + "\n\n"
                       + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_maliciousFace_strategy2;
-
                     }
                 case "CERBERUS":
                     {
@@ -477,6 +548,19 @@ namespace UltrakULL
                           + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_hideousMass_strategy2 + "\n\n"
                           + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_hideousMass_strategy3 + "\n\n"
                           + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_hideousMass_strategy4;
+                    }
+                case "MANNEQUIN":
+                    {
+                        return
+                            "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_mannequin_strategy1 + "\n\n"
+                          + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_mannequin_strategy2 + "\n\n"
+                          + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_mannequin_strategy3;
+                    }
+                case "MINOTAUR":
+                    {
+                        return
+                            "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_minotaur_strategy1 + "\n\n"
+                          + "- " + LanguageManager.CurrentLanguage.enemyBios.enemyBios_minotaur_strategy2;
                     }
                 case "GABRIEL, JUDGE OF HELL":
                     {
