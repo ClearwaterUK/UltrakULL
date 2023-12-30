@@ -29,8 +29,13 @@ namespace UltrakULL
             return "Unknown 7-2 string";
         }
         
-        public static string Level73()
+        public static string Level73(string message, string message2)
         {
+            string fullMessage = message + message2;
+            if (fullMessage.Contains("F E E D"))
+            {
+                return (LanguageManager.CurrentLanguage.act3.act3_violenceThird_feedIt);
+            }
             return "Unknown 7-3 string";
         }
         
