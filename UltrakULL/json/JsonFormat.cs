@@ -1310,7 +1310,30 @@ namespace UltrakULL.json
         public string books_wrathSecond7;
         public string books_wrathSecond8;
         public string books_wrathSecond9;
-
+        
+        public string books_violenceFirst1;
+        public string books_violenceFirst2;
+        public string books_violenceFirst3;
+        public string books_violenceFirst4;
+        public string books_violenceFirst5;
+        public string books_violenceFirst6;
+        public string books_violenceFirst7;
+        public string books_violenceFirst8;
+        public string books_violenceFirst9;
+        
+        public string books_violenceFirst_Slate1;
+        public string books_violenceFirst_Slate2;
+        public string books_violenceFirst_Slate3;
+        public string books_violenceFirst_Slate4;
+        
+        public string books_violenceSecond1;
+        public string books_violenceSecond2;
+        
+        public string books_violenceFourth1;
+        public string books_violenceFourth2;
+        public string books_violenceFourth3;
+        public string books_violenceFourth4;
+        public string books_violenceFourth5;
     }
 
     public class PauseMenu
