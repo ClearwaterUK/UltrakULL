@@ -84,8 +84,32 @@ namespace UltrakULL
                 case 21: { return ("5-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathSecond); }
                 case 22: { return ("5-3 - " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathThird); }
                 case 23: { return ("5-4 - " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathFourth); }
+                    
+                //Heresy
+                case 24: { return ("6-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_heresyFirst); }
+                case 25: { return ("6-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_heresySecond); }
+                    
+                //Act 3
+                //Violence
+                case 26: { return ("4-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceFirst); }
+                case 27: { return ("4-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceSecond); }
+                case 28: { return ("4-3 - " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceThird); }
+                case 29: { return ("4-4 - " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceFourth); }
 
-                case 999: { return ("P-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_primeFirst); }
+                //Fraud
+                case 30: { return ("5-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudFirst); }
+                case 31: { return ("5-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudSecond); }
+                case 32: { return ("5-3 - " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudThird); }
+                case 33: { return ("5-4 - " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudFourth); }
+                    
+                //Treachery
+                case 34: { return ("6-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_treacheryFirst); }
+                case 35: { return ("6-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_treacherySecond); }
+
+                //Prime Sanctums
+                case 997: { return ("P-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_primeFirst); }
+                case 998: { return ("P-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_primeSecond); }
+                case 999: { return ("P-3 - " + LanguageManager.CurrentLanguage.levelNames.levelName_primeThird); }
 
                 default: { return ("Unknown level ID. Check the console!"); }
             }
