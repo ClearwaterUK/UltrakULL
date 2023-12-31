@@ -2377,8 +2377,22 @@
 			
 			"act3_violenceSecond_guttermanTutorial": "",
 			"act3_violenceSecond_biggerBoom": "",
+			"act3_violenceSecond_gateControlTitle": "",
+			"act3_violenceSecond_gateControlButtonOn": "",
+			"act3_violenceSecond_gateControlButtonOff": "",
+			"act3_violenceSecond_cartGateControlTitle": "",
+			"act3_violenceSecond_cartGateControlOpen": "",
+			"act3_violenceSecond_cartGateControlClosed": "",
+			"act3_violenceSecond_payloadControlTitle": "",
+			"act3_violenceSecond_payloadControlLower": "",
+			"act3_violenceSecond_payloadControlWait": "",
+			"act3_violenceSecond_payloadControlEmpty": "",
 			
 			"act3_violenceThird_feedIt": "",
+			"act3_violenceThird_becomeMarked": "",
+			"act3_violenceThird_becomeMarkedButton": "",
+			"act3_violenceThird_becomeMarkedButtonClosed": "",
+			"act3_violenceThird_starOfTheShow": "",
 
 			"act3_violence_floodingWarning": "",
 			"act3_violence_countdownTitle": "",
