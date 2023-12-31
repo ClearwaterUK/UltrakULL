@@ -2260,8 +2260,33 @@ namespace UltrakULL.json
         
         public string act3_violenceSecond_guttermanTutorial;
         public string act3_violenceSecond_biggerBoom;
+
+        public string act3_violenceSecond_gateControlTitle;
+        
+        public string act3_violenceSecond_gateControlOn1;
+        public string act3_violenceSecond_gateControlOff1;
+        public string act3_violenceSecond_gateControlOn2;
+        public string act3_violenceSecond_gateControlOff2;
+        public string act3_violenceSecond_gateControlOn3;
+        public string act3_violenceSecond_gateControlOff3;
+        public string act3_violenceSecond_gateControlOn4;
+        public string act3_violenceSecond_gateControlOff4;
+        
+        public string act3_violenceSecond_cartGateControlTitle;
+        public string act3_violenceSecond_cartGateControlOpen;
+        public string act3_violenceSecond_cartGateControlClosed;
+        
+        public string act3_violenceSecond_payloadControlTitle;
+        public string act3_violenceSecond_payloadControlLower;
+        public string act3_violenceSecond_payloadControlWait;
+        public string act3_violenceSecond_payloadControlEmpty;
         
         public string act3_violenceThird_feedIt;
+        
+        public string act3_violenceThird_becomeMarked;
+        public string act3_violenceThird_becomeMarkedButton;
+        public string act3_violenceThird_becomeMarkedButtonClosed;
+        public string act3_violenceThird_starOfTheShow;
         
         public string act3_floodingWarning;
         public string act3_countdownTitle;
