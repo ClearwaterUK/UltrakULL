@@ -126,6 +126,31 @@ namespace UltrakULL
                     
                 }
                 
+                case "Level 7-1":
+                {
+                    //Book
+                    if(originalText.Contains("The unending halls of"))
+                    {
+                        return LanguageManager.CurrentLanguage.books.books_violenceFirst1 + "\n"
+                        + LanguageManager.CurrentLanguage.books.books_violenceFirst2 + "\n\n"
+                        + LanguageManager.CurrentLanguage.books.books_violenceFirst3 + "\n\n"
+                        + LanguageManager.CurrentLanguage.books.books_violenceFirst4 + "\n\n\n"
+                        + LanguageManager.CurrentLanguage.books.books_violenceFirst5 + "\n\n"
+                        + LanguageManager.CurrentLanguage.books.books_violenceFirst6 + "\n\n"
+                        + LanguageManager.CurrentLanguage.books.books_violenceFirst7 + "\n\n"
+                        + LanguageManager.CurrentLanguage.books.books_violenceFirst8 + "\n\n"
+                        + "<color=red>" + LanguageManager.CurrentLanguage.books.books_violenceFirst9 + "</color>";
+                    }
+                    
+                    //Johninator Slate thing...?
+                    else
+                    {
+                        return LanguageManager.CurrentLanguage.books.books_violenceFirst_Slate1 + "\n\n"
+                            + LanguageManager.CurrentLanguage.books.books_violenceFirst_Slate2 + "\n\n"
+                            + LanguageManager.CurrentLanguage.books.books_violenceFirst_Slate3 + "\n\n"
+                            + LanguageManager.CurrentLanguage.books.books_violenceFirst_Slate4 + "\n\n";
+                    }
+                
                 default: { return "Unknown book"; }
             }
         }
