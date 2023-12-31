@@ -2400,8 +2400,22 @@
 			
 		"act3_violenceSecond_guttermanTutorial": "The <color=orange>GUTTERMAN SHIELD</color> can be <color=orange>BROKEN</color> with the <color=red>KNUCKLEBLASTER</color>. Swap arms with",
 		"act3_violenceSecond_biggerBoom": "WE'RE GONNA NEED A BIGGER BOOM",
+		"act3_violenceSecond_gateControlTitle": "GATE CONTROL",
+		"act3_violenceSecond_gateControlButtonOpen": "OPEN",
+		"act3_violenceSecond_gateControlButtonClosed": "CLOSED",
+		"act3_violenceSecond_cartGateControlTitle": "GATE CONTROL",
+		"act3_violenceSecond_cartGateControlOpen": "OPEN",
+		"act3_violenceSecond_cartGateControlClosed": "CLOSED",
+		"act3_violenceSecond_payloadControlTitle": "PAYLOAD",
+		"act3_violenceSecond_payloadControlLower": "LOWER",
+		"act3_violenceSecond_payloadControlWait": "PLEASE\nWAIT",
+		"act3_violenceSecond_payloadControlEmpty": "EMPTY",
 			
 		"act3_violenceThird_feedIt": "F E E D   I T .",
+		"act3_violenceThird_becomeMarked": "BECOME MARKED FOR DEATH?",
+		"act3_violenceThird_becomeMarkedButton": "Y E S",
+		"act3_violenceThird_becomeMarkedButtonClosed": "CLOSED",
+		"act3_violenceThird_starOfTheShow": "YOU'RE THE STAR OF THE SHOW NOW, BABY!",
 
 		"act3_violence_floodingWarning": "WARNING: INTRUDER DETECTED\n-- FLUSHING INTERIOR --",
 		"act3_violence_countdownTitle": "CRITICAL FAILURE",
