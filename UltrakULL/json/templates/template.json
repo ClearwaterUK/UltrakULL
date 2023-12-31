@@ -2346,9 +2346,7 @@
 			"act2_wrathThird_soldierBlock": "",
 			"act2_wrathThird_hank": "",
 	
-			"act2_heresyFirst_armboy": "",
-	
-			"act2_secretNotReady": ""
+			"act2_heresyFirst_armboy": ""
 		},
 		"act3": {
 			"act3_violenceFirst_doorOpens": "",
@@ -2357,6 +2355,11 @@
 			"act3_violenceSecond_biggerBoom": "",
 			
 			"act3_violenceThird_feedIt": "",
+
+			"act3_violence_floodingWarning": "",
+			"act3_violence_countdownTitle": "",
+			
+			"act3_secretNotReady": ""
 		},
 		"primeSanctum": {
 			"primeSanctum_first_secretText1": "",
