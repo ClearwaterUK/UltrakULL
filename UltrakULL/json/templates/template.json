@@ -672,7 +672,31 @@
 			"books_wrathSecond6": "",
 			"books_wrathSecond7": "",
 			"books_wrathSecond8": "",
-			"books_wrathSecond9": ""
+			"books_wrathSecond9": "",
+			
+			"books_violenceFirst1": "",
+			"books_violenceFirst2": "",
+			"books_violenceFirst3": "",
+			"books_violenceFirst4": "",
+			"books_violenceFirst5": "",
+			"books_violenceFirst6": "",
+			"books_violenceFirst7": "",
+			"books_violenceFirst8": "",
+			"books_violenceFirst9": "",
+			
+			"books_violenceFirst_Slate1": "",
+			"books_violenceFirst_Slate2": "",
+			"books_violenceFirst_Slate3": "",
+			"books_violenceFirst_Slate4": "",
+			
+			"books_violenceSecond1": "",
+			"books_violenceSecond2": "",
+			
+			"books_violenceFourth1": "",
+			"books_violenceFourth2": "",
+			"books_violenceFourth3": "",
+			"books_violenceFourth4": "",
+			"books_violenceFourth5": ""
 		},
 		"intermission": {
 			"act1_intermission_first1": "",
