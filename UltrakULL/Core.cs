@@ -307,6 +307,11 @@ namespace UltrakULL
                                 Logging.Message("Act 2");
                                 Act2.PatchAct2(ref canvasObj);
                             }
+                            else if(levelName.Contains("7-") || levelName.Contains("8-") || levelName.Contains("9-"))
+                            {
+                                Logging.Message("Act 3");
+                                Act3.PatchAct3(ref canvasObj);
+                            }
                             else if (levelName.Contains("P-"))
                             {
                                 Logging.Message("Prime");
