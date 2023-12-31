@@ -31,7 +31,7 @@ namespace UltrakULL
             }
             else if (level.Contains("7-") || (level.Contains("8-") || (level.Contains("9-"))))
             {
-                return "Unimplemented Act 3 function";
+                return Act3Strings.GetMessage(message, message2, input);
             }
             else if (level.Contains("CreditsMuseum2"))
             {
