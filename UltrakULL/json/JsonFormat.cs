@@ -2229,14 +2229,21 @@ namespace UltrakULL.json
         public string act2_wrathThird_hank;
 
         public string act2_heresyFirst_armboy;
-
-        public string act2_secretNotReady;
-
     }
 
     public class a3
     {
+        public string act3_violenceFirst_doorOpens;
         
+        public string act3_violenceSecond_guttermanTutorial;
+        public string act3_violenceSecond_biggerBoom;
+        
+        public string act3_violenceThird_feedIt;
+        
+        public string act3_floodingWarning;
+        public string act3_countdownTitle;
+
+        public string act3_secretNotReady;
     }
 
     public class Prime
