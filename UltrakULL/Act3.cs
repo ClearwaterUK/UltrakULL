@@ -32,6 +32,15 @@ namespace UltrakULL
             
             PatchResultsScreen(levelName, levelChallenge);
             PatchHellmap(ref canvasObj);
+            
+            //7-4 Flooding and Countdown
+            //Flooding warning
+            GameObject floodingWarnText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(canvasObj, "Warning"), "Text (TMP)"));
+            floodingWarnText.text = LanguageManager.CurrentLanguage.act3.act3_floodingWarning;
+
+            //Countdown title before blowing up
+            GameObject countdownTitleText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(canvasObj, "Countdown"), "Text (TMP)"));
+            countdownTitleText.text = LanguageManager.CurrentLanguage.act3.act3_countdownTitle;
         }
     }
 }
