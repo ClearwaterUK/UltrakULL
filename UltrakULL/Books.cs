@@ -129,8 +129,8 @@ namespace UltrakULL
                 case "Level 7-1": {
                     //Book
                     if(originalText.Contains("The unending halls of")) {
-                        return LanguageManager.CurrentLanguage.books.books_violenceFirst1 + "\n"
-                        + LanguageManager.CurrentLanguage.books.books_violenceFirst2 + "\n\n"
+                        return "<b>" + LanguageManager.CurrentLanguage.books.books_violenceFirst1 + "</b>\n"
+                        + "<b>" + LanguageManager.CurrentLanguage.books.books_violenceFirst2 + "</b>\n\n"
                         + LanguageManager.CurrentLanguage.books.books_violenceFirst3 + "\n\n"
                         + LanguageManager.CurrentLanguage.books.books_violenceFirst4 + "\n\n\n"
                         + LanguageManager.CurrentLanguage.books.books_violenceFirst5 + "\n\n"
