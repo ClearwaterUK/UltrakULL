@@ -2263,14 +2263,8 @@ namespace UltrakULL.json
 
         public string act3_violenceSecond_gateControlTitle;
         
-        public string act3_violenceSecond_gateControlOn1;
-        public string act3_violenceSecond_gateControlOff1;
-        public string act3_violenceSecond_gateControlOn2;
-        public string act3_violenceSecond_gateControlOff2;
-        public string act3_violenceSecond_gateControlOn3;
-        public string act3_violenceSecond_gateControlOff3;
-        public string act3_violenceSecond_gateControlOn4;
-        public string act3_violenceSecond_gateControlOff4;
+        public string act3_violenceSecond_gateControlOn;
+        public string act3_violenceSecond_gateControlOff;
         
         public string act3_violenceSecond_cartGateControlTitle;
         public string act3_violenceSecond_cartGateControlOpen;
