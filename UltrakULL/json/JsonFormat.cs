@@ -335,6 +335,7 @@ namespace UltrakULL.json
         public string style_scrongled;
         public string style_scrongbongled;
         public string style_secret;
+        public string style_served;
         public string style_strike;
         public string style_splattered;
         public string style_triplekill;
