@@ -2876,8 +2876,8 @@ namespace UltrakULL.json
         public string enemyAlter_metaUnbreakable;
         public string enemyAlter_metaWeak;
         public string enemyAlter_jumpPadTitle;
-        public string enemyAlter_jumpPadPower;
         public string enemyAlter_hookPointTitle;
+        public string enemyAlter_Power;
         public string enemyAlter_radianceTitle;
         public string enemyAlter_radianceEnable;
         public string enemyAlter_radianceDetails_tier;
