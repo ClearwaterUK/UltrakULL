@@ -13,10 +13,12 @@ enemyName: gutterman, guttertank, earthmover, mannequin, minotaur, boss_earthmov
 devMuseum: bookAdditionalCredits7, bookMandalore7
 books: violenceFirst(1-9), violenceFirst_Slate(1-4), violenceSecond(1-2), violenceFourth(1-5)
 cheats: invicibility, enemiesHateEnemies, enemiesIgnorePlayer
+enemyAlter: hookPointTitle, enrage, enrageEternal, sandified, ignorePlayer, attackEnemies
 
 MODIFIED:
 devMuseum: bookAdditionalCredits(2-6) -> bookAdditionalCredits(3-7)
 devMuseum: bookMandalore(5-6) -> bookMandalore(6-7)
+enemyAlter: jumpPadPower -> Power
 
 REMOVED:
 act2: secretNotReady
