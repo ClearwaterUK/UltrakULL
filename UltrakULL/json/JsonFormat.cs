@@ -1,4 +1,3 @@
-﻿
 using System.Reflection;
 
 namespace UltrakULL.json
@@ -309,6 +308,7 @@ namespace UltrakULL.json
         public string style_fistfulofdollar;
         public string style_fried;
         public string style_friendlyfire;
+        public string style_guardbreak;
         public string style_groundslam;
         public string style_halfoff;
         public string style_headshot;
@@ -317,6 +317,7 @@ namespace UltrakULL.json
         public string style_instakill;
         public string style_interruption;
         public string style_kill;
+        public string style_landyours;
         public string style_limbshot;
         public string style_mauriced;
         public string style_multikill;
@@ -328,21 +329,33 @@ namespace UltrakULL.json
         public string style_ricoshot;
         public string style_ricoshotUltra;
         public string style_ricoshotCounter;
+        public string style_rocketreturn;
+        public string style_roundtrip;
         public string style_scrindonguloded;
         public string style_scrongled;
         public string style_scrongbongled;
         public string style_secret;
+        public string style_strike;
         public string style_splattered;
         public string style_triplekill;
 
         public string style_why;
 
+        public string style_boiled;
         public string style_conductor;
         public string style_crushed;
         public string style_fall;
+        public string style_forthee;
+        public string style_longwaydown;
+        public string style_lost;
+        public string style_m_a_d;
         public string style_minced;
+        public string style_pancaked;
         public string style_outofbounds;
+        public string style_roadkill;
         public string style_shredded;
+        public string style_slipped;
+        public string style_trampled;
         public string style_zapped;
 
         public string style_d;
@@ -2263,8 +2276,8 @@ namespace UltrakULL.json
 
         public string act3_violenceSecond_gateControlTitle;
         
-        public string act3_violenceSecond_gateControlOn;
-        public string act3_violenceSecond_gateControlOff;
+        public string act3_violenceSecond_gateControlOpen;
+        public string act3_violenceSecond_gateControlClosed;
         
         public string act3_violenceSecond_cartGateControlTitle;
         public string act3_violenceSecond_cartGateControlOpen;
