@@ -94,6 +94,7 @@ namespace UltrakULL
                     case "ultrakill.spawner-arm": { return LanguageManager.CurrentLanguage.cheats.cheats_spawnerArm; }
                     case "ultrakill.teleport-menu": { return LanguageManager.CurrentLanguage.cheats.cheats_teleportMenu; }
                     case "ultrakill.full-bright": { return LanguageManager.CurrentLanguage.cheats.cheats_fullBright; }
+                    case "ultrakill.invicibility": { return LanguageManager.CurrentLanguage.cheats.cheats_invicibility; }
 
                     case "ultrakill.noclip": { return LanguageManager.CurrentLanguage.cheats.cheats_noclip; }
                     case "ultrakill.flight": { return LanguageManager.CurrentLanguage.cheats.cheats_flight; }
@@ -103,6 +104,8 @@ namespace UltrakULL
                     case "ultrakill.infinite-power-ups": { return LanguageManager.CurrentLanguage.cheats.cheats_infinitePowerUps; }
 
                     case "ultrakill.blind-enemies": { return LanguageManager.CurrentLanguage.cheats.cheats_blindEnemies; }
+                    case "ultrakill.enemies-hate-enemies": { return LanguageManager.CurrentLanguage.cheats.cheats_enemiesHateEnemies; }
+                    case "ultrakill.enemies-ignore-player": { return LanguageManager.CurrentLanguage.cheats.cheats_enemyIgnorePlayer; }
                     case "ultrakill.disable-enemy-spawns": { return LanguageManager.CurrentLanguage.cheats.cheats_disableEnemySpawns; }
                     case "ultrakill.invincible-enemies": { return LanguageManager.CurrentLanguage.cheats.cheats_invincibleEnemies; }
                     case "ultrakill.kill-all-enemies": { return LanguageManager.CurrentLanguage.cheats.cheats_killAllEnemies; }
