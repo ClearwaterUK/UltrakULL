@@ -32,7 +32,11 @@ namespace UltrakULL
         public static string Level73(string message, string message2)
         {
             string fullMessage = message + message2;
-            if (fullMessage.Contains("F E E D"))
+            if (fullMessage.Contains("YOU'RE NOT"))
+            {
+                return (LanguageManager.CurrentLanguage.act3.act3_secretNotReady);
+            }
+            else if (fullMessage.Contains("F E E D"))
             {
                 return ("<color=red>" + LanguageManager.CurrentLanguage.act3.act3_violenceThird_feedIt + "</color>");
             }
