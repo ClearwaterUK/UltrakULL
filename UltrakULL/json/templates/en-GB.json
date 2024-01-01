@@ -2434,7 +2434,7 @@
 		"act3_violence_floodingWarning": "WARNING: INTRUDER DETECTED\n-- FLUSHING INTERIOR --",
 		"act3_violence_countdownTitle": "CRITICAL FAILURE",
         
-        	"act2_secretNotReady": "YOU'RE NOT SUPPOSED TO BE HERE."
+        	"act3_secretNotReady": "YOU'RE NOT SUPPOSED TO BE HERE."
 	},
     "primeSanctum":{
         "primeSanctum_first_secretText1": "TERMINAL DATA 01 [ENCRYPTED]",
