@@ -12,7 +12,7 @@ enemyBios: gutterman_(1-4), guttertank_(1-7), earthmover_(1-6), mannequin_(1-5),
 enemyName: gutterman, guttertank, earthmover, mannequin, minotaur, boss_earthmover, boss_earthmoverDefence
 devMuseum: bookAdditionalCredits7, bookMandalore7
 books: violenceFirst(1-9), violenceFirst_Slate(1-4), violenceSecond(1-2), violenceFourth(1-5)
-cheats: invicibility, enemiesHateEnemies, enemiesIgnorePlayer
+cheats: invincibility, enemiesHateEnemies, enemiesIgnorePlayer
 enemyAlter: hookPointTitle, enrage, enrageEternal, sandified, ignorePlayer, attackEnemies
 style: landyours, rocketreturn, roundtrip, served, strike, boiled, forthee, guardbreak, longwaydown, lost, m_a_d, pancaked, roadkill, slipped, trampled
 frontEnd: layer_(violence, fraud, treachery)
