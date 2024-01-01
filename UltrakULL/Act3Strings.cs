@@ -97,15 +97,15 @@ namespace UltrakULL
             {
                 case "Level 7-1":
                     {
-                        return Level71();
+                        return Level71(message, message2);
                     }
                 case "Level 7-2":
                     {
-                        return Level72();
+                        return Level72(message, message2, input);
                     }
                 case "Level 7-3":
                     {
-                        return Level73();
+                        return Level73(message, message2);
                     }
                 case "Level 7-4":
                     {
