@@ -71,7 +71,14 @@ namespace UltrakULL.Harmony_Patches
             {
                 case "enemy": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_boss_title; break;}
                 case "Jump Pad": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_jumpPadTitle; break;}
+                case "Hook Point": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_hookPointTitle; break;}
                 case "Breakable": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_metaBreakable; break;}
+                case "v2": { name = LanguageManager.CurrentLanguage.enemyNames.enemyname_v2; break;}
+                case "swordsmachine": { name = LanguageManager.CurrentLanguage.enemyNames.enemyname_swordsmachine; break;}
+                case "drone": { name = LanguageManager.CurrentLanguage.enemyNames.enemyname_virtue; break;}
+                case "statue": { name = LanguageManager.CurrentLanguage.enemyNames.enemyname_cerberus; break;}
+                case "mindflayer": { name = LanguageManager.CurrentLanguage.enemyNames.enemyname_mindFlayer; break;}
+                case "malicious face": { name = LanguageManager.CurrentLanguage.enemyNames.enemyname_malFace; break;}
                 default:{break;}
                     
             }
@@ -92,7 +99,12 @@ namespace UltrakULL.Harmony_Patches
             switch (name)
             {
                 case "Boss Health Bar": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_boss_description; break;}
-                case "Force": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_jumpPadTitle; break;}
+                case "Enraged": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_enrage; break;}
+                case "Eternal Rage": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_enrageEternal; break;}
+                case "Sandified": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_sandified; break;}
+                case "Ignore Player": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_ignorePlayer; break;}
+                case "Attack Enemies": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_attackEnemies; break;}
+                case "Force": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_Power; break;}
                 case "Weak": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_metaWeak; break;}
                 case "Unbreakable": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_metaUnbreakable; break;}
                 default:{break;}
