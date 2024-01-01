@@ -1,3 +1,8 @@
+1.3.0
+- Added all new content related to the Violence layer, sandbox and cheats (more details in the template changelog)
+- Fixed an issue where using the english version would always display the difficulty as "TEST"
+
+
 1.2.3b 
 - Critical fixes under the hood to fix the mod. (Note: Layer 7 content will come later.)
 - Fixed an oversight preventing Sisyphus Prime's and Minos Prime's intro from being dubbed, if dubbing was enabled.
