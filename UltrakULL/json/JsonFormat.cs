@@ -222,12 +222,15 @@ namespace UltrakULL.json
         public string cheats_spawnerArm;
         public string cheats_teleportMenu;
         public string cheats_fullBright;
+        public string cheats_invicibility;
         public string cheats_noclip;
         public string cheats_flight;
         public string cheats_infiniteWallJumps;
         public string cheats_noWeaponCooldown;
         public string cheats_infinitePowerUps;
         public string cheats_blindEnemies;
+        public string cheats_enemiesHateEnemies;
+        public string cheats_enemiesIgnorePlayer;
         public string cheats_disableEnemySpawns;
         public string cheats_invincibleEnemies;
         public string cheats_killAllEnemies;
