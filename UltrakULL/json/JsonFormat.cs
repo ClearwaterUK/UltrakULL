@@ -222,15 +222,12 @@ namespace UltrakULL.json
         public string cheats_spawnerArm;
         public string cheats_teleportMenu;
         public string cheats_fullBright;
-        public string cheats_invicibility;
         public string cheats_noclip;
         public string cheats_flight;
         public string cheats_infiniteWallJumps;
         public string cheats_noWeaponCooldown;
         public string cheats_infinitePowerUps;
         public string cheats_blindEnemies;
-        public string cheats_enemiesHateEnemies;
-        public string cheats_enemiesIgnorePlayer;
         public string cheats_disableEnemySpawns;
         public string cheats_invincibleEnemies;
         public string cheats_killAllEnemies;
@@ -2880,6 +2877,7 @@ namespace UltrakULL.json
         public string enemyAlter_metaWeak;
         public string enemyAlter_jumpPadTitle;
         public string enemyAlter_jumpPadPower;
+        public string enemyAlter_hookPointTitle;
         public string enemyAlter_radianceTitle;
         public string enemyAlter_radianceEnable;
         public string enemyAlter_radianceDetails_tier;
@@ -2888,7 +2886,12 @@ namespace UltrakULL.json
         public string enemyAlter_radianceSpeed_tier;
         public string enemyAlter_boss_title;
         public string enemyAlter_boss_description;
-        
+        public string enemyAlter_enrage;
+        public string enemyAlter_enrageEternal;
+        public string enemyAlter_sandified;
+        public string enemyAlter_ignorePlayer;
+        public string enemyAlter_attackEnemies;
+
         public string earlyAccessEnd1;
         public string earlyAccessEnd2;
         public string earlyAccessEnd3;
