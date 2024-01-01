@@ -469,6 +469,83 @@ namespace UltrakULL
             Text heresySecondChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(heresyContent, "1-2 Panel"), "Panel (2)"), "Text"));
             heresySecondChallenge.text = Act2Strings.GetLevelChallenge("Level 6-2");
         }
+	    
+        private static void PatchLevelSelectAct3(GameObject frontEnd)
+        {
+            GameObject act3Object = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(frontEnd, "Level Select (Act III)"), "Scroll Rect"), "Contents");
+
+            GameObject violenceObject = GetGameObjectChild(act3Object, "Layer 7 Violence");
+            GameObject fraudObject = GetGameObjectChild(act3Object, "Layer 8 Fraud");
+            GameObject treacheryObject = GetGameObjectChild(act3Object, "Layer 9 Treachery");
+
+            //Layer 7 - Violence
+            GameObject violenceHeader = GetGameObjectChild(violenceObject,"Header");
+            
+            Text greedTitle = GetTextfromGameObject(GetGameObjectChild(violenceHeader, "Text"));
+            violenceTitle.text = LanguageManager.CurrentLanguage.frontend.layer_violence;
+            
+            Text violenceSecretMissionText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(violenceHeader, "Secret Mission"), "Text"));
+            violenceSecretMissionText.text = LanguageManager.CurrentLanguage.frontend.chapter_secretMission;
+            
+            //Main levels
+            GameObject violenceContent = GetGameObjectChild(violenceObject,"Level Row");
+
+
+            Text violenceFirstChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(violenceContent, "7-1 Panel"), "Panel"), "Text"));
+            violenceFirstChallenge.text = Act3Strings.GetLevelChallenge("Level 7-1");
+
+            Text violenceSecondChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(violenceContent, "7-2 Panel"), "Panel (2)"), "Text"));
+            violenceSecondChallenge.text = Act3Strings.GetLevelChallenge("Level 7-2");
+
+            Text violenceThirdChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(violenceContent, "7-3 Panel"), "Panel (4)"), "Text"));
+            violenceThirdChallenge.text = Act3Strings.GetLevelChallenge("Level 7-3");
+
+            Text violenceClimaxChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(violenceContent, "7-4 Panel"), "Panel (6)"), "Text"));
+            violenceClimaxChallenge.text = Act3Strings.GetLevelChallenge("Level 7-4");
+
+            
+            //Layer 8 - Fraud
+            GameObject fraudHeader = GetGameObjectChild(fraudObject,"Header");
+            
+            Text fraudTitle = GetTextfromGameObject(GetGameObjectChild(fraudHeader, "Text"));
+            fraudTitle.text = LanguageManager.CurrentLanguage.frontend.layer_fraud;
+            
+            Text fraudSecretMissionText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(fraudHeader, "Secret Mission"), "Text"));
+            fraudSecretMissionText.text = LanguageManager.CurrentLanguage.frontend.chapter_secretMission;
+            
+            //Main levels
+            GameObject fraudContent = GetGameObjectChild(fraudObject,"Level Row");
+
+
+            Text fraudFirstChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(fraudContent, "8-1 Panel"), "Panel"), "Text"));
+            fraudFirstChallenge.text = Act3Strings.GetLevelChallenge("Level 8-1");
+
+            Text fraudSecondChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(fraudContent, "8-2 Panel"), "Panel (2)"), "Text"));
+            fraudSecondChallenge.text = Act3Strings.GetLevelChallenge("Level 8-2");
+
+            Text fraudThirdChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(fraudContent, "8-3 Panel"), "Panel (4)"), "Text"));
+            fraudThirdChallenge.text = Act3Strings.GetLevelChallenge("Level 8-3");
+
+            Text fraudClimaxChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(fraudContent, "8-4 Panel"), "Panel (6)"), "Text"));
+            fraudClimaxChallenge.text = Act3Strings.GetLevelChallenge("Level 8-4");
+
+
+            //Layer 9 - Treachery
+            GameObject treacheryHeader = GetGameObjectChild(treacheryObject,"Header");
+            
+            Text treacheryTitle = GetTextfromGameObject(GetGameObjectChild(treacheryHeader, "Text"));
+            treacheryTitle.text = LanguageManager.CurrentLanguage.frontend.layer_treachery;
+            
+            //Main levels
+            GameObject treacheryContent = GetGameObjectChild(treacheryObject,"Level Row");
+
+
+            Text treacheryFirstChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(treacheryContent, "9-1 Panel"), "Panel"), "Text"));
+            treacheryFirstChallenge.text = Act3Strings.GetLevelChallenge("Level 9-1");
+
+            Text treacherySecondChallenge = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(treacheryContent, "9-2 Panel"), "Panel (2)"), "Text"));
+            treacherySecondChallenge.text = Act3Strings.GetLevelChallenge("Level 9-2");
+        }
 
         private static void PatchLevelSelectPrime(GameObject frontEnd)
         {
@@ -490,6 +567,7 @@ namespace UltrakULL
                 PatchLevelSelectPrelude(frontEnd);
                 PatchLevelSelectAct1(frontEnd);
                 PatchLevelSelectAct2(frontEnd);
+                PatchLevelSelectAct3(frontEnd);
                 PatchLevelSelectPrime(frontEnd);
             }
             catch (Exception e)
