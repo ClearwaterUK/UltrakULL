@@ -882,6 +882,9 @@
 		"layer_greed": "GREED",
 		"layer_wrath": "WRATH",
 		"layer_heresy": "HERESY",
+		"layer_violence": "VIOLENCE",
+		"layer_fraud": "FRAUD",
+		"layer_treachery": "TREACHERY",
 		"layer_prime": "PRIME",
 
         "level_challenge": "CHALLENGE",
