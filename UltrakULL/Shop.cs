@@ -133,6 +133,7 @@ namespace UltrakULL
                 
                 //Points (P) - This doesn't seem to actually work for some reason, I haven't been able to find the reason behind it
                 TextMeshProUGUI weaponMoney = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "Panel"), "Money"));
+                int currentMoney = GameProgressSaver.GetMoney();
                 if (weaponMoney.text == "LIKE, A LOT OF <color=orange>P</color>")
                 { weaponMoney.text = LanguageManager.CurrentLanguage.shop.shop_lotsOfMoney; }
                 else { weaponMoney.text = currentMoney + LanguageManager.CurrentLanguage.shop.shop_moneyCount; }
