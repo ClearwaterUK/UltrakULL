@@ -1502,10 +1502,10 @@
         "challenges_heresyFirst": "BEAT THE SECRET ENCOUNTER",
 		"challenges_heresySecond": "HIT GABRIEL INTO THE CEILING",
 
-        "challenges_violenceFirst": "CHALLENGE VIOLENCE FIRST",
-        "challenges_violenceSecond": "CHALLENGE VIOLENCE SECOND",
-        "challenges_violenceThird": "CHALLENGE VIOLENCE THIRD",
-        "challenges_violenceFourth": "CHALLENGE VIOLENCE CLIMAX",
+        "challenges_violenceFirst": "BEAT THE SECRET ENCOUNTER",
+        "challenges_violenceSecond": "DON'T KILL ANY ENEMIES",
+        "challenges_violenceThird": "BECOME MARKED FOR DEATH",
+        "challenges_violenceFourth": "DON'T FIGHT THE SECURITY SYSTEM",
 
         "challenges_fraudFirst": "CHALLENGE FRAUD FIRST",
         "challenges_fraudSecond": "CHALLENGE FRAUD SECOND",
@@ -1570,11 +1570,12 @@
         "leveltips_heresyFirst2": "Using the environment to break line-of-sight with enemies allows for some breathing room and time to consider <color=orange>target prioritization</color>.",
         "leveltips_heresySecond1": "DON'T WASTE STAMINA!",
         "leveltips_heresySecond2": "Dashing needlessly while fighting very aggressive foes will quickly cause one to have none left when it is most needed.",
-        
-        "leveltips_violenceFirst": "LEVEL TIP VIOLENCE FIRST",
-        "leveltips_violenceSecond": "LEVEL TIP VIOLENCE SECOND",
-        "leveltips_violenceThird": "LEVEL TIP VIOLENCE THIRD",
-        "leveltips_violenceFourth": "LEVEL TIP VIOLENCE CLIMAX",
+
+
+    	"leveltips_violenceFirst": "<color=orange>Homing projectiles</color> may be more difficult to dodge, but their tracking and slower speed makes them much <color=orange>easier</color> to <color=orange>parry.</color>",
+   	"leveltips_violenceSecond": "<color=orange>Mannequins</color> can be hard to hit due to their speed, but they lose air control when <color=orange>launched</color> or <color=orange>shot down</color> from a surface, making them <color=orange>unable to move</color> for a short moment.",
+  	"leveltips_violenceThird": "The <color=red>Knuckleblaster</color>'s <color=orange>blast wave</color> is also capable of breaking a <color=orange>Gutterman's shield</color>, and is much easier to land in a chaotic scenario.",
+   	"leveltips_violenceFourth": "A <color=orange>direct hit</color> from the Knuckleblaster has extremely powerful <color=orange>knockback</color>, making it extremely powerful for launching enemies into <color=orange>pits</color> and other <color=orange>environmental hazards</color>.",
 
         "leveltips_fraudFirst": "LEVEL TIP FRAUD FIRST",
         "leveltips_fraudSecond": "LEVEL TIP FRAUD SECOND",
@@ -1584,8 +1585,8 @@
         "leveltips_treacheryFirst": "LEVEL TIP TREACHERY FIRST",
         "leveltips_treacherySecond": "LEVEL TIP TREACHERY CLIMAX",
 
-		"leveltips_primeFirst1": "Parries can be used as a powerful healing tool.",
-		"leveltips_primeFirst2": "Parrying any enemy projectile or melee attack will fully replenish your health up to the hard damage limit.",
+	"leveltips_primeFirst1": "Parries can be used as a powerful healing tool.",
+	"leveltips_primeFirst2": "Parrying any enemy projectile or melee attack will fully replenish your health up to the hard damage limit.",
         "leveltips_primeSecond": "Have fun.",
 
 		"leveltips_cybergrind": "If blown too far off the arena, PUMP CHARGE's overcharge is a good way to get back.",
@@ -2786,7 +2787,8 @@
         "enemyAlter_metaBreakable": "BREAKABLE",
         "enemyAlter_metaUnbreakable": "UNBREAKABLE",
         "enemyAlter_jumpPadTitle": "JUMP PAD",
-        "enemyAlter_jumpPadPower": "FORCE",
+        "enemyAlter_hookPointTitle": "HOOK POINT",
+        "enemyAlter_Power": "FORCE",
         "enemyAlter_radianceTitle": "RADIANCE",
         "enemyAlter_radianceEnable": "ENABLE RADIANCE",
         "enemyAlter_radianceDetails_tier": "TIER",
@@ -2795,9 +2797,14 @@
         "enemyAlter_radianceSpeed_tier": "SPEED",
         "enemyAlter_boss_title": "ENEMY",
         "enemyAlter_boss_description": "BOSS HEALTH BAR",
+        "enemyAlter_enrage": "ENRAGED",
+        "enemyAlter_enrageEternal": "ETERNAL RAGE",
+        "enemyAlter_sandified": "SANDIFIED",
+        "enemyAlter_ignorePlayer": "IGNORE PLAYER",
+        "enemyAlter_attackEnemies": "ATTACK ENEMIES",
 
         "earlyAccessEnd1": "THANKS FOR PLAYING",
-        "earlyAccessEnd2": "ACT III: GODFIST SUICIDE is still under development.",
+        "earlyAccessEnd2": "Layer 8: FRAUD is still under development",
         "earlyAccessEnd3": "For news on its progress, follow us on"
 
 	},
