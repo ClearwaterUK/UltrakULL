@@ -234,10 +234,6 @@ namespace UltrakULL
             {
                 return (LanguageManager.CurrentLanguage.act2.act2_greed_secretDoor);
             }
-            if (fullMessage.Contains("YOU'RE"))
-            {
-                return (LanguageManager.CurrentLanguage.act2.act2_secretNotReady);
-            }
 
             switch (currentLevel)
             {
