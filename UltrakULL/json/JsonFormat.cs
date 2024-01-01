@@ -1270,6 +1270,9 @@ namespace UltrakULL.json
         public string layer_greed;
         public string layer_wrath;
         public string layer_heresy;
+        public string layer_violence;
+        public string layer_fraud;
+        public string layer_treachery;
         public string layer_prime;
 
         public string level_challenge;
