@@ -1761,6 +1761,7 @@ namespace UltrakULL.json
         public string enemyname_boss_v2;
         public string enemyname_boss_v2Second;
         public string enemyname_boss_earthmover;
+        public string enemyname_boss_earthmoverDefence;
         public string enemyname_boss_ferryman;
         public string enemyname_boss_leviathan;
         public string enemyname_boss_insurrectionistRude;
