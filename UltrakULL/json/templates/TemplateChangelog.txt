@@ -15,6 +15,7 @@ books: violenceFirst(1-9), violenceFirst_Slate(1-4), violenceSecond(1-2), violen
 cheats: invicibility, enemiesHateEnemies, enemiesIgnorePlayer
 enemyAlter: hookPointTitle, enrage, enrageEternal, sandified, ignorePlayer, attackEnemies
 style: landyours, rocketreturn, roundtrip, served, strike, boiled, forthee, guardbreak, longwaydown, lost, m_a_d, pancaked, roadkill, slipped, trampled
+frontEnd: layer_(violence, fraud, treachery)
 
 MODIFIED:
 devMuseum: bookAdditionalCredits(2-6) -> bookAdditionalCredits(3-7)
