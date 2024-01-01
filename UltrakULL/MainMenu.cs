@@ -481,7 +481,7 @@ namespace UltrakULL
             //Layer 7 - Violence
             GameObject violenceHeader = GetGameObjectChild(violenceObject,"Header");
             
-            Text greedTitle = GetTextfromGameObject(GetGameObjectChild(violenceHeader, "Text"));
+            Text violenceTitle = GetTextfromGameObject(GetGameObjectChild(violenceHeader, "Text"));
             violenceTitle.text = LanguageManager.CurrentLanguage.frontend.layer_violence;
             
             Text violenceSecretMissionText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(violenceHeader, "Secret Mission"), "Text"));
