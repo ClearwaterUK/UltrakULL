@@ -20,7 +20,10 @@ namespace UltrakULL
                 tipTitle.text = LanguageManager.CurrentLanguage.shop.shop_tipofthedayTitle;
 
                 TextMeshProUGUI tipDescription = GetTextMeshProUGUI(GetGameObjectChild(tipPanel, "TipText"));
-                tipDescription.text = StringsParent.GetLevelTip();
+                string tipDescriptionText = tipDescription.text;
+                //V-Rank Check, do nothing if "V-Rank" is in them, otherwise replace by the correct text
+                if (tipDescriptionText.Contains("V-Rank")) { }
+                else { tipDescription.text = StringsParent.GetLevelTip(); }
 
                 //Weapons button
                 GameObject mainButtons = GetGameObjectChild(shopObject, "Main Menu");
@@ -129,15 +132,14 @@ namespace UltrakULL
             {
                 
                 //weapons
-                GameObject shopWeaponsObject  = GetGameObjectChild(shopObject,"Weapons");
+                GameObject shopWeaponsObject  = GetGameObjectChild(shopObject, "Weapons");
                 
-                //Points (P) - This doesn't seem to actually work for some reason, I haven't been able to find the reason behind it
+                //Points (P) - This doesn't seem to actually work
                 TextMeshProUGUI weaponMoney = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "Panel"), "Money"));
                 int currentMoney = GameProgressSaver.GetMoney();
                 if (weaponMoney.text == "LIKE, A LOT OF <color=orange>P</color>")
                 { weaponMoney.text = LanguageManager.CurrentLanguage.shop.shop_lotsOfMoney; }
                 else { weaponMoney.text = currentMoney + LanguageManager.CurrentLanguage.shop.shop_moneyCount; }
-                
 
                 TextMeshProUGUI weaponBackText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "BackButton (1)"), "Text"));
                 weaponBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
