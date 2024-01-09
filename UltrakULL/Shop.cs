@@ -365,7 +365,7 @@ namespace UltrakULL
                 pumpChargeWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Shotgun red variation (under construction)
-                GameObject shotgunRedVariation = GetGameObjectChild(shotgunWindow, "Variation Panel (Red)");
+                GameObject shotgunRedVariation = GetGameObjectChild(shotgunWindow, "Variation Panel (Red) (Under Construction)");
                 TextMeshProUGUI shotgunRedUnderConstruction = GetTextMeshProUGUI(GetGameObjectChild(shotgunRedVariation, "Text (1)"));
                 shotgunRedUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
 
@@ -484,7 +484,7 @@ namespace UltrakULL
                 overheatWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Nailgun red variation (under construction)
-                GameObject nailgunRedVariation = GetGameObjectChild(nailgunWindow, "Variation Panel (Red)");
+                GameObject nailgunRedVariation = GetGameObjectChild(nailgunWindow, "Variation Panel (Red) (Under Construction)");
                 TextMeshProUGUI nailgunRedUnderConstruction = GetTextMeshProUGUI(GetGameObjectChild(nailgunRedVariation, "Text (1)"));
                 nailgunRedUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
 
@@ -756,7 +756,7 @@ namespace UltrakULL
                 srsCannonInfoDescription.fontSize = 16;
 
                 //Rocket Launcher red variation (under construction)
-                GameObject rlRedVariation = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Red)");
+                GameObject rlRedVariation = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Red) (Under Construction)");
                 TextMeshProUGUI rlRedUnderConstruction = GetTextMeshProUGUI(GetGameObjectChild(rlRedVariation, "Text (1)"));
                 rlRedUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
 
