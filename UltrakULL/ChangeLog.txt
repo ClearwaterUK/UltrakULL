@@ -1,6 +1,9 @@
 1.3.0
 - Added all new content related to the Violence layer, sandbox and cheats (more details in the template changelog)
+- Added advanced options (more details in the template changelog)
 - Fixed an issue where using the english version would always display the difficulty as "TEST"
+- Fixed the rumble options not being translated
+- Fixed a typo in the English template
 
 
 1.2.3b 
