@@ -1814,14 +1814,20 @@ namespace UltrakULL.json
         public string general_screenShakeMinimum;
         public string general_screenShakeMaximum;
         public string general_cameraTilt;
+        public string general_parryFlash;
         public string general_restartWarning;
+        public string general_sandboxOverwrite;
         public string general_discordRpc;
         public string general_seasonalEvent;
         public string general_controllerRumble;
         public string general_controllerRumbleCustomize;
         public string general_levelLeaderboards;
+        public string general_advancedOptions;
+        public string general_advancedOptionsCustomize;
 
         public string controls_bindings;
+        public string controls_movementTitle;
+        public string controls_weaponTitle;
         public string controls_resetDefault;
         public string controls_movement;
         public string controls_move;
@@ -1831,7 +1837,6 @@ namespace UltrakULL.json
         public string controls_right;
         public string controls_jump;
         public string controls_dash;
-        public string controls_actions;
         public string controls_primaryFire;
         public string controls_secondaryFire;
         public string controls_arms;
@@ -1868,6 +1873,8 @@ namespace UltrakULL.json
         public string graphics_maxFpsNone;
         public string graphics_maxFps2x;
         public string graphics_vsync;
+        public string graphics_gamma1;
+        public string graphics_gamma2;
         public string graphics_filters;
         public string graphics_filtersDescription;
         public string graphics_pixelisation;
@@ -2052,6 +2059,22 @@ namespace UltrakULL.json
         public string rumble_endDelay;
         public string rumble_reset;
         public string rumble_weaponWheel;
+
+        public string advanced_title;
+        public string advanced_currentLevel;
+        public string advanced_cybergrindResetText1;
+        public string advanced_cybergrindResetText2;
+        public string advanced_cybergrindResetCancel;
+        public string advanced_cybergrindResetConfirm;
+        public string advanced_cybergrindLocalHighScore;
+        public string advanced_cybergrindResetButton;
+        public string advanced_level52;
+        public string advanced_level71;
+        public string advanced_level73;
+        public string advanced_52WaterScrolling;
+        public string advanced_52WaterWaves;
+        public string advanced_71Dark;
+        public string advanced_73Grass;
         
         public string language_title;
         public string language_languages;
