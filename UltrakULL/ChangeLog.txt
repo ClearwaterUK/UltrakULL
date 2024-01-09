@@ -1,9 +1,10 @@
 1.3.0
-- Added all new content related to the Violence layer, sandbox and cheats (more details in the template changelog)
-- Added advanced options (more details in the template changelog)
-- Fixed an issue where using the english version would always display the difficulty as "TEST"
-- Fixed the rumble options not being translated
-- Fixed a typo in the English template
+- Added all new content related to the Violence layer, sandbox and cheats (more details in the template changelog.)
+- Added advanced options (more details in the template changelog).
+- Fixed an issue where using the english version would always display the difficulty as "TEST".
+- Fixed "Under Construction" not being translated under concerned weapons.
+- Fixed the rumble options not being translated.
+- Fixed a typo in the English template.
 
 
 1.2.3b 
@@ -12,16 +13,16 @@
 - Fixed some forgotten elements on P-2 causing the mod to break on that level.
 
 
-- Added more tentative prepwork for Act 3, both in the code and in the templates
-- Added the style bonus 'Overkill'
-- Added folder names in the Cybergrind music menu
-- Added the 'Unlocked' status for music in the Cybergrind
-- Fixed a minor issue where some enemy books in the museum missed a line skip
-- Fixed a minor issue in the English template where the added lines for the Act 3 layers were duplicates from Act 2's
-- Fixed a possible issue in the English template where some characters were non-standard, might have conflicted with the used font
-- Fixed the style bonus 'Limbshot' never showing up
-- Corrected a minor mistake in the English template in Francis' quote where a space was missing
-- Corrected a minor mistake in the English template in Quetzal's title on her Museum plate where it was claimed she was a composer instead of a musician
+- Added more tentative prepwork for Act 3, both in the code and in the templates.
+- Added the style bonus 'Overkill'.
+- Added folder names in the Cybergrind music menu.
+- Added the 'Unlocked' status for music in the Cybergrind.
+- Fixed a minor issue where some enemy books in the museum missed a line skip.
+- Fixed a minor issue in the English template where the added lines for the Act 3 layers were duplicates from Act 2's.
+- Fixed a possible issue in the English template where some characters were non-standard, might have conflicted with the used font.
+- Fixed the style bonus 'Limbshot' never showing up.
+- Corrected a minor mistake in the English template in Francis' quote where a space was missing.
+- Corrected a minor mistake in the English template in Quetzal's title on her Museum plate where it was claimed she was a composer instead of a musician.
 (A big thank you to Frizou for all of these contributions!)
 
 1.2.3
