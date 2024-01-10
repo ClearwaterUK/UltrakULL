@@ -56,8 +56,8 @@ namespace UltrakULL
             //Violence titles
             if (inputName.Contains(("GARDEN OF FORKING PATHS"))) { return (LanguageManager.CurrentLanguage.levelNames.levelName_violenceFirst); }
             if (inputName.Contains(("LIGHT UP THE NIGHT"))) { return (LanguageManager.CurrentLanguage.levelNames.levelName_violenceSecond); }
-            if (inputName.Contains(("VIOLENCE THIRD"))) { return (LanguageManager.CurrentLanguage.levelNames.levelName_violenceThird); }
-            if (inputName.Contains(("VIOLENCE CLIMAX"))) { return (LanguageManager.CurrentLanguage.levelNames.levelName_violenceFourth); }
+            if (inputName.Contains(("NO SOUND, NO MEMORY"))) { return (LanguageManager.CurrentLanguage.levelNames.levelName_violenceThird); }
+            if (inputName.Contains(("...LIKE ANTENNAS TO HEAVEN"))) { return (LanguageManager.CurrentLanguage.levelNames.levelName_violenceFourth); }
             
             //Fraud titles
             if (inputName.Contains(("FRAUD FIRST"))) { return (LanguageManager.CurrentLanguage.levelNames.levelName_fraudFirst); }
