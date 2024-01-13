@@ -163,7 +163,7 @@ namespace UltrakULL
                             + "<size=20>" + LanguageManager.CurrentLanguage.books.books_violenceFourth5 + "</size>";
                     }
                 
-                default: { return "Unknown book"; }
+                default: { return "<big><b>Unknown book</b></big>\n\n" + originalText; }
             }
         }
     }
