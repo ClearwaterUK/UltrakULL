@@ -159,11 +159,11 @@ namespace UltrakULL
 					switch (missionNum)
 					{
 						case 666:
-							return "P-1:" + LanguageManager.CurrentLanguage.levelNames.levelName_primeFirst;
+							return "P-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeFirst;
 						case 667:
-							return "P-2:" + LanguageManager.CurrentLanguage.levelNames.levelName_primeSecond;
+							return "P-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeSecond;
 						case 668:
-							return "P-3:" + LanguageManager.CurrentLanguage.levelNames.levelName_primeThird;
+							return "P-3: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeThird;
 						default:
 							return "MISSION NAME NOT FOUND";
 					}
