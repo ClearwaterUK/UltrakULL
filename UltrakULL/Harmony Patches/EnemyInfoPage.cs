@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using UnityEngine.UI;
 using UltrakULL.json;
 using System;
@@ -19,13 +19,23 @@ namespace UltrakULL.Harmony_Patches
             {
                 return;
             }
-            string enemyName = EnemyBios.GetName(source.objectName);
+
+            string enemyName;
+            if (___enemyPageTitle.text == "SWORDSMACHINE" || ___enemyPageTitle.text == "INSURRECTIONIST")
+            {
+                source.objectName += " DEFAULT";
+                enemyName = EnemyBios.GetName(source.objectName);
+                if (source.objectName == "SWORDSMACHINE DEFAULT") { source.objectName = "SWORDSMACHINE"; }
+                if (source.objectName == "INSURRECTIONIST DEFAULT") { source.objectName = "INSURRECTIONIST"; }
+            }
+            else { enemyName = EnemyBios.GetName(source.objectName); }
+
             string enemyType = EnemyBios.GetType(source.type);
             string enemyDescription = EnemyBios.GetDescription(source.objectName);
             string enemyStrategy = EnemyBios.GetStrategy(source.objectName);
 
             ___enemyPageTitle.text = enemyName;
-            string text = "<color=orange>" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_type + ": " + enemyType + "\n\n" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_data + ":</color>\n";
+            string text = "</s><color=orange>" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_type + enemyType + "\n\n" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_data + "</color>\n";
             if (MonoSingleton<BestiaryData>.Instance.GetEnemy(source.enemyType) > 1)
             {
                 text += enemyDescription;
@@ -34,7 +44,7 @@ namespace UltrakULL.Harmony_Patches
             {
                 text += "???";
             }
-            text = text + "\n\n<color=orange>" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_strategy + ":</color>\n" + enemyStrategy;
+            text = text + "\n\n</s><color=orange>" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_strategy + "</color>\n" + enemyStrategy;
             ___enemyPageContent.text = text;
         }
     }
