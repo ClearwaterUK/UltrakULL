@@ -15,9 +15,10 @@ using System.Reflection;
  *  Additional code contributions by Temperz87, Flazhik, BitKoven, CoatlessAli and others
  *  Translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 30th October 2023
+ *	Last updated: 11th January 2024
  *	
  *	A translation mod for Ultrakill that hooks into the game and allows for text/string replacement. This tool is primarily meant to assist with language translation.
+ * 
  * 
  *  -- LONG-TERM TASK LIST --
  * Better error handling
@@ -25,26 +26,32 @@ using System.Reflection;
  * Sit down and finish audio documentation
  * Figure out why online language browser breaks sometimes. Seems to happen at random with no singular cause. Quick game restart usually fixes.
  * Clean up logging, redirect or simplify non-breaking warnings & errors.
- * Expected stuff to change/break in Act 3: CG custom music, new enemies, changes in HUD font
  * Swap rank textures in HUD for translated ones (there's already a mod that allows this. Will need to either integrate or copy code from it)
  * 
+ * 
  * -- STUFF FOR NEXT UPDATE --
- * Update the Github language board yet again...
- 
+ * Nothing yet :)
+ * 
+ * 
  * -- REPORTED STUFF TO INVESTIGATE --
  * Spawning MDK+Owl while noclipped causes a crash. Function that's causing it: MandaloreSubtitlesSwap->Mandalore_Start
  *  * Offending transpiler lines have been commented out for now. Waiting for Flazhik to look at and fix.
  * 
+ * 
  * -- TESTING REPORTS --
- * Some ogg files apparantly not playing correctly (Checked Spanish pack that Lukah sent, seems to be working fine... Will keep an eye on.)
- * "Home or ~" cheat string not translated
- * Weapon freshness seems to flicker.
+ * Some ogg files apparently not playing correctly (Checked Spanish pack that Lukah sent, seems to be working fine... Will keep an eye on.)
  *
- *
- * -- VIOLENCE DAMAGE REPORT --
- * Text elements now use TextMeshPro and variants
- * Options->PatchColorOptions has new entries. (Will do for 1.2.4)
- * Need to convert Fonts to FontAsset to use in TMP. Can't do until back at apartment.
+ * 
+ * -- 1.3.0 BUGS TO FIX BEFORE RELEASE --
+ * Cheats consent explaination isn't translated, the code behind it seems much more protected than anything else in the game for some reason
+ * "Home or ~" cheat string isn't translated
+ * The arm alter menu isn't fully translated and mostly doesn't work outside of the Sandbox
+ * "Lots of P" implementation doesn't work, would likely need to be directly patched
+ * The skip cutscene promp isn't translated
+ * 5-S has some broken stuff:
+ * - the fish terminal's buttons don't work anymore
+ * - lake titles are not translated anymore
+ * - "near" and "far" aren't translated
  *
  * */
 
