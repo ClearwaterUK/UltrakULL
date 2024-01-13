@@ -1745,6 +1745,7 @@ namespace UltrakULL.json
         public string enemyname_gabrielSecond;
         public string enemyname_virtue;
         public string enemyname_somethingWicked;
+        public string enemyname_puppet;
         public string enemyname_fleshPrison;
         public string enemyname_minosPrime;
 
@@ -1758,8 +1759,6 @@ namespace UltrakULL.json
         public string enemyname_boss_gabriel;
         public string enemyname_boss_insurrectionist;
         public string enemyname_boss_mandalore;
-        public string enemyname_boss_v2;
-        public string enemyname_boss_v2Second;
         public string enemyname_boss_earthmover;
         public string enemyname_boss_earthmoverDefence;
         public string enemyname_boss_ferryman;
@@ -1769,6 +1768,7 @@ namespace UltrakULL.json
         public string enemyname_boss_gabrielSecond;
         public string enemyname_boss_fleshPanopticon;
         public string enemyname_boss_sisyphusPrime;
+        public string enemyname_boss_bigJohninator;
 
 
         public string enemyname_type_lesserHusk;
@@ -2908,7 +2908,7 @@ namespace UltrakULL.json
         public string enemyAlter_metaWeak;
         public string enemyAlter_jumpPadTitle;
         public string enemyAlter_hookPointTitle;
-        public string enemyAlter_Power;
+        public string enemyAlter_power;
         public string enemyAlter_radianceTitle;
         public string enemyAlter_radianceEnable;
         public string enemyAlter_radianceDetails_tier;
@@ -2922,6 +2922,9 @@ namespace UltrakULL.json
         public string enemyAlter_sandified;
         public string enemyAlter_ignorePlayer;
         public string enemyAlter_attackEnemies;
+        public string enemyAlter_sandboxTitle;
+        public string enemyAlter_hasSkull;
+        public string enemyAlter_altarType;
 
         public string earlyAccessEnd1;
         public string earlyAccessEnd2;
