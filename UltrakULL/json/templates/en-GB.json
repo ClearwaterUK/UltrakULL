@@ -116,8 +116,8 @@
         "museum_bookHeckteck2": "Heckteck was brought onto the team temporarily in early 2022 thanks to their experience and skills making mods for ULTRAKILL, to overhaul the style system to include staleness as well as other related quality of life features.",
         "museum_bookHeckteck3": "\"the harvest is lacking this year\"",
 
-        "museum_bookCabalcrow1": "<b><color=silver>EMANUIL \"CABALCROW\" CHIZHOV</color> - ADDITIONAL PROGRAMMER</b>",
-        "museum_bookCabalcrow2": "CabalCrow was one of the first hardcore ULTRAKILL fans who helped spark the game's speedrunning scene. He also helped out a lot with figuring out bugs before the game got a QA team and recorded most of the trailer footage in early trailers. His programming contribution comes in the form of the climbstep system he created in 2020, which allows players to smoothly step onto and over small ledges and obstacles.",
+        "museum_bookCabalcrow1": "<b><color=#c0c0c0ff>EMANUIL \"CABALCROW\" CHIZHOV</color> - ADDITIONAL PROGRAMMER</b>",
+	"museum_bookCabalcrow2": "CabalCrow was one of the first hardcore ULTRAKILL fans who helped spark the game's speedrunning scene. He also helped out a lot with figuring out bugs before the game got a QA team and recorded most of the trailer footage in early trailers. His programming contribution comes in the form of the climbstep system he created in 2020, which allows players to smoothly step onto and over small ledges and obstacles.",
         "museum_bookCabalcrow3": "\"you know what they say: 50 bucks is 50 bucks\"",
 
         "museum_bookLucasVarney1": "<b><color=#BD8BF3>LUCAS VARNEY</color> - ADDITIONAL PROGRAMMER</b>",
@@ -704,9 +704,9 @@
 	"books_violenceSecond1": "Something has happened. It has been days since our reconaissance has seen a single angel. We know not the cause, but we recognise the chance. We have hid underground from the chaos up above for far too long. Without the watchful eyes of the angels, we will brave the labyrinth and find a way out of this place.",
 	"books_violenceSecond2": "If you are one who seeks shelter, take heed: The archive is trapped. A single misstep and reprogrammed protectors will activate. Write these instructions down and follow them carefully if you wish to take refuge on the other side:",
 	    
-	"books_violenceFourth1": "WAR NO LONGER NEEDED ITS ULTIMATE PRACTICIONER. IT HAD BECOME A SELF-SUSTAINING SYSTEM. MAN WAS CRUSHED UNDER THE WHEELS OF A MACHINE CREATED TO CREATE THE MACHINE CREATED TO CRUSH THE MACHINE. SAMSARA OF CUT SINEW AND CRUSHED BONE. DEATH WITHOUT LIFE. NULL OUROBOROS. ALL THAT REMAINED IS WAR WITHOUT REASON.",
-	"books_violenceFourth2": "A MAGNUM OPUS. A COLD TOWER OF STEEL. A MACHINE BUILT TO END WAR IS ALWAYS A MACHINE BUILT TO CONTINUE WAR. YOU WERE BEAUTIFUL, OUTSTRETCHED LIKE ANTENNAS TO HEAVEN. YOU WERE BEYOND YOUR CREATORS. YOU REACHED FOR GOD, AND YOU FELL. NONE WERE LEFT TO SPEAK YOUR EULOGY. NO FINAL WORDS, NO CONCLUDING STATEMENT. NO POINT. PERFECT CLOSURE.",
-	"books_violenceFourth3": "THIS IS THE ONLY WAY IT COULD HAVE ENDED.",
+	"books_violenceFourth1": "THIS IS THE ONLY WAY IT COULD HAVE ENDED.",
+	"books_violenceFourth2": "WAR NO LONGER NEEDED ITS ULTIMATE PRACTICIONER. IT HAD BECOME A SELF-SUSTAINING SYSTEM. MAN WAS CRUSHED UNDER THE WHEELS OF A MACHINE CREATED TO CREATE THE MACHINE CREATED TO CRUSH THE MACHINE. SAMSARA OF CUT SINEW AND CRUSHED BONE. DEATH WITHOUT LIFE. NULL OUROBOROS. ALL THAT REMAINED IS WAR WITHOUT REASON.",
+	"books_violenceFourth3": "A MAGNUM OPUS. A COLD TOWER OF STEEL. A MACHINE BUILT TO END WAR IS ALWAYS A MACHINE BUILT TO CONTINUE WAR. YOU WERE BEAUTIFUL, OUTSTRETCHED LIKE ANTENNAS TO HEAVEN. YOU WERE BEYOND YOUR CREATORS. YOU REACHED FOR GOD, AND YOU FELL. NONE WERE LEFT TO SPEAK YOUR EULOGY. NO FINAL WORDS, NO CONCLUDING STATEMENT. NO POINT. PERFECT CLOSURE.",
 	"books_violenceFourth4": "T H I S   I S   T H E   O N L Y   W A Y   I T   S H O U L D   H A V E   E N D E D .",
 	"books_violenceFourth5": "The pages of the book are blank."
     },
@@ -1735,10 +1735,9 @@
         "shop_armWhiplashDescription1": "A winch with a spear. Hold to throw, release to pull.",
         "shop_armWhiplashDescription2": "Can pull light enemies and items, will get pulled to heavy enemies and grapple points.",
         
-        "shop_data": "DATA",
-        "shop_strategy": "STRATEGY",
-        "shop_advancedStrategy": "ADVANCED STRATEGY",
-        
+        "shop_data": "DATA:",
+        "shop_strategy": "STRATEGY:",
+        "shop_advancedStrategy": "ADVANCED STRATEGY:",
         
         "shop_loreRevolver1": "A weapon created during the Final War for medium-to-long distance combat. Uses electric pulses to fire microscopic pieces of metal at incredibly high speeds.",
         "shop_loreRevolver2": "Weapons that use this technology have been dubbed \"electric guns\", and it quickly became the new standard, replacing bullet guns. Due to still requiring a microscopic projectile, its ammo is not actually infinite, but it would take weeks of non-stop firing to run out and refilling is as easy as just scraping some flakes from scrap metal or even the gun's surface.",
@@ -1838,12 +1837,11 @@
 	"enemyname_stray": "STRAY",
 	"enemyname_schism": "SCHISM",
 	"enemyname_soldier": "SOLDIER",
-	"enemyname_minos": "THE CORPSE OF KING MINOS",
         "enemyname_sentry": "SENTRY",
         "enemyname_idol": "IDOL",
         "enemyname_ferryman": "FERRYMAN",
 	"enemyname_stalker": "STALKER",
-	"enemyname_insurrectionist": "SISYPHEAN INSURRECTIONIST",
+        "enemyname_insurrectionist": "INSURRECTIONIST",
 	"enemyname_swordsmachine": "SWORDSMACHINE",
 	"enemyname_drone": "DRONE",
 	"enemyname_streetCleaner": "STREETCLEANER",
@@ -1862,10 +1860,9 @@
 	"enemyname_gabriel": "GABRIEL",
 	"enemyname_virtue": "VIRTUE",
 	"enemyname_somethingWicked": "SOMETHING WICKED",
+        "enemyname_puppet": "PUPPET",
 	"enemyname_fleshPrison": "FLESH PRISON",
 	"enemyname_minosPrime": "MINOS PRIME",
-        "enemyname_boss_fleshPanopticon": "FLESH PANOPTICON",
-        "enemyname_boss_sisyphusPrime": "SISYPHUS PRIME",
         
         "enemyname_boss_cerberus": "CERBERUS, GUARDIAN OF HELL",
         "enemyname_boss_cancerousRodent": "CANCEROUS RODENT",
@@ -1877,8 +1874,6 @@
         "enemyname_boss_gabriel": "GABRIEL, JUDGE OF HELL",
         "enemyname_boss_insurrectionist": "SISYPHEAN INSURRECTIONIST",
         "enemyname_boss_mandalore": "MYSTERIOUS DRUID KNIGHT (& OWL)",
-        "enemyname_boss_v2": "V2",
-        "enemyname_boss_v2Second": "V2",
 	"enemyname_boss_earthmover": "1000-THR \"EARTHMOVER\"",
 	"enemyname_boss_earthmoverDefence": "1000-THR DEFENCE SYSTEM",
         "enemyname_boss_ferryman": "FERRYMAN",
@@ -1886,6 +1881,9 @@
         "enemyname_boss_insurrectionistAngry": "INSURRECTIONIST \"ANGRY\"",
         "enemyname_boss_insurrectionistRude": "INSURRECTIONIST \"RUDE\"",
         "enemyname_boss_gabrielSecond": "GABRIEL, APOSTATE OF HATE",
+        "enemyname_boss_fleshPanopticon": "FLESH PANOPTICON",
+        "enemyname_boss_sisyphusPrime": "SISYPHUS PRIME",
+        "enemyname_boss_bigJohninator": "BIG JOHNINATOR",
         
         "enemyname_type_lesserHusk": "LESSER HUSK",
         "enemyname_type_greaterHusk": "GREATER HUSK",
@@ -1981,9 +1979,9 @@
     
     "enemybios":{
 
-        "enemyBios_type": "TYPE",
-        "enemyBios_data": "DATA",
-        "enemyBios_strategy": "STRATEGIES",
+        "enemyBios_type": "TYPE:",
+        "enemyBios_data": "DATA:",
+        "enemyBios_strategy": "STRATEGIES:",
 
         "enemyBios_filth_1": "Husks are physical manifestations of the souls of the damned. ",
         "enemyBios_filth_2": "The physical form is based on the value of the original soul, which is determined by the strength of its will and its prevalence in public consciousness: the living souls that remember it. ",
@@ -2267,8 +2265,8 @@
         "enemyBios_fleshPanopticon_1": "Flesh Panopticon is a superior version of the Flesh Prison, built to not only house the soul of King Sisyphus, but also with the capability to keep a watchful eye over any of his followers that may be imprisoned alongside him.",
         "enemyBios_fleshPanopticon_2": "This feature was however never utilized, as Sisyphus' prime soul had already started forming before being imprisoned, leading angels to fear that he may be able to break out of his prison if awakened.",
 
-        "enemyBios_fleshPanopticon_strategy_1": "Though Flesh Panopticon creates fewer spawn than its predecessor, they're more resilient and their gaze is able to stop all wounds from healing. This may seem just a curse, but it nullifies the Whiplash's primary flaw, allowing it to be used freely to approach and destroy the spawn at close range.",
-        "enemyBios_fleshPanopticon_strategy_2": "Flesh Panopticon's explosives make it dangerous to stay on the ground, but they will phase through the Panopticon to avoid it harming itself, making standing on top of it safer as long as the black hole isn't nearby.",
+        "enemyBios_fleshPanopticon_strategy1": "Though Flesh Panopticon creates fewer spawn than its predecessor, they're more resilient and their gaze is able to stop all wounds from healing. This may seem just a curse, but it nullifies the Whiplash's primary flaw, allowing it to be used freely to approach and destroy the spawn at close range.",
+        "enemyBios_fleshPanopticon_strategy2": "Flesh Panopticon's explosives make it dangerous to stay on the ground, but they will phase through the Panopticon to avoid it harming itself, making standing on top of it safer as long as the black hole isn't nearby.",
 
         "enemyBios_sisyphusPrime_1": "Though Minos was intelligent and persuasive, he was also a gentle and noble man. Such values mattered little to Sisyphus, who would gladly lie, cheat or kill if that's what is needed to protect his comrades.",
         "enemyBios_sisyphusPrime_2": "In a hubristic show of power, Heaven decided that the only correct punishment for his sins would be breaking his will by subjecting him to an unending and impossible task, unaware of just how tenacious the spite of man can be.",
@@ -2831,7 +2829,7 @@
         "enemyAlter_metaUnbreakable": "UNBREAKABLE",
         "enemyAlter_jumpPadTitle": "JUMP PAD",
         "enemyAlter_hookPointTitle": "HOOK POINT",
-        "enemyAlter_Power": "FORCE",
+        "enemyAlter_power": "FORCE",
         "enemyAlter_radianceTitle": "RADIANCE",
         "enemyAlter_radianceEnable": "ENABLE RADIANCE",
         "enemyAlter_radianceDetails_tier": "TIER",
@@ -2845,6 +2843,9 @@
         "enemyAlter_sandified": "SANDIFIED",
         "enemyAlter_ignorePlayer": "IGNORE PLAYER",
         "enemyAlter_attackEnemies": "ATTACK ENEMIES",
+        "enemyAlter_sandboxTitle": "SANDBOX",
+        "enemyAlter_hasSkull": "HAS SKULL",
+        "enemyAlter_altarType": "ALTAR TYPE",
 
         "earlyAccessEnd1": "THANKS FOR PLAYING",
         "earlyAccessEnd2": "Layer 8: FRAUD is still under development",
