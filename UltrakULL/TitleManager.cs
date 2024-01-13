@@ -72,8 +72,9 @@ namespace UltrakULL
             //Prime titles
             if (inputName.Contains("SOUL SURVIVOR")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_primeFirst); }
             if (inputName.Contains("WAIT OF THE WORLD")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_primeSecond); }
+            if (inputName.Contains("PRIME THIRD")) { return (LanguageManager.CurrentLanguage.levelNames.levelName_primeThird); }
 
-            return "";
+            return "UNKNOWN";
         }
 
         public static string GetLayer(string inputTitle)
