@@ -17,6 +17,7 @@ namespace UltrakULL
             {
                 case "Level P-1": { return this.p1SecretText; }
                 case "Level P-2": { return this.p2SecretText; }
+              //case "Level P-3": { return this.p3SecretText; }
 
                 default: { return "Unknown secret text"; }
             }
@@ -30,6 +31,7 @@ namespace UltrakULL
             {
                 case "Level P-1": { return "P-1 - " + LanguageManager.CurrentLanguage.levelNames.levelName_primeFirst; }
                 case "Level P-2": { return "P-2 - " + LanguageManager.CurrentLanguage.levelNames.levelName_primeSecond; }
+              //case "Level P-3": { return "P-3 - " + LanguageManager.CurrentLanguage.levelNames.levelName_primeThird; }
 
                 default: { return "Unknown level name"; }
             }
