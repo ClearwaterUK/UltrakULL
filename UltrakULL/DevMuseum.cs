@@ -33,6 +33,8 @@ namespace UltrakULL
         {
             if(originalText.Contains("<b><color=orange>HAKITA</color> - CREATOR OF ULTRAKILL</b>"))
             {
+            if(originalText.Contains("HAKITA</color> - CREATOR OF ULTRAKILL</b>"))
+            {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookHakita1 + "\n\n"
                     +  LanguageManager.CurrentLanguage.devMuseum.museum_bookHakita2 + "\n\n"
                     +  LanguageManager.CurrentLanguage.devMuseum.museum_bookHakita3 + "\n\n"
@@ -47,7 +49,7 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookHakita12 + "</size>\n\n"
                     + "<color=orange>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookHakita13 + "</color>";
             }
-            if(originalText.Contains("<b><color=#4AACBD>FRANCIS XIE</color> - CONCEPT AND TEXTURE ARTIST</b>"))
+            if(originalText.Contains("FRANCIS XIE</color> - CONCEPT AND TEXTURE ARTIST</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookFrancisXie1 + "\n\n"
                      + LanguageManager.CurrentLanguage.devMuseum.museum_bookFrancisXie2 + "\n\n"
@@ -59,7 +61,7 @@ namespace UltrakULL
                      + LanguageManager.CurrentLanguage.devMuseum.museum_bookFrancisXie8 + "</size>\n\n"
                      + "<color=#4AACBD>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookFrancisXie9 + "</color>";
             }
-            if(originalText.Contains("<b><color=#5cc6f1>JERICHO_RUS</color> - ILLUSTRATOR, CONCEPT AND TEXTURE ARTIST</b>"))
+            if(originalText.Contains("JERICHO_RUS</color> - ILLUSTRATOR, CONCEPT AND TEXTURE ARTIST</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookJerichoRus1 + "\n\n"
                      + LanguageManager.CurrentLanguage.devMuseum.museum_bookJerichoRus2 + "\n\n"
@@ -72,7 +74,7 @@ namespace UltrakULL
                      + LanguageManager.CurrentLanguage.devMuseum.museum_bookJerichoRus9 + "</size>\n\n"
                      + "<color=#5cc6f1>"+ LanguageManager.CurrentLanguage.devMuseum.museum_bookJerichoRus10 + "</color>";
             }
-            if(originalText.Contains("<b><color=#DA6B6D>BIGROCKBMP</color> - CONCEPT ARTIST</b>"))
+            if(originalText.Contains("BIGROCKBMP</color> - CONCEPT ARTIST</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookBigRockBMP1 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookBigRockBMP2 + "\n\n"
@@ -83,13 +85,13 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookBigRockBMP7 + "</size>\n\n"
                     + "<color=#DA6B6D>"+ LanguageManager.CurrentLanguage.devMuseum.museum_bookBigRockBMP8 + "</color>";
             }
-            if(originalText.Contains("<b><color=#8f65da>MAXIMILIAN OVESSON</color> - UI ARTIST</b>"))
+            if(originalText.Contains("MAXIMILIAN OVESSON</color> - UI ARTIST</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookMaximilianOvesson1 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookMaximilianOvesson2 + "\n\n"
                     + "<color=#8f65da>" +  LanguageManager.CurrentLanguage.devMuseum.museum_bookMaximilianOvesson3 + "</color>\n\n";
             }
-            if(originalText.Contains("<b><color=#F5ABB9>VICTORIA HOLLAND</color> - LEAD 3D ARTIST AND GRAPHICS PROGRAMMER</b>"))
+            if(originalText.Contains("VICTORIA HOLLAND</color> - LEAD 3D ARTIST AND GRAPHICS PROGRAMMER</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookVictoriaHolland1 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookVictoriaHolland2 + "\n\n"
@@ -100,7 +102,7 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookVictoriaHolland7 + "</size>\n\n"
                     + "<color=#F5ABB9>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookVictoriaHolland8 + "</color>\n\n";
             }
-            if(originalText.Contains("<b><color=orange>TONI STIGELL</color> - 3D ARTIST</b>"))
+            if(originalText.Contains("TONI STIGELL</color> - 3D ARTIST</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookToniStigell1 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookToniStigell2 + "\n\n"
@@ -111,7 +113,7 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookToniStigell7 + "</size>";
                     
             }
-            if(originalText.Contains("<b><color=#6a36be>FLYINGDOG</color> - 3D ARTIST</b>"))
+            if(originalText.Contains("FLYINGDOG</color> - 3D ARTIST</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookFlyingDog1 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookFlyingDog2 + "\n\n"
@@ -120,13 +122,13 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookFlyingDog5 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookFlyingDog6 + "</size>";
             }
-            if(originalText.Contains("<b><color=orange>SAMUEL JAMES BRYAN</color> - 3D ARTIST</b>"))
+            if(originalText.Contains("SAMUEL JAMES BRYAN</color> - 3D ARTIST</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookSamuelJamesBryan1 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookSamuelJamesBryan2 + "\n\n"
                     + "<color=orange>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookSamuelJamesBryan3 + "</color>";
             }
-            if(originalText.Contains("<b><color=red>CAMERON MARTIN</color> - QUALITY ASSURANCE LEAD"))
+            if(originalText.Contains("CAMERON MARTIN</color> - QUALITY ASSURANCE LEAD"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookQATeam1 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookQATeam2 + "\n"
@@ -150,46 +152,46 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookPitr7 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookPitr8 + "</size>";
             }
-            if(originalText.Contains("<b><color=orange>HECKTECK</color> - ADDITIONAL PROGRAMMING</b>"))
+            if(originalText.Contains("HECKTECK</color> - PROGRAMMING</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookHeckteck1 + "\n\n"
                     +  LanguageManager.CurrentLanguage.devMuseum.museum_bookHeckteck2 + "\n\n"
-                    +  "<color=orange>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookHeckteck3 + "</color>";
+                    +  "<i><color=orange>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookHeckteck3 + "</color></i>";
             }
-            if(originalText.Contains("<b><color=silver>EMANUIL \"CABALCROW\" CHIZHOV</color> - ADDITIONAL PROGRAMMER</b>"))
+            if(originalText.Contains("CHIZHOV</color> - ADDITIONAL PROGRAMMER</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookCabalcrow1 + "\n\n"
                     +  LanguageManager.CurrentLanguage.devMuseum.museum_bookCabalcrow2 + "\n\n"
-                    +  "<color=silver>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookCabalcrow3 + "</color>";
+                    + "<color=#c0c0c0ff>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookCabalcrow3 + "</color>";
             }
-            if(originalText.Contains("<b><color=#BD8BF3>LUCAS VARNEY</color> - ADDITIONAL PROGRAMMER</b>"))
+            if(originalText.Contains("LUCAS VARNEY</color> - ADDITIONAL PROGRAMMER</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookLucasVarney1 + "\n\n"
                     +  LanguageManager.CurrentLanguage.devMuseum.museum_bookLucasVarney2 + "\n\n"
                     +  "<color=#BD8BF3>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookLucasVarney3 + "</color>";
             }
-            if(originalText.Contains("<b><color=#3EF242>BEN MOIR</color> - ADDITIONAL PROGRAMMER</b>"))
+            if(originalText.Contains("BEN MOIR</color> - ADDITIONAL PROGRAMMER</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookBenMoir1 + "\n\n" 
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookBenMoir2 + "\n\n" 
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookBenMoir3 + "\n\n" 
                     + "<color=#3EF242>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookBenMoir4 + "</color>\n\n";
             }
-            if(originalText.Contains("<b><color=#E93436>MEGANEKO</color> - GUEST COMPOSER</b>"))
+            if(originalText.Contains("MEGANEKO</color> - GUEST COMPOSER</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookMeganeko1 + "\n\n" 
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookMeganeko2 + "\n\n" 
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookMeganeko3 + "\n\n" 
                     + "<color=#E93436>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookMeganeko4 + "</color>\n\n";
             }
-            if(originalText.Contains("<b><color=#aa0000>KEYGEN CHURCH</color> - GUEST COMPOSER</b>"))
+            if(originalText.Contains("KEYGEN CHURCH</color> - GUEST COMPOSER</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookKeygenChurch1 + "\n\n" 
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookKeygenChurch2 + "\n\n" 
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookKeygenChurch3 + "\n\n" 
                     + "<color=#aa0000>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookKeygenChurch4 + "</color>\n\n";
             }
-            if(originalText.Contains("<b><color=red>HEALTH</color> - GUEST COMPOSER</b>"))
+            if(originalText.Contains("HEALTH</color> - GUEST COMPOSER</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookHealth1 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookHealth2 + "\n"
@@ -198,14 +200,14 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookHealth5 + "\n\n"
                     + "<color=red>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookHealth6 + "</color>";
             }
-            if(originalText.Contains("<b><color=#AA4CAD>QUETZAL TIRADO</color> - GUEST MUSICIAN</b>"))
+            if(originalText.Contains("QUETZAL TIRADO</color> - GUEST MUSICIAN</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookQuetzalTirado1 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookQuetzalTirado2 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookQuetzalTirado3 + "\n\n"
                     + "<color=#AA4CAD>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookQuetzalTirado4 + "</color>";
             }
-            if(originalText.Contains("<b><color=#20FF20>SALAD</color> - ARTIST OF JAKITO</b>"))
+            if(originalText.Contains("SALAD</color> - ARTIST OF JAKITO</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookSalad1 + "\n\n" 
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookSalad2 + "\n\n" 
@@ -213,13 +215,13 @@ namespace UltrakULL
                     + "<size=18>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookSalad4 + "</size>\n\n"
                     + "<color=#20FF20>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookSalad5 + "</color>";
             }
-            if(originalText.Contains("<b><color=#FFB2DC>JACOB H.H.R.</color> - WRITER (PROSE & DIALOGUE)</b>"))
+            if(originalText.Contains("JACOB H.H.R.</color> - WRITER (PROSE & DIALOGUE)</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookJacobHHR1 + "\n\n" 
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookJacobHHR2 + "\n\n" 
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookJacobHHR3;
             }
-            if(originalText.Contains("<b><color=#ee0c47>VVIZARD</color> - MUSEUM DEVELOPER</b>"))
+            if(originalText.Contains("VVIZARD</color> - MUSEUM DEVELOPER</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookVVizard1 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookVVizard2 + "\n\n"
@@ -246,7 +248,7 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits3 + "\n\n"
                     
                     //CG pattern credits
-                    + "NO LOAFING\nDood\nSplendidLedraps\nJandy\nStuon\nDryzalar\nWakan\nSlimer\nWilliam\nNotABot\nSpruce\nJacob\n\n"
+                    + "NO LOAFING\nDood\nSplendidLedraps\nJandy\nStuon\nDryzalar\nWakan\nSlimer\nWilliam\nBobot\nSpruce\nJacob\n\n"
                     
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits4 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits5 + "\n\n"
@@ -264,25 +266,25 @@ namespace UltrakULL
                     + "<color=orange>" + LanguageManager.CurrentLanguage.metadata.langDisplayName + "</color>:\n"
                     + LanguageManager.CurrentLanguage.metadata.langAuthor;
             }
-            if(originalText.Contains("<b><color=orange>STEPHAN WEYTE</color> - VOICE OF MINOS PRIME</b>"))
+            if(originalText.Contains("STEPHAN WEYTE</color> - VOICE OF MINOS PRIME</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookStephanWeyte1 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookStephanWeyte2 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookStephanWeyte3 + "\n\n";
             }
-            if(originalText.Contains("<b><color=orange>LENVAL BROWN</color> - VOICE OF SISYPHUS PRIME</b>"))
+            if(originalText.Contains("LENVAL BROWN</color> - VOICE OF SISYPHUS PRIME</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookLenvalBrown1 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookLenvalBrown2;
             }
-            if(originalText.Contains("<b><color=#20afdb>GIANNI MATRAGRANO</color> - VOICE OF GABRIEL</b>"))
+            if(originalText.Contains("GIANNI MATRAGRANO</color> - VOICE OF GABRIEL</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookGianniMatragrano1 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookGianniMatragrano2 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookGianniMatragrano3 + "\n\n"
                     + "<color=#20afdb>" + LanguageManager.CurrentLanguage.devMuseum.museum_bookGianniMatragrano4 + "</color>";
             }
-            if(originalText.Contains("<b><color=#e09e2e>MANDALORE</color> <color=#9884bb>HERRINGTON</color> - VOICE OF MYSTERIOUS DRUID KNIGHT</b>"))
+            if(originalText.Contains("MANDALORE</color> <color=#9884bb>HERRINGTON</color> - VOICE OF MYSTERIOUS DRUID KNIGHT</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookMandalore1 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookMandalore2 +  "\n\n"
@@ -293,7 +295,7 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookMandalore7;
             }
             
-            if(originalText.Contains("<b><color=orange>FILTH</color>"))
+            if(originalText.Contains("FILTH</color>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_enemiesFilth1 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesFilth2 + "\n" 
@@ -303,7 +305,7 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesFilth6 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesFilth7;
             }
-            if(originalText.Contains("<b><color=orange>STRAY</color>"))
+            if(originalText.Contains("STRAY</color>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_enemiesStray1 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesStray2 + "\n" 
@@ -311,7 +313,7 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesStray4 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesStray5;
             }
-            if(originalText.Contains("<b><color=orange>SCHISM</color>"))
+            if(originalText.Contains("SCHISM</color>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSchism1 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSchism2 + "\n" 
@@ -320,7 +322,7 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSchism5 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSchism6;
             }
-            if(originalText.Contains("<color=orange>SWORDSMACHINE</color>"))
+            if(originalText.Contains("SWORDSMACHINE</color>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSwordsmachine1 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSwordsmachine2 + "\n" 
@@ -329,7 +331,7 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSwordsmachine5 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesSwordsmachine6;
             }
-            if(originalText.Contains("<color=orange>MALICIOUS FACE</color>"))
+            if(originalText.Contains("MALICIOUS FACE</color>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_enemiesMaliciousFace1 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesMaliciousFace2 + "\n" 
@@ -339,7 +341,7 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesMaliciousFace6 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_enemiesMaliciousFace7;
             }
-            if(originalText.Contains("<color=orange>BEAMCUTTER</color>"))
+            if(originalText.Contains("BEAMCUTTER</color>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_weaponsBeamcutter1 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_weaponsBeamcutter2 + "\n\n" 
@@ -351,7 +353,7 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_weaponsBeamcutter8 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_weaponsBeamcutter9;
             }
-            if(originalText.Contains("<color=orange>BLACK HOLE CANNON</color>"))
+            if(originalText.Contains("BLACK HOLE CANNON</color>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_weaponsBlackHoleCannon1 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_weaponsBlackHoleCannon2 + "\n" 
@@ -362,7 +364,7 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_weaponsBlackHoleCannon7 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_weaponsBlackHoleCannon8;
             }
-            if(originalText.Contains("<color=orange>REVOLVER</color>"))
+            if(originalText.Contains("REVOLVER</color>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_weaponsRevolver1 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_weaponsRevolver2 + "\n"
@@ -371,7 +373,7 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_weaponsRevolver5 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_weaponsRevolver6;
             }
-            if(originalText.Contains("<color=orange>SHOTGUN</color>"))
+            if(originalText.Contains("SHOTGUN</color>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_weaponsShotgun1 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_weaponsShotgun2 + "\n"
@@ -379,7 +381,7 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_weaponsShotgun4 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_weaponsShotgun5;
             }
-            if(originalText.Contains("<color=orange>NAILGUN</color>"))
+            if(originalText.Contains("NAILGUN</color>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_weaponsNailgun1 + "\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_weaponsNailgun2 + "\n"
