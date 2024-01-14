@@ -104,15 +104,6 @@ namespace UltrakULL
             GameObject styleMeter = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(player, "Main Camera"), "HUD Camera"), "HUD"), "StyleCanvas"), "Panel (1)"), "Panel"), "Text (1)"), "Text");
             TextMeshProUGUI styleMeterMultiplierText = GetTextMeshProUGUI(styleMeter);
             styleMeterMultiplierText.text = LanguageManager.CurrentLanguage.style.stylemeter_multiplier;
-
-            GameObject pressToSkip = GetGameObjectChild(canvasObj, "CutsceneSkipText");
-            
-            //Need to disable the TextOverride component.
-            Component[] test = pressToSkip.GetComponents(typeof(Component));
-            Behaviour bhvr = (Behaviour)test[4];
-            bhvr.enabled = false;
-            TextMeshProUGUI pressToSkipText = GetTextMeshProUGUI(pressToSkip);
-            pressToSkipText.text = LanguageManager.CurrentLanguage.misc.pressToSkip;
             
             //Classic HUD
             GameObject classicHudBw = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "Crosshair Filler"), "AltHud"), "Filler");

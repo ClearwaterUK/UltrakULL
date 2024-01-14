@@ -3,7 +3,8 @@
 - Added advanced options (more details in the template changelog).
 - **Fixed non-standard languages not being displayed correctly due to the change in text system used by the game.**
 (NOTE: Certain characters in these languages may still not yet be displayed correctly. These will be fixed as they are pointed out.)
-- Added a fallback font
+- Added a fallback font that is used by certain non-standard languages.
+- Fixed the prompt to skip cutscenes not being translated.
 - Fixed the font not being switched to UltrakULL's custom version.
 - Fixed an issue where using the english version would always display the difficulty as "TEST".
 - Fixed "Under Construction" not being translated under concerned weapons.
