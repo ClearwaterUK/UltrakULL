@@ -31,8 +31,6 @@ namespace UltrakULL
         
         public static string GetMuseumBook(string originalText)
         {
-            if(originalText.Contains("<b><color=orange>HAKITA</color> - CREATOR OF ULTRAKILL</b>"))
-            {
             if(originalText.Contains("HAKITA</color> - CREATOR OF ULTRAKILL</b>"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_bookHakita1 + "\n\n"
