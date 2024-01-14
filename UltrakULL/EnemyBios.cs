@@ -322,9 +322,9 @@ namespace UltrakULL
                     {
                         return
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_minotaur_1 + "\n\n\n...\n\n\n...\n\n\n...\n\n\n" +
-         "<color=red><s>" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_minotaur_2 + "\n\n" +
+         "<s><color=red>" + LanguageManager.CurrentLanguage.enemyBios.enemyBios_minotaur_2 + "\n\n" +
                             LanguageManager.CurrentLanguage.enemyBios.enemyBios_minotaur_3 + "\n\n" +
-                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_minotaur_4 + "</s></s></color></color>";
+                            LanguageManager.CurrentLanguage.enemyBios.enemyBios_minotaur_4 + "</color></s>";
                     }
                 case "GABRIEL, JUDGE OF HELL":
                     {
