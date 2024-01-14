@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -28,6 +29,7 @@ namespace UltrakULL
         public static Font MuseumFont;
         public static TMP_FontAsset GlobalFontTMP;
         public static TMP_FontAsset MuseumFontTMP;
+        public static TMP_FontAsset CJKFontTMP;
         
         public static bool wasLanguageReset = false;
         
@@ -158,10 +160,13 @@ namespace UltrakULL
                 Logging.Message("Font bundle loaded.");
                 Logging.Message("Loading fonts from bundle...");
                 
-                Font font1 = fontBundle.LoadAsset<Font>("VCR_OSD_MONO");
+                Font font1 = fontBundle.LoadAsset<Font>("VCR_OSD_MONO_EXTENDED");
                 Font font2 = fontBundle.LoadAsset<Font>("EBGaramond-Regular");
-                TMP_FontAsset font1TMP = fontBundle.LoadAsset<TMP_FontAsset>("VCR_OSD_MONO");
-                TMP_FontAsset font2TMP = fontBundle.LoadAsset<TMP_FontAsset>("EBGaramond-Regular");
+                TMP_FontAsset font1TMP = fontBundle.LoadAsset<TMP_FontAsset>("VCR_OSD_MONO_EXTENDED_TMP");
+                TMP_FontAsset font2TMP = fontBundle.LoadAsset<TMP_FontAsset>("EBGaramond-Regular_TMP");
+    
+                
+                TMP_FontAsset cjkFontTMP = fontBundle.LoadAsset<TMP_FontAsset>("NotoSerif-CJK_TMP");
                 
                 if(font1 && font2)
                 {
@@ -175,11 +180,14 @@ namespace UltrakULL
                     Logging.Error("FAILED TO LOAD NORMAL FONTS");
                     GlobalFontReady = false;
                 }
-                if(font1TMP && font2TMP)
+                if(font1TMP && font2TMP && cjkFontTMP)
                 {
                     Logging.Warn("Normal TMP fonts loaded.");
                     GlobalFontTMP = font1TMP;
                     MuseumFontTMP = font2TMP;
+                    CJKFontTMP = cjkFontTMP;
+                    
+                    TMPFontReady = true;
                 }
                 else
                 {
@@ -350,44 +358,7 @@ namespace UltrakULL
                 //Open Language Folder button in Options->Language
                 TextMeshProUGUI openLangFolderText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj,"OptionsMenu"), "Language Page"),"Scroll Rect (1)"),"Contents"),"OpenLangFolder"),"Slot Text")); 
                 openLangFolderText.text = "<color=#03fc07>Open language folder</color>";
-
-                //Get the mods/restart buttons...
-                GameObject ummModsButton = null;
-                GameObject ummRestartButton = null;
-
-                GameObject titleObject = GetGameObjectChild(canvasObj, "Main Menu (1)");
-
-                foreach (Transform button in titleObject.GetComponentsInChildren<Transform>())
-                {
-                    if(button.name == "Continue(Clone)")
-                    {
-                        Text ummButton = GetTextfromGameObject(GetGameObjectChild(button.gameObject, "Text"));
-                        switch(ummButton.text)
-                        {
-                            case "MODS":
-                            {
-                                button.name = "ModsButton";
-                                ummModsButton = button.gameObject;
-                                break;
-                            }
-                            case "RESTART":
-                            {
-                                button.name = "RestartButton";
-                                ummRestartButton = button.gameObject;
-                                break;
-                            }
-                        }
-                    }
-                }
-                //...and from here we can translate the UMM buttons.
-                if(ummModsButton && ummRestartButton)
-                {
-                    Text ummModsText = GetTextfromGameObject(GetGameObjectChild(ummModsButton,"Text"));
-                    ummModsText.text = LanguageManager.CurrentLanguage.frontend.mainmenu_mods;
                 
-                    Text ummRestartText = GetTextfromGameObject(GetGameObjectChild(ummRestartButton,"Text"));
-                    ummRestartText.text = LanguageManager.CurrentLanguage.frontend.mainmenu_restart;
-                }
             }
         }
     }

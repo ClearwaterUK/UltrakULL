@@ -39,7 +39,6 @@ namespace UltrakULL.Harmony_Patches
                         }
                         default:{ break; }
                     }
-                    
                 }
             }
         }

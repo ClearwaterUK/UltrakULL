@@ -118,19 +118,13 @@ namespace UltrakULL
             TextMeshProUGUI reverseScrollDirection = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Scroll Reversed"), "Text"));
             reverseScrollDirection.text = LanguageManager.CurrentLanguage.options.controls_reverseScroll;
 
+            
             TextMeshProUGUI bindsTitle = GetTextMeshProUGUI(controlContent.transform.GetChild(4).gameObject);
             bindsTitle.text = "-- " + LanguageManager.CurrentLanguage.options.controls_bindings + " --";
-
-            TextMeshProUGUI movementBindTitle = GetTextMeshProUGUI(controlContent.transform.GetChild(7).gameObject);
-            movementBindTitle.text = "-- " + LanguageManager.CurrentLanguage.options.controls_movementTitle + " --";
-
-            TextMeshProUGUI weaponBindTitle = GetTextMeshProUGUI(controlContent.transform.GetChild(12).gameObject);
-            weaponBindTitle.text = "-- " + LanguageManager.CurrentLanguage.options.controls_weaponTitle + " --";
-
-            TextMeshProUGUI fistBindTitle = GetTextMeshProUGUI(controlContent.transform.GetChild(29).gameObject);
-            fistBindTitle.text = "-- " + LanguageManager.CurrentLanguage.options.controls_arms + " --";
-
+            
+            
             //Tried to use a foreach loop but it just wouldn't work, that'll do for now, just have to add things manually once they get added
+           
             TextMeshProUGUI bindMove = GetTextMeshProUGUI(controlContent.transform.GetChild(8).gameObject);
             TextMeshProUGUI bindDodge = GetTextMeshProUGUI(controlContent.transform.GetChild(9).gameObject);
             TextMeshProUGUI bindSlide = GetTextMeshProUGUI(controlContent.transform.GetChild(10).gameObject);
@@ -676,49 +670,49 @@ namespace UltrakULL
             colorsEnemiesGuttertankText.text = LanguageManager.CurrentLanguage.enemyNames.enemyname_guttertank;
 
         }
-        private void PatchSavesOptions(GameObject optionsMenu)
+        private void PatchSavesOptions(GameObject optionMenu)
         {
             //Save options
-
-            GameObject saveReloadPanel = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Save Slots"), "Reload Consent Blocker"), "Consent"), "Panel");
-
+            Console.WriteLine(optionMenu.name);
+            GameObject saveReloadPanel = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionMenu, "Reload Consent Blocker"), "Consent"), "Panel");
+            
             Text saveReloadText = GetTextfromGameObject(GetGameObjectChild(saveReloadPanel, "Text"));
             Text saveReloadYes = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(saveReloadPanel, "Yes"), "Text"));
             Text saveReloadNo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(saveReloadPanel, "No"), "Text"));
-
+            
             saveReloadText.text =
                 "<color=red>" + LanguageManager.CurrentLanguage.options.save_warning1 + "</color>\n\n" +
                 LanguageManager.CurrentLanguage.options.save_warning2;
 
             saveReloadYes.text = LanguageManager.CurrentLanguage.options.save_reloadYes;
             saveReloadNo.text = LanguageManager.CurrentLanguage.options.save_reloadNo;
-
-            GameObject saveDeletePanel = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Save Slots"), "Wipe Consent Blocker"), "Consent"), "Panel");
-
+            
+            GameObject saveDeletePanel = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionMenu, "Wipe Consent Blocker"), "Consent"), "Panel");
+            
             Text saveDeleteYes = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(saveDeletePanel, "Yes"), "Text"));
             saveDeleteYes.text = "<color=red>" + LanguageManager.CurrentLanguage.options.save_deleteYes + "</color>";
-
+            
             Text saveDeleteNo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(saveDeletePanel, "No"), "Text"));
             saveDeleteNo.text = LanguageManager.CurrentLanguage.options.save_deleteNo;
-
+            
             Text saveSlotsClose = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Save Slots"), "Close"), "Text"));
             saveSlotsClose.text = LanguageManager.CurrentLanguage.options.save_close;
         }
 
         //Does not work for some reason, nothing gets translated
-        private void PatchRumbleOptions(GameObject optionsMenu)
+        private void PatchRumbleOptions(GameObject optionMenu)
         {
-            TextMeshProUGUI rumbleSettingsTitle = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Rumble Settings"), "Text (1)"));
+            TextMeshProUGUI rumbleSettingsTitle = GetTextMeshProUGUI(GetGameObjectChild(optionMenu,  "Text (1)"));
             rumbleSettingsTitle.text = LanguageManager.CurrentLanguage.options.rumble_title;
 
-            TextMeshProUGUI rumbleFinalMultiplier = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Rumble Settings"), "Total"), "Text"));
+            TextMeshProUGUI rumbleFinalMultiplier = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(optionMenu,"Total"), "Text"));
             rumbleFinalMultiplier.text = LanguageManager.CurrentLanguage.options.rumble_finalMultiplier;
 
-            TextMeshProUGUI rumbleCloseButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Rumble Settings"), "Close"), "Text"));
+            TextMeshProUGUI rumbleCloseButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(optionMenu, "Close"), "Text"));
             rumbleCloseButton.text = LanguageManager.CurrentLanguage.options.save_close;
 
             //Loop through each entry
-            GameObject rumbleEntryList = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Scroll View"), "Viewport"), "Content");
+            GameObject rumbleEntryList = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionMenu, "Scroll View"), "Viewport"), "Content");
             try
             {
                 for (int x = 0; x < 21; x++) //Hardcoded, amount may increase in future updates
@@ -744,11 +738,11 @@ namespace UltrakULL
             }
 
         }
-
-        //Does not work for some reason, nothing gets translated
-        private void PatchAdvancedOptions(GameObject optionsMenu)
+        
+        private void PatchAdvancedOptions(GameObject optionMenu)
         {
-            GameObject advancedOptions = GetGameObjectChild(optionsMenu, "Advanced Options");
+            Console.WriteLine(optionMenu.name);
+            GameObject advancedOptions = optionMenu;
 
             TextMeshProUGUI advancedOptionsTitle = GetTextMeshProUGUI(GetGameObjectChild(advancedOptions, "Title"));
             advancedOptionsTitle.text = "--" + LanguageManager.CurrentLanguage.options.advanced_title + "--";
@@ -781,12 +775,12 @@ namespace UltrakULL
             advancedCybergrindResetButton.text = LanguageManager.CurrentLanguage.options.advanced_cybergrindResetButton;
 
             //"Current" thingy and the level titles
-            TextMeshProUGUI advancedCurrent52 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "Level 5-2 Options"), "Level 5-2 Category"), "Current Level Indicator"));
-            TextMeshProUGUI advancedTitle52 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "Level 5-2 Options"), "Level 5-2 Category"));
-            TextMeshProUGUI advancedCurrent71 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "Level 7-1 Options"), "Level 7-1 Category"), "Current Level Indicator"));
-            TextMeshProUGUI advancedTitle71 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "Level 7-1 Options"), "Level 7-1 Category"));
-            TextMeshProUGUI advancedCurrent73 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "Level 7-3 Options"), "Level 7-3 Category"), "Current Level Indicator"));
-            TextMeshProUGUI advancedTitle73 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "Level 7-3 Options"), "Level 7-3 Category"));
+            TextMeshProUGUI advancedCurrent52 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "5-2 Options"), "Level 5-2 Category"), "Current Level Indicator"));
+            TextMeshProUGUI advancedTitle52 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "5-2 Options"), "Level 5-2 Category"));
+            TextMeshProUGUI advancedCurrent71 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "7-1 Options"), "Level 7-1 Category"), "Current Level Indicator"));
+            TextMeshProUGUI advancedTitle71 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "7-1 Options"), "Level 7-1 Category"));
+            TextMeshProUGUI advancedCurrent73 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "7-3 Options"), "Level 7-3 Category"), "Current Level Indicator"));
+            TextMeshProUGUI advancedTitle73 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "7-3 Options"), "Level 7-3 Category"));
             advancedCurrent52.text = LanguageManager.CurrentLanguage.options.advanced_currentLevel;
             advancedTitle52.text = LanguageManager.CurrentLanguage.options.advanced_level52;
             advancedCurrent71.text = LanguageManager.CurrentLanguage.options.advanced_currentLevel;
@@ -795,15 +789,15 @@ namespace UltrakULL
             advancedTitle73.text = LanguageManager.CurrentLanguage.options.advanced_level73;
 
             //Levels
-            TextMeshProUGUI advanced52WaterScrolling = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "Level 5-2 Options"), "Disable Water Scolling"), "Text"));
-            TextMeshProUGUI advanced52WaterWaves = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "Level 5-2 Options"), "Disable Water Scolling"), "Text"));
+            TextMeshProUGUI advanced52WaterScrolling = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "5-2 Options"), "Disable Water Scrolling"), "Text"));
+            TextMeshProUGUI advanced52WaterWaves = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "5-2 Options"), "Disable Water Waves"), "Text"));
             advanced52WaterScrolling.text = LanguageManager.CurrentLanguage.options.advanced_52WaterScrolling;
             advanced52WaterWaves.text = LanguageManager.CurrentLanguage.options.advanced_52WaterWaves;
 
-            TextMeshProUGUI advanced71Dark = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "Level 7-1 Options"), "Local High Score"), "Text"));
+            TextMeshProUGUI advanced71Dark = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "7-1 Options"), "Local High Scores"), "Text"));
             advanced71Dark.text = LanguageManager.CurrentLanguage.options.advanced_71Dark;
 
-            TextMeshProUGUI advanced73Grass = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "Level 7-3 Options"), "Local High Score"), "Text"));
+            TextMeshProUGUI advanced73Grass = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "7-3 Options"), "Local High Scores"), "Text"));
             advanced73Grass.text = LanguageManager.CurrentLanguage.options.advanced_73Grass;
         }
 

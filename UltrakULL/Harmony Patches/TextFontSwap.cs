@@ -1,7 +1,6 @@
-﻿using System;
-using System.Net.Mime;
-using HarmonyLib;
+﻿using HarmonyLib;
 using TMPro;
+using UltrakULL.json;
 using UnityEngine.UI;
 
 using static UltrakULL.CommonFunctions;
@@ -46,27 +45,40 @@ namespace UltrakULL.Harmony_Patches
             [HarmonyPostfix]
             public static void SwapFont(ref TextMeshProUGUI __instance)
             {
-                if(Core.TMPFontReady)
+                
+                if(Core.TMPFontReady && !isUsingEnglish())
                 {
-                    if(GetCurrentSceneName() == "CreditsMuseum2")
+                    string currentLanguage = LanguageManager.CurrentLanguage.metadata.langDisplayName;
+                    switch(currentLanguage)
                     {
-                        if(__instance.font.name == "GFS Garaldus")
+                        case "Japanese": case "Traditional Chinese": case "Simplified Chinese":
                         {
-                            __instance.font = Core.MuseumFontTMP;
+                            //Swap with a Japanese or Chinese font when it comes in.
+                            __instance.font = Core.CJKFontTMP;
+                            break;
                         }
-                        else
+                        default:
                         {
-                            __instance.font = Core.GlobalFontTMP;
+                            if(GetCurrentSceneName() == "CreditsMuseum2")
+                            {
+                                if(__instance.font.name == "GFS Garaldus")
+                                {
+                                    __instance.font = Core.MuseumFontTMP;
+                                }
+                                else
+                                {
+                                    __instance.font = Core.GlobalFontTMP;
+                                }
+                            }
+                            else
+                            {
+                                __instance.font = Core.GlobalFontTMP;
+                            }
+                            break;
                         }
-                    }
-                    else
-                    {
-                        __instance.font = Core.GlobalFontTMP;
                     }
                 }
             }
         }
     }
-    
-    
 }
