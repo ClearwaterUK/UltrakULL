@@ -12,6 +12,7 @@
 - Fixed Agony, Tundra, Angry and Rude not being translated correctly.
 - Fixed The Corpse of King Minos not being translated correctly.
 - Fixed some errors in the English template.
+- Fixed 5-S being broken across the board.
 
 
 1.2.3b 

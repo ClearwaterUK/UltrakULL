@@ -124,8 +124,9 @@ namespace UltrakULL
             
             
             //Tried to use a foreach loop but it just wouldn't work, that'll do for now, just have to add things manually once they get added
+            //Commented this out for now due to it causing out of bound issues. Will investigate later
            
-            TextMeshProUGUI bindMove = GetTextMeshProUGUI(controlContent.transform.GetChild(8).gameObject);
+            /*TextMeshProUGUI bindMove = GetTextMeshProUGUI(controlContent.transform.GetChild(8).gameObject);
             TextMeshProUGUI bindDodge = GetTextMeshProUGUI(controlContent.transform.GetChild(9).gameObject);
             TextMeshProUGUI bindSlide = GetTextMeshProUGUI(controlContent.transform.GetChild(10).gameObject);
             TextMeshProUGUI bindJump = GetTextMeshProUGUI(controlContent.transform.GetChild(11).gameObject);
@@ -175,11 +176,10 @@ namespace UltrakULL
 
             bindChangeFist.text = LanguageManager.CurrentLanguage.options.controls_changeArm;
             bindPunch.text = LanguageManager.CurrentLanguage.options.controls_punch;
-            bindHook.text = LanguageManager.CurrentLanguage.options.controls_whiplash;
+            bindHook.text = LanguageManager.CurrentLanguage.options.controls_whiplash;*/
         }
         private void PatchGraphicsOptions(GameObject optionsMenu)
         {
-            //Order of elements have changed about
             //Graphics options
             TextMeshProUGUI graphicsText = GetTextMeshProUGUI(GetGameObjectChild(optionsMenu, "Text (1)"));
             graphicsText.text = "--" + LanguageManager.CurrentLanguage.options.category_graphics + "--";

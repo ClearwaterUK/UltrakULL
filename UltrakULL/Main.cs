@@ -47,10 +47,6 @@ using System.Reflection;
  * "Home or ~" cheat string isn't translated
  * The arm alter menu isn't fully translated and mostly doesn't work outside of the Sandbox
  * "Lots of P" implementation doesn't work, would likely need to be directly patched
- * 5-S has some broken stuff:
- * - the fish terminal's buttons don't work anymore
- * - lake titles are not translated anymore
- * - "near" and "far" aren't translated
  *
  * */
 

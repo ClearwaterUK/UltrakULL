@@ -22,6 +22,12 @@ namespace UltrakULL.Harmony_Patches
             
             if(___shopCanvas != null)
             {
+                //5-S shop
+                if (__instance.gameObject.name == "Fishing Enc Terminal")
+                {
+                    return;
+                }
+                
                 //Sandbox shop
                 if (__instance.gameObject.name == "Sandbox Shop")
                 {
@@ -66,8 +72,6 @@ namespace UltrakULL.Harmony_Patches
                 {
                     Shop.PatchShopRefactor(ref shopObject);
                 }
-                
-               
             }
         }
     }

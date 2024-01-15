@@ -130,14 +130,14 @@ namespace UltrakULL
         public void Patch5S(ref GameObject canvasObj)
         {
             GameObject powerGauge = GetGameObjectChild(GetInactiveRootObject("FishingCanvas"),"Power Meter");
-            TextMeshProUGUI distanceFar = GetTextMeshProUGUI(GetGameObjectChild(powerGauge,"Text"));
+            Text distanceFar = GetTextfromGameObject(GetGameObjectChild(powerGauge,"Text"));
             distanceFar.text = LanguageManager.CurrentLanguage.fishing.fish_rodFar;
-            TextMeshProUGUI distanceClose = GetTextMeshProUGUI(GetGameObjectChild(powerGauge,"Text (1)"));
+            Text distanceClose = GetTextfromGameObject(GetGameObjectChild(powerGauge,"Text (1)"));
             distanceClose.text = LanguageManager.CurrentLanguage.fishing.fish_rodClose;
             
             GameObject fishingLeaderboard = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Exit Lobby Interior"),"Fish Scores"),"Canvas"),"Border"),"TipBox"),"Panel");
             
-            TextMeshProUGUI fishingLeaderboardTitle = GetTextMeshProUGUI(GetGameObjectChild(fishingLeaderboard,"Title"));
+            Text fishingLeaderboardTitle = GetTextfromGameObject(GetGameObjectChild(fishingLeaderboard,"Title"));
             fishingLeaderboardTitle.text = LanguageManager.CurrentLanguage.fishing.fish_leaderboard;
             
             GameObject fishingTerminal = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Fishing Enc Terminal"),"Canvas"),"Border"),"TipBox"),"Panel");
