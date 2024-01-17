@@ -38,13 +38,20 @@ using System.Reflection;
  * Offending transpiler lines have been commented out for now. Waiting for Flazhik to look at and fix.
  * 14c Update completely messed up MDK/Owl. Yet again. Pain. 
  * 
+ *
+ * -- TODO --
+ * Patch the chess panel in the museum
+ * Add all of the style bonuses in the museum
  * 
+ *
  * -- TESTING REPORTS --
  * -- 1.3.0 BUGS TO FIX BEFORE RELEASE --
  * Cheats consent explaination isn't translated, the code behind it seems much more protected than anything else in the game for some reason
  * "Home or ~" cheat string isn't translated
  * The arm alter menu isn't fully translated and mostly doesn't work outside of the Sandbox
  * "Lots of P" implementation doesn't work, would likely need to be directly patched
+ * 7-2 and 7-3 panels aren't translated
+ * 7-4 unique HUD stuff isn't translated
  *
  * */
 
