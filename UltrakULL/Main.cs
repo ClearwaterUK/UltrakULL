@@ -15,7 +15,7 @@ using System.Reflection;
  *  Additional code contributions by Temperz87, Flazhik, BitKoven, CoatlessAli and others
  *  Translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 11th January 2024
+ *	Last updated: 17th January 2024
  *	
  *	A translation mod for Ultrakill that hooks into the game and allows for text/string replacement. This tool is primarily meant to assist with language translation.
  * 
