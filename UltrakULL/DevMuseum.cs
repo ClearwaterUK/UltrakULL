@@ -241,7 +241,9 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalMusic7 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalMusic8 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalMusic9 + "\n\n"
-                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalMusic10;
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalMusic10 + "\n\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalMusic11 + "\n\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalMusic12;
             }
             if(originalText.Contains("COMMUNITY CYBER GRIND"))
             {
@@ -256,9 +258,10 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits5 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits6 + "\n\n"
                     + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits7 + "\n\n"
+                    + LanguageManager.CurrentLanguage.devMuseum.museum_bookAdditionalCredits8 + "\n\n"
                 
                     //Totally not subtle self-insert for mod credits here. :D
-                    + "<b><color=orange>UltrakULL CREDITS</color></b>:\n\n"
+                    + "<b><color=orange>UltrakULL CREDITS</color>:</b>\n\n"
                     + "Mod created by <color=orange>Clearwater</color>\n"
                     + "Additional code contributions by <color=orange>Temperz87</color>, <color=orange>CoatlessAli</color> and <color=orange>Frizou</color>\n"
                     + "Translations by various community members of the <color=orange>UltrakULL Translation Team</color>\n"
