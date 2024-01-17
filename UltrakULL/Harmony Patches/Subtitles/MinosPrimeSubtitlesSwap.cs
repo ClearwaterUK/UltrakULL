@@ -17,7 +17,7 @@ namespace UltrakULL.Harmony_Patches.Subtitles
     [HarmonyPatch(typeof(MinosPrime))]
     public class MinosPrimeSubtitlesSwap
     {
-        private const int LdstrInstructionOffset = 2;
+        private const int LdstrInstructionOffset = 3;
         
         [HarmonyTranspiler]
         [HarmonyPatch(typeof(MinosPrime), "Update")]
@@ -80,7 +80,7 @@ namespace UltrakULL.Harmony_Patches.Subtitles
                 if (!DisplaySubtitleCall(instructions[i]))
                     continue;
                 
-                // Ldstr opcode is always 2 instructions above
+                // Ldstr opcode is always 3 instructions above
                 ReplaceLdstr(i - LdstrInstructionOffset, subtitles, instructions);
                 break;
             }
@@ -90,7 +90,7 @@ namespace UltrakULL.Harmony_Patches.Subtitles
         {
             return instruction.opcode == Callvirt
                    && instruction.OperandIs(Method(typeof(SubtitleController), "DisplaySubtitle",
-                       new[] { typeof(string), typeof(AudioSource) }));
+                       new[] { typeof(string), typeof(AudioSource), typeof(bool) }));
         }
         
         private static void ReplaceLdstr(int offset, string subtitles, List<CodeInstruction> instructions)

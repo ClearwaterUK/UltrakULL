@@ -36,7 +36,7 @@ namespace UltrakULL.Harmony_Patches.Subtitles
             };
 
 
-        [HarmonyTranspiler]
+        /*[HarmonyTranspiler]
         [HarmonyPatch(typeof(Mandalore), "Start")]
         private static IEnumerable<CodeInstruction> Mandalore_Start(IEnumerable<CodeInstruction> instructions)
         {
@@ -90,7 +90,7 @@ namespace UltrakULL.Harmony_Patches.Subtitles
         {
             instructions.RemoveAt(start + offset);
             instructions.InsertRange(start + offset, ReplaceLdstr(subtitles, color));
-        }
+        }*/
         
         /**
          * Basically, equivalent to LanguageManager.CurrentLanguage.subtitles.some_subtitles_string + color tags

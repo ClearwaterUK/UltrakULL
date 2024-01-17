@@ -35,13 +35,11 @@ using System.Reflection;
  * 
  * -- REPORTED STUFF TO INVESTIGATE --
  * Spawning MDK+Owl while noclipped causes a crash. Function that's causing it: MandaloreSubtitlesSwap->Mandalore_Start
- *  * Offending transpiler lines have been commented out for now. Waiting for Flazhik to look at and fix.
+ * Offending transpiler lines have been commented out for now. Waiting for Flazhik to look at and fix.
+ * 14c Update completely messed up MDK/Owl. Yet again. Pain. 
  * 
  * 
  * -- TESTING REPORTS --
- * Some ogg files apparently not playing correctly (Checked Spanish pack that Lukah sent, seems to be working fine... Will keep an eye on.)
- *
- * 
  * -- 1.3.0 BUGS TO FIX BEFORE RELEASE --
  * Cheats consent explaination isn't translated, the code behind it seems much more protected than anything else in the game for some reason
  * "Home or ~" cheat string isn't translated

@@ -17,7 +17,7 @@ namespace UltrakULL.Harmony_Patches.Subtitles
     [HarmonyPatch(typeof(SisyphusPrime))]
     public class SisyphusPrimeSubtitlesSwap
     {
-        private const int LdstrInstructionOffset = 2;
+        private const int LdstrInstructionOffset = 3;
         
         [HarmonyTranspiler]
         [HarmonyPatch(typeof(SisyphusPrime), "Update")]
@@ -89,7 +89,7 @@ namespace UltrakULL.Harmony_Patches.Subtitles
         {
             return instruction.opcode == Callvirt
                    && instruction.OperandIs(Method(typeof(SubtitleController), "DisplaySubtitle",
-                       new[] { typeof(string), typeof(AudioSource) }));
+                       new[] { typeof(string), typeof(AudioSource), typeof(bool) }));
         }
         
         private static void ReplaceLdstr(int offset, string subtitles, List<CodeInstruction> instructions)
