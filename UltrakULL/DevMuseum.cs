@@ -663,9 +663,73 @@ namespace UltrakULL
             
             
         }
-        
+        private void PatchChess()
+        {
+            GameObject chessGeneral = GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("__Room_Aquarium"),"Geo"),"Chess");
+            GameObject chessScreen = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(chessGeneral,"PuzzleScreen"),"Canvas"),"Buttons");
+
+            TextMeshProUGUI chessVs = GetTextMeshProUGUI(GetGameObjectChild(chessScreen,"vs"));
+            chessVs.text = LanguageManager.CurrentLanguage.devMuseum.museum_chessVs;
+            
+            TextMeshProUGUI chessNewgame = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(chessScreen,"NewGame"),"On"),"Text"));
+            chessNewgame.text = LanguageManager.CurrentLanguage.devMuseum.museum_chessNewgame;
+            
+            TextMeshProUGUI chessBlack = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chessScreen,"Black"),"Text"));
+            chessBlack.text = LanguageManager.CurrentLanguage.devMuseum.museum_chessBlack;
+            
+            TextMeshProUGUI chessWhite = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chessScreen,"White"),"Text"));
+            chessWhite.text = LanguageManager.CurrentLanguage.devMuseum.museum_chessWhite;
+            
+            TextMeshProUGUI chessBlackbot = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(chessScreen,"Black"),"Bot (1)"),"Text"));
+            chessBlackbot.text = LanguageManager.CurrentLanguage.devMuseum.museum_chessBot;
+            
+            TextMeshProUGUI chessBlackplayer = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(chessScreen,"Black"),"Player (1)"),"Text"));
+            chessBlackplayer.text = LanguageManager.CurrentLanguage.devMuseum.museum_chessPlayer;
+            
+            TextMeshProUGUI chessWhitebot = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(chessScreen,"White"),"Bot"),"Text"));
+            chessWhitebot.text = LanguageManager.CurrentLanguage.devMuseum.museum_chessBot;
+            
+            TextMeshProUGUI chessWhiteplayer = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(chessScreen,"White"),"Player"),"Text"));
+            chessWhiteplayer.text = LanguageManager.CurrentLanguage.devMuseum.museum_chessPlayer;
+            
+            TextMeshProUGUI chessSettingsclose = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(chessScreen,"Settings"),"Difficulty"),"SettingsToggle Off"),"Text"));
+            chessSettingsclose.text = LanguageManager.CurrentLanguage.devMuseum.museum_chessSettingsclose;
+            
+            TextMeshProUGUI chessSettingsBot = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chessScreen,"Settings"),"Text (1)"));
+            chessSettingsBot.text = LanguageManager.CurrentLanguage.devMuseum.museum_chessBot + ":";
+            
+            //these 2 not using UGUI
+            TextMeshPro chessWhitewin = GetTextMeshPro(GetGameObjectChild(GetGameObjectChild(chessGeneral,"WhiteWin"),"WinText"));
+            chessWhitewin.text = LanguageManager.CurrentLanguage.devMuseum.museum_chessWhitewin;
+            
+            TextMeshPro chessBlackwin = GetTextMeshPro(GetGameObjectChild(GetGameObjectChild(chessGeneral,"BlackWin"),"WinText"));
+            chessBlackwin.text = LanguageManager.CurrentLanguage.devMuseum.museum_chessBlackwin;
+        }
+        //i'm lazy. i don't recommend to leave this section
+        private static TextMeshPro GetTextMeshPro(GameObject hogeobject)
+        {
+            if (!isUsingEnglish())
+            {
+                string currentLanguage = LanguageManager.CurrentLanguage.metadata.langDisplayName;
+                    switch(currentLanguage)
+                    {
+                        case "Japanese": case "Traditional Chinese": case "Simplified Chinese":
+                        {
+                            //Swap with a Japanese or Chinese font when it comes in.
+                            hogeobject.GetComponent<TextMeshPro>().font = Core.CJKFontTMP;
+                            break;
+                        }
+                        default:
+                        {
+                            break;
+                        }
+                    }
+            }
+            return hogeobject.GetComponent<TextMeshPro>();
+        }
         public DevMuseum()
         {
+            this.PatchChess();
             this.PatchPlaques();
         }
     }

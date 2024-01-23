@@ -390,6 +390,17 @@
 		"museum_cinemaPlay": "",
 		"museum_cinemaStop": "",
 
+		"museum_chessTip": "",
+		"museum_chessVs": "",
+		"museum_chessNewgame": "",
+		"museum_chessBlack": "",
+		"museum_chessWhite": "",
+		"museum_chessBot": "",
+		"museum_chessPlayer": "",
+		"museum_chessSettingsclose": "",
+		"museum_chessWhitewin": "",
+		"museum_chessBlackwin": "",
+
 		"museum_spoiler1": "",
 		"museum_spoiler2": "",
 		"museum_spoiler3": ""

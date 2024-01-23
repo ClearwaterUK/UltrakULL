@@ -2799,6 +2799,15 @@ namespace UltrakULL.json
         public string museum_rocketRaceResult;
 
         public string museum_chessTip;
+        public string museum_chessVs;
+        public string museum_chessNewgame;
+        public string museum_chessBlack;
+        public string museum_chessWhite;
+        public string museum_chessBot;
+        public string museum_chessPlayer;
+        public string museum_chessWhitewin;
+        public string museum_chessBlackwin;
+        public string museum_chessSettingsclose;
         
         public string museum_cinemaPlay;
         public string museum_cinemaStop;
