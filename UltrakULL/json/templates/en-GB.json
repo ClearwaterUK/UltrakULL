@@ -2459,8 +2459,8 @@
 		"act3_violenceThird_becomeMarkedButtonClosed": "CLOSED",
 		"act3_violenceThird_starOfTheShow": "YOU'RE THE STAR OF THE SHOW NOW, BABY!",
 
-		"act3_violence_floodingWarning": "WARNING: INTRUDER DETECTED\n-- FLUSHING INTERIOR --",
-		"act3_violence_countdownTitle": "CRITICAL FAILURE",
+		"act3_violenceFourth_floodingWarning": "WARNING: INTRUDER DETECTED\n-- FLUSHING INTERIOR --",
+		"act3_violenceFourth_countdownTitle": "CRITICAL FAILURE",
         
         	"act3_secretNotReady": "YOU'RE NOT SUPPOSED TO BE HERE."
 	},

@@ -2326,8 +2326,8 @@ namespace UltrakULL.json
         public string act3_violenceThird_becomeMarkedButtonClosed;
         public string act3_violenceThird_starOfTheShow;
         
-        public string act3_floodingWarning;
-        public string act3_countdownTitle;
+        public string act3_violenceFourth_floodingWarning;
+        public string act3_violenceFourth_countdownTitle;
 
         public string act3_secretNotReady;
     }
