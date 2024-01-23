@@ -2582,6 +2582,8 @@ namespace UltrakULL.json
         public string museum_bookAdditionalMusic8;
         public string museum_bookAdditionalMusic9;
         public string museum_bookAdditionalMusic10;
+        public string museum_bookAdditionalMusic11;
+        public string museum_bookAdditionalMusic12;
         
         public string museum_bookAdditionalCredits1;
         public string museum_bookAdditionalCredits2;
@@ -2590,6 +2592,7 @@ namespace UltrakULL.json
         public string museum_bookAdditionalCredits5;
         public string museum_bookAdditionalCredits6;
         public string museum_bookAdditionalCredits7;
+        public string museum_bookAdditionalCredits8;
         
         public string museum_bookStephanWeyte1;
         public string museum_bookStephanWeyte2;
@@ -2794,6 +2797,8 @@ namespace UltrakULL.json
         public string museum_rocketRace2;
         public string museum_rocketRaceStart;
         public string museum_rocketRaceResult;
+
+        public string museum_chessTip;
         
         public string museum_cinemaPlay;
         public string museum_cinemaStop;
