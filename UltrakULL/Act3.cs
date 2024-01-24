@@ -94,8 +94,8 @@ namespace UltrakULL
             //You're the star of the show now, baby!
             else if (currentLevel.Contains("7-3"))
             {
-                GameObject secretScreenArea = GetGameObjectChild(GetInactiveRootObject("Main Section"), "8 - Upper Garden Battlefield");
-                GameObject secretScreen = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(secretScreenArea, "8 Stuff"), "Destructible Tunnel"), "Puzzle Screen"), "Canvas");
+                GameObject secretScreenArea = GetGameObjectChild(GetInactiveRootObject("Outdoors Areas"), "8 - Upper Garden Battlefield");
+                GameObject secretScreen = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(secretScreenArea, "8 Stuff"), "Destructible Tunnel"), "PuzzleScreen"), "Canvas");
 
                 TextMeshProUGUI becomeMarked = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(secretScreen, "PreActivation"), "Text (TMP) (1)"));
                 TextMeshProUGUI becomeMarkedButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(secretScreen, "PreActivation"), "Button A"), "On"), "Text"));
