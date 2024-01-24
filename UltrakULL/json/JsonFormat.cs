@@ -295,6 +295,7 @@ namespace UltrakULL.json
         public string style_bigkill;
         public string style_bigfistkill;
         public string style_bipolar;
+
         public string style_cannonballed;
         public string style_catapaulted;
         public string style_chargeback;
@@ -345,21 +346,37 @@ namespace UltrakULL.json
 
         public string style_why;
 
+        public string style_bishopcapture;
+        public string style_bishoppromo;
+        public string style_blackwins;
+        public string style_bongcloud;
         public string style_boiled;
         public string style_conductor;
+        public string style_castled;
         public string style_crushed;
+        public string style_enpassant;
         public string style_fall;
+        public string style_foolsmate;
         public string style_forthee;
+        public string style_knightcapture;
+        public string style_knightpromo;
         public string style_longwaydown;
         public string style_lost;
         public string style_m_a_d;
         public string style_minced;
         public string style_pancaked;
+        public string style_pawncapture;
+        public string style_queencapture;
+        public string style_queenpromo;
         public string style_outofbounds;
         public string style_roadkill;
+        public string style_rookcapture;
+        public string style_rookpromo;
         public string style_shredded;
         public string style_slipped;
         public string style_trampled;
+        public string style_ultravictory;
+        public string style_whitewins;
         public string style_zapped;
 
         public string style_d;

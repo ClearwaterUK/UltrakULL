@@ -14,7 +14,7 @@ devMuseum: bookAdditionalCredits7, bookMandalore7, chessTip, chess(Vs, Newgame, 
 books: violenceFirst(1-9), violenceFirst_Slate(1-4), violenceSecond(1-2), violenceFourth(1-5)
 cheats: invincibility, enemiesHateEnemies, enemiesIgnorePlayer
 enemyAlter: hookPointTitle, sandboxTitle, enrage, enrageEternal, sandified, ignorePlayer, attackEnemies, hasSkull, altarType
-style: landyours, rocketreturn, roundtrip, served, strike, boiled, forthee, guardbreak, longwaydown, lost, m_a_d, pancaked, roadkill, slipped, trampled
+style: landyours, rocketreturn, roundtrip, served, strike, boiled, forthee, guardbreak, longwaydown, lost, m_a_d, pancaked, roadkill, slipped, trampled, bishopcapture, bishoppromo, blackwins, bongcloud, castled, enpassant, foolsmate, knightcapture, knightpromo, pawncapture, queencapture, queenpromo, rookcapture, rookpromo, ultravictory, whitewins
 frontEnd: layer_(violence, fraud, treachery)
 options: general_parryFlash, general_sandboxOverwrite, general_advancedOptions, general_advancedOptionsCustomize
 options: graphics_gamma1, graphics_gamma2
