@@ -1086,8 +1086,8 @@ namespace UltrakULL.json
         public string langVersion;
         public string langDisplayName;
         public string langRTL;
-
         public string minimumModVersion;
+        public string langHinduNumbers;
 
     }
 

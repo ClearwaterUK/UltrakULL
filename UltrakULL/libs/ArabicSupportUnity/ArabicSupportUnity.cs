@@ -57,7 +57,7 @@ namespace ArabicSupportUnity
 		/// </param>
 		public static string Fix(string str)
 		{
-			return Fix(str, false, false);
+			return Fix(str, false, true);
 		}
 
 		public static string Fix(string str, bool rtl)
@@ -375,7 +375,7 @@ internal class ArabicFixerTool
 {
 	internal static bool showTashkeel = true;
     internal static bool combineTashkeel = true;
-    internal static bool useHinduNumbers = false;
+    internal static bool useHinduNumbers = true;
 
 	internal static StringBuilder internalStringBuilder = new StringBuilder();
 
@@ -627,10 +627,10 @@ internal class ArabicFixerTool
 				i++;
 
 			//chaning numbers to hindu
-			if (useHinduNumbers)
-			{
+			//if (useHinduNumbers)
+			//{
 				lettersFinal[i] = (char)HandleInduNumber(lettersOrigin[i], lettersFinal[i]);
-			}
+			//}
 
 		}
 
