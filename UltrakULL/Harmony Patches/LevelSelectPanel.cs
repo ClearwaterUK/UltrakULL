@@ -49,7 +49,6 @@ namespace UltrakULL.Harmony_Patches
 					string lvlTitle = levelName.Substring(5);
 
 					levelName = $"{lvlTitle} :{lvlNumber}";
-					__instance.transform.Find("Name").GetComponent<Text>().text = LevelNames.GetLevelName(num); //Level Name
 				}
 				__instance.transform.Find("Name").GetComponent<Text>().text = levelName; //Level Name
 			}
