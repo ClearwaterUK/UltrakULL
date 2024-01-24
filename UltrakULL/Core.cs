@@ -31,8 +31,9 @@ namespace UltrakULL
         public static TMP_FontAsset MuseumFontTMP;
         public static TMP_FontAsset CJKFontTMP;
         public static TMP_FontAsset ArabicFontTMP;
-        
-        public static bool wasLanguageReset = false;
+		public static TMP_FontAsset HebrewFontTMP;
+
+		public static bool wasLanguageReset = false;
         
         private static readonly HttpClient Client = new HttpClient();
         
@@ -153,28 +154,39 @@ namespace UltrakULL
             AssetBundle fontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder,"ullfont.resource"));
 
 
-			AssetBundle arabicFontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder, "arabfonts"));
+			AssetBundle extraFontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder, "arabfonts"));
 
-            if (arabicFontBundle == null)
+            if (extraFontBundle == null)
             {
-                Logging.Error("FAILED TO LOAD ARABIC STUFF :(");
+                Logging.Error("Failed to load Arabic / Hebrew fonts. :( (No extra AssetBundle found!)");
             }
             else
             {
-                Logging.Message("Habibi! Arabic Fonts are loaded!!!");
+                Logging.Message("Extra Fonts Asset Bundle has been loaded...");
 
-                TMP_FontAsset arabicFontAsset = arabicFontBundle.LoadAsset<TMP_FontAsset>("segoeui SDF Arabic");
+                TMP_FontAsset arabicFontAsset = extraFontBundle.LoadAsset<TMP_FontAsset>("segoeui SDF Arabic");
+				TMP_FontAsset hebrewFontAsset = extraFontBundle.LoadAsset<TMP_FontAsset>("segoeui SDF Hebrew");
 
-                if (arabicFontAsset == null)
+				if (arabicFontAsset == null)
                 {
-                    Logging.Warn("THERE IS NO ARABIC FONT IN THIS ASSET BUNDLED???");
+                    Logging.Warn("There is no Arabic font in this AssetBundle!?");
                 }
                 else
                 {
-                    Logging.Message("ARABIC FONT LOADED!!!");
+                    Logging.Message("Arabic Font has been loaded.");
                     ArabicFontTMP = arabicFontAsset;
                 }
-            }
+
+				if (hebrewFontAsset == null)
+				{
+					Logging.Warn("There is no Hebrew font in this AssetBundle!?");
+				}
+				else
+				{
+					Logging.Message("Hebrew Font has been loaded.");
+					HebrewFontTMP = hebrewFontAsset;
+				}
+			}
 
 			if (fontBundle == null)
             {

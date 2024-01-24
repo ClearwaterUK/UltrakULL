@@ -60,7 +60,18 @@ namespace UltrakULL.Harmony_Patches
 								break;
 							}
 						case "Arabic":
+						case "Persian":
+						case "Urdu":
+							{
+								__instance.font = Core.ArabicFontTMP;
+								break;
+							}
+
 						case "Hebrew":
+						case "Yiddish":
+						case "Ladino":
+						case "Mozarabic":
+						case "Judeo-Arabic":
 							{
 								__instance.font = Core.ArabicFontTMP;
 								break;
