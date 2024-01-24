@@ -59,23 +59,38 @@ namespace UltrakULL.json
             configFile.Bind("General", "LastLanguage", "en-GB").Value = CurrentLanguage.metadata.langName; // Thank you copilot
         }
 
+        public static void LoadLanguagesInDirectory(string modVersion, string path)
+        {
+            Logging.Info($"Loading all language files in \"{path}\"");
+
+            string[] files = Directory.GetFiles(path, "*.json");
+            string[] subdirectories = Directory.GetDirectories(path);
+
+			foreach (string file in files)
+			{
+                Logging.Info($"Trying to load \"{file}\"");
+				if (TryLoad(file, out JsonFormat lang) && !allLanguages.ContainsKey(lang.metadata.langName) && lang.metadata.langName != "te-mp")
+				{
+					allLanguages.Add(lang.metadata.langName, lang);
+					allLanguagesDisplayNames.Add(lang.metadata.langDisplayName, lang);
+					if (!ValidateFile(lang, modVersion))
+						jsonLogger.Log(LogLevel.Debug, "Failed to validate " + lang.metadata.langName);
+				}
+			}
+
+            foreach (string directory in  subdirectories)
+            {
+                LoadLanguagesInDirectory(modVersion, directory);
+            }
+		}
+
         public static void LoadLanguages(string modVersion)
         {
             Logging.Message("Loading language files stored locally on disk...");
             
             allLanguages = new Dictionary<string, JsonFormat>();
 
-            string[] files = Directory.GetFiles(Path.Combine(Paths.ConfigPath,"ultrakull"),"*.json");
-            foreach (string file in files)
-            {
-                if (TryLoad(file, out JsonFormat lang) && !allLanguages.ContainsKey(lang.metadata.langName) && lang.metadata.langName != "te-mp")
-                {
-                    allLanguages.Add(lang.metadata.langName, lang);
-                    allLanguagesDisplayNames.Add(lang.metadata.langDisplayName, lang);
-                    if (!ValidateFile(lang, modVersion))
-                        jsonLogger.Log(LogLevel.Debug ,"Failed to validate " + lang.metadata.langName);
-                }
-            }
+            LoadLanguagesInDirectory(modVersion, Path.Combine(Paths.ConfigPath, "ultrakull"));
         }
 
         private static void LoadSubtitledSourcesConfig()
