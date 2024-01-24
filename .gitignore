@@ -376,7 +376,8 @@ FodyWeavers.xsd
 /audio/templates/*
 
 .idea/
-## https://github.com/dotnet/msbuild/issues/9131
+# https://github.com/dotnet/msbuild/issues/9131
+.gitignore
 UltrakULL/UltrakULL.csproj
 .vscode/settings.json
 .vscode/tasks.json
