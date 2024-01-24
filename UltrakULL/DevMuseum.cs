@@ -24,7 +24,7 @@ namespace UltrakULL
                 
                 return LanguageManager.CurrentLanguage.misc.levelstats_time + ": " + time;
             }
-            if(message.Contains("chess"))
+            if(message.Contains("Chess"))
             {
                 return LanguageManager.CurrentLanguage.devMuseum.museum_chessTip;
             }
