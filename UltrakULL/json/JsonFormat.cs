@@ -1771,7 +1771,7 @@ namespace UltrakULL.json
         public string enemyname_boss_bigJohninator;
 
 
-        public string enemyname_type_lesserHusk;
+		public string enemyname_type_lesserHusk;
         public string enemyname_type_greaterHusk;
         public string enemyname_type_supremeHusk;
         public string enemyname_type_lesserDemon;
@@ -2801,8 +2801,11 @@ namespace UltrakULL.json
         public string museum_spoiler1;
         public string museum_spoiler2;
         public string museum_spoiler3;
-
-    }
+		internal string museum_chessTip;
+		internal string museum_bookAdditionalMusic11;
+		internal string museum_bookAdditionalMusic12;
+		internal string museum_bookAdditionalCredits8;
+	}
 
     public class Misc
     {

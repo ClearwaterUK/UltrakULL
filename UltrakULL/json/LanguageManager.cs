@@ -161,8 +161,11 @@ namespace UltrakULL.json
         }
 
         private static JsonFormat ApplyRtl(JsonFormat language)
-        {
-            List<object> translationComponents = new List<object>
+		{
+			//Logging.Warn("ApplyRtl Breakpoint #1");
+
+
+			List<object> translationComponents = new List<object>
             {
                 language.frontend,
                 language.tutorial,
@@ -190,28 +193,50 @@ namespace UltrakULL.json
                 language.misc,
                 language.devMuseum
             };
-            
-            foreach(object component in translationComponents)
-            {
-                Type type = component.GetType();
-                FieldInfo[] fields = type.GetFields();
-                foreach (FieldInfo field in fields)
+
+
+			//Logging.Warn("ApplyRtl Breakpoint #2");
+
+			foreach (object component in translationComponents)
+			{
+                try
                 {
-                    string originalString = (string)field.GetValue(component); 
-                    string translatedString = null;
-                    
-                    if(originalString != null)
+                    Type type = component.GetType();
+                    FieldInfo[] fields = type.GetFields();
+                    foreach (FieldInfo field in fields)
                     {
-                        //Apply the RTL fix here
-                        translatedString = ArabicFixer.Fix(originalString);
+                        string originalString = (string)field.GetValue(component);
+                        string translatedString = null;
+
+                        if (originalString != null)
+                        {
+
+                            //Logging.Warn("ApplyRtl Breakpoint #3");
+                            //Apply the RTL fix here
+                            translatedString = ArabicFixer.Fix(originalString);
+                        }
+                        if (translatedString != null)
+                        {
+
+                            //Logging.Warn("ApplyRtl Breakpoint #4");
+                            field.SetValue(component, translatedString);
+                        }
                     }
-                    if(translatedString != null)
-                    {
-                        field.SetValue(component,translatedString);
-                    }
+
+
+
+                    //Logging.Warn("ApplyRtl Breakpoint #5");
                 }
-            }
-            return language;
+                catch (Exception ex)
+                {
+                    Logging.Warn($"ULL caught an exception while trying to fix a RTL language! {ex.Message} \nSource: {ex.Source}\nStack Trace:{ex.StackTrace}");
+                }
+
+				//Logging.Warn("ApplyRtl Breakpoint #6");
+			}
+
+			//Logging.Warn("ApplyRtl Breakpoint #7");
+			return language;
         }
 
         public static void SetCurrentLanguage(string langName)

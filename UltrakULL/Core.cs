@@ -30,6 +30,7 @@ namespace UltrakULL
         public static TMP_FontAsset GlobalFontTMP;
         public static TMP_FontAsset MuseumFontTMP;
         public static TMP_FontAsset CJKFontTMP;
+        public static TMP_FontAsset ArabicFontTMP;
         
         public static bool wasLanguageReset = false;
         
@@ -151,7 +152,31 @@ namespace UltrakULL
             //Will load from the same directory that the dll is in.
             AssetBundle fontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder,"ullfont.resource"));
 
-            if(fontBundle == null)
+
+			AssetBundle arabicFontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder, "arabfonts"));
+
+            if (arabicFontBundle == null)
+            {
+                Logging.Error("FAILED TO LOAD ARABIC STUFF :(");
+            }
+            else
+            {
+                Logging.Message("Habibi! Arabic Fonts are loaded!!!");
+
+                TMP_FontAsset arabicFontAsset = arabicFontBundle.LoadAsset<TMP_FontAsset>("segoeui SDF Arabic");
+
+                if (arabicFontAsset == null)
+                {
+                    Logging.Warn("THERE IS NO ARABIC FONT IN THIS ASSET BUNDLED???");
+                }
+                else
+                {
+                    Logging.Message("ARABIC FONT LOADED!!!");
+                    ArabicFontTMP = arabicFontAsset;
+                }
+            }
+
+			if (fontBundle == null)
             {
                 Logging.Error("FAILED TO LOAD");
             }
