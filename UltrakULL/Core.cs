@@ -30,6 +30,7 @@ namespace UltrakULL
         public static TMP_FontAsset GlobalFontTMP;
         public static TMP_FontAsset MuseumFontTMP;
         public static TMP_FontAsset CJKFontTMP;
+        public static TMP_FontAsset jaFixFontTMP;
         
         public static bool wasLanguageReset = false;
         
@@ -159,15 +160,18 @@ namespace UltrakULL
             {
                 Logging.Message("Font bundle loaded.");
                 Logging.Message("Loading fonts from bundle...");
-                
-                Font font1 = fontBundle.LoadAsset<Font>("VCR_OSD_MONO_EXTENDED");
+                //somehow Attractor's counter broke with extended font
+                //Font font1 = fontBundle.LoadAsset<Font>("VCR_OSD_MONO_EXTENDED");
+                Font font1 = fontBundle.LoadAsset<Font>("VCR_OSD_MONO.1");
                 Font font2 = fontBundle.LoadAsset<Font>("EBGaramond-Regular");
                 TMP_FontAsset font1TMP = fontBundle.LoadAsset<TMP_FontAsset>("VCR_OSD_MONO_EXTENDED_TMP");
                 TMP_FontAsset font2TMP = fontBundle.LoadAsset<TMP_FontAsset>("EBGaramond-Regular_TMP");
     
                 
                 TMP_FontAsset cjkFontTMP = fontBundle.LoadAsset<TMP_FontAsset>("NotoSerif-CJK_TMP");
-                
+                //i don't know how to edit asset bundle.
+                AssetBundle jafixfontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder,"jafont.resource"));
+                TMP_FontAsset jafixFontTMP = jafixfontBundle.LoadAsset<TMP_FontAsset>("jafix_TMP");
                 if(font1 && font2)
                 {
                     Logging.Warn("Normal fonts loaded.");
@@ -180,12 +184,13 @@ namespace UltrakULL
                     Logging.Error("FAILED TO LOAD NORMAL FONTS");
                     GlobalFontReady = false;
                 }
-                if(font1TMP && font2TMP && cjkFontTMP)
+                if(font1TMP && font2TMP && cjkFontTMP && jafixFontTMP)
                 {
                     Logging.Warn("Normal TMP fonts loaded.");
                     GlobalFontTMP = font1TMP;
                     MuseumFontTMP = font2TMP;
                     CJKFontTMP = cjkFontTMP;
+                    jaFixFontTMP = jafixFontTMP;
                     
                     TMPFontReady = true;
                 }
