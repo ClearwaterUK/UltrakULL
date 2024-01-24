@@ -73,7 +73,7 @@ namespace UltrakULL.Harmony_Patches
 						case "Mozarabic":
 						case "Judeo-Arabic":
 							{
-								__instance.font = Core.ArabicFontTMP;
+								__instance.font = Core.HebrewFontTMP;
 								break;
 							}
 						default:
