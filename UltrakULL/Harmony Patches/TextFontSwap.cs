@@ -60,6 +60,7 @@ namespace UltrakULL.Harmony_Patches
 								break;
 							}
 						case "Arabic":
+						case "Hebrew":
 							{
 								__instance.font = Core.ArabicFontTMP;
 								break;
