@@ -178,84 +178,84 @@ namespace UltrakULL
 					case 0:
 						return LanguageManager.CurrentLanguage.levelNames.levelName_mainMenu;
 					case 1:
-						return "٠-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_preludeFirst;
+						return "٠-١: " + LanguageManager.CurrentLanguage.levelNames.levelName_preludeFirst;
 					case 2:
-						return "٠-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_preludeSecond;
+						return "٠-٢: " + LanguageManager.CurrentLanguage.levelNames.levelName_preludeSecond;
 					case 3:
-						return "٠-3: " + LanguageManager.CurrentLanguage.levelNames.levelName_preludeThird;
+						return "٠-٣: " + LanguageManager.CurrentLanguage.levelNames.levelName_preludeThird;
 					case 4:
-						return "٠-4: " + LanguageManager.CurrentLanguage.levelNames.levelName_preludeFourth;
+						return "٠-٤: " + LanguageManager.CurrentLanguage.levelNames.levelName_preludeFourth;
 					case 5:
-						return "٠-5: " + LanguageManager.CurrentLanguage.levelNames.levelName_preludeFifth;
+						return "٠-٥: " + LanguageManager.CurrentLanguage.levelNames.levelName_preludeFifth;
 					case 6:
-						return "١-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_limboFirst;
+						return "١-١: " + LanguageManager.CurrentLanguage.levelNames.levelName_limboFirst;
 					case 7:
-						return "١-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_limboSecond;
+						return "١-٢: " + LanguageManager.CurrentLanguage.levelNames.levelName_limboSecond;
 					case 8:
-						return "١-3: " + LanguageManager.CurrentLanguage.levelNames.levelName_limboThird;
+						return "١-٣: " + LanguageManager.CurrentLanguage.levelNames.levelName_limboThird;
 					case 9:
-						return "١-4: " + LanguageManager.CurrentLanguage.levelNames.levelName_limboFourth;
+						return "١-٤: " + LanguageManager.CurrentLanguage.levelNames.levelName_limboFourth;
 					case 10:
-						return "٢-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_lustFirst;
+						return "٢-١: " + LanguageManager.CurrentLanguage.levelNames.levelName_lustFirst;
 					case 11:
-						return "٢-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_lustSecond;
+						return "٢-٢: " + LanguageManager.CurrentLanguage.levelNames.levelName_lustSecond;
 					case 12:
-						return "٢-3: " + LanguageManager.CurrentLanguage.levelNames.levelName_lustThird;
+						return "٢-٣: " + LanguageManager.CurrentLanguage.levelNames.levelName_lustThird;
 					case 13:
-						return "٢-4: " + LanguageManager.CurrentLanguage.levelNames.levelName_lustFourth;
+						return "٢-٤: " + LanguageManager.CurrentLanguage.levelNames.levelName_lustFourth;
 					case 14:
-						return "٣-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_gluttonyFirst;
+						return "٣-١: " + LanguageManager.CurrentLanguage.levelNames.levelName_gluttonyFirst;
 					case 15:
-						return "٣-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_gluttonySecond;
+						return "٣-٢: " + LanguageManager.CurrentLanguage.levelNames.levelName_gluttonySecond;
 					case 16:
-						return "٤-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_greedFirst;
+						return "٤-١: " + LanguageManager.CurrentLanguage.levelNames.levelName_greedFirst;
 					case 17:
-						return "٤-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_greedSecond;
+						return "٤-٢: " + LanguageManager.CurrentLanguage.levelNames.levelName_greedSecond;
 					case 18:
-						return "٤-3: " + LanguageManager.CurrentLanguage.levelNames.levelName_greedThird;
+						return "٤-٣: " + LanguageManager.CurrentLanguage.levelNames.levelName_greedThird;
 					case 19:
-						return "٤-4: " + LanguageManager.CurrentLanguage.levelNames.levelName_greedFourth;
+						return "٤-٤: " + LanguageManager.CurrentLanguage.levelNames.levelName_greedFourth;
 					case 20:
-						return "٥-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathFirst;
+						return "٥-١: " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathFirst;
 					case 21:
-						return "٥-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathSecond;
+						return "٥-٢: " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathSecond;
 					case 22:
-						return "٥-3: " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathThird;
+						return "٥-٣: " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathThird;
 					case 23:
-						return "٥-4: " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathFourth;
+						return "٥-٤: " + LanguageManager.CurrentLanguage.levelNames.levelName_wrathFourth;
 					case 24:
-						return "٦-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_heresyFirst;
+						return "٦-١: " + LanguageManager.CurrentLanguage.levelNames.levelName_heresyFirst;
 					case 25:
-						return "٦-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_heresySecond;
+						return "٦-٢: " + LanguageManager.CurrentLanguage.levelNames.levelName_heresySecond;
 					case 26:
-						return "٧-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceFirst;
+						return "٧-١: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceFirst;
 					case 27:
-						return "٧-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceSecond;
+						return "٧-٢: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceSecond;
 					case 28:
-						return "٧-3: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceThird;
+						return "٧-٣: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceThird;
 					case 29:
-						return "٧-4: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceFourth;
+						return "٧-٤: " + LanguageManager.CurrentLanguage.levelNames.levelName_violenceFourth;
 					case 30:
-						return "٨-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudFirst;
+						return "٨-١: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudFirst;
 					case 31:
-						return "٨-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudSecond;
+						return "٨-٢: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudSecond;
 					case 32:
-						return "٨-3: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudThird;
+						return "٨-٣: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudThird;
 					case 33:
-						return "٨-4: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudFourth;
+						return "٨-٤: " + LanguageManager.CurrentLanguage.levelNames.levelName_fraudFourth;
 					case 34:
-						return "٩-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_treacheryFirst;
+						return "٩-١: " + LanguageManager.CurrentLanguage.levelNames.levelName_treacheryFirst;
 					case 35:
-						return "٩-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_treacherySecond;
+						return "٩-٢: " + LanguageManager.CurrentLanguage.levelNames.levelName_treacherySecond;
 					default:
 						switch (missionNum)
 						{
 							case 666:
-								return "P-1: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeFirst;
+								return "P-١: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeFirst;
 							case 667:
-								return "P-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeSecond;
+								return "P-٢: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeSecond;
 							case 668:
-								return "P-3: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeThird;
+								return "P-٣: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeThird;
 							default:
 								return "MISSION NAME NOT FOUND";
 						}
