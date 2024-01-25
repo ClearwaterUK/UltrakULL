@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <ULTRAKILLPath>C:\Program Files (x86)\Steam\steamapps\common\ULTRAKILL</ULTRAKILLPath>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -166,7 +167,6 @@
     <Copy SourceFiles="@(_FontPack)" DestinationFolder="$(TargetDir)plugins/UltrakULL">
     </Copy>
   </Target>
-  
   <!-- Attempt to copy audio files from the templates to config/ultrakull/audio. Skip if fail. -->
   <Target Name="MoveAudioFiles" AfterTargets="AfterBuild">
     <ItemGroup>
@@ -201,6 +201,7 @@
     <Compile Include="Harmony Patches\AudioSwaps\SisyphusPrimeAudioSwap.cs" />
     <Compile Include="Harmony Patches\BossBarManager.cs" />
     <Compile Include="Harmony Patches\CheatsManager.cs" />
+    <Compile Include="Harmony Patches\RankHelperPatch.cs" />
     <Compile Include="Harmony Patches\Coin.cs" />
     <Compile Include="Harmony Patches\ControlBindNames.cs" />
     <Compile Include="Harmony Patches\CrateCounter.cs" />
@@ -294,7 +295,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="img" />
+    <Folder Include="img\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

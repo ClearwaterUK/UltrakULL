@@ -23,7 +23,12 @@ namespace UltrakULL.json
         private static ManualLogSource jsonLogger = Logger.CreateLogSource("LanguageManager");
         public static ConfigFile configFile;
 
-        public static void InitializeManager(string modVersion)
+		#region Helper Properties
+		public static bool IsRightToLeft { get => CurrentLanguage.metadata.langRTL; }
+		public static bool UsingHinduNumbers { get => CurrentLanguage.metadata.langHinduNumbers; }
+		#endregion
+
+		public static void InitializeManager(string modVersion)
         {
             LoadLanguages(modVersion);
 
@@ -36,7 +41,7 @@ namespace UltrakULL.json
             {
                 jsonLogger.Log(LogLevel.Message, "Setting language to " + value);
                 CurrentLanguage = allLanguages[value];
-                if(CurrentLanguage.metadata.langRTL == "true")
+				if (IsRightToLeft)
                 {
                     Logging.Message("Language is set as RTL - applying fix!");
                     CurrentLanguage = ApplyRtl(CurrentLanguage);
@@ -266,7 +271,7 @@ namespace UltrakULL.json
                 CurrentLanguage = allLanguages[langName];
                 Logging.Message( "Setting language to " + langName);
                 
-                if(CurrentLanguage.metadata.langRTL == "true")
+                if(IsRightToLeft)
                 {
                     Logging.Message("Language is an RTL - applying fix!");
                     CurrentLanguage = ApplyRtl(CurrentLanguage);

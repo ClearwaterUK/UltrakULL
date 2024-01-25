@@ -37,7 +37,7 @@ namespace UltrakULL.Harmony_Patches
 			else
 			{
 				string levelName = LevelNames.GetLevelName(num);
-				if (LanguageManager.CurrentLanguage.metadata.langRTL != null && LanguageManager.CurrentLanguage.metadata.langRTL == "true")
+				if (LanguageManager.IsRightToLeft)
 				{
 					string lvlNumber = "";
 					char[] lnum = levelName.Substring(0, 3).ToCharArray();

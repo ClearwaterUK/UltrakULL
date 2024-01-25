@@ -1,9 +1,11 @@
 ﻿using HarmonyLib;
 using TMPro;
 using UltrakULL.json;
+using UnityEngine;
 using UnityEngine.UI;
 
 using static UltrakULL.CommonFunctions;
+using static UnityEngine.TextAnchor;
 
 namespace UltrakULL.Harmony_Patches
 {
@@ -15,6 +17,25 @@ namespace UltrakULL.Harmony_Patches
 			[HarmonyPostfix]
 			public static void SwapFont(ref Text __instance)
 			{
+				if (LanguageManager.IsRightToLeft)
+				{
+					switch (__instance.alignment)
+					{
+						case UpperLeft:
+							__instance.alignment = UpperRight;
+							break;
+						case MiddleLeft:
+							__instance.alignment = MiddleRight;
+							break;
+						case LowerLeft:
+							__instance.alignment = LowerRight;
+							break;
+					}
+					Vector2 anchor = __instance.rectTransform.anchoredPosition;
+					anchor.Set(1.0f - anchor.x, anchor.y);
+					__instance.alignByGeometry = true;
+				}
+
 				if (Core.GlobalFontReady)
 				{
 					if (GetCurrentSceneName() == "CreditsMuseum2")
@@ -63,6 +84,22 @@ namespace UltrakULL.Harmony_Patches
 						case "Persian":
 						case "Urdu":
 							{
+								
+								switch(__instance.alignment)
+								{
+									case TextAlignmentOptions.TopLeft:
+										__instance.alignment = TextAlignmentOptions.TopRight;
+										break;
+									case TextAlignmentOptions.Left:
+										__instance.alignment	= TextAlignmentOptions.Right;
+										break;
+									case TextAlignmentOptions.BottomLeft:
+										__instance.alignment = TextAlignmentOptions.BottomRight;
+										break;
+									case TextAlignmentOptions.BaselineLeft:
+										__instance.alignment = TextAlignmentOptions.BaselineRight;
+										break;
+								}
 								__instance.font = Core.ArabicFontTMP;
 								break;
 							}

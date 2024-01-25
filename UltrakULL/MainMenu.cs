@@ -210,6 +210,18 @@ namespace UltrakULL
                 Text underConstructionText = GetTextfromGameObject(GetGameObjectChild(difficultyObject, "Under Construction"));
                 underConstructionText.text = LanguageManager.CurrentLanguage.frontend.difficulty_underConstruction;
 
+                // RTL
+                if (LanguageManager.IsRightToLeft)
+                {
+                    harmlessDescriptor.alignment = TextAnchor.UpperRight;
+                    harmlessTitle.alignment = TextAnchor.MiddleRight;
+                    lenientDescriptor.alignment = TextAnchor.UpperRight;
+                    lenientTitle.alignment = TextAnchor.MiddleRight;
+                    standardDescriptor.alignment = TextAnchor.UpperRight;
+                    standardTitle.alignment = TextAnchor.MiddleRight;
+                    violentDescriptor.alignment = TextAnchor.UpperRight;
+                    violentTitle.alignment = TextAnchor.MiddleRight;
+                }
 
                 //Brutal and UMD stuff isn't in-game yet so the below is commmented out until the devs add them.
 
@@ -247,7 +259,7 @@ namespace UltrakULL
 
             GameObject act1Object = GetGameObjectChild(chapterObject, "Act I");
             Text act1Text = GetTextfromGameObject(act1Object.transform.Find("Name").gameObject);
-            act1Text.text = LanguageManager.CurrentLanguage.frontend.chapter_act1;
+            act1Text.text = LanguageManager.CurrentLanguage.frontend.chapter_act1 + "\t\t";
 
             GameObject act2Object = GetGameObjectChild(chapterObject, "Act II");
             Text act2Text = GetTextfromGameObject(act2Object.transform.Find("Name").gameObject);

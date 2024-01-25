@@ -9,6 +9,7 @@ namespace UltrakULL.json
         
         public FrontEnd frontend;
         public Tutorial tutorial;
+        public Rank ranks;
         
         public Overture prelude;
         public a1 act1;
@@ -1085,9 +1086,9 @@ namespace UltrakULL.json
         public string langAuthor;
         public string langVersion;
         public string langDisplayName;
-        public string langRTL;
+        public bool langRTL;
         public string minimumModVersion;
-        public string langHinduNumbers;
+        public bool langHinduNumbers;
 
     }
 
@@ -1207,6 +1208,23 @@ namespace UltrakULL.json
         public string act2_intermission_tobecontinuedshadow;
 
     }
+
+    public class Rank
+    {
+        public string D { get => rank_letter_d; }
+        public string rank_letter_d;
+		public string C { get => rank_letter_c; }
+		public string rank_letter_c;
+		public string B { get => rank_letter_b; }
+		public string rank_letter_b;
+		public string A { get => rank_letter_a; }
+		public string rank_letter_a;
+		public string S { get => rank_letter_s; }
+		public string rank_letter_s;
+		public string P { get => rank_letter_p; }
+		public string rank_letter_p;
+
+	}
 
     public class Body
     {

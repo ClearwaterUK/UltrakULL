@@ -81,7 +81,7 @@ namespace UltrakULL
 			{
 				return MapInfoBase.InstanceAnyType.levelName;
 			}
-			if (LanguageManager.CurrentLanguage.metadata.langHinduNumbers == null || LanguageManager.CurrentLanguage.metadata.langHinduNumbers != "true")
+			if (!LanguageManager.UsingHinduNumbers)
 			{
 				switch (missionNum)
 				{
