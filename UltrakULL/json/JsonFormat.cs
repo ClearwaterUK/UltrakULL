@@ -1215,6 +1215,7 @@ namespace UltrakULL.json
 
     public class FrontEnd
     {
+        public string mainmenu_imageReplacement;
         public string mainmenu_earlyAccess;
         public string mainmenu_halloween;
         public string mainmenu_easter;

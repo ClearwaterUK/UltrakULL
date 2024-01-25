@@ -33,6 +33,8 @@ namespace UltrakULL
         public static TMP_FontAsset ArabicFontTMP;
 		public static TMP_FontAsset HebrewFontTMP;
 
+        public static Sprite ArabicUltrakillLogo;
+
 		public static bool wasLanguageReset = false;
         
         private static readonly HttpClient Client = new HttpClient();
@@ -166,6 +168,7 @@ namespace UltrakULL
 
                 TMP_FontAsset arabicFontAsset = extraFontBundle.LoadAsset<TMP_FontAsset>("segoeui SDF Arabic");
 				TMP_FontAsset hebrewFontAsset = extraFontBundle.LoadAsset<TMP_FontAsset>("segoeui SDF Hebrew");
+				Sprite arabicLogo = extraFontBundle.LoadAsset<Sprite>("2023_improved_logo.png");
 
 				if (arabicFontAsset == null)
                 {
@@ -175,6 +178,15 @@ namespace UltrakULL
                 {
                     Logging.Message("Arabic Font has been loaded.");
                     ArabicFontTMP = arabicFontAsset;
+                }
+
+                if (arabicLogo == null)
+                {
+					Logging.Warn("There is no Arabic logo in this AssetBundle!?");
+				}
+                else
+                {
+                    ArabicUltrakillLogo = arabicLogo;
                 }
 
 				if (hebrewFontAsset == null)

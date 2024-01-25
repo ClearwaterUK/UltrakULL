@@ -17,6 +17,16 @@ namespace UltrakULL
             {
                 GameObject titleObject = GetGameObjectChild(mainMenu, "Main Menu (1)");
 
+                if (Core.ArabicUltrakillLogo != null)
+                {
+                    GameObject realTitleObject = GetGameObjectChild(titleObject, "Title");
+                    Image logoImageObject = realTitleObject.GetComponent<Image>();
+                    if (logoImageObject != null)
+                    {
+                        logoImageObject.sprite = Core.ArabicUltrakillLogo;
+                    }
+                }
+
                 //Early access tag
                 Text earlyAccessText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(titleObject, "Title"), "Text"));
                 earlyAccessText.text = "--" + LanguageManager.CurrentLanguage.frontend.mainmenu_earlyAccess + "--";
