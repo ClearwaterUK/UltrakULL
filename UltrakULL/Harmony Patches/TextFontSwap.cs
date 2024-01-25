@@ -51,16 +51,17 @@ namespace UltrakULL.Harmony_Patches
                     string currentLanguage = LanguageManager.CurrentLanguage.metadata.langDisplayName;
                     switch(currentLanguage)
                     {
-                        case "Traditional Chinese": case "Simplified Chinese":
+                        case "Traditional Chinese":
+                        case "Simplified Chinese":
                         {
-                            //Swap with a Japanese or Chinese font when it comes in.
+                            //Swap with a Chinese font when it comes in.
                             __instance.font = Core.CJKFontTMP;
                             break;
                         }
                         case "Japanese":
                         {
-                            //tofu
-                            __instance.font = Core.jaFixFontTMP;
+                            //japanese tofu fix
+                            __instance.font = Core.jaFontTMP;
                             break;
                         }
                         default:

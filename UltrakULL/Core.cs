@@ -30,7 +30,7 @@ namespace UltrakULL
         public static TMP_FontAsset GlobalFontTMP;
         public static TMP_FontAsset MuseumFontTMP;
         public static TMP_FontAsset CJKFontTMP;
-        public static TMP_FontAsset jaFixFontTMP;
+        public static TMP_FontAsset jaFontTMP;
         
         public static bool wasLanguageReset = false;
         
@@ -151,8 +151,27 @@ namespace UltrakULL
             Logging.Message("Loading font resource bundle...");
             //Will load from the same directory that the dll is in.
             AssetBundle fontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder,"ullfont.resource"));
+            AssetBundle jafontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder,"jafont.resource"));
 
-            if(fontBundle == null)
+            if(jafontBundle == null)
+            {
+                Logging.Error("FAILED TO LOAD JAPANESE TMP FONT(´・ω・`)*No AssetBundle?");
+            }
+            else
+            {
+                Logging.Message("Japanese Font AssetBundle has been loaded.");
+                TMP_FontAsset jafontTMP = jafontBundle.LoadAsset<TMP_FontAsset>("jafix_TMP");
+                if(jafontTMP)
+                {
+                    Logging.Warn("Japanese TMP font loaded.");
+                    jaFontTMP = jafontTMP;
+                }
+                else
+                {
+                    Logging.Error("Why there's no Japanese TMP Font in this assetbundle(´・ω・`)");
+                }
+            }
+            if (fontBundle == null)
             {
                 Logging.Error("FAILED TO LOAD");
             }
@@ -160,18 +179,15 @@ namespace UltrakULL
             {
                 Logging.Message("Font bundle loaded.");
                 Logging.Message("Loading fonts from bundle...");
-                //somehow Attractor's counter broke with extended font
-                //Font font1 = fontBundle.LoadAsset<Font>("VCR_OSD_MONO_EXTENDED");
-                Font font1 = fontBundle.LoadAsset<Font>("VCR_OSD_MONO.1");
+                //Somehow, the Attractor's counter is seems to be not working with the extended font.
+                //I don't know the proper way to fix that, and remove this font can cause some issues, so i left it here.
+                Font font1 = fontBundle.LoadAsset<Font>("VCR_OSD_MONO_EXTENDED");
                 Font font2 = fontBundle.LoadAsset<Font>("EBGaramond-Regular");
                 TMP_FontAsset font1TMP = fontBundle.LoadAsset<TMP_FontAsset>("VCR_OSD_MONO_EXTENDED_TMP");
                 TMP_FontAsset font2TMP = fontBundle.LoadAsset<TMP_FontAsset>("EBGaramond-Regular_TMP");
     
                 
                 TMP_FontAsset cjkFontTMP = fontBundle.LoadAsset<TMP_FontAsset>("NotoSerif-CJK_TMP");
-                //i don't know how to edit asset bundle.
-                AssetBundle jafixfontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder,"jafont.resource"));
-                TMP_FontAsset jafixFontTMP = jafixfontBundle.LoadAsset<TMP_FontAsset>("jafix_TMP");
                 if(font1 && font2)
                 {
                     Logging.Warn("Normal fonts loaded.");
@@ -184,13 +200,13 @@ namespace UltrakULL
                     Logging.Error("FAILED TO LOAD NORMAL FONTS");
                     GlobalFontReady = false;
                 }
-                if(font1TMP && font2TMP && cjkFontTMP && jafixFontTMP)
+                if(font1TMP && font2TMP && cjkFontTMP)
                 {
                     Logging.Warn("Normal TMP fonts loaded.");
                     GlobalFontTMP = font1TMP;
                     MuseumFontTMP = font2TMP;
                     CJKFontTMP = cjkFontTMP;
-                    jaFixFontTMP = jafixFontTMP;
+                    
                     
                     TMPFontReady = true;
                 }
