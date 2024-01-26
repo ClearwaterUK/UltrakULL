@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
+using System.Data;
 
 namespace UltrakULL
 {
@@ -247,6 +248,30 @@ namespace UltrakULL
 
         }
 
+        private static void RTLActButton(GameObject act1Object, Text act1Text)
+        {
+			RectTransform rect = act1Text.rectTransform;
+			if (rect != null)
+			{
+				rect.anchorMax = new Vector2(1.0f, 0.5f);
+				rect.anchorMin = new Vector2(1.0f, 0.5f);
+				rect.anchoredPosition = new Vector3(-388f, 0f, 0f);
+			}
+
+			GameObject act1RankIcon = act1Object.transform.Find("RankPanel").gameObject;
+			if (act1RankIcon != null)
+			{
+				Image rankImage = act1RankIcon.GetComponent<Image>();
+				if (rankImage != null)
+				{
+					RectTransform rankRect = rankImage.rectTransform;
+					rankRect.anchorMin = new Vector2(0.00f, 0.50f);
+					rankRect.anchorMax = new Vector2(0.00f, 0.50f);
+					rankRect.anchoredPosition = new Vector3(43f, 0f, 0f);
+				}
+			}
+		}
+
         private static void PatchChapterSelect(GameObject frontEnd)
         {
             GameObject chapterObject = GetGameObjectChild(frontEnd, "Chapter Select");
@@ -259,7 +284,7 @@ namespace UltrakULL
 
             GameObject act1Object = GetGameObjectChild(chapterObject, "Act I");
             Text act1Text = GetTextfromGameObject(act1Object.transform.Find("Name").gameObject);
-            act1Text.text = LanguageManager.CurrentLanguage.frontend.chapter_act1 + "\t\t";
+			act1Text.text = LanguageManager.CurrentLanguage.frontend.chapter_act1;
 
             GameObject act2Object = GetGameObjectChild(chapterObject, "Act II");
             Text act2Text = GetTextfromGameObject(act2Object.transform.Find("Name").gameObject);
@@ -280,7 +305,18 @@ namespace UltrakULL
             GameObject sandboxObject = GetGameObjectChild(chapterObject, "Sandbox");
             Text sandboxText = GetTextfromGameObject(sandboxObject.transform.Find("Name").gameObject);
             sandboxText.text = LanguageManager.CurrentLanguage.frontend.chapter_sandbox;
-        }
+
+			if (LanguageManager.IsRightToLeft)
+			{
+				RTLActButton(preludeObject, preludeText);
+				RTLActButton(act1Object, act1Text);
+				RTLActButton(act2Object, act2Text);
+				RTLActButton(act3Object, act3Text);
+				RTLActButton(sandboxObject, sandboxText);
+				RTLActButton(cgObject, cgText);
+				RTLActButton(primeObject, primeText);
+			}
+		}
 
         private static void PatchLevelSelectPrelude(GameObject frontEnd)
         {
