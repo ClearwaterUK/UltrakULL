@@ -8,47 +8,78 @@ using UltrakULL.json;
 
 namespace UltrakULL.Harmony_Patches
 {
+
+	[HarmonyPatch(typeof(RankHelper), nameof(RankHelper.GetRankLetter))]
 	public static class RankHelperPatch
 	{
-		[HarmonyPrefix]
-		[HarmonyPatch(typeof(RankHelper), nameof(RankHelper.GetRankLetter))]
-		public static string GetRankLetter(int rank)
+		[HarmonyPostfix]
+		public static void Patch(ref string __result, int rank)
 		{
+			// string __result;
+#if DEBUG
+			Logging.Info("[DEBUG] RankHelper::GetRankLetter -> CALLED");
+#endif
 			Rank ranks = LanguageManager.CurrentLanguage.ranks;
 			if (rank < 0)
 			{
-				return "";
+				// return "";
+				return;
 			}
 
 			switch (rank)
 			{
 				case 12:
 					if (ranks.P != null)
-						return ranks.P;
-					return "P";
+					{
+						Logging.Info("[DEBUG] RankHelper::GetRankLetter -> Result is lang P!");
+						__result = ranks.P;
+						// return __result;
+					}
+					break;
 				case 1:
 					if (ranks.C != null)
-						return ranks.C;
-					return "C";
+					{
+						Logging.Info("[DEBUG] RankHelper::GetRankLetter -> Result is lang C!");
+						__result = ranks.C;
+						// return __result;
+					}
+					break;
 				case 2:
 					if (ranks.B != null)
-						return ranks.B;
-					return "B";
+					{
+						Logging.Info("[DEBUG] RankHelper::GetRankLetter -> Result is lang B!");
+						__result = ranks.B;
+						// return __result;
+					}
+					break;
 				case 3:
 					if (ranks.A != null)
-						return ranks.A;
-					return "A";
+					{
+						Logging.Info("[DEBUG] RankHelper::GetRankLetter -> Result is lang A!");
+						__result = ranks.A;
+						// return __result;
+					}
+					break;
 				case 4:
 				case 5:
 				case 6:
 					if (ranks.S != null)
-						return ranks.S;
-					return "S";
+					{
+						Logging.Info("[DEBUG] RankHelper::GetRankLetter -> Result is lang S!");
+						__result = ranks.S;
+						// return __result;
+					}
+					break;
 				default:
 					if (ranks.D != null)
-						return ranks.D;
-					return "D";
+					{
+						Logging.Info("[DEBUG] RankHelper::GetRankLetter -> Result is lang D!");
+						__result = ranks.D;
+						// return __result;
+					}
+					break;
 			}
+			// return "";
 		}
 	}
 }

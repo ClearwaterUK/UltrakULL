@@ -13,6 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <ULTRAKILLPath>N:\SteamLibrary\steamapps\common\ULTRAKILL\</ULTRAKILLPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -227,6 +228,7 @@
     <Compile Include="Harmony Patches\ScanningStuff.cs" />
     <Compile Include="Harmony Patches\ShopPatch.cs" />
     <Compile Include="Harmony Patches\SpawnMenu.cs" />
+    <Compile Include="Harmony Patches\Rank.cs" />
     <Compile Include="Harmony Patches\StyleHUD.cs" />
     <Compile Include="Harmony Patches\Subtitles\GabrielSubtitlesSwap.cs" />
     <Compile Include="Harmony Patches\Subtitles\MandaloreSubtitlesSwap.cs" />
