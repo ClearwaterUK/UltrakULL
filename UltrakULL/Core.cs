@@ -32,6 +32,7 @@ namespace UltrakULL
         public static TMP_FontAsset CJKFontTMP;
         public static TMP_FontAsset ArabicFontTMP;
 		public static TMP_FontAsset HebrewFontTMP;
+        public static Sprite[] CustomRankImages;
 
         public static Sprite ArabicUltrakillLogo;
 
@@ -169,6 +170,25 @@ namespace UltrakULL
                 TMP_FontAsset arabicFontAsset = extraFontBundle.LoadAsset<TMP_FontAsset>("segoeui SDF Arabic");
 				TMP_FontAsset hebrewFontAsset = extraFontBundle.LoadAsset<TMP_FontAsset>("segoeui SDF Hebrew");
 				Sprite arabicLogo = extraFontBundle.LoadAsset<Sprite>("2023_improved_logo.png");
+
+                Sprite rankD = extraFontBundle.LoadAsset<Sprite>("RankD.png");
+                Sprite rankC = extraFontBundle.LoadAsset<Sprite>("RankC.png");
+                Sprite rankB = extraFontBundle.LoadAsset<Sprite>("RankB.png");
+                Sprite rankA = extraFontBundle.LoadAsset<Sprite>("RankA.png");
+                Sprite rankS = extraFontBundle.LoadAsset<Sprite>("RankS.png");
+                Sprite rankSS = extraFontBundle.LoadAsset<Sprite>("RankSS.png");
+                Sprite rankSSS = extraFontBundle.LoadAsset<Sprite>("RankSSS.png");
+                Sprite rankU = extraFontBundle.LoadAsset<Sprite>("RankU.png");
+
+                CustomRankImages = new Sprite[8];
+				CustomRankImages[0] = rankD;
+				CustomRankImages[1] = rankC;
+				CustomRankImages[2] = rankB;
+				CustomRankImages[3] = rankA;
+				CustomRankImages[4] = rankS;
+				CustomRankImages[5] = rankSS;
+				CustomRankImages[6] = rankSSS;
+				CustomRankImages[7] = rankU;
 
 				if (arabicFontAsset == null)
                 {

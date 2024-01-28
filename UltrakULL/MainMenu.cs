@@ -136,10 +136,10 @@ namespace UltrakULL
 
 				if (LanguageManager.IsRightToLeft)
 				{
-					RTLActButton(violentTextObject, violentText);
-					RTLActButton(standardTextObject, standardText);
-					RTLActButton(lenientTextObject, lenientText);
-					RTLActButton(harmlessTextObject, harmlessText);
+					RtlFixDifficultyButton(violentTextObject, violentText);
+					RtlFixDifficultyButton(standardTextObject, standardText);
+					RtlFixDifficultyButton(lenientTextObject, lenientText);
+					RtlFixDifficultyButton(harmlessTextObject, harmlessText);
 				}
 
 				//Tooltip
@@ -257,7 +257,7 @@ namespace UltrakULL
 
 		}
 
-		public static void RTLActButton(GameObject obj, Text txt)
+		public static void RtlFixActButton(GameObject obj, Text txt)
 		{
 			RectTransform rect = txt.rectTransform;
 			if (rect != null)
@@ -279,6 +279,53 @@ namespace UltrakULL
 					rankRect.anchoredPosition = new Vector3(43f, 0f, 0f);
 				}
 			}
+		}
+
+		public static void RtlFixDifficultyButton(GameObject obj, Text txt)
+		{
+			RectTransform rect = txt.rectTransform;
+			if (rect != null)
+			{
+				rect.anchorMax = new Vector2(1.0f, 0.5f);
+				rect.anchorMin = new Vector2(1.0f, 0.5f);
+				rect.anchoredPosition = new Vector3(-388f, 0f, 0f);
+			}
+
+			GameObject progressObject = obj.transform.Find("Progress").gameObject;
+			if (progressObject != null)
+			{
+				Text progress = progressObject.GetComponent<Text>();
+				if (progress != null)
+				{
+					progress.alignment = TextAnchor.MiddleLeft;
+					RectTransform rectTrans = progress.rectTransform;
+					if (rectTrans != null)
+					{
+						rectTrans.anchoredPosition = new Vector2(380.0f - 60.0f, 0.0f);
+					}
+				}
+				else
+				{
+				}
+			}
+
+			GameObject act1RankIcon = obj.transform.Find("RankPanel").gameObject;
+			if (act1RankIcon != null)
+			{
+				Image rankImage = act1RankIcon.GetComponent<Image>();
+				if (rankImage != null)
+				{
+					RectTransform rankRect = rankImage.rectTransform;
+					if (rankRect != null)
+					{
+						rankRect.anchorMin = new Vector2(0.00f, 0.50f);
+						rankRect.anchorMax = new Vector2(0.00f, 0.50f);
+						rankRect.anchoredPosition = new Vector3(43f, 0f, 0f);
+					}
+				}
+			}
+
+
 		}
 
 		private static void PatchChapterSelect(GameObject frontEnd)
@@ -317,13 +364,13 @@ namespace UltrakULL
 
 			if (LanguageManager.IsRightToLeft)
 			{
-				RTLActButton(preludeObject, preludeText);
-				RTLActButton(act1Object, act1Text);
-				RTLActButton(act2Object, act2Text);
-				RTLActButton(act3Object, act3Text);
-				RTLActButton(sandboxObject, sandboxText);
-				RTLActButton(cgObject, cgText);
-				RTLActButton(primeObject, primeText);
+				RtlFixActButton(preludeObject, preludeText);
+				RtlFixActButton(act1Object, act1Text);
+				RtlFixActButton(act2Object, act2Text);
+				RtlFixActButton(act3Object, act3Text);
+				RtlFixActButton(sandboxObject, sandboxText);
+				RtlFixActButton(cgObject, cgText);
+				RtlFixActButton(primeObject, primeText);
 			}
 		}
 
