@@ -100,7 +100,25 @@ namespace UltrakULL.Harmony_Patches
 										__instance.alignment = TextAlignmentOptions.BaselineRight;
 										break;
 								}
-								__instance.font = Core.ArabicFontTMP;
+
+								Core.GlobalFontTMP.fallbackFontAssetTable.Add(Core.ArabicFontTMP);
+
+								if (GetCurrentSceneName() == "CreditsMuseum2")
+								{
+									if (__instance.font.name == "GFS Garaldus")
+									{
+										__instance.font = Core.MuseumFontTMP;
+									}
+									else
+									{
+										__instance.font = Core.GlobalFontTMP;
+									}
+								}
+								else
+								{
+									__instance.font = Core.GlobalFontTMP;
+								}
+
 								break;
 							}
 

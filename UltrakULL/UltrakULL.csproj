@@ -201,6 +201,7 @@
     <Compile Include="Harmony Patches\AudioSwaps\SisyphusPrimeAudioSwap.cs" />
     <Compile Include="Harmony Patches\BossBarManager.cs" />
     <Compile Include="Harmony Patches\CheatsManager.cs" />
+    <Compile Include="Harmony Patches\HellMap.cs" />
     <Compile Include="Harmony Patches\RankHelperPatch.cs" />
     <Compile Include="Harmony Patches\Coin.cs" />
     <Compile Include="Harmony Patches\ControlBindNames.cs" />
