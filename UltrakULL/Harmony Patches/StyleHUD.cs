@@ -57,7 +57,12 @@ namespace UltrakULL.Harmony_Patches
 
             try
 			{
+				int c = Mathf.Clamp(__instance.rankIndex, 0, 7);
 				int i = Mathf.Clamp(__instance.rankIndex + 1, 0, 7);
+				if (c - i == 0)
+				{
+					return; // no change
+				}
 				__instance.ranks[i].sprite = Core.CustomRankImages[i];
             }
             catch (Exception e)
@@ -77,7 +82,12 @@ namespace UltrakULL.Harmony_Patches
 
 			try
 			{
+                int c = Mathf.Clamp(__instance.rankIndex, 0, 7);
                 int i = Mathf.Clamp(__instance.rankIndex - 1, 0, 7);
+                if (c - i == 0)
+                {
+                    return; // no change
+                }
                 __instance.ranks[i].sprite = Core.CustomRankImages[i];
             }
             catch (Exception e)

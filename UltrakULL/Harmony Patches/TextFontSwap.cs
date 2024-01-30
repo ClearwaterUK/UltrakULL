@@ -1,4 +1,6 @@
 ﻿using HarmonyLib;
+using System;
+using System.Collections.Generic;
 using TMPro;
 using UltrakULL.json;
 using UnityEngine;
@@ -14,9 +16,19 @@ namespace UltrakULL.Harmony_Patches
 		[HarmonyPatch(typeof(Text), "OnEnable")]
 		public static class TextFontSwapper
 		{
+			static List<IntPtr> objectsFixed = new List<IntPtr>();
+
 			[HarmonyPostfix]
-			public static void SwapFont(ref Text __instance)
+			public static void SwapFont(ref Text __instance, IntPtr ___m_CachedPtr)
 			{
+				if (objectsFixed.Count > 0)
+				{
+					if (objectsFixed.Contains(___m_CachedPtr))
+					{
+						return;
+					}
+				}
+
 				if (LanguageManager.IsRightToLeft)
 				{
 					switch (__instance.alignment)
@@ -30,9 +42,17 @@ namespace UltrakULL.Harmony_Patches
 						case LowerLeft:
 							__instance.alignment = LowerRight;
 							break;
+						case UpperRight:
+							__instance.alignment = UpperLeft;
+							break;
+						case MiddleRight:
+							__instance.alignment = MiddleLeft;
+							break;
+						case LowerRight:
+							__instance.alignment = LowerLeft;
+							break;
 					}
-					Vector2 anchor = __instance.rectTransform.anchoredPosition;
-					anchor.Set(1.0f - anchor.x, anchor.y);
+
 					__instance.alignByGeometry = true;
 				}
 
@@ -54,6 +74,8 @@ namespace UltrakULL.Harmony_Patches
 						__instance.font = Core.GlobalFont;
 					}
 				}
+
+				objectsFixed.Add(___m_CachedPtr);
 			}
 		}
 	}
@@ -63,9 +85,20 @@ namespace UltrakULL.Harmony_Patches
 		[HarmonyPatch(typeof(TextMeshProUGUI), "OnEnable")]
 		public static class TextMeshProFontSwapper
 		{
+
+			static List<IntPtr> objectsFixed = new List<IntPtr>();
+
 			[HarmonyPostfix]
-			public static void SwapFont(ref TextMeshProUGUI __instance)
+			public static void SwapFont(ref TextMeshProUGUI __instance, IntPtr ___m_CachedPtr)
 			{
+				if (objectsFixed.Count > 0)
+				{
+					if (objectsFixed.Contains(___m_CachedPtr))
+					{
+						return;
+					}
+				}
+
 
 				if (Core.TMPFontReady && !isUsingEnglish())
 				{
@@ -151,7 +184,10 @@ namespace UltrakULL.Harmony_Patches
 								break;
 							}
 					}
+
+					objectsFixed.Add(___m_CachedPtr);
 				}
+
 			}
 		}
 	}
