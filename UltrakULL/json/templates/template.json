@@ -12,7 +12,7 @@
 	"body": {
 		"bodyName": "A template file for translating. NOT MEANT TO BE USED AS-IS WITH UltrakULL. Make sure you edit the metadata to reflect the author and language changes!"
 	},
-	
+
 	"devMuseum": {
 		"museum_bookHakita1": "",
 		"museum_bookHakita2": "",
@@ -27,7 +27,7 @@
 		"museum_bookHakita11": "",
 		"museum_bookHakita12": "",
 		"museum_bookHakita13": "",
-		
+
 		"museum_bookFrancisXie1": "",
 		"museum_bookFrancisXie2": "",
 		"museum_bookFrancisXie3": "",
@@ -47,8 +47,8 @@
 		"museum_bookJerichoRus7": "",
 		"museum_bookJerichoRus8": "",
 		"museum_bookJerichoRus9": "",
-		"museum_bookJerichoRus10": "", 
-		
+		"museum_bookJerichoRus10": "",
+
 		"museum_bookBigRockBMP1": "",
 		"museum_bookBigRockBMP2": "",
 		"museum_bookBigRockBMP3": "",
@@ -70,7 +70,7 @@
 		"museum_bookVictoriaHolland6": "",
 		"museum_bookVictoriaHolland7": "",
 		"museum_bookVictoriaHolland8": "",
-		
+
 		"museum_bookToniStigell1": "",
 		"museum_bookToniStigell2": "",
 		"museum_bookToniStigell3": "",
@@ -89,7 +89,7 @@
 		"museum_bookSamuelJamesBryan1": "",
 		"museum_bookSamuelJamesBryan2": "",
 		"museum_bookSamuelJamesBryan3": "",
-		
+
 		"museum_bookQATeam1": "",
 		"museum_bookQATeam2": "",
 		"museum_bookQATeam3": "",
@@ -100,7 +100,7 @@
 		"museum_bookQATeam8": "",
 		"museum_bookQATeam9": "",
 		"museum_bookQATeam10": "",
-		
+
 		"museum_bookPitr1": "",
 		"museum_bookPitr2": "",
 		"museum_bookPitr3": "",
@@ -154,7 +154,7 @@
 		"museum_bookSalad3": "",
 		"museum_bookSalad4": "",
 		"museum_bookSalad5": "",
-		
+
 		"museum_bookJacobHHR1": "",
 		"museum_bookJacobHHR2": "",
 		"museum_bookJacobHHR3": "",
@@ -174,6 +174,8 @@
 		"museum_bookAdditionalMusic8": "",
 		"museum_bookAdditionalMusic9": "",
 		"museum_bookAdditionalMusic10": "",
+		"museum_bookAdditionalMusic11": "",
+		"museum_bookAdditionalMusic12": "",
 
 		"museum_bookAdditionalCredits1": "",
 		"museum_bookAdditionalCredits2": "",
@@ -182,6 +184,7 @@
 		"museum_bookAdditionalCredits5": "",
 		"museum_bookAdditionalCredits6": "",
 		"museum_bookAdditionalCredits7": "",
+		"museum_bookAdditionalCredits8": "",
 
 		"museum_bookStephanWeyte1": "",
 		"museum_bookStephanWeyte2": "",
@@ -249,7 +252,7 @@
 		"museum_enemiesFilth5": "",
 		"museum_enemiesFilth6": "",
 		"museum_enemiesFilth7": "",
-		
+
 		"museum_enemiesStray1": "",
 		"museum_enemiesStray2": "",
 		"museum_enemiesStray3": "",
@@ -284,8 +287,8 @@
 		"museum_plaquesNerdRoom": "",
 		"museum_plaquesRestRoom": "",
 		"museum_plaquesTalkRoom": "",
-		
-		
+
+
 		"museum_plaquesHakita1": "",
 		"museum_plaquesHakita2": "",
 
@@ -315,10 +318,10 @@
 
 		"museum_plaquesCameronMartin1": "",
 		"museum_plaquesCameronMartin2": "",
-		
+
 		"museum_plaquesDaliaFigueroa1": "",
 		"museum_plaquesDaliaFigueroa2": "",
-		
+
 		"museum_plaquesTuckerWilkin1": "",
 		"museum_plaquesTuckerWilkin2": "",
 
@@ -381,14 +384,11 @@
 
 		"museum_plaquesMandalore1": "",
 		"museum_plaquesMandalore2": "",
-		
+
 		"museum_rocketRace1": "",
 		"museum_rocketRace2": "",
 		"museum_rocketRaceStart": "",
 		"museum_rocketRaceResult": "",
-		
-		"museum_cinemaPlay": "",
-		"museum_cinemaStop": "",
 
 		"museum_chessTip": "",
 		"museum_chessVs": "",
@@ -401,10 +401,13 @@
 		"museum_chessWhitewin": "",
 		"museum_chessBlackwin": "",
 
+		"museum_cinemaPlay": "",
+		"museum_cinemaStop": "",
+
 		"museum_spoiler1": "",
 		"museum_spoiler2": "",
 		"museum_spoiler3": ""
-		
+
 	},
 	
 	"fishing": {
@@ -1197,6 +1200,8 @@
 		"controls_secondaryFire": "",
 		"controls_arms": "",
 		"controls_punch": "",
+		"controls_punchFeedbacker": "",
+		"controls_punchKnuckleblaster": "",
 		"controls_nextWeapon": "",
 		"controls_previousWeapon": "",
 		"controls_lastUsedWeapon": "",
@@ -1205,16 +1210,11 @@
 		"controls_slide": "",
 		"controls_whiplash": "",
 		"controls_weapons": "",
-		"controls_slot0": "",
-		"controls_slot1": "",
-		"controls_slot2": "",
-		"controls_slot3": "",
-		"controls_slot4": "",
-		"controls_slot5": "",
-		"controls_slot6": "",
-		"controls_slot7": "",
-		"controls_slot8": "",
-		"controls_slot9": "",
+		"controls_revolver": "",
+		"controls_shotgun": "",
+		"controls_nailgun": "",
+		"controls_railcannon": "",
+		"controls_rocketLauncher": "",
 		"controls_scrollType": "",
 		"controls_scrollTypeWeapons": "",
 		"controls_scrollTypeVariations": "",
@@ -1373,7 +1373,7 @@
 		"colors_variationRed": "",
 		"colors_variationGold": "",
 		"colors_enemies": "",
-		
+
 		"rumble_title": "",
 		"rumble_finalMultiplier": "",
 		"rumble_coinToss": "",
@@ -2445,7 +2445,7 @@
 	},
 	"act3": {
 		"act3_violenceFirst_doorOpens": "",
-		
+
 		"act3_violenceSecond_guttermanTutorial": "",
 		"act3_violenceSecond_biggerBoom": "",
 		"act3_violenceSecond_gateControlTitle": "",
@@ -2458,7 +2458,7 @@
 		"act3_violenceSecond_payloadControlLower": "",
 		"act3_violenceSecond_payloadControlWait": "",
 		"act3_violenceSecond_payloadControlEmpty": "",
-		
+
 		"act3_violenceThird_feedIt": "",
 		"act3_violenceThird_becomeMarked": "",
 		"act3_violenceThird_becomeMarkedButton": "",
@@ -2467,7 +2467,7 @@
 
 		"act3_violenceFourth_floodingWarning": "",
 		"act3_violenceFourth_countdownTitle": "",
-		
+
 		"act3_secretNotReady": ""
 	},
 	"primeSanctum": {
