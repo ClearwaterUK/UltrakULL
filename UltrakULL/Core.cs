@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -31,8 +31,13 @@ namespace UltrakULL
         public static TMP_FontAsset MuseumFontTMP;
         public static TMP_FontAsset CJKFontTMP;
         public static TMP_FontAsset jaFontTMP;
-        
-        public static bool wasLanguageReset = false;
+        public static TMP_FontAsset ArabicFontTMP;
+		public static TMP_FontAsset HebrewFontTMP;
+        public static Sprite[] CustomRankImages;
+
+        public static Sprite ArabicUltrakillLogo;
+
+		public static bool wasLanguageReset = false;
         
         private static readonly HttpClient Client = new HttpClient();
         
@@ -151,9 +156,9 @@ namespace UltrakULL
             Logging.Message("Loading font resource bundle...");
             //Will load from the same directory that the dll is in.
             AssetBundle fontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder,"ullfont.resource"));
-            AssetBundle jafontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder,"jafont.resource"));
+            AssetBundle jafontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder, "jafont.resource"));
 
-            if(jafontBundle == null)
+            if (jafontBundle == null)
             {
                 Logging.Error("FAILED TO LOAD JAPANESE TMP FONT(´・ω・`)*No AssetBundle?");
             }
@@ -161,7 +166,7 @@ namespace UltrakULL
             {
                 Logging.Message("Japanese Font AssetBundle has been loaded.");
                 TMP_FontAsset jafontTMP = jafontBundle.LoadAsset<TMP_FontAsset>("jafix_TMP");
-                if(jafontTMP)
+                if (jafontTMP)
                 {
                     Logging.Warn("Japanese TMP font loaded.");
                     jaFontTMP = jafontTMP;
@@ -171,7 +176,72 @@ namespace UltrakULL
                     Logging.Error("Why there's no Japanese TMP Font in this assetbundle(´・ω・`)");
                 }
             }
-            if (fontBundle == null)
+
+
+                AssetBundle extraFontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder, "arabfonts"));
+
+            if (extraFontBundle == null)
+            {
+                Logging.Error("Failed to load Arabic / Hebrew fonts. :( (No extra AssetBundle found!)");
+            }
+            else
+            {
+                Logging.Message("Extra Fonts Asset Bundle has been loaded...");
+
+                TMP_FontAsset arabicFontAsset = extraFontBundle.LoadAsset<TMP_FontAsset>("segoeui SDF Arabic");
+				TMP_FontAsset hebrewFontAsset = extraFontBundle.LoadAsset<TMP_FontAsset>("segoeui SDF Hebrew");
+				Sprite arabicLogo = extraFontBundle.LoadAsset<Sprite>("2023_improved_logo.png");
+
+                Sprite rankD = extraFontBundle.LoadAsset<Sprite>("RankD.png");
+                Sprite rankC = extraFontBundle.LoadAsset<Sprite>("RankC.png");
+                Sprite rankB = extraFontBundle.LoadAsset<Sprite>("RankB.png");
+                Sprite rankA = extraFontBundle.LoadAsset<Sprite>("RankA.png");
+                Sprite rankS = extraFontBundle.LoadAsset<Sprite>("RankS.png");
+                Sprite rankSS = extraFontBundle.LoadAsset<Sprite>("RankSS.png");
+                Sprite rankSSS = extraFontBundle.LoadAsset<Sprite>("RankSSS.png");
+                Sprite rankU = extraFontBundle.LoadAsset<Sprite>("RankU.png");
+
+                CustomRankImages = new Sprite[8];
+				CustomRankImages[0] = rankD;
+				CustomRankImages[1] = rankC;
+				CustomRankImages[2] = rankB;
+				CustomRankImages[3] = rankA;
+				CustomRankImages[4] = rankS;
+				CustomRankImages[5] = rankSS;
+				CustomRankImages[6] = rankSSS;
+				CustomRankImages[7] = rankU;
+
+				if (arabicFontAsset == null)
+                {
+                    Logging.Warn("There is no Arabic font in this AssetBundle!?");
+                }
+                else
+                {
+                    Logging.Message("Arabic Font has been loaded.");
+                    ArabicFontTMP = arabicFontAsset;
+                }
+
+                if (arabicLogo == null)
+                {
+					Logging.Warn("There is no Arabic logo in this AssetBundle!?");
+				}
+                else
+                {
+                    ArabicUltrakillLogo = arabicLogo;
+                }
+
+				if (hebrewFontAsset == null)
+				{
+					Logging.Warn("There is no Hebrew font in this AssetBundle!?");
+				}
+				else
+				{
+					Logging.Message("Hebrew Font has been loaded.");
+					HebrewFontTMP = hebrewFontAsset;
+				}
+			}
+
+			if (fontBundle == null)
             {
                 Logging.Error("FAILED TO LOAD");
             }
@@ -179,8 +249,7 @@ namespace UltrakULL
             {
                 Logging.Message("Font bundle loaded.");
                 Logging.Message("Loading fonts from bundle...");
-                //Somehow, the Attractor's counter is seems to be not working with the extended font.
-                //I don't know the proper way to fix that, and remove this font can cause some issues, so i left it here.
+                
                 Font font1 = fontBundle.LoadAsset<Font>("VCR_OSD_MONO_EXTENDED");
                 Font font2 = fontBundle.LoadAsset<Font>("EBGaramond-Regular");
                 TMP_FontAsset font1TMP = fontBundle.LoadAsset<TMP_FontAsset>("VCR_OSD_MONO_EXTENDED_TMP");
@@ -188,6 +257,7 @@ namespace UltrakULL
     
                 
                 TMP_FontAsset cjkFontTMP = fontBundle.LoadAsset<TMP_FontAsset>("NotoSerif-CJK_TMP");
+                
                 if(font1 && font2)
                 {
                     Logging.Warn("Normal fonts loaded.");
@@ -206,7 +276,6 @@ namespace UltrakULL
                     GlobalFontTMP = font1TMP;
                     MuseumFontTMP = font2TMP;
                     CJKFontTMP = cjkFontTMP;
-                    
                     
                     TMPFontReady = true;
                 }

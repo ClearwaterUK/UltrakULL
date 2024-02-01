@@ -81,6 +81,8 @@ namespace UltrakULL
                 case "FLESH PANOPTICON": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_fleshPanopticon; }
                 case "SISYPHUS PRIME": case "SISYPHUSPRIME":{ return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_sisyphusPrime; }
                 case "BIG JOHNINATOR": case "BIGJOHNATOR": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_bigJohninator; }
+                case "1000-THR \"EARTHMOVER\"": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_earthmover; }
+                case "1000-THR DEFENSE SYSTEM": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_earthmoverDefence; }
                 default: { return "Untranslated enemy name: " + originalName; }
             }
         }

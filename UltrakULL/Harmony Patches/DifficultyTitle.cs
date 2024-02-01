@@ -16,7 +16,8 @@ namespace UltrakULL.Harmony_Patches
         public static bool Check_MyPatch(DifficultyTitle __instance, ref Text ___txt, ref TMP_Text ___txt2)
         {
             if(isUsingEnglish())
-            {int @int = MonoSingleton<PrefsManager>.Instance.GetInt("difficulty", 0);
+            {
+                int @int = MonoSingleton<PrefsManager>.Instance.GetInt("difficulty", 0);
                 string text = "";
                 if (__instance.lines)
                 {
