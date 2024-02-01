@@ -10,7 +10,7 @@ act3: violenceThird_(feedIt, becomeMarked, becomeMarkedButton, becomeMarkedButto
 act3: violenceFourth_floodingWarning, violenceFourth_countdownTitle, secretNotReady
 enemyBios: gutterman_(1-4), guttertank_(1-7), earthmover_(1-6), mannequin_(1-5), minotaur_(1-4), gutterman_strategy(1-4), guttertank_strategy(1-2), earthmover_strategy(1-2), mannequin_strategy(1-3), minotaur_strategy(1-2)
 enemyName: gutterman, guttertank, earthmover, mannequin, minotaur, puppet, boss_earthmover, boss_earthmoverDefence, boss_bigJohninator
-devMuseum: bookAdditionalCredits7, bookMandalore7, chessTip, chess(Vs, Newgame, Black, White, Bot, Player, Settingsclose, Whitewin, Blackwin)
+devMuseum: museum_bookAdditionalMusic(11-12), bookAdditionalCredits(7-8), bookMandalore7, chess(Tip, Vs, Newgame, Black, White, Bot, Player, Settingsclose, Whitewin, Blackwin)
 books: violenceFirst(1-9), violenceFirst_Slate(1-4), violenceSecond(1-2), violenceFourth(1-5)
 cheats: invincibility, enemiesHateEnemies, enemiesIgnorePlayer
 enemyAlter: hookPointTitle, sandboxTitle, enrage, enrageEternal, sandified, ignorePlayer, attackEnemies, hasSkull, altarType
@@ -18,17 +18,17 @@ style: landyours, rocketreturn, roundtrip, served, strike, boiled, forthee, guar
 frontEnd: layer_(violence, fraud, treachery)
 options: general_parryFlash, general_sandboxOverwrite, general_advancedOptions, general_advancedOptionsCustomize
 options: graphics_gamma1, graphics_gamma2
-options: controls_movementTitle, controls_weaponTitle
+options: controls_movementTitle, controls_weaponTitle, controls_punch(Feedbacker, Knuckleblaster), controls_revolver, controls_shotgun, controls_nailgun, controls_railcannon, controls_rocketLauncher
 options: advanced_title, advanced_currentLevel, advanced_cybergrindResetText1, advanced_cybergrindResetText2, advanced_cybergrindResetCancel, advanced_cybergrindResetConfirm, advanced_cybergrindLocalHighScore, advanced_cybergrindResetButton, advanced_level52, advanced_level71, advanced_level73, advanced_52WaterScrolling, advanced_52WaterWaves, advanced_71Dark, advanced_73Grass,
 
 MODIFIED:
-devMuseum: bookAdditionalCredits(2-6) -> bookAdditionalCredits(3-7)
+devMuseum: bookAdditionalCredits(2-3) -> bookAdditionalCredits(4-5), bookAdditionalCredits(4-6) -> bookAdditionalCredits(6-8)
 devMuseum: bookMandalore(5-6) -> bookMandalore(6-7)
 enemyAlter: jumpPadPower -> power
 
 REMOVED:
 act2: secretNotReady
-options: controls_actions
+options: controls_actions, controls_slot(0-9)
 enemyName: minos, boss_v2, boss_v2Second
 
 1.2.3b:
