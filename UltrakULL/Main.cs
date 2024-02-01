@@ -12,8 +12,8 @@ using System.Reflection;
 /*
  *	UltrakULL (Ultrakill Language Library)
  *	Written by Clearwater
- *  Additional code contributions by Temperz87, Flazhik, BitKoven, CoatlessAli and others
- *  Translations by UltrakULL Translation Team
+ *  	Additional code contributions by Temperz87, Flazhik, BitKoven, CoatlessAli and others
+ *  	Translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
  *	Last updated: 31th January 2024
  *	
