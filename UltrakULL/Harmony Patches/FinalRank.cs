@@ -55,7 +55,14 @@ namespace UltrakULL.Harmony_Patches
                 else
                 {
                     TMP_Text text4 = __instance.extraInfo;
-                    text4.text += "+ " + LanguageManager.CurrentLanguage.misc.endstats_noRestarts + "\n  (+500<color=orange>P</color>)\n";
+                    if (LanguageManager.CurrentLanguage.metadata.langHinduNumbers)
+                    {
+                        text4.text += "+ " + LanguageManager.CurrentLanguage.misc.endstats_noRestarts + "\n  (+500<color=orange>P</color>)\n";
+                    }
+                    else
+                    {
+						text4.text += "+ " + LanguageManager.CurrentLanguage.misc.endstats_noRestarts + "\n  (+500<color=orange>P</color>)\n";
+					}
                 }
                 ___noRestarts = true;
             }
@@ -66,7 +73,7 @@ namespace UltrakULL.Harmony_Patches
                 {
                 text5.text,
                 "- <color=red>",
-                restarts,
+                ArabicFixerTool.FixLine(restarts.ToString()),
                 "</color> " + LanguageManager.CurrentLanguage.misc.endstats_restarts +"\n"
                 });
             }

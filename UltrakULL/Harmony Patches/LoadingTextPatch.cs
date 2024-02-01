@@ -27,6 +27,8 @@ namespace UltrakULL.Harmony_Patches
             if(!isUsingEnglish())
             {
                 loadingText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(___loadingBlocker,"Panel"),"Text"));
+
+
                 loadingText.text = LanguageManager.CurrentLanguage.misc.loading;
             }
 

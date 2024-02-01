@@ -57,101 +57,109 @@ using System.Reflection;
 
 namespace UltrakULL
 {
-    [BepInPlugin(Guid, InternalName, InternalVersion)]
-    public class MainPatch : BaseUnityPlugin
-    {
-        private const string Guid = "clearwater.ultrakill.ultrakull";
-        private const string InternalName = "clearwater.ultrakull.ultrakULL";
-        private const string InternalVersion = "1.3.0";
+	[BepInPlugin(Guid, InternalName, InternalVersion)]
+	public class MainPatch : BaseUnityPlugin
+	{
+		private const string Guid = "clearwater.ultrakill.ultrakull";
+		private const string InternalName = "clearwater.ultrakull.ultrakULL";
+		private const string InternalVersion = "1.3.0";
 
-        public static MainPatch Instance;
-        public bool ready;
+		public static MainPatch Instance;
+		public bool ready;
 
-        public static string ModFolder => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+		public static string ModFolder => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-        public MainPatch()
-        {
-            Instance = this;
-        }
-        
-        public static string GetVersion()
-        {
-            return InternalVersion;
-        }
+		public MainPatch()
+		{
+			Instance = this;
+		}
+		
+		public static string GetVersion()
+		{
+			return InternalVersion;
+		}
 
-        public void OnApplicationQuit()
-        {
-            LanguageManager.DumpLastLanguage();
-        }
+		public void OnApplicationQuit()
+		{
+			LanguageManager.DumpLastLanguage();
+		}
 
-        public void DisableMod()
-        {
-            this.ready = false;
-        }
-        
-        //Most of the hook logic and checks go in this function.
-        public void onSceneLoaded(Scene scene, LoadSceneMode mode)
-        {
-            
-            
-            if (!this.ready || LanguageManager.CurrentLanguage == null)
-            {
-                Logging.Error("UltrakULL has been deactivated to prevent crashing. Check the console for any errors!");
-            }
-            else
-            {
-                GameObject canvasObj = GetInactiveRootObject("Canvas");
-                Core.HandleSceneSwitch(scene, ref canvasObj);
-                //Bunch of things the mod should do *after* loading to avoid problems.
-                if(GetCurrentSceneName() != "Bootstrap" || GetCurrentSceneName() != "Intro")
-                {
-                    PostInitPatches(canvasObj);
-                }
+		public void DisableMod()
+		{
+			this.ready = false;
+		}
+		
+		//Most of the hook logic and checks go in this function.
+		public void onSceneLoaded(Scene scene, LoadSceneMode mode)
+		{
+			
+			
+			if (!this.ready || LanguageManager.CurrentLanguage == null)
+			{
+				Logging.Error("UltrakULL has been deactivated to prevent crashing. Check the console for any errors!");
+			}
+			else
+			{
+				GameObject canvasObj = GetInactiveRootObject("Canvas");
+				Core.HandleSceneSwitch(scene, ref canvasObj);
+				//Bunch of things the mod should do *after* loading to avoid problems.
+				if(GetCurrentSceneName() != "Bootstrap" || GetCurrentSceneName() != "Intro")
+				{
+					PostInitPatches(canvasObj);
+				}
 
-            }
-        }
+			}
+		}
 
-        public async void PostInitPatches(GameObject canvasObj)
-        {
-            await Task.Delay(250);
-            Core.ApplyPostInitFixes(canvasObj);
-        }
+		public async void PostInitPatches(GameObject canvasObj)
+		{
+			await Task.Delay(250);
+			Core.ApplyPostInitFixes(canvasObj);
+		}
 
-        //Entry point for the mod.
-        private void Awake()
-        {
-            Debug.unityLogger.filterLogType = LogType.Exception;
+		//Entry point for the mod.
+		private void Awake()
+		{
+			Debug.unityLogger.filterLogType = LogType.Exception;
 
-            Logging.Warn("UltrakULL Loading... | Version v." + InternalVersion);
-            try
-            {
-                Logging.Warn("--- Checking for updates ---");
-                Task.Run(() =>
-                {
-                    return Core.CheckForUpdates();
-                });
-                
-                Logging.Warn("--- Loading external fonts ---");
-                Core.LoadFonts();
-            
-                Logging.Warn("--- Initializing language manager ---");
-                LanguageManager.InitializeManager(InternalVersion);
-                
-                Logging.Warn("--- Patching vanilla game functions ---");
-                Harmony harmony = new Harmony(InternalName);
-                harmony.PatchAll();
+			Logging.Warn("UltrakULL Loading... | Version v." + InternalVersion);
+			try
+			{
+				Logging.Warn("--- Checking for updates ---");
+				Task.Run(() =>
+				{
+					try
+					{
+						return Core.CheckForUpdates();
+					}
+					catch(Exception e)
+					{
+						Logging.Message($"Failed to read version info! {e.Message}");
+						return null;
+					}
+				});
+				
+				Logging.Warn("--- Loading external fonts ---");
+				Core.LoadFonts();
+			
+				Logging.Warn("--- Initializing language manager ---");
+				LanguageManager.InitializeManager(InternalVersion);
+				
+				Logging.Warn("--- Patching vanilla game functions ---");
+				Harmony harmony = new Harmony(InternalName);
+				harmony.PatchAll();
 
-                Logging.Warn(" --- All done. Enjoy! ---");
-                SceneManager.sceneLoaded += onSceneLoaded;
-                SceneManager.sceneLoaded += SubtitledAudioSourcesReplacer.OnSceneLoaded;
-                this.ready = true;
-            }
-            catch (Exception e)
-            {
-                Logging.Fatal("An error occured while initialising!");
-                Logging.Fatal(e.ToString());
-                this.ready = false;
-            }
-        }
-    }
+				Logging.Warn(" --- All done. Enjoy! ---");
+				SceneManager.sceneLoaded += onSceneLoaded;
+				SceneManager.sceneLoaded += SubtitledAudioSourcesReplacer.OnSceneLoaded;
+				this.ready = true;
+			}
+			catch (Exception e)
+			{
+				Logging.Fatal("An error occured while initialising!");
+				Logging.Fatal(e.ToString());
+				this.ready = false;
+			}
+		}
+	}
 }

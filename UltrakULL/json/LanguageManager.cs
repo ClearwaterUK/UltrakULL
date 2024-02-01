@@ -23,7 +23,12 @@ namespace UltrakULL.json
         private static ManualLogSource jsonLogger = Logger.CreateLogSource("LanguageManager");
         public static ConfigFile configFile;
 
-        public static void InitializeManager(string modVersion)
+		#region Helper Properties
+		public static bool IsRightToLeft { get => CurrentLanguage.metadata.langRTL; }
+		public static bool UsingHinduNumbers { get => CurrentLanguage.metadata.langHinduNumbers; }
+		#endregion
+
+		public static void InitializeManager(string modVersion)
         {
             LoadLanguages(modVersion);
 
@@ -36,7 +41,7 @@ namespace UltrakULL.json
             {
                 jsonLogger.Log(LogLevel.Message, "Setting language to " + value);
                 CurrentLanguage = allLanguages[value];
-                if(CurrentLanguage.metadata.langRTL == "true")
+				if (IsRightToLeft)
                 {
                     Logging.Message("Language is set as RTL - applying fix!");
                     CurrentLanguage = ApplyRtl(CurrentLanguage);
@@ -59,23 +64,38 @@ namespace UltrakULL.json
             configFile.Bind("General", "LastLanguage", "en-GB").Value = CurrentLanguage.metadata.langName; // Thank you copilot
         }
 
+        public static void LoadLanguagesInDirectory(string modVersion, string path)
+        {
+            Logging.Info($"Loading all language files in \"{path}\"");
+
+            string[] files = Directory.GetFiles(path, "*.json");
+            string[] subdirectories = Directory.GetDirectories(path);
+
+			foreach (string file in files)
+			{
+                Logging.Info($"Trying to load \"{file}\"");
+				if (TryLoad(file, out JsonFormat lang) && !allLanguages.ContainsKey(lang.metadata.langName) && lang.metadata.langName != "te-mp")
+				{
+					allLanguages.Add(lang.metadata.langName, lang);
+					allLanguagesDisplayNames.Add(lang.metadata.langDisplayName, lang);
+					if (!ValidateFile(lang, modVersion))
+						jsonLogger.Log(LogLevel.Debug, "Failed to validate " + lang.metadata.langName);
+				}
+			}
+
+            foreach (string directory in  subdirectories)
+            {
+                LoadLanguagesInDirectory(modVersion, directory);
+            }
+		}
+
         public static void LoadLanguages(string modVersion)
         {
             Logging.Message("Loading language files stored locally on disk...");
             
             allLanguages = new Dictionary<string, JsonFormat>();
 
-            string[] files = Directory.GetFiles(Path.Combine(Paths.ConfigPath,"ultrakull"),"*.json");
-            foreach (string file in files)
-            {
-                if (TryLoad(file, out JsonFormat lang) && !allLanguages.ContainsKey(lang.metadata.langName) && lang.metadata.langName != "te-mp")
-                {
-                    allLanguages.Add(lang.metadata.langName, lang);
-                    allLanguagesDisplayNames.Add(lang.metadata.langDisplayName, lang);
-                    if (!ValidateFile(lang, modVersion))
-                        jsonLogger.Log(LogLevel.Debug ,"Failed to validate " + lang.metadata.langName);
-                }
-            }
+            LoadLanguagesInDirectory(modVersion, Path.Combine(Paths.ConfigPath, "ultrakull"));
         }
 
         private static void LoadSubtitledSourcesConfig()
@@ -161,8 +181,11 @@ namespace UltrakULL.json
         }
 
         private static JsonFormat ApplyRtl(JsonFormat language)
-        {
-            List<object> translationComponents = new List<object>
+		{
+			//Logging.Warn("ApplyRtl Breakpoint #1");
+
+
+			List<object> translationComponents = new List<object>
             {
                 language.frontend,
                 language.tutorial,
@@ -190,28 +213,50 @@ namespace UltrakULL.json
                 language.misc,
                 language.devMuseum
             };
-            
-            foreach(object component in translationComponents)
-            {
-                Type type = component.GetType();
-                FieldInfo[] fields = type.GetFields();
-                foreach (FieldInfo field in fields)
+
+
+			//Logging.Warn("ApplyRtl Breakpoint #2");
+
+			foreach (object component in translationComponents)
+			{
+                try
                 {
-                    string originalString = (string)field.GetValue(component); 
-                    string translatedString = null;
-                    
-                    if(originalString != null)
+                    Type type = component.GetType();
+                    FieldInfo[] fields = type.GetFields();
+                    foreach (FieldInfo field in fields)
                     {
-                        //Apply the RTL fix here
-                        translatedString = ArabicFixer.Fix(originalString);
+                        string originalString = (string)field.GetValue(component);
+                        string translatedString = null;
+
+                        if (originalString != null)
+                        {
+
+                            //Logging.Warn("ApplyRtl Breakpoint #3");
+                            //Apply the RTL fix here
+                            translatedString = ArabicFixer.Fix(originalString);
+                        }
+                        if (translatedString != null)
+                        {
+
+                            //Logging.Warn("ApplyRtl Breakpoint #4");
+                            field.SetValue(component, translatedString);
+                        }
                     }
-                    if(translatedString != null)
-                    {
-                        field.SetValue(component,translatedString);
-                    }
+
+
+
+                    //Logging.Warn("ApplyRtl Breakpoint #5");
                 }
-            }
-            return language;
+                catch (Exception ex)
+                {
+                    Logging.Warn($"ULL caught an exception while trying to fix a RTL language! {ex.Message} \nSource: {ex.Source}\nStack Trace:{ex.StackTrace}");
+                }
+
+				//Logging.Warn("ApplyRtl Breakpoint #6");
+			}
+
+			//Logging.Warn("ApplyRtl Breakpoint #7");
+			return language;
         }
 
         public static void SetCurrentLanguage(string langName)
@@ -226,7 +271,7 @@ namespace UltrakULL.json
                 CurrentLanguage = allLanguages[langName];
                 Logging.Message( "Setting language to " + langName);
                 
-                if(CurrentLanguage.metadata.langRTL == "true")
+                if(IsRightToLeft)
                 {
                     Logging.Message("Language is an RTL - applying fix!");
                     CurrentLanguage = ApplyRtl(CurrentLanguage);

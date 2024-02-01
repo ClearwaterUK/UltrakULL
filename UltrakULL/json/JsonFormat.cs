@@ -9,6 +9,7 @@ namespace UltrakULL.json
         
         public FrontEnd frontend;
         public Tutorial tutorial;
+        public Rank ranks;
         
         public Overture prelude;
         public a1 act1;
@@ -1085,9 +1086,9 @@ namespace UltrakULL.json
         public string langAuthor;
         public string langVersion;
         public string langDisplayName;
-        public string langRTL;
-
+        public bool langRTL;
         public string minimumModVersion;
+        public bool langHinduNumbers;
 
     }
 
@@ -1208,6 +1209,23 @@ namespace UltrakULL.json
 
     }
 
+    public class Rank
+    {
+        public string D { get => rank_letter_d; }
+        public string rank_letter_d;
+		public string C { get => rank_letter_c; }
+		public string rank_letter_c;
+		public string B { get => rank_letter_b; }
+		public string rank_letter_b;
+		public string A { get => rank_letter_a; }
+		public string rank_letter_a;
+		public string S { get => rank_letter_s; }
+		public string rank_letter_s;
+		public string P { get => rank_letter_p; }
+		public string rank_letter_p;
+
+	}
+
     public class Body
     {
         public string bodyName;
@@ -1215,6 +1233,7 @@ namespace UltrakULL.json
 
     public class FrontEnd
     {
+        public string mainmenu_imageReplacement;
         public string mainmenu_earlyAccess;
         public string mainmenu_halloween;
         public string mainmenu_easter;
@@ -1771,7 +1790,7 @@ namespace UltrakULL.json
         public string enemyname_boss_bigJohninator;
 
 
-        public string enemyname_type_lesserHusk;
+		public string enemyname_type_lesserHusk;
         public string enemyname_type_greaterHusk;
         public string enemyname_type_supremeHusk;
         public string enemyname_type_lesserDemon;
@@ -2801,8 +2820,11 @@ namespace UltrakULL.json
         public string museum_spoiler1;
         public string museum_spoiler2;
         public string museum_spoiler3;
-
-    }
+		internal string museum_chessTip;
+		internal string museum_bookAdditionalMusic11;
+		internal string museum_bookAdditionalMusic12;
+		internal string museum_bookAdditionalCredits8;
+	}
 
     public class Misc
     {
