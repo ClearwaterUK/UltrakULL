@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -104,16 +104,21 @@ namespace UltrakULL.Harmony_Patches
 				{
 					string currentLanguage = LanguageManager.CurrentLanguage.metadata.langDisplayName;
 					switch (currentLanguage)
-					{
-						case "Japanese":
-						case "Traditional Chinese":
-						case "Simplified Chinese":
-							{
-								//Swap with a Japanese or Chinese font when it comes in.
-								__instance.font = Core.CJKFontTMP;
-								break;
-							}
-						case "Arabic":
+                    {
+                        case "Traditional Chinese":
+                        case "Simplified Chinese":
+                            {
+                                //Swap with a Chinese font when it comes in.
+                                __instance.font = Core.CJKFontTMP;
+                                break;
+                            }
+                        case "Japanese":
+                            {
+                                //japanese tofu fix
+                                __instance.font = Core.jaFontTMP;
+                                break;
+                            }
+                        case "Arabic":
 						case "Persian":
 						case "Urdu":
 							{

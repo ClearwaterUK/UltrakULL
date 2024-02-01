@@ -296,6 +296,7 @@ namespace UltrakULL.json
         public string style_bigkill;
         public string style_bigfistkill;
         public string style_bipolar;
+
         public string style_cannonballed;
         public string style_catapaulted;
         public string style_chargeback;
@@ -346,21 +347,37 @@ namespace UltrakULL.json
 
         public string style_why;
 
+        public string style_bishopcapture;
+        public string style_bishoppromo;
+        public string style_blackwins;
+        public string style_bongcloud;
         public string style_boiled;
         public string style_conductor;
+        public string style_castled;
         public string style_crushed;
+        public string style_enpassant;
         public string style_fall;
+        public string style_foolsmate;
         public string style_forthee;
+        public string style_knightcapture;
+        public string style_knightpromo;
         public string style_longwaydown;
         public string style_lost;
         public string style_m_a_d;
         public string style_minced;
         public string style_pancaked;
+        public string style_pawncapture;
+        public string style_queencapture;
+        public string style_queenpromo;
         public string style_outofbounds;
         public string style_roadkill;
+        public string style_rookcapture;
+        public string style_rookpromo;
         public string style_shredded;
         public string style_slipped;
         public string style_trampled;
+        public string style_ultravictory;
+        public string style_whitewins;
         public string style_zapped;
 
         public string style_d;
@@ -2345,8 +2362,8 @@ namespace UltrakULL.json
         public string act3_violenceThird_becomeMarkedButtonClosed;
         public string act3_violenceThird_starOfTheShow;
         
-        public string act3_floodingWarning;
-        public string act3_countdownTitle;
+        public string act3_violenceFourth_floodingWarning;
+        public string act3_violenceFourth_countdownTitle;
 
         public string act3_secretNotReady;
     }
@@ -2601,6 +2618,8 @@ namespace UltrakULL.json
         public string museum_bookAdditionalMusic8;
         public string museum_bookAdditionalMusic9;
         public string museum_bookAdditionalMusic10;
+        public string museum_bookAdditionalMusic11;
+        public string museum_bookAdditionalMusic12;
         
         public string museum_bookAdditionalCredits1;
         public string museum_bookAdditionalCredits2;
@@ -2609,6 +2628,7 @@ namespace UltrakULL.json
         public string museum_bookAdditionalCredits5;
         public string museum_bookAdditionalCredits6;
         public string museum_bookAdditionalCredits7;
+        public string museum_bookAdditionalCredits8;
         
         public string museum_bookStephanWeyte1;
         public string museum_bookStephanWeyte2;
@@ -2813,6 +2833,17 @@ namespace UltrakULL.json
         public string museum_rocketRace2;
         public string museum_rocketRaceStart;
         public string museum_rocketRaceResult;
+
+        public string museum_chessTip;
+        public string museum_chessVs;
+        public string museum_chessNewgame;
+        public string museum_chessBlack;
+        public string museum_chessWhite;
+        public string museum_chessBot;
+        public string museum_chessPlayer;
+        public string museum_chessWhitewin;
+        public string museum_chessBlackwin;
+        public string museum_chessSettingsclose;
         
         public string museum_cinemaPlay;
         public string museum_cinemaStop;

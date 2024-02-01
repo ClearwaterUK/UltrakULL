@@ -36,7 +36,7 @@ namespace UltrakULL
 
             //Need to disable the TextOverride component.
             Component[] test = cheatsConsentTextObject.GetComponents(typeof(Component));
-            Behaviour bhvr = (Behaviour)test[3];
+            Behaviour bhvr = (Behaviour)test[2];
             bhvr.enabled = false;
 
             //Cheat confirmation panel

@@ -62,6 +62,12 @@ namespace UltrakULL
                 return StringsParent.GetMessage(message, "", "");
             }
             
+            //chessTip
+            if(GetCurrentSceneName() == "CreditsMuseum2")
+            {
+                return StringsParent.GetMessage(message, "", "");
+            }
+
 
             //Cybergrind custom pattern fix
             if (GetCurrentSceneName() == "Endless")

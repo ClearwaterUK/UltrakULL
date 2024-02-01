@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -30,6 +30,7 @@ namespace UltrakULL
         public static TMP_FontAsset GlobalFontTMP;
         public static TMP_FontAsset MuseumFontTMP;
         public static TMP_FontAsset CJKFontTMP;
+        public static TMP_FontAsset jaFontTMP;
         public static TMP_FontAsset ArabicFontTMP;
 		public static TMP_FontAsset HebrewFontTMP;
         public static Sprite[] CustomRankImages;
@@ -155,9 +156,29 @@ namespace UltrakULL
             Logging.Message("Loading font resource bundle...");
             //Will load from the same directory that the dll is in.
             AssetBundle fontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder,"ullfont.resource"));
+            AssetBundle jafontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder, "jafont.resource"));
+
+            if (jafontBundle == null)
+            {
+                Logging.Error("FAILED TO LOAD JAPANESE TMP FONT(´・ω・`)*No AssetBundle?");
+            }
+            else
+            {
+                Logging.Message("Japanese Font AssetBundle has been loaded.");
+                TMP_FontAsset jafontTMP = jafontBundle.LoadAsset<TMP_FontAsset>("jafix_TMP");
+                if (jafontTMP)
+                {
+                    Logging.Warn("Japanese TMP font loaded.");
+                    jaFontTMP = jafontTMP;
+                }
+                else
+                {
+                    Logging.Error("Why there's no Japanese TMP Font in this assetbundle(´・ω・`)");
+                }
+            }
 
 
-			AssetBundle extraFontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder, "arabfonts"));
+                AssetBundle extraFontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder, "arabfonts"));
 
             if (extraFontBundle == null)
             {
