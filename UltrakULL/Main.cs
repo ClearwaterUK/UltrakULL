@@ -15,7 +15,7 @@ using System.Reflection;
  *  Additional code contributions by Temperz87, Flazhik, BitKoven, CoatlessAli and others
  *  Translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 17th January 2024
+ *	Last updated: 31th January 2024
  *	
  *	A translation mod for Ultrakill that hooks into the game and allows for text/string replacement. This tool is primarily meant to assist with language translation.
  * 
@@ -40,18 +40,14 @@ using System.Reflection;
  * 
  *
  * -- TODO --
- * Patch the chess panel in the museum
- * Add all of the style bonuses in the museum
+ * Make 2 materials for the font, one with a shadow and the other without, and only apply the shadow version on level title pop-ups
  * 
  *
  * -- TESTING REPORTS --
- * -- 1.3.0 BUGS TO FIX BEFORE RELEASE --
- * Cheats consent explaination isn't translated, the code behind it seems much more protected than anything else in the game for some reason
  * "Home or ~" cheat string isn't translated
  * The arm alter menu isn't fully translated and mostly doesn't work outside of the Sandbox
  * "Lots of P" implementation doesn't work, would likely need to be directly patched
- * 7-2 and 7-3 panels aren't translated
- * 7-4 unique HUD stuff isn't translated
+ * Fix '0' having weird spacing with the font
  *
  * */
 
