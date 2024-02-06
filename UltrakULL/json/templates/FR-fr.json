@@ -387,6 +387,17 @@
 		"museum_rocketRace1": "COURSE DE ROQUETTE",
 		"museum_rocketRace2": "COMMENCER",
 		"museum_rocketRaceResult": "TEMPS:",
+
+        "museum_chessTip": "Les pièces peuvent être bougés avec le <color=orange>bras de déplacement</color>",
+        "museum_chessVs": "VS",
+        "museum_chessNewgame": "Nouvelle Partie",
+        "museum_chessBlack": "Noir",
+        "museum_chessWhite": "Blanc",
+        "museum_chessBot": "Ordi",
+        "museum_chessPlayer": "Joueur",
+        "museum_chessSettingsclose": "Fermer",
+        "museum_chessWhitewin": "BLANC GAGNE\n!",
+        "museum_chessBlackwin": "NOIR GAGNE\n!",
 	
 		"museum_spoiler1": "ATTENTION",
 		"museum_spoiler2": "SPOILER",
