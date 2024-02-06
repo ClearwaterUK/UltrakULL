@@ -1223,7 +1223,8 @@ namespace UltrakULL.json
 
         public string act2_intermission_tobecontinued;
         public string act2_intermission_tobecontinuedshadow;
-
+        public string act2_intermission_endof;
+        public string act2_intermission_insertAct2;
     }
 
     public class Rank
