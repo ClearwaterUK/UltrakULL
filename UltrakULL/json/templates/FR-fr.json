@@ -821,9 +821,7 @@
 		"act2_intermission_tobecontinuedshadow": "À CONCLURE DANS... ACTE III: SUICIDE DIVIN",
 	
 		"act2_intermission_endof": "FIN DE L'ACTE II",
-		"act2_intermission_insertAct3": "INSÉREZ DISQUE 3 pour\n ACTE III: SUICIDE DIVIN",
-		"act2_intermission_insert": "INSÉRER",
-		"act2_intermission_returnToMenu": "RETOURNER AU MENU"	
+		"act2_intermission_insertAct3": "INSÉREZ DISQUE 3 pour\n ACTE III: SUICIDE DIVIN"
 	},
 	"frontend": {
 		"mainmenu_earlyAccess": "ACCÈS ANTICIPÉ",
