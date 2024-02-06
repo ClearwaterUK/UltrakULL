@@ -849,12 +849,15 @@
         "act1_intermission_tobecontinuedshadow": "TO BE CONTINUED IN... ACT II: IMPERFECT HATRED",
         
         "act1_intermission_endof": "ACT 1 END",
-        "act1_intermission_insertAct2": "INSERT DISC 2 FOR ACT II: IMPERFECT HATRED",
+        "act1_intermission_insertAct2": "INSERT DISC 2 For\n\"ACT II: IMPERFECT HATRED\"",
         "act1_intermission_insert": "INSERT",
         "act1_intermission_returnToMenu": "RETURN TO MENU",
         
         "act2_intermission_tobecontinued": "TO BE CONCLUDED IN... ACT III: GODFIST SUICIDE",
-        "act2_intermission_tobecontinuedshadow": "TO BE CONCLUDED IN... ACT III: GODFIST SUICIDE"
+        "act2_intermission_tobecontinuedshadow": "TO BE CONCLUDED IN... ACT III: GODFIST SUICIDE",
+	    
+	"act2_intermission_endof": "ACT II END",
+	"act2_intermission_insertAct3": "INSERT DISC 3 For\n\"ACT III: GODFIST SUICIDE\""
         
     },
 	"frontend": {
