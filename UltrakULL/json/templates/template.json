@@ -857,7 +857,9 @@
 		"act1_intermission_returnToMenu": "",
 
 		"act2_intermission_tobecontinued": "",
-		"act2_intermission_tobecontinuedshadow": ""
+		"act2_intermission_tobecontinuedshadow": "",
+		"act2_intermission_endof": "",
+		"act2_intermission_insertAct2": ""
 
 	},
 	"frontend": {
