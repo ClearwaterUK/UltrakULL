@@ -51,6 +51,17 @@ namespace UltrakULL
                 Text earlyAccessQuitToMenu = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(earlyAccessEnd, "Quit Mission"),"Text"));
                 earlyAccessQuitToMenu.text = LanguageManager.CurrentLanguage.intermission.act1_intermission_returnToMenu;
             }
+            
+            GameObject act2EndObject = GetGameObjectChild(GetGameObjectChild(intermissionObject, "Act End Message"), "Sound 1");
+
+            Text act2EndText = GetTextfromGameObject(GetGameObjectChild(act2EndObject, "Text"));
+            act2EndText.text = LanguageManager.CurrentLanguage.intermission.act2_intermission_endof + "\n\n\n\n" + LanguageManager.CurrentLanguage.intermission.act2_intermission_insertAct3;
+            
+            Text act2EndMenu = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(act1EndObject, "Menu"), "Text"));
+            act2EndMenu.text = LanguageManager.CurrentLanguage.intermission.act1_intermission_returnToMenu;
+
+            Text act2EndInsert = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(act1EndObject, "Insert"), "Text"));
+            act2EndInsert.text = LanguageManager.CurrentLanguage.intermission.act1_intermission_insert;
         }
 
         public Intermission(ref GameObject canvasObj)
