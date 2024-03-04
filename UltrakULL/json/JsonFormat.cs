@@ -2852,10 +2852,12 @@ namespace UltrakULL.json
         public string museum_spoiler1;
         public string museum_spoiler2;
         public string museum_spoiler3;
+        /*CS0102
 		internal string museum_chessTip;
 		internal string museum_bookAdditionalMusic11;
 		internal string museum_bookAdditionalMusic12;
 		internal string museum_bookAdditionalCredits8;
+        */
 	}
 
     public class Misc

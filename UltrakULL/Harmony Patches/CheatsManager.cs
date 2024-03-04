@@ -98,11 +98,11 @@ namespace UltrakULL.Harmony_Patches
             StringBuilder stringBuilder = new StringBuilder();
             if (MonoSingleton<SandboxNavmesh>.Instance && MonoSingleton<SandboxNavmesh>.Instance.isDirty)
             {
-                stringBuilder.AppendLine(LanguageManager.CurrentLanguage.cheats.cheats_navmeshOutdated1 + "\n\n" + LanguageManager.CurrentLanguage.cheats.cheats_navmeshOutdated2);
+                stringBuilder.AppendLine("<color=red>" + LanguageManager.CurrentLanguage.cheats.cheats_navmeshOutdated1 + "\n<size=12>" + LanguageManager.CurrentLanguage.cheats.cheats_navmeshOutdated2 + "</size></color>\n");
             }
             if (__instance.GetCheatState("ultrakill.spawner-arm"))
             {
-                stringBuilder.AppendLine(LanguageManager.CurrentLanguage.cheats.cheats_spawnerArmSlot);
+                stringBuilder.AppendLine("<color=#C2D7FF>" + LanguageManager.CurrentLanguage.cheats.cheats_spawnerArmSlot + "</color>\n");
             }
             foreach (KeyValuePair<string, List<ICheat>> keyValuePair in ___allRegisteredCheats)
             {
