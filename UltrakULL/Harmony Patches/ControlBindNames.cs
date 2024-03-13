@@ -74,6 +74,8 @@ namespace UltrakULL.Harmony_Patches
                 case "LAST WEAPON": { return LanguageManager.CurrentLanguage.options.controls_lastUsedWeapon; }
                 case "CHANGE FIST": { return LanguageManager.CurrentLanguage.options.controls_changeArm; }
                 case "PUNCH": { return LanguageManager.CurrentLanguage.options.controls_punch; }
+                case "PUNCH (FEEDBACKER)": { return LanguageManager.CurrentLanguage.options.controls_punchFeedbacker; }
+                case "PUNCH (KNUCKLEBLASTER)": { return LanguageManager.CurrentLanguage.options.controls_punchKnuckleblaster; }
                 case "HOOK": { return LanguageManager.CurrentLanguage.options.controls_whiplash; }
                 default: return originalText;
             }
