@@ -15,7 +15,7 @@ using System.Reflection;
  *  	Additional code contributions by Temperz87, Flazhik, BitKoven, CoatlessAli and others
  *  	Translations by UltrakULL Translation Team
  *	Date started: 21st April 2021
- *	Last updated: 31th January 2024
+ *	Last updated: 12th March 2024
  *	
  *	A translation mod for Ultrakill that hooks into the game and allows for text/string replacement. This tool is primarily meant to assist with language translation.
  * 
@@ -47,7 +47,8 @@ using System.Reflection;
  * "Home or ~" cheat string isn't translated
  * The arm alter menu isn't fully translated and mostly doesn't work outside of the Sandbox
  * "Lots of P" implementation doesn't work, would likely need to be directly patched
- * Fix '0' having weird spacing with the font
+ * '0' has weird spacing with the font
+ * The final rank screen just softlocks
  *
  * */
 
