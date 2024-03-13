@@ -18,16 +18,6 @@ namespace UltrakULL
 			{
 				GameObject titleObject = GetGameObjectChild(mainMenu, "Main Menu (1)");
 
-				if (Core.ArabicUltrakillLogo != null)
-				{
-					GameObject realTitleObject = GetGameObjectChild(titleObject, "Title");
-					Image logoImageObject = realTitleObject.GetComponent<Image>();
-					if (logoImageObject != null)
-					{
-						logoImageObject.sprite = Core.ArabicUltrakillLogo;
-					}
-				}
-
 				//Early access tag
 				Text earlyAccessText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(titleObject, "Title"), "Text"));
 				earlyAccessText.text = "--" + LanguageManager.CurrentLanguage.frontend.mainmenu_earlyAccess + "--";
@@ -82,6 +72,41 @@ namespace UltrakULL
 				Logging.Error(e.ToString());
 			}
 		}
+		
+		public static void ChangeTitle(GameObject mainMenu)
+		{
+			try
+            {
+				Logging.Warn("Attempting to change the main menu's title image");
+                GameObject trueMainMenu = GetGameObjectChild(mainMenu, "Main Menu (1)");
+
+                if (Core.ArabicUltrakillLogo != null)
+                {
+                    GameObject TitleObject = GetGameObjectChild(trueMainMenu, "Title");
+					if(GetGameObjectChild(trueMainMenu, "Title(Clone)") == null)
+					{
+						GameObject.Instantiate(TitleObject, TitleObject.transform.position, Quaternion.identity, trueMainMenu.transform);
+                    }
+                    GameObject titleObjectArabic = GetGameObjectChild(trueMainMenu, "Title(Clone)");
+                    titleObjectArabic.GetComponent<Image>().sprite = Core.ArabicUltrakillLogo;
+                    if (LanguageManager.CurrentLanguage.metadata.langName == "en-AR")
+					{
+						TitleObject.SetActive(false);
+						titleObjectArabic.SetActive(true);
+					}
+					else
+					{
+						TitleObject.SetActive(true);
+						titleObjectArabic.SetActive(false);
+					}
+                }
+            }
+            catch (Exception e)
+            {
+                Logging.Error("An error occured while switching the title. Check the console for details.");
+                Logging.Error(e.ToString());
+            }
+        }
 
 		//Patches all text strings in the difficulty selection menu.
 		private static void PatchDifficultyMenu(GameObject frontEnd)
@@ -131,6 +156,11 @@ namespace UltrakULL
 				GameObject brutalTextObject = GetGameObjectChild(difficultyObject, "Brutal");
 				Text brutalText = GetTextfromGameObject(brutalTextObject.transform.Find("Name").gameObject);
 				brutalText.text = LanguageManager.CurrentLanguage.frontend.difficulty_brutal;
+
+                		//UKMD header
+                		GameObject umdTextObject = GetGameObjectChild(difficultyObject, "V1 Must Die");
+                		Text umdText = GetTextfromGameObject(umdTextObject.transform.Find("Name").gameObject);
+                		umdText.text = LanguageManager.CurrentLanguage.frontend.difficulty_umd;
 
 				//No need for Brutal/UMD header yet as it's not in-game
 
@@ -674,6 +704,7 @@ namespace UltrakULL
 			try
 			{
 				PatchMainMenu(frontEnd);
+				ChangeTitle(frontEnd);
 				PatchDifficultyMenu(frontEnd);
 				PatchDifficultyDescriptors(frontEnd);
 
