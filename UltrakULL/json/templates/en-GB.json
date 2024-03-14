@@ -1452,6 +1452,11 @@
         "save_deleteNo": "CANCEL",
         "save_close": "CLOSE",
         "save_slotEmpty": "EMPTY",
+        "save_slot1": "Slot 1",
+        "save_slot2": "Slot 2",
+        "save_slot3": "Slot 3",
+        "save_slot4": "Slot 4",
+        "save_slot5": "Slot 5",
 
         "language_title": "LANGUAGE",
         "language_languages": "LANGUAGES",

@@ -2066,6 +2066,11 @@ namespace UltrakULL.json
         public string save_deleteNo;
         public string save_close;
         public string save_slotEmpty;
+        public string save_slot1;
+        public string save_slot2;
+        public string save_slot3;
+        public string save_slot4;
+        public string save_slot5;
         
         public string rumble_title;
         public string rumble_finalMultiplier;

@@ -48,8 +48,8 @@ using System.Reflection;
  * The arm alter menu isn't fully translated and mostly doesn't work outside of the Sandbox
  * "Lots of P" implementation doesn't work, would likely need to be directly patched
  * '0' has weird spacing with the font
- * The final rank screen just softlocks
- *
+ * 
+ * 
  * */
 
 namespace UltrakULL
