@@ -409,7 +409,7 @@
 		"museum_spoiler3": ""
 
 	},
-	
+
 	"fishing": {
 		"fish_ocean": "",
 		"fish_cavePool": "",
@@ -423,7 +423,7 @@
 		"fish_panOil": "",
 
 		"fish_leaderboard": "",
-		
+
 		"fish_bottleMessage1": "",
 		"fish_bottleMessage2": "",
 		"fish_bottleMessage3": "",
@@ -470,7 +470,7 @@
 		"fish_stickFish": "",
 		"fish_cookedFish": "",
 		"fish_shark": "",
-		
+
 		"fish_funnyStupidFishDescription1": "",
 		"fish_funnyStupidFishDescription2": "",
 		"fish_pitrFishDescription1": "",
@@ -649,7 +649,7 @@
 		"cybergrind_themesCustomTopRow": "",
 		"cybergrind_themesCustomTop": "",
 		"cybergrind_themesCustomGlowIntensity": "",
-		
+
 		"cybergrind_musicTitle": "",
 		"cybergrind_musicCompleteChallengeRequirement": "",
 		"cybergrind_musicSeeEnemyRequirement": "",
@@ -658,14 +658,14 @@
 		"cybergrind_musicUnlocked": "",
 		"cybergrind_musicConfirm": "",
 		"cybergrind_musicSoundtrack": "",
-       		"cybergrind_musicFolderNameCyberGrind": "",
-       		"cybergrind_musicFolderNamePrelude": "",
-       		"cybergrind_musicFolderNameAct1": "",
-       		"cybergrind_musicFolderNameAct2": "",
-       		"cybergrind_musicFolderNameAct3": "",
-       		"cybergrind_musicFolderNameSecret": "",
-       		"cybergrind_musicFolderNamePrime": "",
-       		"cybergrind_musicFolderNameMisc": "",
+		"cybergrind_musicFolderNameCyberGrind": "",
+		"cybergrind_musicFolderNamePrelude": "",
+		"cybergrind_musicFolderNameAct1": "",
+		"cybergrind_musicFolderNameAct2": "",
+		"cybergrind_musicFolderNameAct3": "",
+		"cybergrind_musicFolderNameSecret": "",
+		"cybergrind_musicFolderNamePrime": "",
+		"cybergrind_musicFolderNameMisc": "",
 
 		"cybergrind_patternsWarning": "",
 		"cybergrind_patternsTitle": "",
@@ -718,7 +718,7 @@
 		"books_wrathSecond7": "",
 		"books_wrathSecond8": "",
 		"books_wrathSecond9": "",
-		
+
 		"books_violenceFirst1": "",
 		"books_violenceFirst2": "",
 		"books_violenceFirst3": "",
@@ -728,15 +728,15 @@
 		"books_violenceFirst7": "",
 		"books_violenceFirst8": "",
 		"books_violenceFirst9": "",
-		
+
 		"books_violenceFirst_Slate1": "",
 		"books_violenceFirst_Slate2": "",
 		"books_violenceFirst_Slate3": "",
 		"books_violenceFirst_Slate4": "",
-		
+
 		"books_violenceSecond1": "",
 		"books_violenceSecond2": "",
-		
+
 		"books_violenceFourth1": "",
 		"books_violenceFourth2": "",
 		"books_violenceFourth3": "",
@@ -858,7 +858,7 @@
 
 		"act2_intermission_tobecontinued": "",
 		"act2_intermission_tobecontinuedshadow": "",
-		
+
 		"act2_intermission_endof": "",
 		"act2_intermission_insertAct3": ""
 
@@ -1004,7 +1004,7 @@
 		"visualnovel_middleResponseFirst4": "",
 		"visualnovel_middleResponseFirst5": "",
 		"visualnovel_middleResponseFirst6": "",
-		
+
 		"visualnovel_middleResponseSecond1": "",
 		"visualnovel_middleResponseSecond2": "",
 		"visualnovel_middleResponseSecond3": "",
@@ -1433,6 +1433,11 @@
 		"save_deleteNo": "",
 		"save_close": "",
 		"save_slotEmpty": "",
+		"save_slot1": "",
+		"save_slot2": "",
+		"save_slot3": "",
+		"save_slot4": "",
+		"save_slot5": "",
 
 		"language_title": "",
 		"language_languages": "",
@@ -1498,13 +1503,13 @@
 
 		"levelName_heresyFirst": "",
 		"levelName_heresySecond": "",
-		
+
 		"levelName_violenceFirst": "",
 		"levelName_violenceSecond": "",
 		"levelName_violenceThird": "",
 		"levelName_violenceFourth": "",
 		"levelName_violenceSecret": "",
-		
+
 		"levelName_fraudFirst": "",
 		"levelName_fraudSecond": "",
 		"levelName_fraudThird": "",
@@ -1551,7 +1556,7 @@
 
 		"challenges_heresyFirst": "",
 		"challenges_heresySecond": "",
-		
+
 		"challenges_violenceFirst": "",
 		"challenges_violenceSecond": "",
 		"challenges_violenceThird": "",
@@ -1622,7 +1627,7 @@
 		"leveltips_heresyFirst2": "",
 		"leveltips_heresySecond1": "",
 		"leveltips_heresySecond2": "",
-		
+
 		"leveltips_violenceFirst": "",
 		"leveltips_violenceSecond": "",
 		"leveltips_violenceThird": "",
@@ -2148,7 +2153,7 @@
 		"enemyBios_v2Second_strategy1": "",
 		"enemyBios_v2Second_strategy2": "",
 		"enemyBios_v2Second_strategy3": "",
-		
+
 		"enemyBios_gutterman_1": "",
 		"enemyBios_gutterman_2": "",
 		"enemyBios_gutterman_3": "",
@@ -2158,7 +2163,7 @@
 		"enemyBios_gutterman_strategy2": "",
 		"enemyBios_gutterman_strategy3": "",
 		"enemyBios_gutterman_strategy4": "",
-		
+
 		"enemyBios_guttertank_1": "",
 		"enemyBios_guttertank_2": "",
 		"enemyBios_guttertank_3": "",
@@ -2169,7 +2174,7 @@
 
 		"enemyBios_guttertank_strategy1": "",
 		"enemyBios_guttertank_strategy2": "",
-		
+
 		"enemyBios_earthmover_1": "",
 		"enemyBios_earthmover_2": "",
 		"enemyBios_earthmover_3": "",
@@ -2270,7 +2275,7 @@
 
 		"enemyBios_minosPrime_strategy1": "",
 		"enemyBios_minosPrime_strategy2": "",
-		
+
 		"enemyBios_fleshPanopticon_1": "",
 		"enemyBios_fleshPanopticon_2": "",
 
@@ -2536,7 +2541,7 @@
 		"secretLevels_fourth_testament5": "",
 		"secretLevels_fourth_testament6": "",
 		"secretLevels_fourth_testament7": "",
-		
+
 		"secretLevels_fifth_testamentTitle": "",
 		"secretLevels_fifth_testament1": "",
 		"secretLevels_fifth_testament2": "",
@@ -2702,7 +2707,7 @@
 		"subtitles_gabrielSecondDefeated9": "",
 		"subtitles_gabrielSecondDefeated10": "",
 		"subtitles_gabrielSecondDefeated11": "",
-		
+
 		"subtitles_sisyphusPrime_preIntro1": "",
 		"subtitles_sisyphusPrime_preIntro2": "",
 		"subtitles_sisyphusPrime_preIntro3": "",
@@ -2724,7 +2729,7 @@
 		"subtitles_sisyphusPrime_attack3": "",
 		"subtitles_sisyphusPrime_attack4": "",
 		"subtitles_sisyphusPrime_attack5": "",
-		
+
 		"subtitles_sisyphusPrime_phaseChange": "",
 		"subtitles_sisyphusPrime_respawnIntro": "",
 
@@ -2859,14 +2864,22 @@
 		"earlyAccessEnd1": "",
 		"earlyAccessEnd2": "",
 		"earlyAccessEnd3": ""
-
 	},
-	
+
+	"ranks": {
+		"rank_letter_d": "D",
+		"rank_letter_c": "C",
+		"rank_letter_b": "B",
+		"rank_letter_a": "A",
+		"rank_letter_s": "S",
+		"rank_letter_p": "P"
+	},
+
 	"sandbox": {
 		"sandbox_shop_timeOfDay": "",
 		"sandbox_shop_worldOptions": "",
 		"sandbox_shop_icons": "",
-		
+
 		"sandbox_shop_totalBoxes": "",
 		"sandbox_shop_totalProps": "",
 		"sandbox_shop_totalEnemies": "",
@@ -2879,7 +2892,7 @@
 		"sandbox_shop_worldOptionsDisabled": "",
 
 		"sandbox_shop_mapBorder": "",
-		"sandbox_shop_iconsTitle" : "",
+		"sandbox_shop_iconsTitle": "",
 		"sandbox_shop_default": "",
 		"sandbox_shop_pitr": ""
 	}

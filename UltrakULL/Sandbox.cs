@@ -113,7 +113,7 @@ namespace UltrakULL
             TextMeshProUGUI enemyAlterMetaTitle = GetTextMeshProUGUI(GetGameObjectChild(enemyAlterMeta, "Title (1)"));
             enemyAlterMetaTitle.text = LanguageManager.CurrentLanguage.misc.enemyAlter_metaTitle;
             
-            TextMeshProUGUI enemyAlterMetaFrozen = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(enemyAlterMeta, "Toggle"),"Label"));
+            TextMeshProUGUI enemyAlterMetaFrozen = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(enemyAlterMeta, "Frozen Toggle"),"Label"));
             enemyAlterMetaFrozen.text = LanguageManager.CurrentLanguage.misc.enemyAlter_metaFrozen;
             
             GameObject enemyAlterJumpPad = GetGameObjectChild(enemyAlterMenu, "Jump Pad Options");

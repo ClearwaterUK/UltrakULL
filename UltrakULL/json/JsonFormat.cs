@@ -2066,6 +2066,11 @@ namespace UltrakULL.json
         public string save_deleteNo;
         public string save_close;
         public string save_slotEmpty;
+        public string save_slot1;
+        public string save_slot2;
+        public string save_slot3;
+        public string save_slot4;
+        public string save_slot5;
         
         public string rumble_title;
         public string rumble_finalMultiplier;
@@ -2849,10 +2854,7 @@ namespace UltrakULL.json
         public string museum_spoiler1;
         public string museum_spoiler2;
         public string museum_spoiler3;
-		internal string museum_chessTip;
-		internal string museum_bookAdditionalMusic11;
-		internal string museum_bookAdditionalMusic12;
-		internal string museum_bookAdditionalCredits8;
+
 	}
 
     public class Misc

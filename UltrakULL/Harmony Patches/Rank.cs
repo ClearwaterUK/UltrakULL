@@ -19,7 +19,7 @@ namespace UltrakULL.Harmony_Patches
 			Logging.Info(rank[16].ToString());
 
 			Rank ranks = LanguageManager.CurrentLanguage.ranks;
-			string replacement = "?";
+			string replacement = "_";
 
 			switch (rank[15].ToString())
 			{
@@ -71,7 +71,7 @@ namespace UltrakULL.Harmony_Patches
 						// return __result;
 					}
 					break;
-			}
+            }
 
 			char[] chars = rank.ToCharArray();
 			chars[15] = replacement[0];
@@ -87,7 +87,7 @@ namespace UltrakULL.Harmony_Patches
 			{
 				string rank = __result;
 				Rank ranks = LanguageManager.CurrentLanguage.ranks;
-				string replacement = "?";
+				string replacement = "_";
 
 				switch (rank[15].ToString())
 				{
@@ -158,7 +158,7 @@ namespace UltrakULL.Harmony_Patches
 				Text componentInChildren = __instance.transform.Find("Stats").Find("Rank").GetComponentInChildren<Text>();
 
 				Rank ranks = LanguageManager.CurrentLanguage.ranks;
-				string replacement = "?";
+				string replacement = "_";
 				string rank = componentInChildren.text;
 
 				componentInChildren.alignment = UnityEngine.TextAnchor.LowerCenter;

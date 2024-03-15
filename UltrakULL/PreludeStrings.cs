@@ -62,7 +62,7 @@ namespace UltrakULL
 
             if (fullMessage.Contains("FIREPOWER"))
             {
-                return LanguageManager.CurrentLanguage.prelude.prelude_third_needShotgun;
+                return "<color=red>" + LanguageManager.CurrentLanguage.prelude.prelude_third_needShotgun + "</color>";
             }
             if (fullMessage.Contains("explosive"))
             {
