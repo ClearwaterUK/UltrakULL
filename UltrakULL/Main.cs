@@ -37,6 +37,7 @@ using System.Reflection;
  * Spawning MDK+Owl while noclipped causes a crash. Function that's causing it: MandaloreSubtitlesSwap->Mandalore_Start
  * Offending transpiler lines have been commented out for now. Waiting for Flazhik to look at and fix.
  * 14c Update completely messed up MDK/Owl. Yet again. Pain. 
+ * r2modman messes up font files with extentions that makes the detection skip them (https://discord.com/channels/1017473804592754778/1017898261660565675/1228095247163068567)
  * 
  *
  * -- TODO --
