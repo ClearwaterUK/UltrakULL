@@ -22,6 +22,7 @@ options: controls_movementTitle, controls_weaponTitle, controls_punch(Feedbacker
 options: advanced_title, advanced_currentLevel, advanced_cybergrindResetText1, advanced_cybergrindResetText2, advanced_cybergrindResetCancel, advanced_cybergrindResetConfirm, advanced_cybergrindLocalHighScore, advanced_cybergrindResetButton, advanced_level52, advanced_level71, advanced_level73, advanced_52WaterScrolling, advanced_52WaterWaves, advanced_71Dark, advanced_73Grass
 options: save_slot(1-5)
 intermission: act2_intermission_endof, act2_intermission_insertAct3
+sandbox: stats 
 
 MODIFIED:
 devMuseum: bookAdditionalCredits(2-3) -> bookAdditionalCredits(4-5), bookAdditionalCredits(4-6) -> bookAdditionalCredits(6-8)

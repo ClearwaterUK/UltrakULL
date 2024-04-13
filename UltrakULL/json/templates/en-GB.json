@@ -1680,7 +1680,7 @@
         "shop_returnToMission": "RETURN TO MISSION",
         "shop_soulOrbs": "SOUL ORBS",
         "shop_moneyCount": "<color=orange>P</color>",
-        "shop_lotsOfMoney": "LIKE, A LOT OF <color=orange>P</color>",
+        "shop_lotsOfMoney": "LIKE, A LOT OF ",
 
         "shop_cybergrindDescription1": "The Cyber Grind is an endless survival mode.",
         "shop_cybergrindDescription2": "Good performance gives many points.",
@@ -2902,6 +2902,7 @@
         "sandbox_shop_worldOptions": "WORLD OPTIONS",
         "sandbox_shop_icons": "ICONS",
 
+        "sandbox_shop_stats": "STATS",
         "sandbox_shop_totalBoxes": "TOTAL BOXES BUILT",
         "sandbox_shop_totalProps": "TOTAL PROPS PLACED",
         "sandbox_shop_totalEnemies": "TOTAL ENEMIES SPAWNED",

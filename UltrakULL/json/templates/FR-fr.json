@@ -1631,7 +1631,7 @@
 		"shop_returnToMission": "RETOURNER À LA MISSION",
 		"shop_soulOrbs": "ORBES D'ÂMES",
 		"moneyCount": "<color=orange>P</color>",
-		"lotsOfMoney": "VRAIMENT BEAUCOUP DE <color=orange>P</color>",
+		"lotsOfMoney": "VRAIMENT BEAUCOUP DE ",
 
 		"shop_cybergrindDescription1": "<color=red>Le Cyber Grind est un mode de survie sans fin</color>.",
 		"shop_cybergrindDescription2": "Une bonne performance donnera beaucoup de <color=red>points</color>.",
@@ -2843,6 +2843,7 @@
 		"sandbox_shop_worldOptions": "OPTIONS DU MONDE",
 		"sandbox_shop_icons": "ICÔNES",
 
+		"sandbox_shop_stats":  "",
 		"sandbox_shop_totalBoxes": "N° DE BOÎTES PLACÉS",
 		"sandbox_shop_totalProps": "N° DE PIÈCES PLACÉES",
 		"sandbox_shop_totalEnemies": "N° D'ENNEMIS PLACÉS",
