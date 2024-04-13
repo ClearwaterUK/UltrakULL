@@ -102,25 +102,28 @@ namespace UltrakULL.Harmony_Patches
 
 				if (Core.TMPFontReady && !isUsingEnglish())
 				{
-					string currentLanguage = LanguageManager.CurrentLanguage.metadata.langDisplayName;
-					switch (currentLanguage)
+					string currentLanguage = LanguageManager.CurrentLanguage.metadata.langDisplayName.ToLower();
+					string currentLanguageCode = currentLanguage.Substring(0, 2);
+					switch (currentLanguageCode)
                     {
-                        case "Traditional Chinese":
-                        case "Simplified Chinese":
+						//Traditional/Simplified Chinese
+                        case "zh":
                             {
                                 //Swap with a Chinese font when it comes in.
                                 __instance.font = Core.CJKFontTMP;
                                 break;
                             }
-                        case "Japanese":
+						//Japanese
+                        case "ja":
                             {
                                 //japanese tofu fix
                                 __instance.font = Core.jaFontTMP;
                                 break;
                             }
-                        case "Arabic":
-						case "Persian":
-						case "Urdu":
+						//Arabic Persian Urdu
+                        case "ar":
+						case "fa":
+						case "ur":
 							{
 								
 								switch(__instance.alignment)
@@ -160,11 +163,12 @@ namespace UltrakULL.Harmony_Patches
 								break;
 							}
 
-						case "Hebrew":
-						case "Yiddish":
-						case "Ladino":
-						case "Mozarabic":
-						case "Judeo-Arabic":
+						//Hebrew Yiddish Ladino Mozarabic Judeo-Arabic
+						case "he":
+						case "yi":
+						case "la":
+						case "ro":
+						case "jr":
 							{
 								__instance.font = Core.HebrewFontTMP;
 								break;
@@ -184,7 +188,7 @@ namespace UltrakULL.Harmony_Patches
 								}
 								else
 								{
-									__instance.font = Core.GlobalFontTMP;
+                                    __instance.font = Core.GlobalFontTMP;
 								}
 								break;
 							}
