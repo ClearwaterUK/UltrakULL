@@ -204,6 +204,7 @@
     <Compile Include="Harmony Patches\BossBarManager.cs" />
     <Compile Include="Harmony Patches\CheatsManager.cs" />
     <Compile Include="Harmony Patches\HellMap.cs" />
+    <Compile Include="Harmony Patches\MoneyTextPatch.cs" />
     <Compile Include="Harmony Patches\RankHelperPatch.cs" />
     <Compile Include="Harmony Patches\Coin.cs" />
     <Compile Include="Harmony Patches\ControlBindNames.cs" />
@@ -232,6 +233,7 @@
     <Compile Include="Harmony Patches\ShopPatch.cs" />
     <Compile Include="Harmony Patches\SpawnMenu.cs" />
     <Compile Include="Harmony Patches\Rank.cs" />
+    <Compile Include="Harmony Patches\StatsPatch.cs" />
     <Compile Include="Harmony Patches\StyleHUD.cs" />
     <Compile Include="Harmony Patches\Subtitles\GabrielSubtitlesSwap.cs" />
     <Compile Include="Harmony Patches\Subtitles\MandaloreSubtitlesSwap.cs" />

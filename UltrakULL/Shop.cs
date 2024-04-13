@@ -211,6 +211,10 @@ namespace UltrakULL
                     + LanguageManager.CurrentLanguage.shop.shop_revolverSharpshooterDescription2 + "\n\n";
                 sharpshooterWindowDescription.fontSize = 20;
 
+                //just in case.
+                TextMeshProUGUI redrevolverBackText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(sharpshooterWindow, "Button"), "Text"));
+                redrevolverBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
+
                 //Revolver info & color tabs
                 GameObject revolverExtra = GetGameObjectChild(revolverWindow, "Info and Color Panel");
                 GameObject revolverExtraInfo = GetGameObjectChild(revolverExtra, "InfoButton");
@@ -745,6 +749,10 @@ namespace UltrakULL
                     LanguageManager.CurrentLanguage.shop.shop_rocketLauncherSrsCannonDescription2 + "\n\n" +
                     LanguageManager.CurrentLanguage.shop.shop_rocketLauncherSrsCannonDescription3;
                 srsCannonInfoDescription.fontSize = 16;
+
+                //just in case 
+                TextMeshProUGUI greenrocketlauncherBackText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(srsCannonInfo, "Button"), "Text"));
+                greenrocketlauncherBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
                 //Rocket Launcher red variation (under construction)
                 GameObject rlRedVariation = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Red) (Under Construction)");
