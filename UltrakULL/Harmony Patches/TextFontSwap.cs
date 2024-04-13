@@ -102,7 +102,7 @@ namespace UltrakULL.Harmony_Patches
 
 				if (Core.TMPFontReady && !isUsingEnglish())
 				{
-					string currentLanguage = LanguageManager.CurrentLanguage.metadata.langDisplayName.ToLower();
+					string currentLanguage = LanguageManager.CurrentLanguage.metadata.langName.ToLower();
 					string currentLanguageCode = currentLanguage.Substring(0, 2);
 					switch (currentLanguageCode)
                     {
