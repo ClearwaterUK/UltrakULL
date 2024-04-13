@@ -87,15 +87,15 @@ namespace UltrakULL
             switch (sandboxShopWorldOptionsMapBorderButton.text)
             {
                 case "ENABLE":
-                    {
-                        sandboxShopWorldOptionsMapBorderStatus.text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_worldOptionsEnable;
-                        break;
-                    }
+                {
+                    sandboxShopWorldOptionsMapBorderButton.text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_worldOptionsEnable;
+                    break;
+                }
                 case "DISABLE":
-                    {
-                        sandboxShopWorldOptionsMapBorderStatus.text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_worldOptionsDisable;
-                        break;
-                    }
+                {
+                    sandboxShopWorldOptionsMapBorderButton.text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_worldOptionsDisable;
+                    break;
+                }
             }
 
             //Icons

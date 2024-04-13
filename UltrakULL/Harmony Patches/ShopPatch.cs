@@ -35,6 +35,10 @@ namespace UltrakULL.Harmony_Patches
                     sandboxStats.text = "--" + LanguageManager.CurrentLanguage.sandbox.sandbox_shop_stats + "--";
                     return;
                 }
+                if(__instance.gameObject.name == "Garry Shop")
+                {
+                    return;
+                }
 
                 //Secret testaments (Don't do anything here since it's taken care of elsewhere
                 if (__instance.gameObject.name == "Testament Shop" && GetCurrentSceneName().Contains("-S"))
