@@ -13,7 +13,7 @@ namespace UltrakULL.Harmony_Patches
     public static class LocalizeGameProgressCheck
     {
         [HarmonyPrefix]
-        public static bool Check_MyPatch(DifficultyTitle __instance, ref Text ___txt, ref TMP_Text ___txt2)
+        public static bool Check_MyPatch(DifficultyTitle __instance, ref TMP_Text ___txt2)
         {
             if(isUsingEnglish())
             {
@@ -61,16 +61,6 @@ namespace UltrakULL.Harmony_Patches
                 {
                     ___txt2.text = text;
                     return false;
-                }
-
-                if (!___txt)
-                {
-                    ___txt = __instance.GetComponent<Text>();
-                }
-
-                if (___txt)
-                {
-                    ___txt.text = text;
                 }
 
                 return false;
@@ -122,16 +112,6 @@ namespace UltrakULL.Harmony_Patches
                 {
                     ___txt2.text = text;
                     return false;
-                }
-
-                if (!___txt)
-                {
-                    ___txt = __instance.GetComponent<Text>();
-                }
-
-                if (___txt)
-                {
-                    ___txt.text = text;
                 }
 
                 return false;

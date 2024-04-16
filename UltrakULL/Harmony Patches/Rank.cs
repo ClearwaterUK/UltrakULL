@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UltrakULL.json;
 using UnityEngine.UI;
+using TMPro;
 
 namespace UltrakULL.Harmony_Patches
 {
@@ -155,14 +156,14 @@ namespace UltrakULL.Harmony_Patches
 			public static void Postfix(LevelSelectPanel __instance)
 			{
 				
-				Text componentInChildren = __instance.transform.Find("Stats").Find("Rank").GetComponentInChildren<Text>();
+				TextMeshProUGUI componentInChildren = __instance.transform.Find("Stats").Find("Rank").GetComponentInChildren<TextMeshProUGUI>();
 
 				Rank ranks = LanguageManager.CurrentLanguage.ranks;
 				string replacement = "_";
 				string rank = componentInChildren.text;
 
-				componentInChildren.alignment = UnityEngine.TextAnchor.LowerCenter;
-				componentInChildren.resizeTextForBestFit = true;
+				//componentInChildren.alignment = UnityEngine.TextAnchor.LowerCenter;
+				//componentInChildren.resizeTextForBestFit = true;
 
 				// at least 16 in length, otherwise its 99.999% certain to be nothing.
 				if (rank.Length < 16)

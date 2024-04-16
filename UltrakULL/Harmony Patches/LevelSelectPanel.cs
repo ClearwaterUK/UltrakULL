@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Linq;
+using TMPro;
 
 using static UltrakULL.CommonFunctions;
 
@@ -25,14 +26,14 @@ namespace UltrakULL.Harmony_Patches
 			RankData rank = GameProgressSaver.GetRank(num, false);
 
 			//Bandaid fix for P-2 and P-3 for now since they share the same level id as P-1 for some reason. Shall need to change/remove when they release.
-			if (__instance.transform.Find("Name").GetComponent<Text>().text.Contains("P-2"))
+			if (__instance.transform.Find("Name").GetComponent<TextMeshProUGUI>().text.Contains("P-2"))
 			{
-				__instance.transform.Find("Name").GetComponent<Text>().text =
+				__instance.transform.Find("Name").GetComponent<TextMeshProUGUI>().text =
 					"P-2:" + (LanguageManager.CurrentLanguage.levelNames.levelName_primeSecond);
 			}
-			else if (__instance.transform.Find("Name").GetComponent<Text>().text.Contains("P-3"))
+			else if (__instance.transform.Find("Name").GetComponent<TextMeshProUGUI>().text.Contains("P-3"))
 			{
-				__instance.transform.Find("Name").GetComponent<Text>().text = "P-3: ???";
+				__instance.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "P-3: ???";
 			}
 			else
 			{
@@ -50,7 +51,7 @@ namespace UltrakULL.Harmony_Patches
 
 					levelName = $"{lvlTitle} :{lvlNumber}";
 				}
-				__instance.transform.Find("Name").GetComponent<Text>().text = levelName; //Level Name
+				__instance.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = levelName; //Level Name
 			}
 			if (rank.levelNumber == __instance.levelNumber || (__instance.levelNumber == 666 && rank.levelNumber == __instance.levelNumber + __instance.levelNumberInLayer - 1))
 			{
@@ -61,13 +62,13 @@ namespace UltrakULL.Harmony_Patches
 					if (rank.challenge)
 					{
 						__instance.challengeIcon.fillCenter = true;
-						Text componentInChildren2 = __instance.challengeIcon.GetComponentInChildren<Text>();
+                        TextMeshProUGUI componentInChildren2 = __instance.challengeIcon.GetComponentInChildren<TextMeshProUGUI>();
 						componentInChildren2.text = String.Join(" ", LanguageManager.CurrentLanguage.frontend.level_challengeCompleted.ToList()); //Challenge completed
 					}
 					else
 					{
 						__instance.challengeIcon.fillCenter = false;
-						Text componentInChildren3 = __instance.challengeIcon.GetComponentInChildren<Text>();
+                        TextMeshProUGUI componentInChildren3 = __instance.challengeIcon.GetComponentInChildren<TextMeshProUGUI>();
 						componentInChildren3.text = String.Join(" ", LanguageManager.CurrentLanguage.frontend.level_challenge.ToList()); //Challenge not completed
 						componentInChildren3.color = Color.white;
 					}
@@ -76,7 +77,7 @@ namespace UltrakULL.Harmony_Patches
 			else
 			{
 
-				Text componentInChildren3 = __instance.challengeIcon.GetComponentInChildren<Text>();
+                TextMeshProUGUI componentInChildren3 = __instance.challengeIcon.GetComponentInChildren<TextMeshProUGUI>();
 				componentInChildren3.text = String.Join(" ", LanguageManager.CurrentLanguage.frontend.level_challenge.ToList()); //Challenge not completed
 				componentInChildren3.color = Color.white;
 			}
