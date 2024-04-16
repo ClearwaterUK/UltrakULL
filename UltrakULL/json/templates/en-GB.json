@@ -497,6 +497,42 @@
         "fish_sharkDescription2": "Lives in huge bodies of water and avoids land, though it may swim close to shore to feed."
     },
 
+    "washing": {
+        "wash_wash_fakeexittext1": "CLEAN UP YOUR MESS!",
+        "wash_fakeexittext2": "The washer and vacuum go in weapon slot 6.",
+        "wash_fakeexittext3": "Both Tools have alternate fire modes.",
+        "wash_fakeexittext4": "Litter too big to be vacuumed needs to be manually throun away.",
+        "wash_fakeexittext5": "Some corpses cannot be moved and need to be crushed.",
+        "wash_fakeexittext6": "The door will open when it's <color=red>ALL</color> clean.'",
+
+        "wash_Clean": "CLEAN",
+        "wash_bloodClean": "Clean:",
+        "wash_ToDo": "To Do:",
+
+        "wash_roomCourtyard": "Courtyard",
+        "wash_room": "Library",
+        "wash_roomLobby": "Lobby",
+        "wash_roomLounge": "Lounge",
+        "wash_roomSideroom": "Side Room",
+
+        "wash_littercount": "Litter Count:",
+        "wash_Dumpster": "Dumpster",
+        "wash_Ground": "Ground",
+        "wash_Pillars": "Pillars",
+        "wash_Walls": "Walls",
+        "wash_BackBookshelf": "Back Bookshelf",
+        "wash_Bookcases": "Bookcases",
+        "wash_Desk": "Desk",
+        "wash_FrontBookshelf": "Front Bookshelf",
+        "wash_Sconces": "Sconces",
+        "wash_Sidewall": "Side Wall",
+        "wash_Walkway": "Walkway",
+        "wash_WindowWall": "Window Wall",
+        "wash_Decor": "Decor",
+        "wash_Floors": "Floors",
+        "wash_Pond": "Pond"
+    },
+
     "style": {
         "style_airslam": "AIRSLAM",
         "style_airshot": "AIRSHOT",
@@ -739,7 +775,10 @@
         "books_violenceFourth2": "WAR NO LONGER NEEDED ITS ULTIMATE PRACTICIONER. IT HAD BECOME A SELF-SUSTAINING SYSTEM. MAN WAS CRUSHED UNDER THE WHEELS OF A MACHINE CREATED TO CREATE THE MACHINE CREATED TO CRUSH THE MACHINE. SAMSARA OF CUT SINEW AND CRUSHED BONE. DEATH WITHOUT LIFE. NULL OUROBOROS. ALL THAT REMAINED IS WAR WITHOUT REASON.",
         "books_violenceFourth3": "A MAGNUM OPUS. A COLD TOWER OF STEEL. A MACHINE BUILT TO END WAR IS ALWAYS A MACHINE BUILT TO CONTINUE WAR. YOU WERE BEAUTIFUL, OUTSTRETCHED LIKE ANTENNAS TO HEAVEN. YOU WERE BEYOND YOUR CREATORS. YOU REACHED FOR GOD, AND YOU FELL. NONE WERE LEFT TO SPEAK YOUR EULOGY. NO FINAL WORDS, NO CONCLUDING STATEMENT. NO POINT. PERFECT CLOSURE.",
         "books_violenceFourth4": "T H I S   I S   T H E   O N L Y   W A Y   I T   S H O U L D   H A V E   E N D E D .",
-        "books_violenceFourth5": "The pages of the book are blank."
+        "books_violenceFourth5": "The pages of the book are blank.",
+
+        "books_violenceSecret1_Slate1": "SORRY, GONE FISHIN'!",
+        "books_violenceSecret1_Slate2": "- SIZE 2"
     },
     "intermission": {
         "act1_intermission_first1": "Disgrace.",
@@ -1651,6 +1690,7 @@
         "leveltips_violenceSecond": "<color=orange>Mannequins</color> can be hard to hit due to their speed, but they lose air control when <color=orange>launched</color> or <color=orange>shot down</color> from a surface, making them <color=orange>unable to move</color> for a short moment.",
         "leveltips_violenceThird": "The <color=red>Knuckleblaster</color>'s <color=orange>blast wave</color> is also capable of breaking a <color=orange>Gutterman's shield</color>, and is much easier to land in a chaotic scenario.",
         "leveltips_violenceFourth": "A <color=orange>direct hit</color> from the Knuckleblaster has extremely powerful <color=orange>knockback</color>, making it extremely powerful for launching enemies into <color=orange>pits</color> and other <color=orange>environmental hazards</color>.",
+        "leveltips_violenceSecret": "Didn't except me, huh?'",
 
         "leveltips_fraudFirst": "LEVEL TIP FRAUD FIRST",
         "leveltips_fraudSecond": "LEVEL TIP FRAUD SECOND",

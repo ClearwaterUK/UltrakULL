@@ -23,6 +23,7 @@ options: advanced_title, advanced_currentLevel, advanced_cybergrindResetText1, a
 options: save_slot(1-5)
 intermission: act2_intermission_endof, act2_intermission_insertAct3
 sandbox: stats 
+washing: 
 
 MODIFIED:
 devMuseum: bookAdditionalCredits(2-3) -> bookAdditionalCredits(4-5), bookAdditionalCredits(4-6) -> bookAdditionalCredits(6-8)

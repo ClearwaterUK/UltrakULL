@@ -195,6 +195,7 @@
     <Compile Include="CyberGrind.cs" />
     <Compile Include="DevMuseum.cs" />
     <Compile Include="EnemyBios.cs" />
+    <Compile Include="Harmony Patches\7Secretpatch.cs" />
     <Compile Include="Harmony Patches\AudioSwaps\GabrielAudioSwap.cs" />
     <Compile Include="Harmony Patches\AudioSwaps\GabrielSecondAudioSwap.cs" />
     <Compile Include="Harmony Patches\AudioSwaps\MandaloreAudioSwap.cs" />

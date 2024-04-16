@@ -162,6 +162,10 @@ namespace UltrakULL
                             + "<size=20><color=red>" + LanguageManager.CurrentLanguage.books.books_violenceFourth4 + "</color></size>\n\n"
                             + "<size=20>" + LanguageManager.CurrentLanguage.books.books_violenceFourth5 + "</size>";
                     }
+                case "Level 7-S":{
+                        return LanguageManager.CurrentLanguage.books.books_violenceSecret_Slate1 + "\n\n"
+                        + LanguageManager.CurrentLanguage.books.books_violenceSecret_Slate2;
+                }
                 
                 default: { return "<big><b>Unknown book</b></big>\n\n" + originalText; }
             }
