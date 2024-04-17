@@ -89,7 +89,7 @@ namespace UltrakULL
                 payloadControlTitle.text = LanguageManager.CurrentLanguage.act3.act3_violenceSecond_payloadControlTitle;
                 payloadControlLower.text = LanguageManager.CurrentLanguage.act3.act3_violenceSecond_payloadControlLower;
                 payloadControlWait.text = LanguageManager.CurrentLanguage.act3.act3_violenceSecond_payloadControlWait;
-                //payloadControlError.text = LanguageManager.CurrentLanguage.act3.act3_violenceSecond_paylordControlError1 + "<size=12>\n" + LanguageManager.CurrentLanguage.act3.act3_violenceSecond_paylordControlError2;
+                payloadControlError.text = LanguageManager.CurrentLanguage.act3.act3_violenceSecond_payloadControlError1 + "<size=12>\n" + LanguageManager.CurrentLanguage.act3.act3_violenceSecond_payloadControlError2;
                 payloadControlEmpty.text = LanguageManager.CurrentLanguage.act3.act3_violenceSecond_payloadControlEmpty;
             }
 

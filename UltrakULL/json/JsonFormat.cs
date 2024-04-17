@@ -281,6 +281,9 @@ namespace UltrakULL.json
         public string cheats_snapping;
         public string cheats_physics;
         public string cheats_crashMode;
+        public string cheats_hideWeapons;
+        public string cheats_hideUi;
+        public string cheats_ghostDroneMode;
 
         public string cheats_stayActive;
         public string cheats_disableOnReload;
@@ -1423,7 +1426,12 @@ namespace UltrakULL.json
         
         public string books_violenceSecond1;
         public string books_violenceSecond2;
-        
+
+        public string books_violenceSecondAmbush1;
+        public string books_violenceSecondAmbush2;
+        public string books_violenceSecondAmbush3;
+        public string books_violenceSecondAmbush4;
+
         public string books_violenceFourth1;
         public string books_violenceFourth2;
         public string books_violenceFourth3;
@@ -1882,10 +1890,6 @@ namespace UltrakULL.json
         public string category_saves;
         public string category_customization;
 
-        public string general_mouseSensitivity;
-        public string general_xInversion;
-        public string general_yInversion;
-        public string general_fieldOfVision;
         public string general_weaponPosition;
         public string general_weaponPositionRight;
         public string general_weaponPositionMiddle;
@@ -1899,63 +1903,63 @@ namespace UltrakULL.json
         public string general_parryFlash;
         public string general_misc;
         public string general_restartWarning;
-        public string general_alwaysOn;
-        public string general_onlyCG;
-        public string general_alwaysOff;
+        public string general_restartWarningAlwaysOn;
+        public string general_restartWarningOnlyCG;
+        public string general_restartWarningAlwaysOff;
         public string general_sandboxOverwrite;
         public string general_discordRpc;
         public string general_seasonalEvent;
-        public string general_controllerRumble;
-        public string general_controllerRumbleCustomize;
+
         public string general_levelLeaderboards;
         public string general_advancedOptions;
         public string general_advancedOptionsCustomize;
 
+        public string controls_mouseSensitivity;
+        public string controls_xInversion;
+        public string controls_yInversion;
+        public string controls_controllerRumble;
+        public string controls_controllerRumbleCustomize;
+        public string controls_weapons;
+        public string controls_mouseWheelToChangeWeapon;
+        public string controls_scrollType;
+        public string controls_scrollTypeWeapons;
+        public string controls_scrollTypeVariations;
+        public string controls_scrollTypeAll;
+        public string controls_reverseScroll;
         public string controls_bindings;
-        public string controls_movementTitle;
-        public string controls_weaponTitle;
-        public string controls_resetDefault;
         public string controls_movement;
         public string controls_move;
-        public string controls_forward;
-        public string controls_back;
-        public string controls_left;
-        public string controls_right;
+        public string controls_dodge;
+        public string controls_slide;
         public string controls_jump;
-        public string controls_dash;
+        public string controls_weaponTitle;
         public string controls_primaryFire;
         public string controls_secondaryFire;
-        public string controls_arms;
-        public string controls_punch;
-        public string controls_punchFeedbacker;
-        public string controls_punchKnuckleblaster;
-        public string controls_nextWeapon;
-        public string controls_previousWeapon;
-        public string controls_lastUsedWeapon;
-        public string controls_changeVariation;
-        public string controls_changeArm;
-        public string controls_slide;
-        public string controls_whiplash;
-        public string controls_weapons;
+        public string controls_nextVariation;
+        public string controls_previousVariation;
         public string controls_revolver;
         public string controls_shotgun;
         public string controls_nailgun;
         public string controls_railcannon;
         public string controls_rocketLauncher;
-        public string controls_scrollType;
-        public string controls_scrollTypeWeapons;
-        public string controls_scrollTypeVariations;
-        public string controls_scrollTypeAll;
-        public string controls_mouseWheelToChangeWeapon;
-        public string controls_reverseScroll;
+        public string controls_spawnerArm;
+        public string controls_nextWeapon;
+        public string controls_previousWeapon;
+        public string controls_lastUsedWeapon;
+        public string controls_arms;
+        public string controls_punch;
+        public string controls_changeArm;
+        public string controls_punchFeedbacker;
+        public string controls_punchKnuckleblaster;
+        public string controls_whiplash;
 
-        public string graphics_title;
         public string graphics_resolution;
         public string graphics_fullscreen;
         public string graphics_maxFps;
         public string graphics_maxFpsNone;
         public string graphics_maxFps2x;
         public string graphics_vsync;
+        public string graphics_fieldOfVision;
         public string graphics_gamma1;
         public string graphics_gamma2;
         public string graphics_filters;
@@ -2002,11 +2006,10 @@ namespace UltrakULL.json
         public string graphics_goreBloodChance;
         public string graphics_goreMaxGore;
 
-        public string audio_title;
         public string audio_volume;
         public string audio_subtitles;
         public string audio_globalVolume;
-        public string audio_sfxVolume;
+        public string audio_soundEffectsVolume;
         public string audio_musicVolume;
         public string audio_muffleMusic;
         public string audio_dubbing;
@@ -2410,6 +2413,8 @@ namespace UltrakULL.json
         public string act3_violenceSecond_payloadControlTitle;
         public string act3_violenceSecond_payloadControlLower;
         public string act3_violenceSecond_payloadControlWait;
+        public string act3_violenceSecond_payloadControlError1;
+        public string act3_violenceSecond_payloadControlError2;
         public string act3_violenceSecond_payloadControlEmpty;
         
         public string act3_violenceThird_feedIt;

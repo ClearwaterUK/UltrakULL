@@ -559,7 +559,7 @@ namespace UltrakULL.Harmony_Patches
             dubToggle.transform.localPosition = oldToggle.transform.localPosition;
 
             dubToggle.isOn = Convert.ToBoolean(LanguageManager.configFile.Bind("General", "activeDubbing", "False").Value);
-            GameObject toggleCheckmark = GetGameObjectChild(GetGameObjectChild(dubSlider,"Toggle"),"Background");
+            GameObject toggleCheckmark = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(dubSlider,"Toggle"),"Background"), "Checkmark");
             
             if(dubToggle.isOn) { toggleCheckmark.SetActive(true); }
             else { toggleCheckmark.SetActive(false); }

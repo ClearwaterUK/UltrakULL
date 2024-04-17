@@ -69,9 +69,9 @@ namespace UltrakULL
             GameObject restartWarningList = GetGameObjectChild(GetGameObjectChild(generalContent, "Restart Warning"), "Dropdown");
             TMP_Dropdown restartWarningDropdown = restartWarningList.GetComponent<TMP_Dropdown>();
             List<TMP_Dropdown.OptionData> restartWarningListText = restartWarningDropdown.options;
-            restartWarningListText[0].text = LanguageManager.CurrentLanguage.options.general_alwaysOn;
-            restartWarningListText[1].text = LanguageManager.CurrentLanguage.options.general_onlyCG;
-            restartWarningListText[2].text = LanguageManager.CurrentLanguage.options.general_alwaysOff;
+            restartWarningListText[0].text = LanguageManager.CurrentLanguage.options.general_restartWarningAlwaysOn;
+            restartWarningListText[1].text = LanguageManager.CurrentLanguage.options.general_restartWarningOnlyCG;
+            restartWarningListText[2].text = LanguageManager.CurrentLanguage.options.general_restartWarningAlwaysOff;
 
             TextMeshProUGUI sandboxOverwriteText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(generalContent, "Sandbox Warning"), "Text"));
             sandboxOverwriteText.text = LanguageManager.CurrentLanguage.options.general_sandboxOverwrite;
@@ -95,19 +95,19 @@ namespace UltrakULL
             controlText.text = "-- " + LanguageManager.CurrentLanguage.options.category_general + " --";
 
             TextMeshProUGUI mouseSensitivityText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Mouse Sensitivity"), "Text"));
-            mouseSensitivityText.text = LanguageManager.CurrentLanguage.options.general_mouseSensitivity;
+            mouseSensitivityText.text = LanguageManager.CurrentLanguage.options.controls_mouseSensitivity;
 
             TextMeshProUGUI invertXAxisText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Invert Axis"), "Text"));
-            invertXAxisText.text = LanguageManager.CurrentLanguage.options.general_xInversion;
+            invertXAxisText.text = LanguageManager.CurrentLanguage.options.controls_xInversion;
 
             TextMeshProUGUI invertYAxisText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Invert Y Axis"), "Text"));
-            invertYAxisText.text = LanguageManager.CurrentLanguage.options.general_yInversion;
+            invertYAxisText.text = LanguageManager.CurrentLanguage.options.controls_yInversion;
 
             TextMeshProUGUI controllerRumbleText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(controlContent, "Controller Rumble"), "Text"));
-            controllerRumbleText.text = LanguageManager.CurrentLanguage.options.general_controllerRumble;
+            controllerRumbleText.text = LanguageManager.CurrentLanguage.options.controls_controllerRumble;
 
             TextMeshProUGUI controllerRumbleTextCustomize = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(controlContent, "Controller Rumble"), "Select"), "Text"));
-            controllerRumbleTextCustomize.text = LanguageManager.CurrentLanguage.options.general_controllerRumbleCustomize;
+            controllerRumbleTextCustomize.text = LanguageManager.CurrentLanguage.options.controls_controllerRumbleCustomize;
 
             TextMeshProUGUI weaponsTitle = GetTextMeshProUGUI(controlContent.transform.GetChild(5).gameObject);
             weaponsTitle.text = "-- " + LanguageManager.CurrentLanguage.options.controls_weapons + " --";
@@ -219,7 +219,7 @@ namespace UltrakULL
             vsyncText.text = LanguageManager.CurrentLanguage.options.graphics_vsync;
 
             TextMeshProUGUI fovText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "FOV"), "Text"));
-            fovText.text = LanguageManager.CurrentLanguage.options.general_fieldOfVision;
+            fovText.text = LanguageManager.CurrentLanguage.options.graphics_fieldOfVision;
 
             TextMeshProUGUI gammaCorrectionText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Gamma Correction"), "Text"));
             gammaCorrectionText.text = LanguageManager.CurrentLanguage.options.graphics_gamma1 +
@@ -340,11 +340,11 @@ namespace UltrakULL
             TextMeshProUGUI masterVolumeText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(audioContent, "Master Volume"), "Text"));
             masterVolumeText.text = LanguageManager.CurrentLanguage.options.audio_globalVolume;
 
-            TextMeshProUGUI sfxVolumeText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(audioContent, "SFX Volume"), "Text"));
-            sfxVolumeText.text = LanguageManager.CurrentLanguage.options.audio_sfxVolume;
+            TextMeshProUGUI soundEffectsVolumeText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(audioContent, "SFX Volume"), "Text"));
+            soundEffectsVolumeText.text = LanguageManager.CurrentLanguage.options.audio_soundEffectsVolume;
 
-            TextMeshProUGUI musicVolumeText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(audioContent, "Music Volume"), "Text"));
-            musicVolumeText.text = LanguageManager.CurrentLanguage.options.audio_musicVolume;
+            TextMeshProUGUI sfxVolumeText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(audioContent, "Music Volume"), "Text"));
+            sfxVolumeText.text = LanguageManager.CurrentLanguage.options.audio_musicVolume;
 
             //-- MISC --
             TextMeshProUGUI miscText = GetTextMeshProUGUI(GetGameObjectChild(audioContent, "Text (4)"));

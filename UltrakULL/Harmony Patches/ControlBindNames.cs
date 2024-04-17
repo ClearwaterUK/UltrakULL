@@ -53,17 +53,19 @@ namespace UltrakULL.Harmony_Patches
             switch (originalText)
             {
                 case "MOVE": { return LanguageManager.CurrentLanguage.options.controls_move; }
-                case "DODGE": { return LanguageManager.CurrentLanguage.options.controls_dash; }
+                case "DODGE": { return LanguageManager.CurrentLanguage.options.controls_dodge; }
                 case "SLIDE": { return LanguageManager.CurrentLanguage.options.controls_slide; }
                 case "JUMP": { return LanguageManager.CurrentLanguage.options.controls_jump; }
                 case "PRIMARY FIRE": { return LanguageManager.CurrentLanguage.options.controls_primaryFire; }
                 case "SECONDARY FIRE": { return LanguageManager.CurrentLanguage.options.controls_secondaryFire; }
-                case "CHANGE VARIATION": { return LanguageManager.CurrentLanguage.options.controls_changeVariation; }
+                case "NEXT VARIATION": { return LanguageManager.CurrentLanguage.options.controls_nextVariation; }
+                case "PREVIOUS VARIATION": { return LanguageManager.CurrentLanguage.options.controls_previousVariation; }
                 case "REVOLVER": { return LanguageManager.CurrentLanguage.options.controls_revolver; }
                 case "SHOTGUN": { return LanguageManager.CurrentLanguage.options.controls_shotgun; }
                 case "NAILGUN": { return LanguageManager.CurrentLanguage.options.controls_nailgun; }
                 case "RAILCANNON": { return LanguageManager.CurrentLanguage.options.controls_railcannon; }
                 case "ROCKET LAUNCHER": { return LanguageManager.CurrentLanguage.options.controls_rocketLauncher; }
+                case "SPAWNER ARM": { return LanguageManager.CurrentLanguage.options.controls_spawnerArm; }
                 case "NEXT WEAPON": { return LanguageManager.CurrentLanguage.options.controls_nextWeapon; }
                 case "PREVIOUS WEAPON": { return LanguageManager.CurrentLanguage.options.controls_previousWeapon; }
                 case "LAST WEAPON": { return LanguageManager.CurrentLanguage.options.controls_lastUsedWeapon; }

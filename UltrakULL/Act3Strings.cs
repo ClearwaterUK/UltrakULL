@@ -26,6 +26,10 @@ namespace UltrakULL
             {
                 return ("<color=red>" + LanguageManager.CurrentLanguage.act3.act3_violenceSecond_biggerBoom + "</color>");
             }
+            if (fullMessage.Contains("ALTERNATE"))
+            {
+                return LanguageManager.CurrentLanguage.act1.act1_limboFourth_alternateRevolver;
+            }
             return "Unknown 7-2 string";
         }
         
