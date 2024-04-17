@@ -526,7 +526,7 @@
 		"wash_Floors": "",
 		"wash_Pond": ""
 	},
-
+  
 	"style": {
 		"style_kill": "ÉLIMINATION",
 		"style_doublekill": "BAIN DE SANG",
@@ -770,8 +770,8 @@
 		"books_violenceFourth4": "C ' E S T   L A   S E U L E   M A N I È R E   Q U E   Ç A   A U R A I T   D Û   S E   T E R M I N E R .",
 		"books_violenceFourth5": "Les pages du livre sont vides.",
 
-		"books_violenceSecret_Slate1": "",
-		"books_violenceSecret_Slate2": ""
+		"books_violenceSecret_Slate1": "DÉSOLÉ, J'SUIS ALLÉ PÊCHER !",
+		"books_violenceSecret_Slate2": "- TAILLE 2"
 	},
 	"intermission": {
 		"act1_intermission_first1": "La honte.",
