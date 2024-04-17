@@ -195,103 +195,107 @@ namespace UltrakULL
             TextMeshProUGUI BloodCleanText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(washcanvas, "Painter Completion Meter"), "Slider Group"), "Blood Cleaned"));
             BloodCleanText.text = LanguageManager.CurrentLanguage.washing.wash_bloodClean;
             GameObject chklst = GetGameObjectChild(washcanvas, "CheckList");
+            
+            TextMeshProUGUI LitterCount = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Litter"), "Litter Count:"));
+            LitterCount.text = LanguageManager.CurrentLanguage.washing.wash_littercount;
+
+            //i tried to patch the checklist, but it's somehow doesn't work...
             Transform[] painterTransforms = chklst.GetComponentsInChildren<Transform>(true);
-            List<GameObject> painterObjects = new List<GameObject>();
             foreach (Transform childTransform in painterTransforms)
             {
-                painterObjects.Add(childTransform.gameObject);
-            }
-            foreach (GameObject painterObject in painterObjects)
-            {
-                TextMeshProUGUI painterText = painterObject.GetComponentInChildren<TextMeshProUGUI>(true);
-                if(painterText != null)
+                GameObject painterObject = childTransform.gameObject;
+                if (painterObject.name == "Painter Name")
                 {
-                    switch (painterText.text)
+                    TextMeshProUGUI chklstpainterText = painterObject.GetComponentInChildren<TextMeshProUGUI>(true);
+                    if (chklstpainterText != null)
                     {
-                        case "Dumpster":
-                            {
-                                painterText.text = LanguageManager.CurrentLanguage.washing.wash_Dumpster;
-                                break;
-                            }
-                        case "Ground":
-                            {
-                                painterText.text = LanguageManager.CurrentLanguage.washing.wash_Ground;
-                                break;
-                            }
-                        case "Pillars":
-                            {
-                                painterText.text = LanguageManager.CurrentLanguage.washing.wash_Pillars;
-                                break;
-                            }
-                        case "Walls":
-                            {
-                                painterText.text = LanguageManager.CurrentLanguage.washing.wash_Walls;
-                                break;
-                            }
-                        case "Back Bookshelf":
-                            {
-                                painterText.text = LanguageManager.CurrentLanguage.washing.wash_BackBookshelf;
-                                break;
-                            }
-                        case "Bookshelf":
-                            {
-                                painterText.text = LanguageManager.CurrentLanguage.washing.wash_Bookshelf;
-                                break;
-                            }
-                        case "Bookcases":
-                            {
-                                painterText.text = LanguageManager.CurrentLanguage.washing.wash_Bookcases;
-                                break;
-                            }
-                        case "Ceiling":
-                            {
-                                painterText.text = LanguageManager.CurrentLanguage.washing.wash_Ceiling;
-                                break;
-                            }
-                        case "Desks":
-                            {
-                                painterText.text = LanguageManager.CurrentLanguage.washing.wash_Desk;
-                                break;
-                            }
-                        case "Front Bookshelf":
-                            {
-                                painterText.text = LanguageManager.CurrentLanguage.washing.wash_FrontBookshelf;
-                                break;
-                            }
-                        case "Sconces":
-                            {
-                                painterText.text = LanguageManager.CurrentLanguage.washing.wash_Sconces;
-                                break;
-                            }
-                        case "Side Wall":
-                            {
-                                painterText.text = LanguageManager.CurrentLanguage.washing.wash_Sidewall;
-                                break;
-                            }
-                        case "Walkway":
-                            {
-                                painterText.text = LanguageManager.CurrentLanguage.washing.wash_Walkway;
-                                break;
-                            }
-                        case "Window Wall":
-                            {
-                                painterText.text = LanguageManager.CurrentLanguage.washing.wash_WindowWall;
-                                break;
-                            }
-                        case "Decor":
-                            {
-                                painterText.text = LanguageManager.CurrentLanguage.washing.wash_Decor;
-                                break;
-                            }
-                        case "Floors":
-                            {
-                                painterText.text = LanguageManager.CurrentLanguage.washing.wash_Floors;
-                                break;
-                            }
-                        default:
-                            {
-                                break;
-                            }
+                        switch (chklstpainterText.text)
+                        {
+                            case "Dumpster":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Dumpster;
+                                    break;
+                                }
+                            case "Ground":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Ground;
+                                    break;
+                                }
+                            case "Pillars":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Pillars;
+                                    break;
+                                }
+                            case "Walls":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Walls;
+                                    break;
+                                }
+                            case "Back Bookshelf":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_BackBookshelf;
+                                    break;
+                                }
+                            case "Bookshelf":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Bookshelf;
+                                    break;
+                                }
+                            case "Bookcases":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Bookcases;
+                                    break;
+                                }
+                            case "Ceiling":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Ceiling;
+                                    break;
+                                }
+                            case "Desks":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Desk;
+                                    break;
+                                }
+                            case "Front Bookshelf":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_FrontBookshelf;
+                                    break;
+                                }
+                            case "Sconces":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Sconces;
+                                    break;
+                                }
+                            case "Side Wall":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Sidewall;
+                                    break;
+                                }
+                            case "Walkway":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Walkway;
+                                    break;
+                                }
+                            case "Window Wall":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_WindowWall;
+                                    break;
+                                }
+                            case "Decor":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Decor;
+                                    break;
+                                }
+                            case "Floors":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Floors;
+                                    break;
+                                }
+                            default:
+                                {
+                                    break;
+                                }
+                        }
                     }
                 }
             }
@@ -300,43 +304,7 @@ namespace UltrakULL
         
 
 
-            /*TextMeshProUGUI Clean = GetTextMeshProUGUI(GetGameObjectChild(chklst, "CLEAN"));
-            Clean.text = LanguageManager.CurrentLanguage.washing.wash_Clean;
-            TextMeshProUGUI Todo = GetTextMeshProUGUI(GetGameObjectChild(chklst, "ToDo"));
-            Todo.text = LanguageManager.CurrentLanguage.washing.wash_ToDo;
-            TextMeshProUGUI LitterCount = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Litter"), "Litter Count:"));
-            LitterCount.text = LanguageManager.CurrentLanguage.washing.wash_littercount;
 
-            TextMeshProUGUI Dumpster = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Dumpster"), "Painter Name"));
-            Dumpster.text = LanguageManager.CurrentLanguage.washing.wash_Dumpster;
-            TextMeshProUGUI Ground = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Ground"), "Painter Name"));
-            Ground.text = LanguageManager.CurrentLanguage.washing.wash_Ground;
-            TextMeshProUGUI Pillars = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Pillars"), "Painter Name"));
-            Pillars.text = LanguageManager.CurrentLanguage.washing.wash_Pillars;
-            TextMeshProUGUI Walls = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Walls"), "Painter Name"));
-            Walls.text = LanguageManager.CurrentLanguage.washing.wash_Walls;
-            TextMeshProUGUI Back_Bookshelf = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Back Bookshelf"), "Painter Name"));
-            Back_Bookshelf.text = LanguageManager.CurrentLanguage.washing.wash_BackBookshelf;
-            TextMeshProUGUI Bookcases = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Bookcases"), "Painter Name"));
-            Bookcases.text = LanguageManager.CurrentLanguage.washing.wash_Bookcases;
-            TextMeshProUGUI Desks = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Desks"), "Painter Name"));
-            Desks.text = LanguageManager.CurrentLanguage.washing.wash_Desk;
-            TextMeshProUGUI Front_Bookshelf = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Front Bookshelf"), "Painter Name"));
-            Front_Bookshelf.text = LanguageManager.CurrentLanguage.washing.wash_FrontBookshelf;
-            TextMeshProUGUI Sconces = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Sconces"), "Painter Name"));
-            Sconces.text = LanguageManager.CurrentLanguage.washing.wash_Sconces;
-            TextMeshProUGUI Sidewall = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Side Wall"), "Painter Name"));
-            Sidewall.text = LanguageManager.CurrentLanguage.washing.wash_Sidewall;
-            TextMeshProUGUI Walkway = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Walkway"), "Painter Name"));
-            Walkway.text = LanguageManager.CurrentLanguage.washing.wash_Walkway;
-            TextMeshProUGUI WindowWall = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Window Wall"), "Painter Name"));
-            WindowWall.text = LanguageManager.CurrentLanguage.washing.wash_WindowWall;
-            TextMeshProUGUI Decor = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Decor"), "Painter Name"));
-            Decor.text = LanguageManager.CurrentLanguage.washing.wash_Decor;
-            TextMeshProUGUI Floors = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Floors"), "Painter Name"));
-            Floors.text = LanguageManager.CurrentLanguage.washing.wash_Floors;
-            TextMeshProUGUI Pond = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Pond"), "Painter Name"));
-            Pond.text = LanguageManager.CurrentLanguage.washing.wash_Pond;*/
         }
         // SecretFirstRoom/Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text
         // Note - it uses a separate panel that has the same name as the normal result panel.
