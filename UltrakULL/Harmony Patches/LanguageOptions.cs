@@ -110,7 +110,6 @@ namespace UltrakULL.Harmony_Patches
             GameObject langBrowserPageContent = GetGameObjectChild(GetGameObjectChild(langBrowserPage, "Scroll Rect (1)"), "Contents");
             TextMeshProUGUI langBrowserTitle = GetTextMeshProUGUI(GetGameObjectChild(langBrowserPageContent,"Text (4)"));
             langBrowserTitle.text = "--LANGUAGE BROWSER--";
-            langBrowserTitle.enableAutoSizing = true;
             
             Transform contentParent = langBrowserPage.transform.Find("Scroll Rect (1)").Find("Contents");
             int amountOfLangs = 0;
