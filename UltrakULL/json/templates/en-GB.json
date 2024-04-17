@@ -1640,7 +1640,7 @@
 
         "leveltips_preludeFourth1": "Shotgun parries:",
         "leveltips_preludeFourth2": "A point-blank Shotgun shot to the torso right before an enemy attack lands will deal massive damage.",
-
+      
         "leveltips_preludeFifth": "Attack sound cues allow you to keep track of enemies who are off screen.",
 
         "leveltips_limboFirst": "Some enemies make idle sounds to make them easier to track.",
@@ -1667,7 +1667,8 @@
 
         "leveltips_gluttonySecond1": "If you're having trouble keeping up with a tough enemy, stand back and observe. ",
         "leveltips_gluttonySecond2": "Every enemy has its tells and patterns and learning those can be your key to victory.",
-
+      
+      
         "leveltips_greedFirst": "HITSCAN weapons can be used to hit the shotgun's CORE EJECT in mid-air to increase its damage and blast radius.",
         "leveltips_greedSecond": "POWER-UPS can be stacked.",
         "leveltips_greedThird": "Hitting an enemy with only the edge of an explosion will launch them without dealing much damage, making it a risky but effective tool against Stalkers.",
