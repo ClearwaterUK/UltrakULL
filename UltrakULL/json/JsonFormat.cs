@@ -1880,6 +1880,7 @@ namespace UltrakULL.json
         public string category_assists;
         public string category_colors;
         public string category_saves;
+        public string category_customization;
 
         public string general_mouseSensitivity;
         public string general_xInversion;
@@ -1890,12 +1891,17 @@ namespace UltrakULL.json
         public string general_weaponPositionMiddle;
         public string general_weaponPositionLeft;
         public string general_rememberWeapon;
+        public string general_screen;
         public string general_screenShake;
         public string general_screenShakeMinimum;
         public string general_screenShakeMaximum;
         public string general_cameraTilt;
         public string general_parryFlash;
+        public string general_misc;
         public string general_restartWarning;
+        public string general_alwaysOn;
+        public string general_onlyCG;
+        public string general_alwaysOff;
         public string general_sandboxOverwrite;
         public string general_discordRpc;
         public string general_seasonalEvent;
@@ -1997,9 +2003,12 @@ namespace UltrakULL.json
         public string graphics_goreMaxGore;
 
         public string audio_title;
+        public string audio_volume;
         public string audio_subtitles;
         public string audio_globalVolume;
+        public string audio_sfxVolume;
         public string audio_musicVolume;
+        public string audio_muffleMusic;
         public string audio_dubbing;
 
         public string hud_title;
@@ -2063,7 +2072,9 @@ namespace UltrakULL.json
         public string assists_enemySilhouettesOutlines;
         public string assists_enemySilhouettesDistance;
         public string assists_enemySilhouettesDistanceMinimum;
+        public string assists_enemySilhouettesNone;
         public string assists_enemySilhouettesOutlinesOnly;
+        public string assists_enemySilhouettesFull;
         public string assists_enemySilhouettesOutlineThickness;
         public string assists_major;
         public string assists_majorActivate;
