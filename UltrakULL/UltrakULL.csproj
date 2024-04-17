@@ -195,6 +195,7 @@
     <Compile Include="CyberGrind.cs" />
     <Compile Include="DevMuseum.cs" />
     <Compile Include="EnemyBios.cs" />
+    <Compile Include="Harmony Patches\7Secretpatch.cs" />
     <Compile Include="Harmony Patches\AudioSwaps\GabrielAudioSwap.cs" />
     <Compile Include="Harmony Patches\AudioSwaps\GabrielSecondAudioSwap.cs" />
     <Compile Include="Harmony Patches\AudioSwaps\MandaloreAudioSwap.cs" />
@@ -204,6 +205,7 @@
     <Compile Include="Harmony Patches\BossBarManager.cs" />
     <Compile Include="Harmony Patches\CheatsManager.cs" />
     <Compile Include="Harmony Patches\HellMap.cs" />
+    <Compile Include="Harmony Patches\MoneyTextPatch.cs" />
     <Compile Include="Harmony Patches\RankHelperPatch.cs" />
     <Compile Include="Harmony Patches\Coin.cs" />
     <Compile Include="Harmony Patches\ControlBindNames.cs" />
@@ -232,6 +234,7 @@
     <Compile Include="Harmony Patches\ShopPatch.cs" />
     <Compile Include="Harmony Patches\SpawnMenu.cs" />
     <Compile Include="Harmony Patches\Rank.cs" />
+    <Compile Include="Harmony Patches\StatsPatch.cs" />
     <Compile Include="Harmony Patches\StyleHUD.cs" />
     <Compile Include="Harmony Patches\Subtitles\GabrielSubtitlesSwap.cs" />
     <Compile Include="Harmony Patches\Subtitles\MandaloreSubtitlesSwap.cs" />

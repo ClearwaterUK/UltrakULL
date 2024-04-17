@@ -3,6 +3,7 @@ using System;
 using Sandbox;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
@@ -46,7 +47,7 @@ namespace UltrakULL.Harmony_Patches
     public static class SandboxWorldOptions
     {
         [HarmonyPostfix]
-        public static void sandboxWorldOptions_Postfix(ref WorldOptions __instance, Text ___borderStatus, Text ___buttonText, bool ___isBorderOn)
+        public static void sandboxWorldOptions_Postfix(ref WorldOptions __instance, TextMeshProUGUI ___borderStatus, TextMeshProUGUI ___buttonText, bool ___isBorderOn)
         {
             if(isUsingEnglish())
             {

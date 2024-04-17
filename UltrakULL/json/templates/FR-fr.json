@@ -491,6 +491,42 @@
 		"fish_sharkDescription2": "Vis dans les plus grands points d'eau et évite la terre, mais il s'aventure occasionnellement proche des rives pour se nourrir."
 	},
 
+	"washing": {
+		"wash_wash_fakeexittext1": "",
+		"wash_fakeexittext2": "",
+		"wash_fakeexittext3": "",
+		"wash_fakeexittext4": "",
+		"wash_fakeexittext5": "",
+		"wash_fakeexittext6": "",
+
+		"wash_Clean": "",
+		"wash_bloodClean": "",
+		"wash_ToDo": "",
+
+		"wash_roomCourtyard": "",
+		"wash_room": "",
+		"wash_roomLobby": "",
+		"wash_roomLounge": "",
+		"wash_roomSideroom": "",
+
+		"wash_littercount": "",
+		"wash_Dumpster": "",
+		"wash_Ground": "",
+		"wash_Pillars": "",
+		"wash_Walls": "",
+		"wash_BackBookshelf": "",
+		"wash_Bookcases": "",
+		"wash_Desk": "",
+		"wash_FrontBookshelf": "",
+		"wash_Sconces": "",
+		"wash_Sidewall": "",
+		"wash_Walkway": "",
+		"wash_WindowWall": "",
+		"wash_Decor": "",
+		"wash_Floors": "",
+		"wash_Pond": ""
+	},
+  
 	"style": {
 		"style_kill": "ÉLIMINATION",
 		"style_doublekill": "BAIN DE SANG",
@@ -732,7 +768,10 @@
 		"books_violenceFourth2": "LA GUERRE N'AVAIT PLUS BESOIN DE SON ULTIME PRACTICIEN. ELLE ÉTAIT DEVENUE UN SYSTÈME AUTOSUFFISANT. L'HOMME A ÉTÉ ÉCRASÉ SOUS LES ROUES D'UNE MACHINE CRÉÉE POUR CRÉER LA MACHINE CRÉÉE POUR ÉCRASER LA MACHINE. SAMSARA DE TENDONS COUPÉS ET D'OS BRISÉS. LA MORT SANS LA VIE. SANS OUROBOROS. TOUT CE QU'IL RESTAIT ÉTAIT LA GUERRE SANS RAISON.",
 		"books_violenceFourth3": "UN MAGNUM OPUS. UNE TOUR D'ACIER FROIDE. UNE MACHINE CRÉÉE POUR FINIR LA GUERRE EST TOUJOURS UNE MACHINE CRÉÉE POUR CONTINUER LA GUERRE. TU ÉTAIT MAGNIFIQUE, ÉLANCÉ COMMES DES ANTENNES VERS LE PARADIS. TU DÉPASSAIT TES CRÉATEURS. TU A ESSAYÉ D'ATTEINDRE DIEU, ET TU EST TOMBÉ. PERSONNE NE RESTAIT POUR DIRE TON ÉLOGE. PAS DE MOTS FINAUX, PAS DE DÉCLARACTION CONCLUSIVE. SANS BUT. CONCLUSION PARFAITE.",
 		"books_violenceFourth4": "C ' E S T   L A   S E U L E   M A N I È R E   Q U E   Ç A   A U R A I T   D Û   S E   T E R M I N E R .",
-		"books_violenceFourth5": "Les pages du livre sont vides."
+		"books_violenceFourth5": "Les pages du livre sont vides.",
+
+		"books_violenceSecret_Slate1": "DÉSOLÉ, J'SUIS ALLÉ PÊCHER !",
+		"books_violenceSecret_Slate2": "- TAILLE 2"
 	},
 	"intermission": {
 		"act1_intermission_first1": "La honte.",
@@ -1605,6 +1644,7 @@
 		"leveltips_violenceSecond": "[TRADUIT] <color=orange>Mannequins</color> can be hard to hit due to their speed, but they lose air control when <color=orange>launched</color> or <color=orange>shot down</color> from a surface, making them <color=orange>unable to move</color> for a short moment.",
 		"leveltips_violenceThird": "[TRADUIT] The <color=red>Knuckleblaster</color>'s <color=orange>blast wave</color> is also capable of breaking a <color=orange>Gutterman's shield</color>, and is much easier to land in a chaotic scenario.",
 		"leveltips_violenceFourth": "[TRADUIT] A <color=orange>direct hit</color> from the Knuckleblaster has extremely powerful <color=orange>knockback</color>, making it extremely powerful for launching enemies into <color=orange>pits</color> and other <color=orange>environmental hazards</color>.",
+		"leveltips_violenceSecret": "",
 
 		"leveltips_fraudFirst": "???",
 		"leveltips_fraudSecond": "???",
@@ -1631,7 +1671,7 @@
 		"shop_returnToMission": "RETOURNER À LA MISSION",
 		"shop_soulOrbs": "ORBES D'ÂMES",
 		"moneyCount": "<color=orange>P</color>",
-		"lotsOfMoney": "VRAIMENT BEAUCOUP DE <color=orange>P</color>",
+		"lotsOfMoney": "VRAIMENT BEAUCOUP DE ",
 
 		"shop_cybergrindDescription1": "<color=red>Le Cyber Grind est un mode de survie sans fin</color>.",
 		"shop_cybergrindDescription2": "Une bonne performance donnera beaucoup de <color=red>points</color>.",
@@ -2843,6 +2883,7 @@
 		"sandbox_shop_worldOptions": "OPTIONS DU MONDE",
 		"sandbox_shop_icons": "ICÔNES",
 
+		"sandbox_shop_stats": "",
 		"sandbox_shop_totalBoxes": "N° DE BOÎTES PLACÉS",
 		"sandbox_shop_totalProps": "N° DE PIÈCES PLACÉES",
 		"sandbox_shop_totalEnemies": "N° D'ENNEMIS PLACÉS",

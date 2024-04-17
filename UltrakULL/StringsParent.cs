@@ -259,6 +259,10 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.levelTips.leveltips_violenceFourth;
             }
+            if (currentLevel.Contains("7-S"))
+            {
+                return LanguageManager.CurrentLanguage.levelTips.leveltips_violenceSecret;
+            }
             
             //Fraud
             if (currentLevel.Contains("8-1"))

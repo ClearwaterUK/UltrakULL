@@ -30,16 +30,13 @@ namespace UltrakULL.Harmony_Patches
                 
                 //Sandbox shop
                 if (__instance.gameObject.name == "Sandbox Shop")
+                {                    
+                    TextMeshProUGUI sandboxStats = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(___shopCanvas.gameObject,"Border"),"Main Menu"),"TipBox"),"Panel"),"Title"));
+                    sandboxStats.text = "--" + LanguageManager.CurrentLanguage.sandbox.sandbox_shop_stats + "--";
+                    return;
+                }
+                if(__instance.gameObject.name == "Garry Shop")
                 {
-                    SandboxStats sandboxStats = SteamController.Instance.GetSandboxStats();
-                    
-                    TextMeshProUGUI sandboxStatsWindow = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(___shopCanvas.gameObject,"Border"),"Main Menu"),"TipBox"),"Panel"),"TipText"));
-
-                    
-                    sandboxStatsWindow.text = string.Format("<color=orange>{0}</color> - " + LanguageManager.CurrentLanguage.sandbox.sandbox_shop_totalBoxes + "\n",sandboxStats.brushesBuilt)
-                                              + string.Format("<color=orange>{0}</color> - " + LanguageManager.CurrentLanguage.sandbox.sandbox_shop_totalProps +  "\n",sandboxStats.propsSpawned)
-                                              + string.Format("<color=orange>{0}</color> - " + LanguageManager.CurrentLanguage.sandbox.sandbox_shop_totalEnemies + "\n",sandboxStats.enemiesSpawned)
-                                              + string.Format("<color=orange>{0:F1}h</color> - " +  LanguageManager.CurrentLanguage.sandbox.sandbox_shop_totalTime + "\n", sandboxStats.hoursSpend);
                     return;
                 }
 

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
+using System.Linq.Expressions;
+using System;
 
 namespace UltrakULL
 {
@@ -20,11 +22,11 @@ namespace UltrakULL
             if (GetCurrentSceneName() == "Level 0-S")
             {
                 GameObject finalRoom = GameObject.Find("FinalRoom 2");
-                
-                
-                testamentPanelTitle = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "Room"),"Testament Shop"), "Canvas"),"Border"),"TipBox"),"Panel"),"Title"));
-                
-                testamentPanelText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "Room"),"Testament Shop"), "Canvas"),"Border"),"TipBox"),"Panel"),"Text"));
+
+
+                testamentPanelTitle = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"), "Panel"), "Title"));
+
+                testamentPanelText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"), "Panel"), "Text"));
 
                 testamentPanelTitle.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_prelude_testamentTitle;
             }
@@ -32,21 +34,21 @@ namespace UltrakULL
             else if (GetCurrentSceneName() == "Level 1-S")
             {
                 GameObject finalRoom = GameObject.Find("5 - Finale");
-                
-                
-                testamentPanelTitle = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "FinalRoom 2 (1)"),"Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"), "Panel"), "Title"));
-                
-                testamentPanelText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "FinalRoom 2 (1)"),"Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"), "Panel"), "Text"));
+
+
+                testamentPanelTitle = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "FinalRoom 2 (1)"), "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"), "Panel"), "Title"));
+
+                testamentPanelText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "FinalRoom 2 (1)"), "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"), "Panel"), "Text"));
 
                 testamentPanelTitle.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_first_testamentTitle;
-                
+
             }
             //4-S
             else if (GetCurrentSceneName() == "Level 4-S")
             {
-                testamentPanelTitle = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(testamentRoom, "4 Stuff"), "FinalRoom 2"), "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"),"Panel"),"Title"));
-            
-                testamentPanelText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(testamentRoom, "4 Stuff"), "FinalRoom 2"), "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"),"Panel"),"Text"));
+                testamentPanelTitle = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(testamentRoom, "4 Stuff"), "FinalRoom 2"), "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"), "Panel"), "Title"));
+
+                testamentPanelText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(testamentRoom, "4 Stuff"), "FinalRoom 2"), "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"), "Panel"), "Text"));
 
 
             }
@@ -54,21 +56,30 @@ namespace UltrakULL
             else if (GetCurrentSceneName() == "Level 5-S")
             {
                 GameObject finalRoom = GameObject.Find("FinalRoom 2");
-                
-                testamentPanelTitle = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "Room"),"Testament Shop"), "Canvas"),"Border"),"TipBox"),"Panel"),"Title"));
-                
-                testamentPanelText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "Room"),"Testament Shop"), "Canvas"),"Border"),"TipBox"),"Panel"),"Text"));
-                
+
+                testamentPanelTitle = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"), "Panel"), "Title"));
+
+                testamentPanelText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"), "Panel"), "Text"));
+
+            }
+            else if (GetCurrentSceneName() == "Level 7-S")
+            {
+                GameObject finalRoom = GameObject.Find("RealExit");
+
+                testamentPanelTitle = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"), "Panel"), "Title"));
+
+                testamentPanelText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(finalRoom, "Room"), "Testament Shop"), "Canvas"), "Border"), "TipBox"), "Panel"), "Text"));
+
             }
 
             switch (this.currentLevel)
-                {
+            {
                 case "Level 0-S":
                     {
                         testamentPanelText.text =
                             LanguageManager.CurrentLanguage.secretLevels.secretLevels_prelude_testament1 + "\n\n" + LanguageManager.CurrentLanguage.secretLevels.secretLevels_prelude_testament2 + "\n\n" + LanguageManager.CurrentLanguage.secretLevels.secretLevels_prelude_testament3 + "\n\n" +
                             LanguageManager.CurrentLanguage.secretLevels.secretLevels_prelude_testament4;
-                            
+
                         testamentPanelTitle.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_prelude_testamentTitle;
 
                         break;
@@ -83,7 +94,7 @@ namespace UltrakULL
                         testamentPanelTitle.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_first_testamentTitle;
                         break;
                     }
-                
+
                 case "Level 4-S":
                     {
                         testamentPanelText.text =
@@ -97,55 +108,204 @@ namespace UltrakULL
 
                             LanguageManager.CurrentLanguage.secretLevels.secretLevels_fourth_testament6 + "\n" +
                             LanguageManager.CurrentLanguage.secretLevels.secretLevels_fourth_testament7;
-                            
+
                         testamentPanelTitle.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_fourth_testamentTitle;
                         break;
                     }
                 case "Level 5-S":
-                {
-                    testamentPanelText.text =
-                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament1 + "\n" +
-                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament2 + "\n\n" +
-                            
-                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament3 + "\n" +
-                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament4 + "\n" +
-                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament5 + "\n" +
-                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament6 + "\n" +
-                            
-                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament7 + "\n" +
-                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament8 + "\n\n" +
-                            
-                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament9 + "\n" +
-                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament10 + "\n" +
-                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament11 + "\n" +
-                            LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament12;
-                            
-                    testamentPanelTitle.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testamentTitle;
+                    {
+                        testamentPanelText.text =
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament1 + "\n" +
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament2 + "\n\n" +
 
-                    break;
-                }
-                }
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament3 + "\n" +
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament4 + "\n" +
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament5 + "\n" +
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament6 + "\n" +
+
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament7 + "\n" +
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament8 + "\n\n" +
+
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament9 + "\n" +
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament10 + "\n" +
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament11 + "\n" +
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testament12;
+
+                        testamentPanelTitle.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_fifth_testamentTitle;
+
+                        break;
+                    }
+                case "Level 7-S":
+                    {
+                        testamentPanelText.text =
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_seventh_testament1 + "\n\n" +
+
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_seventh_testament2 + "\n" +
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_seventh_testament3 + "\n\n" +
+
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_seventh_testament4 + "\n" +
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_seventh_testament5 + "\n\n" +
+
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_seventh_testament6 + "\n\n" +
+
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_seventh_testament7 + "\n\n" +
+
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_seventh_testament8 + "\n\n" +
+
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_seventh_testament9 + "\n" +
+                                LanguageManager.CurrentLanguage.secretLevels.secretLevels_seventh_testament10;
+                        testamentPanelTitle.text = LanguageManager.CurrentLanguage.secretLevels.secretLevels_seventh_testamentTitle;
+                        break;
+                    }
+            }
         }
-        
+
         public void Patch5S(ref GameObject canvasObj)
         {
-            GameObject powerGauge = GetGameObjectChild(GetInactiveRootObject("FishingCanvas"),"Power Meter");
-            Text distanceFar = GetTextfromGameObject(GetGameObjectChild(powerGauge,"Text"));
+            GameObject powerGauge = GetGameObjectChild(GetInactiveRootObject("FishingCanvas"), "Power Meter");
+            Text distanceFar = GetTextfromGameObject(GetGameObjectChild(powerGauge, "Text"));
             distanceFar.text = LanguageManager.CurrentLanguage.fishing.fish_rodFar;
-            Text distanceClose = GetTextfromGameObject(GetGameObjectChild(powerGauge,"Text (1)"));
+            Text distanceClose = GetTextfromGameObject(GetGameObjectChild(powerGauge, "Text (1)"));
             distanceClose.text = LanguageManager.CurrentLanguage.fishing.fish_rodClose;
-            
-            GameObject fishingLeaderboard = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Exit Lobby Interior"),"Fish Scores"),"Canvas"),"Border"),"TipBox"),"Panel");
-            
-            Text fishingLeaderboardTitle = GetTextfromGameObject(GetGameObjectChild(fishingLeaderboard,"Title"));
+
+            GameObject fishingLeaderboard = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Exit Lobby Interior"), "Fish Scores"), "Canvas"), "Border"), "TipBox"), "Panel");
+
+            TextMeshProUGUI fishingLeaderboardTitle = GetTextMeshProUGUI(GetGameObjectChild(fishingLeaderboard, "Title"));
             fishingLeaderboardTitle.text = LanguageManager.CurrentLanguage.fishing.fish_leaderboard;
-            
-            GameObject fishingTerminal = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Fishing Enc Terminal"),"Canvas"),"Border"),"TipBox"),"Panel");
-            
-            TextMeshProUGUI fishingTerminalTitle = GetTextMeshProUGUI(GetGameObjectChild(fishingTerminal,"Title"));
+
+            GameObject fishingTerminal = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetInactiveRootObject("Fishing Enc Terminal"), "Canvas"), "Border"), "TipBox"), "Panel");
+
+            TextMeshProUGUI fishingTerminalTitle = GetTextMeshProUGUI(GetGameObjectChild(fishingTerminal, "Title"));
             fishingTerminalTitle.text = LanguageManager.CurrentLanguage.fishing.fish_terminalTitle;
         }
+        public void Patch7S(ref GameObject canvasObj)
+        {
+            //CLEAN UP YOUR MESS!
+            GameObject puzzleScreen = GameObject.Find("PuzzleScreen");
+            TextMeshProUGUI fakeexittext = puzzleScreen.GetComponentInChildren<TextMeshProUGUI>(true);
+            fakeexittext.text = "<size=12><color=red><u><b>" + LanguageManager.CurrentLanguage.washing.wash_fakeexittext1 + "</u></b></color></size>\n\n\n"
+            + LanguageManager.CurrentLanguage.washing.wash_fakeexittext2 + "\n\n"
+            + LanguageManager.CurrentLanguage.washing.wash_fakeexittext3 + "\n\n"
+            + LanguageManager.CurrentLanguage.washing.wash_fakeexittext4 + "\n\n"
+            + LanguageManager.CurrentLanguage.washing.wash_fakeexittext5 + "\n\n"
+            + LanguageManager.CurrentLanguage.washing.wash_fakeexittext6;
+
+            //BloodCleanText
+            GameObject washcanvas = GameObject.Find("WashingCanvas");
+            TextMeshProUGUI BloodCleanText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(washcanvas, "Painter Completion Meter"), "Slider Group"), "Blood Cleaned"));
+            BloodCleanText.text = LanguageManager.CurrentLanguage.washing.wash_bloodClean;
+            GameObject chklst = GetGameObjectChild(washcanvas, "CheckList");
+            
+            TextMeshProUGUI LitterCount = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Litter"), "Litter Count:"));
+            LitterCount.text = LanguageManager.CurrentLanguage.washing.wash_littercount;
+
+            //i tried to patch the checklist, but it's somehow doesn't work...
+            Transform[] painterTransforms = chklst.GetComponentsInChildren<Transform>(true);
+            foreach (Transform childTransform in painterTransforms)
+            {
+                GameObject painterObject = childTransform.gameObject;
+                if (painterObject.name == "Painter Name")
+                {
+                    TextMeshProUGUI chklstpainterText = painterObject.GetComponentInChildren<TextMeshProUGUI>(true);
+                    if (chklstpainterText != null)
+                    {
+                        switch (chklstpainterText.text)
+                        {
+                            case "Dumpster":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Dumpster;
+                                    break;
+                                }
+                            case "Ground":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Ground;
+                                    break;
+                                }
+                            case "Pillars":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Pillars;
+                                    break;
+                                }
+                            case "Walls":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Walls;
+                                    break;
+                                }
+                            case "Back Bookshelf":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_BackBookshelf;
+                                    break;
+                                }
+                            case "Bookshelf":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Bookshelf;
+                                    break;
+                                }
+                            case "Bookcases":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Bookcases;
+                                    break;
+                                }
+                            case "Ceiling":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Ceiling;
+                                    break;
+                                }
+                            case "Desks":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Desk;
+                                    break;
+                                }
+                            case "Front Bookshelf":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_FrontBookshelf;
+                                    break;
+                                }
+                            case "Sconces":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Sconces;
+                                    break;
+                                }
+                            case "Side Wall":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Sidewall;
+                                    break;
+                                }
+                            case "Walkway":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Walkway;
+                                    break;
+                                }
+                            case "Window Wall":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_WindowWall;
+                                    break;
+                                }
+                            case "Decor":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Decor;
+                                    break;
+                                }
+                            case "Floors":
+                                {
+                                    chklstpainterText.text = LanguageManager.CurrentLanguage.washing.wash_Floors;
+                                    break;
+                                }
+                            default:
+                                {
+                                    break;
+                                }
+                        }
+                    }
+                }
+            }
         
+        
+        
+
+
+
+        }
         // SecretFirstRoom/Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text
         // Note - it uses a separate panel that has the same name as the normal result panel.
         public SecretLevels(ref GameObject canvasObj)
@@ -161,6 +321,7 @@ namespace UltrakULL
                 case "Level 2-S": {Act1Vn.PatchPrompts(ref canvasObj); break; }
                 case "Level 4-S": {testamentRoom = GetInactiveRootObject("4 - Boulder Run");PatchTestament(ref testamentRoom); break; }
                 case "Level 5-S": {testamentRoom = GetInactiveRootObject("FinalRoom 2");PatchTestament(ref testamentRoom); Patch5S(ref canvasObj); break; }
+                case "Level 7-S": { testamentRoom = GetInactiveRootObject("RealExit");PatchTestament(ref testamentRoom); Patch7S(ref canvasObj); break; }  
             }
             GameObject secretLevelResults = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(player, "Main Camera"), "HUD Camera"), "HUD"), "FinishCanvas");
 
@@ -191,6 +352,7 @@ namespace UltrakULL
                 case ("Level 2-S"): { return "2-S:" + LanguageManager.CurrentLanguage.levelNames.levelName_lustSecret; }
                 case ("Level 4-S"): { return "4-S:" + LanguageManager.CurrentLanguage.levelNames.levelName_greedSecret;}
                 case ("Level 5-S"): { return "5-S:" + LanguageManager.CurrentLanguage.levelNames.levelName_wrathSecret;}
+                case ("Level 7-S"): { return "7-S:" + LanguageManager.CurrentLanguage.levelNames.levelName_violenceSecret; }
                 default: { return "UNKNOWN"; }
             }
         }

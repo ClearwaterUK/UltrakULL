@@ -21,6 +21,7 @@ namespace UltrakULL.json
         public IntermissionStrings intermission;
         public Museum devMuseum;
         public FishingStrings fishing;
+        public WashingStrings washing;
         
         public PauseMenu pauseMenu;
         public Option options;
@@ -131,7 +132,44 @@ namespace UltrakULL.json
         public string fish_sharkDescription2;
         
     }
+    public class WashingStrings
+    {
+        public string wash_fakeexittext1;
+        public string wash_fakeexittext2;
+        public string wash_fakeexittext3;
+        public string wash_fakeexittext4;
+        public string wash_fakeexittext5;
+        public string wash_fakeexittext6;
 
+        public string wash_Clean;
+        public string wash_ToDo;
+        public string wash_bloodClean;
+
+        public string wash_roomCourtyard;
+        public string wash_roomLibrary;
+        public string wash_roomLobby;
+        public string wash_roomLounge;
+        public string wash_roomSideroom;
+
+        public string wash_littercount;
+        public string wash_Dumpster;
+        public string wash_Ground;
+        public string wash_Pillars;
+        public string wash_Walls;
+        public string wash_BackBookshelf;
+        public string wash_Ceiling;
+        public string wash_Bookshelf;
+        public string wash_Bookcases;
+        public string wash_Desk;
+        public string wash_FrontBookshelf;
+        public string wash_Sconces;
+        public string wash_Sidewall;
+        public string wash_Walkway;
+        public string wash_WindowWall;
+        public string wash_Decor;
+        public string wash_Floors;
+        public string wash_Pond;
+    }
     public class CG
     {
         public string cybergrind_currentWave;
@@ -1391,6 +1429,10 @@ namespace UltrakULL.json
         public string books_violenceFourth3;
         public string books_violenceFourth4;
         public string books_violenceFourth5;
+
+        public string books_violenceSecret_Slate1;
+        public string books_violenceSecret_Slate2;
+
     }
 
     public class PauseMenu
@@ -1731,6 +1773,7 @@ namespace UltrakULL.json
         public string leveltips_violenceSecond;
         public string leveltips_violenceThird;
         public string leveltips_violenceFourth;
+        public string leveltips_violenceSecret;
         
         public string leveltips_fraudFirst;
         public string leveltips_fraudSecond;
@@ -2455,6 +2498,18 @@ namespace UltrakULL.json
         public string secretLevels_fifth_testament11;
         public string secretLevels_fifth_testament12;
 
+        public string secretLevels_seventh_testamentTitle;
+        public string secretLevels_seventh_testament1;
+        public string secretLevels_seventh_testament2;
+        public string secretLevels_seventh_testament3;
+        public string secretLevels_seventh_testament4;
+        public string secretLevels_seventh_testament5;
+        public string secretLevels_seventh_testament6;
+        public string secretLevels_seventh_testament7;
+        public string secretLevels_seventh_testament8;
+        public string secretLevels_seventh_testament9;
+        public string secretLevels_seventh_testament10;
+
         public string secretLevels_complete1;
         public string secretLevels_complete2;
     }
@@ -2991,6 +3046,7 @@ namespace UltrakULL.json
         public string sandbox_shop_worldOptions;
         public string sandbox_shop_icons;
 
+        public string sandbox_shop_stats;
         public string sandbox_shop_totalBoxes;
         public string sandbox_shop_totalProps;
         public string sandbox_shop_totalEnemies;

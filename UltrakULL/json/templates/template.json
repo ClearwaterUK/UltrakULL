@@ -497,6 +497,42 @@
 		"fish_sharkDescription2": ""
 	},
 
+	"washing": {
+		"wash_wash_fakeexittext1": "",
+		"wash_fakeexittext2": "",
+		"wash_fakeexittext3": "",
+		"wash_fakeexittext4": "",
+		"wash_fakeexittext5": "",
+		"wash_fakeexittext6": "",
+
+		"wash_Clean": "",
+		"wash_bloodClean": "",
+		"wash_ToDo": "",
+
+		"wash_roomCourtyard": "",
+		"wash_room": "",
+		"wash_roomLobby": "",
+		"wash_roomLounge": "",
+		"wash_roomSideroom": "",
+
+		"wash_littercount": "",
+		"wash_Dumpster": "",
+		"wash_Ground": "",
+		"wash_Pillars": "",
+		"wash_Walls": "",
+		"wash_BackBookshelf": "",
+		"wash_Bookcases": "",
+		"wash_Desk": "",
+		"wash_FrontBookshelf": "",
+		"wash_Sconces": "",
+		"wash_Sidewall": "",
+		"wash_Walkway": "",
+		"wash_WindowWall": "",
+		"wash_Decor": "",
+		"wash_Floors": "",
+		"wash_Pond": ""
+	},
+
 	"style": {
 		"style_airslam": "",
 		"style_airshot": "",
@@ -741,7 +777,10 @@
 		"books_violenceFourth2": "",
 		"books_violenceFourth3": "",
 		"books_violenceFourth4": "",
-		"books_violenceFourth5": ""
+		"books_violenceFourth5": "",
+
+		"books_violenceSecret_Slate1": "",
+		"books_violenceSecret_Slate2": ""
 	},
 	"intermission": {
 		"act1_intermission_first1": "",
@@ -1632,6 +1671,7 @@
 		"leveltips_violenceSecond": "",
 		"leveltips_violenceThird": "",
 		"leveltips_violenceFourth": "",
+		"leveltips_violenceSecret": "",
 
 		"leveltips_fraudFirst": "",
 		"leveltips_fraudSecond": "",
@@ -2880,6 +2920,7 @@
 		"sandbox_shop_worldOptions": "",
 		"sandbox_shop_icons": "",
 
+		"sandbox_shop_stats": "",
 		"sandbox_shop_totalBoxes": "",
 		"sandbox_shop_totalProps": "",
 		"sandbox_shop_totalEnemies": "",

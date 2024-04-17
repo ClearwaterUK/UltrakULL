@@ -68,7 +68,36 @@ namespace UltrakULL
             GameObject sandboxShopWorldOptionsMapBorder = GetGameObjectChild(GetGameObjectChild(sandboxShopWorldOptions,"Image"),"Map Border");
             TextMeshProUGUI sandboxShopWorldOptionsMapBorderTitle = GetTextMeshProUGUI(GetGameObjectChild(sandboxShopWorldOptionsMapBorder, "Text"));
             sandboxShopWorldOptionsMapBorderTitle.text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_mapBorder;
-            
+
+            TextMeshProUGUI sandboxShopWorldOptionsMapBorderStatus = GetTextMeshProUGUI(GetGameObjectChild(sandboxShopWorldOptionsMapBorder, "Status Text"));
+            TextMeshProUGUI sandboxShopWorldOptionsMapBorderButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(sandboxShopWorldOptionsMapBorder, "Panel"), "Toggle Button"),"Text"));
+            switch(sandboxShopWorldOptionsMapBorderStatus.text)
+            {
+                case "ENABLED":
+                {
+                    sandboxShopWorldOptionsMapBorderStatus.text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_worldOptionsEnabled;
+                    break;
+                }
+                case "DISABLED":
+                {
+                    sandboxShopWorldOptionsMapBorderStatus.text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_worldOptionsDisabled;
+                    break;
+                }
+            }
+            switch (sandboxShopWorldOptionsMapBorderButton.text)
+            {
+                case "ENABLE":
+                {
+                    sandboxShopWorldOptionsMapBorderButton.text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_worldOptionsEnable;
+                    break;
+                }
+                case "DISABLE":
+                {
+                    sandboxShopWorldOptionsMapBorderButton.text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_worldOptionsDisable;
+                    break;
+                }
+            }
+
             //Icons
             GameObject sandboxShopIcons = GetGameObjectChild(GetGameObjectChild(sandboxShopMenu, "Icons Menu"),"Panel");
             TextMeshProUGUI sandboxShopIconsTitle = GetTextMeshProUGUI(GetGameObjectChild(sandboxShopIcons, "Title"));
