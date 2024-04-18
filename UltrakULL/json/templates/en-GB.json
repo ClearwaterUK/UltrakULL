@@ -1778,6 +1778,11 @@
         "shop_shotgunPumpChargeDescription1": "Press Alt Fire to pump your shotgun, increasing the power and decreasing the accuracy of your next shot.",
         "shop_shotgunPumpChargeDescription2": "Too many pumps will cause an explosion when fired.",
 
+        "shop_shotgunSawedOn": "SAWED-ON",
+        "shop_shotgunSawedOnDescription1": "<color=orange>Hold</color> Alt Fire to rev <color=orange>chainsaw</color>.",
+        "shop_shotgunSawedOnDescription2": "<color=orange>Release</color> to launch, <color=orange>piercing</color> enemies and <color=orange>returning</color> back.",
+        "shop_shotgunSawedOnDescription3": "Can be <color=orange>punched</color> to keep active.",
+
         "shop_nailgunMagnet": "MAGNET",
         "shop_nailgunMagnetDescription1": "Alt fire to shoot a magnet that pulls all nearby nails towards it.",
         "shop_nailgunMagnetDescription2": "Magnets stick to surfaces and enemies and can be broken with hitscan weapons.",
@@ -1785,6 +1790,10 @@
         "shop_nailgunOverheat": "OVERHEAT",
         "shop_nailgunOverheatDescription1": "Alt fire while shooting to overheat for a quick burst of high damage at the cost of a heatsink.",
         "shop_nailgunOverheatDescription2": "Heatsinks recharge when not firing.",
+
+        "shop_nailgunJumpStart": "JUMPSTART",
+        "shop_nailgunJumpStartDescription1": "Press Alt Fire to attach a cable that <color=orange>slowly charges</color> a powerful <color=orange>electric shock</color>.",
+        "shop_nailgunJumpStartDescription2": "Attached cables <color=orange>persist</color> when <color=orange>switching weapons</color>.",
 
         "shop_railcannonElectric": "ELECTRIC",
         "shop_railcannonElectricDescription1": "A powerful instant piercing shot.",
@@ -1807,6 +1816,10 @@
         "shop_rocketLauncherSrsCannonDescription1": "Press Alt Fire to launch <color=orange>cannonball</color>.",
         "shop_rocketLauncherSrsCannonDescription2": "<color=orange>Hold</color> to charge <color=orange>distance</color>.",
         "shop_rocketLauncherSrsCannonDescription3": "No one knows what S.R.S. stands for.",
+
+        "shop_rocketLauncherFireStarter": "FIRESTARTER",
+        "shop_rocketLauncherFireStarterDescription1": "<color=orange>Hold</color> Alt Fire to spray <color=orange>gasoline</color>, making <color=orange>non-flammable</color> enemies <color=orange>flammable</color>.",
+        "shop_rocketLauncherFireStarterDescription2": "Can also be sprayed on the <color=orange>environment</color> to create <color=orange>walls of fire</color>.",
 
         "shop_armFeedbacker": "FEEDBACKER",
         "shop_armFeedbackerDescription1": "Fast punch with decent damage.",

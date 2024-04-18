@@ -359,10 +359,19 @@ namespace UltrakULL
                 TextMeshProUGUI pumpChargeWindowDescriptionBack = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(pumpChargeWindow, "Button"), "Text"));
                 pumpChargeWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
-                //Shotgun red variation (under construction)
-                GameObject shotgunRedVariation = GetGameObjectChild(shotgunWindow, "Variation Panel (Red) (Under Construction)");
-                TextMeshProUGUI shotgunRedUnderConstruction = GetTextMeshProUGUI(GetGameObjectChild(shotgunRedVariation, "Text (1)"));
-                shotgunRedUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
+                //Sawed-On
+                GameObject sawedOn = GetGameObjectChild(shotgunWindow, "Variation Panel (Red)");
+                TextMeshProUGUI sawedOnName = GetTextMeshProUGUI(GetGameObjectChild(sawedOn, "Text"));
+                sawedOnName.text = LanguageManager.CurrentLanguage.shop.shop_shotgunSawedOn;
+
+                GameObject sawedOnWindow = GetGameObjectChild(shotgunWindow, "Variation Info (Red)");
+                TextMeshProUGUI sawedOnWindowDescription = GetTextMeshProUGUI(GetGameObjectChild(sawedOnWindow, "Description"));
+                sawedOnWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_shotgunSawedOnDescription1 + "\n\n"
+                    + LanguageManager.CurrentLanguage.shop.shop_shotgunSawedOnDescription2 + "\n\n"
+                    + LanguageManager.CurrentLanguage.shop.shop_shotgunSawedOnDescription3;
+
+                TextMeshProUGUI sawedOnWindowDescriptionBack = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(sawedOnWindow, "Button"), "Text"));
+                sawedOnWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Shotgun info & color tabs
                 GameObject shotgunExtra = GetGameObjectChild(shotgunWindow, "Info and Color Panel");
@@ -478,10 +487,22 @@ namespace UltrakULL
                 TextMeshProUGUI overheatWindowDescriptionBack = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(overheatWindow, "Button"), "Text"));
                 overheatWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
-                //Nailgun red variation (under construction)
-                GameObject nailgunRedVariation = GetGameObjectChild(nailgunWindow, "Variation Panel (Red) (Under Construction)");
-                TextMeshProUGUI nailgunRedUnderConstruction = GetTextMeshProUGUI(GetGameObjectChild(nailgunRedVariation, "Text (1)"));
-                nailgunRedUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
+                //Jumpstarter
+                GameObject jumpStart = GetGameObjectChild(nailgunWindow, "Variation Panel (Red)");
+                TextMeshProUGUI jumpStartName = GetTextMeshProUGUI(GetGameObjectChild(jumpStart, "Text"));
+                jumpStartName.text = LanguageManager.CurrentLanguage.shop.shop_nailgunJumpStart;
+                jumpStartName.fontSize = 16;
+
+                GameObject jumpStartWindow = GetGameObjectChild(nailgunWindow, "Variation Info (Red)");
+                TextMeshProUGUI jumpStartWindowName = GetTextMeshProUGUI(GetGameObjectChild(jumpStartWindow, "Name"));
+                jumpStartWindowName.text = LanguageManager.CurrentLanguage.shop.shop_nailgunJumpStart;
+
+                TextMeshProUGUI jumpStartWindowDescription = GetTextMeshProUGUI(GetGameObjectChild(jumpStartWindow, "Description"));
+                jumpStartWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_nailgunJumpStartDescription1 + "\n\n"
+                    + LanguageManager.CurrentLanguage.shop.shop_nailgunJumpStartDescription2;
+
+                TextMeshProUGUI jumpStartWindowDescriptionBack = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(jumpStartWindow, "Button"), "Text"));
+                jumpStartWindowDescriptionBack.text = LanguageManager.CurrentLanguage.options.options_back;
 
                 //Nailgun info & color tabs
                 GameObject nailgunExtra = GetGameObjectChild(nailgunWindow, "Info and Color Panel");
@@ -750,14 +771,24 @@ namespace UltrakULL
                     LanguageManager.CurrentLanguage.shop.shop_rocketLauncherSrsCannonDescription3;
                 srsCannonInfoDescription.fontSize = 16;
 
-                //just in case 
-                TextMeshProUGUI greenrocketlauncherBackText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(srsCannonInfo, "Button"), "Text"));
-                greenrocketlauncherBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
+                TextMeshProUGUI srsCannonBackText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(srsCannonInfo, "Button"), "Text"));
+                srsCannonBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
-                //Rocket Launcher red variation (under construction)
-                GameObject rlRedVariation = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Red) (Under Construction)");
-                TextMeshProUGUI rlRedUnderConstruction = GetTextMeshProUGUI(GetGameObjectChild(rlRedVariation, "Text (1)"));
-                rlRedUnderConstruction.text = LanguageManager.CurrentLanguage.misc.weapons_underConstruction;
+                //Firestarter a.k.a Gasoline
+                GameObject fireStarter = GetGameObjectChild(rocketlauncherWindow, "Variation Panel (Red)");
+                TextMeshProUGUI fireStarterName = GetTextMeshProUGUI(GetGameObjectChild(fireStarter, "Text"));
+                fireStarterName.text = LanguageManager.CurrentLanguage.shop.shop_rocketLauncherFireStarter;
+
+                GameObject fireStarterInfo = GetGameObjectChild(rocketlauncherWindow, "Variation Info (Red)");
+                TextMeshProUGUI fireStarterInfoName = GetTextMeshProUGUI(GetGameObjectChild(fireStarterInfo, "Name"));
+                fireStarterInfoName.text = LanguageManager.CurrentLanguage.shop.shop_rocketLauncherFireStarter;
+                TextMeshProUGUI fireStarterInfoDescription = GetTextMeshProUGUI(GetGameObjectChild(fireStarterInfo, "Description"));
+                fireStarterInfoDescription.text =
+                    LanguageManager.CurrentLanguage.shop.shop_rocketLauncherFireStarterDescription1 + "\n\n" +
+                    LanguageManager.CurrentLanguage.shop.shop_rocketLauncherFireStarterDescription2;
+                fireStarterInfoDescription.fontSize = 16;
+                TextMeshProUGUI fireStarterBackText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(fireStarterInfo, "Button"), "Text"));
+                fireStarterBackText.text = LanguageManager.CurrentLanguage.shop.shop_back;
 
                 //Rocket launcher info & color tabs
                 GameObject rocketlauncherExtra = GetGameObjectChild(rocketlauncherWindow, "Info and Color Panel");

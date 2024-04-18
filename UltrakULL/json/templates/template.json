@@ -1755,6 +1755,11 @@
 		"shop_shotgunPumpChargeDescription1": "",
 		"shop_shotgunPumpChargeDescription2": "",
 
+		"shop_shotgunSawedOn": "",
+		"shop_shotgunSawedOnDescription1": "",
+		"shop_shotgunSawedOnDescription2": "",
+		"shop_shotgunSawedOnDescription3": "",
+
 		"shop_nailgunMagnet": "",
 		"shop_nailgunMagnetDescription1": "",
 		"shop_nailgunMagnetDescription2": "",
@@ -1762,6 +1767,10 @@
 		"shop_nailgunOverheat": "",
 		"shop_nailgunOverheatDescription1": "",
 		"shop_nailgunOverheatDescription2": "",
+
+		"shop_nailgunJumpStart": "",
+		"shop_nailgunJumpStartDescription1": "",
+		"shop_nailgunJumpStartDescription2": "",
 
 		"shop_railcannonElectric": "",
 		"shop_railcannonElectricDescription1": "",
@@ -1784,6 +1793,10 @@
 		"shop_rocketLauncherSrsCannonDescription1": "",
 		"shop_rocketLauncherSrsCannonDescription2": "",
 		"shop_rocketLauncherSrsCannonDescription3": "",
+
+		"shop_rocketLauncherFireStarter": "",
+		"shop_rocketLauncherFireStarterDescription1": "",
+		"shop_rocketLauncherFireStarterDescription2": "",
 
 		"shop_armFeedbacker": "",
 		"shop_armFeedbackerDescription1": "",

@@ -1523,6 +1523,11 @@ namespace UltrakULL.json
         public string shop_shotgunPumpChargeDescription1;
         public string shop_shotgunPumpChargeDescription2;
 
+        public string shop_shotgunSawedOn;
+        public string shop_shotgunSawedOnDescription1;
+        public string shop_shotgunSawedOnDescription2;
+        public string shop_shotgunSawedOnDescription3;
+
         public string shop_nailgunMagnet;
         public string shop_nailgunMagnetDescription1;
         public string shop_nailgunMagnetDescription2;
@@ -1530,6 +1535,10 @@ namespace UltrakULL.json
         public string shop_nailgunOverheat;
         public string shop_nailgunOverheatDescription1;
         public string shop_nailgunOverheatDescription2;
+
+        public string shop_nailgunJumpStart;
+        public string shop_nailgunJumpStartDescription1;
+        public string shop_nailgunJumpStartDescription2;
 
         public string shop_railcannonElectric;
         public string shop_railcannonElectricDescription1;
@@ -1553,6 +1562,10 @@ namespace UltrakULL.json
         public string shop_rocketLauncherSrsCannonDescription1;
         public string shop_rocketLauncherSrsCannonDescription2;
         public string shop_rocketLauncherSrsCannonDescription3;
+
+        public string shop_rocketLauncherFireStarter;
+        public string shop_rocketLauncherFireStarterDescription1;
+        public string shop_rocketLauncherFireStarterDescription2;
 
         public string shop_armFeedbacker;
         public string shop_armFeedbackerDescription1;

@@ -1738,6 +1738,11 @@
 		"shop_shotgunPumpChargeDescription1": "Appuyer sur le Tir Alternatif pour <color=orange>pomper</color> votre fusil, augmentant la <color=orange>puissance</color> et <color=orange>diminuant</color> la précision de votre <color=orange>prochain tir</color>.",
 		"shop_shotgunPumpChargeDescription2": "Trop pomper ce fusil résultera en une grande <color=orange>explosion</color> lorsque l'arme est tirée.",
 
+		"shop_shotgunSawedOn": "",
+		"shop_shotgunSawedOnDescription1": "",
+		"shop_shotgunSawedOnDescription2": "",
+		"shop_shotgunSawedOnDescription3": "",
+
 		"shop_nailgunMagnet": "ATTRACTEUR",
 		"shop_nailgunMagnetDescription1": "Le Tir Alternatif lance un <color=orange>aimant</color> qui attire les <color=orange>clous</color> à proximité.",
 		"shop_nailgunMagnetDescription2": "Les aimants se collent aux <color=orange>surfaces et aux ennemis</color>, et peuvent être cassés avec des armes '<color=orange>hitscan</color>'.",
@@ -1745,6 +1750,10 @@
 		"shop_nailgunOverheat": "SURCHAUFFE",
 		"shop_nailgunOverheatDescription1": "Appuyer sur le Tir Alternatif <color=orange>pendant le tir</color> pour créer un mur de clous pour déclencher un <color=orange>dissipateur thermique</color>.",
 		"shop_nailgunOverheatDescription2": "Les dissipateurs se rechargent lorsque vous ne tirez pas.",
+
+		"shop_nailgunJumpStart": "",
+		"shop_nailgunJumpStartDescription1": "",
+		"shop_nailgunJumpStartDescription2": "",
 
 		"shop_railcannonElectric": "ÉLECTRIQUE",
 		"shop_railcannonElectricDescription1": "Un tir puissant et pénétrant.",
@@ -1767,6 +1776,10 @@
 		"shop_rocketLauncherSrsCannonDescription1": "Appuyer sur le Tir Alternatif pour lancer une <color=orange>boule de canon</color>.",
 		"shop_rocketLauncherSrsCannonDescription2": "<color=orange>Maintenir</color> pour charger la <color=orange>distance</color>.",
 		"shop_rocketLauncherSrsCannonDescription3": "Nous ignorons ce que signifie S.R.S.",
+
+		"shop_rocketLauncherFireStarter": "",
+		"shop_rocketLauncherFireStarterDescription1": "",
+		"shop_rocketLauncherFireStarterDescription2": "",
 
 		"shop_armFeedbacker": "RENVOYEUR",
 		"shop_armFeedbackerDescription1": "Coup de poing rapide avec des dégâts moyens.",
