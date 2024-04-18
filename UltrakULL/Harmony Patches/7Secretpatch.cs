@@ -8,12 +8,130 @@ using HarmonyLib;
 using UnityEngine;
 using UltrakULL.json;
 using TMPro;
+using System.Diagnostics.Eventing.Reader;
 
 namespace UltrakULL.Harmony_Patches
 {
     [HarmonyPatch(typeof(BloodCheckerManager))]
     public static class _7SecretPatch
     {
+        [HarmonyPatch("Start"), HarmonyPostfix]
+        public static void Startfix(BloodCheckerManager __instance, Dictionary<GameObject, List<BloodAbsorber>> ___rooms, GameObject ___pondToDoEntry)
+        {
+            Transform parent = __instance.painterGUITemplate.transform.parent;
+            //__instance.painterGUITemplate.SetActive(true);
+
+            Transform[] painterTransforms = parent.GetComponentsInChildren<Transform>(true);
+            Logging.Info("[painterscount]: " + painterTransforms.Length.ToString() + " [painters]");
+            foreach (Transform painterTransform in painterTransforms)
+            {
+                Logging.Info("[patching painter name]: " + painterTransform.gameObject.name + "[a]");
+                if (painterTransform.childCount >= 2)
+                {
+                    Transform painterObject = painterTransform.GetChild(1);
+                    TextMeshProUGUI painterNameText = painterObject.GetComponent<TextMeshProUGUI>();
+                    {
+                        if (painterNameText != null)
+                        {
+                            switch (painterNameText.text)
+                            {
+                                case "Dumpster":
+                                    {
+                                        painterNameText.text = LanguageManager.CurrentLanguage.washing.wash_Dumpster;
+                                        break;
+                                    }
+                                case "Ground":
+                                    {
+                                        painterNameText.text = LanguageManager.CurrentLanguage.washing.wash_Ground;
+                                        break;
+                                    }
+                                case "Pillars":
+                                    {
+                                        painterNameText.text = LanguageManager.CurrentLanguage.washing.wash_Pillars;
+                                        break;
+                                    }
+                                case "Walls":
+                                    {
+                                        painterNameText.text = LanguageManager.CurrentLanguage.washing.wash_Walls;
+                                        break;
+                                    }
+                                case "Back Bookshelf":
+                                    {
+                                        painterNameText.text = LanguageManager.CurrentLanguage.washing.wash_BackBookshelf;
+                                        break;
+                                    }
+                                case "Bookshelf":
+                                    {
+                                        painterNameText.text = LanguageManager.CurrentLanguage.washing.wash_Bookshelf;
+                                        break;
+                                    }
+                                case "Bookcases":
+                                    {
+                                        painterNameText.text = LanguageManager.CurrentLanguage.washing.wash_Bookcases;
+                                        break;
+                                    }
+                                case "Ceiling":
+                                    {
+                                        painterNameText.text = LanguageManager.CurrentLanguage.washing.wash_Ceiling;
+                                        break;
+                                    }
+                                case "Desks":
+                                    {
+                                        painterNameText.text = LanguageManager.CurrentLanguage.washing.wash_Desk;
+                                        break;
+                                    }
+                                case "Front Bookshelf":
+                                    {
+                                        painterNameText.text = LanguageManager.CurrentLanguage.washing.wash_FrontBookshelf;
+                                        break;
+                                    }
+                                case "Sconces":
+                                    {
+                                        painterNameText.text = LanguageManager.CurrentLanguage.washing.wash_Sconces;
+                                        break;
+                                    }
+                                case "Side Wall":
+                                    {
+                                        painterNameText.text = LanguageManager.CurrentLanguage.washing.wash_Sidewall;
+                                        break;
+                                    }
+                                case "Walkway":
+                                    {
+                                        painterNameText.text = LanguageManager.CurrentLanguage.washing.wash_Walkway;
+                                        break;
+                                    }
+                                case "Window Wall":
+                                    {
+                                        painterNameText.text = LanguageManager.CurrentLanguage.washing.wash_WindowWall;
+                                        break;
+                                    }
+                                case "Decor":
+                                    {
+                                        painterNameText.text = LanguageManager.CurrentLanguage.washing.wash_Decor;
+                                        break;
+                                    }
+                                case "Floors":
+                                    {
+                                        painterNameText.text = LanguageManager.CurrentLanguage.washing.wash_Floors;
+                                        break;
+                                    }
+                                default:
+                                    {
+                                        break;
+                                    }
+                            }
+                        }
+                        else
+                        {
+                            Logging.Info("no tmp here");
+                        }
+                    }
+                }
+            }
+                ___pondToDoEntry.transform.GetChild(0).gameObject.SetActive(false);
+                ___pondToDoEntry.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = LanguageManager.CurrentLanguage.washing.wash_Pond;
+            }
+
         [HarmonyPatch(nameof(BloodCheckerManager.UpdateDisplay)), HarmonyPostfix]
         public static void UpdateDisplayPostfix(BloodCheckerManager __instance, BloodAbsorber bA, string ___activePainterName)
         {
