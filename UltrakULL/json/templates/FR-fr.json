@@ -950,7 +950,8 @@
 		"level_fullIntroPromptCancel": "ANNULER",
 		"leaderboard_anyPercent": "TOUS",
 		"leaderboard_pPercent": "P-RANK",
-		"leaderboard_noEntries": "[pas de temps enregistrés]"
+		"leaderboard_noEntries": "[pas de temps enregistrés]",
+		"leaderboard_reminder": ""
 	},
 
 	"visualnovel": {
@@ -2800,7 +2801,7 @@
 		"hud_outOfBounds": "Oups, désolé de ça.",
 		"hud_clashMode": "CODE DE TRICHE « CLASH » DÉBLOQUÉE",
 		"hud_weaponVariation": "Changez de variations d'armes <color=orange>ÉQUIPÉES</color> avec",
-		"hud_alternateVersion": "Les versions <color=orange>ALTERNATIFS</color> changera le comportement de base d'une arme. Ils sont changeables au <color=ORANGE>MAGASIN</color>",
+		"hud_alternateVersion": "Les versions <color=orange>ALTERNATIFS</color> changera le comportement de base d'une arme. Ils sont changeables au <color=orange>MAGASIN</color>",
 
 		"loading": "CHARGEMENT",
 

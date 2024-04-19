@@ -978,7 +978,8 @@
 
         "leaderboard_anyPercent": "ANY",
         "leaderboard_pPercent": "P-RANK",
-        "leaderboard_noEntries": "no leaderboard entries"
+        "leaderboard_noEntries": "no leaderboard entries",
+        "leaderboard_reminder": "LEADERBOARDS CAN BE \n DISABLED IN THE OPTIONS"
     },
     "visualnovel": {
         "visualnovel_mirageName1": "JUST SOMEONE",
@@ -2485,7 +2486,7 @@
         "act1_limboFourth_book": "PICK UP to READ.",
         "act1_limboFourth_hank1": "Nothing happens, but you feel a strange satisfaction.",
         "act1_limboFourth_hank2": "You decide to name it Hank.",
-        "act1_limboFourth_alternateRevolver": "ALTERNATE REVOLVER: Higher damage. Hammer has to be pull back after each shot.",
+        "act1_limboFourth_alternateRevolver": "<color=orange>ALTERNATE REVOLVER</color>: Higher damage. Hammer has to be pull back after each shot.",
         "act1_limboFourth_newArm": "Cycle through EQUIPPED arms with",
 
         "act1_limboSecret_noclipSkip": "\"LOOKS LIKE YOU'RE AT WIT'S END\"$T.HAKITA",
@@ -2510,7 +2511,7 @@
         "act2_greedThird_troll2": "Just kidding :)",
         "act2_greedThird_tombOfKings": "TOMB OF KINGS",
 
-        "act2_greedFourth_alternateNailgun": "ALTERNATE NAILGUN: Slower firerate. Projectiles ricochet off surfaces",
+        "act2_greedFourth_alternateNailgun": "<color=orange>ALTERNATE NAILGUN</color>: Slower firerate. Projectiles ricochet off surfaces",
         "act2_greedFourth_v2": "You're not getting away this time.",
         "act2_greedFourth_whiplash1": "WHIPLASH: Hold",
         "act2_greedFourth_whiplash2": "to throw, release to pull",
@@ -2561,7 +2562,7 @@
         "act3_violenceSecond_payloadControlError1": "ERROR",
         "act3_violenceSecond_payloadControlError2": "PAYLOAD REQUIRES\nTRAM",
         "act3_violenceSecond_payloadControlEmpty": "EMPTY",
-        "act3_violenceSecond_alternateShotgun": "ALTERNATE SHOTGUN: Melee only. Move Fast to deal more damage.",
+        "act3_violenceSecond_alternateShotgun": "<color=orange>ALTERNATE SHOTGUN</color>: Melee only. Move Fast to deal more damage.",
 
         "act3_violenceThird_feedIt": "F E E D   I T .",
         "act3_violenceThird_becomeMarked": "BECOME MARKED FOR DEATH?",
@@ -2847,7 +2848,7 @@
         "hud_outOfBounds": "Oops, sorry about that.",
         "hud_clashMode": "\"CLASH MODE\" CHEAT UNLOCKED",
         "hud_weaponVariation": "Cycle through EQUIPPED weapon variations with",
-        "hud_alternateVersion": "ALTERNATE versions will change a weapon's base behavior. They can be changed at the SHOP.",
+        "hud_alternateVersion": "<color=orange>ALTERNATE</color> versions will change a weapon's base behavior. They can be changed at the <color=orange>SHOP</color>.",
 
         "loading": "LOADING...",
 

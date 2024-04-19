@@ -1370,6 +1370,7 @@ namespace UltrakULL.json
         public string leaderboard_anyPercent;
         public string leaderboard_pPercent;
         public string leaderboard_noEntries;
+        public string leaderboard_reminder;
 
     }
 
