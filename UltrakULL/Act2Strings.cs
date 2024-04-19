@@ -55,11 +55,6 @@ namespace UltrakULL
                 return fullMessage;
             }
 
-            if (fullMessage.Contains("ALTERANATE versions"))
-            {
-                return LanguageManager.CurrentLanguage.act1.act1_limboFourth_alternateRevolver;
-            }
-
             if (fullMessage.Contains("ALTERNATE NAILGUN"))
             {
                 return LanguageManager.CurrentLanguage.act2.act2_greedFourth_alternateNailgun;

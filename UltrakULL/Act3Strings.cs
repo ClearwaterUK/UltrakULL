@@ -26,10 +26,6 @@ namespace UltrakULL
             {
                 return ("<color=red>" + LanguageManager.CurrentLanguage.act3.act3_violenceSecond_biggerBoom + "</color>");
             }
-            if (fullMessage.Contains("ALTERNATE versions"))
-            {
-                return LanguageManager.CurrentLanguage.misc.hud_alternateVersion;
-            }
             if (fullMessage.Contains("ALTERNATE SHOTGUN"))
             {
                 return LanguageManager.CurrentLanguage.act3.act3_violenceSecond_alternateShotgun;

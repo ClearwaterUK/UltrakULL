@@ -55,10 +55,6 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.act1.act1_limboFourth_hank1 + "\n" + LanguageManager.CurrentLanguage.act1.act1_limboFourth_hank2;
             }
-            if (fullMessage.Contains("ALTERNATE"))
-            {
-                return LanguageManager.CurrentLanguage.
-            }
 
             if (fullMessage.Contains("ALTERNATE REVOLVER"))
             {
