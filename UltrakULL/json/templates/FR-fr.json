@@ -917,6 +917,9 @@
 		"difficulty_violentDescription1": "Ennemis agressifs et rapides, et dégâts élevés.",
 		"difficulty_violentDescription2": "De bons réflexes, maîtrise des techniques de mouvement et connaissances des mécaniques du jeu sont essentiels.",
 		"difficulty_violentDescription3": "<color=red>Conseillé pour les joueurs qui sont habitués aux rythmes et mécaniques du jeu.</color>",
+		"difficulty_brutalDescription1": "",
+		"difficulty_brutalDescription2": "",
+		"difficulty_brutalDescription3": "",
 
 		"chapter_title": "CHAPITRE",
 		"chapter_prelude": "PRÉLUDE",
