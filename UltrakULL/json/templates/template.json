@@ -2483,6 +2483,7 @@
 		"act2_greedThird_troll2": "",
 		"act2_greedThird_tombOfKings": "",
 
+		"act2_greedFourth_alternateNailgun": "",
 		"act2_greedFourth_v2": "",
 		"act2_greedFourth_whiplash1": "",
 		"act2_greedFourth_whiplash2": "",
@@ -2819,6 +2820,7 @@
 		"hud_outOfBounds": "",
 		"hud_clashMode": "",
 		"hud_weaponVariation": "",
+		"hud_alternateVersion" "",
 
 		"loading": "",
 

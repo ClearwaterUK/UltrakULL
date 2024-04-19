@@ -2430,7 +2430,7 @@
 		"act1_limboFourth_book": "<color=orange>RAMASSER</color> POUR LIRE.",
 		"act1_limboFourth_hank1": "Rien ne se produit, mais vous ressentez une satisfaction bizarre.",
 		"act1_limboFourth_hank2": "Vous décidez de l'appeler « Hank ».",
-		"act1_limboFourth_alternateRevolver": "Les versions <color=orange>ALTERNATIFS</color> changera le comportement de base d'une arme. Ils sont changeables au <color=ORANGE>MAGASIN</color>.",
+		"act1_limboFourth_alternateRevolver": "",
 		"act1_limboFourth_newArm": "Changer de <color=orange>BRAS</color> équipés avec",
 
 		"act1_limboSecret_noclipSkip": "« IL SEMBLE QUE VOUS ÊTES À COURT DE SOLUTION »$T.HAKITA",
@@ -2456,6 +2456,7 @@
 		"act2_greedThird_troll2": "Je plaisante :)",
 		"act2_greedThird_tombOfKings": "TOMBE DES ROIS",
 
+		"act2_greedFourth_alternateNailgun": "",
 		"act2_greedFourth_v2": "Tu ne t'échapperas pas cette fois.",
 		"act2_greedFourth_whiplash1": "<color=green>COUP DE FOUET</color>: Maintenir",
 		"act2_greedFourth_whiplash2": "pour lancer, lâcher pour tirer",
@@ -2507,6 +2508,7 @@
 		"act3_violenceSecond_payloadControlError1": "",
 		"act3_violenceSecond_payloadControlError2": "",
 		"act3_violenceSecond_payloadControlEmpty": "VIDE",
+		"act3_violenceSecond_alternateShotgun": "",
 
 		"act3_violenceThird_feedIt": "N O U R R I S - L E .",
 		"act3_violenceThird_becomeMarked": "SE FAIRE MARQUER À MORT ?",
@@ -2793,6 +2795,7 @@
 		"hud_outOfBounds": "Oups, désolé de ça.",
 		"hud_clashMode": "CODE DE TRICHE « CLASH » DÉBLOQUÉE",
 		"hud_weaponVariation": "Changez de variations d'armes <color=orange>ÉQUIPÉES</color> avec",
+		"hud_alternateVersion": "Les versions <color=orange>ALTERNATIFS</color> changera le comportement de base d'une arme. Ils sont changeables au <color=ORANGE>MAGASIN</color>",
 
 		"loading": "CHARGEMENT",
 

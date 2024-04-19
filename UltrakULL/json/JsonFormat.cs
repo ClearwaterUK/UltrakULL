@@ -2044,6 +2044,7 @@ namespace UltrakULL.json
         public string hud_railcannonMeter;
         public string hud_styleMeter;
         public string hud_styleInfo;
+        public string hud_alternateVersion;
 
         public string crosshair_title;
         public string crosshair_type;
@@ -2371,6 +2372,7 @@ namespace UltrakULL.json
         public string act2_greedThird_troll2;
         public string act2_greedThird_tombOfKings;
 
+        public string act2_greedFourth_alternateNailgun;
         public string act2_greedFourth_v2;
         public string act2_greedFourth_whiplash1;
         public string act2_greedFourth_whiplash2;
@@ -2429,6 +2431,8 @@ namespace UltrakULL.json
         public string act3_violenceSecond_payloadControlError1;
         public string act3_violenceSecond_payloadControlError2;
         public string act3_violenceSecond_payloadControlEmpty;
+
+        public string act3_violenceSecond_alternateShotgun;
         
         public string act3_violenceThird_feedIt;
         
