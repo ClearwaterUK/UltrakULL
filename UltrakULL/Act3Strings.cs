@@ -28,7 +28,7 @@ namespace UltrakULL
             }
             if (fullMessage.Contains("ALTERNATE versions"))
             {
-                return LanguageManager.CurrentLanguage.act1.act1_limboFourth_alternate;
+                return LanguageManager.CurrentLanguage.misc.hud_alternateVersion;
             }
             if (fullMessage.Contains("ALTERNATE SHOTGUN"))
             {

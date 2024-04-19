@@ -942,6 +942,9 @@
         "difficulty_violentDescription1": "Fast and aggressive enemies and high damage.",
         "difficulty_violentDescription2": "Quick thinking, mobility options and situational awareness are essential.",
         "difficulty_violentDescription3": "Recommended for players who have already gotten used to the game's pace and mechanics.",
+        "difficulty_brutalDescription1": "Extremely aggressive enemies and high damage.",
+        "difficulty_brutalDescription2": "A full arsenal and extensive knowledge of the game are expected. Any slip-ups are punished harshly.",
+        "difficulty_brutalDescription3": "Recommended for players who already have considerable experience with the game and are looking for a fresh challenge.",
 
         "chapter_title": "CHAPTER",
         "chapter_prelude": "PRELUDE",

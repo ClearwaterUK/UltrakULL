@@ -945,6 +945,9 @@
 		"difficulty_violentDescription1": "",
 		"difficulty_violentDescription2": "",
 		"difficulty_violentDescription3": "",
+		"difficulty_brutalDescription1": "",
+		"difficulty_brutalDescription2": "",
+		"difficulty_brutalDescription3": "",
 
 		"chapter_title": "",
 		"chapter_prelude": "",
@@ -2820,7 +2823,7 @@
 		"hud_outOfBounds": "",
 		"hud_clashMode": "",
 		"hud_weaponVariation": "",
-		"hud_alternateVersion" "",
+		"hud_alternateVersion": "",
 
 		"loading": "",
 

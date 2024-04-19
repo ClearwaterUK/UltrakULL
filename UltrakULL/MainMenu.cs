@@ -162,10 +162,11 @@ namespace UltrakULL
 						TextMeshProUGUI umdText = GetTextMeshProUGUI(umdTextObject.transform.Find("Name").gameObject);
                 		umdText.text = LanguageManager.CurrentLanguage.frontend.difficulty_umd;
 
-				//No need for Brutal/UMD header yet as it's not in-game
+				//No need for UMD header yet as it's not in-game
 
 				if (LanguageManager.IsRightToLeft)
 				{
+					RtlFixDifficultyButton(brutalTextObject, brutalText);
 					RtlFixDifficultyButton(violentTextObject, violentText);
 					RtlFixDifficultyButton(standardTextObject, standardText);
 					RtlFixDifficultyButton(lenientTextObject, lenientText);
@@ -241,45 +242,61 @@ namespace UltrakULL
                 //Violent descriptor
                 TextMeshProUGUI violentDescriptor = GetTextMeshProUGUI(violentObject.transform.Find("Text").gameObject);
 				violentDescriptor.text =
-					LanguageManager.CurrentLanguage.frontend.difficulty_violentDescription1
+                    LanguageManager.CurrentLanguage.frontend.difficulty_violentDescription1
 					+ "\n\n"
 					+ LanguageManager.CurrentLanguage.frontend.difficulty_violentDescription2
-					+ "\n\n"
+                    + "\n\n"
 					+ "<color=red>" + LanguageManager.CurrentLanguage.frontend.difficulty_violentDescription3 + "</color>";
+
+				//Brutal title
+				GameObject brutalObject = GetGameObjectChild(difficultyObject, "Brutal Info");
+                TextMeshProUGUI brutalTitle = GetTextMeshProUGUI(brutalObject.transform.Find("Title (1)").gameObject);
+				brutalTitle.text = LanguageManager.CurrentLanguage.frontend.difficulty_brutal;
+
+                //Brutal descriptor
+                TextMeshProUGUI brutalDescriptor = GetTextMeshProUGUI(brutalObject.transform.Find("Text").gameObject);
+				brutalDescriptor.text =
+					"<color=white>" + LanguageManager.CurrentLanguage.frontend.difficulty_brutalDescription1
+                    + "\n\n"
+                    + LanguageManager.CurrentLanguage.frontend.difficulty_brutalDescription2 + "</color>"
+                    + "\n\n"
+                    + "<color=red>" + LanguageManager.CurrentLanguage.frontend.difficulty_brutalDescription3 + "</color>";
 
                 TextMeshProUGUI underConstructionText = GetTextMeshProUGUI(GetGameObjectChild(difficultyObject, "Under Construction"));
 				underConstructionText.text = LanguageManager.CurrentLanguage.frontend.difficulty_underConstruction;
-				//idk how 2 use these in tmpro so i left it here
-				/*// RTL
+
+				// RTL
 				if (LanguageManager.IsRightToLeft)
 				{
-					harmlessDescriptor.alignment = TextAnchor.UpperRight;
-					harmlessTitle.alignment = TextAnchor.MiddleRight;
-					lenientDescriptor.alignment = TextAnchor.UpperRight;
-					lenientTitle.alignment = TextAnchor.MiddleRight;
-					standardDescriptor.alignment = TextAnchor.UpperRight;
-					standardTitle.alignment = TextAnchor.MiddleRight;
-					violentDescriptor.alignment = TextAnchor.UpperRight;
-					violentTitle.alignment = TextAnchor.MiddleRight;
-				}*/
+					harmlessDescriptor.alignment = TextAlignmentOptions.TopRight;
+					harmlessTitle.alignment = TextAlignmentOptions.MidlineRight;
+					lenientDescriptor.alignment = TextAlignmentOptions.TopRight;
+					lenientTitle.alignment = TextAlignmentOptions.MidlineRight;
+					standardDescriptor.alignment = TextAlignmentOptions.TopRight;
+					standardTitle.alignment = TextAlignmentOptions.MidlineRight;
+					violentDescriptor.alignment = TextAlignmentOptions.TopRight;
+					violentTitle.alignment = TextAlignmentOptions.MidlineRight;
+				}
 
-				//Brutal and UMD stuff isn't in-game yet so the below is commmented out until the devs add them.
+                //UMD stuff isn't in-game yet so the below is commmented out until the devs add them.
 
-				//Brutal title - not in-game yet
-				GameObject brutalObject = GetGameObjectChild(difficultyObject, "Brutal Info");
-                TextMeshProUGUI brutalTitle = GetTextMeshProUGUI(brutalObject.transform.Find("Title (1)").gameObject);
-				brutalTitle.text = "brutal title string";
+                /*UMD title - not in-game yet
+				GameObject umdObject = GetGameObjectChild(difficultyObject, "UMD Info");
+                TextMeshProUGUI umdTitle = GetTextMeshProUGUI(umdObject.transform.Find("Title (1)").gameObject);
+				umdTitle.text = LanguageManager.CurrentLanguage.frontend.difficulty_umd;
 
-                //Brutal descriptor - not in-game yet
-                TextMeshProUGUI brutalDescriptor = GetTextMeshProUGUI(brutalObject.transform.Find("Text").gameObject);
-				brutalDescriptor.text = "brutal difficulty descriptor. <color=red> INSIGNIFICANT FUCKING INTENSIFIES </color>";
+                //UMD descriptor - not in-game yet
+                TextMeshProUGUI brutalDescriptor = GetTextMeshProUGUI(umdObject.transform.Find("Text").gameObject);
+				umdDescriptor.text = 
+					LanguageManager.CurrentLanguage.frontend.difficulty_umdDescription1
+					+ "\n\n"
+					+ LanguageManager.CurrentLanguage.frontend.difficulty_umdDescription2
+					+ "\n\n"
+					+ "<color=red>" + LanguageManager.CurrentLanguage.frontend.difficulty_umdDescription3 + "</color>";
+				*/
 
-
-				/*UMD title - not in-game yet
-
-				//UMD descriptor - not in-game yet*/
-			}
-			catch (Exception e)
+            }
+            catch (Exception e)
 			{
 				Logging.Error("Failed to patch difficulty text.");
 				Logging.Error(e.ToString());

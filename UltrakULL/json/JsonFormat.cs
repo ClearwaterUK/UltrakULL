@@ -1327,6 +1327,12 @@ namespace UltrakULL.json
         public string difficulty_violentDescription1;
         public string difficulty_violentDescription2;
         public string difficulty_violentDescription3;
+        public string difficulty_brutalDescription1;
+        public string difficulty_brutalDescription2;
+        public string difficulty_brutalDescription3;
+        internal string difficulty_umdDescription1;
+        internal string difficulty_umdDescription2;
+        internal string difficulty_umdDescription3;
 
         public string difficulty_tweakReminder;
         public string difficulty_underConstruction;
@@ -2044,7 +2050,6 @@ namespace UltrakULL.json
         public string hud_railcannonMeter;
         public string hud_styleMeter;
         public string hud_styleInfo;
-        public string hud_alternateVersion;
 
         public string crosshair_title;
         public string crosshair_type;
