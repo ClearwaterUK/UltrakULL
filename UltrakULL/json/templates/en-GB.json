@@ -2081,6 +2081,7 @@
         "cheats_categoryEnemies": "ENEMIES",
         "cheats_categoryWeapons": "WEAPONS",
         "cheats_categoryItems": "ITEMS",
+        "cheats_categoryVisual": "VISUAL",
         "cheats_categorySpecial": "SPECIAL"
     },
 

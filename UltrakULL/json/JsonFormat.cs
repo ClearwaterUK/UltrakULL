@@ -322,6 +322,7 @@ namespace UltrakULL.json
         public string cheats_categoryWeapons;
         public string cheats_categoryEnemies;
         public string cheats_categoryItems;
+        public string cheats_categoryVisual;
         public string cheats_categorySpecial;
 
     }
