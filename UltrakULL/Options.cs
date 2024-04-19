@@ -826,12 +826,16 @@ namespace UltrakULL
             TextMeshProUGUI advancedTitle71 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "7-1 Options"), "Level 7-1 Category"));
             TextMeshProUGUI advancedCurrent73 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "7-3 Options"), "Level 7-3 Category"), "Current Level Indicator"));
             TextMeshProUGUI advancedTitle73 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "7-3 Options"), "Level 7-3 Category"));
+            TextMeshProUGUI advancedCurrent7S = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "7-S Options"), "Level 7-S Category"), "Current Level Indicator"));
+            TextMeshProUGUI advancedTitle7S = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "7-S Options"), "Level 7-S Category"));
             advancedCurrent52.text = LanguageManager.CurrentLanguage.options.advanced_currentLevel;
             advancedTitle52.text = LanguageManager.CurrentLanguage.options.advanced_level52;
             advancedCurrent71.text = LanguageManager.CurrentLanguage.options.advanced_currentLevel;
             advancedTitle71.text = LanguageManager.CurrentLanguage.options.advanced_level71;
             advancedCurrent73.text = LanguageManager.CurrentLanguage.options.advanced_currentLevel;
             advancedTitle73.text = LanguageManager.CurrentLanguage.options.advanced_level73;
+            advancedCurrent7S.text = LanguageManager.CurrentLanguage.options.advanced_currentLevel;
+            advancedTitle7S.text = LanguageManager.CurrentLanguage.options.advanced_level7S;
 
             //Levels
             TextMeshProUGUI advanced52WaterScrolling = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "5-2 Options"), "Disable Water Scrolling"), "Text"));
@@ -844,6 +848,9 @@ namespace UltrakULL
 
             TextMeshProUGUI advanced73Grass = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "7-3 Options"), "Local High Scores"), "Text"));
             advanced73Grass.text = LanguageManager.CurrentLanguage.options.advanced_73Grass;
+
+            TextMeshProUGUI advanced7SHard = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(advancedOptionsSub, "7-S Options"), "Local High Scores"), "Text"));
+            advanced7SHard.text = LanguageManager.CurrentLanguage.options.advanced_7SHard;
         }
 
         private void PatchOptions(GameObject optionsMenu)

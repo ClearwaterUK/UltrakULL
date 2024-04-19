@@ -27,7 +27,7 @@ options: category_customization
 options: general_(parryFlash, sandboxOverwrite, advancedOptions, advancedOptionsCustomize, screen, misc, restartWarningAlwaysOn, OnlyCG, restartWarningAlwaysOff)
 options: graphics_gamma(1-2)
 options: controls_(movementTitle, weaponTitle, punch(Feedbacker, Knuckleblaster), revolver, shotgun, nailgun, railcannon, rocketLauncher, nextVariation, previousVariation, spawnerArm)
-options: advanced_(title, currentLevel, cybergrindResetText1, cybergrindResetText2, cybergrindResetCancel, cybergrindResetConfirm, cybergrindLocalHighScore, cybergrindResetButton, level52, level71, level73, 52WaterScrolling, 52WaterWaves, 71Dark, 73Grass)
+options: advanced_(title, currentLevel, cybergrindResetText1, cybergrindResetText2, cybergrindResetCancel, cybergrindResetConfirm, cybergrindLocalHighScore, cybergrindResetButton, level52, level71, level73, level7S, 52WaterScrolling, 52WaterWaves, 71Dark, 73Grass, 7SHard)
 options: audio_(volume, soundEffectsVolume, muffleMusic)
 options: assists_(enemySilouettesNone, enemySilouettesFull)
 options: save_slot(1-5)

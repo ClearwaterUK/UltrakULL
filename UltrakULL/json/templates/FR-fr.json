@@ -1444,10 +1444,12 @@
 		"advanced_level52": "NIVEAU 5-2",
 		"advanced_level71": "NIVEAU 7-1",
 		"advanced_level73": "NIVEAU 7-3",
+		"advanced_level7S": "NIVEAU 7-S",
 		"advanced_52WaterScrolling": "DÉSACTIVER DÉROULEMENT DE L'EAU",
 		"advanced_52WaterWaves": "DÉSACTIVER VAGUES",
 		"advanced_71Dark": "TOUJOURS RESTER SOMBRE",
 		"advanced_73Grass": "DÉSACTIVER HERBE",
+		"advanced_7SHard": "",
 
 		"save_warning1": "<color=red>Le jeu va recharger</color>.",
 		"save_warning2": "Si vous êtes dans une mission, tout progrès actuel sera perdu.",

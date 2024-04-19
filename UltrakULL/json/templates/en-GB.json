@@ -1484,10 +1484,12 @@
         "advanced_level52": "LEVEL 5-2",
         "advanced_level71": "LEVEL 7-1",
         "advanced_level73": "LEVEL 7-3",
+        "advanced_level7S": "LEVEL 7-S",
         "advanced_52WaterScrolling": "DISABLE WATER SCROLLING",
         "advanced_52WaterWaves": "DISABLE WATER WAVES",
         "advanced_71Dark": "REMAIN ALWAYS DARK",
         "advanced_73Grass": "DISABLE GRASS",
+        "advanced_7SHard": "REQUIRE HIGH ACCURACY",
 
         "save_warning1": "The game will reload.",
         "save_warning2": "If you're in a mission, your current progress will be lost.",
@@ -2559,7 +2561,7 @@
         "act3_violenceSecond_payloadControlError1": "ERROR",
         "act3_violenceSecond_payloadControlError2": "PAYLOAD REQUIRES\nTRAM",
         "act3_violenceSecond_payloadControlEmpty": "EMPTY",
-        "act3_violenceSecond_alternateShotgun": "ALTERNATE SHOTGUN: Melee only. Move Fast to deal more damage."
+        "act3_violenceSecond_alternateShotgun": "ALTERNATE SHOTGUN: Melee only. Move Fast to deal more damage.",
 
         "act3_violenceThird_feedIt": "F E E D   I T .",
         "act3_violenceThird_becomeMarked": "BECOME MARKED FOR DEATH?",

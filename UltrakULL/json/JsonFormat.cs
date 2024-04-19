@@ -2186,10 +2186,12 @@ namespace UltrakULL.json
         public string advanced_level52;
         public string advanced_level71;
         public string advanced_level73;
+        public string advanced_level7S;
         public string advanced_52WaterScrolling;
         public string advanced_52WaterWaves;
         public string advanced_71Dark;
         public string advanced_73Grass;
+        public string advanced_7SHard;
         
         public string language_title;
         public string language_languages;
