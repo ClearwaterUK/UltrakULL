@@ -2958,6 +2958,7 @@ namespace UltrakULL.json
         public string hud_outOfBounds;
         public string hud_clashMode;
         public string hud_weaponVariation;
+        public string hud_alternateVersion;
 
         public string spawner_sandboxTools;
         public string spawner_sandbox;
