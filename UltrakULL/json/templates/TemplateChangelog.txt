@@ -5,6 +5,7 @@ ADDED:
 New category: act3
 New category: fishing
 New category: ranks
+New category: weapon
 
 act1: act1_limboFourth_alternateRevolver
 //text is changed, don't skip this
@@ -32,6 +33,7 @@ options: audio_(volume, soundEffectsVolume, muffleMusic)
 options: assists_(enemySilouettesNone, enemySilouettesFull)
 options: save_slot(1-5)
 intermission: act2_intermission_endof, act2_intermission_insertAct3
+weapon: weapon_nailgunZapper(Ready, OutOfRange, NoTarget, Blocked, Distance, Recharging, Alternate(TooFar, Null))
 ranks: rank_letter_(d, c, b, a, s, p)
 sandbox: sandbox_shop_stats 
 washing: wash_(fakeexittext(1-6), Clean, ToDo, bloodClean, roomCourtyard, roomLibrary, roomLobby, roomLounge, roomSideroom, littercount, Dumpster, Ground, Pillars, Walls, BackBookshelf, Ceiling, Bookshelf, Bookcases, Desk, FrontBookshelf, Sconces, Sidewall, Walkway, WindowWall, Decor, Floors, Pond)

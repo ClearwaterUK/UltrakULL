@@ -2964,7 +2964,16 @@
         "earlyAccessEnd2": "Layer 8: FRAUD is still under development",
         "earlyAccessEnd3": "For news on its progress, follow us on"
     },
-
+	"weapon":{
+		"weapon_nailgunZapperReady": "READY",
+		"weapon_nailgunZapperAlternateTooFar": "TOO FAR",
+		"weapon_nailgunZapperOutOfRange": "OUT OF RANGE",
+		"weapon_nailgunZapperAlternateNull": "NULL",
+		"weapon_nailgunZapperNoTarget": "NO TARGET",
+		"weapon_nailgunZapperBlocked": "BLOCKED",
+		"weapon_nailgunZapperDistance": "DISTANCE:",
+		"weapon_nailgunZapperRecharging": "RECHARGING..."
+	},
     "ranks": {
         "rank_letter_d": "D",
         "rank_letter_c": "C",

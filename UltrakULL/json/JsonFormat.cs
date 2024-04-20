@@ -40,6 +40,7 @@ namespace UltrakULL.json
         public Style style;
         public CheatStrings cheats;
         public Misc misc;
+        public Weapon weapon;
 
         public SandboxStrings sandbox;
     }
@@ -2555,7 +2556,19 @@ namespace UltrakULL.json
         public string secretLevels_complete1;
         public string secretLevels_complete2;
     }
+    
+    public class Weapon
+    {
+        public string weapon_nailgunZapperReady;
+        public string weapon_nailgunZapperAlternateTooFar;
+        public string weapon_nailgunZapperOutOfRange;
+        public string weapon_nailgunZapperAlternateNull;
+        public string weapon_nailgunZapperNoTarget;
+        public string weapon_nailgunZapperBlocked;
+        public string weapon_nailgunZapperDistance;
+        public string weapon_nailgunZapperRecharging;
 
+    }
     public class Museum
     {
         public string museum_bookHakita1;

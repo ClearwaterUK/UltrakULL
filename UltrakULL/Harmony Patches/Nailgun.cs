@@ -40,7 +40,8 @@ namespace UltrakULL.Harmony_Patches
                 if (___rechargingOverlay.activeSelf)
                 {
                     TextMeshProUGUI rechargeText = GetTextMeshProUGUI(GetGameObjectChild(___rechargingOverlay, "Text (TMP)"));
-                    //rechargeText.text = LanguageManager.CurrentLanguage.
+                    //RECHARGING...
+                    rechargeText.text = LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperRecharging;
                 }
                 RaycastHit raycastHit;
                 EnemyIdentifierIdentifier enemyIdentifierIdentifier;
@@ -54,27 +55,30 @@ namespace UltrakULL.Harmony_Patches
                     if (raycastHit.distance < __instance.zapper.maxDistance - 5f)
                     {
                         target = 1f - (__instance.zapper.maxDistance - 5f - raycastHit.distance) / (__instance.zapper.maxDistance - 5f);
-                        ___statusText.text = "準備完了";
+                        //READY
+                        ___statusText.text = LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperReady;
                     }
                     else
                     {
-                        ___statusText.text = (__instance.altVersion ? "遠い" : "範囲外");
-                        target = 0f;
+                        //TOO FAR | OUT OF RANGE
+                        ___statusText.text = (__instance.altVersion ? LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperAlternateTooFar : LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperOutOfRange);
                     }
                 }
                 else
                 {
-                    target = 0f;
-                    ___statusText.text = (__instance.altVersion ? "なし" : "対象なし");
+                    //NULL | NO TARGET
+                    ___statusText.text = (__instance.altVersion ? LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperAlternateNull : LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperNoTarget);
                 }
                 return;
             }
             if (___currentZapper.distance > ___currentZapper.maxDistance || ___currentZapper.raycastBlocked)
             {
-                ___statusText.text = (___currentZapper.raycastBlocked ? "障害物" : (__instance.altVersion ? "遠い" : "範囲外"));
+                //BLOCKED (TOO FAR | OUT OF RANGE)
+                ___statusText.text = (___currentZapper.raycastBlocked ? LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperBlocked : (__instance.altVersion ? LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperAlternateTooFar : LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperOutOfRange));
                 return;
             }
-            ___statusText.text = (__instance.altVersion ? "" : "距離: ") + ___currentZapper.distance.ToString("f1");
+            //DISTANCE:
+            ___statusText.text = (__instance.altVersion ? "" : LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperDistance ) + ___currentZapper.distance.ToString("f1");
         }
 
     }

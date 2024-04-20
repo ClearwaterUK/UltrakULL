@@ -2942,6 +2942,16 @@
 		"earlyAccessEnd3": ""
 	},
 
+	"weapon":{
+		"weapon_nailgunZapperReady": "",
+		"weapon_nailgunZapperAlternateTooFar": "",
+		"weapon_nailgunZapperOutOfRange": "",
+		"weapon_nailgunZapperAlternateNull": "",
+		"weapon_nailgunZapperNoTarget": "",
+		"weapon_nailgunZapperBlocked": "",
+		"weapon_nailgunZapperDistance": "",
+		"weapon_nailgunZapperRecharging": ""
+	},
 	"ranks": {
 		"rank_letter_d": "D",
 		"rank_letter_c": "C",
