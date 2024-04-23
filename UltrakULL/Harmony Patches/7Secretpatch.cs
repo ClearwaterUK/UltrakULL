@@ -123,7 +123,7 @@ namespace UltrakULL.Harmony_Patches
                         }
                         else
                         {
-                            Logging.Info("no tmp here");
+                            Logging.Warn("no tmp here");
                         }
                     }
                 }
