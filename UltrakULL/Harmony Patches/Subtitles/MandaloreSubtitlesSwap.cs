@@ -77,39 +77,6 @@ namespace UltrakULL.Harmony_Patches.Subtitles
             }
             return codes;
         }
-        /*
-        [HarmonyPatch("Start"), HarmonyPostfix]
-        public static void Mandalore_Start(ref Mandalore __instance, ref bool ___taunt)
-        {
-            if (___taunt)
-            {
-                int num = UnityEngine.Random.Range(0, __instance.voices[0].taunts.Length);
-                MandaloreVoice[] array = __instance.voices;
-                for (int i = 0; i < array.Length; i++)
-                {
-                    array[i].Taunt(num);
-                }
-                switch (num)
-                {
-                    case 0:
-                        MonoSingleton<SubtitleController>.Instance.DisplaySubtitle("<color=#FFC49E>[NMO]You cannot imagine what you'll face here</color>", null, false);
-                        MonoSingleton<SubtitleController>.Instance.DisplaySubtitle("<color=#9EE6FF>[NMO]I'm gonna shoot em with a gun</color>", 2.5f, __instance.GetComponentInParent<Transform>().gameObject);
-                        return;
-                    case 1:
-                        MonoSingleton<SubtitleController>.Instance.DisplaySubtitle("<color=#9EE6FF>[NMO]Why are we in the past</color>", null, false);
-                        return;
-                    case 2:
-                        MonoSingleton<SubtitleController>.Instance.DisplaySubtitle("<color=#9EE6FF>[NMO]I'm going to fucking poison you</color>", null, false);
-                        MonoSingleton<SubtitleController>.Instance.DisplaySubtitle("<color=#FFC49E>[MO]What</color>", 2f, __instance.GetComponentInParent<Transform>().gameObject);
-                        return;
-                    case 3:
-                        MonoSingleton<SubtitleController>.Instance.DisplaySubtitle("<color=#FFC49E>[MO]Hold still</color>", 0.6f, __instance.GetComponentInParent<Transform>().gameObject);
-                        break;
-                    default:
-                        return;
-                }
-            }
-        }*/
         [HarmonyPatch("Update"), HarmonyTranspiler]
         static IEnumerable<CodeInstruction> MandaloreUpdateTranspiler(IEnumerable<CodeInstruction> instructions)
         {
