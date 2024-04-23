@@ -17,7 +17,7 @@ namespace UltrakULL.Harmony_Patches
         {
             if(isUsingEnglish())
             {
-                return false;
+                return true;
             }
             
             __instance.extraInfo.text = "";

@@ -47,11 +47,7 @@ using System.Reflection;
  * -- TESTING REPORTS --
  * "Home or ~" cheat string isn't translated
  * The arm alter menu isn't fully translated and mostly doesn't work outside of the Sandbox
- * Subtitle patch of Gabriel won't work outside it's level
- * Subtitle patch of MDK is broke.
  * '0' has weird spacing with the font
- * Counter of Attractor Nailgun/Sawblade launcher broke with the font
- * In English, "NO RESTARTS" and "NO DAMAGE" shows up at The final rank screen even you had damage and restart
  * 
  * */
 

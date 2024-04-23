@@ -21,9 +21,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPatch("Start"), HarmonyPostfix]
         public static void NailgunPostfix(Nailgun __instance, TMP_Text ___statusText)
         {
-            Thread.Sleep(3);
-            if (Core.GlobalFontReady && __instance.gameObject.name.ToLower().Contains("Magnet"))
+            Thread.Sleep(5);
+            if ((Core.GlobalFontReady) && (__instance.gameObject.name.ToLower().Contains("magnet")))
             {
+                Logging.Info("Unswapping the attractor nailgun font, font:" + TextFontSwap.originalFont);
                 __instance.ammoText.font = TextFontSwap.originalFont;
             }
         }
