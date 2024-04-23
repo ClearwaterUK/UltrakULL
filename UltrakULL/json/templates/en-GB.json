@@ -1355,6 +1355,7 @@
         "graphics_goreNote": "(Does not affect gameplay)",
         "graphics_goreEnable": "ENABLE BLOOD & GORE",
         "graphics_goreDisablePhysics": "FREEZE GORE PHYSICS",
+        "graphics_goreMaxBloodStains": "MAX BLOODSTAINS",
         "graphics_goreBloodChance": "BLOODSTAIN CHANCE",
         "graphics_goreMaxGore": "MAX GORE PER ROOM",
 

@@ -322,6 +322,9 @@ namespace UltrakULL
             TextMeshProUGUI freezeGoreText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Freeze Gore"), "Text"));
             freezeGoreText.text = LanguageManager.CurrentLanguage.options.graphics_goreDisablePhysics;
 
+            TextMeshProUGUI maxbloodstainText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Max Bloodstains"), "Text"));
+            maxbloodstainText.text = LanguageManager.CurrentLanguage.options.graphics_goreMaxBloodStains;
+
             TextMeshProUGUI bloodstainChanceText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Bloodstain Chance"), "Text"));
             bloodstainChanceText.text = LanguageManager.CurrentLanguage.options.graphics_goreBloodChance;
 

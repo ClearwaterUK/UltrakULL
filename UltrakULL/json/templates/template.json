@@ -1337,6 +1337,7 @@
 		"graphics_goreNote": "",
 		"graphics_goreEnable": "",
 		"graphics_goreDisablePhysics": "",
+		"graphics_goreMaxBloodStains": "",
 		"graphics_goreBloodChance": "",
 		"graphics_goreMaxGore": "",
 

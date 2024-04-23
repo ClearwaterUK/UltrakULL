@@ -27,7 +27,7 @@ frontEnd: layer_(violence, fraud, treachery), difficulty_brutalDescription(1-3),
 levelTips: leveltips_violence(First, Second, Third, Fourth, Secret)
 options: category_customization
 options: general_(parryFlash, sandboxOverwrite, advancedOptions, advancedOptionsCustomize, screen, misc, restartWarningAlwaysOn, OnlyCG, restartWarningAlwaysOff)
-options: graphics_gamma(1-2)
+options: graphics_gamma(1-2), graphics_goreMaxBloodStains
 options: controls_(movementTitle, weaponTitle, punch(Feedbacker, Knuckleblaster), revolver, shotgun, nailgun, railcannon, rocketLauncher, nextVariation, previousVariation, spawnerArm)
 options: advanced_(title, currentLevel, cybergrindResetText1, cybergrindResetText2, cybergrindResetCancel, cybergrindResetConfirm, cybergrindLocalHighScore, cybergrindResetButton, level52, level71, level73, level7S, 52WaterScrolling, 52WaterWaves, 71Dark, 73Grass, 7SHard)
 options: audio_(volume, soundEffectsVolume, muffleMusic)

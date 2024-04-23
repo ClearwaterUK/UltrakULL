@@ -2043,6 +2043,7 @@ namespace UltrakULL.json
         public string graphics_goreNote;
         public string graphics_goreEnable;
         public string graphics_goreDisablePhysics;
+        public string graphics_goreMaxBloodStains;
         public string graphics_goreBloodChance;
         public string graphics_goreMaxGore;
 

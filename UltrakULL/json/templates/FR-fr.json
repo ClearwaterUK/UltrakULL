@@ -1316,6 +1316,7 @@
 		"graphics_goreNote": "(N'affecte pas le jeu)",
 		"graphics_goreEnable": "ACTIVER SANG ET GORE",
 		"graphics_goreDisablePhysics": "DÉSACTIVER LA PHYSIQUE DE GORE",
+		"graphics_goreMaxBloodStains": "",
 		"graphics_goreBloodChance": "CHANCE DE PARTICULES DE SANG",
 		"graphics_goreMaxGore": "QUANTITÉ DE GORE MAX. PAR SALLE",
 
