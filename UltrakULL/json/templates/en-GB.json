@@ -2579,6 +2579,7 @@
         "act3_violenceSecond_payloadControlError1": "ERROR",
         "act3_violenceSecond_payloadControlError2": "PAYLOAD REQUIRES\nTRAM",
         "act3_violenceSecond_payloadControlEmpty": "EMPTY",
+        "act3_violenceSecond_payloadControlHell": "GIVE 'EM\n H E L L ,\n kid",
         "act3_violenceSecond_alternateShotgun": "<color=orange>ALTERNATE SHOTGUN</color>: Melee only. Move Fast to deal more damage.",
 
         "act3_violenceThird_feedIt": "F E E D   I T .",

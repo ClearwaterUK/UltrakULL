@@ -2459,6 +2459,7 @@ namespace UltrakULL.json
         public string act3_violenceSecond_payloadControlError1;
         public string act3_violenceSecond_payloadControlError2;
         public string act3_violenceSecond_payloadControlEmpty;
+        public string act3_violenceSecond_payloadControlHell;
 
         public string act3_violenceSecond_alternateShotgun;
         
