@@ -32,6 +32,8 @@ namespace UltrakULL
                 case "ultrakill.bigfistkill": { return LanguageManager.CurrentLanguage.style.style_bigfistkill; }
                 case "ultrakill.bipolar": { return LanguageManager.CurrentLanguage.style.style_bipolar; }
                 case "ultrakill.cannonballed": { return LanguageManager.CurrentLanguage.style.style_cannonballed; }
+                case "ultrakill.cannonballedfrombounce": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_cannonballedfrombounce + "</color>"; }
+                case "ultrakill.cannonboost": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_cannonboost + "</color>"; }
                 case "ultrakill.catapaulted": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_catapaulted + "</color>"; }
                 case "ultrakill.chargeback": { return LanguageManager.CurrentLanguage.style.style_chargeback; }
                 case "ultrakill.compressed": { return LanguageManager.CurrentLanguage.style.style_compressed; }
@@ -39,19 +41,28 @@ namespace UltrakULL
                 case "ultrakill.disrespect": { return LanguageManager.CurrentLanguage.style.style_disrespect; }
                 case "ultrakill.doublekill": { return "<color=orange>" + LanguageManager.CurrentLanguage.style.style_doublekill + "</color>"; }
                 case "ultrakill.downtosize": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_downtosize + "</color>"; }
+                case "ultrakill.drillpunch": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_drillpunch + "</color>"; }
+                case "ultrakill.drillpunchkill": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_drillpunchkill + "</color>"; }
                 case "ultrakill.enraged": { return "<color=red>" + LanguageManager.CurrentLanguage.style.style_enraged + "</color>"; }
                 case "ultrakill.exploded": { return LanguageManager.CurrentLanguage.style.style_exploded; }
                 case "ultrakill.finishedoff": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_finishedoff + "</color>"; }
                 case "ultrakill.fireworks": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_fireworks + "</color>"; }
+                case "ultrakill.fireworlsweak": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_fireforksweak + "</color>"; }
                 case "ultrakill.fistfullofdollar": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_fistfulofdollar + "</color>"; }
                 case "ultrakill.fried": { return LanguageManager.CurrentLanguage.style.style_fried; }
                 case "ultrakill.friendlyfire": { return LanguageManager.CurrentLanguage.style.style_friendlyfire; }
                 case "ultrakill.groundslam": { return LanguageManager.CurrentLanguage.style.style_groundslam; }
                 case "ultrakill.halfoff": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_halfoff + "</color>"; }
+                case "ultrakill.hammerhitgreen": { return LanguageManager.CurrentLanguage.style.style_hammerHitGreen; }
+                case "ultrakill.hammerhitheavy": { return LanguageManager.CurrentLanguage.style.style_hammerHitHeavy; }
+                case "ultrakill.hammerhitred": { return LanguageManager.CurrentLanguage.style.style_hammerHitRed; }
+                case "ultrakill.hammerhityellow": { return LanguageManager.CurrentLanguage.style.style_hammerHitYellow; }
                 case "ultrakill.headshot": { return LanguageManager.CurrentLanguage.style.style_headshot; }
                 case "ultrakill.headshotcombo": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_headshot + "</color>"; }
                 case "ultrakill.homerun": { return LanguageManager.CurrentLanguage.style.style_homerun; }
+                case "ultrakill.iconoclasm": { return LanguageManager.CurrentLanguage.style.style_iconoclasm; }
                 case "ultrakill.instakill": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_instakill + "</color>"; }
+                case "ultrakill.insurrknockdown": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_insurrknockdown + "</color>"; }
                 case "ultrakill.interruption": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_interruption + "</color>"; }
                 case "ultrakill.kill": { return LanguageManager.CurrentLanguage.style.style_kill; }
                 case "ultrakill.landyours": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_landyours + "</color>"; }
@@ -73,10 +84,13 @@ namespace UltrakULL
                 case "ultrakill.splattered": { return LanguageManager.CurrentLanguage.style.style_splattered; }
                 case "ultrakill.triplekill": { return "<color=orange>" + LanguageManager.CurrentLanguage.style.style_triplekill + "</color>"; }
 
+                case "ultrakill.drillhit": { return ""; }
+                case "ultrakill.hammerhit": { return ""; }
                 case "ultrakill.firehit": { return ""; }
                 case "ultrakill.shotgunhit": { return ""; }
                 case "ultrakill.nailhit": { return ""; }
                 case "ultrakill.explosionhit": { return ""; }
+                case "ultrakill.zapperhit": { return ""; }
 
                 case "": { return ""; }
                 default: { Logging.Warn("Missing style translation: " + inputBonus); return inputBonus; }
@@ -90,49 +104,65 @@ namespace UltrakULL
             //Try and keep this alphabetical as it gets bigger over time.
                 switch (regexinput)
                 {
-                    case "BISHOP CAPTURE": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_bishopcapture + "</color>"; }
-                    case "BISHOP PROMOTION": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_bishoppromo + "</color>"; }
-                    case "BLACK WINS": { return "<color=orange>" + LanguageManager.CurrentLanguage.style.style_blackwins + "</color>"; }
-                    case "BOILED": { return LanguageManager.CurrentLanguage.style.style_boiled; }
-                    case "BONGCLOUD": { return "<color=orange>" + LanguageManager.CurrentLanguage.style.style_bongcloud + "</color>"; }
-                    case "CASTLED": { return "<color=blue>" + LanguageManager.CurrentLanguage.style.style_castled + "</color>"; }
                     case "CONDUCTOR": { return LanguageManager.CurrentLanguage.style.style_conductor; }
                     case "CRUSHED": { return LanguageManager.CurrentLanguage.style.style_crushed; } 
-                    case "EN PASSANT": { return "<color=blue>" + LanguageManager.CurrentLanguage.style.style_enpassant + "</color>";}
-                    case "ENVIROKILL": { return LanguageManager.CurrentLanguage.style.style_envirokill; }
                     case "FALL": { return LanguageManager.CurrentLanguage.style.style_fall; }
-                    case "FOOLS MATE": { return "<color=red>" + LanguageManager.CurrentLanguage.style.style_foolsmate + "</color>"; }
-                    case "FOR THEE": { return LanguageManager.CurrentLanguage.style.style_forthee; }
                     case "FRIED": { return LanguageManager.CurrentLanguage.style.style_fried; }
+                    case "GROOVY": { return LanguageManager.CurrentLanguage.style.style_groovy; }
                     case "GUARD BREAK": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_guardbreak + "</color>"; }
-                    case "KNIGHT CAPTURE": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_knightcapture + "</color>"; }
-                    case "KNIGHT PROMOTION": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_knightpromo + "</color>"; }
-                    case "LONG WAY DOWN": { return LanguageManager.CurrentLanguage.style.style_longwaydown; }
-                    case "LOST": { return LanguageManager.CurrentLanguage.style.style_lost; }
-                    case "M.A.D.": { return LanguageManager.CurrentLanguage.style.style_m_a_d; }
                     case "MINCED": { return LanguageManager.CurrentLanguage.style.style_minced; }
+                    case "NO-NO": { return LanguageManager.CurrentLanguage.style.style_nono; }
                     case "OUT OF BOUNDS": { return LanguageManager.CurrentLanguage.style.style_outofbounds; }
+                    case "RE-NO-NO": { return LanguageManager.CurrentLanguage.style.style_renono; }
                     case "PANCAKED": { return LanguageManager.CurrentLanguage.style.style_pancaked; }
-                    case "PAWN CAPTURE": { return LanguageManager.CurrentLanguage.style.style_pawncapture; }
-                    case "QUEEN CAPTURE": { return "<color=red>" + LanguageManager.CurrentLanguage.style.style_queencapture + "</color>"; }
-                    case "QUEEN PROMOTION": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_queenpromo + "</color>"; }
                     case "RICOSHOT": { return LanguageManager.CurrentLanguage.style.style_ricoshot; }
                     case "ROADKILL": { return LanguageManager.CurrentLanguage.style.style_roadkill; }
-                    case "ROOK CAPTURE": { return "<color=orange>" + LanguageManager.CurrentLanguage.style.style_rookcapture + "</color>"; }
-                    case "ROOK PROMOTION": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_rookpromo + "</color>"; }
-                    case "SCRONGLED": { return LanguageManager.CurrentLanguage.style.style_scrongled; }
-                    case "SCRONGBONGLED": { return LanguageManager.CurrentLanguage.style.style_scrongbongled; }
-                    case "SCRINDONGULODED": { return LanguageManager.CurrentLanguage.style.style_scrindonguloded; }
+                    case "SCREWED": { return LanguageManager.CurrentLanguage.style.style_screwed; }
                     case "SHREDDED": { return LanguageManager.CurrentLanguage.style.style_shredded; }
                     case "SLIPPED": { return LanguageManager.CurrentLanguage.style.style_slipped; }
                     case "TRAMPLED": { return LanguageManager.CurrentLanguage.style.style_trampled; }
+                    case "UNCHAINEDSAW": { return LanguageManager.CurrentLanguage.style.style_unchainedsaw; }
+                    //Level-specific styles
+                    //5-4
+                    case "why are you even spawning enemies here": { return LanguageManager.CurrentLanguage.style.style_why; }
+                    //7-2
+                    case "BOILED": { return LanguageManager.CurrentLanguage.style.style_boiled; }
+                    case "FOR THEE": { return LanguageManager.CurrentLanguage.style.style_forthee; }
+                    //7-3
+                    case "LOST": { return LanguageManager.CurrentLanguage.style.style_lost; }
+                    //7-4
+                    case "LONG WAY DOWN": { return LanguageManager.CurrentLanguage.style.style_longwaydown; }
+                    case "M.A.D.": { return LanguageManager.CurrentLanguage.style.style_m_a_d; }
+                    //7-S
+                    case "TRASHED": { return LanguageManager.CurrentLanguage.style.style_trashed; }
+                    //P-2
+                    case "ENVIROKILL": { return LanguageManager.CurrentLanguage.style.style_envirokill; }
+                    case "SCRONGLED": { return LanguageManager.CurrentLanguage.style.style_scrongled; }
+                    case "SCRONGBONGLED": { return LanguageManager.CurrentLanguage.style.style_scrongbongled; }
+                    case "SCRINDONGULODED": { return LanguageManager.CurrentLanguage.style.style_scrindonguloded; }
+                    //cybergrind
+                    case "ZAPPED": { return LanguageManager.CurrentLanguage.style.style_zapped; }
+                    //chess
+                    case "BISHOP CAPTURE": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_bishopcapture + "</color>"; }
+                    case "BISHOP PROMOTION": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_bishoppromo + "</color>"; }
+                    case "BLACK WINS": { return "<color=orange>" + LanguageManager.CurrentLanguage.style.style_blackwins + "</color>"; }
+                    case "BONGCLOUD": { return "<color=orange>" + LanguageManager.CurrentLanguage.style.style_bongcloud + "</color>"; }
+                    case "CASTLED": { return "<color=blue>" + LanguageManager.CurrentLanguage.style.style_castled + "</color>"; }
+                    case "EN PASSANT": { return "<color=blue>" + LanguageManager.CurrentLanguage.style.style_enpassant + "</color>"; }
+                    case "FOOLS MATE": { return "<color=red>" + LanguageManager.CurrentLanguage.style.style_foolsmate + "</color>"; }
+                    case "KNIGHT CAPTURE": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_knightcapture + "</color>"; }
+                    case "KNIGHT PROMOTION": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_knightpromo + "</color>"; }
+                    case "PAWN CAPTURE": { return LanguageManager.CurrentLanguage.style.style_pawncapture; }
+                    case "QUEEN CAPTURE": { return "<color=red>" + LanguageManager.CurrentLanguage.style.style_queencapture + "</color>"; }
+                    case "QUEEN PROMOTION": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_queenpromo + "</color>"; }
+                    case "ROOK CAPTURE": { return "<color=orange>" + LanguageManager.CurrentLanguage.style.style_rookcapture + "</color>"; }
+                    case "ROOK PROMOTION": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_rookpromo + "</color>"; }
                     case "ULTRAVICTORY": { return "<color=red>" + LanguageManager.CurrentLanguage.style.style_ultravictory + "</color>"; }
                     case "WHITE WINS": { return "<color=orange>" + LanguageManager.CurrentLanguage.style.style_whitewins + "</color>"; }
-                    case "ZAPPED": { return LanguageManager.CurrentLanguage.style.style_zapped; }
-                    case "why are you even spawning enemies here": { return LanguageManager.CurrentLanguage.style.style_why; }
-                        
+                    
+
                     case "": { return ""; }
-                    default: { Logging.Warn("Missing style translation: " + regexinput); return regexinput; }
+                    default: { Logging.Warn("Missing style translation: " + regexinput); return regexinput; }                    
              }
         }
 

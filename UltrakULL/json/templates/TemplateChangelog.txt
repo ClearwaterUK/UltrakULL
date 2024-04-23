@@ -3,7 +3,7 @@
 ADDED:
 
 New category: act3
-New category: fishing
+New category: washing
 New category: ranks
 New category: weapon
 
@@ -20,8 +20,9 @@ devMuseum: museum_bookAdditionalMusic(11-12), bookAdditionalCredits(7-8), bookMa
 books: violenceFirst(1-9), violenceFirst_Slate(1-4), violenceSecond(1-2), violenceSecondAmbush(1-4), violenceFourth(1-5), violenceSecret_Slate(1-2)
 cheats: invincibility, enemiesHateEnemies, enemiesIgnorePlayer, hide(Weapons, Ui), ghostDroneMode, categoryVisual
 shop: shotgunSawedOn, shotgunSawedOnDescription(1-3), nailgunJumpStart, nailgunJumpStartDescription(1-2), rocketLauncherFireStarter, rocketLauncherFireStarterDescription(1-2)
-enemyAlter: hookPointTitle, sandboxTitle, enrage, enrageEternal, sandified, ignorePlayer, attackEnemies, hasSkull, altarType
-style: landyours, rocketreturn, roundtrip, served, strike, boiled, forthee, guardbreak, longwaydown, lost, m_a_d, pancaked, roadkill, slipped, trampled, bishopcapture, bishoppromo, blackwins, bongcloud, castled, enpassant, foolsmate, pawncapture, knightcapture, knightpromo, queencapture, queenpromo, rookcapture, rookpromo, ultravictory, whitewins
+enemyAlter: hookPointTitle, sandboxTitle, enrage, enrageEternal, sandified, puppeted, ignorePlayer, attackEnemies, hasSkull, altarType, metaDisallowFreezing, metaDisallowManipulation, dualWieldPickup, juice, infiniteUses, materialBlock, hurtzone, hurtCooldown, alter(Red, Blue, Stone)
+style: cannonboost, cannonballedfrombounce, drillpunch, drillpunchkill, iconoclasm, insurrknockdown, landyours, rocketreturn, roundtrip, screwed, served, strike, boiled, fireforksweak, forthee, guardbreak, hammerHitGreen, hammerHitHeavy, hammerHitRed, hammerHitYellow ,longwaydown, lost, m_a_d, pancaked, roadkill, slipped, trampled
+style: bishopcapture, bishoppromo, blackwins, bongcloud, castled, enpassant, foolsmate, pawncapture, knightcapture, knightpromo, queencapture, queenpromo, rookcapture, rookpromo, ultravictory, whitewins
 frontEnd: layer_(violence, fraud, treachery), difficulty_brutalDescription(1-3), leaderboard_reminder
 levelTips: leveltips_violence(First, Second, Third, Fourth, Secret)
 options: category_customization
@@ -35,7 +36,7 @@ options: save_slot(1-5)
 intermission: act2_intermission_endof, act2_intermission_insertAct3
 weapon: weapon_nailgunZapper(Ready, OutOfRange, NoTarget, Blocked, Distance, Recharging, Alternate(TooFar, Null))
 ranks: rank_letter_(d, c, b, a, s, p)
-sandbox: sandbox_shop_stats 
+sandbox: shop_stats, navmeshWarn
 washing: wash_(fakeexittext(1-6), Clean, ToDo, bloodClean, roomCourtyard, roomLibrary, roomLobby, roomLounge, roomSideroom, littercount, Dumpster, Ground, Pillars, Walls, BackBookshelf, Ceiling, Bookshelf, Bookcases, Desk, FrontBookshelf, Sconces, Sidewall, Walkway, WindowWall, Decor, Floors, Pond)
 
 MODIFIED:
