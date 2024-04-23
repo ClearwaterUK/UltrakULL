@@ -47,7 +47,7 @@ namespace UltrakULL
                 case "ultrakill.exploded": { return LanguageManager.CurrentLanguage.style.style_exploded; }
                 case "ultrakill.finishedoff": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_finishedoff + "</color>"; }
                 case "ultrakill.fireworks": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_fireworks + "</color>"; }
-                case "ultrakill.fireworlsweak": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_fireforksweak + "</color>"; }
+                case "ultrakill.fireworksweak": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_fireforksweak + "</color>"; }
                 case "ultrakill.fistfullofdollar": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_fistfulofdollar + "</color>"; }
                 case "ultrakill.fried": { return LanguageManager.CurrentLanguage.style.style_fried; }
                 case "ultrakill.friendlyfire": { return LanguageManager.CurrentLanguage.style.style_friendlyfire; }
