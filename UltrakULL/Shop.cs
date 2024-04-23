@@ -431,11 +431,36 @@ namespace UltrakULL
                 shotgunStandardTemplate4.text = LanguageManager.CurrentLanguage.shop.shop_shotgunPreset4;
                 shotgunStandardTemplate5.text = LanguageManager.CurrentLanguage.shop.shop_shotgunPreset5;
 
+                TextMeshProUGUI shotgunColorSwitchToAlternative = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shotgunColorWindow, "Standard"), "AlternateButton"), "Text"));
+                shotgunColorSwitchToAlternative.text = LanguageManager.CurrentLanguage.shop.shop_colorsAlternative;
+
+                TextMeshProUGUI shotgunColorSwitchToStandard = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shotgunColorWindow, "Alternate"), "AlternateButton"), "Text"));
+                shotgunColorSwitchToStandard.text = LanguageManager.CurrentLanguage.shop.shop_colorsAlternative;
+
+                GameObject shotgunAlternateTemplates = GetGameObjectChild(GetGameObjectChild(shotgunColorWindow, "Alternate"), "Template");
+                TextMeshProUGUI shotgunAlternateTemplate1 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shotgunAlternateTemplates, "Template 1"), "Button (Selectable)"), "Text"));
+                TextMeshProUGUI shotgunAlternateTemplate2 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shotgunAlternateTemplates, "Template 2"), "Button (Selectable)"), "Text"));
+                TextMeshProUGUI shotgunAlternateTemplate3 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shotgunAlternateTemplates, "Template 3"), "Button (Selectable)"), "Text"));
+                TextMeshProUGUI shotgunAlternateTemplate4 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shotgunAlternateTemplates, "Template 4"), "Button (Selectable)"), "Text"));
+                TextMeshProUGUI shotgunAlternateTemplate5 = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shotgunAlternateTemplates, "Template 5"), "Button (Selectable)"), "Text"));
+
+                shotgunAlternateTemplate1.text = LanguageManager.CurrentLanguage.shop.shop_shotgunPreset1;
+                shotgunAlternateTemplate2.text = LanguageManager.CurrentLanguage.shop.shop_shotgunPreset2;
+                shotgunAlternateTemplate3.text = LanguageManager.CurrentLanguage.shop.shop_shotgunPreset3;
+                shotgunAlternateTemplate4.text = LanguageManager.CurrentLanguage.shop.shop_shotgunPreset4;
+                shotgunAlternateTemplate5.text = LanguageManager.CurrentLanguage.shop.shop_shotgunPreset5;
+
                 TextMeshProUGUI shotgunColorStandardPreset = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(shotgunStandardTemplates, "TemplateButton"), "Text"));
                 shotgunColorStandardPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
 
                 TextMeshProUGUI shotgunColorStandardCustom = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(shotgunStandardTemplates, "CustomButton"), "Text"));
                 shotgunColorStandardCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
+
+                TextMeshProUGUI shotgunColorAlternatePreset = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(shotgunAlternateTemplates, "TemplateButton"), "Text"));
+                shotgunColorAlternatePreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
+
+                TextMeshProUGUI shotgunColorAlternateCustom = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(shotgunAlternateTemplates, "CustomButton"), "Text"));
+                shotgunColorAlternateCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
                 TextMeshProUGUI shotgunColorDone = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(shotgunColorWindow, "Done"), "Text"));
                 shotgunColorDone.text = LanguageManager.CurrentLanguage.shop.shop_colorsDone;
@@ -446,6 +471,12 @@ namespace UltrakULL
                 shotgunStandardCustomPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
                 TextMeshProUGUI shotgunStandardCustomCustom = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(shotgunStandardCustom, "CustomButton"), "Text"));
                 shotgunStandardCustomCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
+
+                GameObject shotgunAlternateCustom = GetGameObjectChild(GetGameObjectChild(shotgunColorWindow, "Alternate"), "Custom");
+                TextMeshProUGUI shotgunAlternateCustomPreset = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(shotgunAlternateCustom, "TemplateButton"), "Text"));
+                shotgunAlternateCustomPreset.text = LanguageManager.CurrentLanguage.shop.shop_colorsPreset;
+                TextMeshProUGUI shotgunAlternateCustomCustom = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(shotgunAlternateCustom, "CustomButton"), "Text"));
+                shotgunAlternateCustomCustom.text = LanguageManager.CurrentLanguage.shop.shop_colorsCustom;
 
                 //Shotgun custom color unlock prompt
                 TextMeshProUGUI shotgunCustomColorPrompt = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(shopWeaponsObject, "ShotgunWindow"),"Color Screen"),"Standard"),"Custom"),"Locked"),"Blocker"),"Text"));
