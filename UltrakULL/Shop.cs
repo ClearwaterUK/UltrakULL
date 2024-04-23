@@ -365,6 +365,9 @@ namespace UltrakULL
                 sawedOnName.text = LanguageManager.CurrentLanguage.shop.shop_shotgunSawedOn;
 
                 GameObject sawedOnWindow = GetGameObjectChild(shotgunWindow, "Variation Info (Red)");
+                TextMeshProUGUI sawedOnWindowName = GetTextMeshProUGUI(GetGameObjectChild(sawedOnWindow, "Name"));
+                sawedOnWindowName.text = LanguageManager.CurrentLanguage.shop.shop_shotgunSawedOn;
+
                 TextMeshProUGUI sawedOnWindowDescription = GetTextMeshProUGUI(GetGameObjectChild(sawedOnWindow, "Description"));
                 sawedOnWindowDescription.text = LanguageManager.CurrentLanguage.shop.shop_shotgunSawedOnDescription1 + "\n\n"
                     + LanguageManager.CurrentLanguage.shop.shop_shotgunSawedOnDescription2 + "\n\n"
