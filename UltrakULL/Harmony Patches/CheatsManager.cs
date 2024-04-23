@@ -37,6 +37,7 @@ namespace UltrakULL.Harmony_Patches
                     case "MOVEMENT": { category.longName.text = LanguageManager.CurrentLanguage.cheats.cheats_categoryMovement; break; }
                     case "WEAPONS": { category.longName.text = LanguageManager.CurrentLanguage.cheats.cheats_categoryWeapons; break; }
                     case "ENEMIES": { category.longName.text = LanguageManager.CurrentLanguage.cheats.cheats_categoryEnemies; break; }
+                    case "VISUAL": { category.longName.text = LanguageManager.CurrentLanguage.cheats.cheats_categoryVisual; break; }
                     case "SPECIAL": { category.longName.text = LanguageManager.CurrentLanguage.cheats.cheats_categorySpecial; break; }
                 }
             }

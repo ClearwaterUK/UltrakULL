@@ -118,6 +118,12 @@ namespace UltrakULL
                     case "ultrakill.sandbox.snapping": { return LanguageManager.CurrentLanguage.cheats.cheats_snapping; }
                     case "ultrakill.sandbox.physics": { return LanguageManager.CurrentLanguage.cheats.cheats_physics; }
                     case "ultrakill.clash-mode": { return LanguageManager.CurrentLanguage.cheats.cheats_crashMode; }
+
+                    
+                    case "ultrakill.hide-weapons": { return LanguageManager.CurrentLanguage.cheats.cheats_hideWeapons; }
+                    case "ultrakill.hide-ui": { return LanguageManager.CurrentLanguage.cheats.cheats_hideUi; }
+
+                    case "ultrakill.ghost-drone-mode": { return LanguageManager.CurrentLanguage.cheats.cheats_ghostDroneMode; }
                 }
                 return cheatIdentifier;
             }

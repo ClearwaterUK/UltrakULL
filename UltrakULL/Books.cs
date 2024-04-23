@@ -150,9 +150,22 @@ namespace UltrakULL
                 }
 
                 case "Level 7-2": {
-                        return LanguageManager.CurrentLanguage.books.books_violenceSecond1 + "\n\n"
-                            + LanguageManager.CurrentLanguage.books.books_violenceSecond2 + "\n\n"
-                            + "> < < > < < > > < > > < >";
+                        if (originalText.Contains("> < < > < < > > < > > < >"))
+                        {
+                            return LanguageManager.CurrentLanguage.books.books_violenceSecond1 + "\n\n"
+                                + LanguageManager.CurrentLanguage.books.books_violenceSecond2 + "\n\n"
+                                + "> < < > < < > > < > > < >";
+                        }
+                        else
+                        {
+                            return "<i>" + LanguageManager.CurrentLanguage.books.books_violenceSecondAmbush1 + "\n\n\n\n"
+                                + LanguageManager.CurrentLanguage.books.books_violenceSecondAmbush2 + "\n\n\n\n\n"
+                                + LanguageManager.CurrentLanguage.books.books_violenceSecondAmbush1 + "\n\n\n\n"
+                                + LanguageManager.CurrentLanguage.books.books_violenceSecondAmbush3 + "\n\n\n\n\n"
+                                + LanguageManager.CurrentLanguage.books.books_violenceSecondAmbush1 + "\n\n\n\n"
+                                + LanguageManager.CurrentLanguage.books.books_violenceSecondAmbush4 + "</i>";
+                            
+                        }
                     }
 
                 case "Level 7-4": {

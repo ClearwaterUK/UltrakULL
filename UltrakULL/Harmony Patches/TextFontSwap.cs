@@ -12,7 +12,9 @@ using static UnityEngine.TextAnchor;
 namespace UltrakULL.Harmony_Patches
 {
 	public class TextFontSwap
-	{
+	{	
+		public static Font originalFont;
+
 		[HarmonyPatch(typeof(Text), "OnEnable")]
 		public static class TextFontSwapper
 		{
@@ -71,6 +73,7 @@ namespace UltrakULL.Harmony_Patches
 					}
 					else
 					{
+						originalFont = __instance.font;
 						__instance.font = Core.GlobalFont;
 					}
 				}
