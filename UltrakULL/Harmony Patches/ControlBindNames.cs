@@ -37,6 +37,11 @@ namespace UltrakULL.Harmony_Patches
                             sectionText.text = "-- " + LanguageManager.CurrentLanguage.options.controls_arms + " --";
                             break;
                         }
+                        case "-- HUD --":
+                        {
+                            sectionText.text = "-- " + LanguageManager.CurrentLanguage.options.hud_title + " --";
+                            break ;
+                        }
                         default:{ break; }
                     }
                 }
@@ -74,6 +79,7 @@ namespace UltrakULL.Harmony_Patches
                 case "PUNCH (FEEDBACKER)": { return LanguageManager.CurrentLanguage.options.controls_punchFeedbacker; }
                 case "PUNCH (KNUCKLEBLASTER)": { return LanguageManager.CurrentLanguage.options.controls_punchKnuckleblaster; }
                 case "HOOK": { return LanguageManager.CurrentLanguage.options.controls_whiplash; }
+                case "STATS": { return LanguageManager.CurrentLanguage.sandbox.sandbox_shop_stats; }
                 default: return originalText;
             }
         }
