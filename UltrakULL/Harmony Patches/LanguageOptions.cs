@@ -100,10 +100,6 @@ namespace UltrakULL.Harmony_Patches
             //Blue - Installed locally. Green - Not installed, available. Yellow - Installed, update available.
 
             //Set up the browser page here.
-            if(langBrowserPage == null)
-            {
-                langBrowserPage =  GameObject.Instantiate(canvasToCopy, optionsParent);
-            }
             
             langBrowserPage.name = "Language Browser";
             langBrowserPage.SetActive(true);
@@ -407,7 +403,7 @@ namespace UltrakULL.Harmony_Patches
             
             if (GetCurrentSceneName() == "Main Menu")
             {
-                Logging.Warn("In main menu");
+                //Logging.Warn("In main menu");
                 /*Transform panel = __instance.pauseMenu.transform.Find("Panel");
                 GameObject discordButton = panel.Find("Discord").gameObject;
 
@@ -441,7 +437,11 @@ namespace UltrakULL.Harmony_Patches
             {
                 langLocalPage = GameObject.Instantiate(pageToDisable, optionsParent);
             }
-            
+            if (langBrowserPage == null)
+            {
+                langBrowserPage = GameObject.Instantiate(pageToDisable, optionsParent);
+            }
+
             langLocalPage.name = "Language Page";
             langLocalPage.SetActive(false);
             languageButtonTitleText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(langLocalPage, "Scroll Rect (1)"), "Contents"), "Text (4)"));
@@ -499,7 +499,7 @@ namespace UltrakULL.Harmony_Patches
             optionsParent.Find("Panel/Assist").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
             optionsParent.Find("Panel/Colors").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
             optionsParent.Find("Panel/Saves").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
-            //optionsParent.Find("Language").GetComponent<Button>().onClick.AddListener(delegate { langBrowserPage.SetActive(false); });
+            optionsParent.Find("Language").GetComponent<Button>().onClick.AddListener(delegate { langBrowserPage.SetActive(false); });
             try
             {
                 languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
