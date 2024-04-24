@@ -3121,6 +3121,7 @@ namespace UltrakULL.json
         public string enemyAlter_altarBlue;
         public string enemyAlter_altarRed;
         public string enemyAlter_altarStone;
+        public string enemyAlter_alteredDestroyed;
 
         public string earlyAccessEnd1;
         public string earlyAccessEnd2;

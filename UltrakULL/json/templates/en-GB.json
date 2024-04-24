@@ -2989,6 +2989,7 @@
         "enemyAlter_altarBlue": "BLUE",
         "enemyAlter_altarRed": "RED",
         "enemyAlter_altarStone": "STONE",
+        "enemyAlter_alteredDestroyed": "Altered object was destroyed.",
 
         "earlyAccessEnd1": "THANKS FOR PLAYING",
         "earlyAccessEnd2": "Layer 8: FRAUD is still under development",
