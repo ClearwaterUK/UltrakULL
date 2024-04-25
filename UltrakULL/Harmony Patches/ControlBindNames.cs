@@ -65,11 +65,11 @@ namespace UltrakULL.Harmony_Patches
                 case "SECONDARY FIRE": { return LanguageManager.CurrentLanguage.options.controls_secondaryFire; }
                 case "NEXT VARIATION": { return LanguageManager.CurrentLanguage.options.controls_nextVariation; }
                 case "PREVIOUS VARIATION": { return LanguageManager.CurrentLanguage.options.controls_previousVariation; }
-                case "REVOLVER": { return LanguageManager.CurrentLanguage.options.controls_revolver; }
-                case "SHOTGUN": { return LanguageManager.CurrentLanguage.options.controls_shotgun; }
-                case "NAILGUN": { return LanguageManager.CurrentLanguage.options.controls_nailgun; }
-                case "RAILCANNON": { return LanguageManager.CurrentLanguage.options.controls_railcannon; }
-                case "ROCKET LAUNCHER": { return LanguageManager.CurrentLanguage.options.controls_rocketLauncher; }
+                case "REVOLVER": { return LanguageManager.CurrentLanguage.shop.shop_weaponsRevolver; }
+                case "SHOTGUN": { return LanguageManager.CurrentLanguage.shop.shop_weaponsShotgun; }
+                case "NAILGUN": { return LanguageManager.CurrentLanguage.shop.shop_weaponsNailgun; }
+                case "RAILCANNON": { return LanguageManager.CurrentLanguage.shop.shop_weaponsRailcannon; }
+                case "ROCKET LAUNCHER": { return LanguageManager.CurrentLanguage.shop.shop_weaponsRocketLauncher; }
                 case "SPAWNER ARM": { return LanguageManager.CurrentLanguage.options.controls_spawnerArm; }
                 case "NEXT WEAPON": { return LanguageManager.CurrentLanguage.options.controls_nextWeapon; }
                 case "PREVIOUS WEAPON": { return LanguageManager.CurrentLanguage.options.controls_previousWeapon; }
