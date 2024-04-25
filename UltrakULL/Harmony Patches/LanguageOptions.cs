@@ -424,13 +424,20 @@ namespace UltrakULL.Harmony_Patches
             languageButton.transform.localPosition = new Vector3(475f, -300f, 0f);
             //languageButton.transform.localPosition += new Vector3(0f, 60f, 0f);
             languageButtonText = GetTextMeshProUGUI(GetGameObjectChild(languageButton, "Text"));
+            Color deactivatedColor = new Color(1,1,1,1);
+            languageButtonText.color = deactivatedColor;
+            Color activatedColor = new Color(0, 0, 0, 1);
             //languageButtonText = languageButton.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
 
             Button button = languageButton.GetComponent<Button>();
+            Image buttonimage = languageButton.GetComponent<Image>();
+            buttonimage.fillCenter = false;
             GameObject pageToDisable = GetGameObjectChild(optionsParentObject, "Gameplay Options");
             button.onClick.AddListener(delegate
             {
                 pageToDisable.SetActive(false);
+                buttonimage.fillCenter = true;
+                languageButtonText.color = activatedColor;
             });
             Logging.Info("trying to create page");
             if(langLocalPage == null)
@@ -491,14 +498,14 @@ namespace UltrakULL.Harmony_Patches
             RectTransform cRect = langLocalPage.transform.Find("Scroll Rect (1)").Find("Contents").GetComponent<RectTransform>();
             cRect.sizeDelta = new Vector2(600f, (LanguageManager.allLanguages.Keys.Count) * 100);
             
-            optionsParent.Find("Panel/Gameplay").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
-            optionsParent.Find("Panel/Controls").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
-            optionsParent.Find("Panel/Video").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
-            optionsParent.Find("Panel/Audio").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
-            optionsParent.Find("Panel/HUD").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
-            optionsParent.Find("Panel/Assist").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
-            optionsParent.Find("Panel/Colors").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
-            optionsParent.Find("Panel/Saves").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
+            optionsParent.Find("Panel/Gameplay").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); buttonimage.fillCenter = false; languageButtonText.color = deactivatedColor; });
+            optionsParent.Find("Panel/Controls").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); buttonimage.fillCenter = false; languageButtonText.color = deactivatedColor; });
+            optionsParent.Find("Panel/Video").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); buttonimage.fillCenter = false; languageButtonText.color = deactivatedColor; });
+            optionsParent.Find("Panel/Audio").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); buttonimage.fillCenter = false; languageButtonText.color = deactivatedColor; });
+            optionsParent.Find("Panel/HUD").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); buttonimage.fillCenter = false; languageButtonText.color = deactivatedColor; });
+            optionsParent.Find("Panel/Assist").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); buttonimage.fillCenter = false; languageButtonText.color = deactivatedColor; });
+            optionsParent.Find("Panel/Colors").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); buttonimage.fillCenter = false; languageButtonText.color = deactivatedColor; });
+            optionsParent.Find("Panel/Saves").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); buttonimage.fillCenter = false; languageButtonText.color = Color.white; });
             optionsParent.Find("Language").GetComponent<Button>().onClick.AddListener(delegate { langBrowserPage.SetActive(false); });
             try
             {
