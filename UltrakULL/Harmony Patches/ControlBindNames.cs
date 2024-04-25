@@ -39,7 +39,7 @@ namespace UltrakULL.Harmony_Patches
                         }
                         case "-- HUD --":
                         {
-                            sectionText.text = "-- " + LanguageManager.CurrentLanguage.options.hud_title + " --";
+                            sectionText.text = "-- " + LanguageManager.CurrentLanguage.options.category_hud + " --";
                             break ;
                         }
                         default:{ break; }

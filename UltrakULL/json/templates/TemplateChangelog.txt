@@ -25,7 +25,7 @@ style: cannonboost, cannonballedfrombounce, drillpunch, drillpunchkill, iconocla
 style: bishopcapture, bishoppromo, blackwins, bongcloud, castled, enpassant, foolsmate, pawncapture, knightcapture, knightpromo, queencapture, queenpromo, rookcapture, rookpromo, ultravictory, whitewins
 frontEnd: layer_(violence, fraud, treachery), difficulty_brutalDescription(1-3), leaderboard_reminder
 levelTips: leveltips_violence(First, Second, Third, Fourth, Secret)
-options: category_customization
+options: category_audio, category_customization
 options: general_(parryFlash, sandboxOverwrite, advancedOptions, advancedOptionsCustomize, screen, misc, restartWarningAlwaysOn, OnlyCG, restartWarningAlwaysOff)
 options: graphics_gamma(1-2), graphics_goreMaxBloodStains
 options: controls_(movementTitle, weaponTitle, punch(Feedbacker, Knuckleblaster), nextVariation, previousVariation, spawnerArm)
@@ -40,6 +40,7 @@ sandbox: shop_stats, navmeshWarn
 washing: wash_(fakeexittext(1-6), Clean, ToDo, bloodClean, roomCourtyard, roomLibrary, roomLobby, roomLounge, roomSideroom, littercount, Dumpster, Ground, Pillars, Walls, BackBookshelf, Ceiling, Bookshelf, Bookcases, Desk, FrontBookshelf, Sconces, Sidewall, Walkway, WindowWall, Decor, Floors, Pond)
 
 MODIFIED:
+enemyName: enemyname_minosPrime -> enemyname_boss_minosPrime, enemyname_fleshPrison -> enemyname_boss_fleshPrison
 devMuseum: bookAdditionalCredits(2-3) -> bookAdditionalCredits(4-5), bookAdditionalCredits(4-6) -> bookAdditionalCredits(6-8)
 devMuseum: bookMandalore(5-6) -> bookMandalore(6-7)
 enemyAlter: jumpPadPower -> power
@@ -54,6 +55,8 @@ cheats: cheats_categoryItems
 
 REMOVED:
 act2: secretNotReady
+options: category_display, category_sound
+options: hud_title
 options: controls_actions, controls_slot(0-9)
 options: controls_(forward, back, left, right, movementTitle, resetDefault, changeVariation)
 options: graphics_title

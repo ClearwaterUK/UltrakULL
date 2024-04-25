@@ -1875,8 +1875,6 @@ namespace UltrakULL.json
         public string enemyname_virtue;
         public string enemyname_somethingWicked;
         public string enemyname_puppet;
-        public string enemyname_fleshPrison;
-        public string enemyname_minosPrime;
 
         public string enemyname_boss_cerberus;
         public string enemyname_boss_cancerousRodent;
@@ -1895,7 +1893,9 @@ namespace UltrakULL.json
         public string enemyname_boss_insurrectionistRude;
         public string enemyname_boss_insurrectionistAngry;
         public string enemyname_boss_gabrielSecond;
+        public string enemyname_boss_fleshPrison;
         public string enemyname_boss_fleshPanopticon;
+        public string enemyname_boss_minosPrime;
         public string enemyname_boss_sisyphusPrime;
         public string enemyname_boss_bigJohninator;
 
@@ -1924,12 +1924,12 @@ namespace UltrakULL.json
         public string category_general;
         public string category_controls;
         public string category_graphics;
-        public string category_sound;
-        public string category_display;
+        public string category_audio;
         public string category_assists;
-        public string category_colors;
         public string category_saves;
         public string category_customization;
+        public string category_hud;
+        public string category_colors;
 
         public string general_weaponPosition;
         public string general_weaponPositionRight;
@@ -2056,7 +2056,6 @@ namespace UltrakULL.json
         public string audio_muffleMusic;
         public string audio_dubbing;
 
-        public string hud_title;
         public string hud_type;
         public string hud_typeNone;
         public string hud_typeStandard;
