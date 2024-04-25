@@ -509,6 +509,13 @@ namespace UltrakULL.Harmony_Patches
             optionsParent.Find("Language").GetComponent<Button>().onClick.AddListener(delegate { langBrowserPage.SetActive(false); });
             try
             {
+                languageButton.transform.SetParent(GetGameObjectChild(optionsParentObject, "Panel").transform);
+                languageButton.transform.SetSiblingIndex(10);
+                RectTransform panelRectTransform = GetGameObjectChild(optionsParentObject, "Panel").GetComponent<RectTransform>();
+                RectTransform categoryOffset = GetGameObjectChild(GetGameObjectChild(optionsParentObject, "Panel"), "Text (9)").GetComponent<RectTransform>();
+                categoryOffset.offsetMin = new Vector2(categoryOffset.offsetMin.x, categoryOffset.offsetMin.y + 40);
+                panelRectTransform.offsetMin = new Vector2(panelRectTransform.offsetMin.x, 287.5f);
+                panelRectTransform.offsetMax = new Vector2(panelRectTransform.offsetMax.x, -287.5f);
                 languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
                 languageButtonTitleText.text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
                 languageButtonTitleText.gameObject.SetActive(true);
