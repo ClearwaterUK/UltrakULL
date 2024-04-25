@@ -1745,6 +1745,7 @@
     "shop": {
         "shop_tipofthedayTitle": "TIP OF THE DAY",
         "shop_tipoftheday": "",
+        "shop_menu": "MENU",
         "shop_weapons": "WEAPONS",
         "shop_monsters": "MONSTERS",
         "shop_cybergrind": "THE CYBER GRIND",

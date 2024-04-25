@@ -1704,6 +1704,7 @@
 	"shop": {
 		"shop_tipofthedayTitle": "CONSEIL DU JOUR",
 		"shop_tipoftheday": "",
+		"shop_menu": "",
 		"shop_weapons": "ARMES",
 		"shop_monsters": "ENNEMIS",
 		"shop_cybergrind": "LE CYBER GRIND",

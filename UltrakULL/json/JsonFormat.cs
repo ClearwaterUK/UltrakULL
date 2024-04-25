@@ -1495,6 +1495,7 @@ namespace UltrakULL.json
     {
         public string shop_tipofthedayTitle;
         public string shop_tipoftheday;
+        public string shop_menu;
         public string shop_weapons;
         public string shop_monsters;
         public string shop_cybergrind;

@@ -19,7 +19,7 @@ enemyName: gutterman, guttertank, earthmover, mannequin, minotaur, puppet, boss_
 devMuseum: museum_bookAdditionalMusic(11-12), bookAdditionalCredits(7-8), bookMandalore7, chess(Tip, Vs, Newgame, Black, White, Bot, Player, Settingsclose, Whitewin, Blackwin)
 books: violenceFirst(1-9), violenceFirst_Slate(1-4), violenceSecond(1-2), violenceSecondAmbush(1-4), violenceFourth(1-5), violenceSecret_Slate(1-2)
 cheats: invincibility, enemiesHateEnemies, enemiesIgnorePlayer, hide(Weapons, Ui), ghostDroneMode, categoryVisual
-shop: shotgunSawedOn, shotgunSawedOnDescription(1-3), nailgunJumpStart, nailgunJumpStartDescription(1-2), rocketLauncherFireStarter, rocketLauncherFireStarterDescription(1-2)
+shop: shotgunSawedOn, shotgunSawedOnDescription(1-3), nailgunJumpStart, nailgunJumpStartDescription(1-2), rocketLauncherFireStarter, rocketLauncherFireStarterDescription(1-2), menu
 enemyAlter: hookPointTitle, sandboxTitle, enrage, enrageEternal, sandified, puppeted, ignorePlayer, attackEnemies, hasSkull, altarType, metaDisallowFreezing, metaDisallowManipulation, dualWieldPickup, juice, infiniteUses, materialBlock, hurtzone, hurtCooldown, alter(Red, Blue, Stone), alteredDestroyed
 style: cannonboost, cannonballedfrombounce, drillpunch, drillpunchkill, iconoclasm, insurrknockdown, landyours, rocketreturn, roundtrip, screwed, served, strike, boiled, fireforksweak, forthee, guardbreak, hammerHitGreen, hammerHitHeavy, hammerHitRed, hammerHitYellow ,longwaydown, lost, m_a_d, pancaked, roadkill, slipped, trampled
 style: bishopcapture, bishoppromo, blackwins, bongcloud, castled, enpassant, foolsmate, pawncapture, knightcapture, knightpromo, queencapture, queenpromo, rookcapture, rookpromo, ultravictory, whitewins
