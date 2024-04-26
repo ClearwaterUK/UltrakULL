@@ -11,10 +11,16 @@ using UltrakULL.json;
 
 namespace UltrakULL.Harmony_Patches
 {
-    [HarmonyPatch(typeof(CheatsManager), "RebuildMenu")]
-    public static class RebuildMenuPatch
+    [HarmonyPatch(typeof(CheatsManager))]
+    public static class CheatsManagerPatch
     {
-        [HarmonyPostfix]
+        /*[HarmonyPatch("StartRebind"), HarmonyPostfix]
+        public static void StartRebind_Postfix(Dictionary<ICheat, CheatMenuItem> ___menuItems, ref ICheat cheat) 
+        {
+            ___menuItems[cheat].bindButtonText.text = LanguageManager.CurrentLanguage.cheats.cheats_pressAnyKey;//Press any key
+        }*/
+
+        [HarmonyPatch("RebuildMenu"), HarmonyPostfix]
         public static void RebuildMenu_Postfix()
         {
             if(isUsingEnglish())
@@ -43,15 +49,10 @@ namespace UltrakULL.Harmony_Patches
             }
         }
 
-    }
 
-
-    //@Override
-    //Overrides the *private* UpdateCheatState function from the CheatsManager class for translating the cheat menu.
-    [HarmonyPatch(typeof(CheatsManager), "UpdateCheatState", new Type[] { typeof(CheatMenuItem), typeof(ICheat) })]
-    public static class LocalizeCheatState
-    {
-        [HarmonyPrefix]
+        //@Override
+        //Overrides the *private* UpdateCheatState function from the CheatsManager class for translating the cheat menu.
+        [HarmonyPatch("UpdateCheatState", new Type[] { typeof(CheatMenuItem), typeof(ICheat) }), HarmonyPrefix]
         public static bool UpdateCheatState_MyPatch(CheatMenuItem item, ICheat cheat, CheatsManager __instance, Color ___enabledColor, Color ___disabledColor)
         {
             try
@@ -86,14 +87,10 @@ namespace UltrakULL.Harmony_Patches
                 return true;
             }
         }
-    }
 
-    //@Override
-    //Overrides the RenderCheatsInfo function from the CheatsManager class for displaying the active cheats on the HUD.
-    [HarmonyPatch(typeof(CheatsManager), "RenderCheatsInfo")]
-    public static class LocalizeCheatInfo
-    {
-        [HarmonyPrefix]
+        //@Override
+        //Overrides the RenderCheatsInfo function from the CheatsManager class for displaying the active cheats on the HUD.
+        [HarmonyPatch("RenderCheatsInfo"), HarmonyPrefix]
         public static bool RenderCheatsInfo_MyPatch(CheatsManager __instance, Dictionary<string, List<ICheat>> ___allRegisteredCheats)
         {
             StringBuilder stringBuilder = new StringBuilder();

@@ -24,6 +24,20 @@ namespace UltrakULL
 
             TextMeshProUGUI dupeMenuSave = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(dupeMenu, "New Save Wrapper"), "Save Button"), "Text"));
             dupeMenuSave.text = LanguageManager.CurrentLanguage.cheats.cheats_dupesNewSave;
+
+            GameObject saveOverwriteConfirmPanel = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "SandboxDialogs"), "Save Overwrite Confirmation"), "Panel");
+            TextMeshProUGUI saveOverwriteConfirmText = GetTextMeshProUGUI(GetGameObjectChild(saveOverwriteConfirmPanel, "Text"));
+            saveOverwriteConfirmText.text = LanguageManager.CurrentLanguage.cheats.cheats_dupesOverWriteWarn;
+
+            TextMeshProUGUI saveOverwritedisableWindow = GetTextMeshProUGUI(GetGameObjectChild(saveOverwriteConfirmPanel, "Text (1)"));
+            saveOverwritedisableWindow.text = LanguageManager.CurrentLanguage.pauseMenu.pause_disableWindow;
+
+            TextMeshProUGUI saveOverwriteCancel = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(saveOverwriteConfirmPanel, "Cancel"), "Text"));
+            saveOverwriteCancel.text = LanguageManager.CurrentLanguage.cheats.cheats_disclaimerNo;
+
+            TextMeshProUGUI saveOverwriteSave = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(saveOverwriteConfirmPanel, "Confirm"), "Text"));
+            saveOverwriteSave.text = "<color=orange>" + LanguageManager.CurrentLanguage.cheats.cheats_dupesSave + "</color>";
+
         }
 
         private void PatchMisc(ref GameObject canvasObj)

@@ -64,6 +64,9 @@ namespace UltrakULL
                     {
                         case "STAY ACTIVE": { return LanguageManager.CurrentLanguage.cheats.cheats_stayActive; }
                         case "DISABLE ON RELOAD": { return LanguageManager.CurrentLanguage.cheats.cheats_disableOnReload; }
+                        case "SAVE": { return LanguageManager.CurrentLanguage.cheats.cheats_dupesSave; }
+                        case "NEW SAVE": { return LanguageManager.CurrentLanguage.cheats.cheats_dupesNewSave; }
+                        case "LOAD LATEST SAVE": { return LanguageManager.CurrentLanguage.cheats.cheats_loadLatestSave; }
                         case "EQUIP": { return LanguageManager.CurrentLanguage.cheats.cheats_equip; }
                         case "REMOVE": { return LanguageManager.CurrentLanguage.cheats.cheats_remove; }
                         case "OPEN": { return LanguageManager.CurrentLanguage.cheats.cheats_open; }

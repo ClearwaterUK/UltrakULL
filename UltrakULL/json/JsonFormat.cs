@@ -290,6 +290,7 @@ namespace UltrakULL.json
         public string cheats_disableOnReload;
         public string cheats_equip;
         public string cheats_remove;
+        public string cheats_loadLatestSave;
         public string cheats_open;
         public string cheats_killAll;
         public string cheats_static;
@@ -312,6 +313,7 @@ namespace UltrakULL.json
         public string cheats_dupesSaveNamePrompt;
         public string cheats_dupesNewSave;
         public string cheats_dupesOpenFolder;
+        public string cheats_dupesOverWriteWarn;
         public string cheats_dupesDelete;
         public string cheats_dupesSave;
         public string cheats_dupesLoad;
@@ -2169,7 +2171,22 @@ namespace UltrakULL.json
         public string save_slot3;
         public string save_slot4;
         public string save_slot5;
-        
+
+        public string save_failMergeError1;
+        public string save_failMergeError2;
+        public string save_failMergeError3;
+        public string save_failMergeErrorQuitButton;
+        public string save_saveloadFailError1;
+        public string save_saveloadFailError2;
+        public string save_saveloadFailError3;
+        public string save_saveloadFailError4;
+        public string save_saveloadFailError5;
+        public string save_saveloadFailError6;
+        public string save_saveloadFailError7;
+        public string save_saveloadFailError8;
+        public string save_saveloadFailError9;
+        public string save_saveloadFailError10;
+
         public string rumble_title;
         public string rumble_finalMultiplier;
         public string rumble_coinToss;
