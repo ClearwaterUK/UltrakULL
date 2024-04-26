@@ -7,6 +7,7 @@ using TMPro;
 
 using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
+using System.Diagnostics.Eventing.Reader;
 
 namespace UltrakULL.Harmony_Patches
 {
@@ -21,23 +22,17 @@ namespace UltrakULL.Harmony_Patches
                 return;
             }
             GameObject canvas = GetInactiveRootObject("Canvas");
-            
+
             GameObject dupeSaveList = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvas,"Cheat Menu"),"Sandbox Saves"),"Scroll View"),"Viewport"),"Content");
 
-            Transform[] transformList = dupeSaveList.GetComponentsInChildren<Transform>();
-
-            foreach (Transform t in transformList)
+            TextMeshProUGUI[] tmpList = dupeSaveList.GetComponentsInChildren<TextMeshProUGUI>();
+            foreach (TextMeshProUGUI textObject in tmpList)
             {
-                if(t.gameObject.name == "Text")
+                switch (textObject.text)
                 {
-                    Text textObject = GetTextfromGameObject(t.gameObject);
-                    switch(textObject.text)
-                    {
-                        case "Delete": { textObject.text = LanguageManager.CurrentLanguage.cheats.cheats_dupesDelete; break; }
-                        case "Save": { textObject.text = LanguageManager.CurrentLanguage.cheats.cheats_dupesSave; break; }
-                        case "Load": { textObject.text = LanguageManager.CurrentLanguage.cheats.cheats_dupesLoad; break; }
-                    }
-
+                    case "DELETE": { textObject.text = LanguageManager.CurrentLanguage.cheats.cheats_dupesDelete; break; }
+                    case "SAVE": { textObject.text = LanguageManager.CurrentLanguage.cheats.cheats_dupesSave; break; }
+                    case "LOAD": { textObject.text = LanguageManager.CurrentLanguage.cheats.cheats_dupesLoad; break; }
                 }
             }
         }
@@ -58,10 +53,10 @@ namespace UltrakULL.Harmony_Patches
         }
     }
     
-    [HarmonyPatch(typeof(AlterMenuElements),"CreateTitle")]
-    public static class SandboxAlterOptionsTitles
+    [HarmonyPatch(typeof(AlterMenuElements))]
+    public static class SandboxAlterOptions
     {
-        [HarmonyPrefix]
+        [HarmonyPatch("CreateTitle"), HarmonyPrefix]
         public static bool sandboxAlterOptionsTitles_Prefix(ref string name)
         {
             if(isUsingEnglish())
@@ -89,11 +84,7 @@ namespace UltrakULL.Harmony_Patches
             }
             return true;
         }
-    }
-    
-    [HarmonyPatch(typeof(AlterMenuElements))]
-    public static class SandboxAlterOptionsBoxes
-    {
+
         [HarmonyPatch("CreateBoolRow"), HarmonyPrefix]
         public static bool sandboxAlterBoolOptions_Prefix(ref string name, bool initialState, Action<bool> callback, AlterMenuElements __instance)
         {
