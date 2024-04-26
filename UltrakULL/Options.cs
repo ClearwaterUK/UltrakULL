@@ -546,7 +546,7 @@ namespace UltrakULL
             iconsText.text = LanguageManager.CurrentLanguage.options.hud_icons;
 
             TMP_Dropdown iconsDropdown = GetGameObjectChild(iconsObject, "Dropdown").GetComponent<TMP_Dropdown>();
-            List<TMP_Dropdown.OptionData> iconsDropdownListText = hudTypeDropdown.options;
+            List<TMP_Dropdown.OptionData> iconsDropdownListText = iconsDropdown.options;
             iconsDropdownListText[0].text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_default;
             iconsDropdownListText[1].text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_pitr;
 
