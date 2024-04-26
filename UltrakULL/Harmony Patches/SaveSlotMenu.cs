@@ -74,16 +74,6 @@ namespace UltrakULL.Harmony_Patches
                         + LanguageManager.CurrentLanguage.options.save_saveloadFailError8 + "\r\n"
                         + LanguageManager.CurrentLanguage.options.save_saveloadFailError9 + "\r\n\r\n"
                         + LanguageManager.CurrentLanguage.options.save_saveloadFailError10;
-                    /*"<b>! SAVE FAILED !</b>\r\n\r\n
-                     * The game is unable to finalize saving your progress.\r\n\r\n
-                     * <b>COMMON REASONS FOR FAILURE:</b>\r\n
-                     * 1. Third party software (such as an antivirus) stopping the game from saving a new file\r\n\r\n
-                     * If this problem occurs again, make sure your antivirus or any similar software is not preventing the game from writing files\r\n\r\n
-                     * If you wish to try again,
-                     * press <b>\"Y\"\r\n</b>
-                     * If you wish to continue without saving,\r\n
-                     * press <b>\"N\"</b>\r\n\r\n
-                     * Sorry and thank you for your understanding. :)"*/
                     try
                     {
                         Text saveLoadFailMessage = __instance.transform.GetChild(1).GetChild(0).GetComponent<Text>();
