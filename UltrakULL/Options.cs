@@ -547,9 +547,15 @@ namespace UltrakULL
 
             TMP_Dropdown iconsDropdown = GetGameObjectChild(iconsObject, "Dropdown").GetComponent<TMP_Dropdown>();
             List<TMP_Dropdown.OptionData> iconsDropdownListText = iconsDropdown.options;
-            iconsDropdownListText[0].text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_default;
-            iconsDropdownListText[1].text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_pitr;
-
+            try
+            {
+                iconsDropdownListText[0].text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_default;
+                iconsDropdownListText[1].text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_pitr;
+            }
+            catch(Exception e) 
+            { Logging.Warn("Failed to patch icons text in HUD options.");
+                Logging.Warn(e.ToString());
+            }
             TextMeshProUGUI hudElements = GetTextMeshProUGUI(hudContent.transform.GetChild(5).gameObject);
             hudElements.text = "--" + LanguageManager.CurrentLanguage.options.hud_hudElements + "--";
 
