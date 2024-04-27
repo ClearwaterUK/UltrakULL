@@ -15,7 +15,6 @@ namespace UltrakULL.Harmony_Patches
             List<TMP_Dropdown.OptionData> iconsDropdownListText = ___iconPackDropdown.options;
             try
             {
-                Logging.Info("a: " +iconsDropdownListText.ToArray().Length.ToString());
                 iconsDropdownListText[0].text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_default;
                 iconsDropdownListText[1].text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_pitr;
             }
