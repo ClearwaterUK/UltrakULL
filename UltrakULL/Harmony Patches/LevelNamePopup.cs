@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using System;
+using HarmonyLib;
 
 using static UltrakULL.CommonFunctions;
 
@@ -16,9 +17,16 @@ namespace UltrakULL.Harmony_Patches
             {
                 return false;
             }
-            ___layerString = TitleManager.GetLayer(___layerString);
-            ___nameString = TitleManager.GetName(___nameString);
-
+            try
+            {
+                ___layerString = TitleManager.GetLayer(___layerString);
+                ___nameString = TitleManager.GetName(___nameString);
+            }
+            catch (Exception e)
+            {
+                Logging.Warn("Failed to Patch Level Name Popup!");
+                Logging.Warn(e.ToString());
+            }
             return true;
         }
     }

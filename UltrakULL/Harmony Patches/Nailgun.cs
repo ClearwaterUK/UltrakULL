@@ -29,57 +29,71 @@ namespace UltrakULL.Harmony_Patches
             }
         }
 
+        static bool enablezapperfix = true;
         [HarmonyPatch("UpdateZapHud"), HarmonyPostfix]
         public static void zapperpostfix(Nailgun __instance, Zapper ___currentZapper, CameraController ___cc, TMP_Text ___statusText, GameObject ___rechargingOverlay)
         {
-            if (___currentZapper == null)
+            try
             {
-                if (!__instance.gameObject.name.ToLower().Contains("zapper"))
+                if (!enablezapperfix) { return; }
+                if (___currentZapper == null)
                 {
-                    return;
-                }
-                if (___rechargingOverlay.activeSelf)
-                {
-                    TextMeshProUGUI rechargeText = GetTextMeshProUGUI(GetGameObjectChild(___rechargingOverlay, "Text (TMP)"));
-                    //RECHARGING...
-                    rechargeText.text = LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperRecharging;
-                }
-                RaycastHit raycastHit;
-                EnemyIdentifierIdentifier enemyIdentifierIdentifier;
-                float target;
-                if (Physics.Raycast(___cc.GetDefaultPos(), ___cc.transform.forward, out raycastHit,
-                    float.PositiveInfinity, LayerMaskDefaults.Get(LMD.EnemiesAndEnvironment)) &&
-                    raycastHit.collider.gameObject.layer != 8 && raycastHit.collider.gameObject.layer != 24 &&
-                    raycastHit.collider.TryGetComponent<EnemyIdentifierIdentifier>(out enemyIdentifierIdentifier) &&
-                    enemyIdentifierIdentifier.eid && !enemyIdentifierIdentifier.eid.dead)
-                {
-                    if (raycastHit.distance < __instance.zapper.maxDistance - 5f)
+                    if (!__instance.gameObject.name.ToLower().Contains("zapper"))
                     {
-                        target = 1f - (__instance.zapper.maxDistance - 5f - raycastHit.distance) / (__instance.zapper.maxDistance - 5f);
-                        //READY
-                        ___statusText.text = LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperReady;
+                        return;
+                    }
+                    if (___rechargingOverlay.activeSelf)
+                    {
+                        TextMeshProUGUI rechargeText = GetTextMeshProUGUI(GetGameObjectChild(___rechargingOverlay, "Text (TMP)"));
+                        //RECHARGING...
+                        rechargeText.text = LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperRecharging;
+                    }
+                    RaycastHit raycastHit;
+                    EnemyIdentifierIdentifier enemyIdentifierIdentifier;
+                    float target;
+                    if (Physics.Raycast(___cc.GetDefaultPos(), ___cc.transform.forward, out raycastHit,
+                        float.PositiveInfinity, LayerMaskDefaults.Get(LMD.EnemiesAndEnvironment)) &&
+                        raycastHit.collider.gameObject.layer != 8 && raycastHit.collider.gameObject.layer != 24 &&
+                        raycastHit.collider.TryGetComponent<EnemyIdentifierIdentifier>(out enemyIdentifierIdentifier) &&
+                        enemyIdentifierIdentifier.eid && !enemyIdentifierIdentifier.eid.dead)
+                    {
+                        if (raycastHit.distance < __instance.zapper.maxDistance - 5f)
+                        {
+                            target = 1f - (__instance.zapper.maxDistance - 5f - raycastHit.distance) / (__instance.zapper.maxDistance - 5f);
+                            //READY
+                            ___statusText.text = LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperReady;
+                        }
+                        else
+                        {
+                            //TOO FAR | OUT OF RANGE
+                            ___statusText.text = (__instance.altVersion ? LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperAlternateTooFar : LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperOutOfRange);
+                        }
                     }
                     else
                     {
-                        //TOO FAR | OUT OF RANGE
-                        ___statusText.text = (__instance.altVersion ? LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperAlternateTooFar : LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperOutOfRange);
+                        //NULL | NO TARGET
+                        ___statusText.text = (__instance.altVersion ? LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperAlternateNull : LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperNoTarget);
                     }
+                    return;
                 }
-                else
+                if (___currentZapper.distance > ___currentZapper.maxDistance || ___currentZapper.raycastBlocked)
                 {
-                    //NULL | NO TARGET
-                    ___statusText.text = (__instance.altVersion ? LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperAlternateNull : LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperNoTarget);
+                    //BLOCKED (TOO FAR | OUT OF RANGE)
+                    ___statusText.text = (___currentZapper.raycastBlocked ? LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperBlocked : (__instance.altVersion ? LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperAlternateTooFar : LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperOutOfRange));
+                    return;
                 }
-                return;
+                //DISTANCE:
+                ___statusText.text = (__instance.altVersion ? "" : LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperDistance) + ___currentZapper.distance.ToString("f1");
             }
-            if (___currentZapper.distance > ___currentZapper.maxDistance || ___currentZapper.raycastBlocked)
+            catch (Exception e)
             {
-                //BLOCKED (TOO FAR | OUT OF RANGE)
-                ___statusText.text = (___currentZapper.raycastBlocked ? LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperBlocked : (__instance.altVersion ? LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperAlternateTooFar : LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperOutOfRange));
-                return;
+                Logging.Warn("Failed to Patch zapper display!");
+                if (LanguageManager.CurrentLanguage.weapon == null)
+                { Logging.Warn("Category \"Weapon\" is missing from the language file!"); }
+                Logging.Warn("Disabling this for prevent spam");
+                Logging.Warn(e.ToString());
+                enablezapperfix = false;
             }
-            //DISTANCE:
-            ___statusText.text = (__instance.altVersion ? "" : LanguageManager.CurrentLanguage.weapon.weapon_nailgunZapperDistance ) + ___currentZapper.distance.ToString("f1");
         }
 
     }
