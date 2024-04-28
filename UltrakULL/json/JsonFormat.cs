@@ -1477,6 +1477,7 @@ namespace UltrakULL.json
         public string pause_title;
         public string pause_resume;
         public string pause_respawn;
+        public string pause_skip;
         public string pause_restart;
         public string pause_options;
         public string pause_quit;

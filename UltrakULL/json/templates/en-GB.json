@@ -1544,6 +1544,7 @@
         "pause_title": "PAUSE",
         "pause_resume": "RESUME",
         "pause_respawn": "RESPAWN",
+        "pause_skip": "SKIP",
         "pause_restart": "RESTART MISSION",
         "pause_options": "OPTIONS",
         "pause_quit": "QUIT",

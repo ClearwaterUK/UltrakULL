@@ -1508,6 +1508,7 @@
 		"pause_title": "PAUSE",
 		"pause_resume": "REPRENDRE",
 		"pause_respawn": "RÉAPPARAÎTRE",
+		"pause_skip": "",
 		"pause_restart": "REDÉMARRER",
 		"pause_options": "OPTIONS",
 		"pause_quit": "QUITTER",

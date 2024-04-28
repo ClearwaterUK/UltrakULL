@@ -1544,6 +1544,7 @@
 		"pause_title": "",
 		"pause_resume": "",
 		"pause_respawn": "",
+		"pause_skip": "",
 		"pause_restart": "",
 		"pause_options": "",
 		"pause_quit": "",
