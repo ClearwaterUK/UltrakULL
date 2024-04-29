@@ -69,13 +69,20 @@ namespace UltrakULL.Harmony_Patches
             else
             {
                 TMP_Text text5 = __instance.extraInfo;
-                text5.text = string.Concat(new object[]
+                if (LanguageManager.CurrentLanguage.metadata.langHinduNumbers)
                 {
-                text5.text,
-                "- <color=red>",
-                ArabicFixerTool.FixLine(restarts.ToString()),
-                "</color> " + LanguageManager.CurrentLanguage.misc.endstats_restarts +"\n"
-                });
+                    text5.text = string.Concat(new object[]
+                    {
+                    text5.text,
+                    "- <color=red>",
+                    ArabicFixerTool.FixLine(restarts.ToString()),
+                    "</color> " + LanguageManager.CurrentLanguage.misc.endstats_restarts +"\n"
+                    });
+                }
+                else
+                {
+                    text5.text = "- <color=red>" + restarts + "</color> " + LanguageManager.CurrentLanguage.misc.endstats_restarts + "\n";
+                }
             }
             if (!damage)
             {
