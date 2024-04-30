@@ -15,10 +15,17 @@ namespace UltrakULL.Harmony_Patches
         {
             if(isUsingEnglish())
             {
-                return false;
+                return true;
             }
             try
             {
+                if (TitleManager.GetName(___nameString) == null)
+                {
+                    Logging.Warn("There's no translated level name here!");
+                    Logging.Warn("Layer Name is:" + ___layerString);
+                    Logging.Warn("Level Name is:" + ___nameString);
+                    return true;
+                }
                 ___layerString = TitleManager.GetLayer(___layerString);
                 ___nameString = TitleManager.GetName(___nameString);
             }

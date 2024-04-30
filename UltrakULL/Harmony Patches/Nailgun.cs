@@ -18,15 +18,34 @@ namespace UltrakULL.Harmony_Patches
     [HarmonyPatch(typeof(Nailgun))]
     public static class NailgunPatch
     {
+        //Magnet Nailgun/Sawblade Launcher ammo text is disappers without this.
         [HarmonyPatch("Start"), HarmonyPostfix]
         public static void NailgunPostfix(Nailgun __instance, TMP_Text ___statusText)
         {
-            Thread.Sleep(5);
+            __instance.ammoText.fontSize = 220;
+            /*Thread.Sleep(5);
             if ((Core.GlobalFontReady) && (__instance.gameObject.name.ToLower().Contains("magnet")))
             {
                 Logging.Info("Unswapping the attractor nailgun font, font:" + TextFontSwap.originalFont);
                 __instance.ammoText.font = TextFontSwap.originalFont;
+            }*/
+        }
+        [HarmonyPatch("Update"), HarmonyPostfix]
+        public static void NailgunUpdatePostfix(Nailgun __instance, WeaponCharges ___wc)
+        {
+            //This one is for arabic numbers
+            if(__instance.variation == 1 && LanguageManager.CurrentLanguage.metadata.langHinduNumbers)
+            {
+                if (__instance.altVersion) 
+                {
+                    __instance.ammoText.text = ArabicFixerTool.FixLine(Mathf.RoundToInt(___wc.naiSaws).ToString()).ToString();
+                }
+                else
+                {
+                    __instance.ammoText.text = ArabicFixerTool.FixLine(Mathf.RoundToInt(___wc.naiAmmo).ToString()).ToString();
+                }
             }
+            
         }
 
         static bool enablezapperfix = true;
