@@ -194,19 +194,15 @@ namespace UltrakULL.Harmony_Patches
 								else
 								{
                                     __instance.font = Core.GlobalFontTMP;
-                                    Logging.Warn("ahhhh");
                                     TMP_Text TMPText = __instance.gameObject.GetComponent<TMP_Text>();
-                                    Logging.Warn("yipee");
 									if (__instance.gameObject.name.Contains("NameText") || __instance.gameObject.name.Contains("LayerText"))
                                     {
                                         Material underlaid = new Material(__instance.fontMaterial);
 										underlaid.SetVector("_UnderlayColor", new Vector4(0, 0, 0, 1)); 
                                         TMPText.fontMaterial = underlaid;
-                                        Logging.Warn("MO");
                                     }
 									else
                                     {
-                                        Logging.Warn("MONMO");
                                         TMPText.fontMaterial.SetVector("_UnderlayColor", new Vector4(0, 0, 0, 0));
 									}
                                 }
