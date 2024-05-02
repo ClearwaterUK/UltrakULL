@@ -176,7 +176,7 @@ namespace UltrakULL
                 }
                 else
                 {
-                    Logging.Error("Why there's no Japanese TMP Font in this assetbundle(´・ω・`)");
+                    Logging.Error("There's no Japanese TMP Font in this assetbundle(´・ω・`)");
                 }
             }
 
