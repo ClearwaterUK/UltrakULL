@@ -56,10 +56,6 @@ namespace UltrakULL
             {
                 return "<color=red>" + LanguageManager.CurrentLanguage.misc.enemyAlter_alteredDestroyed + "</color>";
             }
-            if (message.Contains("versions"))
-            {
-                return LanguageManager.CurrentLanguage.misc.hud_alternateVersion;
-            }
             if (message.Contains("=>")) //4-S transaction complete
             {
                 return message; //4-S transaction complete
