@@ -25,6 +25,10 @@ namespace UltrakULL
                 if (tipDescriptionText.Contains("V-Rank")) { }
                 else { tipDescription.text = StringsParent.GetLevelTip(); }
 
+                //--MENU--
+                TextMeshProUGUI menuText = GetTextMeshProUGUI(GetGameObjectChild(shopObject, "Menu Title"));
+                menuText.text = "--" + LanguageManager.CurrentLanguage.shop.shop_menu + "--";
+
                 //Weapons button
                 GameObject mainButtons = GetGameObjectChild(shopObject, "Main Menu");
 

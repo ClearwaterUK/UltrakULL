@@ -290,6 +290,7 @@ namespace UltrakULL.json
         public string cheats_disableOnReload;
         public string cheats_equip;
         public string cheats_remove;
+        public string cheats_loadLatestSave;
         public string cheats_open;
         public string cheats_killAll;
         public string cheats_static;
@@ -312,6 +313,7 @@ namespace UltrakULL.json
         public string cheats_dupesSaveNamePrompt;
         public string cheats_dupesNewSave;
         public string cheats_dupesOpenFolder;
+        public string cheats_dupesOverWriteWarn;
         public string cheats_dupesDelete;
         public string cheats_dupesSave;
         public string cheats_dupesLoad;
@@ -1475,6 +1477,7 @@ namespace UltrakULL.json
         public string pause_title;
         public string pause_resume;
         public string pause_respawn;
+        public string pause_skip;
         public string pause_restart;
         public string pause_options;
         public string pause_quit;
@@ -1495,6 +1498,7 @@ namespace UltrakULL.json
     {
         public string shop_tipofthedayTitle;
         public string shop_tipoftheday;
+        public string shop_menu;
         public string shop_weapons;
         public string shop_monsters;
         public string shop_cybergrind;
@@ -1874,8 +1878,6 @@ namespace UltrakULL.json
         public string enemyname_virtue;
         public string enemyname_somethingWicked;
         public string enemyname_puppet;
-        public string enemyname_fleshPrison;
-        public string enemyname_minosPrime;
 
         public string enemyname_boss_cerberus;
         public string enemyname_boss_cancerousRodent;
@@ -1894,7 +1896,9 @@ namespace UltrakULL.json
         public string enemyname_boss_insurrectionistRude;
         public string enemyname_boss_insurrectionistAngry;
         public string enemyname_boss_gabrielSecond;
+        public string enemyname_boss_fleshPrison;
         public string enemyname_boss_fleshPanopticon;
+        public string enemyname_boss_minosPrime;
         public string enemyname_boss_sisyphusPrime;
         public string enemyname_boss_bigJohninator;
 
@@ -1923,12 +1927,12 @@ namespace UltrakULL.json
         public string category_general;
         public string category_controls;
         public string category_graphics;
-        public string category_sound;
-        public string category_display;
+        public string category_audio;
         public string category_assists;
-        public string category_colors;
         public string category_saves;
         public string category_customization;
+        public string category_hud;
+        public string category_colors;
 
         public string general_weaponPosition;
         public string general_weaponPositionRight;
@@ -2055,7 +2059,6 @@ namespace UltrakULL.json
         public string audio_muffleMusic;
         public string audio_dubbing;
 
-        public string hud_title;
         public string hud_type;
         public string hud_typeNone;
         public string hud_typeStandard;
@@ -2169,7 +2172,22 @@ namespace UltrakULL.json
         public string save_slot3;
         public string save_slot4;
         public string save_slot5;
-        
+
+        public string save_failMergeError1;
+        public string save_failMergeError2;
+        public string save_failMergeError3;
+        public string save_failMergeErrorQuitButton;
+        public string save_saveloadFailError1;
+        public string save_saveloadFailError2;
+        public string save_saveloadFailError3;
+        public string save_saveloadFailError4;
+        public string save_saveloadFailError5;
+        public string save_saveloadFailError6;
+        public string save_saveloadFailError7;
+        public string save_saveloadFailError8;
+        public string save_saveloadFailError9;
+        public string save_saveloadFailError10;
+
         public string rumble_title;
         public string rumble_finalMultiplier;
         public string rumble_coinToss;
@@ -3121,6 +3139,7 @@ namespace UltrakULL.json
         public string enemyAlter_altarBlue;
         public string enemyAlter_altarRed;
         public string enemyAlter_altarStone;
+        public string enemyAlter_alteredDestroyed;
 
         public string earlyAccessEnd1;
         public string earlyAccessEnd2;

@@ -52,9 +52,9 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.misc.hud_weaponVariation;
             }
-            if (message.Contains("versions"))
+            if (message.Contains("Altered"))
             {
-                return LanguageManager.CurrentLanguage.misc.hud_alternateVersion;
+                return "<color=red>" + LanguageManager.CurrentLanguage.misc.enemyAlter_alteredDestroyed + "</color>";
             }
             if (message.Contains("=>")) //4-S transaction complete
             {

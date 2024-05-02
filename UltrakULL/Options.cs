@@ -545,11 +545,6 @@ namespace UltrakULL
             TextMeshProUGUI iconsText = GetTextMeshProUGUI(GetGameObjectChild(iconsObject, "Text"));
             iconsText.text = LanguageManager.CurrentLanguage.options.hud_icons;
 
-            TMP_Dropdown iconsDropdown = GetGameObjectChild(iconsObject, "Dropdown").GetComponent<TMP_Dropdown>();
-            List<TMP_Dropdown.OptionData> iconsDropdownListText = hudTypeDropdown.options;
-            iconsDropdownListText[0].text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_default;
-            iconsDropdownListText[1].text = LanguageManager.CurrentLanguage.sandbox.sandbox_shop_pitr;
-
             TextMeshProUGUI hudElements = GetTextMeshProUGUI(hudContent.transform.GetChild(5).gameObject);
             hudElements.text = "--" + LanguageManager.CurrentLanguage.options.hud_hudElements + "--";
 
@@ -873,7 +868,7 @@ namespace UltrakULL
                 
                 //Main buttons and text
                 TextMeshProUGUI optionsText = GetTextMeshProUGUI(GetGameObjectChild(optionsMenu, "Text"));
-                optionsText.text = LanguageManager.CurrentLanguage.options.options_title;
+                optionsText.text = "--" +LanguageManager.CurrentLanguage.options.options_title + "--";
 
                 GameObject leftColumn = GetGameObjectChild(optionsMenu, "Panel");
 
@@ -890,7 +885,7 @@ namespace UltrakULL
                 graphicsButton.text = LanguageManager.CurrentLanguage.options.category_graphics;
 
                 TextMeshProUGUI audioButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(leftColumn, "Audio"), "Text"));
-                audioButton.text = LanguageManager.CurrentLanguage.options.category_sound;
+                audioButton.text = LanguageManager.CurrentLanguage.options.category_audio;
 
                 TextMeshProUGUI assistButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(leftColumn, "Assist"), "Text"));
                 assistButton.text = LanguageManager.CurrentLanguage.options.category_assists;
@@ -902,7 +897,7 @@ namespace UltrakULL
                 customizationText.text = "-- " + LanguageManager.CurrentLanguage.options.category_customization + " --";
 
                 TextMeshProUGUI hudButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(leftColumn, "HUD"), "Text"));
-                hudButton.text = LanguageManager.CurrentLanguage.options.category_display;
+                hudButton.text = LanguageManager.CurrentLanguage.options.category_hud;
 
                 TextMeshProUGUI colorsButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(leftColumn, "Colors"), "Text"));
                 colorsButton.text = LanguageManager.CurrentLanguage.options.category_colors;

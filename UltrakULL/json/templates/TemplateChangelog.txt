@@ -18,21 +18,22 @@ enemyBios: gutterman_(1-4), guttertank_(1-7), earthmover_(1-6), mannequin_(1-5),
 enemyName: gutterman, guttertank, earthmover, mannequin, minotaur, puppet, boss_earthmover, boss_earthmoverDefence, boss_bigJohninator
 devMuseum: museum_bookAdditionalMusic(11-12), bookAdditionalCredits(7-8), bookMandalore7, chess(Tip, Vs, Newgame, Black, White, Bot, Player, Settingsclose, Whitewin, Blackwin)
 books: violenceFirst(1-9), violenceFirst_Slate(1-4), violenceSecond(1-2), violenceSecondAmbush(1-4), violenceFourth(1-5), violenceSecret_Slate(1-2)
-cheats: invincibility, enemiesHateEnemies, enemiesIgnorePlayer, hide(Weapons, Ui), ghostDroneMode, categoryVisual
-shop: shotgunSawedOn, shotgunSawedOnDescription(1-3), nailgunJumpStart, nailgunJumpStartDescription(1-2), rocketLauncherFireStarter, rocketLauncherFireStarterDescription(1-2)
-enemyAlter: hookPointTitle, sandboxTitle, enrage, enrageEternal, sandified, puppeted, ignorePlayer, attackEnemies, hasSkull, altarType, metaDisallowFreezing, metaDisallowManipulation, dualWieldPickup, juice, infiniteUses, materialBlock, hurtzone, hurtCooldown, alter(Red, Blue, Stone)
+cheats: invincibility, enemiesHateEnemies, enemiesIgnorePlayer, hide(Weapons, Ui), ghostDroneMode, categoryVisual, loadLatestSave, dupesOverWriteWarn
+shop: shotgunSawedOn, shotgunSawedOnDescription(1-3), nailgunJumpStart, nailgunJumpStartDescription(1-2), rocketLauncherFireStarter, rocketLauncherFireStarterDescription(1-2), menu
+enemyAlter: hookPointTitle, sandboxTitle, enrage, enrageEternal, sandified, puppeted, ignorePlayer, attackEnemies, hasSkull, altarType, metaDisallowFreezing, metaDisallowManipulation, dualWieldPickup, juice, infiniteUses, materialBlock, hurtzone, hurtCooldown, alter(Red, Blue, Stone), alteredDestroyed
 style: cannonboost, cannonballedfrombounce, drillpunch, drillpunchkill, iconoclasm, insurrknockdown, landyours, rocketreturn, roundtrip, screwed, served, strike, boiled, fireforksweak, forthee, guardbreak, hammerHitGreen, hammerHitHeavy, hammerHitRed, hammerHitYellow ,longwaydown, lost, m_a_d, pancaked, roadkill, slipped, trampled
 style: bishopcapture, bishoppromo, blackwins, bongcloud, castled, enpassant, foolsmate, pawncapture, knightcapture, knightpromo, queencapture, queenpromo, rookcapture, rookpromo, ultravictory, whitewins
 frontEnd: layer_(violence, fraud, treachery), difficulty_brutalDescription(1-3), leaderboard_reminder
 levelTips: leveltips_violence(First, Second, Third, Fourth, Secret)
-options: category_customization
+options: category_audio, category_customization
 options: general_(parryFlash, sandboxOverwrite, advancedOptions, advancedOptionsCustomize, screen, misc, restartWarningAlwaysOn, OnlyCG, restartWarningAlwaysOff)
 options: graphics_gamma(1-2), graphics_goreMaxBloodStains
-options: controls_(movementTitle, weaponTitle, punch(Feedbacker, Knuckleblaster), revolver, shotgun, nailgun, railcannon, rocketLauncher, nextVariation, previousVariation, spawnerArm)
+options: controls_(movementTitle, weaponTitle, punch(Feedbacker, Knuckleblaster), nextVariation, previousVariation, spawnerArm)
 options: advanced_(title, currentLevel, cybergrindResetText1, cybergrindResetText2, cybergrindResetCancel, cybergrindResetConfirm, cybergrindLocalHighScore, cybergrindResetButton, level52, level71, level73, level7S, 52WaterScrolling, 52WaterWaves, 71Dark, 73Grass, 7SHard)
 options: audio_(volume, soundEffectsVolume, muffleMusic)
 options: assists_(enemySilouettesNone, enemySilouettesFull)
-options: save_slot(1-5)
+options: save_slot(1-5), save_failMergeError(1-3), save_failMergeErrorQuitButton, save_saveloadFailError(1-10)
+pauseMenu: pause_skip
 intermission: act2_intermission_endof, act2_intermission_insertAct3
 weapon: weapon_nailgunZapper(Ready, OutOfRange, NoTarget, Blocked, Distance, Recharging, Alternate(TooFar, Null))
 ranks: rank_letter_(d, c, b, a, s, p)
@@ -40,6 +41,7 @@ sandbox: shop_stats, navmeshWarn
 washing: wash_(fakeexittext(1-6), Clean, ToDo, bloodClean, roomCourtyard, roomLibrary, roomLobby, roomLounge, roomSideroom, littercount, Dumpster, Ground, Pillars, Walls, BackBookshelf, Ceiling, Bookshelf, Bookcases, Desk, FrontBookshelf, Sconces, Sidewall, Walkway, WindowWall, Decor, Floors, Pond)
 
 MODIFIED:
+enemyName: enemyname_minosPrime -> enemyname_boss_minosPrime, enemyname_fleshPrison -> enemyname_boss_fleshPrison
 devMuseum: bookAdditionalCredits(2-3) -> bookAdditionalCredits(4-5), bookAdditionalCredits(4-6) -> bookAdditionalCredits(6-8)
 devMuseum: bookMandalore(5-6) -> bookMandalore(6-7)
 enemyAlter: jumpPadPower -> power
@@ -54,6 +56,8 @@ cheats: cheats_categoryItems
 
 REMOVED:
 act2: secretNotReady
+options: category_display, category_sound
+options: hud_title
 options: controls_actions, controls_slot(0-9)
 options: controls_(forward, back, left, right, movementTitle, resetDefault, changeVariation)
 options: graphics_title

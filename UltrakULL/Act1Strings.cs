@@ -56,6 +56,11 @@ namespace UltrakULL
                 return LanguageManager.CurrentLanguage.act1.act1_limboFourth_hank1 + "\n" + LanguageManager.CurrentLanguage.act1.act1_limboFourth_hank2;
             }
 
+            if (message.Contains("versions"))
+            {
+                return LanguageManager.CurrentLanguage.misc.hud_alternateVersion;
+            }
+
             if (fullMessage.Contains("ALTERNATE REVOLVER"))
             {
                 return LanguageManager.CurrentLanguage.act1.act1_limboFourth_alternateRevolver;

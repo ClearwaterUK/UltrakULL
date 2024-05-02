@@ -99,7 +99,10 @@ namespace UltrakULL
                 //Checkpoint
                 TextMeshProUGUI checkpointText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Restart Checkpoint"), "Text"));
                 checkpointText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_respawn;
-
+                if (GetCurrentSceneName().Contains("Intermission"))
+                {
+                    checkpointText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_skip;
+                }
                 //Restart mission
                 TextMeshProUGUI restartText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Restart Mission"), "Text"));
                 restartText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_restart;
@@ -173,7 +176,7 @@ namespace UltrakULL
                 }
                 else
                 {
-                    Logging.Error("Why there's no Japanese TMP Font in this assetbundle(´・ω・`)");
+                    Logging.Error("There's no Japanese TMP Font in this assetbundle(´・ω・`)");
                 }
             }
 
@@ -409,7 +412,14 @@ namespace UltrakULL
                             else if(levelName.Contains("7-") || levelName.Contains("8-") || levelName.Contains("9-"))
                             {
                                 Logging.Message("Act 3");
-                                Act3.PatchAct3(ref canvasObj);
+                                if(LanguageManager.CurrentLanguage.act3 != null)
+                                {
+                                    Act3.PatchAct3(ref canvasObj);
+                                }
+                                else
+                                {
+                                    Logging.Warn("Category is not found in the language file!");
+                                }
                             }
                             else if (levelName.Contains("P-"))
                             {

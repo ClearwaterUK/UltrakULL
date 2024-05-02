@@ -55,6 +55,11 @@ namespace UltrakULL
                 return fullMessage;
             }
 
+            if (message.Contains("versions"))
+            {
+                return LanguageManager.CurrentLanguage.misc.hud_alternateVersion;
+            }
+
             if (fullMessage.Contains("ALTERNATE NAILGUN"))
             {
                 return LanguageManager.CurrentLanguage.act2.act2_greedFourth_alternateNailgun;

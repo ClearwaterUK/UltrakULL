@@ -11,7 +11,7 @@ using static UnityEngine.TextAnchor;
 
 namespace UltrakULL.Harmony_Patches
 {
-	public class TextFontSwap
+    public class TextFontSwap
 	{	
 		public static Font originalFont;
 
@@ -75,7 +75,7 @@ namespace UltrakULL.Harmony_Patches
 					{
 						originalFont = __instance.font;
 						__instance.font = Core.GlobalFont;
-					}
+                    }
 				}
 
 				objectsFixed.Add(___m_CachedPtr);
@@ -107,13 +107,24 @@ namespace UltrakULL.Harmony_Patches
 				{
 					string currentLanguage = LanguageManager.CurrentLanguage.metadata.langName.ToLower();
 					string currentLanguageCode = currentLanguage.Substring(0, 2);
-					switch (currentLanguageCode)
+					bool isUnderlaid = __instance.gameObject.name.Contains("NameText") ||
+						__instance.gameObject.name.Contains("LayerText") ||
+						__instance.transform.parent.gameObject.name.Contains("Cheats Info");
+					Vector4 originalUnderlaycolor = __instance.fontMaterial.GetVector("_UnderlayColor");
+
+                    switch (currentLanguageCode)
                     {
 						//Traditional/Simplified Chinese
                         case "zh":
                             {
                                 //Swap with a Chinese font when it comes in.
                                 __instance.font = Core.CJKFontTMP;
+                                if (isUnderlaid)
+                                {
+                                    Material underlaid = new Material(__instance.fontMaterial);
+                                    underlaid.SetVector("_UnderlayColor", new Vector4(0, 0, 0, 1));
+                                    __instance.fontMaterial = underlaid;
+                                }
                                 break;
                             }
 						//Japanese
@@ -121,6 +132,16 @@ namespace UltrakULL.Harmony_Patches
                             {
                                 //japanese tofu fix
                                 __instance.font = Core.jaFontTMP;
+                                if (isUnderlaid)
+                                {
+                                    Material underlaid = new Material(__instance.fontMaterial);
+                                    underlaid.SetVector("_UnderlayColor", originalUnderlaycolor);
+                                    __instance.fontMaterial = underlaid;
+                                }
+                                else
+                                {
+                                    __instance.fontSharedMaterial.SetVector("_UnderlayColor", new Vector4(0, 0, 0, 0));
+                                }
                                 break;
                             }
 						//Arabic Persian Urdu
@@ -161,7 +182,17 @@ namespace UltrakULL.Harmony_Patches
 								else
 								{
 									__instance.font = Core.GlobalFontTMP;
-								}
+                                    if (isUnderlaid)
+                                    {
+                                        Material underlaid = new Material(__instance.fontMaterial);
+                                        underlaid.SetVector("_UnderlayColor", originalUnderlaycolor);
+                                        __instance.fontMaterial = underlaid;
+                                    }
+                                    else
+                                    {
+                                        __instance.fontSharedMaterial.SetVector("_UnderlayColor", new Vector4(0, 0, 0, 0));
+                                    }
+                                }
 
 								break;
 							}
@@ -174,7 +205,17 @@ namespace UltrakULL.Harmony_Patches
 						case "jr":
 							{
 								__instance.font = Core.HebrewFontTMP;
-								break;
+                                if (isUnderlaid)
+                                {
+                                    Material underlaid = new Material(__instance.fontMaterial);
+                                    underlaid.SetVector("_UnderlayColor", originalUnderlaycolor);
+                                    __instance.fontMaterial = underlaid;
+                                }
+                                else
+                                {
+                                    __instance.fontSharedMaterial.SetVector("_UnderlayColor", new Vector4(0, 0, 0, 0));
+                                }
+                                break;
 							}
 						default:
 							{
@@ -192,8 +233,18 @@ namespace UltrakULL.Harmony_Patches
 								else
 								{
                                     __instance.font = Core.GlobalFontTMP;
-								}
-								break;
+									if (isUnderlaid)
+                                    {
+                                        Material underlaid = new Material(__instance.fontMaterial);
+                                        underlaid.SetVector("_UnderlayColor", originalUnderlaycolor);
+                                        __instance.fontMaterial = underlaid;
+                                    }
+									else
+                                    {
+                                        __instance.fontSharedMaterial.SetVector("_UnderlayColor", new Vector4(0, 0, 0, 0));
+									}
+                                }
+                                break;
 							}
 					}
 

@@ -258,7 +258,6 @@
 		"museum_enemiesStray3": "",
 		"museum_enemiesStray4": "",
 		"museum_enemiesStray5": "",
-		"museum_enemiesStray6": "",
 
 		"museum_enemiesSchism1": "",
 		"museum_enemiesSchism2": "",
@@ -407,7 +406,6 @@
 		"museum_spoiler1": "",
 		"museum_spoiler2": "",
 		"museum_spoiler3": ""
-
 	},
 
 	"fishing": {
@@ -639,7 +637,6 @@
 		"style_ultravictory": "",
 		"style_whitewins": "",
 
-
 		"style_d": "",
 		"style_c": "",
 		"style_b": "",
@@ -732,7 +729,6 @@
 	},
 
 	"books": {
-
 		"books_scanning": "",
 		"books_pressToClose1": "",
 		"books_pressToClose2": "",
@@ -835,6 +831,13 @@
 		"act1_intermission_third4": "",
 		"act1_intermission_third5": "",
 
+		"act1_intermission_tobecontinued": "",
+		"act1_intermission_tobecontinuedshadow": "",
+
+		"act1_intermission_endof": "",
+		"act1_intermission_insertAct2": "",
+		"act1_intermission_insert": "",
+		"act1_intermission_returnToMenu": "",
 
 		"act2_intermission_first1": "",
 		"act2_intermission_first2": "",
@@ -869,17 +872,17 @@
 		"act2_intermission_third3": "",
 		"act2_intermission_third4": "",
 		"act2_intermission_third5": "",
-
 		"act2_intermission_third6": "",
 		"act2_intermission_third7": "",
+
 		"act2_intermission_third8": "",
 		"act2_intermission_third9": "",
 		"act2_intermission_third10": "",
 
 		"act2_intermission_fourth1": "",
 		"act2_intermission_fourth2": "",
-		"act2_intermission_fourth3": "",
 
+		"act2_intermission_fourth3": "",
 		"act2_intermission_fourth4": "",
 
 		"act2_intermission_fourth5": "",
@@ -887,34 +890,27 @@
 		"act2_intermission_fourth6": "",
 		"act2_intermission_fourth7": "",
 		"act2_intermission_fourth8": "",
+
 		"act2_intermission_fourth9": "",
 		"act2_intermission_fourth10": "",
 		"act2_intermission_fourth11": "",
 		"act2_intermission_fourth12": "",
-		"act2_intermission_fourth13": "",
 
+		"act2_intermission_fourth13": "",
 
 		"act2_intermission_fifth1": "",
 
 		"act2_intermission_fifth2": "",
 		"act2_intermission_fifth3": "",
 		"act2_intermission_fifth4": "",
+
 		"act2_intermission_fifth5": "",
 		"act2_intermission_fifth6": "",
-
 
 		"act2_intermission_sixth1": "",
 
 		"act2_intermission_sixth2": "",
 		"act2_intermission_sixth3": "",
-
-		"act1_intermission_tobecontinued": "",
-		"act1_intermission_tobecontinuedshadow": "",
-
-		"act1_intermission_endof": "",
-		"act1_intermission_insertAct2": "",
-		"act1_intermission_insert": "",
-		"act1_intermission_returnToMenu": "",
 
 		"act2_intermission_tobecontinued": "",
 		"act2_intermission_tobecontinuedshadow": "",
@@ -1001,7 +997,6 @@
 		"leaderboard_reminder": ""
 	},
 	"visualnovel": {
-
 		"visualnovel_mirageName1": "",
 		"visualnovel_mirageName2": "",
 		"visualnovel_mirageName3": "",
@@ -1110,6 +1105,7 @@
 		"visualnovel_waitingPromptFirst2": "",
 
 		"visualnovel_waitingResponseFirst1": "",
+
 		"visualnovel_waitingResponseFirst2": "",
 		"visualnovel_waitingResponseFirst3": "",
 		"visualnovel_waitingResponseFirst4": "",
@@ -1124,36 +1120,51 @@
 		"visualnovel_waitingResponseThird3": "",
 
 		"visualnovel_nihilism1": "",
+
 		"visualnovel_nihilism2": "",
+
 		"visualnovel_nihilism3": "",
+
 		"visualnovel_nihilism4": "",
 		"visualnovel_nihilism5": "",
 		"visualnovel_nihilism6": "",
+
 		"visualnovel_nihilism7": "",
 		"visualnovel_nihilism8": "",
 		"visualnovel_nihilism9": "",
+
 		"visualnovel_nihilism10": "",
 		"visualnovel_nihilism11": "",
+
 		"visualnovel_nihilism12": "",
+
 		"visualnovel_nihilism13": "",
 		"visualnovel_nihilism14": "",
+
 		"visualnovel_nihilism15": "",
+
 		"visualnovel_nihilism16": "",
 		"visualnovel_nihilism17": "",
+
 		"visualnovel_nihilism18": "",
 		"visualnovel_nihilism19": "",
 		"visualnovel_nihilism20": "",
 		"visualnovel_nihilism21": "",
+
 		"visualnovel_nihilism22": "",
 		"visualnovel_nihilism23": "",
 		"visualnovel_nihilism24": "",
+
 		"visualnovel_nihilism25": "",
 		"visualnovel_nihilism26": "",
+
 		"visualnovel_nihilism27": "",
 		"visualnovel_nihilism28": "",
 		"visualnovel_nihilism29": "",
+
 		"visualnovel_nihilism30": "",
 		"visualnovel_nihilism31": "",
+
 		"visualnovel_nihilism32": "",
 		"visualnovel_nihilism33": "",
 
@@ -1184,9 +1195,11 @@
 		"visualnovel_nihilism34": "",
 		"visualnovel_nihilism35": "",
 		"visualnovel_nihilism36": "",
+
 		"visualnovel_nihilism37": "",
 		"visualnovel_nihilism38": "",
 		"visualnovel_nihilism39": "",
+
 		"visualnovel_nihilism40": "",
 		"visualnovel_nihilism41": "",
 		"visualnovel_nihilism42": "",
@@ -1195,19 +1208,24 @@
 		"visualnovel_conclusion1": "",
 		"visualnovel_conclusion2": "",
 		"visualnovel_conclusion3": "",
+
 		"visualnovel_conclusion4": "",
 		"visualnovel_conclusion5": "",
 		"visualnovel_conclusion6": "",
 		"visualnovel_conclusion7": "",
+
 		"visualnovel_conclusion8": "",
+
 		"visualnovel_conclusion9": "",
 		"visualnovel_conclusion10": "",
+
 		"visualnovel_conclusion11": "",
 
 		"visualnovel_conclusionPrompt1": "",
 		"visualnovel_conclusionPrompt2": "",
 
 		"visualnovel_conclusionResponseFirst1": "",
+
 		"visualnovel_conclusionResponseFirst2": "",
 		"visualnovel_conclusionResponseFirst3": "",
 
@@ -1217,15 +1235,16 @@
 	},
 	"options": {
 		"options_title": "",
-		"options_back": "",
 		"category_general": "",
 		"category_controls": "",
 		"category_graphics": "",
-		"category_sound": "",
-		"category_display": "",
+		"category_audio": "",
 		"category_assists": "",
-		"category_colors": "",
 		"category_saves": "",
+		"category_customization": "",
+		"category_hud": "",
+		"category_colors": "",
+		"options_back": "",
 
 		"general_rememberWeapon": "",
 		"general_weaponPosition": "",
@@ -1271,11 +1290,6 @@
 		"controls_weaponTitle": "",
 		"controls_primaryFire": "",
 		"controls_secondaryFire": "",
-		"controls_revolver": "",
-		"controls_shotgun": "",
-		"controls_nailgun": "",
-		"controls_railcannon": "",
-		"controls_rocketLauncher": "",
 		"controls_spawnerArm": "",
 		"controls_nextWeapon": "",
 		"controls_previousWeapon": "",
@@ -1349,7 +1363,6 @@
 		"audio_muffleMusic": "",
 		"audio_dubbing": "",
 
-		"hud_title": "",
 		"hud_type": "",
 		"hud_typeNone": "",
 		"hud_typeStandard": "",
@@ -1366,8 +1379,6 @@
 		"hud_railcannonMeter": "",
 		"hud_styleMeter": "",
 		"hud_styleInfo": "",
-
-
 
 		"crosshair_title": "",
 		"crosshair_type": "",
@@ -1510,6 +1521,21 @@
 		"save_slot4": "",
 		"save_slot5": "",
 
+		"save_failMergeError1": "",
+		"save_failMergeError2": "",
+		"save_failMergeError3": "",
+		"save_failMergeErrorQuitButton": "",
+		"save_saveloadFailError1": "",
+		"save_saveloadFailError2": "",
+		"save_saveloadFailError3": "",
+		"save_saveloadFailError4": "",
+		"save_saveloadFailError5": "",
+		"save_saveloadFailError6": "",
+		"save_saveloadFailError7": "",
+		"save_saveloadFailError8": "",
+		"save_saveloadFailError9": "",
+		"save_saveloadFailError10": "",
+
 		"language_title": "",
 		"language_languages": "",
 		"language_openLanguageFolder": ""
@@ -1518,6 +1544,7 @@
 		"pause_title": "",
 		"pause_resume": "",
 		"pause_respawn": "",
+		"pause_skip": "",
 		"pause_restart": "",
 		"pause_options": "",
 		"pause_quit": "",
@@ -1644,32 +1671,24 @@
 	"levelTips": {
 		"leveltips_preludeSecond1": "",
 		"leveltips_preludeSecond2": "",
-
 		"leveltips_preludeThird1": "",
 		"leveltips_preludeThird2": "",
 		"leveltips_preludeThird3": "",
-
 		"leveltips_preludeFourth1": "",
 		"leveltips_preludeFourth2": "",
-
 		"leveltips_preludeFifth": "",
 
 		"leveltips_limboFirst": "",
-
 		"leveltips_limboSecond": "",
-
 		"leveltips_limboThird1": "",
 		"leveltips_limboThird2": "",
 		"leveltips_limboFourth": "",
 
 		"leveltips_lustFirst": "",
-
 		"leveltips_lustSecond1": "",
 		"leveltips_lustSecond2": "",
 		"leveltips_lustSecond3": "",
-
 		"leveltips_lustThird": "",
-
 		"leveltips_lustFourth1": "",
 		"leveltips_lustFourth2": "",
 
@@ -1677,15 +1696,11 @@
 		"leveltips_gluttonySecond1": "",
 		"leveltips_gluttonySecond2": "",
 
+
 		"leveltips_greedFirst": "",
 		"leveltips_greedSecond": "",
 		"leveltips_greedThird": "",
 		"leveltips_greedFourth": "",
-
-		"leveltips_primeFirst1": "",
-		"leveltips_primeFirst2": "",
-
-		"leveltips_primeSecond": "",
 
 		"leveltips_wrathFirst": "",
 		"leveltips_wrathSecond": "",
@@ -1698,6 +1713,7 @@
 		"leveltips_heresyFirst2": "",
 		"leveltips_heresySecond1": "",
 		"leveltips_heresySecond2": "",
+
 
 		"leveltips_violenceFirst": "",
 		"leveltips_violenceSecond": "",
@@ -1713,6 +1729,10 @@
 		"leveltips_treacheryFirst": "",
 		"leveltips_treacherySecond": "",
 
+		"leveltips_primeFirst1": "",
+		"leveltips_primeFirst2": "",
+		"leveltips_primeSecond": "",
+
 		"leveltips_cybergrind": "",
 		"leveltips_sandbox1": "",
 		"leveltips_sandbox2": "",
@@ -1722,6 +1742,7 @@
 	"shop": {
 		"shop_tipofthedayTitle": "",
 		"shop_tipoftheday": "",
+		"shop_menu": "",
 		"shop_weapons": "",
 		"shop_monsters": "",
 		"shop_cybergrind": "",
@@ -1837,7 +1858,6 @@
 		"shop_strategy": "",
 		"shop_advancedStrategy": "",
 
-
 		"shop_loreRevolver1": "",
 		"shop_loreRevolver2": "",
 		"shop_loreRevolver3": "",
@@ -1936,32 +1956,30 @@
 		"enemyname_stray": "",
 		"enemyname_schism": "",
 		"enemyname_soldier": "",
-		"enemyname_sentry": "",
-		"enemyname_idol": "",
-		"enemyname_ferryman": "",
 		"enemyname_stalker": "",
 		"enemyname_insurrectionist": "",
+		"enemyname_ferryman": "",
 		"enemyname_swordsmachine": "",
 		"enemyname_drone": "",
 		"enemyname_streetCleaner": "",
 		"enemyname_v2": "",
-		"enemyname_v2Second": "",
 		"enemyname_mindFlayer": "",
+		"enemyname_v2Second": "",
+		"enemyname_sentry": "",
 		"enemyname_gutterman": "",
 		"enemyname_guttertank": "",
 		"enemyname_earthmover": "",
 		"enemyname_malFace": "",
-		"enemyname_leviathan": "",
 		"enemyname_cerberus": "",
 		"enemyname_hideousMass": "",
+		"enemyname_idol": "",
+		"enemyname_leviathan": "",
 		"enemyname_mannequin": "",
 		"enemyname_minotaur": "",
 		"enemyname_gabriel": "",
 		"enemyname_virtue": "",
 		"enemyname_somethingWicked": "",
 		"enemyname_puppet": "",
-		"enemyname_fleshPrison": "",
-		"enemyname_minosPrime": "",
 
 		"enemyname_boss_cerberus": "",
 		"enemyname_boss_cancerousRodent": "",
@@ -1980,9 +1998,11 @@
 		"enemyname_boss_insurrectionistAngry": "",
 		"enemyname_boss_insurrectionistRude": "",
 		"enemyname_boss_gabrielSecond": "",
-		"enemyname_boss_fleshPanopticon": "",
-		"enemyname_boss_sisyphusPrime": "",
 		"enemyname_boss_bigJohninator": "",
+		"enemyname_boss_fleshPrison": "",
+		"enemyname_boss_fleshPanopticon": "",
+		"enemyname_boss_minosPrime": "",
+		"enemyname_boss_sisyphusPrime": "",
 
 		"enemyname_type_lesserHusk": "",
 		"enemyname_type_greaterHusk": "",
@@ -2001,7 +2021,6 @@
 		"enemyname_type_supremeAngel": "",
 
 		"enemyname_type_primeSoul": ""
-
 	},
 
 	"cheats": {
@@ -2045,6 +2064,7 @@
 		"cheats_disableOnReload": "",
 		"cheats_equip": "",
 		"cheats_remove": "",
+		"cheats_loadLatestSave": "",
 		"cheats_open": "",
 		"cheats_killAll": "",
 		"cheats_static": "",
@@ -2066,6 +2086,7 @@
 		"cheats_dupesSaveNamePrompt": "",
 		"cheats_dupesNewSave": "",
 		"cheats_dupesOpenFolder": "",
+		"cheats_dupesOverWriteWarn": "",
 		"cheats_dupesSave": "",
 		"cheats_dupesLoad": "",
 		"cheats_dupesDelete": "",
@@ -2082,7 +2103,6 @@
 	},
 
 	"enemybios": {
-
 		"enemyBios_type": "",
 		"enemyBios_data": "",
 		"enemyBios_strategy": "",
@@ -2559,6 +2579,7 @@
 		"act3_violenceSecond_payloadControlError2": "",
 		"act3_violenceSecond_payloadControlEmpty": "",
 		"act3_violenceSecond_payloadControlHell": "",
+		"act3_violenceSecond_alternateShotgun": "",
 
 		"act3_violenceThird_feedIt": "",
 		"act3_violenceThird_becomeMarked": "",
@@ -2654,7 +2675,6 @@
 	},
 
 	"subtitles": {
-
 		"subtitles_gabriel_intro1": "",
 		"subtitles_gabriel_intro2": "",
 		"subtitles_gabriel_intro3": "",
@@ -2677,7 +2697,6 @@
 		"subtitles_gabriel_taunt10": "",
 		"subtitles_gabriel_taunt11": "",
 		"subtitles_gabriel_taunt12": "",
-
 
 		"subtitles_gabriel_phaseChange": "",
 
@@ -2865,19 +2884,21 @@
 		"hellmap_violence": "",
 		"hellmap_fraud": "",
 		"hellmap_treachery": "",
+
 		"hellmap_prime": "",
-		"hellmap_act1crescendo": "",
-		"hellmap_act1climax": "",
-		"hellmap_act2crescendo": "",
-		"hellmap_act2climax": "",
-		"hellmap_act3crescendo": "",
-		"hellmap_act3climax": "",
 
 		"hellmap_first": "",
 		"hellmap_second": "",
 		"hellmap_third": "",
 		"hellmap_fourth": "",
 		"hellmap_climax": "",
+
+		"hellmap_act1crescendo": "",
+		"hellmap_act1climax": "",
+		"hellmap_act2crescendo": "",
+		"hellmap_act2climax": "",
+		"hellmap_act3crescendo": "",
+		"hellmap_act3climax": "",
 
 		"levelstats_time": "",
 		"levelstats_kills": "",
@@ -2966,6 +2987,7 @@
 		"enemyAlter_altarBlue": "",
 		"enemyAlter_altarRed": "",
 		"enemyAlter_altarStone": "",
+		"enemyAlter_alteredDestroyed": "",
 
 		"earlyAccessEnd1": "",
 		"earlyAccessEnd2": "",

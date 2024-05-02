@@ -182,23 +182,33 @@ namespace UltrakULL
         public void Patch7S(ref GameObject canvasObj)
         {
             //CLEAN UP YOUR MESS!
-            GameObject puzzleScreen = GameObject.Find("PuzzleScreen");
-            TextMeshProUGUI fakeexittext = puzzleScreen.GetComponentInChildren<TextMeshProUGUI>(true);
-            fakeexittext.text = "<size=12><color=red><u><b>" + LanguageManager.CurrentLanguage.washing.wash_fakeexittext1 + "</u></b></color></size>\n\n\n"
-            + LanguageManager.CurrentLanguage.washing.wash_fakeexittext2 + "\n\n"
-            + LanguageManager.CurrentLanguage.washing.wash_fakeexittext3 + "\n\n"
-            + LanguageManager.CurrentLanguage.washing.wash_fakeexittext4 + "\n\n"
-            + LanguageManager.CurrentLanguage.washing.wash_fakeexittext5 + "\n\n"
-            + LanguageManager.CurrentLanguage.washing.wash_fakeexittext6;
+            try
+            {
+                GameObject puzzleScreen = GameObject.Find("PuzzleScreen");
+                TextMeshProUGUI fakeexittext = puzzleScreen.GetComponentInChildren<TextMeshProUGUI>(true);
+                fakeexittext.text = "<size=12><color=red><u><b>" + LanguageManager.CurrentLanguage.washing.wash_fakeexittext1 + "</u></b></color></size>\n\n\n"
+                + LanguageManager.CurrentLanguage.washing.wash_fakeexittext2 + "\n\n"
+                + LanguageManager.CurrentLanguage.washing.wash_fakeexittext3 + "\n\n"
+                + LanguageManager.CurrentLanguage.washing.wash_fakeexittext4 + "\n\n"
+                + LanguageManager.CurrentLanguage.washing.wash_fakeexittext5 + "\n\n"
+                + LanguageManager.CurrentLanguage.washing.wash_fakeexittext6;
 
-            //BloodCleanText
-            GameObject washcanvas = GameObject.Find("WashingCanvas");
-            TextMeshProUGUI BloodCleanText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(washcanvas, "Painter Completion Meter"), "Slider Group"), "Blood Cleaned"));
-            BloodCleanText.text = LanguageManager.CurrentLanguage.washing.wash_bloodClean;
-            GameObject chklst = GetGameObjectChild(washcanvas, "CheckList");
-            
-            TextMeshProUGUI LitterCount = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Litter"), "Litter Count:"));
-            LitterCount.text = LanguageManager.CurrentLanguage.washing.wash_littercount;
+                //BloodCleanText
+                GameObject washcanvas = GameObject.Find("WashingCanvas");
+                TextMeshProUGUI BloodCleanText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(washcanvas, "Painter Completion Meter"), "Slider Group"), "Blood Cleaned"));
+                BloodCleanText.text = LanguageManager.CurrentLanguage.washing.wash_bloodClean;
+                GameObject chklst = GetGameObjectChild(washcanvas, "CheckList");
+
+                TextMeshProUGUI LitterCount = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Litter"), "Litter Count:"));
+                LitterCount.text = LanguageManager.CurrentLanguage.washing.wash_littercount;
+            }
+            catch (Exception e) 
+            {
+                Logging.Warn("Failed to Patch 7-S(SecretLevels.cs)");
+                if (LanguageManager.CurrentLanguage.washing == null)
+                { Logging.Warn("Category is missing from the language file! Please Update the language file!"); return; }
+                Logging.Warn(e.ToString());
+            }
         }
         // SecretFirstRoom/Player/Main Camera/HUD Camera/HUD/FinishCanvas/Panel/Title/Text
         // Note - it uses a separate panel that has the same name as the normal result panel.

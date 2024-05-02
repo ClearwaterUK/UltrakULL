@@ -79,7 +79,6 @@
         "museum_bookToniStigell6": "- The design for the original version of the Filth",
         "museum_bookToniStigell7": "- Getting me into DMC in the first place",
 
-
         "museum_bookFlyingDog1": "<b><color=#6a36be>FLYINGDOG</color> - 3D ARTIST</b>",
         "museum_bookFlyingDog2": "FlyingDog joined the team right at the start of development in early 2018, designing and creating many of the first 3D models and their textures. Although most of these models have since been remade and replaced, they're still based on his original designs and many of his original models can still be seen here and there as easter eggs. His final contribution to the game was the texture for the Feedbacker arm in mid 2019.",
         "museum_bookFlyingDog3": "Some of his biggest contributions include:",
@@ -101,7 +100,6 @@
         "museum_bookQATeam8": "\"Be it games, music, movies or the company of others, be sure to enjoy the good times that you experience and always look back on life with a positive note. Life is precious, and after all, It's your own show. Enjoy your life to its fullest and give everyone respect and love. A smile on someone's face is worth its weight in gold!\"",
         "museum_bookQATeam9": "\"Of all the scars on my psyche, this one will always remain a favored one. from that cursed door to the accidental spawner arm slip, its been a great time regardless! Sometimes videogames can be cool as hell. hopefully we can get more of them!\"",
         "museum_bookQATeam10": "\"Being able to help bring to fruition a strong creative vision like Hakita's has been an absolute honor and an unforgettable experience. I will remain forever grateful for the opportunity, and I look forward to whatever might come next!\"",
-
 
         "museum_bookPitr1": "<b><color=orange>PITR</color> - LEAD PROGRAMMER</b>",
         "museum_bookPitr2": "PITR already started helping out with programming in late 2019, but was officially added to the team in early 2020 thanks to his ULTRAKILL mods and an early attempt at a custom level system. He's responsible for most advanced programming in the game, such as systems like cheats, Cyber Grind patterns and subtitles. He also created the entirety of the Sandbox and 5-S, with only minor aesthetic touch-ups from me.",
@@ -283,9 +281,6 @@
         "museum_enemiesMaliciousFace6": "Another idea I had at one point was for there to be a hole in the back of its head, exposing the brain, allowing for nimble players to score big damage, but this also never materialized. Me coming up with all these dumb ideas, often after the model was already done, but never committing to them was, very understandably, frustrating to FlyingDog.",
         "museum_enemiesMaliciousFace7": "The new model by Victoria is a beautiful almost 1:1 recreation that manages to keep the iconic look while improving the visual quality while actually <i>decreasing</i> its resolution.",
 
-        "museum_cinemaPlay": "PLAY",
-        "museum_cinemaStop": "STOP",
-
         "museum_plaquesMuseumTitle": "HALL OF SHAME - THE ULTRAKILL DEVELOPERS",
         "museum_plaquesArtRoom": "ART ROOM",
         "museum_plaquesNerdRoom": "NERD ROOM",
@@ -404,6 +399,9 @@
         "museum_chessSettingsclose": "Close",
         "museum_chessWhitewin": "WHITE WIN!",
         "museum_chessBlackwin": "BLACK WIN!",
+
+        "museum_cinemaPlay": "PLAY",
+        "museum_cinemaStop": "STOP",
 
         "museum_spoiler1": "WARNING",
         "museum_spoiler2": "SPOILER",
@@ -679,8 +677,8 @@
         "cybergrind_settings": "CYBER GRIND SETTINGS",
         "cybergrind_settingsDescription": "This terminal is used for Cyber Grind customization.",
         "cybergrind_themes": "THEMES",
-        "cybergrind_patterns": "PATTERNS",
         "cybergrind_music": "MUSIC",
+        "cybergrind_patterns": "PATTERNS",
         "cybergrind_waves": "WAVES",
 
 
@@ -833,6 +831,14 @@
         "act1_intermission_third4": "If the machines seek blood, he would give it freely;",
         "act1_intermission_third5": "and with such fury, even metal will bleed.",
 
+        "act1_intermission_tobecontinued": "TO BE CONTINUED IN... ACT II: IMPERFECT HATRED",
+        "act1_intermission_tobecontinuedshadow": "TO BE CONTINUED IN... ACT II: IMPERFECT HATRED",
+
+        "act1_intermission_endof": "ACT 1 END",
+        "act1_intermission_insertAct2": "INSERT DISC 2 For\n\"ACT II: IMPERFECT HATRED\"",
+        "act1_intermission_insert": "INSERT",
+        "act1_intermission_returnToMenu": "RETURN TO MENU",
+
         "act2_intermission_first1": "Silence.",
         "act2_intermission_first2": "Introspection.",
         "act2_intermission_first3": "How many had he killed?",
@@ -875,6 +881,7 @@
 
         "act2_intermission_fourth1": "\"B-but the people are on our side!",
         "act2_intermission_fourth2": "The citizens of Heaven know that we are just!\"",
+
         "act2_intermission_fourth3": "\"The masses only follow you out of fear and desperation.",
         "act2_intermission_fourth4": "I will show them there is nothing to be afraid of, for there is no species nor origin, vested rank or holy status that will stop the sharp edge of a sword.",
 
@@ -904,14 +911,6 @@
 
         "act2_intermission_sixth2": "His arm outstretched, without a word, the people saw.",
         "act2_intermission_sixth3": "In the silence the message rang out to the far ends of the cosmos.",
-
-        "act1_intermission_tobecontinued": "TO BE CONTINUED IN... ACT II: IMPERFECT HATRED",
-        "act1_intermission_tobecontinuedshadow": "TO BE CONTINUED IN... ACT II: IMPERFECT HATRED",
-
-        "act1_intermission_endof": "ACT 1 END",
-        "act1_intermission_insertAct2": "INSERT DISC 2 For\n\"ACT II: IMPERFECT HATRED\"",
-        "act1_intermission_insert": "INSERT",
-        "act1_intermission_returnToMenu": "RETURN TO MENU",
 
         "act2_intermission_tobecontinued": "TO BE CONCLUDED IN... ACT III: GODFIST SUICIDE",
         "act2_intermission_tobecontinuedshadow": "TO BE CONCLUDED IN... ACT III: GODFIST SUICIDE",
@@ -1236,15 +1235,16 @@
     },
     "options": {
         "options_title": "OPTIONS",
-        "options_back": "BACK",
         "category_general": "GENERAL",
         "category_controls": "CONTROLS",
         "category_graphics": "GRAPHICS",
-        "category_sound": "SOUND",
-        "category_display": "DISPLAY",
+        "category_audio": "AUDIO",
         "category_assists": "ASSISTS",
-        "category_colors": "COLORS",
         "category_saves": "SAVES",
+        "category_customization": "CUSTOMIZATION",
+        "category_hud": "HUD",
+        "category_colors": "COLORS",
+        "options_back": "BACK",
 
         "general_rememberWeapon": "REMEMBER LAST USED WEAPON VARIATION",
         "general_weaponPosition": "WEAPON POSITION",
@@ -1291,14 +1291,10 @@
         "controls_primaryFire": "PRIMARY FIRE",
         "controls_secondaryFire": "SECONDARY FIRE",
         "controls_nextVariation": "NEXT VARIATION",
-        "controls_revolver": "REVOLVER",
-        "controls_shotgun": "SHOTGUN",
-        "controls_nailgun": "NAILGUN",
-        "controls_railcannon": "RAILCANNON",
-        "controls_rocketLauncher": "ROCKET LAUNCHER",
+        "controls_previousVariation": "PREVIOUS\nVARIATION",
         "controls_spawnerArm": "SPAWNER ARM",
         "controls_nextWeapon": "NEXT WEAPON",
-        "controls_previousWeapon": "PREVIOUS WEAPON",
+        "controls_previousWeapon": "PREVIOUS\nWEAPON",
         "controls_lastUsedWeapon": "LAST USED WEAPON",
         "controls_arms": "FIST",
         "controls_punch": "PUNCH",
@@ -1367,7 +1363,6 @@
         "audio_muffleMusic": "MUFFLE MUSIC WHILE UNDERWATER",
         "audio_dubbing": "AUDIO DUBBING",
 
-        "hud_title": "HUD",
         "hud_type": "HUD TYPE",
         "hud_typeNone": "NONE",
         "hud_typeStandard": "STANDARD",
@@ -1384,7 +1379,6 @@
         "hud_railcannonMeter": "RAILCANNON METER",
         "hud_styleMeter": "STYLE METER",
         "hud_styleInfo": "STYLE INFO",
-
 
         "crosshair_title": "CROSSHAIR SETTINGS",
         "crosshair_type": "CROSSHAIR TYPE",
@@ -1463,7 +1457,6 @@
         "colors_variationGold": "GOLD VARIATION",
         "colors_enemies": "ENEMY SILHOUETTES",
 
-
         "rumble_title": "Rumble Customization",
         "rumble_finalMultiplier": "FINAL INTENSITY MULTIPLIER",
         "rumble_coinToss": "Coin Toss",
@@ -1528,6 +1521,21 @@
         "save_slot4": "Slot 4",
         "save_slot5": "Slot 5",
 
+        "save_failMergeError1": "DUPLICATE SAVE",
+        "save_failMergeError2": "We found save files <b>both</b> directly in the Saves directory and the first slot.",
+        "save_failMergeError3": "Pick which one you want to <b>keep.</b>",
+        "save_failMergeErrorQuitButton": "QUIT GAME",
+        "save_saveloadFailError1": "SAVE FAILED",
+        "save_saveloadFailError2": "The game is unable to finalize saving your progress.",
+        "save_saveloadFailError3": "COMMON REASONS FOR FAILURE:",
+        "save_saveloadFailError4": "1. Third party software (such as an antivirus) stopping the game from saving a new file",
+        "save_saveloadFailError5": "If this problem occurs again, make sure your antivirus or any similar software is not preventing the game from writing files",
+        "save_saveloadFailError6": "If you wish to try again,",
+        "save_saveloadFailError7": "press <b>\"Y\"</b>",
+        "save_saveloadFailError8": "If you wish to continue without saving,",
+        "save_saveloadFailError9": "press <b>\"N\"</b>",
+        "save_saveloadFailError10": "Sorry and thank you for your understanding. :)",
+
         "language_title": "LANGUAGE",
         "language_languages": "LANGUAGES",
         "language_openLanguageFolder": "OPEN LANGUAGE FOLDER"
@@ -1536,6 +1544,7 @@
         "pause_title": "PAUSE",
         "pause_resume": "RESUME",
         "pause_respawn": "RESPAWN",
+        "pause_skip": "SKIP",
         "pause_restart": "RESTART MISSION",
         "pause_options": "OPTIONS",
         "pause_quit": "QUIT",
@@ -1612,7 +1621,6 @@
         "levelName_primeSecond": "WAIT OF THE WORLD",
         "levelName_primeThird": ""
 
-
     },
     "levelChallenges": {
         "challenges_preludeFirst": "KILL 5 ENEMIES WITH A SINGLE GLASS PANEL",
@@ -1659,43 +1667,32 @@
 
         "challenges_treacheryFirst": "CHALLENGE TREACHERY FIRST",
         "challenges_treacherySecond": "CHALLENGE TREACHERY SECOND"
-
     },
     "levelTips": {
         "leveltips_preludeSecond1": "The Revolver deals <color=orange>locational damage</color>.",
         "leveltips_preludeSecond2": "A headshot deals 2x damage and a limbshot deals 1.5x damage.",
-
         "leveltips_preludeThird1": "Dash: Fully invincible, costs stamina",
         "leveltips_preludeThird2": "Slide: Greater distance, no invincibility",
         "leveltips_preludeThird3": "Jump: Quickly out of melee range, less control",
-
         "leveltips_preludeFourth1": "Shotgun parries:",
         "leveltips_preludeFourth2": "A point-blank Shotgun shot to the torso right before an enemy attack lands will deal massive damage.",
-      
         "leveltips_preludeFifth": "Attack sound cues allow you to keep track of enemies who are off screen.",
 
         "leveltips_limboFirst": "Some enemies make idle sounds to make them easier to track.",
-
         "leveltips_limboSecond": "Use the ATTRACTOR NAILGUN's magnets to form concentrated orbs of nails that can be moved around using the pull force of other magnets.",
-
         "leveltips_limboThird1": "Enemies can hurt other enemy types.",
         "leveltips_limboThird2": "With quick thinking and positioning, powerful enemies can turn into powerful weapons.",
-
         "leveltips_limboFourth": "The ATTRACTOR NAILGUN's magnets can be attached to enemies to make mobile targets easy to hit with nails.",
 
         "leveltips_lustFirst": "Enemies scream when falling from a fatal height.",
-
         "leveltips_lustSecond1": "SLAM BOUNCING:",
         "leveltips_lustSecond2": "Jump immediately after landing from a ground slam to jump higher.",
         "leveltips_lustSecond3": "The longer the ground slam fall, the higher the bounce.",
-
         "leveltips_lustThird": "RAILCANNON variations all share the same cooldown. Choose wisely which variation best fits the situation.",
-
         "leveltips_lustFourth1": "SLIDING will retain previous momentum for a short amount of time. ",
         "leveltips_lustFourth2": "Chaining quick SLIDE JUMPS after a DASH JUMP will give you incredible sustained speed.",
 
         "leveltips_gluttonyFirst": "Environmental hazards such as harmful liquids will hurt enemies as well.",
-
         "leveltips_gluttonySecond1": "If you're having trouble keeping up with a tough enemy, stand back and observe. ",
         "leveltips_gluttonySecond2": "Every enemy has its tells and patterns and learning those can be your key to victory.",
       
@@ -1745,6 +1742,7 @@
     "shop": {
         "shop_tipofthedayTitle": "TIP OF THE DAY",
         "shop_tipoftheday": "",
+        "shop_menu": "MENU",
         "shop_weapons": "WEAPONS",
         "shop_monsters": "MONSTERS",
         "shop_cybergrind": "THE CYBER GRIND",
@@ -1958,32 +1956,30 @@
         "enemyname_stray": "STRAY",
         "enemyname_schism": "SCHISM",
         "enemyname_soldier": "SOLDIER",
-        "enemyname_sentry": "SENTRY",
-        "enemyname_idol": "IDOL",
-        "enemyname_ferryman": "FERRYMAN",
         "enemyname_stalker": "STALKER",
         "enemyname_insurrectionist": "INSURRECTIONIST",
+        "enemyname_ferryman": "FERRYMAN",
         "enemyname_swordsmachine": "SWORDSMACHINE",
         "enemyname_drone": "DRONE",
         "enemyname_streetCleaner": "STREETCLEANER",
         "enemyname_v2": "V2",
-        "enemyname_v2Second": "V2 (2ND)",
         "enemyname_mindFlayer": "MINDFLAYER",
+        "enemyname_v2Second": "V2 (2ND)",
+        "enemyname_sentry": "SENTRY",
         "enemyname_gutterman": "GUTTERMAN",
         "enemyname_guttertank": "GUTTERTANK",
         "enemyname_earthmover": "EARTHMOVER",
         "enemyname_malFace": "MALICIOUS FACE",
         "enemyname_cerberus": "CERBERUS",
         "enemyname_hideousMass": "HIDEOUS MASS",
+        "enemyname_idol": "IDOL",
+        "enemyname_leviathan": "LEVIATHAN",
         "enemyname_mannequin": "MANNEQUIN",
         "enemyname_minotaur": "MINOTAUR",
-        "enemyname_leviathan": "LEVIATHAN",
         "enemyname_gabriel": "GABRIEL",
         "enemyname_virtue": "VIRTUE",
         "enemyname_somethingWicked": "SOMETHING WICKED",
         "enemyname_puppet": "PUPPET",
-        "enemyname_fleshPrison": "FLESH PRISON",
-        "enemyname_minosPrime": "MINOS PRIME",
 
         "enemyname_boss_cerberus": "CERBERUS, GUARDIAN OF HELL",
         "enemyname_boss_cancerousRodent": "CANCEROUS RODENT",
@@ -2002,9 +1998,11 @@
         "enemyname_boss_insurrectionistAngry": "INSURRECTIONIST \"ANGRY\"",
         "enemyname_boss_insurrectionistRude": "INSURRECTIONIST \"RUDE\"",
         "enemyname_boss_gabrielSecond": "GABRIEL, APOSTATE OF HATE",
-        "enemyname_boss_fleshPanopticon": "FLESH PANOPTICON",
-        "enemyname_boss_sisyphusPrime": "SISYPHUS PRIME",
         "enemyname_boss_bigJohninator": "BIG JOHNINATOR",
+        "enemyname_boss_fleshPrison": "FLESH PRISON",
+        "enemyname_boss_fleshPanopticon": "FLESH PANOPTICON",
+        "enemyname_boss_minosPrime": "MINOS PRIME",
+        "enemyname_boss_sisyphusPrime": "SISYPHUS PRIME",
 
         "enemyname_type_lesserHusk": "LESSER HUSK",
         "enemyname_type_greaterHusk": "GREATER HUSK",
@@ -2066,6 +2064,7 @@
         "cheats_disableOnReload": "DISABLE ON RELOAD",
         "cheats_equip": "EQUIP",
         "cheats_remove": "REMOVE",
+        "cheats_loadLatestSave": "LOAD LATEST SAVE",
         "cheats_open": "OPEN",
         "cheats_killAll": "KILL ALL",
         "cheats_static": "STATIC",
@@ -2087,6 +2086,7 @@
         "cheats_dupesSaveNamePrompt": "ENTER A NAME HERE",
         "cheats_dupesNewSave": "NEW SAVE",
         "cheats_dupesOpenFolder": "OPEN FOLDER",
+        "cheats_dupesOverWriteWarn": "Are you sure you want to \n<color=orange>OVERWRITE</color> your sandbox save?",
         "cheats_dupesSave": "SAVE",
         "cheats_dupesLoad": "LOAD",
         "cheats_dupesDelete": "DELETE",
@@ -2103,7 +2103,6 @@
     },
 
     "enemybios": {
-
         "enemyBios_type": "TYPE:",
         "enemyBios_data": "DATA:",
         "enemyBios_strategy": "STRATEGIES:",
@@ -2334,7 +2333,6 @@
 
         "enemyBios_minotaur_strategy1": "Although difficult to heal from due to its distance, it is best to be patient. New trams will often arrive, carrying weaker foes for easier healing.",
         "enemyBios_minotaur_strategy2": "Much of its body is protected, but its guts are exposed, making for an easy consistent target.",
-
 
         "enemyBios_gabriel_1": "One of the most respected and feared archangels, Gabriel earned his reputation through power and efficiency.",
         "enemyBios_gabriel_2": "Regardless of the task given, Gabriel would always perform it quickly and decisively, earning him the title of Judge of Hell after dethroning Minos and ending the Lust renaissance.",
@@ -2677,7 +2675,6 @@
     },
 
     "subtitles": {
-
         "subtitles_gabriel_intro1": "Machine,",
         "subtitles_gabriel_intro2": "turn back now.",
         "subtitles_gabriel_intro3": "The layers of this palace are not for your kind.",
@@ -2895,6 +2892,7 @@
         "hellmap_third": "THIRD",
         "hellmap_fourth": "FOURTH",
         "hellmap_climax": "CLIMAX",
+
         "hellmap_act1crescendo": "ACT I CRESCENDO",
         "hellmap_act1climax": "ACT I CLIMAX",
         "hellmap_act2crescendo": "ACT II CRESCENDO",
@@ -2989,11 +2987,13 @@
         "enemyAlter_altarBlue": "BLUE",
         "enemyAlter_altarRed": "RED",
         "enemyAlter_altarStone": "STONE",
+        "enemyAlter_alteredDestroyed": "Altered object was destroyed.",
 
         "earlyAccessEnd1": "THANKS FOR PLAYING",
         "earlyAccessEnd2": "Layer 8: FRAUD is still under development",
         "earlyAccessEnd3": "For news on its progress, follow us on"
     },
+
 	"weapon":{
 		"weapon_nailgunZapperReady": "READY",
 		"weapon_nailgunZapperAlternateTooFar": "TOO FAR",
@@ -3032,6 +3032,9 @@
         "sandbox_shop_worldOptionsEnabled": "ENABLED",
         "sandbox_shop_worldOptionsDisabled": "DISABLED",
 
-        "sandbox_shop_mapBorder": "Map Border"
+        "sandbox_shop_mapBorder": "Map Border",
+        "sandbox_shop_iconsTitle": "ICON PACKS",
+        "sandbox_shop_default": "DEFAULT",
+        "sandbox_shop_pitr": "PITR"
     }
 }
