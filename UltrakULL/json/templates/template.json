@@ -572,11 +572,12 @@
 		"style_homerun": "",
 		"style_iconoclasm": "",
 		"style_instakill": "",
-		"style_insurrknockdown": "",
+		"style_insurrknockdown": "",longwaydown
 		"style_interruption": "",
 		"style_kill": "",
 		"style_landyours": "",
 		"style_limbshot": "",
+		"style_longwaydown": "",
 		"style_mauriced": "",
 		"style_multikill": "",
 		"style_nailbombed": "",
