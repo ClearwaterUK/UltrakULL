@@ -122,8 +122,12 @@ namespace UltrakULL.Harmony_Patches
                                 if (isUnderlaid)
                                 {
                                     Material underlaid = new Material(__instance.fontMaterial);
-                                    underlaid.SetVector("_UnderlayColor", new Vector4(0, 0, 0, 1));
+                                    underlaid.SetVector("_UnderlayColor", originalUnderlaycolor);
                                     __instance.fontMaterial = underlaid;
+                                }
+								else
+								{
+                                    __instance.fontSharedMaterial.SetVector("_UnderlayColor", new Vector4(0, 0, 0, 0));
                                 }
                                 break;
                             }

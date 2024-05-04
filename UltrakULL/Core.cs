@@ -159,29 +159,8 @@ namespace UltrakULL
             Logging.Message("Loading font resource bundle...");
             //Will load from the same directory that the dll is in.
             AssetBundle fontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder,"ullfont.resource"));
-            AssetBundle jafontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder, "jafont.resource"));
 
-            if (jafontBundle == null)
-            {
-                Logging.Error("FAILED TO LOAD JAPANESE TMP FONT(´・ω・`)*No AssetBundle?");
-            }
-            else
-            {
-                Logging.Message("Japanese Font AssetBundle has been loaded.");
-                TMP_FontAsset jafontTMP = jafontBundle.LoadAsset<TMP_FontAsset>("jafix_TMP");
-                if (jafontTMP)
-                {
-                    Logging.Warn("Japanese TMP font loaded.");
-                    jaFontTMP = jafontTMP;
-                }
-                else
-                {
-                    Logging.Error("There's no Japanese TMP Font in this assetbundle(´・ω・`)");
-                }
-            }
-
-
-                AssetBundle extraFontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder, "arabfonts"));
+            AssetBundle extraFontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder, "arabfonts"));
 
             if (extraFontBundle == null)
             {
@@ -260,8 +239,8 @@ namespace UltrakULL
     
                 
                 TMP_FontAsset cjkFontTMP = fontBundle.LoadAsset<TMP_FontAsset>("NotoSerif-CJK_TMP");
-                
-                if(font1 && font2)
+                TMP_FontAsset jafontTMP = fontBundle.LoadAsset<TMP_FontAsset>("JF-Dot-jiskan16s-2000_TMP");
+                if (font1 && font2)
                 {
                     Logging.Warn("Normal fonts loaded.");
                     GlobalFont = font1;
@@ -279,6 +258,7 @@ namespace UltrakULL
                     GlobalFontTMP = font1TMP;
                     MuseumFontTMP = font2TMP;
                     CJKFontTMP = cjkFontTMP;
+                    jaFontTMP = jafontTMP;
                     
                     TMPFontReady = true;
                 }

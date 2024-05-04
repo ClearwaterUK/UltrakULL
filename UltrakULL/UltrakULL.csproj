@@ -163,7 +163,6 @@
     <Message Text="Moving ullfont.resource to plugins/ultrakULL..." Importance="High" />
     <ItemGroup>
       <_FontPack Include="$(TargetDir)/../../fonts/ullfont.resource" />
-      <_FontPack Include="$(TargetDir)/../../fonts/jafont.resource" />
       <_FontPack Include="$(TargetDir)/../../fonts/arabfonts" />
     </ItemGroup>
     <Copy SourceFiles="@(_FontPack)" DestinationFolder="$(TargetDir)plugins/UltrakULL">
@@ -292,7 +291,6 @@
     <Content Include="CREDITS.md" />
     <Content Include="docs\Dubbing.md" />
     <Content Include="fonts\ullfont.resource" />
-    <Content Include="fonts\jafont.resource" />
     <Content Include="fonts\arabfonts" />
     <Content Include="fonts\VCR_OSD_MONO.ttf" />
     <Content Include="json\templates\TemplateChangelog.txt" />
