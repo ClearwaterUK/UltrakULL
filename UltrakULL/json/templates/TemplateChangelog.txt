@@ -33,6 +33,7 @@ options: advanced_(title, currentLevel, cybergrindResetText1, cybergrindResetTex
 options: audio_(volume, soundEffectsVolume, muffleMusic)
 options: assists_(enemySilouettesNone, enemySilouettesFull)
 options: save_slot(1-5), save_failMergeError(1-3), save_failMergeErrorQuitButton, save_saveloadFailError(1-10)
+tutorial: audioCalibrationSFXWarning(1-3)
 pauseMenu: pause_skip
 intermission: act2_intermission_endof, act2_intermission_insertAct3
 weapon: weapon_nailgunZapper(Ready, OutOfRange, NoTarget, Blocked, Distance, Recharging, Alternate(TooFar, Null))

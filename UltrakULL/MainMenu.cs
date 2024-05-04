@@ -195,7 +195,7 @@ namespace UltrakULL
 				//Harmless title
 				GameObject harmlessObject = GetGameObjectChild(difficultyObject, "Harmless Info");
 				TextMeshProUGUI harmlessTitle = GetTextMeshProUGUI(harmlessObject.transform.Find("Title (1)").gameObject);
-				harmlessTitle.text = LanguageManager.CurrentLanguage.frontend.difficulty_harmless;
+				harmlessTitle.text = "--" + LanguageManager.CurrentLanguage.frontend.difficulty_harmless + "--";
 
                 //Harmless descriptor
                 TextMeshProUGUI harmlessDescriptor = GetTextMeshProUGUI(harmlessObject.transform.Find("Text").gameObject);
@@ -209,7 +209,7 @@ namespace UltrakULL
 				//Lenient title
 				GameObject lenientObject = GetGameObjectChild(difficultyObject, "Lenient Info");
                 TextMeshProUGUI lenientTitle = GetTextMeshProUGUI(lenientObject.transform.Find("Title (1)").gameObject);
-				lenientTitle.text = LanguageManager.CurrentLanguage.frontend.difficulty_lenient;
+				lenientTitle.text = "--" + LanguageManager.CurrentLanguage.frontend.difficulty_lenient + "--";
 
                 //Lenient descriptor
                 TextMeshProUGUI lenientDescriptor = GetTextMeshProUGUI(lenientObject.transform.Find("Text").gameObject);
@@ -223,7 +223,7 @@ namespace UltrakULL
 				//Standard title
 				GameObject standardObject = GetGameObjectChild(difficultyObject, "Standard Info");
                 TextMeshProUGUI standardTitle = GetTextMeshProUGUI(standardObject.transform.Find("Title (1)").gameObject);
-				standardTitle.text = LanguageManager.CurrentLanguage.frontend.difficulty_standard;
+				standardTitle.text = "--" + LanguageManager.CurrentLanguage.frontend.difficulty_standard + "--";
 
                 //Standard descriptor
                 TextMeshProUGUI standardDescriptor = GetTextMeshProUGUI(standardObject.transform.Find("Text").gameObject);
@@ -237,7 +237,7 @@ namespace UltrakULL
 				//Violent title
 				GameObject violentObject = GetGameObjectChild(difficultyObject, "Violent Info");
                 TextMeshProUGUI violentTitle = GetTextMeshProUGUI(violentObject.transform.Find("Title (1)").gameObject);
-				violentTitle.text = LanguageManager.CurrentLanguage.frontend.difficulty_violent;
+				violentTitle.text = "--" + LanguageManager.CurrentLanguage.frontend.difficulty_violent + "--";
 
                 //Violent descriptor
                 TextMeshProUGUI violentDescriptor = GetTextMeshProUGUI(violentObject.transform.Find("Text").gameObject);
@@ -251,7 +251,7 @@ namespace UltrakULL
 				//Brutal title
 				GameObject brutalObject = GetGameObjectChild(difficultyObject, "Brutal Info");
                 TextMeshProUGUI brutalTitle = GetTextMeshProUGUI(brutalObject.transform.Find("Title (1)").gameObject);
-				brutalTitle.text = LanguageManager.CurrentLanguage.frontend.difficulty_brutal;
+				brutalTitle.text = "--" + LanguageManager.CurrentLanguage.frontend.difficulty_brutal + "--";
 
                 //Brutal descriptor
                 TextMeshProUGUI brutalDescriptor = GetTextMeshProUGUI(brutalObject.transform.Find("Text").gameObject);
@@ -260,7 +260,7 @@ namespace UltrakULL
                     + "\n\n"
                     + LanguageManager.CurrentLanguage.frontend.difficulty_brutalDescription2 + "</color>"
                     + "\n\n"
-                    + "<color=red>" + LanguageManager.CurrentLanguage.frontend.difficulty_brutalDescription3 + "</color>";
+                    + "<b>" + LanguageManager.CurrentLanguage.frontend.difficulty_brutalDescription3 + "<b>";
 
                 TextMeshProUGUI underConstructionText = GetTextMeshProUGUI(GetGameObjectChild(difficultyObject, "Under Construction"));
 				underConstructionText.text = LanguageManager.CurrentLanguage.frontend.difficulty_underConstruction;

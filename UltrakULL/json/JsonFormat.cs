@@ -2260,6 +2260,9 @@ namespace UltrakULL.json
         public string tutorial_audioCalibrationWarning1;
         public string tutorial_audioCalibrationWarning2;
         public string tutorial_audioCalibrationWarning3;
+        public string tutorial_audioCalibrationSFXWarning1;
+        public string tutorial_audioCalibrationSFXWarning2;
+        public string tutorial_audioCalibrationSFXWarning3;
         public string tutorial_audioCalibrationWarningPromptYes;
         public string tutorial_audioCalibrationWarningPromptNo;
 

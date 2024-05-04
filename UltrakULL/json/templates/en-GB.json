@@ -2431,9 +2431,12 @@
         "tutorial_introRed3": "HELL IS FULL.",
 
         "tutorial_audioCalibrationTitle": "MANUAL SOUND CALIBRATION",
-        "tutorial_audioCalibrationWarning1": "MASTER VOLUME IS OFF.",
-        "tutorial_audioCalibrationWarning2": "YOU WILL HAVE NO AUDIO.",
-        "tutorial_audioCalibrationWarning3": "ARE YOU SURE?",
+        "tutorial_audioCalibrationWarning1": "MASTER VOLUME IS OFF</color>.",
+        "tutorial_audioCalibrationWarning2": "THE GAME WILL BE COMPLETELY SILENT.",
+        "tutorial_audioCalibrationWarning3": "IS THIS OK?",
+        "tutorial_audioCalibrationSFXWarning1": "SOUND EFFECT VOLUME IS OFF</color>.",
+        "tutorial_audioCalibrationSFXWarning2": "YOU WILL HEAR NO SOUNDS EXCEPT MUSIC.",
+        "tutorial_audioCalibrationSFXWarning3": "IS THIS OK?",
         "tutorial_audioCalibrationWarningPromptYes": "CONTINUE WITHOUT SOUND",
         "tutorial_audioCalibrationWarningPromptNo": "CANCEL",
 

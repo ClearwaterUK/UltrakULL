@@ -2434,6 +2434,9 @@
 		"tutorial_audioCalibrationWarning1": "",
 		"tutorial_audioCalibrationWarning2": "",
 		"tutorial_audioCalibrationWarning3": "",
+		"tutorial_audioCalibrationSFXWarning1": "",
+		"tutorial_audioCalibrationSFXWarning2": "",
+		"tutorial_audioCalibrationSFXWarning3": "",
 		"tutorial_audioCalibrationWarningPromptYes": "",
 		"tutorial_audioCalibrationWarningPromptNo": "",
 

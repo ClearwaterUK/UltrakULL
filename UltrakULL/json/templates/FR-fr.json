@@ -2400,6 +2400,9 @@
 		"tutorial_audioCalibrationWarning1": "L'AUDIO PRINCIPAL EST DÉSACTIVÉ.",
 		"tutorial_audioCalibrationWarning2": "VOUS N'AUREZ PAS D'AUDIO.",
 		"tutorial_audioCalibrationWarning3": "ÊTES-VOUS SUR ?",
+		"tutorial_audioCalibrationSFXWarning1": "",
+		"tutorial_audioCalibrationSFXWarning2": "",
+		"tutorial_audioCalibrationSFXWarning3": "",
 		"tutorial_audioCalibrationWarningPromptYes": "CONTINUER SANS AUDIO ?",
 		"tutorial_audioCalibrationWarningPromptNo": "ANNULER",
 
