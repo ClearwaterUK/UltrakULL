@@ -1956,6 +1956,9 @@
 		"enemyname_minotaur": "MINOTAURE",
 		"enemyname_somethingWicked": "CRÉATURE MAUDITE",
 		"enemyname_puppet": "PANTIN",
+		"enemyname_earthmoverMortar": "",
+		"enemyname_earthmoverRocketLauncher": "",
+		"enemyname_earthmoverTower": "",
 
 		"enemyname_boss_cerberus": "CERBÈRE, GARDIEN DES ENFERS",
 		"enemyname_boss_fleshPrison": "PRISON DE CHAIR",

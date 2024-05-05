@@ -1981,6 +1981,9 @@
         "enemyname_virtue": "VIRTUE",
         "enemyname_somethingWicked": "SOMETHING WICKED",
         "enemyname_puppet": "PUPPET",
+        "enemyname_earthmoverMortar": "EARTHMOVER MORTAR",
+        "enemyname_earthmoverRocketLauncher": "EARTHMOVER ROCKET LAUNCHER",
+        "enemyname_earthmoverTower": "EARTHMOVER TOWER",
 
         "enemyname_boss_cerberus": "CERBERUS, GUARDIAN OF HELL",
         "enemyname_boss_cancerousRodent": "CANCEROUS RODENT",

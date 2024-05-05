@@ -1981,6 +1981,9 @@
 		"enemyname_virtue": "",
 		"enemyname_somethingWicked": "",
 		"enemyname_puppet": "",
+		"enemyname_earthmoverMortar": "",
+		"enemyname_earthmoverRocketLauncher": "",
+		"enemyname_earthmoverTower": "",
 
 		"enemyname_boss_cerberus": "",
 		"enemyname_boss_cancerousRodent": "",

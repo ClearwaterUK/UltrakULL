@@ -1878,6 +1878,9 @@ namespace UltrakULL.json
         public string enemyname_virtue;
         public string enemyname_somethingWicked;
         public string enemyname_puppet;
+        public string enemyname_earthmoverMortar;
+        public string enemyname_earthmoverRocketLauncher;
+        public string enemyname_earthmoverTower;
 
         public string enemyname_boss_cerberus;
         public string enemyname_boss_cancerousRodent;

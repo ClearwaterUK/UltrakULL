@@ -83,6 +83,9 @@ namespace UltrakULL
                 case "BIG JOHNINATOR": case "BIGJOHNATOR": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_bigJohninator; }
                 case "1000-THR \"EARTHMOVER\"": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_earthmover; }
                 case "1000-THR DEFENSE SYSTEM": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_earthmoverDefence; }
+                case "EARTHMOVER MORTAR": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_earthmoverMortar; }
+                case "EARTHMOVER ROCKET LAUNCHER": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_earthmoverRocketLauncher; }
+                case "EARTHMOVER TOWER": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_earthmoverTower; }
                 default: { return "Untranslated enemy name: " + originalName; }
             }
         }
