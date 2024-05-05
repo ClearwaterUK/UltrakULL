@@ -103,9 +103,16 @@ namespace UltrakULL.Harmony_Patches
 				}
 
 
-				if (Core.TMPFontReady && !isUsingEnglish())
-				{
-					string currentLanguage = LanguageManager.CurrentLanguage.metadata.langName.ToLower();
+				if (Core.TMPFontReady)
+                {
+                    if (isUsingEnglish())
+                    {
+						if (GetCurrentSceneName() != "Main Menu")
+						{
+							return;
+						}
+                    }
+                    string currentLanguage = LanguageManager.CurrentLanguage.metadata.langName.ToLower();
 					string currentLanguageCode = currentLanguage.Substring(0, 2);
 					bool isUnderlaid = __instance.gameObject.name.Contains("NameText") ||
 						__instance.gameObject.name.Contains("LayerText") ||
@@ -117,6 +124,7 @@ namespace UltrakULL.Harmony_Patches
 						//Traditional/Simplified Chinese
                         case "zh":
                             {
+                                if (__instance.transform.parent.gameObject.name.Equals("Filler") && __instance.gameObject.name.Equals("HP Text") && __instance.GetComponentInParent<HealthBar>() != null) { return; }
                                 //Swap with a Chinese font when it comes in.
                                 __instance.font = Core.CJKFontTMP;
                                 if (isUnderlaid)
@@ -134,7 +142,7 @@ namespace UltrakULL.Harmony_Patches
 						//Japanese
                         case "ja":
                             {
-                                //japanese tofu fix
+								if (__instance.transform.parent.gameObject.name.Equals("Filler") && __instance.gameObject.name.Equals("HP Text") && __instance.GetComponentInParent<HealthBar>() != null) { return; }
                                 __instance.font = Core.jaFontTMP;
                                 if (isUnderlaid)
                                 {
