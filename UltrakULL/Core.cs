@@ -416,7 +416,7 @@ namespace UltrakULL
                                 Logging.Message("CyberGrind");
                                 CyberGrind.PatchCg();
                             }
-                            else if (levelName.Contains("Intermission"))
+                            else if (levelName.Contains("Intermission") || levelName.Contains("EarlyAccessEnd"))
                             {
                                 Logging.Message("Intermission");
                                 Intermission intermission = new Intermission(ref canvasObj);
