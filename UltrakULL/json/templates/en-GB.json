@@ -2034,7 +2034,7 @@
         "cheats_disclaimerNo": "CANCEL",
 
         "cheats_panelTitle": "MANAGE CHEATS",
-        "cheats_cheatsEnabled": "CHEATS ENABLED :^)",
+        "cheats_cheatsEnabled": "<color=#44FF45>CHEATS</color> ENABLED :^)",
 
         "cheats_keepEnabled": "Keep cheats enabled",
         "cheats_spawnerArm": "Spawner Arm",
@@ -2574,8 +2574,8 @@
         "act3_violenceSecond_guttermanTutorial": "The <color=orange>GUTTERMAN SHIELD</color> can be <color=orange>BROKEN</color> with the <color=red>KNUCKLEBLASTER</color>. Swap arms with",
         "act3_violenceSecond_biggerBoom": "WE'RE GONNA NEED A BIGGER BOOM",
         "act3_violenceSecond_gateControlTitle": "GATE CONTROL",
-        "act3_violenceSecond_gateControlButtonOpen": "OPEN",
-        "act3_violenceSecond_gateControlButtonClosed": "CLOSED",
+        "act3_violenceSecond_gateControlOpen": "OPEN",
+        "act3_violenceSecond_gateControlClosed": "CLOSED",
         "act3_violenceSecond_cartGateControlTitle": "GATE CONTROL",
         "act3_violenceSecond_cartGateControlOpen": "OPEN",
         "act3_violenceSecond_cartGateControlClosed": "CLOSED",
