@@ -496,7 +496,7 @@
     },
 
     "washing": {
-        "wash_wash_fakeexittext1": "CLEAN UP YOUR MESS!",
+        "wash_fakeexittext1": "CLEAN UP YOUR MESS!",
         "wash_fakeexittext2": "The washer and vacuum go in weapon slot 6.",
         "wash_fakeexittext3": "Both Tools have alternate fire modes.",
         "wash_fakeexittext4": "Litter too big to be vacuumed needs to be manually throun away.",
