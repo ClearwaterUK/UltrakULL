@@ -22,13 +22,10 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPatch("Start"), HarmonyPostfix]
         public static void NailgunPostfix(Nailgun __instance, TMP_Text ___statusText)
         {
-            __instance.ammoText.fontSize = 220;
-            /*Thread.Sleep(5);
-            if ((Core.GlobalFontReady) && (__instance.gameObject.name.ToLower().Contains("magnet")))
+            if (__instance.gameObject.name.ToLower().Contains("magnet"))
             {
-                Logging.Info("Unswapping the attractor nailgun font, font:" + TextFontSwap.originalFont);
-                __instance.ammoText.font = TextFontSwap.originalFont;
-            }*/
+                __instance.ammoText.fontSize = 220;
+            }
         }
         [HarmonyPatch("Update"), HarmonyPostfix]
         public static void NailgunUpdatePostfix(Nailgun __instance, WeaponCharges ___wc)
