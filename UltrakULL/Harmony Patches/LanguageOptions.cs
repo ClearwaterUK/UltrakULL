@@ -427,7 +427,6 @@ namespace UltrakULL.Harmony_Patches
             Color deactivatedColor = new Color(1,1,1,1);
             languageButtonText.color = deactivatedColor;
             Color activatedColor = new Color(0, 0, 0, 1);
-            //languageButtonText = languageButton.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
 
             Button button = languageButton.GetComponent<Button>();
             Image buttonimage = languageButton.GetComponent<Image>();
@@ -451,8 +450,8 @@ namespace UltrakULL.Harmony_Patches
 
             langLocalPage.name = "Language Page";
             langLocalPage.SetActive(false);
+            langBrowserPage.SetActive(false);
             languageButtonTitleText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(langLocalPage, "Scroll Rect (1)"), "Contents"), "Text (4)"));
-            //languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
             Transform contentParent = langLocalPage.transform.Find("Scroll Rect (1)").Find("Contents");
             foreach (Transform child in contentParent.GetComponentInChildren<Transform>(true))
                 child.gameObject.SetActive(false);
