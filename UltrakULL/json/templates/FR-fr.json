@@ -2553,14 +2553,12 @@
 		"act3_violenceSecond_payloadControlWait": "VEUILLER\nATTENDRE",
 		"act3_violenceSecond_payloadControlError1": "",
 		"act3_violenceSecond_payloadControlError2": "",
-		"act3_violenceSecond_payloadControlEmpty": "VIDE",
 		"act3_violenceSecond_payloadControlHell": "",
 		"act3_violenceSecond_alternateShotgun": "",
 
 		"act3_violenceThird_feedIt": "N O U R R I S - L E .",
 		"act3_violenceThird_becomeMarked": "SE FAIRE MARQUER À MORT ?",
 		"act3_violenceThird_becomeMarkedButton": "O U I",
-		"act3_violenceThird_becomeMarkedButtonClosed": "FERMÉ",
 		"act3_violenceThird_starOfTheShow": "C'EST TOI LA STAR DE LA SCÈNE MAINTENANT!",
 
 		"act3_violenceFourth_floodingWarning": "ATTENTION: INTRUS DÉTECTÉ\n-- RINÇAGE DE L'INTÉRIEUR --",

@@ -2483,7 +2483,6 @@ namespace UltrakULL.json
         public string act3_violenceSecond_payloadControlWait;
         public string act3_violenceSecond_payloadControlError1;
         public string act3_violenceSecond_payloadControlError2;
-        public string act3_violenceSecond_payloadControlEmpty;
         public string act3_violenceSecond_payloadControlHell;
 
         public string act3_violenceSecond_alternateShotgun;
@@ -2492,7 +2491,7 @@ namespace UltrakULL.json
         
         public string act3_violenceThird_becomeMarked;
         public string act3_violenceThird_becomeMarkedButton;
-        public string act3_violenceThird_becomeMarkedButtonClosed;
+        //public string act3_violenceThird_becomeMarkedButtonClosed;
         public string act3_violenceThird_starOfTheShow;
         
         public string act3_violenceFourth_floodingWarning;

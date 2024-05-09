@@ -2584,14 +2584,12 @@
 		"act3_violenceSecond_payloadControlWait": "",
 		"act3_violenceSecond_payloadControlError1": "",
 		"act3_violenceSecond_payloadControlError2": "",
-		"act3_violenceSecond_payloadControlEmpty": "",
 		"act3_violenceSecond_payloadControlHell": "",
 		"act3_violenceSecond_alternateShotgun": "",
 
 		"act3_violenceThird_feedIt": "",
 		"act3_violenceThird_becomeMarked": "",
 		"act3_violenceThird_becomeMarkedButton": "",
-		"act3_violenceThird_becomeMarkedButtonClosed": "",
 		"act3_violenceThird_starOfTheShow": "",
 
 		"act3_violenceFourth_floodingWarning": "",

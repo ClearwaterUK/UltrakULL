@@ -84,14 +84,15 @@ namespace UltrakULL
                 TextMeshProUGUI payloadControlLower = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(payloadControl, "UsableButtons"), "Button (Closed)"), "Text (TMP)"));
                 TextMeshProUGUI payloadControlWait = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(payloadControl, "UsableButtons"), "Button (Open)"), "Text (TMP)"));
                 TextMeshProUGUI payloadControlError = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(payloadControl, "UsableButtons"), "Error"));
-                TextMeshProUGUI payloadControlEmpty = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(payloadControl, "Button (Done)"), "Text (TMP)"));
+                //became unused in patch 15
+                //TextMeshProUGUI payloadControlEmpty = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(payloadControl, "Button (Done)"), "Text (TMP)"));
                 TextMeshProUGUI payloadControlGiveEmHell = GetTextMeshProUGUI(GetGameObjectChild(payloadControl, "Done"));
 
                 payloadControlTitle.text = LanguageManager.CurrentLanguage.act3.act3_violenceSecond_payloadControlTitle;
                 payloadControlLower.text = LanguageManager.CurrentLanguage.act3.act3_violenceSecond_payloadControlLower;
                 payloadControlWait.text = LanguageManager.CurrentLanguage.act3.act3_violenceSecond_payloadControlWait;
                 payloadControlError.text = LanguageManager.CurrentLanguage.act3.act3_violenceSecond_payloadControlError1 + "<size=12>\n" + LanguageManager.CurrentLanguage.act3.act3_violenceSecond_payloadControlError2;
-                payloadControlEmpty.text = LanguageManager.CurrentLanguage.act3.act3_violenceSecond_payloadControlEmpty;
+                //payloadControlEmpty.text = LanguageManager.CurrentLanguage.act3.act3_violenceSecond_payloadControlEmpty;
                 payloadControlGiveEmHell.text = LanguageManager.CurrentLanguage.act3.act3_violenceSecond_payloadControlHell;
             }
 
@@ -103,12 +104,12 @@ namespace UltrakULL
 
                 TextMeshProUGUI becomeMarked = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(secretScreen, "PreActivation"), "Text (TMP) (1)"));
                 TextMeshProUGUI becomeMarkedButton = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(secretScreen, "PreActivation"), "Button A"), "On"), "Text"));
-                TextMeshProUGUI becomeMarkedButtonClosed = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(secretScreen, "PreActivation"), "Button A"), "Off"), "Text"));
+                //TextMeshProUGUI becomeMarkedButtonClosed = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(secretScreen, "PreActivation"), "Button A"), "Off"), "Text"));
                 TextMeshProUGUI starOfTheShow = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(secretScreen, "PostActivation"), "Text (TMP) (1)"));
 
                 becomeMarked.text = LanguageManager.CurrentLanguage.act3.act3_violenceThird_becomeMarked;
                 becomeMarkedButton.text = LanguageManager.CurrentLanguage.act3.act3_violenceThird_becomeMarkedButton;
-                becomeMarkedButtonClosed.text = LanguageManager.CurrentLanguage.act3.act3_violenceThird_becomeMarkedButtonClosed;
+                //becomeMarkedButtonClosed.text = LanguageManager.CurrentLanguage.act3.act3_violenceThird_becomeMarkedButtonClosed;
                 starOfTheShow.text = LanguageManager.CurrentLanguage.act3.act3_violenceThird_starOfTheShow;
             }
 
