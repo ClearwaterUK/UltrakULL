@@ -181,18 +181,8 @@ namespace UltrakULL
         }
         public void Patch7S(ref GameObject canvasObj)
         {
-            //CLEAN UP YOUR MESS!
             try
-            {
-                GameObject puzzleScreen = GameObject.Find("PuzzleScreen");
-                TextMeshProUGUI fakeexittext = puzzleScreen.GetComponentInChildren<TextMeshProUGUI>(true);
-                fakeexittext.text = "<size=12><color=red><u><b>" + LanguageManager.CurrentLanguage.washing.wash_fakeexittext1 + "</u></b></color></size>\n\n\n"
-                + LanguageManager.CurrentLanguage.washing.wash_fakeexittext2 + "\n\n"
-                + LanguageManager.CurrentLanguage.washing.wash_fakeexittext3 + "\n\n"
-                + LanguageManager.CurrentLanguage.washing.wash_fakeexittext4 + "\n\n"
-                + LanguageManager.CurrentLanguage.washing.wash_fakeexittext5 + "\n\n"
-                + LanguageManager.CurrentLanguage.washing.wash_fakeexittext6;
-
+            {   
                 //BloodCleanText
                 GameObject washcanvas = GameObject.Find("WashingCanvas");
                 TextMeshProUGUI BloodCleanText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(washcanvas, "Painter Completion Meter"), "Slider Group"), "Blood Cleaned"));
@@ -201,6 +191,22 @@ namespace UltrakULL
 
                 TextMeshProUGUI LitterCount = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(chklst, "Litter"), "Litter Count:"));
                 LitterCount.text = LanguageManager.CurrentLanguage.washing.wash_littercount;
+
+                //Faxeexittext
+                GameObject fakeexitCanvas = GetGameObjectChild(GetInactiveRootObject("PuzzleScreen"), "Canvas");
+                TextMeshProUGUI fakeexittext = GetTextMeshProUGUI(GetGameObjectChild(fakeexitCanvas, "Text (TMP)"));
+                fakeexittext.text = "<size=12><color=red><u><b>" + LanguageManager.CurrentLanguage.washing.wash_fakeexittext1 + "</u></b></color></size>\n\n\n"
+                + LanguageManager.CurrentLanguage.washing.wash_fakeexittext2 + "\n\n"
+                + LanguageManager.CurrentLanguage.washing.wash_fakeexittext3 + "\n\n"
+                + LanguageManager.CurrentLanguage.washing.wash_fakeexittext4 + "\n\n"
+                + LanguageManager.CurrentLanguage.washing.wash_fakeexittext5 + "\n\n"
+                + LanguageManager.CurrentLanguage.washing.wash_fakeexittext6;
+
+                TextMeshProUGUI thxtext = GetTextMeshProUGUI(GetGameObjectChild(fakeexitCanvas, "Text (TMP) (1)"));
+                thxtext.text = "<size=12><color=green><u><b>" + LanguageManager.CurrentLanguage.washing.wash_exitOpenText1 + "</u></b></color></size>\n\n\n"
+                + LanguageManager.CurrentLanguage.washing.wash_exitOpenText2 + "\n\n"
+                + LanguageManager.CurrentLanguage.washing.wash_exitOpenText3;
+
             }
             catch (Exception e) 
             {

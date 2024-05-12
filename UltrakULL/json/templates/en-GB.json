@@ -503,6 +503,10 @@
         "wash_fakeexittext5": "Some corpses cannot be moved and need to be crushed.",
         "wash_fakeexittext6": "The door will open when it's <color=red>ALL</color> clean.'",
 
+        "wash_exitOpenText1": "THANK YOU.",
+        "wash_exitOpenText2": "The exit is now open.",
+        "wash_exitOpenText3": "Have a <color=green> G O O D </color> day.",
+
         "wash_Clean": "CLEAN",
         "wash_bloodClean": "Clean:",
         "wash_ToDo": "To Do:",
@@ -520,6 +524,8 @@
         "wash_Walls": "Walls",
         "wash_BackBookshelf": "Back Bookshelf",
         "wash_Bookcases": "Bookcases",
+        "wash_Bookshelf": "Bookshelf",
+        "wash_Ceiling": "Ceiling",
         "wash_Desk": "Desk",
         "wash_FrontBookshelf": "Front Bookshelf",
         "wash_Sconces": "Sconces",
@@ -2868,6 +2874,7 @@
         "hud_levelStats2": "DOUBLE TAP to keep open.",
         "hud_outOfBounds": "Oops, sorry about that.",
         "hud_clashMode": "\"CLASH MODE\" CHEAT UNLOCKED",
+        "hud_droneHaunting": "<color=orange>DRONE HAUNTING</color> CHEAT UNLOCKED",
         "hud_weaponVariation": "Cycle through EQUIPPED weapon variations with",
         "hud_alternateVersion": "<color=orange>ALTERNATE</color> versions will change a weapon's base behavior. They can be changed at the <color=orange>SHOP</color>.",
 

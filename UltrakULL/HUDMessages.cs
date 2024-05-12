@@ -48,6 +48,10 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.misc.hud_clashMode;
             }
+            if(message.Contains("DRONE HAUNTING"))
+            {
+                return LanguageManager.CurrentLanguage.misc.hud_droneHaunting;
+            }
             if (message.Contains("EQUIPPED"))
             {
                 return LanguageManager.CurrentLanguage.misc.hud_weaponVariation;

@@ -503,6 +503,10 @@
 		"wash_fakeexittext5": "",
 		"wash_fakeexittext6": "",
 
+		"wash_exitOpenText1": "",
+		"wash_exitOpenText2": "",
+		"wash_exitOpenText3": "",
+
 		"wash_Clean": "",
 		"wash_bloodClean": "",
 		"wash_ToDo": "",
@@ -520,6 +524,8 @@
 		"wash_Walls": "",
 		"wash_BackBookshelf": "",
 		"wash_Bookcases": "",
+		"wash_Bookshelf": "",
+		"wash_Ceiling": "",
 		"wash_Desk": "",
 		"wash_FrontBookshelf": "",
 		"wash_Sconces": "",
@@ -2868,6 +2874,7 @@
 		"hud_levelStats2": "",
 		"hud_outOfBounds": "",
 		"hud_clashMode": "",
+		"hud_droneHaunting": "",
 		"hud_weaponVariation": "",
 		"hud_alternateVersion": "",
 

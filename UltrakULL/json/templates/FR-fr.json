@@ -499,6 +499,10 @@
 		"wash_fakeexittext5": "",
 		"wash_fakeexittext6": "",
 
+		"wash_exitOpenText1": "",
+		"wash_exitOpenText2": "",
+		"wash_exitOpenText3": "",
+
 		"wash_Clean": "",
 		"wash_bloodClean": "",
 		"wash_ToDo": "",
@@ -516,6 +520,8 @@
 		"wash_Walls": "",
 		"wash_BackBookshelf": "",
 		"wash_Bookcases": "",
+		"wash_Bookshelf": "",
+		"wash_Ceiling": "",
 		"wash_Desk": "",
 		"wash_FrontBookshelf": "",
 		"wash_Sconces": "",
@@ -2839,6 +2845,7 @@
 		"hud_levelStats2": "<color=orange>APPUYEZ DEUX FOIS</color> pour le garder ouvert.",
 		"hud_outOfBounds": "Oups, désolé de ça.",
 		"hud_clashMode": "CODE DE TRICHE « CLASH » DÉBLOQUÉE",
+		"hud_droneHaunting": "",
 		"hud_weaponVariation": "Changez de variations d'armes <color=orange>ÉQUIPÉES</color> avec",
 		"hud_alternateVersion": "Les versions <color=orange>ALTERNATIFS</color> changera le comportement de base d'une arme. Ils sont changeables au <color=orange>MAGASIN</color>",
 

@@ -142,6 +142,10 @@ namespace UltrakULL.json
         public string wash_fakeexittext5;
         public string wash_fakeexittext6;
 
+        public string wash_exitOpenText1;
+        public string wash_exitOpenText2;
+        public string wash_exitOpenText3;
+
         public string wash_Clean;
         public string wash_ToDo;
         public string wash_bloodClean;
@@ -3022,6 +3026,7 @@ namespace UltrakULL.json
         public string hud_levelStats2;
         public string hud_outOfBounds;
         public string hud_clashMode;
+        public string hud_droneHaunting;
         public string hud_weaponVariation;
         public string hud_alternateVersion;
 
