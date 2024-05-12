@@ -494,9 +494,9 @@ namespace UltrakULL
             Console.WriteLine(optionMenu.name);
             GameObject saveReloadPanel = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionMenu, "Reload Consent Blocker"), "Consent"), "Panel");
             
-            Text saveReloadText = GetTextfromGameObject(GetGameObjectChild(saveReloadPanel, "Text"));
-            Text saveReloadYes = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(saveReloadPanel, "Yes"), "Text"));
-            Text saveReloadNo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(saveReloadPanel, "No"), "Text"));
+            TextMeshProUGUI saveReloadText = GetTextMeshProUGUI(GetGameObjectChild(saveReloadPanel, "Text"));
+            TextMeshProUGUI saveReloadYes = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(saveReloadPanel, "Yes"), "Text"));
+            TextMeshProUGUI saveReloadNo = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(saveReloadPanel, "No"), "Text"));
             
             saveReloadText.text =
                 "<color=red>" + LanguageManager.CurrentLanguage.options.save_warning1 + "</color>\n\n" +
@@ -507,13 +507,13 @@ namespace UltrakULL
             
             GameObject saveDeletePanel = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionMenu, "Wipe Consent Blocker"), "Consent"), "Panel");
             
-            Text saveDeleteYes = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(saveDeletePanel, "Yes"), "Text"));
+            TextMeshProUGUI saveDeleteYes = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(saveDeletePanel, "Yes"), "Text"));
             saveDeleteYes.text = "<color=red>" + LanguageManager.CurrentLanguage.options.save_deleteYes + "</color>";
             
-            Text saveDeleteNo = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(saveDeletePanel, "No"), "Text"));
+            TextMeshProUGUI saveDeleteNo = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(saveDeletePanel, "No"), "Text"));
             saveDeleteNo.text = LanguageManager.CurrentLanguage.options.save_deleteNo;
             
-            Text saveSlotsClose = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Save Slots"), "Close"), "Text"));
+            TextMeshProUGUI saveSlotsClose = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Save Slots"), "Close"), "Text"));
             saveSlotsClose.text = LanguageManager.CurrentLanguage.options.save_close;
         }
         //general end
