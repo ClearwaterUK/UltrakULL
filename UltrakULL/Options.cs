@@ -132,7 +132,7 @@ namespace UltrakULL
             reverseScrollDirection.text = LanguageManager.CurrentLanguage.options.controls_reverseScroll;
 
             
-            TextMeshProUGUI bindsTitle = GetTextMeshProUGUI(controlContent.transform.GetChild(9).gameObject);
+            TextMeshProUGUI bindsTitle = GetTextMeshProUGUI(controlContent.transform.GetChild(10).gameObject);
             bindsTitle.text = "-- " + LanguageManager.CurrentLanguage.options.controls_bindings + " --";
             
             

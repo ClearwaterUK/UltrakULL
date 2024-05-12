@@ -115,13 +115,13 @@ namespace UltrakULL.Harmony_Patches
                 return;
             }
             bool flag = GameProgressSaver.currentSlot == targetPanel.slotIndex;
-            targetPanel.selectButton.GetComponentInChildren<Text>().text = (flag ? LanguageManager.CurrentLanguage.options.save_selected : LanguageManager.CurrentLanguage.options.save_select);
+            targetPanel.selectButton.GetComponentInChildren<TextMeshProUGUI>().text = (flag ? LanguageManager.CurrentLanguage.options.save_selected : LanguageManager.CurrentLanguage.options.save_select);
             targetPanel.stateLabel.text = SaveToString(data.exists, data.highestLvlNumber, data.highestDifficulty);
 
             GameObject deleteButtonText = targetPanel.deleteButton.gameObject;
             GameObject child = deleteButtonText.transform.GetChild(0).gameObject;
 
-            Text deleteText = child.GetComponent<Text>();
+            TextMeshProUGUI deleteText = child.GetComponent<TextMeshProUGUI>();
             deleteText.text = LanguageManager.CurrentLanguage.options.save_delete;
 
             switch (targetPanel.slotNumberLabel.text)

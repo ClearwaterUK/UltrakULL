@@ -275,7 +275,7 @@ namespace UltrakULL.Harmony_Patches
 			[HarmonyPatch("DisplaySubtitle", new[] { typeof(string), typeof(AudioSource), typeof(bool) }), HarmonyPrefix]
 			public static bool SubtitlePostfix(SubtitleController __instance, string caption, AudioSource audioSource, bool ignoreSetting, Subtitle ___subtitleLine, Transform ___container, Subtitle ___previousSubtitle)
             {
-                if (!__instance.subtitlesEnabled && !ignoreSetting)
+                if (!__instance.SubtitlesEnabled && !ignoreSetting)
                 {
                     return false;
                 }
