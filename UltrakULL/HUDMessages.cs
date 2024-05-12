@@ -100,8 +100,17 @@ namespace UltrakULL
                 Behaviour bhvr = (Behaviour)test[3];
                 bhvr.enabled = false;
 
-                Text youDiedText = GetTextfromGameObject(deathScreen);
-                youDiedText.text = LanguageManager.CurrentLanguage.misc.youDied1 + "\n\n\n\n\n" + LanguageManager.CurrentLanguage.misc.youDied2;
+                try
+                {
+                    Text youDiedText = GetTextfromGameObject(deathScreen);
+                    youDiedText.text = LanguageManager.CurrentLanguage.misc.youDied1 + "\n\n\n\n\n" + LanguageManager.CurrentLanguage.misc.youDied2;
+                }
+                catch
+                {   //why only EarlyAccessEnd?B
+                    Logging.Warn("Failed to patch deathScreen");
+                    Logging.Warn("trying to get TextMeshProUGUI component.");
+                    GetTextMeshProUGUI(deathScreen).text = LanguageManager.CurrentLanguage.misc.youDied1 + "\n\n\n\n\n" + LanguageManager.CurrentLanguage.misc.youDied2;
+                }
             }
             catch (Exception e)
             {
@@ -147,6 +156,11 @@ namespace UltrakULL
             TextMeshProUGUI classicHudColorRailcannon = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(classicHudColor, "RailcannonMeter (2)"), "Title"));
             classicHudBwRailcannon.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
             classicHudColorRailcannon.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
+
+            TextMeshProUGUI classicHudBwSpeedometer = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Speedometer"), "Title"));
+            TextMeshProUGUI classicHudColorSpeedometer = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Speedometer"), "Title"));
+            classicHudBwSpeedometer.text = LanguageManager.CurrentLanguage.misc.classicHud_speed;
+            classicHudColorSpeedometer.text = LanguageManager.CurrentLanguage.misc.classicHud_speed;
 
             //Close prompt when reading book
             TextBinds bookPanelBinds = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "ScanningStuff"), "ReadingScanned"), "Panel"), "Text (1)").GetComponent<TextBinds>();

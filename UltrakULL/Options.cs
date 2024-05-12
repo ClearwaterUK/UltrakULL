@@ -285,8 +285,19 @@ namespace UltrakULL
             TextMeshProUGUI customColorPalette = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Custom Color Palette"), "Text"));
             customColorPalette.text = LanguageManager.CurrentLanguage.options.graphics_customColorPalette;
 
-            Text customColorPaletteSelect = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Custom Color Palette"), "Select"), "Text"));
-            customColorPaletteSelect.text = LanguageManager.CurrentLanguage.options.graphics_customColorPaletteSelect;
+            try
+            {
+                Text customColorPaletteSelect = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Custom Color Palette"), "Select"), "Text"));
+                customColorPaletteSelect.text = LanguageManager.CurrentLanguage.options.graphics_customColorPaletteSelect;
+            }
+            catch
+            {
+                //why only EarlyAccessEnd?
+                Logging.Warn("Failed to patch customColorPalette select button text.");
+                Logging.Warn("trying to get TextMeshProUGUI component.");
+                TextMeshProUGUI customColorPaletteSelect = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Custom Color Palette"), "Select"), "Text"));
+                customColorPaletteSelect.text = LanguageManager.CurrentLanguage.options.graphics_customColorPaletteSelect;
+            }
 
             TextMeshProUGUI colorCompressionText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(graphicsContent, "Color Compression"), "Text"));
             colorCompressionText.text = LanguageManager.CurrentLanguage.options.graphics_colorCompression;
@@ -375,25 +386,53 @@ namespace UltrakULL
 
             GameObject assistMajorAssistPanel = GetGameObjectChild(GetGameObjectChild(optionsMenu, "Panel"), "Panel");
 
-            Text assistDisclaimerText = GetTextfromGameObject(GetGameObjectChild(assistMajorAssistPanel, "Text (2)"));
-            assistDisclaimerText.text =
+            try
+            {
+                Text assistDisclaimerText = GetTextfromGameObject(GetGameObjectChild(assistMajorAssistPanel, "Text (2)"));
+                assistDisclaimerText.text =
 
-                LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimer1
-                + "\n\n"
-                + LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimer2
-                + "\n\n"
-                + LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimer3;
-            assistDisclaimerText.fontSize = 18;
+                    LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimer1
+                    + "\n\n"
+                    + LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimer2
+                    + "\n\n"
+                    + LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimer3;
+                assistDisclaimerText.fontSize = 18;
 
-            Text assistDisclaimerConfirmText = GetTextfromGameObject(GetGameObjectChild(assistMajorAssistPanel, "Text (1)"));
-            assistDisclaimerConfirmText.text = LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimerConfirm;
-            assistDisclaimerConfirmText.fontSize = 24;
+                Text assistDisclaimerConfirmText = GetTextfromGameObject(GetGameObjectChild(assistMajorAssistPanel, "Text (1)"));
+                assistDisclaimerConfirmText.text = LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimerConfirm;
+                assistDisclaimerConfirmText.fontSize = 24;
 
-            Text assistDisclaimerYesText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistMajorAssistPanel, "Yes"), "Text"));
-            assistDisclaimerYesText.text = LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimerConfirmYes;
+                Text assistDisclaimerYesText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistMajorAssistPanel, "Yes"), "Text"));
+                assistDisclaimerYesText.text = LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimerConfirmYes;
 
-            Text assistDisclaimerNoText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistMajorAssistPanel, "No"), "Text"));
-            assistDisclaimerNoText.text = LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimerConfirmNo;
+                Text assistDisclaimerNoText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistMajorAssistPanel, "No"), "Text"));
+                assistDisclaimerNoText.text = LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimerConfirmNo;
+            }
+            catch(Exception e)
+            {
+                //why only EarlyAccessEnd?
+                Logging.Warn("Failed to patch assistDisclaimer text.");
+                Logging.Warn("trying to get TextMeshProUGUI component.");
+                TextMeshProUGUI assistDisclaimerText = GetTextMeshProUGUI(GetGameObjectChild(assistMajorAssistPanel, "Text (2)"));
+                assistDisclaimerText.text =
+
+                    LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimer1
+                    + "\n\n"
+                    + LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimer2
+                    + "\n\n"
+                    + LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimer3;
+                assistDisclaimerText.fontSize = 18;
+
+                TextMeshProUGUI assistDisclaimerConfirmText = GetTextMeshProUGUI(GetGameObjectChild(assistMajorAssistPanel, "Text (1)"));
+                assistDisclaimerConfirmText.text = LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimerConfirm;
+                assistDisclaimerConfirmText.fontSize = 24;
+
+                TextMeshProUGUI assistDisclaimerYesText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistMajorAssistPanel, "Yes"), "Text"));
+                assistDisclaimerYesText.text = LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimerConfirmYes;
+
+                TextMeshProUGUI assistDisclaimerNoText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistMajorAssistPanel, "No"), "Text"));
+                assistDisclaimerNoText.text = LanguageManager.CurrentLanguage.options.assists_majorAssistsDisclaimerConfirmNo;
+            }
 
             GameObject assistContent = GetGameObjectChild(GetGameObjectChild(optionsMenu, "Scroll Rect"), "Contents");
 
@@ -469,9 +508,19 @@ namespace UltrakULL
             bossOverrideDropdownListText[3].text = LanguageManager.CurrentLanguage.frontend.difficulty_standard;
             bossOverrideDropdownListText[4].text = LanguageManager.CurrentLanguage.frontend.difficulty_violent;
 
-            Text assistsBossRestartText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Boss Difficulty Override"), "Text (1)"));
-            assistsBossRestartText.text = LanguageManager.CurrentLanguage.options.assists_bossRestartRequired;
-
+            try
+            {
+                Text assistsBossRestartText = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Boss Difficulty Override"), "Text (1)"));
+                assistsBossRestartText.text = LanguageManager.CurrentLanguage.options.assists_bossRestartRequired;
+            }
+            catch (Exception e)
+            {
+                //why only EarlyAccessEnd?
+                Logging.Warn("Option/assists/BossDifficultyOverride/Text (1) :Failed to patch text.");
+                Logging.Warn("trying to get TextMeshProUGUI component.");
+                TextMeshProUGUI assistsBossRestartText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Boss Difficulty Override"), "Text (1)"));
+                assistsBossRestartText.text = LanguageManager.CurrentLanguage.options.assists_bossRestartRequired;
+            }
             TextMeshProUGUI assistsInfiniteStaminaText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(assistsMajor, "Infinite Stamina"), "Text (1)"));
             assistsInfiniteStaminaText.text = LanguageManager.CurrentLanguage.options.assists_infiniteEnergy;
 
@@ -509,10 +558,10 @@ namespace UltrakULL
             
             TextMeshProUGUI saveDeleteYes = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(saveDeletePanel, "Yes"), "Text"));
             saveDeleteYes.text = "<color=red>" + LanguageManager.CurrentLanguage.options.save_deleteYes + "</color>";
-            
+
             TextMeshProUGUI saveDeleteNo = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(saveDeletePanel, "No"), "Text"));
             saveDeleteNo.text = LanguageManager.CurrentLanguage.options.save_deleteNo;
-            
+
             TextMeshProUGUI saveSlotsClose = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(optionsMenu, "Save Slots"), "Close"), "Text"));
             saveSlotsClose.text = LanguageManager.CurrentLanguage.options.save_close;
         }
