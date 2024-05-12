@@ -73,9 +73,12 @@ namespace UltrakULL.Harmony_Patches
                 case "SPAWNER ARM": { return LanguageManager.CurrentLanguage.options.controls_spawnerArm; }
                 case "NEXT WEAPON": { return LanguageManager.CurrentLanguage.options.controls_nextWeapon; }
                 case "PREVIOUS WEAPON": { return LanguageManager.CurrentLanguage.options.controls_previousWeapon; }
-                case "LAST WEAPON": { return LanguageManager.CurrentLanguage.options.controls_lastUsedWeapon; }
-                case "CHANGE FIST": { return LanguageManager.CurrentLanguage.options.controls_changeArm; }
+                case "LAST USED WEAPON": { return LanguageManager.CurrentLanguage.options.controls_lastUsedWeapon; }
+                case "VARIATION SLOT 1": { return LanguageManager.CurrentLanguage.options.controls_variationSlot1; }
+                case "VARIATION SLOT 2": { return LanguageManager.CurrentLanguage.options.controls_variationSlot2; }
+                case "VARIATION SLOT 3": { return LanguageManager.CurrentLanguage.options.controls_variationSlot3; }
                 case "PUNCH": { return LanguageManager.CurrentLanguage.options.controls_punch; }
+                case "CHANGE FIST": { return LanguageManager.CurrentLanguage.options.controls_changeArm; }
                 case "PUNCH (FEEDBACKER)": { return LanguageManager.CurrentLanguage.options.controls_punchFeedbacker; }
                 case "PUNCH (KNUCKLEBLASTER)": { return LanguageManager.CurrentLanguage.options.controls_punchKnuckleblaster; }
                 case "HOOK": { return LanguageManager.CurrentLanguage.options.controls_whiplash; }

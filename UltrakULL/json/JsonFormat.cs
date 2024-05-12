@@ -1977,6 +1977,10 @@ namespace UltrakULL.json
         public string controls_scrollTypeVariations;
         public string controls_scrollTypeAll;
         public string controls_reverseScroll;
+        public string controls_redrawBehaviour;
+        public string controls_redrawNext;
+        public string controls_redrawFirst;
+        public string controls_redrawSame;
         public string controls_bindings;
         public string controls_movement;
         public string controls_move;
@@ -1997,6 +2001,9 @@ namespace UltrakULL.json
         public string controls_nextWeapon;
         public string controls_previousWeapon;
         public string controls_lastUsedWeapon;
+        public string controls_variationSlot1;
+        public string controls_variationSlot2;
+        public string controls_variationSlot3;
         public string controls_arms;
         public string controls_punch;
         public string controls_changeArm;

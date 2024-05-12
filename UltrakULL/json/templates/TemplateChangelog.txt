@@ -28,7 +28,7 @@ levelTips: leveltips_violence(First, Second, Third, Fourth, Secret)
 options: category_audio, category_customization
 options: general_(parryFlash, sandboxOverwrite, advancedOptions, advancedOptionsCustomize, screen, misc, restartWarningAlwaysOn, OnlyCG, restartWarningAlwaysOff)
 options: graphics_gamma(1-2), graphics_goreMaxBloodStains
-options: controls_(movementTitle, weaponTitle, punch(Feedbacker, Knuckleblaster), nextVariation, previousVariation, spawnerArm)
+options: controls_(redraw(Behaviour, Next, First, Same), weaponTitle, punch(Feedbacker, Knuckleblaster), controls_variationSlot(1-3), nextVariation, previousVariation, spawnerArm)
 options: advanced_(title, currentLevel, cybergrindResetText1, cybergrindResetText2, cybergrindResetCancel, cybergrindResetConfirm, cybergrindLocalHighScore, cybergrindResetButton, level52, level71, level73, level7S, 52WaterScrolling, 52WaterWaves, 71Dark, 73Grass, 7SHard)
 options: audio_(volume, soundEffectsVolume, muffleMusic)
 options: assists_(enemySilouettesNone, enemySilouettesFull)
@@ -62,7 +62,7 @@ act2: secretNotReady
 options: category_display, category_sound
 options: hud_title
 options: controls_actions, controls_slot(0-9)
-options: controls_(forward, back, left, right, movementTitle, resetDefault, changeVariation)
+options: controls_(forward, back, left, right, resetDefault, changeVariation)
 options: graphics_title
 options: audio_title
 enemyName: minos, boss_v2, boss_v2Second

@@ -133,13 +133,13 @@ namespace UltrakULL
 
             GameObject redrawBehaviour = GetGameObjectChild(controlContent, "Weapon Redraw Behaviour");
             TextMeshProUGUI redrawBehaviourTitle = GetTextMeshProUGUI(GetGameObjectChild(redrawBehaviour, "Text"));
-            //redrawBehaviourTitle.text = LanguageManager.CurrentLanguage.options.controls_redrawBehaviour;
+            redrawBehaviourTitle.text = LanguageManager.CurrentLanguage.options.controls_redrawBehaviour;
 
             TMP_Dropdown redrawBehaviourDropdown = GetGameObjectChild(redrawBehaviour, "Dropdown").GetComponent<TMP_Dropdown>();
             List<TMP_Dropdown.OptionData> redrawBehaviourDropdownText = redrawBehaviourDropdown.options;
-            //redrawBehaviourDropdownText[0].text = LanguageManager.CurrentLanguage.options.controls_redrawNext;
-            //redrawBehaviourDropdownText[1].text = LanguageManager.CurrentLanguage.options.controls_redrawFirst;
-            //redrawBehaviourDropdownText[2].text = LanguageManager.CurrentLanguage.options.controls_redrawSame;
+            redrawBehaviourDropdownText[0].text = LanguageManager.CurrentLanguage.options.controls_redrawNext;
+            redrawBehaviourDropdownText[1].text = LanguageManager.CurrentLanguage.options.controls_redrawFirst;
+            redrawBehaviourDropdownText[2].text = LanguageManager.CurrentLanguage.options.controls_redrawSame;
 
             TextMeshProUGUI bindsTitle = GetTextMeshProUGUI(controlContent.transform.GetChild(10).gameObject);
             bindsTitle.text = "-- " + LanguageManager.CurrentLanguage.options.controls_bindings + " --";
