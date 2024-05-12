@@ -235,6 +235,7 @@
     <Compile Include="Harmony Patches\ShopPatch.cs" />
     <Compile Include="Harmony Patches\SpawnMenu.cs" />
     <Compile Include="Harmony Patches\Rank.cs" />
+    <Compile Include="Harmony Patches\Speedometer.cs" />
     <Compile Include="Harmony Patches\StatsPatch.cs" />
     <Compile Include="Harmony Patches\StyleHUD.cs" />
     <Compile Include="Harmony Patches\Subtitles\GabrielSubtitlesSwap.cs" />

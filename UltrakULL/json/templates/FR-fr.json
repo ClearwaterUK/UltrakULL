@@ -2923,6 +2923,7 @@
 		"classicHud_weapon": "ARME",
 		"classicHud_arm": "BRAS",
 		"classicHud_railcannonMeter": "CHARGE",
+		"classicHud_speed": "",
 
 		"enemyAlter_title": "CHANGER",
 		"enemyAlter_sizeTitle": "TAILLE",

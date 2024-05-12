@@ -3106,6 +3106,7 @@ namespace UltrakULL.json
         public string classicHud_stamina;
         public string classicHud_arm;
         public string classicHud_railcannonMeter;
+        public string classicHud_speed;
 
         public string enemyAlter_title;
         public string enemyAlter_sizeTitle;

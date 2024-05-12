@@ -2949,6 +2949,7 @@
         "classicHud_weapon": "WEAPON",
         "classicHud_arm": "ARM",
         "classicHud_railcannonMeter": "CHARGE",
+        "classicHud_speed": "SPEED",
 
         "spawner_sandboxTools": "SANDBOX ITEMS :^)",
         "spawner_sandbox": "SANDBOX",

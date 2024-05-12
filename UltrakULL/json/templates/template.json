@@ -2949,6 +2949,7 @@
 		"classicHud_weapon": "",
 		"classicHud_arm": "",
 		"classicHud_railcannonMeter": "",
+		"classicHud_speed": "",
 
 		"spawner_sandboxTools": "",
 		"spawner_sandbox": "",

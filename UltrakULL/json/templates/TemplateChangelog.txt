@@ -34,6 +34,7 @@ options: audio_(volume, soundEffectsVolume, muffleMusic)
 options: assists_(enemySilouettesNone, enemySilouettesFull)
 options: save_slot(1-5), save_failMergeError(1-3), save_failMergeErrorQuitButton, save_saveloadFailError(1-10)
 misc: hud_droneHaunting
+misc: classicHud_speed
 tutorial: audioCalibrationSFXWarning(1-3)
 pauseMenu: pause_skip
 intermission: act2_intermission_endof, act2_intermission_insertAct3
