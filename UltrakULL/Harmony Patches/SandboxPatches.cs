@@ -101,7 +101,6 @@ namespace UltrakULL.Harmony_Patches
                 case "Puppeted": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_puppeted; break;}
                 case "Ignore Player": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_ignorePlayer; break;}
                 case "Attack Enemies": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_attackEnemies; break;}
-                case "Force": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_power; break;}
                 case "Weak": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_metaWeak; break;}
                 case "Unbreakable": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_metaUnbreakable; break; }
                 case "Has Skull": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_hasSkull; break; }
@@ -128,6 +127,8 @@ namespace UltrakULL.Harmony_Patches
                 //Hurtzone
                 case "Damage": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_radianceDamage_tier; break; }
                 case "Hurt Cooldown": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_hurtCooldown; break; }
+                //Hookpoint
+                case "Force": { name = LanguageManager.CurrentLanguage.misc.enemyAlter_power; break; }
                 default: { break; }
             }
             return true;
