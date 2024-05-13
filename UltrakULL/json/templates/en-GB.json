@@ -1393,6 +1393,11 @@
         "hud_railcannonMeter": "RAILCANNON METER",
         "hud_styleMeter": "STYLE METER",
         "hud_styleInfo": "STYLE INFO",
+        "hud_speedoMeterText": "SPEEDOMETER",
+        "hud_speedoMeterTypeOff": "OFF",
+        "hud_speedoMeterTypeOn": "ON",
+        "hud_speedoMeterTypeHorizonal": "HORIZONAL ONLY",
+        "hud_speedoMeterTypeVertical": "VERTICAL ONLY",
 
         "crosshair_title": "CROSSHAIR SETTINGS",
         "crosshair_type": "CROSSHAIR TYPE",

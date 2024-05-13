@@ -1357,6 +1357,11 @@
 		"hud_railcannonMeter": "CANON-ÉLECTRIQUE",
 		"hud_styleMeter": "STYLE-O-MÈTRE",
 		"hud_styleInfo": "INFOS DE STYLE",
+		"hud_speedoMeterText": "",
+		"hud_speedoMeterTypeOff": "",
+		"hud_speedoMeterTypeOn": "",
+		"hud_speedoMeterTypeHorizonal": "",
+		"hud_speedoMeterTypeVertical": "",
 
 		"crosshair_title": "PARAMÈTRES VISEUR",
 		"crosshair_type": "TYPE DE VISEUR",

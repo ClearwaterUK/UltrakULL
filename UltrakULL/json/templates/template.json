@@ -1393,6 +1393,11 @@
 		"hud_railcannonMeter": "",
 		"hud_styleMeter": "",
 		"hud_styleInfo": "",
+		"hud_speedoMeterText": "",
+		"hud_speedoMeterTypeOff": "",
+		"hud_speedoMeterTypeOn": "",
+		"hud_speedoMeterTypeHorizonal": "",
+		"hud_speedoMeterTypeVertical": "",
 
 		"crosshair_title": "",
 		"crosshair_type": "",

@@ -2089,6 +2089,11 @@ namespace UltrakULL.json
         public string hud_railcannonMeter;
         public string hud_styleMeter;
         public string hud_styleInfo;
+        public string hud_speedoMeterText;
+        public string hud_speedoMeterTypeOff;
+        public string hud_speedoMeterTypeOn;
+        public string hud_speedoMeterTypeHorizonal;
+        public string hud_speedoMeterTypeVertical;
 
         public string crosshair_title;
         public string crosshair_type;

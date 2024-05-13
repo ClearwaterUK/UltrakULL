@@ -31,6 +31,7 @@ options: graphics_gamma(1-2), graphics_goreMaxBloodStains
 options: controls_(redraw(Behaviour, Next, First, Same), weaponTitle, punch(Feedbacker, Knuckleblaster), controls_variationSlot(1-3), nextVariation, previousVariation, spawnerArm)
 options: advanced_(title, currentLevel, cybergrindResetText1, cybergrindResetText2, cybergrindResetCancel, cybergrindResetConfirm, cybergrindLocalHighScore, cybergrindResetButton, level52, level71, level73, level7S, 52WaterScrolling, 52WaterWaves, 71Dark, 73Grass, 7SHard)
 options: audio_(volume, soundEffectsVolume, muffleMusic)
+options: hud_(speedoMeterText, speedoMeterType(Off, On, Horizonal, Vertical))
 options: assists_(enemySilouettesNone, enemySilouettesFull)
 options: save_slot(1-5), save_failMergeError(1-3), save_failMergeErrorQuitButton, save_saveloadFailError(1-10)
 misc: hud_droneHaunting

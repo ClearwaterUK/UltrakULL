@@ -621,6 +621,17 @@ namespace UltrakULL
             TextMeshProUGUI styleInfoText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(hudContent, "Style Info"), "Text"));
             styleInfoText.text = LanguageManager.CurrentLanguage.options.hud_styleInfo;
 
+            GameObject speedoMeterDD = GetGameObjectChild(hudContent, "Speedometer (Dropdown)");
+            TextMeshProUGUI speedoMeterText = GetTextMeshProUGUI(GetGameObjectChild(speedoMeterDD, "Text"));
+            speedoMeterText.text = LanguageManager.CurrentLanguage.options.hud_speedoMeterText;
+
+            TMP_Dropdown speedoMeterTypeDropdown = speedoMeterDD.GetComponentInChildren<TMP_Dropdown>();
+            List<TMP_Dropdown.OptionData> speedoMeterTypeDropdownListText = speedoMeterTypeDropdown.options;
+            speedoMeterTypeDropdownListText[0].text = LanguageManager.CurrentLanguage.options.hud_speedoMeterTypeOff;
+            speedoMeterTypeDropdownListText[1].text = LanguageManager.CurrentLanguage.options.hud_speedoMeterTypeOn;
+            speedoMeterTypeDropdownListText[2].text = LanguageManager.CurrentLanguage.options.hud_speedoMeterTypeHorizonal;
+            speedoMeterTypeDropdownListText[3].text = LanguageManager.CurrentLanguage.options.hud_speedoMeterTypeVertical;
+            
             //Crosshair settings
 
             TextMeshProUGUI crosshairTitle = GetTextMeshProUGUI(GetGameObjectChild(hudContent, "-- Crosshair Settings --"));
