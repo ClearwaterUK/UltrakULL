@@ -96,14 +96,18 @@ namespace UltrakULL.Harmony_Patches
 		public static class StatsManager_GetRanksPatch
         {
             [HarmonyPostfix]
-			public static void Patch(FinalRank __instance, ref string __result)
+			public static void Patch(FinalRank __instance, ref string __result, int[] ranksToCheck, float value, bool reverse, bool addToRankScore = false)
 			{
                 try
                 {
                     string rank = __result;
 					Rank ranks = LanguageManager.CurrentLanguage.ranks;
+					if(ranks == null)
+					{
+						Logging.Warn("Ranks is null in JSON lang file! Is ranks section missing?");
+						return;
+					}
 					string replacement = "_";
-
 					switch (rank[15].ToString())
 					{
 						case "P":

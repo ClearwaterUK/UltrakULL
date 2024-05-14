@@ -14,7 +14,15 @@ namespace UltrakULL.Harmony_Patches
         {
             if(!isUsingEnglish())
             {
-                bossBar.bossName = BossStrings.GetBossName(bossBar.source.FullName);
+                string translatedName = BossStrings.GetBossName(bossBar.source.FullName);
+                if(translatedName != null)
+                {
+                    bossBar.bossName = BossStrings.GetBossName(bossBar.source.FullName);
+                }
+                else
+                {
+                    bossBar.bossName = "MISSING BOSS STRING: " + bossBar.bossName;
+                }
             }
             return true;
         }
