@@ -65,7 +65,6 @@ namespace UltrakULL
                 case "ultrakill.insurrknockdown": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_insurrknockdown + "</color>"; }
                 case "ultrakill.interruption": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_interruption + "</color>"; }
                 case "ultrakill.kill": { return LanguageManager.CurrentLanguage.style.style_kill; }
-                case "ultrakill.landyours": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_landyours + "</color>"; }
                 case "ultrakill.limbhit": { return LanguageManager.CurrentLanguage.style.style_limbshot; }
                 case "ultrakill.mauriced": { return LanguageManager.CurrentLanguage.style.style_mauriced; }
                 case "ultrakill.multikill": { return "<color=orange>" + LanguageManager.CurrentLanguage.style.style_multikill + "</color>"; }
@@ -76,8 +75,6 @@ namespace UltrakULL
                 case "ultrakill.projectileboost": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_projectileboost + "</color>"; }
                 case "ultrakill.quickdraw": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_quickdraw + "</color>"; }
                 case "ultrakill.ricoshot": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_ricoshot + "</color>"; }
-                case "ultrakill.rocketreturn": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_rocketreturn + "</color>"; }
-                case "ultrakill.roundtrip": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_roundtrip + "</color>"; }
                 case "ultrakill.secret": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_secret + "</color>"; }
                 case "ultrakill.serve": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_served + "</color>"; }
                 case "ultrakill.strike": { return "<color=#00ffff>" + LanguageManager.CurrentLanguage.style.style_strike + "</color>"; }
