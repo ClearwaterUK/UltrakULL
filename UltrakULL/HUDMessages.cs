@@ -11,6 +11,12 @@ namespace UltrakULL
     {
         public static string GetHUDToolTip(string message)
         {
+            //Cross-compatibility with V-Ranks, pretty sure every HUD message has at least one time "V-Rank" in them
+            if (message.Contains("V-Rank"))
+            {
+                return message;
+            }
+
             if (message.Contains("PUNCH"))
             {
                 return "<color=red>" + LanguageManager.CurrentLanguage.misc.hud_noArm1 + "</color>\n"
@@ -42,9 +48,17 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.misc.hud_clashMode;
             }
+            if(message.Contains("DRONE HAUNTING"))
+            {
+                return LanguageManager.CurrentLanguage.misc.hud_droneHaunting;
+            }
             if (message.Contains("EQUIPPED"))
             {
                 return LanguageManager.CurrentLanguage.misc.hud_weaponVariation;
+            }
+            if (message.Contains("Altered"))
+            {
+                return "<color=red>" + LanguageManager.CurrentLanguage.misc.enemyAlter_alteredDestroyed + "</color>";
             }
             if (message.Contains("=>")) //4-S transaction complete
             {
@@ -56,6 +70,12 @@ namespace UltrakULL
                 return StringsParent.GetMessage(message, "", "");
             }
             
+            //chessTip
+            if(GetCurrentSceneName() == "CreditsMuseum2")
+            {
+                return StringsParent.GetMessage(message, "", "");
+            }
+
 
             //Cybergrind custom pattern fix
             if (GetCurrentSceneName() == "Endless")
@@ -80,8 +100,17 @@ namespace UltrakULL
                 Behaviour bhvr = (Behaviour)test[3];
                 bhvr.enabled = false;
 
-                Text youDiedText = GetTextfromGameObject(deathScreen);
-                youDiedText.text = LanguageManager.CurrentLanguage.misc.youDied1 + "\n\n\n\n\n" + LanguageManager.CurrentLanguage.misc.youDied2;
+                try
+                {
+                    Text youDiedText = GetTextfromGameObject(deathScreen);
+                    youDiedText.text = LanguageManager.CurrentLanguage.misc.youDied1 + "\n\n\n\n\n" + LanguageManager.CurrentLanguage.misc.youDied2;
+                }
+                catch
+                {   //why only EarlyAccessEnd?B
+                    Logging.Warn("Failed to patch deathScreen");
+                    Logging.Warn("trying to get TextMeshProUGUI component.");
+                    GetTextMeshProUGUI(deathScreen).text = LanguageManager.CurrentLanguage.misc.youDied1 + "\n\n\n\n\n" + LanguageManager.CurrentLanguage.misc.youDied2;
+                }
             }
             catch (Exception e)
             {
@@ -98,15 +127,6 @@ namespace UltrakULL
             GameObject styleMeter = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(player, "Main Camera"), "HUD Camera"), "HUD"), "StyleCanvas"), "Panel (1)"), "Panel"), "Text (1)"), "Text");
             TextMeshProUGUI styleMeterMultiplierText = GetTextMeshProUGUI(styleMeter);
             styleMeterMultiplierText.text = LanguageManager.CurrentLanguage.style.stylemeter_multiplier;
-
-            GameObject pressToSkip = GetGameObjectChild(canvasObj, "CutsceneSkipText");
-            
-            //Need to disable the TextOverride component.
-            Component[] test = pressToSkip.GetComponents(typeof(Component));
-            Behaviour bhvr = (Behaviour)test[4];
-            bhvr.enabled = false;
-            TextMeshProUGUI pressToSkipText = GetTextMeshProUGUI(pressToSkip);
-            pressToSkipText.text = LanguageManager.CurrentLanguage.misc.pressToSkip;
             
             //Classic HUD
             GameObject classicHudBw = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "Crosshair Filler"), "AltHud"), "Filler");
@@ -136,6 +156,11 @@ namespace UltrakULL
             TextMeshProUGUI classicHudColorRailcannon = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(classicHudColor, "RailcannonMeter (2)"), "Title"));
             classicHudBwRailcannon.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
             classicHudColorRailcannon.text = LanguageManager.CurrentLanguage.misc.classicHud_railcannonMeter;
+
+            TextMeshProUGUI classicHudBwSpeedometer = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(classicHudBw, "Speedometer"), "Title"));
+            TextMeshProUGUI classicHudColorSpeedometer = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(classicHudColor, "Speedometer"), "Title"));
+            classicHudBwSpeedometer.text = LanguageManager.CurrentLanguage.misc.classicHud_speed;
+            classicHudColorSpeedometer.text = LanguageManager.CurrentLanguage.misc.classicHud_speed;
 
             //Close prompt when reading book
             TextBinds bookPanelBinds = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "ScanningStuff"), "ReadingScanned"), "Panel"), "Text (1)").GetComponent<TextBinds>();

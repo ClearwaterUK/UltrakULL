@@ -18,7 +18,7 @@ namespace UltrakULL.Harmony_Patches
         public class LevelLeaderboardPatch
         {
             [HarmonyPostfix]
-            public static void LevelLeaderboardPatch_Postfix(ref Text ___anyPercentLabel, ref Text ___pRankLabel, ref GameObject ___noItemsPanel)
+            public static void LevelLeaderboardPatch_Postfix(ref TMP_Text ___anyPercentLabel, ref TMP_Text ___pRankLabel, ref GameObject ___noItemsPanel)
             {
                 if(isUsingEnglish())
                 {
@@ -28,12 +28,16 @@ namespace UltrakULL.Harmony_Patches
                 LeaderboardProperties.Difficulties[1] =  LanguageManager.CurrentLanguage.frontend.difficulty_lenient;
                 LeaderboardProperties.Difficulties[2] =  LanguageManager.CurrentLanguage.frontend.difficulty_standard;
                 LeaderboardProperties.Difficulties[3] =  LanguageManager.CurrentLanguage.frontend.difficulty_violent;
-                
+                LeaderboardProperties.Difficulties[4] =  LanguageManager.CurrentLanguage.frontend.difficulty_brutal;
+                //not yet
+                //LeaderboardProperties.Difficulties[5] = LanguageManager.CurrentLanguage.frontend.difficulty_umd;
+
                 ___anyPercentLabel.text = LanguageManager.CurrentLanguage.frontend.leaderboard_anyPercent;
                 ___pRankLabel.text = LanguageManager.CurrentLanguage.frontend.leaderboard_pPercent;
-                
+
                 Text noItems = GetTextfromGameObject(GetGameObjectChild(___noItemsPanel,"Text"));
                 noItems.text = LanguageManager.CurrentLanguage.frontend.leaderboard_noEntries;
+
             }
         }
         
@@ -41,7 +45,7 @@ namespace UltrakULL.Harmony_Patches
         public class LevelLeaderboardEndPatch
         {
             [HarmonyPostfix]
-            public static void LevelLeaderboardEndPatch_Postfix(ref bool ___displayPRank, ref Text ___leaderboardType, ref GameObject ___loadingPanel)
+            public static void LevelLeaderboardEndPatch_Postfix(ref bool ___displayPRank, ref TMP_Text ___leaderboardType, ref GameObject ___loadingPanel)
             {
                 if(isUsingEnglish())
                 {
@@ -51,6 +55,9 @@ namespace UltrakULL.Harmony_Patches
                 
                 TextMeshProUGUI connecting = GetTextMeshProUGUI(___loadingPanel);
                 connecting.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_connectingToSteam;
+
+                TextMeshProUGUI reminder = GetTextMeshProUGUI(GetGameObjectChild(___loadingPanel.transform.parent.gameObject, "SettingsReminder"));
+                reminder.text = LanguageManager.CurrentLanguage.frontend.leaderboard_reminder;
             }
         }
         

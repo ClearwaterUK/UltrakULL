@@ -110,7 +110,38 @@ namespace UltrakULL.Harmony_Patches
         }
     }
 
-    [HarmonyPatch(typeof(FishDB),"SetupWater")]
+    [HarmonyPatch(typeof(FishingRodWeapon),"Update")]
+    public class DisplayWaterType
+    {
+        [HarmonyPostfix]
+        public static void DisplayWaterType_Postfix(ref FishingRodWeapon __instance, ref FishingRodTarget ___targetingCircle, ref FishDB ___currentFishPool, float ___selectedPower)
+        {
+            if(isUsingEnglish())
+            {
+                return;
+            }
+            if(___currentFishPool != null)
+            {
+                switch(___currentFishPool.fullName)
+                {
+                    case "The Ocean": {___targetingCircle.waterNameText.text = LanguageManager.CurrentLanguage.fishing.fish_ocean; break;}
+                    case "Cave Pool": {___targetingCircle.waterNameText.text  = LanguageManager.CurrentLanguage.fishing.fish_cavePool; break;}
+                    case "Stream": {___targetingCircle.waterNameText.text  = LanguageManager.CurrentLanguage.fishing.fish_stream; break;}
+                    case "Lake Waters": {___targetingCircle.waterNameText.text  = LanguageManager.CurrentLanguage.fishing.fish_lake; break;}
+                    case "Lower Bloods": {___targetingCircle.waterNameText.text = LanguageManager.CurrentLanguage.fishing.fish_lakeBloodLower; break;}
+                    case "Lake of Blood": {___targetingCircle.waterNameText.text  = LanguageManager.CurrentLanguage.fishing.fish_lakeBlood; break;}
+                    case "Water Well": {___targetingCircle.waterNameText.text  = LanguageManager.CurrentLanguage.fishing.fish_waterWell; break;}
+                    case "Pan Oil": {___targetingCircle.waterNameText.text  = LanguageManager.CurrentLanguage.fishing.fish_panOil; break;}
+                    case "Holy Lake": {___targetingCircle.waterNameText.text  = LanguageManager.CurrentLanguage.fishing.fish_lakeHoly; break;}
+                    case "Deeper Lake Waters": {___targetingCircle.waterNameText.text  = LanguageManager.CurrentLanguage.fishing.fish_lakeDeep; break;}
+                }
+            }
+            
+        }
+
+    }
+    
+    /*[HarmonyPatch(typeof(FishDB),"SetupWater")]
     public class DisplayWaterType
     {
         [HarmonyPostfix]
@@ -134,7 +165,7 @@ namespace UltrakULL.Harmony_Patches
                 case "Deeper Lake Waters": {__instance.fullName = LanguageManager.CurrentLanguage.fishing.fish_lakeDeep; break;}
             }
         }
-    }
+    }*/
     
     [HarmonyPatch(typeof(FishEncyclopedia),"SelectFish")]
     public class SelectFish
@@ -142,9 +173,9 @@ namespace UltrakULL.Harmony_Patches
         [HarmonyPrefix]
         public static bool SelectFish_Prefix(ref FishObject fish, FishEncyclopedia __instance)
         {
-            if(!isUsingEnglish())
+            if(isUsingEnglish())
             {
-                return false;
+                return true;
             }
             switch(fish.fishName)
             {

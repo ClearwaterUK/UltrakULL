@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using System.Text.RegularExpressions;
 
 using static UltrakULL.CommonFunctions;
+using UnityEngine;
 
 namespace UltrakULL.Harmony_Patches
 {
@@ -21,6 +22,7 @@ namespace UltrakULL.Harmony_Patches
                 return true;
             }
             ___txt = __instance.GetComponent<Text>();
+            ___txt.verticalOverflow = VerticalWrapMode.Overflow;
             ___fullString = ___txt.text;
             ___txt.text = "";
 

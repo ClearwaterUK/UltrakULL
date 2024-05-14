@@ -5,18 +5,49 @@ namespace UltrakULL
 {
     public static class Act3Strings
     {
-        public static string Level71()
+        public static string Level71(string message, string message2)
         {
+            string fullMessage = message + message2;
+            if (fullMessage.Contains("A door opens."))
+            {
+                return (LanguageManager.CurrentLanguage.act3.act3_violenceFirst_doorOpens);
+            }
             return "Unknown 7-1 string";
         }
         
-        public static string Level72()
+        public static string Level72(string message, string message2, string input)
         {
+            string fullMessage = message + message2;
+            if (fullMessage.Contains("Swap arms with"))
+            {
+                return LanguageManager.CurrentLanguage.act3.act3_violenceSecond_guttermanTutorial + " '<color=orange>" + input + "</color>'";
+            }
+            if (fullMessage.Contains("BIGGER BOOM"))
+            {
+                return ("<color=red>" + LanguageManager.CurrentLanguage.act3.act3_violenceSecond_biggerBoom + "</color>");
+            }
+            if (message.Contains("versions"))
+            {
+                return LanguageManager.CurrentLanguage.misc.hud_alternateVersion;
+            }
+            if (fullMessage.Contains("ALTERNATE SHOTGUN"))
+            {
+                return LanguageManager.CurrentLanguage.act3.act3_violenceSecond_alternateShotgun;
+            }
             return "Unknown 7-2 string";
         }
         
-        public static string Level73()
+        public static string Level73(string message, string message2)
         {
+            string fullMessage = message + message2;
+            if (fullMessage.Contains("YOU'RE NOT"))
+            {
+                return (LanguageManager.CurrentLanguage.act3.act3_secretNotReady);
+            }
+            else if (fullMessage.Contains("F E E D"))
+            {
+                return ("<color=red>" + LanguageManager.CurrentLanguage.act3.act3_violenceThird_feedIt + "</color>");
+            }
             return "Unknown 7-3 string";
         }
         
@@ -74,15 +105,15 @@ namespace UltrakULL
             {
                 case "Level 7-1":
                     {
-                        return Level71();
+                        return Level71(message, message2);
                     }
                 case "Level 7-2":
                     {
-                        return Level72();
+                        return Level72(message, message2, input);
                     }
                 case "Level 7-3":
                     {
-                        return Level73();
+                        return Level73(message, message2);
                     }
                 case "Level 7-4":
                     {

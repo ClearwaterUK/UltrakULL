@@ -55,9 +55,14 @@ namespace UltrakULL
                 return fullMessage;
             }
 
-            if (fullMessage.Contains("ALTERNATE"))
+            if (message.Contains("versions"))
             {
-                return LanguageManager.CurrentLanguage.act1.act1_limboFourth_alternateRevolver;
+                return LanguageManager.CurrentLanguage.misc.hud_alternateVersion;
+            }
+
+            if (fullMessage.Contains("ALTERNATE NAILGUN"))
+            {
+                return LanguageManager.CurrentLanguage.act2.act2_greedFourth_alternateNailgun;
             }
 
             if (fullMessage.Contains("You're"))
@@ -233,10 +238,6 @@ namespace UltrakULL
             if(fullMessage.Contains("opens"))
             {
                 return (LanguageManager.CurrentLanguage.act2.act2_greed_secretDoor);
-            }
-            if (fullMessage.Contains("YOU'RE"))
-            {
-                return (LanguageManager.CurrentLanguage.act2.act2_secretNotReady);
             }
 
             switch (currentLevel)

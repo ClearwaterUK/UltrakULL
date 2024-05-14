@@ -43,9 +43,9 @@ namespace UltrakULL
             }
             return "Unknown 1-3 string";
         }
-            //1-4 - Clair De Lune
-            private static string Level14(string message, string message2, string input)
-            {
+        //1-4 - Clair De Lune
+        private static string Level14(string message, string message2, string input)
+        {
             string fullMessage = message + message2;
             if (fullMessage.Contains("PICK"))
             {
@@ -55,10 +55,17 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.act1.act1_limboFourth_hank1 + "\n" + LanguageManager.CurrentLanguage.act1.act1_limboFourth_hank2;
             }
-            if (fullMessage.Contains("ALTERNATE"))
+
+            if (message.Contains("versions"))
+            {
+                return LanguageManager.CurrentLanguage.misc.hud_alternateVersion;
+            }
+
+            if (fullMessage.Contains("ALTERNATE REVOLVER"))
             {
                 return LanguageManager.CurrentLanguage.act1.act1_limboFourth_alternateRevolver;
             }
+
             if (fullMessage.Contains("EQUIPPED"))
             {
                 return LanguageManager.CurrentLanguage.act1.act1_limboFourth_newArm + " '<color=orange>" + input + "'</color>.";

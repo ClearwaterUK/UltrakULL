@@ -416,7 +416,7 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.visualnovel.visualnovel_nihilism1 + "▼";
             }
-            if (inputString.Contains("The human mind"))
+            if (inputString.Contains("The human mind,"))
             {
                 return LanguageManager.CurrentLanguage.visualnovel.visualnovel_nihilism2 + "▼";
             }

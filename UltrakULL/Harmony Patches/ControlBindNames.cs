@@ -37,9 +37,13 @@ namespace UltrakULL.Harmony_Patches
                             sectionText.text = "-- " + LanguageManager.CurrentLanguage.options.controls_arms + " --";
                             break;
                         }
+                        case "-- HUD --":
+                        {
+                            sectionText.text = "-- " + LanguageManager.CurrentLanguage.options.category_hud + " --";
+                            break ;
+                        }
                         default:{ break; }
                     }
-                    
                 }
             }
         }
@@ -54,28 +58,31 @@ namespace UltrakULL.Harmony_Patches
             switch (originalText)
             {
                 case "MOVE": { return LanguageManager.CurrentLanguage.options.controls_move; }
-                case "DODGE": { return LanguageManager.CurrentLanguage.options.controls_dash; }
+                case "DODGE": { return LanguageManager.CurrentLanguage.options.controls_dodge; }
                 case "SLIDE": { return LanguageManager.CurrentLanguage.options.controls_slide; }
                 case "JUMP": { return LanguageManager.CurrentLanguage.options.controls_jump; }
                 case "PRIMARY FIRE": { return LanguageManager.CurrentLanguage.options.controls_primaryFire; }
                 case "SECONDARY FIRE": { return LanguageManager.CurrentLanguage.options.controls_secondaryFire; }
-                case "CHANGE VARIATION": { return LanguageManager.CurrentLanguage.options.controls_changeVariation; }
-                case "SLOT 0": { return LanguageManager.CurrentLanguage.options.controls_slot0; }
-                case "SLOT 1": { return LanguageManager.CurrentLanguage.options.controls_slot1; }
-                case "SLOT 2": { return LanguageManager.CurrentLanguage.options.controls_slot2; }
-                case "SLOT 3": { return LanguageManager.CurrentLanguage.options.controls_slot3; }
-                case "SLOT 4": { return LanguageManager.CurrentLanguage.options.controls_slot4; }
-                case "SLOT 5": { return LanguageManager.CurrentLanguage.options.controls_slot5; }
-                case "SLOT 6": { return LanguageManager.CurrentLanguage.options.controls_slot6; }
-                case "SLOT 7": { return LanguageManager.CurrentLanguage.options.controls_slot7; }
-                case "SLOT 8": { return LanguageManager.CurrentLanguage.options.controls_slot8; }
-                case "SLOT 9": { return LanguageManager.CurrentLanguage.options.controls_slot9; }
+                case "NEXT VARIATION": { return LanguageManager.CurrentLanguage.options.controls_nextVariation; }
+                case "PREVIOUS VARIATION": { return LanguageManager.CurrentLanguage.options.controls_previousVariation; }
+                case "REVOLVER": { return LanguageManager.CurrentLanguage.shop.shop_weaponsRevolver; }
+                case "SHOTGUN": { return LanguageManager.CurrentLanguage.shop.shop_weaponsShotgun; }
+                case "NAILGUN": { return LanguageManager.CurrentLanguage.shop.shop_weaponsNailgun; }
+                case "RAILCANNON": { return LanguageManager.CurrentLanguage.shop.shop_weaponsRailcannon; }
+                case "ROCKET LAUNCHER": { return LanguageManager.CurrentLanguage.shop.shop_weaponsRocketLauncher; }
+                case "SPAWNER ARM": { return LanguageManager.CurrentLanguage.options.controls_spawnerArm; }
                 case "NEXT WEAPON": { return LanguageManager.CurrentLanguage.options.controls_nextWeapon; }
                 case "PREVIOUS WEAPON": { return LanguageManager.CurrentLanguage.options.controls_previousWeapon; }
-                case "LAST WEAPON": { return LanguageManager.CurrentLanguage.options.controls_lastUsedWeapon; }
-                case "CHANGE FIST": { return LanguageManager.CurrentLanguage.options.controls_changeArm; }
+                case "LAST USED WEAPON": { return LanguageManager.CurrentLanguage.options.controls_lastUsedWeapon; }
+                case "VARIATION SLOT 1": { return LanguageManager.CurrentLanguage.options.controls_variationSlot1; }
+                case "VARIATION SLOT 2": { return LanguageManager.CurrentLanguage.options.controls_variationSlot2; }
+                case "VARIATION SLOT 3": { return LanguageManager.CurrentLanguage.options.controls_variationSlot3; }
                 case "PUNCH": { return LanguageManager.CurrentLanguage.options.controls_punch; }
+                case "CHANGE FIST": { return LanguageManager.CurrentLanguage.options.controls_changeArm; }
+                case "PUNCH (FEEDBACKER)": { return LanguageManager.CurrentLanguage.options.controls_punchFeedbacker; }
+                case "PUNCH (KNUCKLEBLASTER)": { return LanguageManager.CurrentLanguage.options.controls_punchKnuckleblaster; }
                 case "HOOK": { return LanguageManager.CurrentLanguage.options.controls_whiplash; }
+                case "STATS": { return LanguageManager.CurrentLanguage.sandbox.sandbox_shop_stats; }
                 default: return originalText;
             }
         }

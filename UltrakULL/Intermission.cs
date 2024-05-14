@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
 
@@ -37,18 +37,32 @@ namespace UltrakULL
 
             Text tobeContinuedShadow = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(intermissionObject, "Panel (1)"), "Text"));
             tobeContinuedShadow.text = LanguageManager.CurrentLanguage.intermission.act2_intermission_tobecontinuedshadow;
+            
+            GameObject act2EndObject = GetGameObjectChild(GetGameObjectChild(intermissionObject, "Act End Message"), "Sound 1");
 
-            GameObject earlyAccessEnd = GetGameObjectChild(intermissionObject, "Early Access End Screen");
-            if(earlyAccessEnd != null)
+            Text act2EndText = GetTextfromGameObject(GetGameObjectChild(act2EndObject, "Text"));
+            act2EndText.text = LanguageManager.CurrentLanguage.intermission.act2_intermission_endof + "\n\n\n\n" + LanguageManager.CurrentLanguage.intermission.act2_intermission_insertAct3;
+            
+            Text act2EndMenu = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(act2EndObject, "Menu"), "Text"));
+            act2EndMenu.text = LanguageManager.CurrentLanguage.intermission.act1_intermission_returnToMenu;
+
+            Text act2EndInsert = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(act2EndObject, "Insert"), "Text"));
+            act2EndInsert.text = LanguageManager.CurrentLanguage.intermission.act1_intermission_insert;
+        }
+
+        private void EarlyAccessEnd(GameObject intermissionObject)
+        {
+            GameObject earlyAccessEnd = GetGameObjectChild(intermissionObject, "Skippables");
+            if (earlyAccessEnd != null)
             {
-                Text earlyAccessEndText = GetTextfromGameObject(GetGameObjectChild(earlyAccessEnd, "Text"));
+                TextMeshProUGUI earlyAccessEndText = GetTextMeshProUGUI(GetGameObjectChild(earlyAccessEnd, "Text"));
 
                 earlyAccessEndText.text =
                     "<size=48><b>" + LanguageManager.CurrentLanguage.misc.earlyAccessEnd1 + "</b></size>" + "\n\n"
                     + LanguageManager.CurrentLanguage.misc.earlyAccessEnd2 + "\n\n"
                     + LanguageManager.CurrentLanguage.misc.earlyAccessEnd3;
 
-                Text earlyAccessQuitToMenu = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(earlyAccessEnd, "Quit Mission"),"Text"));
+                TextMeshProUGUI earlyAccessQuitToMenu = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(earlyAccessEnd, "Quit Mission"), "Text"));
                 earlyAccessQuitToMenu.text = LanguageManager.CurrentLanguage.intermission.act1_intermission_returnToMenu;
             }
         }
@@ -61,6 +75,7 @@ namespace UltrakULL
             {
                 case "Intermission1": { Act1Int(intermissionObject);  break; }
                 case "Intermission2": { Act2Int(intermissionObject);  break; }
+                case "EarlyAccessEnd": { EarlyAccessEnd(GetGameObjectChild(GetGameObjectChild(canvasObj, "UnderwaterOverlay"), "Panel")); break; }
             }
         }
     }

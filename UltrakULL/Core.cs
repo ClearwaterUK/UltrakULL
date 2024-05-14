@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -28,8 +29,15 @@ namespace UltrakULL
         public static Font MuseumFont;
         public static TMP_FontAsset GlobalFontTMP;
         public static TMP_FontAsset MuseumFontTMP;
-        
-        public static bool wasLanguageReset = false;
+        public static TMP_FontAsset CJKFontTMP;
+        public static TMP_FontAsset jaFontTMP;
+        public static TMP_FontAsset ArabicFontTMP;
+		public static TMP_FontAsset HebrewFontTMP;
+        public static Sprite[] CustomRankImages;
+
+        public static Sprite ArabicUltrakillLogo;
+
+		public static bool wasLanguageReset = false;
         
         private static readonly HttpClient Client = new HttpClient();
         
@@ -91,7 +99,10 @@ namespace UltrakULL
                 //Checkpoint
                 TextMeshProUGUI checkpointText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Restart Checkpoint"), "Text"));
                 checkpointText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_respawn;
-
+                if (GetCurrentSceneName().Contains("Intermission"))
+                {
+                    checkpointText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_skip;
+                }
                 //Restart mission
                 TextMeshProUGUI restartText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(pauseMenu, "Restart Mission"), "Text"));
                 restartText.text = LanguageManager.CurrentLanguage.pauseMenu.pause_restart;
@@ -149,7 +160,70 @@ namespace UltrakULL
             //Will load from the same directory that the dll is in.
             AssetBundle fontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder,"ullfont.resource"));
 
-            if(fontBundle == null)
+            AssetBundle extraFontBundle = AssetBundle.LoadFromFile(Path.Combine(MainPatch.ModFolder, "arabfonts"));
+
+            if (extraFontBundle == null)
+            {
+                Logging.Error("Failed to load Arabic / Hebrew fonts. :( (No extra AssetBundle found!)");
+            }
+            else
+            {
+                Logging.Message("Extra Fonts Asset Bundle has been loaded...");
+
+                TMP_FontAsset arabicFontAsset = extraFontBundle.LoadAsset<TMP_FontAsset>("segoeui SDF Arabic");
+				TMP_FontAsset hebrewFontAsset = extraFontBundle.LoadAsset<TMP_FontAsset>("segoeui SDF Hebrew");
+				Sprite arabicLogo = extraFontBundle.LoadAsset<Sprite>("2023_improved_logo.png");
+
+                Sprite rankD = extraFontBundle.LoadAsset<Sprite>("RankD.png");
+                Sprite rankC = extraFontBundle.LoadAsset<Sprite>("RankC.png");
+                Sprite rankB = extraFontBundle.LoadAsset<Sprite>("RankB.png");
+                Sprite rankA = extraFontBundle.LoadAsset<Sprite>("RankA.png");
+                Sprite rankS = extraFontBundle.LoadAsset<Sprite>("RankS.png");
+                Sprite rankSS = extraFontBundle.LoadAsset<Sprite>("RankSS.png");
+                Sprite rankSSS = extraFontBundle.LoadAsset<Sprite>("RankSSS.png");
+                Sprite rankU = extraFontBundle.LoadAsset<Sprite>("RankU.png");
+
+                CustomRankImages = new Sprite[8];
+				CustomRankImages[0] = rankD;
+				CustomRankImages[1] = rankC;
+				CustomRankImages[2] = rankB;
+				CustomRankImages[3] = rankA;
+				CustomRankImages[4] = rankS;
+				CustomRankImages[5] = rankSS;
+				CustomRankImages[6] = rankSSS;
+				CustomRankImages[7] = rankU;
+
+				if (arabicFontAsset == null)
+                {
+                    Logging.Warn("There is no Arabic font in this AssetBundle!?");
+                }
+                else
+                {
+                    Logging.Message("Arabic Font has been loaded.");
+                    ArabicFontTMP = arabicFontAsset;
+                }
+
+                if (arabicLogo == null)
+                {
+					Logging.Warn("There is no Arabic logo in this AssetBundle!?");
+				}
+                else
+                {
+                    ArabicUltrakillLogo = arabicLogo;
+                }
+
+				if (hebrewFontAsset == null)
+				{
+					Logging.Warn("There is no Hebrew font in this AssetBundle!?");
+				}
+				else
+				{
+					Logging.Message("Hebrew Font has been loaded.");
+					HebrewFontTMP = hebrewFontAsset;
+				}
+			}
+
+			if (fontBundle == null)
             {
                 Logging.Error("FAILED TO LOAD");
             }
@@ -158,12 +232,15 @@ namespace UltrakULL
                 Logging.Message("Font bundle loaded.");
                 Logging.Message("Loading fonts from bundle...");
                 
-                Font font1 = fontBundle.LoadAsset<Font>("VCR_OSD_MONO");
+                Font font1 = fontBundle.LoadAsset<Font>("VCR_OSD_MONO_EXTENDED");
                 Font font2 = fontBundle.LoadAsset<Font>("EBGaramond-Regular");
-                TMP_FontAsset font1TMP = fontBundle.LoadAsset<TMP_FontAsset>("VCR_OSD_MONO");
-                TMP_FontAsset font2TMP = fontBundle.LoadAsset<TMP_FontAsset>("EBGaramond-Regular");
+                TMP_FontAsset font1TMP = fontBundle.LoadAsset<TMP_FontAsset>("VCR_OSD_MONO_EXTENDED_TMP");
+                TMP_FontAsset font2TMP = fontBundle.LoadAsset<TMP_FontAsset>("EBGaramond-Regular_TMP");
+    
                 
-                if(font1 && font2)
+                TMP_FontAsset cjkFontTMP = fontBundle.LoadAsset<TMP_FontAsset>("NotoSans-CJK_TMP");
+                TMP_FontAsset jafontTMP = fontBundle.LoadAsset<TMP_FontAsset>("JF-Dot-jiskan16s-2000_TMP");
+                if (font1 && font2)
                 {
                     Logging.Warn("Normal fonts loaded.");
                     GlobalFont = font1;
@@ -175,11 +252,15 @@ namespace UltrakULL
                     Logging.Error("FAILED TO LOAD NORMAL FONTS");
                     GlobalFontReady = false;
                 }
-                if(font1TMP && font2TMP)
+                if(font1TMP && font2TMP && cjkFontTMP)
                 {
                     Logging.Warn("Normal TMP fonts loaded.");
                     GlobalFontTMP = font1TMP;
                     MuseumFontTMP = font2TMP;
+                    CJKFontTMP = cjkFontTMP;
+                    jaFontTMP = jafontTMP;
+                    
+                    TMPFontReady = true;
                 }
                 else
                 {
@@ -228,9 +309,9 @@ namespace UltrakULL
                         if (ultrakullLogo != null) {GameObject.Destroy(ultrakullLogo);}
                         ultrakullLogo = GameObject.Instantiate(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj, "Main Menu (1)"), "Title"), "Text"), canvasObj.transform);
                         ultrakullLogo.transform.localPosition = new Vector3(1075, 210, 0);
-                        Text ultrakullLogoText = GetTextfromGameObject(ultrakullLogo);
-                        ultrakullLogoText.text = "ultrakULL loaded.\nVersion: " + MainPatch.GetVersion() + "\nCurrent locale: " + LanguageManager.CurrentLanguage.metadata.langName;
-                        ultrakullLogoText.alignment = TextAnchor.UpperLeft;
+                        TextMeshProUGUI ultrakullLogoText = GetTextMeshProUGUI(ultrakullLogo);
+                        ultrakullLogoText.text = "UltrakULL loaded.\nVersion: " + MainPatch.GetVersion() + "\nCurrent locale: " + LanguageManager.CurrentLanguage.metadata.langName;
+                        ultrakullLogoText.alignment = TextAlignmentOptions.TopLeft;
                         ultrakullLogoText.fontSize = 16;
                         
                             
@@ -274,6 +355,7 @@ namespace UltrakULL
                         Logging.Message("Attempting to patch base elements");
                         try{PatchPauseMenu(ref canvasObj);} catch(Exception e){Console.WriteLine(e.ToString());}
                         try{Cheats.PatchCheatConsentPanel(ref canvasObj);;} catch(Exception e){Console.WriteLine(e.ToString());}
+                        try{Sandbox.PatchAlterMenu();} catch(Exception e){ Console.WriteLine(e.ToString());}
                         try{HUDMessages.PatchDeathScreen(ref canvasObj);} catch(Exception e){Console.WriteLine(e.ToString());}
                         try{LevelStatWindow.PatchStats(ref canvasObj);} catch(Exception e){Console.WriteLine(e.ToString());}
                         try{HUDMessages.PatchMisc(ref canvasObj);} catch(Exception e){Console.WriteLine(e.ToString());}
@@ -307,6 +389,18 @@ namespace UltrakULL
                                 Logging.Message("Act 2");
                                 Act2.PatchAct2(ref canvasObj);
                             }
+                            else if(levelName.Contains("7-") || levelName.Contains("8-") || levelName.Contains("9-"))
+                            {
+                                Logging.Message("Act 3");
+                                if(LanguageManager.CurrentLanguage.act3 != null)
+                                {
+                                    Act3.PatchAct3(ref canvasObj);
+                                }
+                                else
+                                {
+                                    Logging.Warn("Category is not found in the language file!");
+                                }
+                            }
                             else if (levelName.Contains("P-"))
                             {
                                 Logging.Message("Prime");
@@ -322,7 +416,7 @@ namespace UltrakULL
                                 Logging.Message("CyberGrind");
                                 CyberGrind.PatchCg();
                             }
-                            else if (levelName.Contains("Intermission"))
+                            else if (levelName.Contains("Intermission") || levelName.Contains("EarlyAccessEnd"))
                             {
                                 Logging.Message("Intermission");
                                 Intermission intermission = new Intermission(ref canvasObj);
@@ -345,44 +439,7 @@ namespace UltrakULL
                 //Open Language Folder button in Options->Language
                 TextMeshProUGUI openLangFolderText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(canvasObj,"OptionsMenu"), "Language Page"),"Scroll Rect (1)"),"Contents"),"OpenLangFolder"),"Slot Text")); 
                 openLangFolderText.text = "<color=#03fc07>Open language folder</color>";
-
-                //Get the mods/restart buttons...
-                GameObject ummModsButton = null;
-                GameObject ummRestartButton = null;
-
-                GameObject titleObject = GetGameObjectChild(canvasObj, "Main Menu (1)");
-
-                foreach (Transform button in titleObject.GetComponentsInChildren<Transform>())
-                {
-                    if(button.name == "Continue(Clone)")
-                    {
-                        Text ummButton = GetTextfromGameObject(GetGameObjectChild(button.gameObject, "Text"));
-                        switch(ummButton.text)
-                        {
-                            case "MODS":
-                            {
-                                button.name = "ModsButton";
-                                ummModsButton = button.gameObject;
-                                break;
-                            }
-                            case "RESTART":
-                            {
-                                button.name = "RestartButton";
-                                ummRestartButton = button.gameObject;
-                                break;
-                            }
-                        }
-                    }
-                }
-                //...and from here we can translate the UMM buttons.
-                if(ummModsButton && ummRestartButton)
-                {
-                    Text ummModsText = GetTextfromGameObject(GetGameObjectChild(ummModsButton,"Text"));
-                    ummModsText.text = LanguageManager.CurrentLanguage.frontend.mainmenu_mods;
                 
-                    Text ummRestartText = GetTextfromGameObject(GetGameObjectChild(ummRestartButton,"Text"));
-                    ummRestartText.text = LanguageManager.CurrentLanguage.frontend.mainmenu_restart;
-                }
             }
         }
     }

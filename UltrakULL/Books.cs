@@ -37,14 +37,14 @@ namespace UltrakULL
                         + LanguageManager.CurrentLanguage.books.books_greedSecond3 + "\n\n"
                         + LanguageManager.CurrentLanguage.books.books_greedSecond4 + "\n\n"
                         + LanguageManager.CurrentLanguage.books.books_greedSecond5 + "</i>\n\n"
-                        + "<b>" + LanguageManager.CurrentLanguage.books.books_greedSecond6 + "</b>\n";
+                        + "<b>" + LanguageManager.CurrentLanguage.books.books_greedSecond6 + "</b>";
                     }
 
                 case "Level 4-3": {
                         return LanguageManager.CurrentLanguage.books.books_greedThird1 + "\n\n"
                             + LanguageManager.CurrentLanguage.books.books_greedThird2 + "\n\n"
                             + LanguageManager.CurrentLanguage.books.books_greedThird3 + "\n\n"
-                            + LanguageManager.CurrentLanguage.books.books_greedThird4 + "\n\n";
+                            + LanguageManager.CurrentLanguage.books.books_greedThird4;
                     }
 
                 case "Level 5-2": {
@@ -83,32 +83,32 @@ namespace UltrakULL
                         + LanguageManager.CurrentLanguage.fishing.fish_book8 + "\n\n"
                         
                         + LanguageManager.CurrentLanguage.fishing.fish_book7 + " "
-                        + LanguageManager.CurrentLanguage.fishing.fish_book8 + "\n\n"
+                        + LanguageManager.CurrentLanguage.fishing.fish_book8
                         
-                        + "<size=47>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=45>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=43>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=41>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=39>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=37>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=35>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=33>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=31>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=29>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=27>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=25>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=23>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=21>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=19>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=17>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=15>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=13>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=11>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=9>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=7>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=5>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=3>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n"
-                        + "<size=1>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>" + "\n\n"
+                        + "<size=47>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=45>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=43>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=41>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=39>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=37>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=35>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=33>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=31>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=29>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=27>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=25>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=23>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=21>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=19>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=17>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=15>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=13>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=11>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=9>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=7>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=5>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=3>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>\n"
+                        + "<size=1>" + LanguageManager.CurrentLanguage.fishing.fish_book9 + "</size>"
                         
                         +  LanguageManager.CurrentLanguage.fishing.fish_book10;
                     }
@@ -120,13 +120,67 @@ namespace UltrakULL
                             + LanguageManager.CurrentLanguage.fishing.fish_bottleMessage3 + "\n\n\n"
                             + LanguageManager.CurrentLanguage.fishing.fish_bottleMessage4 + "\n\n\n"
                             + LanguageManager.CurrentLanguage.fishing.fish_bottleMessage5 + "\n\n\n"
-                            + LanguageManager.CurrentLanguage.fishing.fish_bottleMessage6 + "\n\n\n";
+                            + LanguageManager.CurrentLanguage.fishing.fish_bottleMessage6;
                     }
                     
                     
                 }
                 
-                default: { return "Unknown book"; }
+                case "Level 7-1": {
+                    //Book
+                    if(originalText.Contains("The unending halls of")) {
+                        return "<b>" + LanguageManager.CurrentLanguage.books.books_violenceFirst1 + "</b>\n"
+                        + "<b>" + LanguageManager.CurrentLanguage.books.books_violenceFirst2 + "</b>\n\n"
+                        + LanguageManager.CurrentLanguage.books.books_violenceFirst3 + "\n\n"
+                        + LanguageManager.CurrentLanguage.books.books_violenceFirst4 + "\n\n\n"
+                        + LanguageManager.CurrentLanguage.books.books_violenceFirst5 + "\n\n"
+                        + LanguageManager.CurrentLanguage.books.books_violenceFirst6 + "\n\n"
+                        + LanguageManager.CurrentLanguage.books.books_violenceFirst7 + "\n\n"
+                        + LanguageManager.CurrentLanguage.books.books_violenceFirst8 + "\n\n"
+                        + "<color=red>" + LanguageManager.CurrentLanguage.books.books_violenceFirst9 + "</color>";
+                    }
+                    
+                    //Johninator Slate thing...?
+                    else {
+                        return LanguageManager.CurrentLanguage.books.books_violenceFirst_Slate1 + "\n\n"
+                            + LanguageManager.CurrentLanguage.books.books_violenceFirst_Slate2 + "\n\n"
+                            + LanguageManager.CurrentLanguage.books.books_violenceFirst_Slate3 + "\n\n"
+                            + LanguageManager.CurrentLanguage.books.books_violenceFirst_Slate4;
+                    }
+                }
+
+                case "Level 7-2": {
+                        if (originalText.Contains("> < < > < < > > < > > < >"))
+                        {
+                            return LanguageManager.CurrentLanguage.books.books_violenceSecond1 + "\n\n"
+                                + LanguageManager.CurrentLanguage.books.books_violenceSecond2 + "\n\n"
+                                + "> < < > < < > > < > > < >";
+                        }
+                        else
+                        {
+                            return "<i>" + LanguageManager.CurrentLanguage.books.books_violenceSecondAmbush1 + "\n\n\n\n"
+                                + LanguageManager.CurrentLanguage.books.books_violenceSecondAmbush2 + "\n\n\n\n\n"
+                                + LanguageManager.CurrentLanguage.books.books_violenceSecondAmbush1 + "\n\n\n\n"
+                                + LanguageManager.CurrentLanguage.books.books_violenceSecondAmbush3 + "\n\n\n\n\n"
+                                + LanguageManager.CurrentLanguage.books.books_violenceSecondAmbush1 + "\n\n\n\n"
+                                + LanguageManager.CurrentLanguage.books.books_violenceSecondAmbush4 + "</i>";
+                            
+                        }
+                    }
+
+                case "Level 7-4": {
+                        return "<size=20><color=red>" + LanguageManager.CurrentLanguage.books.books_violenceFourth1 + "</color></size>\n\n\n"
+                            + "<size=20><color=red>" + LanguageManager.CurrentLanguage.books.books_violenceFourth2 + "</color></size>\n\n\n"
+                            + "<size=20><color=red>" + LanguageManager.CurrentLanguage.books.books_violenceFourth3 + "</color></size>\n\n\n"
+                            + "<size=20><color=red>" + LanguageManager.CurrentLanguage.books.books_violenceFourth4 + "</color></size>\n\n"
+                            + "<size=20>" + LanguageManager.CurrentLanguage.books.books_violenceFourth5 + "</size>";
+                    }
+                case "Level 7-S":{
+                        return LanguageManager.CurrentLanguage.books.books_violenceSecret_Slate1 + "\n\n"
+                        + LanguageManager.CurrentLanguage.books.books_violenceSecret_Slate2;
+                }
+                
+                default: { return "<big><b>Unknown book</b></big>\n\n" + originalText; }
             }
         }
     }

@@ -9,6 +9,20 @@ using static UltrakULL.CommonFunctions;
 
 namespace UltrakULL.Harmony_Patches
 {
+    [HarmonyPatch(typeof(CutsceneSkipText),"Show")]
+    public static class CutsceneSkipTextPatch
+    {
+        [HarmonyPostfix]
+        public static void CutsceneSkipText_Patch(CutsceneSkipText __instance, ref TMP_Text ___txt)
+        {
+            Console.WriteLine(___txt.text);
+            //Need to disable the TextOverride component. Slightly hacky but we can't access TextOverride directly.
+            Component[] test = __instance.GetComponents(typeof(Component));
+            Behaviour bhvr = (Behaviour)test[3];
+            bhvr.enabled = false;
+            ___txt.text = LanguageManager.CurrentLanguage.misc.pressToSkip;
+        }
+    }
 
     [HarmonyPatch(typeof(HudMessage), "Update")]
     public static class HudMessageUpdatePatch

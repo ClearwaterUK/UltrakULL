@@ -49,29 +49,26 @@ namespace UltrakULL.Harmony_Patches.Subtitles
         [HarmonyPostfix]
         public static void GabrielVoice_Start(ref GabrielVoice __instance, ref string[] ___taunts, ref string[] ___tauntsSecondPhase)
         {
-            switch (GetCurrentSceneName())
+            if (__instance.gameObject.name.Contains("2nd"))
             {
-                case "Level 3-2":
-                {
-                    __instance.phaseChangeSubtitle = CurrentLanguage.subtitles.subtitles_gabriel_phaseChange;
-                    
-                    for (var i = 0; i < FirstEncounterTauntsOrder.Count; i++)
-                        ___taunts[i] = FirstEncounterTauntsOrder[i];
-                    
-                    break;
-                }
-                case "Level 6-2":
-                {
-                    __instance.phaseChangeSubtitle = CurrentLanguage.subtitles.subtitles_gabrielSecondPhaseChange;
-                    
-                    for (var i = 0; i < SecondEncounterTauntsOrder.Count; i++)
-                        ___taunts[i] = SecondEncounterTauntsOrder[i];
-                    
-                    for (var i = 0; i < SecondEncounterPhaseTwoTauntsOrder.Count; i++)
-                        ___tauntsSecondPhase[i] = SecondEncounterPhaseTwoTauntsOrder[i];
+                __instance.phaseChangeSubtitle = CurrentLanguage.subtitles.subtitles_gabrielSecondPhaseChange;
 
-                    break;
-                }
+                for (var i = 0; i < SecondEncounterTauntsOrder.Count; i++)
+                    ___taunts[i] = SecondEncounterTauntsOrder[i];
+
+                for (var i = 0; i < SecondEncounterPhaseTwoTauntsOrder.Count; i++)
+                    ___tauntsSecondPhase[i] = SecondEncounterPhaseTwoTauntsOrder[i];
+
+                return;
+            }
+            else
+            {
+                __instance.phaseChangeSubtitle = CurrentLanguage.subtitles.subtitles_gabriel_phaseChange;
+                    
+                for (var i = 0; i < FirstEncounterTauntsOrder.Count; i++)
+                    ___taunts[i] = FirstEncounterTauntsOrder[i];
+                    
+                return;
             }
         }
     }

@@ -36,7 +36,7 @@ namespace UltrakULL
 
             //Need to disable the TextOverride component.
             Component[] test = cheatsConsentTextObject.GetComponents(typeof(Component));
-            Behaviour bhvr = (Behaviour)test[3];
+            Behaviour bhvr = (Behaviour)test[2];
             bhvr.enabled = false;
 
             //Cheat confirmation panel
@@ -64,6 +64,9 @@ namespace UltrakULL
                     {
                         case "STAY ACTIVE": { return LanguageManager.CurrentLanguage.cheats.cheats_stayActive; }
                         case "DISABLE ON RELOAD": { return LanguageManager.CurrentLanguage.cheats.cheats_disableOnReload; }
+                        case "SAVE": { return LanguageManager.CurrentLanguage.cheats.cheats_dupesSave; }
+                        case "NEW SAVE": { return LanguageManager.CurrentLanguage.cheats.cheats_dupesNewSave; }
+                        case "LOAD LATEST SAVE": { return LanguageManager.CurrentLanguage.cheats.cheats_loadLatestSave; }
                         case "EQUIP": { return LanguageManager.CurrentLanguage.cheats.cheats_equip; }
                         case "REMOVE": { return LanguageManager.CurrentLanguage.cheats.cheats_remove; }
                         case "OPEN": { return LanguageManager.CurrentLanguage.cheats.cheats_open; }
@@ -94,6 +97,7 @@ namespace UltrakULL
                     case "ultrakill.spawner-arm": { return LanguageManager.CurrentLanguage.cheats.cheats_spawnerArm; }
                     case "ultrakill.teleport-menu": { return LanguageManager.CurrentLanguage.cheats.cheats_teleportMenu; }
                     case "ultrakill.full-bright": { return LanguageManager.CurrentLanguage.cheats.cheats_fullBright; }
+                    case "ultrakill.invincibility": { return LanguageManager.CurrentLanguage.cheats.cheats_invincibility; }
 
                     case "ultrakill.noclip": { return LanguageManager.CurrentLanguage.cheats.cheats_noclip; }
                     case "ultrakill.flight": { return LanguageManager.CurrentLanguage.cheats.cheats_flight; }
@@ -103,6 +107,8 @@ namespace UltrakULL
                     case "ultrakill.infinite-power-ups": { return LanguageManager.CurrentLanguage.cheats.cheats_infinitePowerUps; }
 
                     case "ultrakill.blind-enemies": { return LanguageManager.CurrentLanguage.cheats.cheats_blindEnemies; }
+                    case "ultrakill.enemy-hate-enemy": { return LanguageManager.CurrentLanguage.cheats.cheats_enemiesHateEnemies; }
+                    case "ultrakill.enemy-ignore-player": { return LanguageManager.CurrentLanguage.cheats.cheats_enemiesIgnorePlayer; }
                     case "ultrakill.disable-enemy-spawns": { return LanguageManager.CurrentLanguage.cheats.cheats_disableEnemySpawns; }
                     case "ultrakill.invincible-enemies": { return LanguageManager.CurrentLanguage.cheats.cheats_invincibleEnemies; }
                     case "ultrakill.kill-all-enemies": { return LanguageManager.CurrentLanguage.cheats.cheats_killAllEnemies; }
@@ -115,6 +121,12 @@ namespace UltrakULL
                     case "ultrakill.sandbox.snapping": { return LanguageManager.CurrentLanguage.cheats.cheats_snapping; }
                     case "ultrakill.sandbox.physics": { return LanguageManager.CurrentLanguage.cheats.cheats_physics; }
                     case "ultrakill.clash-mode": { return LanguageManager.CurrentLanguage.cheats.cheats_crashMode; }
+
+                    
+                    case "ultrakill.hide-weapons": { return LanguageManager.CurrentLanguage.cheats.cheats_hideWeapons; }
+                    case "ultrakill.hide-ui": { return LanguageManager.CurrentLanguage.cheats.cheats_hideUi; }
+
+                    case "ultrakill.ghost-drone-mode": { return LanguageManager.CurrentLanguage.cheats.cheats_ghostDroneMode; }
                 }
                 return cheatIdentifier;
             }

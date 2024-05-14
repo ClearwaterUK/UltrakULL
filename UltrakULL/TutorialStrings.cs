@@ -90,11 +90,18 @@ namespace UltrakULL
         {
             try
             {
-                GameObject calibrationAudioWindow = GetGameObjectChild(GetGameObjectChild(canvasObj, "Intro"), "Audio Calibration");
+                GameObject calibrationIntro = GetGameObjectChild(canvasObj, "Intro");
+                GameObject calibrationAudioWindow = GetGameObjectChild(calibrationIntro, "Audio Calibration");
                 GameObject calibrationAudioWindowWarning = GetGameObjectChild(calibrationAudioWindow, "Warning");
-                GameObject calibrationVideoWindow = GetGameObjectChild(GetGameObjectChild(canvasObj, "Intro"), "Video Calibration");
-                GameObject calibrationMechanicsWindow = GetGameObjectChild(GetGameObjectChild(canvasObj, "Intro"), "Difficulty Select");
-                GameObject calibrationControllerWindow = GetGameObjectChild(GetGameObjectChild(canvasObj, "Intro"), "Auto-Aim Settings");
+                GameObject calibrationVideoWindow = GetGameObjectChild(calibrationIntro, "Video Calibration");
+                GameObject calibrationMechanicsWindow = GetGameObjectChild(calibrationIntro, "Difficulty Select");
+                GameObject calibrationControllerWindow = GetGameObjectChild(calibrationIntro, "Auto-Aim Settings");
+
+                TextMeshProUGUI nofade = GetTextMeshProUGUI(GetGameObjectChild(calibrationIntro, "Page 2 NoFade"));
+                nofade.text = 
+                    "<color=red>" + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed1 + "\n"
+                    + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed2 + "\n"
+                    + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed3 + "</color>";
 
                 //Audio
                 TextMeshProUGUI calibrationAudioTitle = GetTextMeshProUGUI(GetGameObjectChild(calibrationAudioWindow, "Text"));
@@ -102,6 +109,9 @@ namespace UltrakULL
 
                 TextMeshProUGUI calibrationAudioMaster = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationAudioWindow, "Master Volume (1)"), "Text"));
                 calibrationAudioMaster.text = LanguageManager.CurrentLanguage.options.audio_globalVolume;
+
+                TextMeshProUGUI calibrationAudioSFX = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationAudioWindow, "SFX Volume (1)"), "Text"));
+                calibrationAudioSFX.text = LanguageManager.CurrentLanguage.options.audio_soundEffectsVolume;
 
                 TextMeshProUGUI calibrationAudioMusic = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationAudioWindow, "Music Volume (1)"), "Text"));
                 calibrationAudioMusic.text = LanguageManager.CurrentLanguage.options.audio_musicVolume;
@@ -113,11 +123,17 @@ namespace UltrakULL
                 calibrationAudioDoneAlt.text = LanguageManager.CurrentLanguage.shop.shop_colorsDone;
 
                 //Audio warning
-                TextMeshProUGUI calibrationAudioWarningPrompt = GetTextMeshProUGUI(GetGameObjectChild(calibrationAudioWindowWarning, "Text"));
-                calibrationAudioWarningPrompt.text =
+                TextMeshProUGUI calibrationMasterAudioWarningPrompt = GetTextMeshProUGUI(GetGameObjectChild(calibrationAudioWindowWarning, "Text (No Master)"));
+                calibrationMasterAudioWarningPrompt.text =
                     "<color=red>" + LanguageManager.CurrentLanguage.tutorial.tutorial_audioCalibrationWarning1 +"</color>" + "\n\n"
                      + LanguageManager.CurrentLanguage.tutorial.tutorial_audioCalibrationWarning2 + "\n\n" +
                      LanguageManager.CurrentLanguage.tutorial.tutorial_audioCalibrationWarning3;
+
+                TextMeshProUGUI calibrationSFXAudioWarningPrompt = GetTextMeshProUGUI(GetGameObjectChild(calibrationAudioWindowWarning, "Text (No SFX)"));
+                calibrationSFXAudioWarningPrompt.text =
+                    "<color=red>" + LanguageManager.CurrentLanguage.tutorial.tutorial_audioCalibrationSFXWarning1 + "</color>" + "\n\n"
+                     + LanguageManager.CurrentLanguage.tutorial.tutorial_audioCalibrationSFXWarning2 + "\n\n" +
+                     LanguageManager.CurrentLanguage.tutorial.tutorial_audioCalibrationSFXWarning3;
 
                 TextMeshProUGUI calibrationAudioWarningPromptYes = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationAudioWindowWarning, "Done (1)"), "Text"));
                 calibrationAudioWarningPromptYes.text = LanguageManager.CurrentLanguage.tutorial.tutorial_audioCalibrationWarningPromptYes;
@@ -136,43 +152,43 @@ namespace UltrakULL
                 calibrationVideoPsxDescription.text = LanguageManager.CurrentLanguage.tutorial.tutorial_videoCalibrationPsxDescription;
 
                 //Mechanics (difficulty)
-                Text calibrationMechanicsTitle = GetTextfromGameObject(GetGameObjectChild(calibrationMechanicsWindow, "Title"));
+                TextMeshProUGUI calibrationMechanicsTitle = GetTextMeshProUGUI(GetGameObjectChild(calibrationMechanicsWindow, "Title"));
                 calibrationMechanicsTitle.text = "--" + LanguageManager.CurrentLanguage.frontend.difficulty_title + "--";
 
-                Text calibrationMechanicsEasy = GetTextfromGameObject(GetGameObjectChild(calibrationMechanicsWindow, "Easy"));
+                TextMeshProUGUI calibrationMechanicsEasy = GetTextMeshProUGUI(GetGameObjectChild(calibrationMechanicsWindow, "Easy"));
                 calibrationMechanicsEasy.text = LanguageManager.CurrentLanguage.frontend.difficulty_easy;
 
-                Text calibrationMechanicsMedium = GetTextfromGameObject(GetGameObjectChild(calibrationMechanicsWindow, "Normal"));
+                TextMeshProUGUI calibrationMechanicsMedium = GetTextMeshProUGUI(GetGameObjectChild(calibrationMechanicsWindow, "Normal"));
                 calibrationMechanicsMedium.text = LanguageManager.CurrentLanguage.frontend.difficulty_normal;
 
-                Text calibrationMechanicsHard = GetTextfromGameObject(GetGameObjectChild(calibrationMechanicsWindow, "Hard"));
+                TextMeshProUGUI calibrationMechanicsHard = GetTextMeshProUGUI(GetGameObjectChild(calibrationMechanicsWindow, "Hard"));
                 calibrationMechanicsHard.text = LanguageManager.CurrentLanguage.frontend.difficulty_hard;
 
-                Text calibrationMechanicsHarmless = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(calibrationMechanicsWindow, "Casual Easy"), "Name"));
+                TextMeshProUGUI calibrationMechanicsHarmless = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationMechanicsWindow, "Casual Easy"), "Name"));
                 calibrationMechanicsHarmless.text = LanguageManager.CurrentLanguage.frontend.difficulty_harmless;
 
-                Text calibrationMechanicsLenient = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(calibrationMechanicsWindow, "Casual Hard"), "Name"));
+                TextMeshProUGUI calibrationMechanicsLenient = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationMechanicsWindow, "Casual Hard"), "Name"));
                 calibrationMechanicsLenient.text = LanguageManager.CurrentLanguage.frontend.difficulty_lenient;
 
-                Text calibrationMechanicsStandard = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(calibrationMechanicsWindow, "Standard"), "Name"));
+                TextMeshProUGUI calibrationMechanicsStandard = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationMechanicsWindow, "Standard"), "Name"));
                 calibrationMechanicsStandard.text = LanguageManager.CurrentLanguage.frontend.difficulty_standard;
 
-                Text calibrationMechanicsViolent = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(calibrationMechanicsWindow, "Violent"), "Name"));
+                TextMeshProUGUI calibrationMechanicsViolent = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationMechanicsWindow, "Violent"), "Name"));
                 calibrationMechanicsViolent.text = LanguageManager.CurrentLanguage.frontend.difficulty_violent;
 
-                Text calibrationMechanicsBrutal = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(calibrationMechanicsWindow, "Brutal"), "Name"));
+                TextMeshProUGUI calibrationMechanicsBrutal = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationMechanicsWindow, "Brutal"), "Name"));
                 calibrationMechanicsBrutal.text = LanguageManager.CurrentLanguage.frontend.difficulty_brutal;
 
-                Text calibrationMechanicsUmd = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(calibrationMechanicsWindow, "V1 Must Die"), "Name"));
+                TextMeshProUGUI calibrationMechanicsUmd = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationMechanicsWindow, "V1 Must Die"), "Name"));
                 calibrationMechanicsUmd.text = LanguageManager.CurrentLanguage.frontend.difficulty_umd;
 
                 //Harmless info
                 GameObject calibrationHarmlessInfo = GetGameObjectChild(calibrationMechanicsWindow, "Harmless Info");
-                Text harmlessTitle = GetTextfromGameObject(GetGameObjectChild(calibrationHarmlessInfo, "Title (1)"));
-                harmlessTitle.text = LanguageManager.CurrentLanguage.frontend.difficulty_harmless;
+                TextMeshProUGUI harmlessTitle = GetTextMeshProUGUI(GetGameObjectChild(calibrationHarmlessInfo, "Title (1)"));
+                harmlessTitle.text = "--" + LanguageManager.CurrentLanguage.frontend.difficulty_harmless + "--";
 
                 //Harmless descriptor
-                Text harmlessDescriptor = GetTextfromGameObject(GetGameObjectChild(calibrationHarmlessInfo, "Text"));
+                TextMeshProUGUI harmlessDescriptor = GetTextMeshProUGUI(GetGameObjectChild(calibrationHarmlessInfo, "Text"));
                 harmlessDescriptor.text =
                     LanguageManager.CurrentLanguage.frontend.difficulty_harmlessDescription1
                     + "\n\n"
@@ -182,11 +198,11 @@ namespace UltrakULL
 
                 //Lenient title
                 GameObject calibrationLenientInfo = GetGameObjectChild(calibrationMechanicsWindow, "Lenient Info");
-                Text lenientTitle = GetTextfromGameObject(GetGameObjectChild(calibrationLenientInfo, "Title (1)"));
-                lenientTitle.text = LanguageManager.CurrentLanguage.frontend.difficulty_lenient;
+                TextMeshProUGUI lenientTitle = GetTextMeshProUGUI(GetGameObjectChild(calibrationLenientInfo, "Title (1)"));
+                lenientTitle.text = "--" + LanguageManager.CurrentLanguage.frontend.difficulty_lenient + "--";
 
                 //Lenient descriptor
-                Text lenientDescriptor = GetTextfromGameObject(GetGameObjectChild(calibrationLenientInfo, "Text"));
+                TextMeshProUGUI lenientDescriptor = GetTextMeshProUGUI(GetGameObjectChild(calibrationLenientInfo, "Text"));
                 lenientDescriptor.text =
                     LanguageManager.CurrentLanguage.frontend.difficulty_lenientDescription1
                     + "\n\n"
@@ -196,11 +212,11 @@ namespace UltrakULL
 
                 //Standard title
                 GameObject calibrationStandardInfo = GetGameObjectChild(calibrationMechanicsWindow, "Standard Info");
-                Text standardTitle = GetTextfromGameObject(GetGameObjectChild(calibrationStandardInfo, "Title (1)"));
-                standardTitle.text = LanguageManager.CurrentLanguage.frontend.difficulty_standard;
+                TextMeshProUGUI standardTitle = GetTextMeshProUGUI(GetGameObjectChild(calibrationStandardInfo, "Title (1)"));
+                standardTitle.text = "--" + LanguageManager.CurrentLanguage.frontend.difficulty_standard + "--";
 
                 //Standard descriptor
-                Text standardDescriptor = GetTextfromGameObject(GetGameObjectChild(calibrationStandardInfo, "Text"));
+                TextMeshProUGUI standardDescriptor = GetTextMeshProUGUI(GetGameObjectChild(calibrationStandardInfo, "Text"));
                 standardDescriptor.text =
                     LanguageManager.CurrentLanguage.frontend.difficulty_standardDescription1
                     + "\n\n"
@@ -210,11 +226,11 @@ namespace UltrakULL
 
                 //Violent title
                 GameObject calibrationViolentInfo = GetGameObjectChild(calibrationMechanicsWindow, "Violent Info");
-                Text violentTitle = GetTextfromGameObject(GetGameObjectChild(calibrationViolentInfo, "Title (1)"));
-                violentTitle.text = LanguageManager.CurrentLanguage.frontend.difficulty_violent;
+                TextMeshProUGUI violentTitle = GetTextMeshProUGUI(GetGameObjectChild(calibrationViolentInfo, "Title (1)"));
+                violentTitle.text = "--" + LanguageManager.CurrentLanguage.frontend.difficulty_violent + "--";
 
                 //Violent descriptor
-                Text violentDescriptor = GetTextfromGameObject(GetGameObjectChild(calibrationViolentInfo, "Text"));
+                TextMeshProUGUI violentDescriptor = GetTextMeshProUGUI(GetGameObjectChild(calibrationViolentInfo, "Text"));
                 violentDescriptor.text =
                     LanguageManager.CurrentLanguage.frontend.difficulty_violentDescription1
                     + "\n\n"
@@ -222,7 +238,20 @@ namespace UltrakULL
                     + "\n\n"
                     + "<color=red>" + LanguageManager.CurrentLanguage.frontend.difficulty_violentDescription3 + "</color>";
 
-                Text underConstructionText = GetTextfromGameObject(GetGameObjectChild(calibrationMechanicsWindow, "Under Construction"));
+                //Brutal title
+                GameObject calibrationBrutalInfo = GetGameObjectChild(calibrationMechanicsWindow, "Brutal Info");
+                TextMeshProUGUI brutalTitle = GetTextMeshProUGUI(GetGameObjectChild(calibrationBrutalInfo, "Title (1)"));
+                brutalTitle.text = "--" + LanguageManager.CurrentLanguage.frontend.difficulty_brutal + "--";
+                //Brutal descriptor
+                TextMeshProUGUI brutalDescriptor = GetTextMeshProUGUI(GetGameObjectChild(calibrationBrutalInfo, "Text"));
+                brutalDescriptor.text =
+                    "<color=white>" + LanguageManager.CurrentLanguage.frontend.difficulty_brutalDescription1
+                    + "\n\n"
+                    + LanguageManager.CurrentLanguage.frontend.difficulty_brutalDescription2 + "</color>"
+                    + "\n\n"
+                    + "<b>" + LanguageManager.CurrentLanguage.frontend.difficulty_brutalDescription3 + "</b>";
+
+                TextMeshProUGUI underConstructionText = GetTextMeshProUGUI(GetGameObjectChild(calibrationMechanicsWindow, "Under Construction"));
                 underConstructionText.text = LanguageManager.CurrentLanguage.frontend.difficulty_underConstruction;
 
                 //Controller/autoaim settings
@@ -235,15 +264,22 @@ namespace UltrakULL
                 TextMeshProUGUI calibrationControllerAutoAimToggle = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationControllerWindow, "Auto Aim (1)"),"Text (1)"));
                 calibrationControllerAutoAimToggle.text = LanguageManager.CurrentLanguage.options.assists_autoAim;
 
-                TextMeshProUGUI calibrationControllerAutoAimPercent = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationControllerWindow, "Auto Aim Amount (1)"),"Text (1)"));
+                GameObject calibrationControllerAutoAimAmount = GetGameObjectChild(calibrationControllerWindow, "Auto Aim Amount (1)");
+                TextMeshProUGUI calibrationControllerAutoAimPercent = GetTextMeshProUGUI(GetGameObjectChild(calibrationControllerAutoAimAmount,"Text (1)"));
                 calibrationControllerAutoAimPercent.text = LanguageManager.CurrentLanguage.options.assists_autoAimPercent;
+                SliderValueToText autoAimSlider = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(calibrationControllerAutoAimAmount, "Button"), "Slider"), "Text (2)").GetComponentInChildren<SliderValueToText>();
+                autoAimSlider.ifMin = LanguageManager.CurrentLanguage.options.assists_autoAimPercentMinimum;
+                autoAimSlider.ifMax = LanguageManager.CurrentLanguage.options.assists_autoAimPercentMaximum;
+
+                TextMeshProUGUI calibrationAssistDone = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(calibrationControllerWindow, "Done"), "Text"));
+                calibrationAssistDone.text = LanguageManager.CurrentLanguage.shop.shop_colorsDone;
 
                 TextMeshProUGUI calibrationControllerAutoAimReminder = GetTextMeshProUGUI(GetGameObjectChild(calibrationControllerWindow, "Text (2)"));
                 calibrationControllerAutoAimReminder.text = LanguageManager.CurrentLanguage.tutorial.tutorial_controllerCalibrationTooltip;
 
                 //Tooltip
                 GameObject assistTip = GetGameObjectChild(calibrationMechanicsWindow, "Assist Tip");
-                Text assistTipText = GetTextfromGameObject(assistTip);
+                TextMeshProUGUI assistTipText = GetTextMeshProUGUI(assistTip);
                 assistTipText.text = LanguageManager.CurrentLanguage.frontend.difficulty_tweakReminder;
             }
             catch(Exception e)

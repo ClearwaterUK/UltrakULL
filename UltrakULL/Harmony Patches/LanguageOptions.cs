@@ -100,17 +100,12 @@ namespace UltrakULL.Harmony_Patches
             //Blue - Installed locally. Green - Not installed, available. Yellow - Installed, update available.
 
             //Set up the browser page here.
-            if(langBrowserPage == null)
-            {
-                langBrowserPage =  GameObject.Instantiate(canvasToCopy, optionsParent);
-            }
             
             langBrowserPage.name = "Language Browser";
             langBrowserPage.SetActive(true);
-
-            TextMeshProUGUI langBrowserTitle = GetTextMeshProUGUI(GetGameObjectChild(langBrowserPage,"Text"));
+            GameObject langBrowserPageContent = GetGameObjectChild(GetGameObjectChild(langBrowserPage, "Scroll Rect (1)"), "Contents");
+            TextMeshProUGUI langBrowserTitle = GetTextMeshProUGUI(GetGameObjectChild(langBrowserPageContent,"Text (4)"));
             langBrowserTitle.text = "--LANGUAGE BROWSER--";
-            //langBrowserTitle.resizeTextForBestFit = true;
             
             Transform contentParent = langBrowserPage.transform.Find("Scroll Rect (1)").Find("Contents");
             int amountOfLangs = 0;
@@ -363,7 +358,7 @@ namespace UltrakULL.Harmony_Patches
             languageButtonInstance.transform.Find("State Text").gameObject.SetActive(false);
             if(newlyAdded)
             {
-                languageButtonInstance.transform.SetAsFirstSibling();
+                languageButtonInstance.transform.SetSiblingIndex(2);
             }
             GameObject.Destroy(languageButtonInstance.GetComponent<SlotRowPanel>());
 
@@ -408,7 +403,7 @@ namespace UltrakULL.Harmony_Patches
             
             if (GetCurrentSceneName() == "Main Menu")
             {
-                Logging.Warn("In main menu");
+                //Logging.Warn("In main menu");
                 /*Transform panel = __instance.pauseMenu.transform.Find("Panel");
                 GameObject discordButton = panel.Find("Discord").gameObject;
 
@@ -422,29 +417,41 @@ namespace UltrakULL.Harmony_Patches
             Logging.Message("Adding language option to options menu...");
 
             Transform optionsParent = __instance.optionsMenu.transform;
-            GameObject languageButton = GameObject.Instantiate(optionsParent.Find("Gameplay").gameObject, optionsParent);
+            GameObject optionsParentObject = optionsParent.gameObject;
+            GameObject languageButton = GameObject.Instantiate(GetGameObjectChild(GetGameObjectChild(optionsParentObject, "Panel"),"Gameplay"), optionsParent);
             languageButton.transform.SetAsFirstSibling(); //Prevents lang button from appearing over the save menu
             languageButton.name = "Language";
             languageButton.transform.localPosition = new Vector3(475f, -300f, 0f);
             //languageButton.transform.localPosition += new Vector3(0f, 60f, 0f);
-            languageButtonText = languageButton.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
-            
+            languageButtonText = GetTextMeshProUGUI(GetGameObjectChild(languageButton, "Text"));
+            Color deactivatedColor = new Color(1,1,1,1);
+            languageButtonText.color = deactivatedColor;
+            Color activatedColor = new Color(0, 0, 0, 1);
+
             Button button = languageButton.GetComponent<Button>();
-            GameObject pageToDisable = optionsParent.Find("Gameplay Options").gameObject;
+            Image buttonimage = languageButton.GetComponent<Image>();
+            buttonimage.fillCenter = false;
+            GameObject pageToDisable = GetGameObjectChild(optionsParentObject, "Gameplay Options");
             button.onClick.AddListener(delegate
             {
                 pageToDisable.SetActive(false);
+                buttonimage.fillCenter = true;
+                languageButtonText.color = activatedColor;
             });
-            
+            Logging.Info("trying to create page");
             if(langLocalPage == null)
             {
                 langLocalPage = GameObject.Instantiate(pageToDisable, optionsParent);
             }
-            
+            if (langBrowserPage == null)
+            {
+                langBrowserPage = GameObject.Instantiate(pageToDisable, optionsParent);
+            }
+
             langLocalPage.name = "Language Page";
             langLocalPage.SetActive(false);
-            languageButtonTitleText = langLocalPage.transform.Find("Text").GetComponent<TextMeshProUGUI>();
-            
+            langBrowserPage.SetActive(false);
+            languageButtonTitleText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(langLocalPage, "Scroll Rect (1)"), "Contents"), "Text (4)"));
             Transform contentParent = langLocalPage.transform.Find("Scroll Rect (1)").Find("Contents");
             foreach (Transform child in contentParent.GetComponentInChildren<Transform>(true))
                 child.gameObject.SetActive(false);
@@ -490,27 +497,36 @@ namespace UltrakULL.Harmony_Patches
             RectTransform cRect = langLocalPage.transform.Find("Scroll Rect (1)").Find("Contents").GetComponent<RectTransform>();
             cRect.sizeDelta = new Vector2(600f, (LanguageManager.allLanguages.Keys.Count) * 100);
             
-            optionsParent.Find("Gameplay").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
-            optionsParent.Find("Controls").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
-            optionsParent.Find("Video").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
-            optionsParent.Find("Audio").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
-            optionsParent.Find("HUD").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
-            optionsParent.Find("Assist").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
-            optionsParent.Find("Colors").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
-            optionsParent.Find("Saves").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); });
-            
+            optionsParent.Find("Panel/Gameplay").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); buttonimage.fillCenter = false; languageButtonText.color = deactivatedColor; });
+            optionsParent.Find("Panel/Controls").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); buttonimage.fillCenter = false; languageButtonText.color = deactivatedColor; });
+            optionsParent.Find("Panel/Video").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); buttonimage.fillCenter = false; languageButtonText.color = deactivatedColor; });
+            optionsParent.Find("Panel/Audio").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); buttonimage.fillCenter = false; languageButtonText.color = deactivatedColor; });
+            optionsParent.Find("Panel/HUD").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); buttonimage.fillCenter = false; languageButtonText.color = deactivatedColor; });
+            optionsParent.Find("Panel/Assist").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); buttonimage.fillCenter = false; languageButtonText.color = deactivatedColor; });
+            optionsParent.Find("Panel/Colors").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); buttonimage.fillCenter = false; languageButtonText.color = deactivatedColor; });
+            optionsParent.Find("Panel/Saves").GetComponent<Button>().onClick.AddListener(delegate { langLocalPage.SetActive(false); langBrowserPage.SetActive(false); buttonimage.fillCenter = false; languageButtonText.color = Color.white; });
+            optionsParent.Find("Language").GetComponent<Button>().onClick.AddListener(delegate { langBrowserPage.SetActive(false); });
             try
             {
+                languageButton.transform.SetParent(GetGameObjectChild(optionsParentObject, "Panel").transform);
+                languageButton.transform.SetSiblingIndex(10);
+                RectTransform panelRectTransform = GetGameObjectChild(optionsParentObject, "Panel").GetComponent<RectTransform>();
+                RectTransform categoryOffset = GetGameObjectChild(GetGameObjectChild(optionsParentObject, "Panel"), "Text (9)").GetComponent<RectTransform>();
+                categoryOffset.offsetMin = new Vector2(categoryOffset.offsetMin.x, categoryOffset.offsetMin.y + 40);
+                panelRectTransform.offsetMin = new Vector2(panelRectTransform.offsetMin.x, 287.5f);
+                panelRectTransform.offsetMax = new Vector2(panelRectTransform.offsetMax.x, -287.5f);
                 languageButtonText.text = LanguageManager.CurrentLanguage.options.language_languages;
                 languageButtonTitleText.text = "--" + LanguageManager.CurrentLanguage.options.language_title + "--";
+                languageButtonTitleText.gameObject.SetActive(true);
             }
             #pragma warning disable 0168
             catch (Exception e)
             {
+                Logging.Error("LanguageButton text is null");
                 languageButtonText.text = "LANGUAGES";
                 languageButtonTitleText.text = "--" + "LANGUAGES" + "--";
             }
-
+            Logging.Info("languagebutton complete");
             //Language browser button
             GameObject langBrowseFolder = GameObject.Instantiate(languageButtonPrefab, contentParent);
             langBrowseFolder.name = "LangBrowser";
@@ -519,7 +535,7 @@ namespace UltrakULL.Harmony_Patches
             langBrowseFolder.transform.Find("Delete Wrapper").gameObject.SetActive(false);
             langBrowseFolder.transform.Find("State Text").gameObject.SetActive(false);
             GameObject.Destroy(langBrowseFolder.GetComponent<SlotRowPanel>());
-
+            Logging.Info("langbrowser created");
             Transform slotTextLangBrowseButton = langBrowseFolder.transform.Find("Slot Text");
             slotTextLangBrowseButton.localScale = new Vector3(4.983107f, 0.970607f, 2.1431f);
             slotTextLangBrowseButton.localPosition = new Vector3(0f, 0f, 0f);
@@ -538,7 +554,7 @@ namespace UltrakULL.Harmony_Patches
             };
             browseLangButton.targetGraphic = langBrowseFolder.transform.Find("Panel").GetComponent<Graphic>();
             browseLangButton.onClick.AddListener(delegate{ langLocalPage.SetActive(false); getOnlineLanguages(pageToDisable,__instance.optionsMenu.transform); });
-
+            Logging.Info("browseLangbutton done");
             //Add toggle to the audio tab that allows for enabling/disabling of swapping for spoken dialogue.
             //Instantiate from the original subtitles panel, but the toggle will need to be swapped for a new one, otherwise it will also toggle subtitles.
             
@@ -556,7 +572,7 @@ namespace UltrakULL.Harmony_Patches
             dubToggle.transform.localPosition = oldToggle.transform.localPosition;
 
             dubToggle.isOn = Convert.ToBoolean(LanguageManager.configFile.Bind("General", "activeDubbing", "False").Value);
-            GameObject toggleCheckmark = GetGameObjectChild(GetGameObjectChild(dubSlider,"Toggle"),"Background");
+            GameObject toggleCheckmark = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(dubSlider,"Toggle"),"Background"), "Checkmark");
             
             if(dubToggle.isOn) { toggleCheckmark.SetActive(true); }
             else { toggleCheckmark.SetActive(false); }

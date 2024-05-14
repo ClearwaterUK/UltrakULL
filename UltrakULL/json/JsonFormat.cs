@@ -1,4 +1,3 @@
-﻿
 using System.Reflection;
 
 namespace UltrakULL.json
@@ -10,6 +9,7 @@ namespace UltrakULL.json
         
         public FrontEnd frontend;
         public Tutorial tutorial;
+        public Rank ranks;
         
         public Overture prelude;
         public a1 act1;
@@ -21,6 +21,7 @@ namespace UltrakULL.json
         public IntermissionStrings intermission;
         public Museum devMuseum;
         public FishingStrings fishing;
+        public WashingStrings washing;
         
         public PauseMenu pauseMenu;
         public Option options;
@@ -39,6 +40,7 @@ namespace UltrakULL.json
         public Style style;
         public CheatStrings cheats;
         public Misc misc;
+        public Weapon weapon;
 
         public SandboxStrings sandbox;
     }
@@ -131,7 +133,48 @@ namespace UltrakULL.json
         public string fish_sharkDescription2;
         
     }
+    public class WashingStrings
+    {
+        public string wash_fakeexittext1;
+        public string wash_fakeexittext2;
+        public string wash_fakeexittext3;
+        public string wash_fakeexittext4;
+        public string wash_fakeexittext5;
+        public string wash_fakeexittext6;
 
+        public string wash_exitOpenText1;
+        public string wash_exitOpenText2;
+        public string wash_exitOpenText3;
+
+        public string wash_Clean;
+        public string wash_ToDo;
+        public string wash_bloodClean;
+
+        public string wash_roomCourtyard;
+        public string wash_roomLibrary;
+        public string wash_roomLobby;
+        public string wash_roomLounge;
+        public string wash_roomSideroom;
+
+        public string wash_littercount;
+        public string wash_Dumpster;
+        public string wash_Ground;
+        public string wash_Pillars;
+        public string wash_Walls;
+        public string wash_BackBookshelf;
+        public string wash_Ceiling;
+        public string wash_Bookshelf;
+        public string wash_Bookcases;
+        public string wash_Desk;
+        public string wash_FrontBookshelf;
+        public string wash_Sconces;
+        public string wash_Sidewall;
+        public string wash_Walkway;
+        public string wash_WindowWall;
+        public string wash_Decor;
+        public string wash_Floors;
+        public string wash_Pond;
+    }
     public class CG
     {
         public string cybergrind_currentWave;
@@ -223,12 +266,15 @@ namespace UltrakULL.json
         public string cheats_spawnerArm;
         public string cheats_teleportMenu;
         public string cheats_fullBright;
+        public string cheats_invincibility;
         public string cheats_noclip;
         public string cheats_flight;
         public string cheats_infiniteWallJumps;
         public string cheats_noWeaponCooldown;
         public string cheats_infinitePowerUps;
         public string cheats_blindEnemies;
+        public string cheats_enemiesHateEnemies;
+        public string cheats_enemiesIgnorePlayer;
         public string cheats_disableEnemySpawns;
         public string cheats_invincibleEnemies;
         public string cheats_killAllEnemies;
@@ -240,11 +286,15 @@ namespace UltrakULL.json
         public string cheats_snapping;
         public string cheats_physics;
         public string cheats_crashMode;
+        public string cheats_hideWeapons;
+        public string cheats_hideUi;
+        public string cheats_ghostDroneMode;
 
         public string cheats_stayActive;
         public string cheats_disableOnReload;
         public string cheats_equip;
         public string cheats_remove;
+        public string cheats_loadLatestSave;
         public string cheats_open;
         public string cheats_killAll;
         public string cheats_static;
@@ -267,6 +317,7 @@ namespace UltrakULL.json
         public string cheats_dupesSaveNamePrompt;
         public string cheats_dupesNewSave;
         public string cheats_dupesOpenFolder;
+        public string cheats_dupesOverWriteWarn;
         public string cheats_dupesDelete;
         public string cheats_dupesSave;
         public string cheats_dupesLoad;
@@ -278,6 +329,7 @@ namespace UltrakULL.json
         public string cheats_categoryWeapons;
         public string cheats_categoryEnemies;
         public string cheats_categoryItems;
+        public string cheats_categoryVisual;
         public string cheats_categorySpecial;
 
     }
@@ -293,7 +345,10 @@ namespace UltrakULL.json
         public string style_bigkill;
         public string style_bigfistkill;
         public string style_bipolar;
+
         public string style_cannonballed;
+        public string style_cannonballedfrombounce;
+        public string style_cannonboost;
         public string style_catapaulted;
         public string style_chargeback;
         public string style_compressed;
@@ -301,22 +356,33 @@ namespace UltrakULL.json
         public string style_disrespect;
         public string style_doublekill;
         public string style_downtosize;
+        public string style_drillpunch;
+        public string style_drillpunchkill;
         public string style_enraged;
         public string style_envirokill;
         public string style_exploded;
         public string style_finishedoff;
         public string style_fireworks;
+        public string style_fireforksweak;
         public string style_fistfulofdollar;
         public string style_fried;
         public string style_friendlyfire;
+        public string style_guardbreak;
         public string style_groundslam;
         public string style_halfoff;
+        public string style_hammerHitGreen;
+        public string style_hammerHitHeavy;
+        public string style_hammerHitRed;
+        public string style_hammerHitYellow;
         public string style_headshot;
         public string style_headshotcombo;
         public string style_homerun;
+        public string style_iconoclasm;
         public string style_instakill;
+        public string style_insurrknockdown;
         public string style_interruption;
         public string style_kill;
+        public string style_landyours;
         public string style_limbshot;
         public string style_mauriced;
         public string style_multikill;
@@ -328,22 +394,58 @@ namespace UltrakULL.json
         public string style_ricoshot;
         public string style_ricoshotUltra;
         public string style_ricoshotCounter;
+        public string style_rocketreturn;
+        public string style_roundtrip;
         public string style_scrindonguloded;
         public string style_scrongled;
         public string style_scrongbongled;
         public string style_secret;
+        public string style_served;
+        public string style_strike;
         public string style_splattered;
         public string style_triplekill;
 
         public string style_why;
 
+        public string style_boiled;
         public string style_conductor;
         public string style_crushed;
         public string style_fall;
+        public string style_forthee;
+        public string style_groovy;
+        public string style_longwaydown;
+        public string style_lost;
+        public string style_m_a_d;
         public string style_minced;
+        public string style_pancaked;
+        public string style_nono;
         public string style_outofbounds;
+        public string style_renono;
+        public string style_roadkill;
+        public string style_screwed;
         public string style_shredded;
+        public string style_slipped;
+        public string style_trampled;
+        public string style_trashed;
+        public string style_unchainedsaw;
         public string style_zapped;
+
+        public string style_bishopcapture;
+        public string style_bishoppromo;
+        public string style_blackwins;
+        public string style_bongcloud;
+        public string style_castled;
+        public string style_enpassant;
+        public string style_foolsmate;
+        public string style_knightcapture;
+        public string style_knightpromo;
+        public string style_pawncapture;
+        public string style_queencapture;
+        public string style_queenpromo;
+        public string style_rookcapture;
+        public string style_rookpromo;
+        public string style_ultravictory;
+        public string style_whitewins;
 
         public string style_d;
         public string style_c;
@@ -515,7 +617,6 @@ namespace UltrakULL.json
         public string enemyBios_sentry_strategy3;
         public string enemyBios_sentry_strategy4;
 
-
         public string enemyBios_v2Second_1;
         public string enemyBios_v2Second_2;
         public string enemyBios_v2Second_3;
@@ -524,6 +625,37 @@ namespace UltrakULL.json
         public string enemyBios_v2Second_strategy1;
         public string enemyBios_v2Second_strategy2;
         public string enemyBios_v2Second_strategy3;
+        
+        public string enemyBios_gutterman_1;
+        public string enemyBios_gutterman_2;
+        public string enemyBios_gutterman_3;
+        public string enemyBios_gutterman_4;
+
+        public string enemyBios_gutterman_strategy1;
+        public string enemyBios_gutterman_strategy2;
+        public string enemyBios_gutterman_strategy3;
+        public string enemyBios_gutterman_strategy4;
+        
+        public string enemyBios_guttertank_1;
+        public string enemyBios_guttertank_2;
+        public string enemyBios_guttertank_3;
+        public string enemyBios_guttertank_4;
+        public string enemyBios_guttertank_5;
+        public string enemyBios_guttertank_6;
+        public string enemyBios_guttertank_7;
+        
+        public string enemyBios_guttertank_strategy1;
+        public string enemyBios_guttertank_strategy2;
+        
+        public string enemyBios_earthmover_1;
+        public string enemyBios_earthmover_2;
+        public string enemyBios_earthmover_3;
+        public string enemyBios_earthmover_4;
+        public string enemyBios_earthmover_5;
+        public string enemyBios_earthmover_6;
+        
+        public string enemyBios_earthmover_strategy1;
+        public string enemyBios_earthmover_strategy2;
 
         public string enemyBios_maliciousFace_1;
         public string enemyBios_maliciousFace_2;
@@ -546,6 +678,24 @@ namespace UltrakULL.json
         public string enemyBios_hideousMass_strategy2;
         public string enemyBios_hideousMass_strategy3;
         public string enemyBios_hideousMass_strategy4;
+        
+        public string enemyBios_mannequin_1;
+        public string enemyBios_mannequin_2;
+        public string enemyBios_mannequin_3;
+        public string enemyBios_mannequin_4;
+        public string enemyBios_mannequin_5;
+        
+        public string enemyBios_mannequin_strategy1;
+        public string enemyBios_mannequin_strategy2;
+        public string enemyBios_mannequin_strategy3;
+        
+        public string enemyBios_minotaur_1;
+        public string enemyBios_minotaur_2;
+        public string enemyBios_minotaur_3;
+        public string enemyBios_minotaur_4;
+        
+        public string enemyBios_minotaur_strategy1;
+        public string enemyBios_minotaur_strategy2;
 
         public string enemyBios_gabriel_1;
         public string enemyBios_gabriel_2;
@@ -1020,9 +1170,9 @@ namespace UltrakULL.json
         public string langAuthor;
         public string langVersion;
         public string langDisplayName;
-        public string langRTL;
-
+        public bool langRTL;
         public string minimumModVersion;
+        public bool langHinduNumbers;
 
     }
 
@@ -1140,8 +1290,26 @@ namespace UltrakULL.json
 
         public string act2_intermission_tobecontinued;
         public string act2_intermission_tobecontinuedshadow;
-
+        public string act2_intermission_endof;
+        public string act2_intermission_insertAct3;
     }
+
+    public class Rank
+    {
+        public string D { get => rank_letter_d; }
+        public string rank_letter_d;
+		public string C { get => rank_letter_c; }
+		public string rank_letter_c;
+		public string B { get => rank_letter_b; }
+		public string rank_letter_b;
+		public string A { get => rank_letter_a; }
+		public string rank_letter_a;
+		public string S { get => rank_letter_s; }
+		public string rank_letter_s;
+		public string P { get => rank_letter_p; }
+		public string rank_letter_p;
+
+	}
 
     public class Body
     {
@@ -1150,6 +1318,7 @@ namespace UltrakULL.json
 
     public class FrontEnd
     {
+        public string mainmenu_imageReplacement;
         public string mainmenu_earlyAccess;
         public string mainmenu_halloween;
         public string mainmenu_easter;
@@ -1184,6 +1353,12 @@ namespace UltrakULL.json
         public string difficulty_violentDescription1;
         public string difficulty_violentDescription2;
         public string difficulty_violentDescription3;
+        public string difficulty_brutalDescription1;
+        public string difficulty_brutalDescription2;
+        public string difficulty_brutalDescription3;
+        internal string difficulty_umdDescription1;
+        internal string difficulty_umdDescription2;
+        internal string difficulty_umdDescription3;
 
         public string difficulty_tweakReminder;
         public string difficulty_underConstruction;
@@ -1205,6 +1380,9 @@ namespace UltrakULL.json
         public string layer_greed;
         public string layer_wrath;
         public string layer_heresy;
+        public string layer_violence;
+        public string layer_fraud;
+        public string layer_treachery;
         public string layer_prime;
 
         public string level_challenge;
@@ -1218,6 +1396,7 @@ namespace UltrakULL.json
         public string leaderboard_anyPercent;
         public string leaderboard_pPercent;
         public string leaderboard_noEntries;
+        public string leaderboard_reminder;
 
     }
 
@@ -1262,6 +1441,38 @@ namespace UltrakULL.json
         public string books_wrathSecond7;
         public string books_wrathSecond8;
         public string books_wrathSecond9;
+        
+        public string books_violenceFirst1;
+        public string books_violenceFirst2;
+        public string books_violenceFirst3;
+        public string books_violenceFirst4;
+        public string books_violenceFirst5;
+        public string books_violenceFirst6;
+        public string books_violenceFirst7;
+        public string books_violenceFirst8;
+        public string books_violenceFirst9;
+        
+        public string books_violenceFirst_Slate1;
+        public string books_violenceFirst_Slate2;
+        public string books_violenceFirst_Slate3;
+        public string books_violenceFirst_Slate4;
+        
+        public string books_violenceSecond1;
+        public string books_violenceSecond2;
+
+        public string books_violenceSecondAmbush1;
+        public string books_violenceSecondAmbush2;
+        public string books_violenceSecondAmbush3;
+        public string books_violenceSecondAmbush4;
+
+        public string books_violenceFourth1;
+        public string books_violenceFourth2;
+        public string books_violenceFourth3;
+        public string books_violenceFourth4;
+        public string books_violenceFourth5;
+
+        public string books_violenceSecret_Slate1;
+        public string books_violenceSecret_Slate2;
 
     }
 
@@ -1270,6 +1481,7 @@ namespace UltrakULL.json
         public string pause_title;
         public string pause_resume;
         public string pause_respawn;
+        public string pause_skip;
         public string pause_restart;
         public string pause_options;
         public string pause_quit;
@@ -1290,6 +1502,7 @@ namespace UltrakULL.json
     {
         public string shop_tipofthedayTitle;
         public string shop_tipoftheday;
+        public string shop_menu;
         public string shop_weapons;
         public string shop_monsters;
         public string shop_cybergrind;
@@ -1345,6 +1558,11 @@ namespace UltrakULL.json
         public string shop_shotgunPumpChargeDescription1;
         public string shop_shotgunPumpChargeDescription2;
 
+        public string shop_shotgunSawedOn;
+        public string shop_shotgunSawedOnDescription1;
+        public string shop_shotgunSawedOnDescription2;
+        public string shop_shotgunSawedOnDescription3;
+
         public string shop_nailgunMagnet;
         public string shop_nailgunMagnetDescription1;
         public string shop_nailgunMagnetDescription2;
@@ -1352,6 +1570,10 @@ namespace UltrakULL.json
         public string shop_nailgunOverheat;
         public string shop_nailgunOverheatDescription1;
         public string shop_nailgunOverheatDescription2;
+
+        public string shop_nailgunJumpStart;
+        public string shop_nailgunJumpStartDescription1;
+        public string shop_nailgunJumpStartDescription2;
 
         public string shop_railcannonElectric;
         public string shop_railcannonElectricDescription1;
@@ -1375,6 +1597,10 @@ namespace UltrakULL.json
         public string shop_rocketLauncherSrsCannonDescription1;
         public string shop_rocketLauncherSrsCannonDescription2;
         public string shop_rocketLauncherSrsCannonDescription3;
+
+        public string shop_rocketLauncherFireStarter;
+        public string shop_rocketLauncherFireStarterDescription1;
+        public string shop_rocketLauncherFireStarterDescription2;
 
         public string shop_armFeedbacker;
         public string shop_armFeedbackerDescription1;
@@ -1603,6 +1829,7 @@ namespace UltrakULL.json
         public string leveltips_violenceSecond;
         public string leveltips_violenceThird;
         public string leveltips_violenceFourth;
+        public string leveltips_violenceSecret;
         
         public string leveltips_fraudFirst;
         public string leveltips_fraudSecond;
@@ -1628,7 +1855,6 @@ namespace UltrakULL.json
         public string enemyname_filth;
         public string enemyname_stray;
         public string enemyname_schism;
-
         public string enemyname_soldier;
         public string enemyname_minos;
         public string enemyname_stalker;
@@ -1636,25 +1862,29 @@ namespace UltrakULL.json
         public string enemyname_swordsmachine;
         public string enemyname_drone;
         public string enemyname_streetCleaner;
-
         public string enemyname_sentry;
+        public string enemyname_gutterman;
+        public string enemyname_guttertank;
+        public string enemyname_earthmover;
         public string enemyname_idol;
         public string enemyname_ferryman;
         public string enemyname_leviathan;
-
-
         public string enemyname_v2;
         public string enemyname_v2Second;
         public string enemyname_mindFlayer;
         public string enemyname_malFace;
         public string enemyname_cerberus;
         public string enemyname_hideousMass;
+        public string enemyname_mannequin;
+        public string enemyname_minotaur;
         public string enemyname_gabriel;
         public string enemyname_gabrielSecond;
         public string enemyname_virtue;
         public string enemyname_somethingWicked;
-        public string enemyname_fleshPrison;
-        public string enemyname_minosPrime;
+        public string enemyname_puppet;
+        public string enemyname_earthmoverMortar;
+        public string enemyname_earthmoverRocketLauncher;
+        public string enemyname_earthmoverTower;
 
         public string enemyname_boss_cerberus;
         public string enemyname_boss_cancerousRodent;
@@ -1666,17 +1896,21 @@ namespace UltrakULL.json
         public string enemyname_boss_gabriel;
         public string enemyname_boss_insurrectionist;
         public string enemyname_boss_mandalore;
-        public string enemyname_boss_v2;
+        public string enemyname_boss_earthmover;
+        public string enemyname_boss_earthmoverDefence;
         public string enemyname_boss_ferryman;
         public string enemyname_boss_leviathan;
         public string enemyname_boss_insurrectionistRude;
         public string enemyname_boss_insurrectionistAngry;
         public string enemyname_boss_gabrielSecond;
+        public string enemyname_boss_fleshPrison;
         public string enemyname_boss_fleshPanopticon;
+        public string enemyname_boss_minosPrime;
         public string enemyname_boss_sisyphusPrime;
+        public string enemyname_boss_bigJohninator;
 
 
-        public string enemyname_type_lesserHusk;
+		public string enemyname_type_lesserHusk;
         public string enemyname_type_greaterHusk;
         public string enemyname_type_supremeHusk;
         public string enemyname_type_lesserDemon;
@@ -1700,79 +1934,92 @@ namespace UltrakULL.json
         public string category_general;
         public string category_controls;
         public string category_graphics;
-        public string category_sound;
-        public string category_display;
+        public string category_audio;
         public string category_assists;
-        public string category_colors;
         public string category_saves;
+        public string category_customization;
+        public string category_hud;
+        public string category_colors;
 
-        public string general_mouseSensitivity;
-        public string general_xInversion;
-        public string general_yInversion;
-        public string general_fieldOfVision;
         public string general_weaponPosition;
         public string general_weaponPositionRight;
         public string general_weaponPositionMiddle;
         public string general_weaponPositionLeft;
         public string general_rememberWeapon;
+        public string general_screen;
         public string general_screenShake;
         public string general_screenShakeMinimum;
         public string general_screenShakeMaximum;
         public string general_cameraTilt;
+        public string general_parryFlash;
+        public string general_misc;
         public string general_restartWarning;
+        public string general_restartWarningAlwaysOn;
+        public string general_restartWarningOnlyCG;
+        public string general_restartWarningAlwaysOff;
+        public string general_sandboxOverwrite;
         public string general_discordRpc;
         public string general_seasonalEvent;
-        public string general_controllerRumble;
-        public string general_controllerRumbleCustomize;
-        public string general_levelLeaderboards;
 
-        public string controls_bindings;
-        public string controls_resetDefault;
-        public string controls_movement;
-        public string controls_move;
-        public string controls_forward;
-        public string controls_back;
-        public string controls_left;
-        public string controls_right;
-        public string controls_jump;
-        public string controls_dash;
-        public string controls_actions;
-        public string controls_primaryFire;
-        public string controls_secondaryFire;
-        public string controls_arms;
-        public string controls_punch;
-        public string controls_nextWeapon;
-        public string controls_previousWeapon;
-        public string controls_lastUsedWeapon;
-        public string controls_changeVariation;
-        public string controls_changeArm;
-        public string controls_slide;
-        public string controls_whiplash;
+        public string general_levelLeaderboards;
+        public string general_advancedOptions;
+        public string general_advancedOptionsCustomize;
+
+        public string controls_mouseSensitivity;
+        public string controls_xInversion;
+        public string controls_yInversion;
+        public string controls_controllerRumble;
+        public string controls_controllerRumbleCustomize;
         public string controls_weapons;
-        public string controls_slot0;
-        public string controls_slot1;
-        public string controls_slot2;
-        public string controls_slot3;
-        public string controls_slot4;
-        public string controls_slot5;
-        public string controls_slot6;
-        public string controls_slot7;
-        public string controls_slot8;
-        public string controls_slot9;
+        public string controls_mouseWheelToChangeWeapon;
         public string controls_scrollType;
         public string controls_scrollTypeWeapons;
         public string controls_scrollTypeVariations;
         public string controls_scrollTypeAll;
-        public string controls_mouseWheelToChangeWeapon;
         public string controls_reverseScroll;
+        public string controls_redrawBehaviour;
+        public string controls_redrawNext;
+        public string controls_redrawFirst;
+        public string controls_redrawSame;
+        public string controls_bindings;
+        public string controls_movement;
+        public string controls_move;
+        public string controls_dodge;
+        public string controls_slide;
+        public string controls_jump;
+        public string controls_weaponTitle;
+        public string controls_primaryFire;
+        public string controls_secondaryFire;
+        public string controls_nextVariation;
+        public string controls_previousVariation;
+        public string controls_revolver;
+        public string controls_shotgun;
+        public string controls_nailgun;
+        public string controls_railcannon;
+        public string controls_rocketLauncher;
+        public string controls_spawnerArm;
+        public string controls_nextWeapon;
+        public string controls_previousWeapon;
+        public string controls_lastUsedWeapon;
+        public string controls_variationSlot1;
+        public string controls_variationSlot2;
+        public string controls_variationSlot3;
+        public string controls_arms;
+        public string controls_punch;
+        public string controls_changeArm;
+        public string controls_punchFeedbacker;
+        public string controls_punchKnuckleblaster;
+        public string controls_whiplash;
 
-        public string graphics_title;
         public string graphics_resolution;
         public string graphics_fullscreen;
         public string graphics_maxFps;
         public string graphics_maxFpsNone;
         public string graphics_maxFps2x;
         public string graphics_vsync;
+        public string graphics_fieldOfVision;
+        public string graphics_gamma1;
+        public string graphics_gamma2;
         public string graphics_filters;
         public string graphics_filtersDescription;
         public string graphics_pixelisation;
@@ -1814,16 +2061,18 @@ namespace UltrakULL.json
         public string graphics_goreNote;
         public string graphics_goreEnable;
         public string graphics_goreDisablePhysics;
+        public string graphics_goreMaxBloodStains;
         public string graphics_goreBloodChance;
         public string graphics_goreMaxGore;
 
-        public string audio_title;
+        public string audio_volume;
         public string audio_subtitles;
         public string audio_globalVolume;
+        public string audio_soundEffectsVolume;
         public string audio_musicVolume;
+        public string audio_muffleMusic;
         public string audio_dubbing;
 
-        public string hud_title;
         public string hud_type;
         public string hud_typeNone;
         public string hud_typeStandard;
@@ -1840,6 +2089,11 @@ namespace UltrakULL.json
         public string hud_railcannonMeter;
         public string hud_styleMeter;
         public string hud_styleInfo;
+        public string hud_speedoMeterText;
+        public string hud_speedoMeterTypeOff;
+        public string hud_speedoMeterTypeOn;
+        public string hud_speedoMeterTypeHorizonal;
+        public string hud_speedoMeterTypeVertical;
 
         public string crosshair_title;
         public string crosshair_type;
@@ -1884,7 +2138,9 @@ namespace UltrakULL.json
         public string assists_enemySilhouettesOutlines;
         public string assists_enemySilhouettesDistance;
         public string assists_enemySilhouettesDistanceMinimum;
+        public string assists_enemySilhouettesNone;
         public string assists_enemySilhouettesOutlinesOnly;
+        public string assists_enemySilhouettesFull;
         public string assists_enemySilhouettesOutlineThickness;
         public string assists_major;
         public string assists_majorActivate;
@@ -1930,7 +2186,27 @@ namespace UltrakULL.json
         public string save_deleteNo;
         public string save_close;
         public string save_slotEmpty;
-        
+        public string save_slot1;
+        public string save_slot2;
+        public string save_slot3;
+        public string save_slot4;
+        public string save_slot5;
+
+        public string save_failMergeError1;
+        public string save_failMergeError2;
+        public string save_failMergeError3;
+        public string save_failMergeErrorQuitButton;
+        public string save_saveloadFailError1;
+        public string save_saveloadFailError2;
+        public string save_saveloadFailError3;
+        public string save_saveloadFailError4;
+        public string save_saveloadFailError5;
+        public string save_saveloadFailError6;
+        public string save_saveloadFailError7;
+        public string save_saveloadFailError8;
+        public string save_saveloadFailError9;
+        public string save_saveloadFailError10;
+
         public string rumble_title;
         public string rumble_finalMultiplier;
         public string rumble_coinToss;
@@ -1957,6 +2233,24 @@ namespace UltrakULL.json
         public string rumble_endDelay;
         public string rumble_reset;
         public string rumble_weaponWheel;
+
+        public string advanced_title;
+        public string advanced_currentLevel;
+        public string advanced_cybergrindResetText1;
+        public string advanced_cybergrindResetText2;
+        public string advanced_cybergrindResetCancel;
+        public string advanced_cybergrindResetConfirm;
+        public string advanced_cybergrindLocalHighScore;
+        public string advanced_cybergrindResetButton;
+        public string advanced_level52;
+        public string advanced_level71;
+        public string advanced_level73;
+        public string advanced_level7S;
+        public string advanced_52WaterScrolling;
+        public string advanced_52WaterWaves;
+        public string advanced_71Dark;
+        public string advanced_73Grass;
+        public string advanced_7SHard;
         
         public string language_title;
         public string language_languages;
@@ -1985,6 +2279,9 @@ namespace UltrakULL.json
         public string tutorial_audioCalibrationWarning1;
         public string tutorial_audioCalibrationWarning2;
         public string tutorial_audioCalibrationWarning3;
+        public string tutorial_audioCalibrationSFXWarning1;
+        public string tutorial_audioCalibrationSFXWarning2;
+        public string tutorial_audioCalibrationSFXWarning3;
         public string tutorial_audioCalibrationWarningPromptYes;
         public string tutorial_audioCalibrationWarningPromptNo;
 
@@ -2144,6 +2441,7 @@ namespace UltrakULL.json
         public string act2_greedThird_troll2;
         public string act2_greedThird_tombOfKings;
 
+        public string act2_greedFourth_alternateNailgun;
         public string act2_greedFourth_v2;
         public string act2_greedFourth_whiplash1;
         public string act2_greedFourth_whiplash2;
@@ -2178,14 +2476,44 @@ namespace UltrakULL.json
         public string act2_wrathThird_hank;
 
         public string act2_heresyFirst_armboy;
-
-        public string act2_secretNotReady;
-
     }
 
     public class a3
     {
+        public string act3_violenceFirst_doorOpens;
         
+        public string act3_violenceSecond_guttermanTutorial;
+        public string act3_violenceSecond_biggerBoom;
+
+        public string act3_violenceSecond_gateControlTitle;
+        
+        public string act3_violenceSecond_gateControlOpen;
+        public string act3_violenceSecond_gateControlClosed;
+        
+        public string act3_violenceSecond_cartGateControlTitle;
+        public string act3_violenceSecond_cartGateControlOpen;
+        public string act3_violenceSecond_cartGateControlClosed;
+        
+        public string act3_violenceSecond_payloadControlTitle;
+        public string act3_violenceSecond_payloadControlLower;
+        public string act3_violenceSecond_payloadControlWait;
+        public string act3_violenceSecond_payloadControlError1;
+        public string act3_violenceSecond_payloadControlError2;
+        public string act3_violenceSecond_payloadControlHell;
+
+        public string act3_violenceSecond_alternateShotgun;
+        
+        public string act3_violenceThird_feedIt;
+        
+        public string act3_violenceThird_becomeMarked;
+        public string act3_violenceThird_becomeMarkedButton;
+        //public string act3_violenceThird_becomeMarkedButtonClosed;
+        public string act3_violenceThird_starOfTheShow;
+        
+        public string act3_violenceFourth_floodingWarning;
+        public string act3_violenceFourth_countdownTitle;
+
+        public string act3_secretNotReady;
     }
 
     public class Prime
@@ -2272,10 +2600,34 @@ namespace UltrakULL.json
         public string secretLevels_fifth_testament11;
         public string secretLevels_fifth_testament12;
 
+        public string secretLevels_seventh_testamentTitle;
+        public string secretLevels_seventh_testament1;
+        public string secretLevels_seventh_testament2;
+        public string secretLevels_seventh_testament3;
+        public string secretLevels_seventh_testament4;
+        public string secretLevels_seventh_testament5;
+        public string secretLevels_seventh_testament6;
+        public string secretLevels_seventh_testament7;
+        public string secretLevels_seventh_testament8;
+        public string secretLevels_seventh_testament9;
+        public string secretLevels_seventh_testament10;
+
         public string secretLevels_complete1;
         public string secretLevels_complete2;
     }
+    
+    public class Weapon
+    {
+        public string weapon_nailgunZapperReady;
+        public string weapon_nailgunZapperAlternateTooFar;
+        public string weapon_nailgunZapperOutOfRange;
+        public string weapon_nailgunZapperAlternateNull;
+        public string weapon_nailgunZapperNoTarget;
+        public string weapon_nailgunZapperBlocked;
+        public string weapon_nailgunZapperDistance;
+        public string weapon_nailgunZapperRecharging;
 
+    }
     public class Museum
     {
         public string museum_bookHakita1;
@@ -2438,6 +2790,8 @@ namespace UltrakULL.json
         public string museum_bookAdditionalMusic8;
         public string museum_bookAdditionalMusic9;
         public string museum_bookAdditionalMusic10;
+        public string museum_bookAdditionalMusic11;
+        public string museum_bookAdditionalMusic12;
         
         public string museum_bookAdditionalCredits1;
         public string museum_bookAdditionalCredits2;
@@ -2445,6 +2799,8 @@ namespace UltrakULL.json
         public string museum_bookAdditionalCredits4;
         public string museum_bookAdditionalCredits5;
         public string museum_bookAdditionalCredits6;
+        public string museum_bookAdditionalCredits7;
+        public string museum_bookAdditionalCredits8;
         
         public string museum_bookStephanWeyte1;
         public string museum_bookStephanWeyte2;
@@ -2465,6 +2821,7 @@ namespace UltrakULL.json
         public string museum_bookMandalore4;
         public string museum_bookMandalore5;
         public string museum_bookMandalore6;
+        public string museum_bookMandalore7;
         
         public string museum_weaponsBeamcutter1;
         public string museum_weaponsBeamcutter2;
@@ -2648,6 +3005,17 @@ namespace UltrakULL.json
         public string museum_rocketRace2;
         public string museum_rocketRaceStart;
         public string museum_rocketRaceResult;
+
+        public string museum_chessTip;
+        public string museum_chessVs;
+        public string museum_chessNewgame;
+        public string museum_chessBlack;
+        public string museum_chessWhite;
+        public string museum_chessBot;
+        public string museum_chessPlayer;
+        public string museum_chessWhitewin;
+        public string museum_chessBlackwin;
+        public string museum_chessSettingsclose;
         
         public string museum_cinemaPlay;
         public string museum_cinemaStop;
@@ -2656,7 +3024,7 @@ namespace UltrakULL.json
         public string museum_spoiler2;
         public string museum_spoiler3;
 
-    }
+	}
 
     public class Misc
     {
@@ -2670,7 +3038,9 @@ namespace UltrakULL.json
         public string hud_levelStats2;
         public string hud_outOfBounds;
         public string hud_clashMode;
+        public string hud_droneHaunting;
         public string hud_weaponVariation;
+        public string hud_alternateVersion;
 
         public string spawner_sandboxTools;
         public string spawner_sandbox;
@@ -2748,6 +3118,7 @@ namespace UltrakULL.json
         public string classicHud_stamina;
         public string classicHud_arm;
         public string classicHud_railcannonMeter;
+        public string classicHud_speed;
 
         public string enemyAlter_title;
         public string enemyAlter_sizeTitle;
@@ -2757,11 +3128,14 @@ namespace UltrakULL.json
         public string enemyAlter_uniformLarge;
         public string enemyAlter_metaTitle;
         public string enemyAlter_metaFrozen;
+        public string enemyAlter_metaDisallowManipulation;
+        public string enemyAlter_metaDisallowFreezing;
         public string enemyAlter_metaBreakable;
         public string enemyAlter_metaUnbreakable;
         public string enemyAlter_metaWeak;
         public string enemyAlter_jumpPadTitle;
-        public string enemyAlter_jumpPadPower;
+        public string enemyAlter_hookPointTitle;
+        public string enemyAlter_power;
         public string enemyAlter_radianceTitle;
         public string enemyAlter_radianceEnable;
         public string enemyAlter_radianceDetails_tier;
@@ -2770,7 +3144,26 @@ namespace UltrakULL.json
         public string enemyAlter_radianceSpeed_tier;
         public string enemyAlter_boss_title;
         public string enemyAlter_boss_description;
-        
+        public string enemyAlter_enrage;
+        public string enemyAlter_enrageEternal;
+        public string enemyAlter_sandified;
+        public string enemyAlter_puppeted;
+        public string enemyAlter_ignorePlayer;
+        public string enemyAlter_attackEnemies;
+        public string enemyAlter_sandboxTitle;
+        public string enemyAlter_hasSkull;
+        public string enemyAlter_altarType;
+        public string enemyAlter_materialBlock;
+        public string enemyAlter_dualWieldPickup;
+        public string enemyAlter_infiniteUses;
+        public string enemyAlter_juice;
+        public string enemyAlter_hurtZone;
+        public string enemyAlter_hurtCooldown;
+        public string enemyAlter_altarBlue;
+        public string enemyAlter_altarRed;
+        public string enemyAlter_altarStone;
+        public string enemyAlter_alteredDestroyed;
+
         public string earlyAccessEnd1;
         public string earlyAccessEnd2;
         public string earlyAccessEnd3;
@@ -2779,10 +3172,13 @@ namespace UltrakULL.json
 
     public class SandboxStrings
     {
+        public string sandbox_navmeshWarn;
+
         public string sandbox_shop_timeOfDay;
         public string sandbox_shop_worldOptions;
         public string sandbox_shop_icons;
 
+        public string sandbox_shop_stats;
         public string sandbox_shop_totalBoxes;
         public string sandbox_shop_totalProps;
         public string sandbox_shop_totalEnemies;

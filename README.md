@@ -1,4 +1,4 @@
-﻿[![Discord](https://img.shields.io/discord/1017473804592754778?label=UltrakULL%20Discord)](https://discord.gg/ZB7jk6Djv5 "Discord Invite")
+[![Discord](https://img.shields.io/discord/1017473804592754778?label=UltrakULL%20Discord)](https://discord.gg/ZB7jk6Djv5 "Discord Invite")
 ![Version](https://img.shields.io/github/v/release/ClearwaterTM/UltrakULL)
 ![Licence](https://img.shields.io/github/license/ClearwaterTM/UltrakULL)
 
@@ -24,10 +24,10 @@ This mod's primary purpose is to bridge the gap for localization and translation
 
 # Download & Installation
 
-UltrakULL and can be be obtained either through the [Releases page](https://github.com/ClearwaterTM/UltrakULL/releases) (*recommended*),
+UltrakULL can be obtained either through the [Releases page](https://github.com/ClearwaterTM/UltrakULL/releases) (*recommended*),
 or via the [UltrakULL Discord.](https://discord.gg/ZB7jk6Djv5)
 
-The only prerequisite is a Steam version of ULTRAKILL. <br>**Demo, GOG.com and cracked versions are NOT supported.**
+The only prerequisite is an up-to-date Steam version of ULTRAKILL. <br>**Demo, GOG.com and cracked versions are NOT supported.**
 
 ## Installation via Thunderstore
 
@@ -54,8 +54,10 @@ Installing UltrakULL via GitHub is divided into 2 parts:
 
 ### Usage
 
-- If the mod has loaded correctly, you will see a new "Languages" tab in the Options menu.
-  <img src="https://cdn.discordapp.com/attachments/472691871806652429/1037354187341701130/unknown.png" alt="drawing" width="550"/>
+- If the mod has loaded correctly, you will see a new "Languages" tab in the Options menu, in the bottom-right hand corner.
+  
+<img src="https://cdn.discordapp.com/attachments/472691871806652429/1188532184039043102/image.png?ex=659addda&is=658868da&hm=375363c76c52d1ea20c05fafef696a441f7e66a84671fe14bcc1ae9b8880eb2b&" alt="drawing" width="550"/>
+  
 - From the Languages tab, you can browse available translations for the game by selecting the "Browse Languages Online" button. Additionally, language files that are locally installed in the mod folder will be detected and made available for selection any available language based on the language files UltrakULL has found, and will load them into the game.
 
 ### Troubleshooting
@@ -73,65 +75,26 @@ Restart the game after applying either steps for your use case.
 
 
 # Languages
-## Languages available & fully compatible with latest game version
 
-| Language          | Contributors                                                                                                                       | Notes                                  |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
-| English (U.S)     | Hakita & The Ultrakill delevopers                                                                                                                 | Grammatical improvements by Clearwater |
-| Belarusian (беларуская) | CockenDug |                                        |
-| Brazilian Portugese (Português Do Brasil) | Veni, 🕯Jackie🕯, MKaid, hebert, FNChannel/FEMChannel, Lizzy ✦, R A Y L A N D E R, DelksBWG |  |
-| Filipino (Pilipino) | MechanicWithAPistol, violence layer when |                                        |
-| Russian (русский) | Ness, D4N5T3P, lrddd🐢 , Brainy-Stormie, towelie84, Solidus Cumcer, Filin?! |                                        |        |
-| Simplified Chinese (简体中文) | Hydracerynitis, ciinore, duke325, ponyweeb, @Skugra, GoGoblin |                                        |
-| Spanish (Español) | LambCG, Philia, Lukah, Mr. Santiago, Radripizza, BOXBOT! |                                        |
-| Thai (ภาษาไทย) | Skugra, Winterman |                                        |
-| Turkish (Türkçe) | Legitname1337, Cester, Legio, Scape, Neige |                                        |
-
-## Languages available but not fully compatible with latest game version
-
-| Language                                 | Contributors                                                                         | Last update | Notes                                |
-|------------------------------------------|--------------------------------------------------------------------------------------|-------------|--------------------------------------|
-| Czech (Čeština)                          | Mina                                                                                 | Act 2       |                                      |
-| French (Français)                        | Clearwater, Zed, Frizou, osokour, Tamary, Lays, Wish                             | Act 2       | French and Quebec variants available |
-| German (Deutsch)                         | Ivory, LiquidEliLest, Psychologemelone44, Termi2, Fabidelune, astr4lis | Act 2       |                                      |
-
-## Languages in development
-
-| Language                      | Contributors                                                    | Notes |
-|-------------------------------|-----------------------------------------------------------------|-------|
-| Arabic                        | riko, hamza666, Fancy!Bee, Wish                                 |       |
-| Bulgarian (Bălgarski)         | Dan                                                             |       |
-| Croatian (Hrvatski)           | Rosie                                                           |       |
-| Danish (Dansk)                | rillebille                                                      |       |
-| Dutch (Nederlands)            | Foxo, Umbra, Jacket, Luuke                                      |       |
-| Estonian (Eestikeel)          | Cremee                                                          |       |
-| Filipino (Pilipino)           | mxkyle, MecanicWithAPistol, FinnianNeko                         |       |
-| Finnish (Suomi)               | GoreDemon, FracturedStar                                        |       |
-| Greek (Ελληνικά)              | Mi pro, thegastank                                              |       |
-| Hebrew                        | muddy                                                           |       |
-| Hungarian (Magyar)            | csigachad, Desert                                               |       |
-| Italian (Italiano)            | Dav, SimonLuck31, Cammen, ImmortalChanger, The Conselor         |       |
-| Indonesian (Bahasa Indonesia) | Arif “Fry” Siregar, mulfok                                      |       |
-| Japanese (日本語)              | Liamconn35, kythira                                            |       |
-| Korean (한국어)                | ARSE™, Susuchan                                                |       |
-| Latvian (Latviešu)            | Eelsoup, сонорный                                               |       |
-| Portugese (Portugês)          | Toyota AE86                                                     |       |
-| Polish (Polski)               | Fikou, Patryk, Spookz, Dualite, Yormit, Abyst, Writenberg, Vee  |       |
-| Slovenian (Slovenščina)       | chair                                                           |       |
-| Traditional Chinese(繁體中文)  | GuonuoTW(SmallNo), duke325                                      |       |
-| Ukrainian (Українська)        | Rafunny, Blitzo, Keka, ArtSabs, ak11, CsyeCok, twrp, Infernal   |       |
-| Vietnamese (Tiếng Việt)       | Timmy the ULTRAPlant, Gaius, Jerry, jane                        |       |
-
-## Languages on hold or not actively worked on
-| Language                      | Contributors                                                    | Notes |
-|-------------------------------|-----------------------------------------------------------------|-------|
-| Georgian (ქართული)           |                                                                 |       |
-| Persian (Farsi)               |                                                                 |       |
-| Romanian (Românesc)           |                                                                 |       |
+## Languages available
+| Language                                 | Contributors                                                                                                                       | Last update | Notes                                  |
+|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|-------------|----------------------------------------|
+| English (U.S)                            | Hakita & New Blood                                                                                                                 | Act 2       | Grammatical improvements by Clearwater |
+| Brazilian Portugese (Portugês do Brasil) | Veni, Jackie, MKaid, hebert, FNChannel, Spooky, Soulvender, RAYLANDER                                                              | Act 2       |                                        |
+| Czech (Čeština)                          | Mina                                                                                                                               | Act 2       |                                        |
+| Filipino (Pilipino)                      | mxkyle, MecanicWithAPistol, FinnianNiko                                                                                            | Act 2       |                                        |
+| French (Français)                        | Clearwater, ZedDev, Frizou, osokour, Tamary, Uranus, Lays                                                                          | Act 2       | French and Quebec variants available   |
+| German (Deutsch)                         | Distrilul, JESTERB0T, Liquid Lest, Psychologemelone44, Termi2, Fabidelune, Madeleine                                               | Act 2       |                                        |
+| Korean (한국어)                             | ARSE™, Susu                                                                                                                        | Act 2       |                                        |
+| Russian (русский)                        | Nessie_A_WA97, D4N5T3P, Edith Bagel, lrddd, Brainy-Stormie, TwinT, towelie84, mctaylors, Solidus Cumcer, Filin, Ega1232387, Khowst | Act 2       |                                        |
+| Spanish (Español)                        | LambCS, Philia, Lukah, Amarok_Lc, Santy, Radripizza, j(LRC), LEVIBOT                                                               | Act 2       |                                        |
+| Simplified Chinese (简体中文)                | Hydracerynitis, ciinore, duke325, ponyweeb, Skugra, GoGoblin                                                                       | Act 2       |                                        |
+| Turkish (Türkçe)                         | Legitname1337, Ömer Talha, RTE, Ray_, legio, Scape, Neige,$ERTU$TAUPTOWN                                                           | Act 2       |                                        |
 
 
 Available languages may be directly downloaded for use in-game via the Languages tab in the options menu.
-This list is updated on a semi-regular basis as new languages are made available. (Last updated on patch 13b, the 10th of December 2023)
+This list is updated on a semi-regular basis as new languages are made available.
+### If you would like to submit a new language for use, please do so on our [Discord](https://discord.gg/ZB7jk6Djv5)!
 
 # Troubleshooting
 
@@ -193,19 +156,16 @@ GitHub documentation coming in future. Until then, documentation on how to creat
 can be found in the [UltrakULL Discord.](https://discord.gg/ZB7jk6Djv5)
 
 # Building
-
-Build instructions coming in future.
+###  (This info is for developers. If you only want to play/use the mod, you do not need to read this.)
+1) Clone the repository.<br>`git clone https://github.com/ClearwaterUK/UltrakULL`
+2) Set ULTRAKILLPath as an environment variable, which points to your game installation. <br> This is used to automatically acquire any necessary .dll files from the game location to build the mod.
+3) Open the project solution in the IDE of your choice (Visual Studio, Rider, etc.)
+4) Build the solution. The solution will automatically set up the folder structure, and will drop compiled mod as a DLL.dll file into BepInEx/plugins/UltrakULL.<br>
+If you have any language templates or dubbing audio files, the project will automatically copy those to config/ultrakull.
+5) Drop all the generated files and folders into: `[Your Steam folder]/steamapps/common/ULTRAKILL/`<br> Overwrite any files if prompted.
 
 # Credits & Contributors
-UltrakULL created by **[Clearwater](https://github.com/ClearwaterTM)**\
-Additional code contributions by **[Temperz87](https://github.com/Temperz87/)** & **[CoatlessAli](https://github.com/coatlessali)**\
-Documentation contributions by Frizou \
-Language translations by members of the **UltrakULL Translation Team** (view the [Languages](#Languages) section for full information and crediting)\
-ULTRAKILL created by **Arsi 'Hakita' Patala** and published by **New Blood Interactive**
-
-UltrakULL uses the following libraries:
-- [JSON.Net](https://github.com/JamesNK/Newtonsoft.Json) by [NewtonSoft](https://www.newtonsoft.com/json), licenced under the MIT Licence.
-- [arabic-support-unity](https://github.com/Konash/arabic-support-unity) by [Konash](https://github.com/Konash), licenced under the MIT licence.
+View [CREDITS.md](./UltrakULL/CREDITS.md) for full crediting information.
 
 # Links
 
