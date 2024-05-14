@@ -93,13 +93,13 @@ namespace UltrakULL.Harmony_Patches
                 __instance.gameObject.name.Contains("LayerText") ||
                 __instance.transform.parent.gameObject.name.Contains("Cheats Info");
             Vector4 originalUnderlaycolor = __instance.fontMaterial.GetVector("_UnderlayColor");
-
+            if (__instance.transform.parent.gameObject.name.Equals("Filler") && __instance.gameObject.name.Equals("HP Text") && __instance.GetComponentInParent<HealthBar>() != null) { return; }
             switch (currentLanguageCode)
             {
                 //Traditional/Simplified Chinese
                 case "zh":
                     {
-                        if (__instance.transform.parent.gameObject.name.Equals("Filler") && __instance.gameObject.name.Equals("HP Text") && __instance.GetComponentInParent<HealthBar>() != null) { return; }
+                        
                         //Swap with a Chinese font when it comes in.
                         __instance.font = Core.CJKFontTMP;
                         if (isUnderlaid)
@@ -117,7 +117,6 @@ namespace UltrakULL.Harmony_Patches
                 //Japanese
                 case "ja":
                     {
-                        if (__instance.transform.parent.gameObject.name.Equals("Filler") && __instance.gameObject.name.Equals("HP Text") && __instance.GetComponentInParent<HealthBar>() != null) { return; }
                         __instance.font = Core.jaFontTMP;
                         if (isUnderlaid)
                         {
