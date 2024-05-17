@@ -43,6 +43,9 @@ weapon: weapon_nailgunZapper(Ready, OutOfRange, NoTarget, Blocked, Distance, Rec
 ranks: rank_letter_(d, c, b, a, s, p)
 sandbox: shop_stats, navmeshWarn
 washing: wash_(fakeexittext(1-6), wash_exitOpenText(1-3), Clean, ToDo, bloodClean, roomCourtyard, roomLibrary, roomLobby, roomLounge, roomSideroom, littercount, Dumpster, Ground, Pillars, Walls, BackBookshelf, Ceiling, Bookshelf, Bookcases, Desk, FrontBookshelf, Sconces, Sidewall, Walkway, WindowWall, Decor, Floors, Pond)
+secletLevels: secretLevels_seventh_testamentTitle
+secletLevels: secretLevels_seventh_testament(1-10)
+
 
 MODIFIED:
 enemyName: enemyname_minosPrime -> enemyname_boss_minosPrime, enemyname_fleshPrison -> enemyname_boss_fleshPrison
