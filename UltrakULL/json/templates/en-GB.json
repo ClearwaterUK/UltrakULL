@@ -803,8 +803,8 @@
         "books_violenceFourth4": "T H I S   I S   T H E   O N L Y   W A Y   I T   S H O U L D   H A V E   E N D E D .",
         "books_violenceFourth5": "The pages of the book are blank.",
 
-        "books_violenceSecret1_Slate1": "SORRY, GONE FISHIN'!",
-        "books_violenceSecret1_Slate2": "- SIZE 2"
+        "books_violenceSecret_Slate1": "SORRY, GONE FISHIN'!",
+        "books_violenceSecret_Slate2": "- SIZE 2"
     },
     "intermission": {
         "act1_intermission_first1": "Disgrace.",
