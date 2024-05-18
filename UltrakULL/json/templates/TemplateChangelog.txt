@@ -21,7 +21,7 @@ books: violenceFirst(1-9), violenceFirst_Slate(1-4), violenceSecond(1-2), violen
 cheats: invincibility, enemiesHateEnemies, enemiesIgnorePlayer, hide(Weapons, Ui), ghostDroneMode, categoryVisual, loadLatestSave, dupesOverWriteWarn
 shop: shotgunSawedOn, shotgunSawedOnDescription(1-3), nailgunJumpStart, nailgunJumpStartDescription(1-2), rocketLauncherFireStarter, rocketLauncherFireStarterDescription(1-2), menu
 enemyAlter: hookPointTitle, sandboxTitle, enrage, enrageEternal, sandified, puppeted, ignorePlayer, attackEnemies, hasSkull, altarType, metaDisallowFreezing, metaDisallowManipulation, dualWieldPickup, juice, infiniteUses, materialBlock, hurtzone, hurtCooldown, alter(Red, Blue, Stone), alteredDestroyed
-style: cannonboost, cannonballedfrombounce, drillpunch, drillpunchkill, iconoclasm, insurrknockdown, landyours, rocketreturn, roundtrip, screwed, served, strike, boiled, fireforksweak, forthee, guardbreak, hammerHitGreen, hammerHitHeavy, hammerHitRed, hammerHitYellow ,longwaydown, lost, m_a_d, pancaked, roadkill, slipped, trampled
+style: cannonboost, cannonballedfrombounce, drillpunch, drillpunchkill, iconoclasm, insurrknockdown, landyours, rocketreturn, roundtrip, screwed, served, strike, boiled, fireworksweak, forthee, guardbreak, hammerHitGreen, hammerHitHeavy, hammerHitRed, hammerHitYellow ,longwaydown, lost, m_a_d, pancaked, roadkill, slipped, trampled
 style: bishopcapture, bishoppromo, blackwins, bongcloud, castled, enpassant, foolsmate, pawncapture, knightcapture, knightpromo, queencapture, queenpromo, rookcapture, rookpromo, ultravictory, whitewins
 frontEnd: layer_(violence, fraud, treachery), difficulty_brutalDescription(1-3), leaderboard_reminder
 levelTips: leveltips_violence(First, Second, Third, Fourth, Secret)
