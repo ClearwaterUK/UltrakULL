@@ -22,6 +22,10 @@ namespace UltrakULL
             {
                 return LanguageManager.CurrentLanguage.act3.act3_violenceSecond_guttermanTutorial + " '<color=orange>" + input + "</color>'";
             }
+            if (fullMessage.Contains("You should probably"))
+            {
+                return LanguageManager.CurrentLanguage.act3.act3_violenceSecond_guttermanTutorialNoKB;
+            }
             if (fullMessage.Contains("BIGGER BOOM"))
             {
                 return ("<color=red>" + LanguageManager.CurrentLanguage.act3.act3_violenceSecond_biggerBoom + "</color>");
