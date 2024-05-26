@@ -383,6 +383,7 @@ namespace UltrakULL.json
         public string style_interruption;
         public string style_kill;
         public string style_landyours;
+        public string style_lightningbolt;
         public string style_limbshot;
         public string style_mauriced;
         public string style_multikill;

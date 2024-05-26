@@ -65,6 +65,7 @@ namespace UltrakULL
                 case "ultrakill.insurrknockdown": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_insurrknockdown + "</color>"; }
                 case "ultrakill.interruption": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_interruption + "</color>"; }
                 case "ultrakill.kill": { return LanguageManager.CurrentLanguage.style.style_kill; }
+                case "ultrakill.lightningbolt": { return "<color=green>" + LanguageManager.CurrentLanguage.style.style_lightningbolt + "</color>"; }
                 case "ultrakill.limbhit": { return LanguageManager.CurrentLanguage.style.style_limbshot; }
                 case "ultrakill.mauriced": { return LanguageManager.CurrentLanguage.style.style_mauriced; }
                 case "ultrakill.multikill": { return "<color=orange>" + LanguageManager.CurrentLanguage.style.style_multikill + "</color>"; }
