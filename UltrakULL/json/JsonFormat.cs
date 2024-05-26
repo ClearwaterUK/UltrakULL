@@ -2483,6 +2483,7 @@ namespace UltrakULL.json
         public string act3_violenceFirst_doorOpens;
         
         public string act3_violenceSecond_guttermanTutorial;
+        public string act3_violenceSecond_guttermanTutorialNoKB;
         public string act3_violenceSecond_biggerBoom;
 
         public string act3_violenceSecond_gateControlTitle;
