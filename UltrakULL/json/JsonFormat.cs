@@ -363,7 +363,7 @@ namespace UltrakULL.json
         public string style_exploded;
         public string style_finishedoff;
         public string style_fireworks;
-        public string style_fireforksweak;
+        public string style_fireworksweak;
         public string style_fistfulofdollar;
         public string style_fried;
         public string style_friendlyfire;
