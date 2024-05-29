@@ -30,9 +30,12 @@ namespace UltrakULL
         public static TMP_FontAsset GlobalFontTMP;
         public static TMP_FontAsset MuseumFontTMP;
         public static TMP_FontAsset CJKFontTMP;
-        public static TMP_FontAsset jaFontTMP;
+        public static TMP_FontAsset JaFontTMP;
         public static TMP_FontAsset ArabicFontTMP;
 		public static TMP_FontAsset HebrewFontTMP;
+        public static Material GlobalFontTMPOverlayMat;
+        public static Material CJKFontTMPOverlayMat;
+        public static Material jaFontTMPOverlayMat;
         public static Sprite[] CustomRankImages;
 
         public static Sprite ArabicUltrakillLogo;
@@ -236,10 +239,12 @@ namespace UltrakULL
                 Font font2 = fontBundle.LoadAsset<Font>("EBGaramond-Regular");
                 TMP_FontAsset font1TMP = fontBundle.LoadAsset<TMP_FontAsset>("VCR_OSD_MONO_EXTENDED_TMP");
                 TMP_FontAsset font2TMP = fontBundle.LoadAsset<TMP_FontAsset>("EBGaramond-Regular_TMP");
-    
+                Material font1TMPTopMat = fontBundle.LoadAsset<Material>("VCR_OSD_MONO_EXTENDED_TMP_Overlay_Material");
                 
                 TMP_FontAsset cjkFontTMP = fontBundle.LoadAsset<TMP_FontAsset>("NotoSans-CJK_TMP");
                 TMP_FontAsset jafontTMP = fontBundle.LoadAsset<TMP_FontAsset>("JF-Dot-jiskan16s-2000_TMP");
+                Material cjkFontTMPTopMat = fontBundle.LoadAsset<Material>("NotoSans-CJK_TMP_Overlay_Material");
+                Material jaFontTMPTopMat = fontBundle.LoadAsset<Material>("JF-Dot-jiskan16s-2000_TMP_Overlay_Material");
                 if (font1 && font2)
                 {
                     Logging.Warn("Normal fonts loaded.");
@@ -252,13 +257,16 @@ namespace UltrakULL
                     Logging.Error("FAILED TO LOAD NORMAL FONTS");
                     GlobalFontReady = false;
                 }
-                if(font1TMP && font2TMP && cjkFontTMP)
+                if(font1TMP && font2TMP && cjkFontTMP && jafontTMP && font1TMPTopMat && cjkFontTMPTopMat && jaFontTMPTopMat)
                 {
                     Logging.Warn("Normal TMP fonts loaded.");
                     GlobalFontTMP = font1TMP;
                     MuseumFontTMP = font2TMP;
                     CJKFontTMP = cjkFontTMP;
-                    jaFontTMP = jafontTMP;
+                    JaFontTMP = jafontTMP;
+                    GlobalFontTMPOverlayMat = font1TMPTopMat;
+                    CJKFontTMPOverlayMat = cjkFontTMPTopMat;
+                    jaFontTMPOverlayMat = jaFontTMPTopMat;
                     
                     TMPFontReady = true;
                 }
