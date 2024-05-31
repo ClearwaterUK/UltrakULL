@@ -69,7 +69,7 @@ namespace UltrakULL
 			if (missionName.Contains("P-2")) { return "P-2: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeSecond; }
 			if (missionName.Contains("P-3")) { return "P-3: " + LanguageManager.CurrentLanguage.levelNames.levelName_primeThird; }
 
-			if (missionName.Contains("Intermission")) { return "???"; }
+			if (missionName.Contains("Intermission") || missionName.Contains("EarlyAccessEnd")) { return "???"; }
 
 	        Logging.Warn("Unknown level name: " + missionName);
 			return missionName;

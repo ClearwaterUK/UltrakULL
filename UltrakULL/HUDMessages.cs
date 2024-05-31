@@ -100,16 +100,24 @@ namespace UltrakULL
                 Behaviour bhvr = (Behaviour)test[3];
                 bhvr.enabled = false;
 
-                try
+                //why only EarlyAccessEnd?
+                if (GetCurrentSceneName() == "EarlyAccessEnd")
                 {
-                    Text youDiedText = GetTextfromGameObject(deathScreen);
-                    youDiedText.text = LanguageManager.CurrentLanguage.misc.youDied1 + "\n\n\n\n\n" + LanguageManager.CurrentLanguage.misc.youDied2;
-                }
-                catch
-                {   //why only EarlyAccessEnd?B
-                    Logging.Warn("Failed to patch deathScreen");
-                    Logging.Warn("trying to get TextMeshProUGUI component.");
                     GetTextMeshProUGUI(deathScreen).text = LanguageManager.CurrentLanguage.misc.youDied1 + "\n\n\n\n\n" + LanguageManager.CurrentLanguage.misc.youDied2;
+                }
+                else
+                {
+                    try
+                    {
+                        Text youDiedText = GetTextfromGameObject(deathScreen);
+                        youDiedText.text = LanguageManager.CurrentLanguage.misc.youDied1 + "\n\n\n\n\n" + LanguageManager.CurrentLanguage.misc.youDied2;
+                    }
+                    catch
+                    {
+                        Logging.Warn("Failed to patch deathScreen");
+                        Logging.Warn("trying to get TextMeshProUGUI component.");
+                        GetTextMeshProUGUI(deathScreen).text = LanguageManager.CurrentLanguage.misc.youDied1 + "\n\n\n\n\n" + LanguageManager.CurrentLanguage.misc.youDied2;
+                    }
                 }
             }
             catch (Exception e)
