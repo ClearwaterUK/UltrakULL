@@ -87,6 +87,7 @@ namespace UltrakULL.Harmony_Patches
 	{
 		public static void SwapTMPFont(ref TextMeshProUGUI __instance)
 		{
+            if (__instance.transform.parent.GetComponent<HealthBar>() != null && __instance.gameObject.name.Equals("HP Text")) { return; }
             string currentLanguage = LanguageManager.CurrentLanguage.metadata.langName.ToLower();
             string currentLanguageCode = currentLanguage.Substring(0, 2);
             bool isUnderlaid = __instance.gameObject.name.Contains("NameText") ||
@@ -94,7 +95,6 @@ namespace UltrakULL.Harmony_Patches
                 __instance.transform.parent.gameObject.name.Contains("Cheats Info");
             bool isOverlay = HudControllerPatch.isOverlaid;
             Vector4 originalUnderlaycolor = __instance.fontMaterial.GetVector("_UnderlayColor");
-            if (__instance.transform.parent.gameObject.name.Equals("Filler") && __instance.gameObject.name.Equals("HP Text") && __instance.GetComponentInParent<HealthBar>() != null) { return; }
             switch (currentLanguageCode)
             {
                 //Traditional/Simplified Chinese
@@ -289,6 +289,8 @@ namespace UltrakULL.Harmony_Patches
             [HarmonyPatch("SetAlwaysOnTop"), HarmonyPrefix]
             public static bool SetAlwaysOnTop_Prefix(ref TMP_Text[] ___textElements, bool onTop)
             {
+                if (isUsingEnglish())
+                { return true; }
                 isOverlaid = onTop;
                 if (___textElements.Length > 0)
                 {
@@ -299,9 +301,7 @@ namespace UltrakULL.Harmony_Patches
                         SwapTMPFont(ref a);
                     }
                 }
-                if (isUsingEnglish())
-                { return true; }
-                else { return false; }
+                return false;
             }
         }
         [HarmonyPatch(typeof(SubtitleController))]
