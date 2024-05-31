@@ -509,7 +509,7 @@ namespace UltrakULL.Harmony_Patches
             try
             {
                 languageButton.transform.SetParent(GetGameObjectChild(optionsParentObject, "Panel").transform);
-                languageButton.transform.SetSiblingIndex(10);
+                languageButton.transform.SetSiblingIndex(languageButton.transform.parent.childCount - 3);
                 RectTransform panelRectTransform = GetGameObjectChild(optionsParentObject, "Panel").GetComponent<RectTransform>();
                 RectTransform categoryOffset = GetGameObjectChild(GetGameObjectChild(optionsParentObject, "Panel"), "Text (9)").GetComponent<RectTransform>();
                 categoryOffset.offsetMin = new Vector2(categoryOffset.offsetMin.x, categoryOffset.offsetMin.y + 40);
@@ -522,7 +522,7 @@ namespace UltrakULL.Harmony_Patches
             #pragma warning disable 0168
             catch (Exception e)
             {
-                Logging.Error("LanguageButton text is null");
+                Logging.Warn("LanguageButton text is null");
                 languageButtonText.text = "LANGUAGES";
                 languageButtonTitleText.text = "--" + "LANGUAGES" + "--";
             }
