@@ -59,43 +59,43 @@ namespace UltrakULL
 
 
             //Title
-            Text titleText= GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(resultsPanel, "Title"),"Text"));
+            TextMeshProUGUI titleText= GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(resultsPanel, "Title"),"Text"));
             titleText.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_cgTitle;
 
             //Last result panel
-            Text lastTitle = GetTextfromGameObject(GetGameObjectChild(lastResult, "Text"));
+            TextMeshProUGUI lastTitle = GetTextMeshProUGUI(GetGameObjectChild(lastResult, "Text"));
             lastTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_previousRun;
 
-            Text lastWave = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(lastResult, "Wave - Info"),"Text"));
+            TextMeshProUGUI lastWave = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(lastResult, "Wave - Info"),"Text"));
             lastWave.text = wave;
 
-            Text lastKills = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(lastResult, "Kills - Info"), "Text"));
+            TextMeshProUGUI lastKills = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(lastResult, "Kills - Info"), "Text"));
             lastKills.text = kills;
 
-            Text lastStyle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(lastResult, "Style - Info"), "Text"));
+            TextMeshProUGUI lastStyle = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(lastResult, "Style - Info"), "Text"));
             lastStyle.text = style;
 
-            Text lastTime = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(lastResult, "Time - Info"), "Text"));
+            TextMeshProUGUI lastTime = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(lastResult, "Time - Info"), "Text"));
             lastTime.text = time;
 
             //Best result panel
-            Text bestTitle = GetTextfromGameObject(GetGameObjectChild(bestResult, "Text (1)"));
+            TextMeshProUGUI bestTitle = GetTextMeshProUGUI(GetGameObjectChild(bestResult, "Text (1)"));
             bestTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_bestRun;
 
-            Text bestWave = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(bestResult, "Wave - Info (1)"), "Text"));
+            TextMeshProUGUI bestWave = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(bestResult, "Wave - Info (1)"), "Text"));
             bestWave.text = wave;
 
-            Text bestKills = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(bestResult, "Kills - Info (1)"), "Text"));
+            TextMeshProUGUI bestKills = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(bestResult, "Kills - Info (1)"), "Text"));
             bestKills.text = kills;
 
-            Text bestStyle = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(bestResult, "Style - Info (1)"), "Text"));
+            TextMeshProUGUI bestStyle = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(bestResult, "Style - Info (1)"), "Text"));
             bestStyle.text = style;
 
-            Text bestTime = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(bestResult, "Time - Info (1)"), "Text"));
+            TextMeshProUGUI bestTime = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(bestResult, "Time - Info (1)"), "Text"));
             bestTime.text = time;
 
             //Points panel
-            Text totalPoints = GetTextfromGameObject(GetGameObjectChild(pointsPanel, "Text (1)"));
+            TextMeshProUGUI totalPoints = GetTextMeshProUGUI(GetGameObjectChild(pointsPanel, "Text (1)"));
             totalPoints.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_total;
 
             //Leaderboards
@@ -105,16 +105,16 @@ namespace UltrakULL
             GameObject friendScores = GetGameObjectChild(leaderboardsPanel, "Friend High Scores");
             GameObject globalScores = GetGameObjectChild(leaderboardsPanel, "Global High Scores");
 
-            Text friendScoresTitle = GetTextfromGameObject(GetGameObjectChild(friendScores, "Text"));
+            TextMeshProUGUI friendScoresTitle = GetTextMeshProUGUI(GetGameObjectChild(friendScores, "Text"));
             friendScoresTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_friendScores;
 
-            Text globalScoresTitle = GetTextfromGameObject(GetGameObjectChild(globalScores, "Text"));
+            TextMeshProUGUI globalScoresTitle = GetTextMeshProUGUI(GetGameObjectChild(globalScores, "Text"));
             globalScoresTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_globalScores;
 
-            Text friendsConnectingText = GetTextfromGameObject(GetGameObjectChild(friendScores, "Connecting"));
+            TextMeshProUGUI friendsConnectingText = GetTextMeshProUGUI(GetGameObjectChild(friendScores, "Connecting"));
             friendsConnectingText.text = connecting;
 
-            Text globalConnectingText = GetTextfromGameObject(GetGameObjectChild(globalScores, "Connecting"));
+            TextMeshProUGUI globalConnectingText = GetTextMeshProUGUI(GetGameObjectChild(globalScores, "Connecting"));
             globalConnectingText.text = connecting;
 
 
