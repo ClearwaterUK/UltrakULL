@@ -57,7 +57,7 @@ namespace UltrakULL.Harmony_Patches
                     return;
                 }
                 
-                Text origTip = GetTextfromGameObject(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(___shopCanvas.gameObject,"TipBox"),"Panel"),"TipText"));
+                TextMeshProUGUI origTip = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(___shopCanvas.gameObject,"TipBox"),"Panel"),"TipText"));
                 GameObject shopObject = ___shopCanvas.gameObject;
                 
                 //Redirect for the 5-3 end shop.
