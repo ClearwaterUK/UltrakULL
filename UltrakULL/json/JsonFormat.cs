@@ -349,7 +349,7 @@ namespace UltrakULL.json
         public string style_cannonballed;
         public string style_cannonballedfrombounce;
         public string style_cannonboost;
-        public string style_catapaulted;
+        public string style_catapulted;
         public string style_chargeback;
         public string style_compressed;
         public string style_criticalpunch;
