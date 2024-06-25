@@ -708,6 +708,7 @@
         "cybergrind_themesCustomGlowIntensity": "GLOW INTENSITY",
 
         "cybergrind_musicTitle": "PLAYLIST",
+        "cybergrind_musicType": "Select the type of track to add",
         "cybergrind_musicCompleteChallengeRequirement": "COMPLETE CHALLENGE FOR",
         "cybergrind_musicSeeEnemyRequirement": "ENCOUNTER AN UNKNOWN FOE",
         "cybergrind_musicUnlockLevelRequirement": "REACH",

@@ -701,6 +701,7 @@
 		"cybergrind_themesCustomGlowIntensity": "INTENSITÉ",
 
 		"cybergrind_musicTitle": "MUSIQUES",
+		"cybergrind_musicType": "",
 		"cybergrind_musicCompleteChallengeRequirement": "COMPLÉTEZ LE DÉFI POUR",
 		"cybergrind_musicSeeEnemyRequirement": "RENCONTREZ UN ADVERSAIRE INCONNU",
 		"cybergrind_musicUnlockLevelRequirement": "ATTEIGNEZ",

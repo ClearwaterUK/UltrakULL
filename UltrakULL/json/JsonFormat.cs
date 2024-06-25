@@ -221,6 +221,7 @@ namespace UltrakULL.json
         public string cybergrind_themesCustomGlowIntensity;
         
         public string cybergrind_musicTitle;
+        public string cybergrind_musicType;
         public string cybergrind_musicCompleteChallengeRequirement;
         public string cybergrind_musicSeeEnemyRequirement;
         public string cybergrind_musicUnlockLevelRequirement;

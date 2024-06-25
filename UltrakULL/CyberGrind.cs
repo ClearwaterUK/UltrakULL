@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 using static UltrakULL.CommonFunctions;
 using UltrakULL.json;
+using System.Threading.Tasks;
 
 namespace UltrakULL
 {
@@ -137,6 +138,9 @@ namespace UltrakULL
             //Main menu
             GameObject cgTerminalMainMenu = GetGameObjectChild(GetGameObjectChild(cgTerminal, "Main Menu"),"Buttons");
 
+            TextMeshProUGUI cgTerminalMenuText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(cgTerminal, "Main Menu"),"Menu Title"));
+            cgTerminalMenuText.text = "--" + LanguageManager.CurrentLanguage.shop.shop_menu + "--";
+
             TextMeshProUGUI cgTerminalThemesText = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(cgTerminalMainMenu, "ThemeButton"), "Text"));
             cgTerminalThemesText.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themes;
             
@@ -177,7 +181,26 @@ namespace UltrakULL
             
             TextMeshProUGUI cgMusicBack = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(cgMusic,"BackButton"),"Text"));
             cgMusicBack.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustomBack;
-            
+
+            GameObject cgMusicType = GetGameObjectChild(cgTerminal, "MusicType");
+            TextMeshProUGUI cgMusicTypeCancel = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(cgMusicType, "BackButton"), "Text"));
+            cgMusicTypeCancel.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustomBack;
+
+            GameObject cgMusicTypeCanvas = GetGameObjectChild(cgMusicType, "Panel");
+
+            TextMeshProUGUI cgMusicTypeTitle = GetTextMeshProUGUI(GetGameObjectChild(cgMusicTypeCanvas, "Title"));
+            cgMusicTypeTitle.text = "--"+LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicTitle+"--";
+
+            TextMeshProUGUI cgMusicTypeText = GetTextMeshProUGUI(GetGameObjectChild(cgMusicTypeCanvas, "Text"));
+            cgMusicTypeText.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicType;
+
+            GameObject cgMusicTypeButtons = GetGameObjectChild(cgMusicTypeCanvas, "Buttons");
+            TextMeshProUGUI cgMusicTypeULTRAKILL = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(cgMusicTypeButtons, "ULTRAKILLButton"), "Text"));
+            cgMusicTypeULTRAKILL.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicSoundtrack;
+
+            TextMeshProUGUI cgMusicTypeCustom = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(cgMusicTypeButtons, "CustomButton"), "Text"));
+            cgMusicTypeCustom.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustom;
+
             GameObject cgMusicSoundtrack = GetGameObjectChild(GetGameObjectChild(cgTerminal,"SoundtrackMusic"),"Panel");
             TextMeshProUGUI cgMusicSoundtrackTitle = GetTextMeshProUGUI(GetGameObjectChild(cgMusicSoundtrack,"Title"));
             cgMusicSoundtrackTitle.text = "--"+LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicSoundtrack +"--";
@@ -190,15 +213,32 @@ namespace UltrakULL
 
             GameObject cgMusicSoundtrackAddMenu = GetGameObjectChild(GetGameObjectChild(cgMusicSoundtrack,"ImageSelectorWrapper"),"ImageSelector");
 
+            //CustomMusic
+            GameObject cgCustomMusic = GetGameObjectChild(GetGameObjectChild(cgTerminal, "CustomMusic"), "Panel");
+
+            TextMeshProUGUI cgCustomMusicTitle = GetTextMeshProUGUI(GetGameObjectChild(cgCustomMusic, "Title"));
+            cgCustomMusicTitle.text = "--" + LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustom + "--";
+
+            TextMeshProUGUI cgCustomMusicConfirm = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(cgCustomMusic, "Confirm"), "Text"));
+            cgCustomMusicConfirm.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicConfirm;
+
+            TextMeshProUGUI cgCustomMusicCancel = GetTextMeshProUGUI(GetGameObjectChild(GetGameObjectChild(cgCustomMusic, "BackButton"), "Text"));
+            cgCustomMusicCancel.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_themesCustomBack;
+
             //Changes the "UNLOCKED" string under songs that are unlocked
-            
+
             foreach (Transform child in cgMusicSoundtrackAddMenu.transform)
             {
                 if (child.name == "SongTemplate(Clone)")
                 {
                     TextMeshProUGUI cgMusicSoundtrackTask = GetTextMeshProUGUI(GetGameObjectChild(child.gameObject, "Cost"));
-                    if (cgMusicSoundtrackTask.text == "<i>UNLOCKED</i>") { cgMusicSoundtrackTask.text = "<i>" + LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicUnlocked + "/<i>"; }
+                    if (cgMusicSoundtrackTask.text == "<i>UNLOCKED</i>") { cgMusicSoundtrackTask.text = "<i>" + LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicUnlocked + "</i>"; }
                 }
+            }
+            Button[] aas = cgMusicSoundtrack.GetComponentsInChildren<Button>(true);
+            foreach (Button button in aas)
+            {
+                button.onClick.AddListener(delegate { Task.Delay(1000); PatchTerminalFolder(); });
             }
             
             
@@ -269,35 +309,42 @@ namespace UltrakULL
             cgTerminalWavesText.fontSize = 16;
         }
 
-        public static string PatchTerminalFolder()
+        public async static void PatchTerminalFolder()
         {
             //Changes all folders' own names based on their original name
             GameObject level = GameObject.Find("FirstRoom");
             GameObject cgTerminal = GetGameObjectChild(GetGameObjectChild(GetGameObjectChild(level, "Room"), "CyberGrindSettings"), "Canvas");
             GameObject cgMusicSoundtrack = GetGameObjectChild(GetGameObjectChild(cgTerminal, "SoundtrackMusic"), "Panel");
             GameObject cgMusicSoundtrackAddMenu = GetGameObjectChild(GetGameObjectChild(cgMusicSoundtrack, "ImageSelectorWrapper"), "ImageSelector");
-            
+            await Task.Delay(10);
             foreach (Transform child in cgMusicSoundtrackAddMenu.transform)
             {
                 if (child.name == "FolderTemplate(Clone)")
                 {
+                    Button a = child.GetComponent<Button>();
+                    a.onClick.AddListener(delegate { Task.Delay(1000); PatchTerminalFolder(); });
                     TextMeshProUGUI cgMusicSoundtrackFolderTitle = GetTextMeshProUGUI(GetGameObjectChild(child.gameObject, "Text"));
                     switch (cgMusicSoundtrackFolderTitle.text)
                     {
-                        case "THE CYBER GRIND": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameCyberGrind; }
-                        case "PRELUDE": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNamePrelude; }
-                        case "ACT 1": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameAct1; }
-                        case "ACT 2": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameAct2; }
-                        case "ACT 3": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameAct3; }
-                        case "SECRET LEVELS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameSecret; }
-                        case "PRIME SANCTUMS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNamePrime; }
-                        case "MISCELLANEOUS TRACKS": { return LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameMisc; }
+                        case "THE CYBER GRIND": { cgMusicSoundtrackFolderTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameCyberGrind; break; }
+                        case "PRELUDE": { cgMusicSoundtrackFolderTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNamePrelude; break; }
+                        case "ACT 1": { cgMusicSoundtrackFolderTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameAct1; break; }
+                        case "ACT 2": { cgMusicSoundtrackFolderTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameAct2; break; }
+                        case "ACT 3": { cgMusicSoundtrackFolderTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameAct3; break; }
+                        case "SECRET LEVELS": { cgMusicSoundtrackFolderTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameSecret; break; }
+                        case "PRIME SANCTUMS": { cgMusicSoundtrackFolderTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNamePrime; break; }
+                        case "MISCELLANEOUS TRACKS": { cgMusicSoundtrackFolderTitle.text = LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicFolderNameMisc; break; }
 
-                        default: {Logging.Warn("Missing CG music folder: " + cgMusicSoundtrackFolderTitle.text); return cgMusicSoundtrackFolderTitle.text; }
+                        default: {Logging.Warn("Missing CG music folder name: " + cgMusicSoundtrackFolderTitle.text); cgMusicSoundtrackFolderTitle.text = cgMusicSoundtrackFolderTitle.text; break; }
                     }
                 }
+                if (child.name == "SongTemplate(Clone)")
+                {
+                    TextMeshProUGUI cgMusicSoundtrackTask = GetTextMeshProUGUI(GetGameObjectChild(child.gameObject, "Cost"));
+                    if (cgMusicSoundtrackTask.text == "<i>UNLOCKED</i>") { cgMusicSoundtrackTask.text = "<i>" + LanguageManager.CurrentLanguage.cyberGrind.cybergrind_musicUnlocked + "</i>"; }
+                }
             }
-            return "Missing folder reference";
+            return;
         }
         public static void PatchCg()
         {

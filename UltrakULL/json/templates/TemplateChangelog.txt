@@ -3,6 +3,7 @@
 ADDED:
 act3: act3_violenceSecond_guttermanTutorialNoKB
 style: style_lightningbolt
+cyberGrind: cybergrind_musicType
 
 MODIFIED:
 style: style_catapaulted -> style_catapulted
