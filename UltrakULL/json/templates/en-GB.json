@@ -2444,6 +2444,7 @@
         "tutorial_introReminder": "ASSIST OPTIONS AVAILABLE IN PAUSE MENU",
         "tutorial_systemsOperational": "ALL SYSTEMS OPERATIONAL",
         "tutorial_introLoadStatus": "LOADING STATUS UPDATE",
+        "tutorial_introStatusUpdate": "STATUS UPDATE",
         "tutorial_introID1": "ID",
         "tutorial_introID2": "V1",
         "tutorial_introLocation1": "LOCATION",

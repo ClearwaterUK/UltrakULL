@@ -2276,6 +2276,7 @@ namespace UltrakULL.json
         public string tutorial_introReminder;
         public string tutorial_systemsOperational;
         public string tutorial_introLoadStatus;
+        public string tutorial_introStatusUpdate;
 
         public string tutorial_audioCalibrationTitle;
         public string tutorial_audioCalibrationWarning1;

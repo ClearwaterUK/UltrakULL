@@ -99,8 +99,8 @@ namespace UltrakULL
 
                 TextMeshProUGUI nofade = GetTextMeshProUGUI(GetGameObjectChild(calibrationIntro, "Page 2 NoFade"));
                 nofade.text = 
-                    "<color=red>" + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed1 + "\n"
-                    + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed2 + "\n"
+                    "<color=red> " + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed1 + "\n "
+                    + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed2 + "\n "
                     + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed3 + "</color>";
 
                 //Audio
@@ -313,12 +313,13 @@ namespace UltrakULL
                 + "+" + LanguageManager.CurrentLanguage.tutorial.tutorial_systemsOperational + "_½ \n"
                 + LanguageManager.CurrentLanguage.tutorial.tutorial_introLoadStatus + "§";
 
-            this.IntroSecondPage =
-            LanguageManager.CurrentLanguage.tutorial.tutorial_introID1 + ":     " + LanguageManager.CurrentLanguage.tutorial.tutorial_introID2 + "½½ \n"
-            + LanguageManager.CurrentLanguage.tutorial.tutorial_introLocation1 + ":     " + LanguageManager.CurrentLanguage.tutorial.tutorial_introLocation2 + "@½½ \n"
-            + LanguageManager.CurrentLanguage.tutorial.tutorial_introObjective1 + ":    " + LanguageManager.CurrentLanguage.tutorial.tutorial_introObjective2 + "½½ \n\n"
-            + "*" + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed1 + "_½½ \n"
-            + "*" + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed2 + "_½½ \n"
+            this.IntroSecondPage = " " +
+            LanguageManager.CurrentLanguage.tutorial.tutorial_introStatusUpdate + ":½\n\n " +
+            LanguageManager.CurrentLanguage.tutorial.tutorial_introID1 + ":     " + LanguageManager.CurrentLanguage.tutorial.tutorial_introID2 + "½½\n "
+            + LanguageManager.CurrentLanguage.tutorial.tutorial_introLocation1 + ":     " + LanguageManager.CurrentLanguage.tutorial.tutorial_introLocation2 + "½½@\n "
+            + LanguageManager.CurrentLanguage.tutorial.tutorial_introObjective1 + ":    " + LanguageManager.CurrentLanguage.tutorial.tutorial_introObjective2 + "½½\n\n"
+            + "*" + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed1 + "_½½\n"
+            + "*" + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed2 + "_½½\n"
             + "*" + LanguageManager.CurrentLanguage.tutorial.tutorial_introRed3 + "_½½&";
 
             PatchCalibrationWindows(ref canvasObj);
