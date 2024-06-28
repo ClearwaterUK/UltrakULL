@@ -75,7 +75,7 @@ namespace UltrakULL
                 case "GABRIEL, APOSTATE OF HATE": case "GABRIEL, THE APOSTATE OF HATE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_gabrielSecond; }
                 case "VIRTUE": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_virtue; }
                 case "SOMETHING WICKED": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_somethingWicked; }
-                case "PUPPET": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_puppet; }
+                case "???": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_puppet; }
                 case "FLESH PRISON": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_fleshPrison; }
                 case "MINOS PRIME": case "MINOSPRIME":{ return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_minosPrime; }
                 case "FLESH PANOPTICON": { return LanguageManager.CurrentLanguage.enemyNames.enemyname_boss_fleshPanopticon; }
