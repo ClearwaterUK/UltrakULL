@@ -189,8 +189,8 @@ namespace UltrakULL.Harmony_Patches
 					string replacement = "_";
 					string rank = componentInChildren.text;
 
-					//componentInChildren.alignment = UnityEngine.TextAnchor.LowerCenter;
-					//componentInChildren.resizeTextForBestFit = true;
+					componentInChildren.verticalAlignment = VerticalAlignmentOptions.Bottom;
+					//componentInChildren.autoSizeTextContainer = true;
 
 					// at least 16 in length, otherwise its 99.999% certain to be nothing.
 					if (rank.Length < 16)
