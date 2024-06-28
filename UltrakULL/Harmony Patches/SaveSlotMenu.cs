@@ -158,7 +158,7 @@ namespace UltrakULL.Harmony_Patches
         }
 
         [HarmonyPatch("ClearSlot"), HarmonyPostfix]
-        public static void ClearSlotPostfix_MyPatch(int slot, Text ___wipeConsentContent)
+        public static void ClearSlotPostfix_MyPatch(int slot, TextMeshProUGUI ___wipeConsentContent)
         {
             if(isUsingEnglish())
             {
