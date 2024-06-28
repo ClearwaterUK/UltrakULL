@@ -85,7 +85,7 @@ namespace UltrakULL.Harmony_Patches
 
 	public class TextMeshProFontSwap
 	{
-		public static void SwapTMPFont(ref TextMeshProUGUI __instance)
+		public static void SwapTMPFont(ref TextMeshProUGUI __instance, bool onTop, bool editOverlayStatus)
 		{
             if (__instance.transform.parent.GetComponent<HealthBar>() != null && __instance.gameObject.name.Equals("HP Text")) { return; }
             string currentLanguage = LanguageManager.CurrentLanguage.metadata.langName.ToLower();
@@ -93,7 +93,7 @@ namespace UltrakULL.Harmony_Patches
             bool isUnderlaid = __instance.gameObject.name.Contains("NameText") ||
                 __instance.gameObject.name.Contains("LayerText") ||
                 __instance.transform.parent.gameObject.name.Contains("Cheats Info");
-            bool isOverlay = HudControllerPatch.isOverlaid;
+            bool isOverlay = onTop;
             Vector4 originalUnderlaycolor = __instance.fontMaterial.GetVector("_UnderlayColor");
             switch (currentLanguageCode)
             {
@@ -107,14 +107,20 @@ namespace UltrakULL.Harmony_Patches
                         {
                             Material underlaid = new Material(__instance.fontMaterial);
                             underlaid.SetVector("_UnderlayColor", originalUnderlaycolor);
-                            __instance.fontSharedMaterial = (isOverlay ? Core.CJKFontTMPOverlayMat : Core.CJKFontTMP.material);
-                            __instance.fontSharedMaterial.SetFloat("_ZTest", (isOverlay ? 8f : 4f));
+                            if (editOverlayStatus)
+                            {
+                                __instance.fontMaterial = (isOverlay ? Core.CJKFontTMPOverlayMat : Core.CJKFontTMP.material);
+                                __instance.fontMaterial.SetFloat("_ZTest", (isOverlay ? 8f : 4f));
+                            }
                             __instance.fontMaterial = underlaid;
                         }
                         else
                         {
-                            __instance.fontSharedMaterial = (isOverlay ? Core.CJKFontTMPOverlayMat : Core.CJKFontTMP.material);
-                            __instance.fontSharedMaterial.SetFloat("_ZTest", (isOverlay ? 8f : 4f));
+                            if (editOverlayStatus)
+                            {
+                                __instance.fontMaterial = (isOverlay ? Core.CJKFontTMPOverlayMat : Core.CJKFontTMP.material);
+                                __instance.fontMaterial.SetFloat("_ZTest", (isOverlay ? 8f : 4f));
+                            }
                             __instance.fontSharedMaterial.SetVector("_UnderlayColor", new Vector4(0, 0, 0, 0));
                         }
                         break;
@@ -127,14 +133,20 @@ namespace UltrakULL.Harmony_Patches
                         {
                             Material underlaid = new Material(__instance.fontMaterial);
                             underlaid.SetVector("_UnderlayColor", originalUnderlaycolor);
-                            __instance.fontSharedMaterial = (isOverlay ? Core.jaFontTMPOverlayMat : Core.JaFontTMP.material);
-                            __instance.fontSharedMaterial.SetFloat("_ZTest", (isOverlay ? 8f : 4f));
-                            __instance.fontMaterial = underlaid;
+                            if (editOverlayStatus)
+                            {
+                                __instance.fontSharedMaterial = (isOverlay ? Core.jaFontTMPOverlayMat : Core.JaFontTMP.material);
+                                //__instance.fontSharedMaterial.SetFloat("_ZTest", (isOverlay ? 8f : 4f));
+                            }
+                            __instance.fontSharedMaterial = underlaid;
                         }
                         else
                         {
-                            __instance.fontSharedMaterial = (isOverlay ? Core.jaFontTMPOverlayMat : Core.JaFontTMP.material);
-                            __instance.fontSharedMaterial.SetFloat("_ZTest", (isOverlay ? 8f : 4f));
+                            if (editOverlayStatus)
+                            {
+                                __instance.fontMaterial = (isOverlay ? Core.jaFontTMPOverlayMat : Core.JaFontTMP.material);
+                                //__instance.fontMaterial.SetFloat("_ZTest", (isOverlay ? 8f : 4f));
+                            }
                             __instance.fontSharedMaterial.SetVector("_UnderlayColor", new Vector4(0, 0, 0, 0));
                         }
                         break;
@@ -232,14 +244,20 @@ namespace UltrakULL.Harmony_Patches
                             {
                                 Material underlaid = new Material(__instance.fontMaterial);
                                 underlaid.SetVector("_UnderlayColor", originalUnderlaycolor);
-                                __instance.fontSharedMaterial = (isOverlay ? Core.GlobalFontTMPOverlayMat : Core.GlobalFontTMP.material);
-                                __instance.fontSharedMaterial.SetFloat("_ZTest", (isOverlay ? 8f : 4f));
+                                if (editOverlayStatus)
+                                {
+                                    __instance.fontSharedMaterial = (isOverlay ? Core.GlobalFontTMPOverlayMat : Core.GlobalFontTMP.material);
+                                    __instance.fontSharedMaterial.SetFloat("_ZTest", (isOverlay ? 8f : 4f));
+                                }
                                 __instance.fontMaterial = underlaid;
                             }
                             else
                             {
-                                __instance.fontSharedMaterial = (isOverlay ? Core.GlobalFontTMPOverlayMat : Core.GlobalFontTMP.material);
-                                __instance.fontSharedMaterial.SetFloat("_ZTest", (isOverlay ? 8f : 4f));
+                                if (editOverlayStatus)
+                                {
+                                    __instance.fontSharedMaterial = (isOverlay ? Core.GlobalFontTMPOverlayMat : Core.GlobalFontTMP.material);
+                                    __instance.fontSharedMaterial.SetFloat("_ZTest", (isOverlay ? 8f : 4f));
+                                }
                                 __instance.fontSharedMaterial.SetVector("_UnderlayColor", new Vector4(0, 0, 0, 0));
                             }
                         }
@@ -275,34 +293,39 @@ namespace UltrakULL.Harmony_Patches
 							return;
 						}
 					}
-                    SwapTMPFont(ref __instance);
+                    SwapTMPFont(ref __instance, false, false);
 					objectsFixed.Add(___m_CachedPtr);
 				}
 
 			}
 		}
-
         [HarmonyPatch(typeof(HudController))]
         public static class HudControllerPatch
         {
             public static bool isOverlaid = MonoSingleton<PrefsManager>.Instance.GetBool("hudAlwaysOnTop");
             [HarmonyPatch("SetAlwaysOnTop"), HarmonyPrefix]
-            public static bool SetAlwaysOnTop_Prefix(ref TMP_Text[] ___textElements, bool onTop)
+            public static bool SetAlwaysOnTop_Prefix(ref TMP_Text[] ___textElements, bool onTop, Material ___overlayTextMaterial, Material ___normalTextMaterial)
             {
-                if (isUsingEnglish())
-                { return true; }
-                isOverlaid = onTop;
-                if (___textElements.Length > 0)
-                {
-                    TMP_Text[] array = ___textElements;
-                    for (int i = 0; i < array.Length; i++)
+                    if (isUsingEnglish())
+                    { return true; }
+                    isOverlaid = onTop;
+                    if (___textElements.Length > 0)
                     {
-                        TextMeshProUGUI a = array[i].GetComponent<TextMeshProUGUI>();
-                        SwapTMPFont(ref a);
+                        TMP_Text[] array = ___textElements;
+                        foreach ( TMP_Text text in array )
+                        {
+                            if (text.transform.parent.GetComponent<HealthBar>() != null && text.gameObject.name.Equals("HP Text"))
+                            {
+                                text.fontSharedMaterial = (isOverlaid ? ___overlayTextMaterial : ___normalTextMaterial);
+                                continue; 
+                            }
+
+                            TextMeshProUGUI a = text.GetComponent<TextMeshProUGUI>();
+                            SwapTMPFont(ref a, isOverlaid, true);
+                        }
                     }
+                    return false;
                 }
-                return false;
-            }
         }
         [HarmonyPatch(typeof(SubtitleController))]
 		public static class SubtitleFontSwapper
@@ -319,7 +342,7 @@ namespace UltrakULL.Harmony_Patches
                 TextMeshProUGUI subtext = subtitle.GetComponentInChildren<TextMeshProUGUI>();
 				if (Core.TMPFontReady)
                 {
-                    SwapTMPFont(ref subtext);
+                    SwapTMPFont(ref subtext, false, false);
                 }
                 if (audioSource != null)
                 {
