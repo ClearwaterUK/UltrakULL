@@ -40,6 +40,10 @@
       <HintPath>$(ManagedDir)\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="plog">
+      <HintPath>$(ManagedDir)\plog.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="BepInEx">
       <HintPath>$(BepInExCoreDir)\BepInEx.dll</HintPath>
       <Private>False</Private>
@@ -216,6 +220,8 @@
     <Compile Include="Harmony Patches\AudioSwaps\MinosPrimeAudioSwap.cs" />
     <Compile Include="Harmony Patches\AudioSwaps\AudioFixes.cs" />
     <Compile Include="Harmony Patches\AudioSwaps\SisyphusPrimeAudioSwap.cs" />
+    <Compile Include="Harmony Patches\Commands\ConsolePatcher.cs" />
+    <Compile Include="Harmony Patches\Commands\CommandsToRegister.cs" />
     <Compile Include="Harmony Patches\BossBarManager.cs" />
     <Compile Include="Harmony Patches\CheatsManager.cs" />
     <Compile Include="Harmony Patches\GetMissionName.cs" />
