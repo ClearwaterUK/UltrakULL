@@ -30,7 +30,8 @@ namespace UltrakULL.Commands
                                         Log.Info($"- {kvp.Key}");
                                     }
                                 })
-                            )
+                            ),
+                        Leaf("getversion", () => Log.Info($"UltrakULL version: {MainPatch.GetVersion()}"))
                         );
         }
 
