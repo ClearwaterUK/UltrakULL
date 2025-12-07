@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 using UltrakULL.json;
 using BepInEx;
 using BepInEx.Configuration;
-using static UltrakULL.CommonFunctions;
 using System.Reflection;
+
+using static UltrakULL.CommonFunctions;
+using UltrakULL.Commands;
 
 /*
  *	UltrakULL (Ultrakill Language Library)
@@ -92,12 +94,24 @@ namespace UltrakULL
             Logging.Fatal("An error occured while initialising!");
             this.initializeErrorMessage.statu = statu;
             this.initializeErrorMessage.e = errorMessage;
+            Logging.Fatal("Reason: " + initializeErrorMessage.statu);
             Logging.Fatal(initializeErrorMessage.e);
         }
 
         public (InitializationStatu, Exception) Initialize()
         {
             // You can find this enmu class in this file
+            Harmony harmony = new Harmony(InternalName);
+            try
+            {
+                Logging.Warn("--- Patching in-game terminal commands ---");
+                harmony.PatchAll(typeof(ConsolePatcher));
+            }
+            catch (Exception e)
+            {
+                return (InitializationStatu.PatchTerminalCommands, e);
+            }
+
             try
             {
                 Logging.Warn("--- Loading external fonts ---");
@@ -121,7 +135,6 @@ namespace UltrakULL
             try
             {   
                 Logging.Warn("--- Patching vanilla game functions ---");
-                Harmony harmony = new Harmony(InternalName);
                 harmony.PatchAll();
             }
             catch (Exception e)
@@ -198,6 +211,7 @@ namespace UltrakULL
 
     public enum InitializationStatu
     {
+        PatchTerminalCommands,
         LoadFonts,
         InitializeLanguageManager,
         PatchGameFunctions,
