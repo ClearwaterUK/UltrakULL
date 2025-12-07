@@ -23,7 +23,8 @@ namespace UltrakULL.Commands
                                 Leaf<string>("lang", lang => LanguageManager.SetCurrentLanguage(lang))
                         ),
                         Branch("list",
-                                Leaf("lang", () =>{
+                                Leaf("lang", () =>
+                                {
                                     Log.Info("Available Languages:");
                                     foreach (var kvp in LanguageManager.allLanguages)
                                     {
@@ -31,11 +32,21 @@ namespace UltrakULL.Commands
                                     }
                                 })
                             ),
-                        Leaf("getversion", () => Log.Info($"UltrakULL version: {MainPatch.GetVersion()}"))
-                        );
+                        Leaf("getversion", () => Log.Info($"UltrakULL version: {MainPatch.GetVersion()}")),
+                        Leaf("isInitializeSuccessful", () =>
+                        {
+                            Log.Info($"Initialize Statu: {MainPatch.Instance.ready}");
+                            if (!MainPatch.Instance.ready)
+                            {
+                                Log.Info($"Reason : {MainPatch.Instance.initializeErrorMessage}");
+                            }
+                        })
+            );
+
+
         }
 
-        public Logger Log { get; } = new Logger ("ultrakull");
+        public Logger Log { get; } = new Logger("ultrakull");
     }
 }
 

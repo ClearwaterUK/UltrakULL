@@ -126,6 +126,7 @@
     </Reference>
   </ItemGroup>
   <PropertyGroup>
+    <ULTRAKILLPath>E:\SteamLibrary\steamapps\common\ULTRAKILL</ULTRAKILLPath>
     <ManagedDir>$(ULTRAKILLPath)\ULTRAKILL_Data\Managed\</ManagedDir>
     <BepInExRootDir>$(ULTRAKILLPath)\BepInEx\</BepInExRootDir>
     <BepInExCoreDir>$(BepInExRootDir)\core\</BepInExCoreDir>
