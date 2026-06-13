@@ -4,6 +4,8 @@
 
 <img src="https://cdn.discordapp.com/attachments/472691871806652429/1041615546514427984/unknown.png" height="400">
 
+# This repo is no longer maintained due to lack of time and concerns of AI-generated contributions. However, you are welcome to make your own fork of this project. No permission required but please cite me (Clearwater) as the original creator.
+
 # UltrakULL
 
 **UltrakULL** (ULTRAKILL Language Library) is a modification (mod) for ULTRAKILL that allows for modification of the game's text strings,
